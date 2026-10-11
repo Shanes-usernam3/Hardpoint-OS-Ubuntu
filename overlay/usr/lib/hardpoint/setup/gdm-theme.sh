@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
-# Runs INSIDE the chroot. Builds the HardPoint (Byte style) login screen theme:
+# Run by the hardpoint-os package. Builds the HardPoint (Byte style) login screen theme:
 # takes the GNOME Shell theme GDM uses, appends HardPoint CSS and registers the
 # result as the login-screen theme.
 set -euo pipefail
 log() { printf '\e[1;36m  ->\e[0m %s\n' "$*"; }
-export DEBIAN_FRONTEND=noninteractive
 
+OURS=/usr/share/gnome-shell/theme/HardPoint/gdm-theme.gresource
 SRC=""
 if update-alternatives --query gdm-theme.gresource >/dev/null 2>&1; then
-    SRC="$(update-alternatives --query gdm-theme.gresource | awk '/^Value:/ {print $2}')"
+    # Highest-priority theme that is not ours (so re-running never stacks our CSS twice)
+    SRC="$(update-alternatives --query gdm-theme.gresource | awk '/^Alternative:/ {a=$2} /^Priority:/ {print $2, a}' \
+        | grep -v "$OURS" | sort -rn | awk 'NR==1 {print $2}')"
 fi
-for c in "$SRC" /usr/share/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell/theme/Yaru/gnome-shell-theme.gresource; do
-    [[ -n $c && -f $c ]] && { SRC="$(readlink -f "$c")"; break; }
+for c in "$SRC" /usr/share/gnome-shell/gnome-shell-theme.gresource.zorin /usr/share/gnome-shell/gnome-shell-theme.gresource \
+         /usr/share/gnome-shell/theme/Yaru/gnome-shell-theme.gresource; do
+    [[ -n $c && -f $c && $(readlink -f "$c") != "$OURS" ]] && { SRC="$(readlink -f "$c")"; break; }
 done
 [[ -f $SRC ]] || { echo "No GNOME Shell theme resource found"; exit 1; }
 log "Login screen theme base: $SRC"
-
-NEED=()
-command -v gresource >/dev/null || NEED+=(libglib2.0-bin)
-command -v glib-compile-resources >/dev/null || NEED+=(libglib2.0-dev-bin)
-((${#NEED[@]} == 0)) || apt-get install -y -q --no-install-recommends "${NEED[@]}" >/dev/null
+command -v gresource >/dev/null && command -v glib-compile-resources >/dev/null \
+    || { echo "gresource/glib-compile-resources missing (libglib2.0-bin, libglib2.0-dev-bin)"; exit 1; }
 
 W="$(mktemp -d)"
 trap 'rm -rf "$W"' EXIT
@@ -129,7 +129,7 @@ if [[ $(gresource list "$SRC" | grep -vc "^$PREFIX/") -ne 0 ]]; then
     echo "Theme resources use several prefixes — not supported"; exit 1
 fi
 
-OUTDIR=/usr/share/gnome-shell/theme/HardPoint
+OUTDIR="$(dirname "$OURS")"
 mkdir -p "$OUTDIR"
 glib-compile-resources --sourcedir="$W$PREFIX" --target="$OUTDIR/gdm-theme.gresource" "$W/hp.xml"
 
@@ -145,4 +145,3 @@ else
     log "Login screen theme installed over $T (original kept as .zorin)"
 fi
 
-((${#NEED[@]} == 0)) || apt-get purge -y -q "${NEED[@]}" >/dev/null 2>&1 || true

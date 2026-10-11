@@ -1,0 +1,6 @@
+# HardPoint OS updates (hardpoint-os package), signed by HardPoint Networks
+Types: deb
+URIs: https://shanes-usernam3.github.io/Hardpoint-OS-Ubuntu/apt
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/hardpoint-archive-keyring.gpg

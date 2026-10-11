@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
-# Runs INSIDE the chroot. Replaces Zorin OS names and logos with HardPoint OS,
+# Run by the hardpoint-os package (and the image build). Replaces Zorin OS names and logos with HardPoint OS,
 # as Zorin's trademark policy requires for a derivative.
 #
 # Every file we replace is "diverted" with dpkg-divert first, so later Zorin
 # package updates write their version next to ours (*.zorin) instead of
 # overwriting the HardPoint branding.
 #
-# Logo images are only listed here (/tmp/hp/logo-targets.txt); build.sh renders
-# a HardPoint logo at the exact size of each one after the chroot step.
+# Logo images are listed in $S/logo-targets.txt; apply-logos.py then renders a
+# HardPoint logo at the exact size of each one.
 set -euo pipefail
-S=/tmp/hp
+# Work/report folder: the image build passes HP_STAGE; on an installed PC it's /var/lib/hardpoint
+S="${HP_STAGE:-/var/lib/hardpoint}"
+mkdir -p "$S"
 # shellcheck source=/dev/null
-source "$S/build.env"
+source /usr/lib/hardpoint/setup/build.env
+INSTALLER=none
+[[ -d /usr/lib/ubiquity ]] && INSTALLER=ubiquity
 log() { printf '\e[1;36m  ->\e[0m %s\n' "$*"; }
 
 divert() {  # divert <path>: keep the packaged original as <path>.zorin

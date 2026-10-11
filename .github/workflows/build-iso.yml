@@ -17,6 +17,48 @@ env:
   HIMMELBLAU_TAG: '4.0.5'     # Microsoft Entra ID sign-in (pinned upstream release)
 
 jobs:
+  package:
+    name: Build the hardpoint-os update package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      version: ${{ steps.ver.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Version
+        id: ver
+        run: echo "version=18.$(date -u +%Y%m%d).${{ github.run_number }}" >> "$GITHUB_OUTPUT"
+      - name: Build package
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq python3-pil python3-numpy fonts-inter >/dev/null
+          HP_PKG_VERSION=${{ steps.ver.outputs.version }} bash tools/build-deb.sh hp-pkg
+          dpkg-deb -I hp-pkg/*.deb | head -20
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hardpoint-os-deb
+          path: hp-pkg/*.deb
+          retention-days: 30
+
+  publish:
+    name: Publish the update (HardPoint Updates on installed PCs)
+    needs: package
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: hardpoint-os-deb
+          path: hp-pkg
+      - name: Publish signed update to GitHub Pages
+        env:
+          HP_SIGNING_KEY: ${{ secrets.HP_SIGNING_KEY }}
+          HP_PUSH_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+        run: |
+          sudo apt-get install -y -qq apt-utils >/dev/null
+          bash tools/publish-apt.sh hp-pkg/*.deb
+
   himmelblau:
     name: Build Entra sign-in packages
     runs-on: ubuntu-24.04
@@ -42,7 +84,7 @@ jobs:
           retention-days: 7
 
   build:
-    needs: himmelblau
+    needs: [himmelblau, package]
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     steps:
@@ -66,6 +108,12 @@ jobs:
         with:
           name: himmelblau-debs
           path: extra-pkgs
+
+      - name: Get the hardpoint-os package
+        uses: actions/download-artifact@v4
+        with:
+          name: hardpoint-os-deb
+          path: hp-pkg
 
       - name: Build the ISO
         run: sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" bash ./build.sh
