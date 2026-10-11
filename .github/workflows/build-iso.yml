@@ -70,6 +70,16 @@ jobs:
       - name: Build the ISO
         run: sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" bash ./build.sh
 
+      - name: Save the build report to the build-report branch
+        if: always()
+        run: |
+          mkdir -p report && cp out/build-report.txt report/ 2>/dev/null || echo "no report" > report/build-report.txt
+          cd report && git init -q -b build-report
+          git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
+          echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} (commit ${{ github.sha }})" >> build-report.txt
+          git add -A && git commit -qm "Build report for ${{ github.sha }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" build-report
+
       - name: Free the work area
         if: always()
         run: sudo rm -rf /mnt/hp/work; sudo chown -R "$USER" /mnt/hp/cache || true
