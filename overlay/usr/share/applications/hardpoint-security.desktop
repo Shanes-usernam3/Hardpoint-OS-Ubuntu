@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint Security
+Comment=Lockdown Mode, firewall and security status
+Exec=hardpoint-app security
+Icon=hardpoint
+Categories=Settings;System;Security;
+Keywords=lockdown;firewall;usb;secure boot;
+StartupNotify=true

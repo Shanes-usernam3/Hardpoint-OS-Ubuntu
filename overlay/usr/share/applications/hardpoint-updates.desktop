@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint Updates
+Comment=Choose which updates to install
+Exec=hardpoint-app updates
+Icon=hardpoint
+Categories=Settings;System;
+Keywords=update;upgrade;patch;
+StartupNotify=true

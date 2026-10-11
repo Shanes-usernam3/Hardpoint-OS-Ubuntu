@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=HardPoint OS
+Description=HardPoint OS boot splash (Byte style)
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/hardpoint
+ScriptFile=/usr/share/plymouth/themes/hardpoint/hardpoint.script

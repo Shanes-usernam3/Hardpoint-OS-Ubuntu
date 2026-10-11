@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# One-time root setup on the first boot of an installed HardPoint OS.
+set -uo pipefail
+mkdir -p /var/lib/hardpoint
+# Admin users get the dev/IT groups (Docker, Wireshark capture, VMs, serial ports)
+for u in $(getent group sudo | cut -d: -f4 | tr ',' ' '); do
+    for g in docker wireshark libvirt kvm dialout plugdev; do
+        getent group "$g" >/dev/null && usermod -aG "$g" "$u"
+    done
+done
+# Firewall: block everything incoming, allow outgoing
+if command -v ufw >/dev/null; then
+    ufw default deny incoming >/dev/null
+    ufw default allow outgoing >/dev/null
+    ufw --force enable >/dev/null
+fi
+# Lockdown Mode starts OFF; USBGuard only runs while it is on
+systemctl disable --now usbguard.service >/dev/null 2>&1 || true
+date '+%F %T' > /var/lib/hardpoint/firstboot-done

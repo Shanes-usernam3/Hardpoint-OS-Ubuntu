@@ -1,0 +1,7 @@
+[Unit]
+Description=HardPoint OS update check
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hardpoint-update-check

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Runs every 6 hours (systemd user timer). If updates are waiting, shows a
+# notification; clicking "Review updates" opens the HardPoint Updates checklist.
+set -uo pipefail
+[[ -n ${DISPLAY:-}${WAYLAND_DISPLAY:-} ]] || exit 0
+n="$(/usr/lib/hardpoint/hp-updates count 2>/dev/null || echo 0)"
+[[ $n =~ ^[0-9]+$ ]] && ((n > 0)) || exit 0
+sec="$(/usr/lib/hardpoint/hp-updates list 2>/dev/null | python3 -c 'import json,sys; print(sum(i["security"] for i in json.load(sys.stdin)["items"]))' 2>/dev/null || echo 0)"
+body="$n update(s) are ready to install."
+((sec > 0)) && body="$body $sec of them fix security issues."
+choice="$(notify-send --app-name="HardPoint Updates" --icon=hardpoint --urgency=normal \
+    --action=review="Review updates" --wait "Updates available" "$body" 2>/dev/null)"
+[[ $choice == review ]] && exec hardpoint-app updates
+exit 0

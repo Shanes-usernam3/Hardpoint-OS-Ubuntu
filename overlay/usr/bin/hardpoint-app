@@ -1,0 +1,307 @@
+#!/usr/bin/python3
+"""HardPoint OS apps — Setup, Updates, Accounts and Security.
+
+One small GTK window with a WebKit view showing the Byte-style UI in
+/usr/lib/hardpoint/ui. The page asks this program to do things through a
+fixed list of commands; anything that needs admin rights goes through
+pkexec + /usr/lib/hardpoint/hp-helper (which re-checks every argument).
+
+    hardpoint-app setup [--first-run]
+    hardpoint-app updates | accounts | security
+"""
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import threading
+from pathlib import Path
+
+import gi
+
+gi.require_version("Gtk", "3.0")
+gi.require_version("WebKit2", "4.1")
+from gi.repository import GLib, Gtk, WebKit2  # noqa: E402
+
+UI = Path(os.environ.get("HP_UI_DIR", "/usr/lib/hardpoint/ui"))
+HELPER = os.environ.get("HP_HELPER", "/usr/lib/hardpoint/hp-helper")
+UPDATES = os.environ.get("HP_UPDATES", "/usr/lib/hardpoint/hp-updates")
+CATALOG = Path("/usr/share/hardpoint/flatpaks.list")
+PKGS = Path("/usr/share/hardpoint/pkgs")
+CONF_DIR = Path(GLib.get_user_config_dir()) / "hardpoint"
+SETUP_DONE = CONF_DIR / "setup-done"
+
+VIEWS = {
+    "setup": ("HardPoint Setup", 1040, 700),
+    "updates": ("HardPoint Updates", 1000, 680),
+    "accounts": ("HardPoint Accounts", 1000, 680),
+    "security": ("HardPoint Security", 1000, 680),
+}
+ROOT_ACTIONS = {"entra-enable", "entra-disable", "lockdown", "usb-allow", "flatpak-install",
+                "apt-refresh", "apply-updates"}
+OPENERS = {
+    "company-portal": ["intune-portal"],
+    "software": ["gnome-software"],
+    "terminal": ["gnome-terminal"],
+    "users": ["gnome-control-center", "users"],
+    "appearance": ["zorin-appearance"],
+    "firmware": ["gnome-firmware"],
+    "updates": ["hardpoint-app", "updates"],
+    "accounts": ["hardpoint-app", "accounts"],
+    "security": ["hardpoint-app", "security"],
+}
+URLS = re.compile(r"^https://(entra\.microsoft\.com|intune\.microsoft\.com|portal\.manage\.microsoft\.com|"
+                  r"github\.com/Shanes-usernam3|learn\.microsoft\.com|www\.xbox\.com)(/[\w\-./?=&#%]*)?$")
+
+
+def sh(*cmd, timeout=20):
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        return r.returncode, r.stdout.strip()
+    except (OSError, subprocess.TimeoutExpired):
+        return 127, ""
+
+
+def read_catalog():
+    apps = []
+    if CATALOG.exists():
+        for line in CATALOG.read_text().splitlines():
+            if not line.strip() or line.startswith("#"):
+                continue
+            parts = line.split("|")
+            if len(parts) >= 5:
+                apps.append({"category": parts[0], "id": parts[1], "name": parts[2],
+                             "default": parts[3] == "1", "description": parts[4]})
+    return apps
+
+
+def os_info():
+    info = {}
+    try:
+        for line in Path("/etc/os-release").read_text().splitlines():
+            if "=" in line:
+                k, v = line.split("=", 1)
+                info[k] = v.strip('"')
+    except OSError:
+        pass
+    return info
+
+
+def entra_state():
+    conf = Path("/etc/himmelblau/himmelblau.conf")
+    domain = ""
+    if conf.exists():
+        m = re.search(r"^domains?\s*=\s*(\S+)", conf.read_text(), re.M)
+        domain = m.group(1) if m else ""
+    rc, _ = sh("dpkg-query", "-W", "-f=${Status}", "himmelblau")
+    installed = rc == 0
+    active = sh("systemctl", "is-active", "himmelblaud")[1] == "active"
+    return {"available": any(PKGS.glob("himmelblau_*.deb")) or installed,
+            "enabled": installed and bool(domain), "domain": domain, "active": active,
+            "companyPortal": shutil.which("intune-portal") is not None}
+
+
+def security_state():
+    sb = "unknown"
+    for f in Path("/sys/firmware/efi/efivars").glob("SecureBoot-*"):
+        try:
+            sb = "on" if f.read_bytes()[4] == 1 else "off"
+        except (OSError, IndexError):
+            pass
+    lockdown_kernel = ""
+    try:
+        m = re.search(r"\[(\w+)\]", Path("/sys/kernel/security/lockdown").read_text())
+        lockdown_kernel = m.group(1) if m else ""
+    except OSError:
+        pass
+    luks = sh("bash", "-c", "lsblk -rno TYPE | grep -qx crypt")[0] == 0
+    return {
+        "lockdown": Path("/etc/hardpoint/lockdown").exists(),
+        "firewall": sh("systemctl", "is-active", "ufw")[1] == "active",
+        "apparmor": sh("systemctl", "is-active", "apparmor")[1] == "active",
+        "secureBoot": sb,
+        "kernelLockdown": lockdown_kernel,
+        "encrypted": luks,
+        "usbguard": sh("systemctl", "is-active", "usbguard")[1] == "active",
+    }
+
+
+def state():
+    rc, installed = sh("flatpak", "list", "--app", "--columns=application")
+    osr = os_info()
+    pw = Path("/etc/passwd")
+    user = os.environ.get("USER") or os.getlogin()
+    real = user
+    try:
+        for line in pw.read_text().splitlines():
+            f = line.split(":")
+            if f[0] == user and len(f) > 4 and f[4]:
+                real = f[4].split(",")[0]
+    except OSError:
+        pass
+    return {
+        "user": user, "realName": real, "host": os.uname().nodename,
+        "os": osr.get("PRETTY_NAME", "HardPoint OS"),
+        "live": "boot=casper" in Path("/proc/cmdline").read_text(),
+        "setupDone": SETUP_DONE.exists(),
+        "catalog": read_catalog(),
+        "installedApps": installed.split() if rc == 0 else [],
+        "entra": entra_state(),
+        "security": security_state(),
+        "updateTimer": sh("systemctl", "--user", "is-enabled", "hardpoint-update-check.timer")[1] == "enabled",
+        "colorScheme": sh("gsettings", "get", "org.gnome.desktop.interface", "color-scheme")[1].strip("'"),
+    }
+
+
+class App(Gtk.Window):
+    def __init__(self, view, first_run):
+        title, w, h = VIEWS[view]
+        super().__init__(title=title)
+        self.set_default_size(w, h)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.set_icon_name("hardpoint")
+        Gtk.Settings.get_default().set_property("gtk-application-prefer-dark-theme", True)
+
+        mgr = WebKit2.UserContentManager()
+        mgr.connect("script-message-received::hp", self.on_message)
+        mgr.register_script_message_handler("hp")
+        self.web = WebKit2.WebView.new_with_user_content_manager(mgr)
+        s = self.web.get_settings()
+        s.set_enable_developer_extras(bool(os.environ.get("HP_DEBUG")))
+        s.set_allow_file_access_from_file_urls(True)
+        s.set_enable_write_console_messages_to_stdout(bool(os.environ.get("HP_DEBUG")))
+        self.web.set_background_color(_rgba(10, 14, 23))
+        self.web.connect("decide-policy", self.on_policy)
+        self.web.connect("context-menu", lambda *a: not os.environ.get("HP_DEBUG"))
+        q = f"view={view}" + ("&first=1" if first_run else "")
+        self.web.load_uri((UI / "index.html").as_uri() + "?" + q)
+        self.add(self.web)
+        self.connect("destroy", Gtk.main_quit)
+
+    # Links never navigate inside the window; allowed ones open in the browser.
+    def on_policy(self, web, decision, kind):
+        if kind == WebKit2.PolicyDecisionType.NAVIGATION_ACTION:
+            uri = decision.get_navigation_action().get_request().get_uri()
+            if uri.startswith((UI.as_uri())):
+                return False
+            decision.ignore()
+            if URLS.match(uri):
+                subprocess.Popen(["xdg-open", uri])
+            return True
+        return False
+
+    # ---- page <-> app bridge
+    def js(self, code):
+        if hasattr(self.web, "evaluate_javascript"):
+            self.web.evaluate_javascript(code, -1, None, None, None, None, None)
+        else:
+            self.web.run_javascript(code, None, None, None)
+
+    def reply(self, rid, ok, data):
+        self.js(f"HP._reply({json.dumps(rid)}, {json.dumps(ok)}, {json.dumps(data)})")
+        return False
+
+    def line(self, rid, text):
+        self.js(f"HP._line({json.dumps(rid)}, {json.dumps(text)})")
+        return False
+
+    def on_message(self, mgr, res):
+        try:
+            v = res.get_js_value() if hasattr(res, "get_js_value") else res
+            msg = json.loads(v.to_string())
+        except Exception:
+            return
+        rid, cmd = msg.get("id"), msg.get("cmd")
+        args = msg.get("args") or []
+        if not isinstance(args, list) or not all(isinstance(a, str) for a in args):
+            return self.reply(rid, False, "bad arguments")
+        try:
+            if cmd == "state":
+                threading.Thread(target=lambda: GLib.idle_add(self.reply, rid, True, state()), daemon=True).start()
+            elif cmd == "root" and msg.get("action") in ROOT_ACTIONS:
+                self.stream(rid, ["pkexec", HELPER, msg["action"], *args])
+            elif cmd == "updates-list":
+                self.capture_json(rid, [UPDATES, "list"])
+            elif cmd == "open" and msg.get("app") in OPENERS:
+                exe = OPENERS[msg["app"]]
+                if shutil.which(exe[0]):
+                    subprocess.Popen(exe, start_new_session=True)
+                    self.reply(rid, True, "")
+                else:
+                    self.reply(rid, False, f"{exe[0]} is not installed")
+            elif cmd == "url" and URLS.match(msg.get("url", "")):
+                subprocess.Popen(["xdg-open", msg["url"]])
+                self.reply(rid, True, "")
+            elif cmd == "appearance" and args and args[0] in ("dark", "light"):
+                scheme = "prefer-dark" if args[0] == "dark" else "default"
+                sh("gsettings", "set", "org.gnome.desktop.interface", "color-scheme", scheme)
+                gtk = sh("gsettings", "get", "org.gnome.desktop.interface", "gtk-theme")[1].strip("'")
+                base = gtk[:-5] if gtk.endswith("-Dark") else (gtk[:-6] if gtk.endswith("-Light") else gtk)
+                want = base + ("-Dark" if args[0] == "dark" else "-Light")
+                if any(Path(d, want).is_dir() for d in ("/usr/share/themes", str(Path.home() / ".themes"))):
+                    sh("gsettings", "set", "org.gnome.desktop.interface", "gtk-theme", want)
+                    if Path("/usr/share/icons", want).is_dir():
+                        sh("gsettings", "set", "org.gnome.desktop.interface", "icon-theme", want)
+                self.reply(rid, True, scheme)
+            elif cmd == "update-timer" and args and args[0] in ("on", "off"):
+                verb = "enable" if args[0] == "on" else "disable"
+                rc, _ = sh("systemctl", "--user", verb, "--now", "hardpoint-update-check.timer")
+                self.reply(rid, rc == 0, args[0])
+            elif cmd == "setup-done":
+                CONF_DIR.mkdir(parents=True, exist_ok=True)
+                SETUP_DONE.write_text("done\n")
+                self.reply(rid, True, "")
+            elif cmd == "close":
+                Gtk.main_quit()
+            else:
+                self.reply(rid, False, f"unknown command {cmd}")
+        except Exception as e:  # never leave the page waiting
+            self.reply(rid, False, str(e))
+
+    def stream(self, rid, argv):
+        def run():
+            try:
+                p = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
+                for ln in p.stdout:
+                    GLib.idle_add(self.line, rid, ln.rstrip("\n"))
+                rc = p.wait()
+            except OSError as e:
+                GLib.idle_add(self.line, rid, str(e))
+                rc = 127
+            # pkexec: 126 = dialog dismissed, 127 = not authorised
+            msg = {0: "done", 126: "cancelled", 127: "not authorised"}.get(rc, f"failed ({rc})")
+            GLib.idle_add(self.reply, rid, rc == 0, msg)
+        threading.Thread(target=run, daemon=True).start()
+
+    def capture_json(self, rid, argv):
+        def run():
+            rc, out = sh(*argv, timeout=180)
+            try:
+                data = json.loads(out) if out else {}
+                GLib.idle_add(self.reply, rid, rc == 0, data)
+            except ValueError:
+                GLib.idle_add(self.reply, rid, False, out[-500:])
+        threading.Thread(target=run, daemon=True).start()
+
+
+def _rgba(r, g, b):
+    from gi.repository import Gdk
+    c = Gdk.RGBA()
+    c.red, c.green, c.blue, c.alpha = r / 255, g / 255, b / 255, 1
+    return c
+
+
+def main():
+    args = sys.argv[1:]
+    view = args[0] if args and args[0] in VIEWS else "setup"
+    first = "--first-run" in args
+    if first:
+        if SETUP_DONE.exists() or "boot=casper" in Path("/proc/cmdline").read_text():
+            return
+    App(view, first).show_all()
+    Gtk.main()
+
+
+if __name__ == "__main__":
+    main()

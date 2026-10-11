@@ -1,0 +1,20 @@
+# Apps HardPoint Setup offers to install from Flathub.
+# category|flatpak id|display name|ticked by default (1/0)|description
+gaming|io.github.unknownskl.greenlight|Greenlight (Xbox Cloud Gaming)|1|Play Xbox Cloud Gaming and stream from your Xbox
+gaming|org.libretro.RetroArch|RetroArch|1|All-in-one emulator frontend
+gaming|org.DolphinEmu.dolphin-emu|Dolphin|1|GameCube and Wii
+gaming|net.pcsx2.PCSX2|PCSX2|1|PlayStation 2
+gaming|org.ppsspp.PPSSPP|PPSSPP|1|PlayStation Portable
+gaming|io.mgba.mGBA|mGBA|1|Game Boy Advance
+gaming|net.kuribo64.melonDS|melonDS|1|Nintendo DS
+gaming|info.cemu.Cemu|Cemu|1|Wii U
+gaming|org.duckstation.DuckStation|DuckStation|0|PlayStation 1
+gaming|com.heroicgameslauncher.hgl|Heroic Games Launcher|0|Epic, GOG and Amazon games
+dev|com.google.AndroidStudio|Android Studio|1|Android app development
+dev|io.podman_desktop.PodmanDesktop|Podman Desktop|0|Containers with a GUI
+dev|com.getpostman.Postman|Postman|0|API testing
+it|com.rustdesk.RustDesk|RustDesk|1|Remote support for clients
+it|com.github.tchx84.Flatseal|Flatseal|1|Manage app permissions
+it|org.wireshark.Wireshark|Wireshark (Flatpak)|0|Newer Wireshark build
+media|org.videolan.VLC|VLC|0|Plays almost any video
+media|com.obsproject.Studio|OBS Studio|0|Recording and streaming

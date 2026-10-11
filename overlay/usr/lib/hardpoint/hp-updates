@@ -1,0 +1,89 @@
+#!/usr/bin/python3
+"""List available updates as JSON for HardPoint Updates (no admin rights needed).
+
+    hp-updates list     -> {"items": [...], "checked": <unix time>}
+    hp-updates count    -> number of updates (for the notifier)
+
+Each item: kind (system|app|firmware), id (what to pass to hp-helper
+apply-updates), name, from, to, security (bool).
+Package lists are refreshed in the background by apt (APT::Periodic) and by
+the Refresh button (hp-helper apt-refresh).
+"""
+import json
+import re
+import shutil
+import subprocess
+import sys
+import time
+
+
+def run(*cmd, timeout=120):
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout).stdout
+    except (OSError, subprocess.TimeoutExpired):
+        return ""
+
+
+def apt_updates():
+    out = run("apt", "list", "--upgradable", timeout=60)
+    items = []
+    # bash/noble-updates,noble-security 5.2.21-2ubuntu4.1 amd64 [upgradable from: 5.2.21-2ubuntu4]
+    pat = re.compile(r"^([^/\s]+)/(\S+)\s+(\S+)\s+(\S+)\s+\[upgradable from: ([^\]]+)\]")
+    for line in out.splitlines():
+        m = pat.match(line)
+        if not m:
+            continue
+        pkg, suites, new, arch, old = m.groups()
+        name = pkg if arch in ("amd64", "all") else f"{pkg}:{arch}"
+        items.append({"kind": "system", "id": f"apt:{name}", "name": name, "from": old, "to": new,
+                      "security": "-security" in suites, "source": suites.split(",")[0]})
+    return items
+
+
+def flatpak_updates():
+    if not shutil.which("flatpak"):
+        return []
+    out = run("flatpak", "remote-ls", "--system", "--updates", "--columns=name,application,version,ref")
+    items = []
+    for line in out.splitlines():
+        cols = line.split("\t")
+        if len(cols) < 4 or not cols[3].strip():
+            continue
+        name, app, ver, ref = (c.strip() for c in cols[:4])
+        items.append({"kind": "app", "id": f"flatpak:{ref}", "name": name or app, "from": "",
+                      "to": ver, "security": False, "source": "Flathub"})
+    return items
+
+
+def firmware_updates():
+    if not shutil.which("fwupdmgr"):
+        return []
+    out = run("fwupdmgr", "get-updates", "--json", timeout=60)
+    try:
+        data = json.loads(out)
+    except ValueError:
+        return []
+    items = []
+    for dev in data.get("Devices", []):
+        rels = dev.get("Releases") or []
+        if not rels or not dev.get("DeviceId"):
+            continue
+        rel = rels[0]
+        items.append({"kind": "firmware", "id": f"fw:{dev['DeviceId']}", "name": dev.get("Name", "Device firmware"),
+                      "from": dev.get("Version", ""), "to": rel.get("Version", ""),
+                      "security": bool(rel.get("Issues")), "source": dev.get("Vendor", "LVFS")})
+    return items
+
+
+def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else "list"
+    items = apt_updates() + flatpak_updates() + firmware_updates()
+    if mode == "count":
+        print(len(items))
+        return
+    items.sort(key=lambda i: (not i["security"], i["kind"], i["name"]))
+    print(json.dumps({"items": items, "checked": int(time.time())}))
+
+
+if __name__ == "__main__":
+    main()

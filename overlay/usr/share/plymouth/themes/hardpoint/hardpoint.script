@@ -1,0 +1,75 @@
+# HardPoint OS boot splash — navy background, glowing logo, neon progress bar.
+Window.SetBackgroundTopColor(0.047, 0.184, 0.208);    # #0C2F35
+Window.SetBackgroundBottomColor(0.039, 0.055, 0.090); # #0A0E17
+
+W = Window.GetWidth();
+H = Window.GetHeight();
+
+logo.image = Image("plymouth-logo.png");
+logo.sprite = Sprite(logo.image);
+logo.x = W / 2 - logo.image.GetWidth() / 2;
+logo.y = H / 2 - logo.image.GetHeight() / 2 - 40;
+logo.sprite.SetPosition(logo.x, logo.y, 10);
+
+title.image = Image.Text("HardPoint OS", 0.95, 0.96, 1.0, 1, "Sans Bold 22");
+title.sprite = Sprite(title.image);
+title.sprite.SetPosition(W / 2 - title.image.GetWidth() / 2, logo.y + logo.image.GetHeight() + 10, 10);
+
+track.image = Image("plymouth-track.png");
+track.sprite = Sprite(track.image);
+track.x = W / 2 - track.image.GetWidth() / 2;
+track.y = logo.y + logo.image.GetHeight() + 70;
+track.sprite.SetPosition(track.x, track.y, 10);
+
+bar.original = Image("plymouth-bar.png");
+bar.sprite = Sprite();
+bar.sprite.SetPosition(track.x, track.y, 11);
+
+# Gentle "breathing" glow on the logo while booting
+t = 0;
+fun refresh_cb() {
+    t++;
+    logo.sprite.SetOpacity(0.78 + 0.22 * Math.Sin(t / 18));
+}
+Plymouth.SetRefreshFunction(refresh_cb);
+
+fun progress_cb(duration, progress) {
+    w = Math.Int(bar.original.GetWidth() * progress);
+    if (w < 1) w = 1;
+    bar.sprite.SetImage(bar.original.Scale(w, bar.original.GetHeight()));
+}
+Plymouth.SetBootProgressFunction(progress_cb);
+
+# ---- Disk-encryption password prompt ----
+prompt.sprite = Sprite();
+box.sprite = Sprite();
+bullets.sprite = Sprite();
+
+fun display_password_cb(promptText, bulletCount) {
+    prompt.image = Image.Text(promptText, 0.72, 0.75, 0.87, 1, "Sans 12");
+    prompt.sprite.SetImage(prompt.image);
+    prompt.sprite.SetPosition(W / 2 - prompt.image.GetWidth() / 2, track.y + 24, 20);
+    s = "";
+    for (i = 0; i < bulletCount; i++) s += "●";
+    if (s == "") s = " ";
+    bullets.image = Image.Text(s, 0.012, 0.957, 0.831, 1, "Sans 18");
+    bullets.sprite.SetImage(bullets.image);
+    bullets.sprite.SetPosition(W / 2 - bullets.image.GetWidth() / 2, track.y + 54, 20);
+    prompt.sprite.SetOpacity(1);
+    bullets.sprite.SetOpacity(1);
+}
+fun display_normal_cb() {
+    prompt.sprite.SetOpacity(0);
+    bullets.sprite.SetOpacity(0);
+}
+Plymouth.SetDisplayPasswordFunction(display_password_cb);
+Plymouth.SetDisplayNormalFunction(display_normal_cb);
+
+# Status messages (e.g. "Checking disk")
+msg.sprite = Sprite();
+fun message_cb(text) {
+    msg.image = Image.Text(text, 0.6, 0.63, 0.78, 1, "Sans 10");
+    msg.sprite.SetImage(msg.image);
+    msg.sprite.SetPosition(W / 2 - msg.image.GetWidth() / 2, H - 60, 10);
+}
+Plymouth.SetMessageFunction(message_cb);
