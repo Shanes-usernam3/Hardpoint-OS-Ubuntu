@@ -252,8 +252,10 @@ printf '[zram0]\nzram-size = min(ram / 2, 8192)\ncompression-algorithm = zstd\n'
 # Installed system: hide the GRUB menu unless Shift/Esc is held, HardPoint background
 mkdir -p /etc/default/grub.d
 cat > /etc/default/grub.d/90-hardpoint.cfg <<'EOF'
-GRUB_TIMEOUT_STYLE=hidden
-GRUB_TIMEOUT=2
+# Menu shows for 3 s so you can pick Windows on the other SSD (found by os-prober)
+GRUB_TIMEOUT_STYLE=menu
+GRUB_TIMEOUT=3
+GRUB_DISABLE_OS_PROBER=false
 GRUB_BACKGROUND="/usr/share/hardpoint/branding/grub.png"
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 EOF

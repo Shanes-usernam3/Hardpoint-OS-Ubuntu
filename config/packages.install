@@ -30,6 +30,7 @@ apparmor-profiles
 usbguard
 fwupd
 cryptsetup
+os-prober
 sbsigntool
 mokutil
 systemd-zram-generator
