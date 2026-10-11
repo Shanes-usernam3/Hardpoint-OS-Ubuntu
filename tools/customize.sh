@@ -98,6 +98,7 @@ fi
 # Recommends for the GUI apps that need them to look right
 "${APT[@]}" install wireshark remmina gufw virt-manager >/dev/null || true
 printf '%s\n' "${SKIP[@]}" > /usr/share/hardpoint-skipped-packages.txt 2>/dev/null || true
+{ echo "== Packages skipped (not available)"; printf '%s\n' "${SKIP[@]}"; } >> "$S/build-report.txt"
 
 # Extra groups (docker, wireshark, libvirt...) are added to admins on first boot (hardpoint-firstboot)
 
@@ -295,7 +296,12 @@ log "Rebuilding the boot image"
 update-initramfs -u -k all >/dev/null 2>&1 || warn "update-initramfs reported a problem"
 # Show which splash ended up inside the boot image (build log check)
 for i in /boot/initrd.img-*; do
-    log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')"
+    log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')" | tee -a "$S/build-report.txt"
+done
+
+# Zorin's anonymous install census pings Zorin's servers; not wanted in a derivative
+for p in zorin-os-census zorin-census; do
+    if dpkg -s "$p" >/dev/null 2>&1; then apt-get purge -y -q "$p" >/dev/null && log "Removed $p"; fi
 done
 
 # ------------------------------------------------------------ clean up

@@ -171,5 +171,6 @@ mapfile -t BOOTOPTS < <(xorriso -indev "$BASE" -report_el_torito as_mkisofs 2>/d
 xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
 
 (cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
+cp "$WORK/stage/build-report.txt" "$OUT/build-report.txt" 2>/dev/null || true
 umount "$WORK/mnt" 2>/dev/null || true
 log "Done: $OUT/$ISO_NAME ($(du -h "$OUT/$ISO_NAME" | cut -f1))"

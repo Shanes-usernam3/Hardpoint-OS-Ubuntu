@@ -144,7 +144,7 @@ def serial_has(path, text):
 # ================= Phase 1: live session =================
 s1, mon1 = OUT / "serial-live.log", WORK / "mon1.sock"
 vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
-           "-append", "boot=casper quiet splash console=tty0 console=ttyS0,115200 ---"], s1, mon1)
+           "-append", "boot=casper fsck.mode=skip quiet splash console=tty0 console=ttyS0,115200 ---"], s1, mon1)
 m = Monitor(mon1)
 time.sleep(25)
 shot(m, "01-boot-splash")
@@ -216,7 +216,7 @@ threading.Thread(target=httpd.serve_forever, daemon=True).start()
 s2, mon2 = OUT / "serial-install.log", WORK / "mon2.sock"
 t0 = time.time()
 vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
-           "-append", "boot=casper automatic-ubiquity noprompt url=http://10.0.2.2:8088/hp.seed "
+           "-append", "boot=casper fsck.mode=skip ip=dhcp automatic-ubiquity noprompt url=http://10.0.2.2:8088/hp.seed "
                       "debian-installer/locale=en_US.UTF-8 keyboard-configuration/layoutcode=us "
                       "console=tty0 console=ttyS0,115200 quiet splash ---"], s2, mon2)
 m = Monitor(mon2)

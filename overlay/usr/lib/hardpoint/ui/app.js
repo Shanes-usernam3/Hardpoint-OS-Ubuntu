@@ -446,6 +446,12 @@ const Updates = {
   },
 };
 
+// Enter = the main button on each Setup page (unless typing in a field)
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter" || view !== "setup" || /INPUT|TEXTAREA|BUTTON/.test(document.activeElement?.tagName || "")) return;
+  const b = $("#finish") || $("#next"); if (b && !b.disabled) { e.preventDefault(); b.click(); }
+});
+
 // ------------------------------------------------------------------ boot
 (async () => {
   try { await refresh(); } catch (e) { $("#main").innerHTML = `<div class="card">Could not read system state: ${esc(e.message)}</div>`; return; }

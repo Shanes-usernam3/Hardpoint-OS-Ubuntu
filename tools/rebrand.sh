@@ -110,7 +110,29 @@ done < <(find /usr/share/pixmaps /usr/share/icons /usr/share/zorin* /usr/share/g
     -type f \( -iname '*zorin*logo*' -o -iname '*logo*zorin*' -o -iname 'distributor-logo*' -o -iname 'start-here*' \
     -o -iname 'zorin-menu*' -o -ipath '/usr/share/plymouth/themes/*/watermark*' -o -ipath '/usr/share/plymouth/themes/zorin*/*logo*' -o -iname 'zorin-os*' -o -iname 'zorin.*' -o -iname 'zorin-symbolic*' -o -iname 'ubuntu-logo*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0)
+# Any other icon whose name says "zorin" is a Zorin logo (menu button, about page, etc.)
+while IFS= read -r -d '' f; do
+    case "$f" in */hardpoint/*|*.zorin) continue ;; esac
+    grep -qxF "$f" "$S/logo-targets.txt" && continue
+    divert "$f"; cp "$f.zorin" "$f"; echo "$f" >> "$S/logo-targets.txt"
+done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
+    \( -iname '*zorin*' -o -ipath '*zorin*menu*/*logo*' -o -ipath '*zorin*menu*/*icon*' \) \
+    \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
 log "$(wc -l < "$S/logo-targets.txt") logo images will be replaced"
+
+# Build report: what is still named Zorin, for checking the next build
+set +e
+{
+    echo "== Installer: $INSTALLER"
+    echo "== Logo images replaced"; cat "$S/logo-targets.txt"
+    echo "== Image files still containing 'zorin' (not replaced)"
+    find /usr/share -type f \( -iname '*.png' -o -iname '*.svg' \) -ipath '*zorin*' 2>/dev/null \
+        | grep -vxFf "$S/logo-targets.txt" | grep -vE '\.zorin$|/backgrounds/|/themes/' | head -300
+    echo "== Zorin GNOME Shell extensions"; ls -d /usr/share/gnome-shell/extensions/*zorin* 2>/dev/null
+    echo "== Menu-related settings keys"
+    grep -l 'zorin' /usr/share/glib-2.0/schemas/*.xml 2>/dev/null | xargs -r grep -hoE 'name="[a-z-]*(icon|logo|button)[a-z-]*"' | sort -u
+} >> "$S/build-report.txt"
+set -e
 
 # Hide Zorin's own boot splash so ours is the only choice
 for t in /usr/share/plymouth/themes/zorin*; do
