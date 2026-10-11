@@ -239,7 +239,9 @@ glib-compile-schemas /usr/share/glib-2.0/schemas
 log "Applying security defaults"
 sed -i 's/^ENABLED=.*/ENABLED=yes/' /etc/ufw/ufw.conf 2>/dev/null || true
 sed -i 's/^DEFAULT_INPUT_POLICY=.*/DEFAULT_INPUT_POLICY="DROP"/; s/^DEFAULT_FORWARD_POLICY=.*/DEFAULT_FORWARD_POLICY="DROP"/' /etc/default/ufw 2>/dev/null || true
-systemctl enable ufw.service apparmor.service fwupd-refresh.timer hardpoint-firstboot.service 2>/dev/null || true
+for u in ufw.service apparmor.service fwupd-refresh.timer hardpoint-firstboot.service hardpoint-touchpad.service thermald.service; do
+    systemctl enable "$u" >/dev/null 2>&1 || warn "Could not enable $u"
+done
 systemctl disable usbguard.service 2>/dev/null || true   # only on in Lockdown Mode
 [[ -f /etc/usbguard/usbguard-daemon.conf ]] && sed -i 's/^IPCAllowedGroups=.*/IPCAllowedGroups=sudo/' /etc/usbguard/usbguard-daemon.conf
 # No crash dumps, no core files
@@ -280,6 +282,8 @@ if [[ -d /usr/share/plymouth/themes/hardpoint ]]; then
         /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth 300
     update-alternatives --set default.plymouth /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth
 fi
+# Touchpad driver order applies inside the boot image too
+grep -qx 'pinctrl_alderlake' /etc/initramfs-tools/modules 2>/dev/null || printf 'pinctrl_alderlake\npinctrl_tigerlake\n' >> /etc/initramfs-tools/modules
 log "Rebuilding the boot image"
 update-initramfs -u -k all >/dev/null 2>&1 || warn "update-initramfs reported a problem"
 
