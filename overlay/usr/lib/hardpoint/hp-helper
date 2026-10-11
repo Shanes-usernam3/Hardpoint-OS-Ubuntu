@@ -1,0 +1,197 @@
+#!/usr/bin/env bash
+# HardPoint OS admin helper. Runs as root through pkexec (polkit asks for an
+# admin password). Every action and argument is validated here, because the
+# caller is a desktop app.
+#
+#   entra-enable <domain> <admin-group-id|-> <allowed-group-id|->
+#   entra-disable
+#   lockdown on|off
+#   usb-allow <device-number>
+#   flatpak-install <app-id>...          (only ids from /usr/share/hardpoint/flatpaks.list)
+#   apt-refresh
+#   apply-updates [apt:<pkg>] [flatpak:<ref>] [fw:<device-id>]...
+set -uo pipefail
+export DEBIAN_FRONTEND=noninteractive LC_ALL=C.UTF-8 PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+PKGDIR=/usr/share/hardpoint/pkgs
+HCONF=/etc/himmelblau/himmelblau.conf
+CATALOG=/usr/share/hardpoint/flatpaks.list
+GUID='^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+
+say() { printf '%s\n' "$*"; }
+die() { printf 'Error: %s\n' "$*"; exit 2; }
+[[ $EUID -eq 0 ]] || die "must run as root (via pkexec)"
+
+# ------------------------------------------------------------------ Entra ID
+nss_add() {  # add "himmelblau" to passwd/group/shadow in nsswitch.conf
+    local db
+    for db in passwd group shadow; do
+        grep -qE "^$db:.*\bhimmelblau\b" /etc/nsswitch.conf || sed -i -E "s/^($db:[[:space:]].*)$/\1 himmelblau/" /etc/nsswitch.conf
+    done
+}
+nss_remove() { sed -i -E '/^(passwd|group|shadow):/ s/[[:space:]]+himmelblau\b//' /etc/nsswitch.conf; }
+
+entra_enable() {
+    local dom="${1:-}" admin_g="${2:--}" allow_g="${3:--}" g
+    [[ $dom =~ ^[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$ ]] || die "'$dom' is not a domain (example: contoso.com)"
+    for g in "$admin_g" "$allow_g"; do
+        [[ $g == - || $g =~ $GUID ]] || die "group IDs must be Entra group Object IDs (GUIDs): '$g'"
+    done
+    compgen -G "$PKGDIR/himmelblau_*.deb" >/dev/null || die "the Entra sign-in packages are missing from this system"
+
+    say "Installing Microsoft Entra ID sign-in (Himmelblau)…"
+    apt-get install -y -q --no-install-recommends "$PKGDIR"/*.deb || die "package install failed"
+
+    say "Writing $HCONF"
+    mkdir -p /etc/himmelblau
+    {
+        echo "# HardPoint OS — Microsoft Entra ID sign-in. See: man himmelblau.conf"
+        echo "[global]"
+        echo "domain = $dom"
+        echo "join_type = join"
+        echo "apply_policy = false"
+        echo "local_groups = users"
+        echo "home_attr = CN"
+        echo "home_alias = CN"
+        echo "use_etc_skel = true"
+        echo "hello_pin_min_length = 6"
+        echo "local_sudo_group = sudo"
+        [[ $admin_g != - ]] && echo "sudo_groups = $admin_g"
+        [[ $allow_g != - ]] && echo "pam_allow_groups = $allow_g"
+    } > "$HCONF"
+    chmod 644 "$HCONF"
+
+    if systemctl list-unit-files nscd.service >/dev/null 2>&1; then
+        systemctl disable --now nscd.service >/dev/null 2>&1; systemctl mask nscd.service >/dev/null 2>&1
+    fi
+    nss_add
+    pam-auth-update --enable himmelblau || say "Note: could not switch on the sign-in PAM profile automatically"
+    for p in /etc/apparmor.d/usr.bin.fusermount3 /etc/apparmor.d/usr.sbin.unix-chkpwd; do
+        [[ -f $p ]] && apparmor_parser -r "$p" 2>/dev/null
+    done
+    systemctl enable --now himmelblaud.service himmelblaud-tasks.service 2>&1 | grep -v '^Created symlink' || true
+    sleep 2
+    if systemctl is-active -q himmelblaud; then
+        say "This PC is now set up for $dom work/school sign-in."
+    else
+        say "Installed, but the sign-in service is not running yet:"
+        journalctl -u himmelblaud -n 15 --no-pager 2>/dev/null
+        exit 1
+    fi
+}
+
+entra_disable() {
+    say "Turning off work/school sign-in…"
+    systemctl disable --now himmelblaud.service himmelblaud-tasks.service >/dev/null 2>&1 || true
+    pam-auth-update --disable himmelblau >/dev/null 2>&1 || true
+    nss_remove
+    local pk=()
+    for p in himmelblau pam-himmelblau nss-himmelblau himmelblau-sso himmelblau-qr-greeter; do
+        dpkg-query -W -f='${Status}' "$p" 2>/dev/null | grep -q 'ok installed' && pk+=("$p")
+    done
+    ((${#pk[@]})) && apt-get remove -y -q "${pk[@]}"
+    say "Work/school sign-in removed. Local accounts are unchanged."
+}
+
+# ------------------------------------------------------------------ Lockdown
+lockdown() {
+    case "${1:-}" in
+        on)
+            mkdir -p /etc/hardpoint
+            cat > /etc/sysctl.d/95-hardpoint-lockdown.conf <<'EOF'
+# HardPoint Lockdown Mode (removed when Lockdown Mode is turned off)
+kernel.yama.ptrace_scope = 2
+kernel.io_uring_disabled = 2
+net.core.bpf_jit_harden = 2
+kernel.perf_event_paranoid = 3
+net.ipv4.icmp_echo_ignore_all = 1
+EOF
+            sysctl -q --load=/etc/sysctl.d/95-hardpoint-lockdown.conf
+            if command -v usbguard >/dev/null; then
+                usbguard generate-policy > /etc/usbguard/rules.conf 2>/dev/null
+                chmod 600 /etc/usbguard/rules.conf
+                systemctl enable --now usbguard.service >/dev/null 2>&1
+                say "New USB devices will be blocked until you allow them."
+            fi
+            rfkill block bluetooth 2>/dev/null || true
+            date '+%F %T' > /etc/hardpoint/lockdown
+            say "Lockdown Mode is ON." ;;
+        off)
+            rm -f /etc/sysctl.d/95-hardpoint-lockdown.conf /etc/hardpoint/lockdown
+            sysctl -q -w kernel.yama.ptrace_scope=1 kernel.io_uring_disabled=0 net.ipv4.icmp_echo_ignore_all=0
+            systemctl disable --now usbguard.service >/dev/null 2>&1 || true
+            rfkill unblock bluetooth 2>/dev/null || true
+            say "Lockdown Mode is OFF." ;;
+        *) die "lockdown on|off" ;;
+    esac
+}
+
+usb_allow() {
+    [[ ${1:-} =~ ^[0-9]+$ ]] || die "device number expected"
+    usbguard allow-device -p "$1" && say "Device #$1 allowed (remembered)."
+}
+
+# ------------------------------------------------------------------ apps
+flatpak_install() {
+    (($#)) || die "no apps given"
+    local id ids=()
+    for id in "$@"; do
+        [[ $id =~ ^[A-Za-z0-9._-]+$ ]] || die "bad app id '$id'"
+        cut -d'|' -f2 "$CATALOG" | grep -qxF "$id" || die "'$id' is not in the HardPoint app catalog"
+        ids+=("$id")
+    done
+    flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    say "Installing ${#ids[@]} app(s) from Flathub — this can take a while."
+    local n=0 failed=()
+    for id in "${ids[@]}"; do
+        n=$((n + 1))
+        say "[$n/${#ids[@]}] $id"
+        flatpak install --system --noninteractive -y flathub "$id" 2>&1 | grep -vE '^\s*$' | tail -n 3 || true
+        flatpak info --system "$id" >/dev/null 2>&1 || failed+=("$id")
+    done
+    if ((${#failed[@]})); then say "Could not install: ${failed[*]}"; exit 1; fi
+    say "All apps installed."
+}
+
+# ------------------------------------------------------------------ updates
+apt_refresh() { apt-get update -q 2>&1 | tail -n 4; }
+
+apply_updates() {
+    local a apt=() fp=() fw=()
+    for a in "$@"; do
+        case "$a" in
+            apt:*)     [[ ${a#apt:} =~ ^[a-z0-9][a-z0-9.+-]*(:[a-z0-9]+)?$ ]] && apt+=("${a#apt:}") || die "bad package '$a'" ;;
+            flatpak:*) [[ ${a#flatpak:} =~ ^[A-Za-z0-9._/-]+$ ]] && fp+=("${a#flatpak:}") || die "bad app '$a'" ;;
+            fw:*)      [[ ${a#fw:} =~ ^[0-9a-f]{40}$ ]] && fw+=("${a#fw:}") || die "bad firmware id '$a'" ;;
+            *) die "unknown update '$a'" ;;
+        esac
+    done
+    local rc=0
+    if ((${#apt[@]})); then
+        say "Installing ${#apt[@]} system update(s)…"
+        apt-get install -y -q --only-upgrade -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold "${apt[@]}" || rc=1
+    fi
+    if ((${#fp[@]})); then
+        say "Updating ${#fp[@]} app(s)…"
+        flatpak update --system --noninteractive -y "${fp[@]}" || rc=1
+    fi
+    for d in "${fw[@]}"; do
+        say "Updating firmware for device $d…"
+        fwupdmgr update "$d" -y --no-reboot-check || rc=1
+    done
+    [[ -f /var/run/reboot-required ]] && say "RESTART NEEDED: restart the PC to finish these updates."
+    ((rc == 0)) && say "Updates installed." || say "Some updates failed — see the messages above."
+    return $rc
+}
+
+action="${1:-}"; shift || true
+case "$action" in
+    entra-enable)    entra_enable "$@" ;;
+    entra-disable)   entra_disable ;;
+    lockdown)        lockdown "$@" ;;
+    usb-allow)       usb_allow "$@" ;;
+    flatpak-install) flatpak_install "$@" ;;
+    apt-refresh)     apt_refresh ;;
+    apply-updates)   apply_updates "$@" ;;
+    *) die "unknown action '$action'" ;;
+esac

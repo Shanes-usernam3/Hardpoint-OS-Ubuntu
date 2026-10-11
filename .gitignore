@@ -1,0 +1,6 @@
+out/
+cache/
+work/
+extra-pkgs/
+*.iso
+__pycache__/

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Xbox Cloud Gaming
+Comment=Play Xbox games in the cloud (Microsoft Edge)
+Exec=microsoft-edge-stable --app=https://www.xbox.com/play --class=XboxCloudGaming
+Icon=applications-games
+Categories=Game;
+StartupWMClass=XboxCloudGaming

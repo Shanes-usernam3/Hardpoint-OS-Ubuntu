@@ -1,0 +1,106 @@
+# HardPoint OS (Zorin Edition) — apt packages added on top of Zorin OS Core.
+# One per line. Missing packages are skipped with a warning (see the build log).
+
+# --- HardPoint apps (Setup / Updates / Accounts / Security) ---
+python3-gi
+gir1.2-webkit2-4.1
+gir1.2-notify-0.7
+libnotify-bin
+policykit-1
+zenity
+
+# --- Security ---
+ufw
+gufw
+apparmor-utils
+apparmor-profiles
+usbguard
+fwupd
+cryptsetup
+sbsigntool
+mokutil
+systemd-zram-generator
+
+# --- Developer tools ---
+git
+git-lfs
+build-essential
+cmake
+ninja-build
+pkg-config
+curl
+wget
+jq
+python3-pip
+python3-venv
+pipx
+nodejs
+npm
+openjdk-21-jdk
+android-sdk-platform-tools
+code
+docker.io
+docker-compose-v2
+docker-buildx
+podman
+qemu-system-x86
+qemu-utils
+virt-manager
+libvirt-daemon-system
+shellcheck
+sqlite3
+tmux
+htop
+btop
+
+# --- IT / networking tools ---
+nmap
+wireshark
+tshark
+tcpdump
+iperf3
+mtr-tiny
+dnsutils
+whois
+traceroute
+net-tools
+ethtool
+openssh-client
+remmina
+remmina-plugin-rdp
+remmina-plugin-vnc
+freerdp3-x11
+wireguard-tools
+openvpn
+network-manager-openvpn-gnome
+smartmontools
+nvme-cli
+gparted
+testdisk
+gddrescue
+stress-ng
+memtester
+fio
+hwinfo
+lshw
+inxi
+dmidecode
+p7zip-full
+unrar
+
+# --- Gaming ---
+steam-installer
+gamemode
+mangohud
+vulkan-tools
+mesa-vulkan-drivers
+mesa-vulkan-drivers:i386
+libgl1-mesa-dri:i386
+
+# --- Microsoft (Edge for Xbox Cloud Gaming + Intune Company Portal) ---
+microsoft-edge-stable
+intune-portal
+
+# --- Flatpak (apps picked in HardPoint Setup) ---
+flatpak
+gnome-software-plugin-flatpak

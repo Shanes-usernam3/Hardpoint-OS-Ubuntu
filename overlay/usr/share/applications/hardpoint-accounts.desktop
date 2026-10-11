@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint Accounts
+Comment=Work or school sign-in (Microsoft Entra ID) and Intune
+Exec=hardpoint-app accounts
+Icon=hardpoint
+Categories=Settings;System;
+Keywords=entra;azure;intune;microsoft;work;school;
+StartupNotify=true

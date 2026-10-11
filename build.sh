@@ -1,0 +1,172 @@
+#!/usr/bin/env bash
+# HardPoint OS (Zorin Edition) — ISO build script
+#
+# Takes the official Zorin OS Core ISO, verifies it, unpacks the live system,
+# adds HardPoint OS (branding, apps, security, dev/IT/gaming software) and packs
+# a new bootable ISO. Runs on Ubuntu 24.04 (or the GitHub Actions runner) as root.
+#
+#   sudo ./build.sh            ISO lands in out/
+#   CACHE=/path sudo ./build.sh   reuse a downloaded Zorin ISO
+set -euo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=config/base.env
+source "$HERE/config/base.env"
+OUT="${OUT:-$HERE/out}"
+CACHE="${CACHE:-$HERE/cache}"
+WORK="${WORK:-/var/tmp/hp-zorin-work}"
+VERSION="${HP_VERSION:-$HP_BASE_VERSION.$(date +%Y%m%d)}"
+ISO_NAME="hardpoint-os-zorin-${VERSION}-amd64.iso"
+
+log() { printf '\e[1;35m==>\e[0m %s\n' "$*"; }
+warn() { printf '\e[1;33mWARN:\e[0m %s\n' "$*" >&2; }
+die() { printf '\e[1;31mERROR:\e[0m %s\n' "$*" >&2; exit 1; }
+
+[[ $EUID -eq 0 ]] || die "Run as root (sudo ./build.sh)."
+command -v apt-get >/dev/null || die "Build on Ubuntu/Debian."
+
+log "Installing build tools"
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -y -qq squashfs-tools xorriso rsync wget ca-certificates \
+    python3-pil python3-numpy librsvg2-bin fonts-inter isomd5sum >/dev/null
+
+# ---------------------------------------------------------------- 1. base ISO
+mkdir -p "$CACHE" "$OUT"
+BASE="$CACHE/$ZORIN_ISO"
+verify() { echo "$ZORIN_SHA256  $BASE" | sha256sum -c --status; }
+if [[ -f $BASE ]] && verify; then
+    log "Using cached $ZORIN_ISO"
+else
+    rm -f "$BASE"
+    for m in $ZORIN_MIRRORS; do
+        log "Downloading $ZORIN_ISO from $m"
+        if wget -q --show-progress --progress=dot:giga -O "$BASE.part" "$m/$ZORIN_ISO"; then
+            mv "$BASE.part" "$BASE"
+            if verify; then break; fi
+            # Show what the mirror itself publishes, to tell a bad mirror from a stale pin
+            wget -qO- "$m/SHA256SUMS.txt" 2>/dev/null | grep -F "$ZORIN_ISO" || true
+            warn "Checksum mismatch from $m (got $(sha256sum "$BASE" | cut -d' ' -f1))"
+            rm -f "$BASE"
+        fi
+        rm -f "$BASE.part"
+    done
+    [[ -f $BASE ]] || die "Could not download a verified $ZORIN_ISO from any mirror."
+fi
+log "Zorin ISO verified (sha256 $ZORIN_SHA256)"
+
+# ---------------------------------------------------------------- 2. unpack
+cleanup() {
+    set +e
+    for m in dev/pts dev proc sys run tmp/hp; do
+        mountpoint -q "$WORK/root/$m" && umount -lf "$WORK/root/$m"
+    done
+    mountpoint -q "$WORK/mnt" && umount -lf "$WORK/mnt"
+}
+trap cleanup EXIT
+cleanup
+rm -rf "$WORK"; mkdir -p "$WORK"/{mnt,iso,root}
+mount -o loop,ro "$BASE" "$WORK/mnt"
+
+mapfile -t SQUASH < <(cd "$WORK/mnt" && find casper -maxdepth 1 -name '*.squashfs' | sort)
+log "Live image layers: ${SQUASH[*]:-none}"
+[[ -f $WORK/mnt/casper/filesystem.squashfs ]] || die "casper/filesystem.squashfs not found (layout: ${SQUASH[*]}). The Zorin ISO layout changed — update build.sh."
+((${#SQUASH[@]} == 1)) || warn "Extra squashfs layers present; only filesystem.squashfs is customised."
+
+log "Copying ISO boot files"
+rsync -a --exclude=casper/filesystem.squashfs "$WORK/mnt/" "$WORK/iso/"
+log "Unpacking the live system (takes a few minutes)"
+unsquashfs -q -f -d "$WORK/root" "$WORK/mnt/casper/filesystem.squashfs"
+
+INSTALLER=unknown
+[[ -d $WORK/root/usr/lib/ubiquity ]] && INSTALLER=ubiquity
+compgen -G "$WORK/root/usr/share/applications/*install*.desktop" >/dev/null && \
+    log "Installer launchers: $(cd "$WORK/root/usr/share/applications" && ls ./*install*.desktop | tr '\n' ' ')"
+log "Installer detected: $INSTALLER"
+
+# ---------------------------------------------------------------- 3. branding art
+log "Rendering HardPoint branding"
+BR="$WORK/branding"
+python3 "$HERE/tools/make-branding.py" "$BR" >/dev/null
+cp "$HERE/branding/hardpoint-logo.svg" "$BR/"
+
+# ---------------------------------------------------------------- 4. customise (chroot)
+R="$WORK/root"
+mount --bind /dev "$R/dev"; mount --bind /dev/pts "$R/dev/pts"
+mount -t proc proc "$R/proc"; mount -t sysfs sys "$R/sys"; mount -t tmpfs tmpfs "$R/run"
+mkdir -p "$R/tmp/hp" "$WORK/stage"
+mount --bind "$WORK/stage" "$R/tmp/hp"
+
+rsync -a "$HERE/overlay/" "$WORK/stage/overlay/"
+rsync -a "$HERE/config/" "$WORK/stage/config/"
+rsync -a "$BR/" "$WORK/stage/branding/"
+cp "$HERE/tools/customize.sh" "$HERE/tools/rebrand.sh" "$HERE/tools/gdm-theme.sh" "$WORK/stage/"
+mkdir -p "$WORK/stage/pkgs"
+if compgen -G "$HERE/extra-pkgs/*.deb" >/dev/null; then cp "$HERE"/extra-pkgs/*.deb "$WORK/stage/pkgs/"; fi
+cat > "$WORK/stage/build.env" <<EOF
+HP_NAME="$HP_NAME"
+HP_EDITION="$HP_EDITION"
+HP_VERSION="$VERSION"
+HP_HOME_URL="$HP_HOME_URL"
+INSTALLER="$INSTALLER"
+EOF
+
+cp -L /etc/resolv.conf "$R/etc/resolv.conf.hp" 2>/dev/null || true
+mv "$R/etc/resolv.conf" "$R/etc/resolv.conf.zorin" 2>/dev/null || true
+cp -L /etc/resolv.conf "$R/etc/resolv.conf"
+printf '#!/bin/sh\nexit 101\n' > "$R/usr/sbin/policy-rc.d"; chmod +x "$R/usr/sbin/policy-rc.d"
+
+log "Customising the system (packages, apps, security, branding)"
+chroot "$R" /usr/bin/env -i HOME=/root PATH=/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 \
+    bash /tmp/hp/customize.sh
+
+log "Replacing Zorin logos with HardPoint logos"
+python3 "$HERE/tools/apply-logos.py" "$R" "$WORK/stage/logo-targets.txt" "$BR"
+# Icon caches must know about the new images
+chroot "$R" bash -c 'for d in /usr/share/icons/*/; do [[ -f $d/index.theme ]] && gtk-update-icon-cache -qf "$d" 2>/dev/null; done; true'
+
+rm -f "$R/usr/sbin/policy-rc.d" "$R/etc/resolv.conf"
+if [[ -e $R/etc/resolv.conf.zorin || -L $R/etc/resolv.conf.zorin ]]; then mv "$R/etc/resolv.conf.zorin" "$R/etc/resolv.conf"; fi
+rm -f "$R/etc/resolv.conf.hp"
+cleanup
+rm -rf "$R/tmp/hp" "$R/tmp/"* "$R/var/tmp/"* "$R/root/.cache"
+
+# ---------------------------------------------------------------- 5. live boot files
+log "Updating live boot files"
+C="$WORK/iso/casper"
+kern="$(ls -1 "$R"/boot/vmlinuz-* 2>/dev/null | sort -V | tail -1)"
+initrd="$(ls -1 "$R"/boot/initrd.img-* 2>/dev/null | sort -V | tail -1)"
+for f in vmlinuz vmlinuz.efi; do [[ -f $C/$f ]] && cp "$kern" "$C/$f"; done
+for f in initrd initrd.lz initrd.gz initrd.img; do [[ -f $C/$f ]] && cp "$initrd" "$C/$f"; done
+
+chroot "$R" dpkg-query -W --showformat='${Package} ${Version}\n' > "$C/filesystem.manifest" 2>/dev/null || true
+du -sx --block-size=1 "$R" | cut -f1 > "$C/filesystem.size"
+# Keep Zorin's list of live-only packages (removed from the installed system by the installer)
+
+# Boot menu + disk info
+find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null | while read -r cfg; do
+    sed -i -e "s/Zorin OS [0-9.]* *\(Core\)\?/$HP_NAME/g" -e "s/Zorin OS/$HP_NAME/g" -e "s/Zorin/HardPoint/g" "$cfg"
+done
+echo "$HP_NAME $HP_BASE_VERSION ($HP_EDITION) $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
+if [[ -d $WORK/iso/boot/grub ]]; then
+    cp "$BR/grub.png" "$WORK/iso/boot/grub/hardpoint.png"
+    grep -q hardpoint.png "$WORK/iso/boot/grub/grub.cfg" || sed -i '1i set color_normal=light-gray/black\nset menu_color_highlight=white/magenta\nif loadfont unicode ; then insmod png ; background_image /boot/grub/hardpoint.png ; fi' "$WORK/iso/boot/grub/grub.cfg"
+fi
+
+# ---------------------------------------------------------------- 6. pack
+log "Compressing the system image (xz — slowest step)"
+mksquashfs "$R" "$C/filesystem.squashfs" -noappend -comp xz -b 1M -Xdict-size 100% -no-progress -quiet
+log "System image: $(du -h "$C/filesystem.squashfs" | cut -f1)"
+
+(cd "$WORK/iso" && find . -type f ! -name md5sum.txt ! -path './boot.catalog' ! -path './boot/grub/i386-pc/eltorito.img' \
+    ! -path './isolinux/*' -print0 | xargs -0 md5sum > md5sum.txt)
+
+rm -f "$WORK/iso/boot.catalog"
+log "Building the ISO with the same boot setup as Zorin's"
+mapfile -t BOOTOPTS < <(xorriso -indev "$BASE" -report_el_torito as_mkisofs 2>/dev/null | grep -v '^-V ' | xargs -n1 printf '%s\n' 2>/dev/null)
+((${#BOOTOPTS[@]} > 0)) || die "Could not read the boot layout of the Zorin ISO."
+xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
+
+(cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
+umount "$WORK/mnt" 2>/dev/null || true
+log "Done: $OUT/$ISO_NAME ($(du -h "$OUT/$ISO_NAME" | cut -f1))"

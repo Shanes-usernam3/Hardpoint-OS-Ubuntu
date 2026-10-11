@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint Setup
+Comment=Set up this PC: look, accounts, apps and security
+Exec=hardpoint-app setup
+Icon=hardpoint
+Categories=Settings;System;
+Keywords=welcome;setup;first;
+StartupNotify=true

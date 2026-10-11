@@ -1,0 +1,14 @@
+[Unit]
+Description=HardPoint OS first-boot setup
+ConditionPathExists=!/var/lib/hardpoint/firstboot-done
+ConditionKernelCommandLine=!boot=casper
+After=local-fs.target network.target
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/hardpoint/hp-firstboot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

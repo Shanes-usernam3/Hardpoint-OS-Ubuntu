@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>HardPoint OS</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;font:15px/1.5 "Inter","Ubuntu",sans-serif;color:#F2F4FF;background:#0A0E17}
+  .bg{position:fixed;inset:-20%;filter:blur(60px);background:
+    radial-gradient(40% 35% at 20% 25%,rgba(3,244,212,.22),transparent 70%),
+    radial-gradient(45% 40% at 70% 80%,rgba(112,109,252,.28),transparent 70%),
+    radial-gradient(35% 35% at 90% 15%,rgba(255,46,150,.18),transparent 70%),
+    linear-gradient(180deg,#0C2F35,#1A1B39 55%,#0A0E17);animation:d 20s ease-in-out infinite alternate}
+  @keyframes d{to{transform:translate(3%,2%) scale(1.06)}}
+  .s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 9%;opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}
+  .s.on{opacity:1;transform:none}
+  h1{font-size:30px;margin:0 0 12px;letter-spacing:-.02em}
+  p{margin:0;max-width:560px;color:#B0B7D8;font-size:16px}
+  .g{background:linear-gradient(110deg,#03F4D4,#706DFC 55%,#FF2E96);-webkit-background-clip:text;color:transparent}
+  img{width:96px;height:96px;margin-bottom:22px;filter:drop-shadow(0 0 22px rgba(112,109,252,.7))}
+  .tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+  .tags span{font-size:12px;font-weight:600;padding:4px 12px;border-radius:99px;background:rgba(40,46,74,.7);color:#C9CFEE}
+  .dots{position:fixed;bottom:18px;left:9%;display:flex;gap:7px}
+  .dots i{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.15);transition:all .4s}
+  .dots i.on{width:40px;background:linear-gradient(90deg,#03F4D4,#FF2E96)}
+</style></head>
+<body><div class="bg"></div>
+<section class="s on"><img src="logo.png" alt=""><h1>Welcome to <span class="g">HardPoint OS</span></h1>
+  <p>A secure, fast desktop for IT work, development and gaming — built by HardPoint Networks on Zorin OS Core and Ubuntu 24.04 LTS.</p></section>
+<section class="s"><h1>Secure <span class="g">by default</span></h1>
+  <p>Firewall on, kernel hardening, AppArmor, private Wi-Fi addresses and optional full-disk encryption. Turn on Lockdown Mode when you need even more.</p>
+  <div class="tags"><span>Firewall</span><span>AppArmor</span><span>Lockdown Mode</span><span>Encryption</span></div></section>
+<section class="s"><h1>Ready for <span class="g">dev &amp; IT</span></h1>
+  <p>VS Code, Git, Node.js, Java, Docker, Podman, adb/fastboot, virtual machines, Wireshark, nmap, Remmina, disk and hardware tools — all installed.</p>
+  <div class="tags"><span>VS Code</span><span>Docker</span><span>Android tools</span><span>Wireshark</span><span>Remmina</span></div></section>
+<section class="s"><h1>Built to <span class="g">play</span></h1>
+  <p>Steam, GameMode and MangoHud out of the box. Pick emulators and Xbox Cloud Gaming in HardPoint Setup after install.</p>
+  <div class="tags"><span>Steam</span><span>Xbox Cloud Gaming</span><span>RetroArch</span><span>Dolphin</span><span>PCSX2</span></div></section>
+<section class="s"><h1>Work or school <span class="g">sign-in</span></h1>
+  <p>Connect to Microsoft Entra ID to sign in with your organisation account and PIN, and enrol in Intune with Company Portal.</p></section>
+<section class="s"><h1>Updates <span class="g">your way</span></h1>
+  <p>HardPoint Updates checks every 6 hours and shows a checklist — you choose exactly what installs. Security fixes are flagged.</p></section>
+<div class="dots"></div>
+<script>
+  const s=[...document.querySelectorAll('.s')],d=document.querySelector('.dots');
+  s.forEach(()=>d.appendChild(document.createElement('i')));
+  let i=0;const show=()=>{s.forEach((e,k)=>e.classList.toggle('on',k===i));[...d.children].forEach((e,k)=>e.classList.toggle('on',k===i));};
+  show();setInterval(()=>{i=(i+1)%s.length;show();},9000);
+</script>
+</body></html>
