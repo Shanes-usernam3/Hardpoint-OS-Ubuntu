@@ -1,0 +1,4 @@
+#!/bin/sh
+# Re-check the touchpad after waking from sleep
+[ "$1" = post ] && /usr/lib/hardpoint/hp-touchpad-fix >/dev/null 2>&1 &
+exit 0

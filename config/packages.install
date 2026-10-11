@@ -9,6 +9,19 @@ libnotify-bin
 policykit-1
 zenity
 
+# --- Laptop hardware (ThinkBook 15 G4 IAP and other Intel 12th-gen laptops) ---
+linux-firmware
+firmware-sof-signed
+intel-media-va-driver-non-free
+intel-gpu-tools
+thermald
+power-profiles-daemon
+fprintd
+libpam-fprintd
+iio-sensor-proxy
+xserver-xorg-input-libinput
+bolt
+
 # --- Security ---
 ufw
 gufw

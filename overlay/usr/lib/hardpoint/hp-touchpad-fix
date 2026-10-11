@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Safety net for I2C touchpads that miss their start-up window
+# (seen on ThinkBook 15 G4 IAP / 14 G4 IAP). If the firmware lists an
+# I2C HID device but no touchpad showed up, reload the driver (up to 3 tries).
+set -uo pipefail
+has_i2c_hid() {
+    local d
+    for d in /sys/bus/i2c/devices/*/firmware_node; do
+        [[ -e $d ]] || continue
+        grep -qsE 'PNP0C50|ACPI0C50' "$d/hid" "$d/modalias" && return 0
+    done
+    return 1
+}
+have_touchpad() { grep -qiE '^N: Name=.*(touchpad|synaptics|elan|SYNA|ELAN)' /proc/bus/input/devices; }
+
+has_i2c_hid || exit 0
+for try in 1 2 3; do
+    have_touchpad && { [[ $try -gt 1 ]] && echo "Touchpad is working after $((try - 1)) driver reload(s)."; exit 0; }
+    echo "No touchpad yet — reloading i2c_hid_acpi (try $try)"
+    modprobe -r i2c_hid_acpi 2>/dev/null
+    sleep 1
+    modprobe i2c_hid_acpi
+    sleep 3
+done
+have_touchpad && exit 0
+echo "Touchpad still missing. Kernel messages:"; dmesg | grep -iE 'i2c_hid|SYNA|ELAN|intel-lpss' | tail -20
+exit 0

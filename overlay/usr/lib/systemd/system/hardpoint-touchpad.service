@@ -1,0 +1,12 @@
+[Unit]
+Description=HardPoint OS touchpad check (I2C touchpads)
+After=systemd-udev-settle.service systemd-modules-load.service
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 2
+ExecStart=/usr/lib/hardpoint/hp-touchpad-fix
+
+[Install]
+WantedBy=multi-user.target
