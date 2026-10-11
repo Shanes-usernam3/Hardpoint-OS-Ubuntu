@@ -124,6 +124,9 @@ log "Replacing Zorin logos with HardPoint logos"
 python3 "$HERE/tools/apply-logos.py" "$R" "$WORK/stage/logo-targets.txt" "$BR"
 # Icon caches must know about the new images
 chroot "$R" bash -c 'for d in /usr/share/icons/*/; do [[ -f $d/index.theme ]] && gtk-update-icon-cache -qf "$d" 2>/dev/null; done; true'
+# Rebuild the boot image now that every boot-splash image is HardPoint's
+log "Rebuilding the boot image with the new splash images"
+chroot "$R" update-initramfs -u -k all >/dev/null 2>&1 || warn "update-initramfs reported a problem"
 
 rm -f "$R/usr/sbin/policy-rc.d" "$R/etc/resolv.conf"
 if [[ -e $R/etc/resolv.conf.zorin || -L $R/etc/resolv.conf.zorin ]]; then mv "$R/etc/resolv.conf.zorin" "$R/etc/resolv.conf"; fi
