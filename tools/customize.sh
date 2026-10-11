@@ -283,11 +283,20 @@ if [[ -d /usr/share/plymouth/themes/hardpoint ]]; then
     update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth \
         /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth 300
     update-alternatives --set default.plymouth /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth
+    # Zorin also names its theme in plymouthd.conf, which wins over the alternative
+    mkdir -p /etc/plymouth
+    printf '[Daemon]\nTheme=hardpoint\nShowDelay=0\n' > /etc/plymouth/plymouthd.conf
+    if command -v plymouth-set-default-theme >/dev/null; then plymouth-set-default-theme hardpoint || true; fi
+    log "Boot splash: $(plymouth-set-default-theme 2>/dev/null || readlink -f /etc/alternatives/default.plymouth)"
 fi
 # Touchpad driver order applies inside the boot image too
 grep -qx 'pinctrl_alderlake' /etc/initramfs-tools/modules 2>/dev/null || printf 'pinctrl_alderlake\npinctrl_tigerlake\n' >> /etc/initramfs-tools/modules
 log "Rebuilding the boot image"
 update-initramfs -u -k all >/dev/null 2>&1 || warn "update-initramfs reported a problem"
+# Show which splash ended up inside the boot image (build log check)
+for i in /boot/initrd.img-*; do
+    log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')"
+done
 
 # ------------------------------------------------------------ clean up
 apt-get autoremove -y -q >/dev/null || true

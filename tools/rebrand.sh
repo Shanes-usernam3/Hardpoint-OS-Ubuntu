@@ -108,7 +108,7 @@ while IFS= read -r -d '' f; do
 done < <(find /usr/share/pixmaps /usr/share/icons /usr/share/zorin* /usr/share/gnome-shell /usr/share/ubiquity \
     /usr/share/plymouth /usr/share/backgrounds/zorin* /usr/share/gdm 2>/dev/null \
     -type f \( -iname '*zorin*logo*' -o -iname '*logo*zorin*' -o -iname 'distributor-logo*' -o -iname 'start-here*' \
-    -o -iname 'zorin-menu*' -o -iname 'zorin-os*' -o -iname 'zorin.*' -o -iname 'zorin-symbolic*' -o -iname 'ubuntu-logo*' \) \
+    -o -iname 'zorin-menu*' -o -ipath '/usr/share/plymouth/themes/*/watermark*' -o -ipath '/usr/share/plymouth/themes/zorin*/*logo*' -o -iname 'zorin-os*' -o -iname 'zorin.*' -o -iname 'zorin-symbolic*' -o -iname 'ubuntu-logo*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0)
 log "$(wc -l < "$S/logo-targets.txt") logo images will be replaced"
 
