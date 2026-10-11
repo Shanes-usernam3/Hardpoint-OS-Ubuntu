@@ -3,7 +3,7 @@
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
   <vendor>HardPoint Networks</vendor>
-  <vendor_url>https://github.com/Shanes-usernam3/Hardpoint-os-zorin</vendor_url>
+  <vendor_url>https://github.com/Shanes-usernam3/Hardpoint-OS-Ubuntu</vendor_url>
   <icon_name>hardpoint</icon_name>
   <action id="org.hardpoint.helper">
     <description>Change HardPoint OS system settings</description>
