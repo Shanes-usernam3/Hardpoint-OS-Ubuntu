@@ -84,11 +84,17 @@ compgen -G "$WORK/root/usr/share/applications/*install*.desktop" >/dev/null && \
     log "Installer launchers: $(cd "$WORK/root/usr/share/applications" && ls ./*install*.desktop | tr '\n' ' ')"
 log "Installer detected: $INSTALLER"
 
-# ---------------------------------------------------------------- 3. branding art
-log "Rendering HardPoint branding"
-BR="$WORK/branding"
-python3 "$HERE/tools/make-branding.py" "$BR" >/dev/null
-cp "$HERE/branding/hardpoint-logo.svg" "$BR/"
+# ---------------------------------------------------------------- 3. hardpoint-os package
+# CI passes a prebuilt package in hp-pkg/ (the same one published as an update);
+# a local build makes its own.
+mkdir -p "$WORK/stage"
+if compgen -G "$HERE/hp-pkg/hardpoint-os_*.deb" >/dev/null; then
+    cp "$HERE"/hp-pkg/hardpoint-os_*.deb "$WORK/stage/"
+else
+    log "Building the hardpoint-os package"
+    bash "$HERE/tools/build-deb.sh" "$WORK/stage" >/dev/null
+fi
+log "Package: $(cd "$WORK/stage" && ls hardpoint-os_*.deb)"
 
 # ---------------------------------------------------------------- 4. customise (chroot)
 R="$WORK/root"
@@ -97,10 +103,8 @@ mount -t proc proc "$R/proc"; mount -t sysfs sys "$R/sys"; mount -t tmpfs tmpfs 
 mkdir -p "$R/tmp/hp" "$WORK/stage"
 mount --bind "$WORK/stage" "$R/tmp/hp"
 
-rsync -a "$HERE/overlay/" "$WORK/stage/overlay/"
 rsync -a "$HERE/config/" "$WORK/stage/config/"
-rsync -a "$BR/" "$WORK/stage/branding/"
-cp "$HERE/tools/customize.sh" "$HERE/tools/rebrand.sh" "$HERE/tools/gdm-theme.sh" "$WORK/stage/"
+cp "$HERE/tools/customize.sh" "$WORK/stage/"
 mkdir -p "$WORK/stage/pkgs"
 if compgen -G "$HERE/extra-pkgs/*.deb" >/dev/null; then cp "$HERE"/extra-pkgs/*.deb "$WORK/stage/pkgs/"; fi
 cat > "$WORK/stage/build.env" <<EOF
@@ -119,14 +123,6 @@ printf '#!/bin/sh\nexit 101\n' > "$R/usr/sbin/policy-rc.d"; chmod +x "$R/usr/sbi
 log "Customising the system (packages, apps, security, branding)"
 chroot "$R" /usr/bin/env -i HOME=/root PATH=/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 \
     bash /tmp/hp/customize.sh
-
-log "Replacing Zorin logos with HardPoint logos"
-python3 "$HERE/tools/apply-logos.py" "$R" "$WORK/stage/logo-targets.txt" "$BR"
-# Icon caches must know about the new images
-chroot "$R" bash -c 'for d in /usr/share/icons/*/; do [[ -f $d/index.theme ]] && gtk-update-icon-cache -qf "$d" 2>/dev/null; done; true'
-# Rebuild the boot image now that every boot-splash image is HardPoint's
-log "Rebuilding the boot image with the new splash images"
-chroot "$R" update-initramfs -u -k all >/dev/null 2>&1 || warn "update-initramfs reported a problem"
 
 rm -f "$R/usr/sbin/policy-rc.d" "$R/etc/resolv.conf"
 if [[ -e $R/etc/resolv.conf.zorin || -L $R/etc/resolv.conf.zorin ]]; then mv "$R/etc/resolv.conf.zorin" "$R/etc/resolv.conf"; fi
@@ -152,7 +148,7 @@ find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null
 done
 echo "$HP_NAME $HP_BASE_VERSION ($HP_EDITION) $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
 if [[ -d $WORK/iso/boot/grub ]]; then
-    cp "$BR/grub.png" "$WORK/iso/boot/grub/hardpoint.png"
+    cp "$R/usr/share/hardpoint/branding/grub.png" "$WORK/iso/boot/grub/hardpoint.png"
     grep -q hardpoint.png "$WORK/iso/boot/grub/grub.cfg" || sed -i '1i set color_normal=light-gray/black\nset menu_color_highlight=white/magenta\nif loadfont unicode ; then insmod png ; background_image /boot/grub/hardpoint.png ; fi' "$WORK/iso/boot/grub/grub.cfg"
 fi
 

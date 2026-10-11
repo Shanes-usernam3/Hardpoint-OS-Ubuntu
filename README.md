@@ -72,6 +72,23 @@ Notes:
 - Conditional Access rules that require MFA work. Rules that require a compliant device work once the PC is enrolled and compliant.
 - The Himmelblau version is pinned in `.github/workflows/build-iso.yml` (`HIMMELBLAU_TAG`).
 
+## Updates without reinstalling
+
+Everything HardPoint adds lives in one package, **hardpoint-os** (apps, branding, boot splash,
+login theme, security and laptop settings). Every push to `main` builds a new version and
+publishes it, signed, to the HardPoint update source on GitHub Pages
+(`https://shanes-usernam3.github.io/Hardpoint-OS-Ubuntu/apt`). Installed PCs see it in
+**HardPoint Updates** like any other update; installing it re-applies all HardPoint settings.
+New apps added to `config/packages.install` are installed by the update too.
+
+- PCs installed from an ISO built after this change are already connected.
+- A PC installed before that needs this once, in Terminal:
+  `curl -fsSL https://shanes-usernam3.github.io/Hardpoint-OS-Ubuntu/apt/install.sh | sudo sh`
+- Updates are signed with the key in the `HP_SIGNING_KEY` Actions secret; PCs trust the public
+  half in `overlay/usr/share/keyrings/hardpoint-archive-keyring.gpg`. Without the secret the
+  build still works, it just doesn't publish.
+- GitHub Pages must serve the `gh-pages` branch (Settings → Pages).
+
 ## Layout
 
 | Path | What |
@@ -80,9 +97,9 @@ Notes:
 | `config/base.env` | Base ISO name, checksum and mirrors |
 | `config/packages.install` | apt packages added (missing ones are skipped and logged) |
 | `config/flatpaks.list` | Apps offered in HardPoint Setup |
-| `tools/customize.sh` | Runs inside the image: repos, packages, settings, security |
-| `tools/rebrand.sh`, `tools/apply-logos.py` | Name/logo replacement |
-| `tools/gdm-theme.sh` | Byte-style login screen |
+| `tools/customize.sh` | Runs inside the image: repos, packages, installs hardpoint-os |
+| `tools/build-deb.sh`, `tools/publish-apt.sh` | Build the hardpoint-os package and publish the signed update source |
+| `overlay/usr/lib/hardpoint/setup/` | What the package runs on install/update: settings, branding, login theme, boot splash |
 | `tools/make-branding.py` | Renders logo, wallpapers, boot and login art |
 | `overlay/` | Files copied into the system (HardPoint apps, polkit, systemd, Plymouth, hardening) |
 | `overlay/usr/lib/hardpoint/ui/` | The HardPoint apps UI (open `index.html` in a browser to preview with sample data) |

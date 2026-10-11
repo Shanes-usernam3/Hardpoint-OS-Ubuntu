@@ -4,3 +4,4 @@ work/
 extra-pkgs/
 *.iso
 __pycache__/
+hp-pkg/
