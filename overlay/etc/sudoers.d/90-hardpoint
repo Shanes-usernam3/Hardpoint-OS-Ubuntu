@@ -1,0 +1,5 @@
+# HardPoint OS administrators.
+# hpadmin: local admins (kept separately from "sudo" so work/school sign-in can
+# never remove the local admin). hp-entra-admins: managed by Entra ID sign-in.
+%hpadmin ALL=(ALL:ALL) ALL
+%hp-entra-admins ALL=(ALL:ALL) ALL

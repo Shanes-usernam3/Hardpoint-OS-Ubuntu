@@ -1,0 +1,4 @@
+// HardPoint OS: members of these groups can approve admin prompts (with their password)
+polkit.addAdminRule(function (action, subject) {
+    return ["unix-group:sudo", "unix-group:admin", "unix-group:hpadmin", "unix-group:hp-entra-admins"];
+});

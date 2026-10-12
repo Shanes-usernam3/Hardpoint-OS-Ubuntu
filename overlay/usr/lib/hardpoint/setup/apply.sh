@@ -155,4 +155,6 @@ for i in /boot/initrd.img-*; do
     log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')" | tee -a "$S/build-report.txt"
 done
 
+# Local admins stay admins no matter what manages the "sudo" group
+bash "$D/admins.sh"
 log "HardPoint settings applied"
