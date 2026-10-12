@@ -59,6 +59,9 @@ entra_enable() {
         echo "local_groups = users"
         # Home folders by unique ID (alias by email), so a work account can never
         # collide with a local account of the same name
+        # Work accounts keep their full email as the login name; a short name
+        # ("shane") would take over a local account with the same name
+        echo "cn_name_mapping = false"
         echo "home_attr = UUID"
         echo "home_alias = SPN"
         echo "use_etc_skel = true"
