@@ -57,8 +57,10 @@ entra_enable() {
         echo "join_type = join"
         echo "apply_policy = false"
         echo "local_groups = users"
-        echo "home_attr = CN"
-        echo "home_alias = CN"
+        # Home folders by unique ID (alias by email), so a work account can never
+        # collide with a local account of the same name
+        echo "home_attr = UUID"
+        echo "home_alias = SPN"
         echo "use_etc_skel = true"
         echo "hello_pin_min_length = 6"
         echo "# Entra admins get their own group; the local 'sudo' group is never touched"
