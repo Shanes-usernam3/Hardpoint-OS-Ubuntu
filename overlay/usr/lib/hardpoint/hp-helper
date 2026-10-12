@@ -40,7 +40,13 @@ entra_enable() {
     compgen -G "$PKGDIR/himmelblau_*.deb" >/dev/null || die "the Entra sign-in packages are missing from this system"
 
     say "Installing Microsoft Entra ID sign-in (Himmelblau)…"
-    apt-get install -y -q --no-install-recommends "$PKGDIR"/*.deb || die "package install failed"
+    # The login-screen QR add-on is left out: it can hang the login screen
+    local debs=() d
+    for d in "$PKGDIR"/*.deb; do
+        case "$(dpkg-deb -f "$d" Package)" in himmelblau-qr-greeter) ;; *) debs+=("$d") ;; esac
+    done
+    /usr/lib/hardpoint/setup/admins.sh
+    apt-get install -y -q --no-install-recommends "${debs[@]}" || die "package install failed"
 
     say "Writing $HCONF"
     mkdir -p /etc/himmelblau
@@ -55,7 +61,8 @@ entra_enable() {
         echo "home_alias = CN"
         echo "use_etc_skel = true"
         echo "hello_pin_min_length = 6"
-        echo "local_sudo_group = sudo"
+        echo "# Entra admins get their own group; the local 'sudo' group is never touched"
+        echo "local_sudo_group = hp-entra-admins"
         [[ $admin_g != - ]] && echo "sudo_groups = $admin_g"
         [[ $allow_g != - ]] && echo "pam_allow_groups = $allow_g"
     } > "$HCONF"

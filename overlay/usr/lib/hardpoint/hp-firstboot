@@ -2,6 +2,7 @@
 # One-time root setup on the first boot of an installed HardPoint OS.
 set -uo pipefail
 mkdir -p /var/lib/hardpoint
+/usr/lib/hardpoint/setup/admins.sh
 # Admin users get the dev/IT groups (Docker, Wireshark capture, VMs, serial ports)
 for u in $(getent group sudo | cut -d: -f4 | tr ',' ' '); do
     for g in docker wireshark libvirt kvm dialout plugdev; do

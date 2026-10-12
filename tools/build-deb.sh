@@ -95,6 +95,7 @@ chmod 755 "$P/DEBIAN/postinst"
 # Permissions: root-owned, scripts executable
 find "$P" -path "$P/DEBIAN" -prune -o -type d -exec chmod 755 {} +
 find "$P" -path "$P/DEBIAN" -prune -o -type f ! -perm -u+x -exec chmod 644 {} +
+chmod 440 "$P/etc/sudoers.d/90-hardpoint"
 DEB="$OUT/hardpoint-os_${VERSION}_all.deb"
 dpkg-deb --root-owner-group -Zxz --build "$P" "$DEB" >/dev/null
 echo "$DEB"
