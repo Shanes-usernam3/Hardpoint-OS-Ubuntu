@@ -1,0 +1,136 @@
+#!/usr/bin/env bash
+# HardPoint OS — automatic system snapshot before updates (Timeshift, rsync mode).
+#
+#   hp-snapshot create [reason]   take a snapshot now (skips if one was taken < 30 min ago)
+#   hp-snapshot apt               called by apt before it changes packages
+#   hp-snapshot list              show HardPoint snapshots
+#
+# Snapshots cover the system only: /home, Flatpak apps, containers and VM disks are
+# excluded, so they stay small and never roll back your files. The newest 5
+# HardPoint snapshots are kept. Restore with the Timeshift app (or from the USB stick).
+set -uo pipefail
+export LC_ALL=C.UTF-8 PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+KEEP=5
+MIN_GAP=1800                       # seconds between automatic snapshots
+FIRST_FREE_GB=20                   # free space needed for the first (full) snapshot
+NEXT_FREE_GB=8                     # later snapshots only store changes
+CONF=/etc/timeshift/timeshift.json
+SNAPS=/timeshift/snapshots
+STAMP=/var/lib/hardpoint/last-snapshot
+TAG="HardPoint: before updates"
+
+say() { printf '%s\n' "$*"; }
+skip() { say "Snapshot skipped: $*"; exit 0; }
+
+[[ $EUID -eq 0 ]] || { say "Run as root."; exit 1; }
+[[ -z ${HP_NO_SNAPSHOT:-} && -z ${HP_STAGE:-} ]] || exit 0
+command -v timeshift >/dev/null || exit 0
+# Never inside the ISO build (chroot), the live USB, or a container
+systemd-detect-virt --quiet --chroot && exit 0
+systemd-detect-virt --quiet --container && exit 0
+grep -qw 'boot=casper' /proc/cmdline && exit 0
+[[ -d /run/systemd/system ]] || exit 0
+
+configure() {
+    # Only write a config if Timeshift hasn't been set up yet (your own settings win)
+    if [[ -f $CONF ]] && grep -q '"backup_device_uuid" *: *"[^"]' "$CONF"; then return; fi
+    local uuid
+    uuid="$(findmnt -no UUID /)"
+    [[ -n $uuid ]] || skip "cannot find the system disk"
+    mkdir -p /etc/timeshift
+    cat > "$CONF" <<EOF
+{
+  "backup_device_uuid" : "$uuid",
+  "parent_device_uuid" : "",
+  "do_first_run" : "false",
+  "btrfs_mode" : "false",
+  "include_btrfs_home_for_backup" : "false",
+  "include_btrfs_home_for_restore" : "false",
+  "stop_cron_emails" : "true",
+  "schedule_monthly" : "false",
+  "schedule_weekly" : "false",
+  "schedule_daily" : "false",
+  "schedule_hourly" : "false",
+  "schedule_boot" : "false",
+  "count_monthly" : "2",
+  "count_weekly" : "3",
+  "count_daily" : "5",
+  "count_hourly" : "6",
+  "count_boot" : "5",
+  "date_format" : "%Y-%m-%d %H:%M:%S",
+  "exclude" : [
+    "/home/**",
+    "/root/**",
+    "/var/lib/flatpak/**",
+    "/var/lib/docker/**",
+    "/var/lib/containers/**",
+    "/var/lib/libvirt/images/**",
+    "/var/cache/apt/archives/**",
+    "/var/tmp/**",
+    "/swapfile",
+    "/swap.img"
+  ],
+  "exclude-apps" : []
+}
+EOF
+    say "Timeshift set up for automatic HardPoint snapshots"
+}
+
+# HardPoint snapshots, newest first: "<name>"
+ours() {
+    [[ -d $SNAPS ]] || return 0
+    python3 - "$SNAPS" "$TAG" <<'PY'
+import json, os, sys
+root, tag = sys.argv[1], sys.argv[2]
+names = []
+for n in os.listdir(root):
+    try:
+        with open(os.path.join(root, n, "info.json")) as f:
+            if json.load(f).get("comments", "").startswith(tag.split(":")[0] + ":"):
+                names.append(n)
+    except (OSError, ValueError):
+        pass
+print("\n".join(sorted(names, reverse=True)))
+PY
+}
+
+prune() {
+    local n i=0
+    while read -r n; do
+        [[ -n $n ]] || continue
+        i=$((i + 1))
+        if ((i > KEEP)); then
+            timeshift --delete --snapshot "$n" --scripted >/dev/null 2>&1 && say "Removed old snapshot $n"
+        fi
+    done < <(ours)
+}
+
+create() {
+    local reason="${1:-$TAG}" now last=0 avail need
+    now="$(date +%s)"
+    [[ -f $STAMP ]] && last="$(cat "$STAMP" 2>/dev/null || echo 0)"
+    ((now - last >= MIN_GAP)) || exit 0           # one snapshot per update session
+    configure
+    avail=$(( $(df --output=avail -B1 / | tail -1) / 1024 / 1024 / 1024 ))
+    if [[ -n $(ours | head -1) ]]; then need=$NEXT_FREE_GB; else need=$FIRST_FREE_GB; fi
+    ((avail >= need)) || skip "only ${avail} GB free (needs ${need} GB)"
+    say "Taking a safety snapshot of the system before updating…"
+    [[ $need == "$FIRST_FREE_GB" ]] && say "(The first one copies the whole system and can take 5–15 minutes.)"
+    mkdir -p "$(dirname "$STAMP")"
+    if timeshift --create --comments "$reason" --tags O --scripted >/tmp/hp-snapshot.log 2>&1; then
+        echo "$now" > "$STAMP"
+        say "Snapshot saved. If an update causes trouble, open Timeshift and restore it."
+        prune
+    else
+        say "Snapshot failed (updates continue):"; tail -5 /tmp/hp-snapshot.log
+    fi
+}
+
+case "${1:-}" in
+    create) create "${2:-}" ;;
+    apt)    create "$TAG" ;;
+    list)   ours ;;
+    *) say "Usage: hp-snapshot create [reason] | apt | list"; exit 1 ;;
+esac
+exit 0

@@ -34,6 +34,7 @@ os-prober
 sbsigntool
 mokutil
 systemd-zram-generator
+timeshift
 
 # --- Developer tools ---
 git

@@ -9,7 +9,7 @@
 #   usb-allow <device-number>
 #   flatpak-install <app-id>...          (only ids from /usr/share/hardpoint/flatpaks.list)
 #   apt-refresh
-#   apply-updates [apt:<pkg>] [flatpak:<ref>] [fw:<device-id>]...
+#   apply-updates [apt:<pkg>] [flatpak:<ref>] [fw:<device-id>]...   (snapshot first)
 set -uo pipefail
 export DEBIAN_FRONTEND=noninteractive LC_ALL=C.UTF-8 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
@@ -180,6 +180,7 @@ apply_updates() {
     done
     local rc=0
     if ((${#apt[@]})); then
+        /usr/lib/hardpoint/hp-snapshot create "HardPoint: before updates" || true
         say "Installing ${#apt[@]} system update(s)…"
         apt-get install -y -q --only-upgrade -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold "${apt[@]}" || rc=1
     fi

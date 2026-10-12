@@ -68,7 +68,7 @@ Architecture: all
 Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
 Section: misc
 Priority: optional
-Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, pkexec | policykit-1
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
 Recommends: $RECS
 Description: HardPoint OS — apps, branding, security and laptop settings
  HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
