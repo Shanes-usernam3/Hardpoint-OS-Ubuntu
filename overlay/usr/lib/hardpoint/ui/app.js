@@ -380,7 +380,7 @@ const Updates = {
   data: null, sel: new Set(),
   async render(refetch = true) {
     $("#main").innerHTML = `<div class="head row between"><div><h1>Updates</h1><p id="usub">Checking…</p></div>
-      <div class="row"><button class="btn" id="refresh">Check now</button><button class="btn primary" id="apply" disabled>Install selected</button></div></div>
+      <div class="row"><button class="btn ghost" id="snaps" title="Undo a bad update">Snapshots</button><button class="btn" id="refresh">Check now</button><button class="btn primary" id="apply" disabled>Install selected</button></div></div>
       <div id="ulist"><div class="card"><div class="bar busy"><i></i></div></div></div>
       <div class="card hidden" id="ulogc"><div class="row between"><h3 id="umsg">Installing updates…</h3></div><div class="bar busy" style="margin-top:12px"><i></i></div><div class="console mono" id="ulog"></div></div>`;
     $("#refresh").onclick = (e) => busy(e.currentTarget, "Checking…", async () => {
@@ -388,6 +388,7 @@ const Updates = {
       await Updates.load();
     });
     $("#apply").onclick = Updates.apply;
+    $("#snaps").onclick = () => HP.call("open", { app: "snapshots" }).catch((x) => toast(x.message));
     if (refetch || !Updates.data) await Updates.load(); else Updates.draw();
   },
   async load() {
@@ -402,7 +403,7 @@ const Updates = {
     $("#usub").textContent = Updates.data.error ? `Could not check: ${Updates.data.error}`
       : items.length ? `${items.length} update${items.length > 1 ? "s" : ""} available${when ? " · checked " + when : ""}` : `You're up to date${when ? " · checked " + when : ""}`;
     if (!items.length) {
-      $("#ulist").innerHTML = `<div class="card hero" style="padding:46px"><img class="logo" style="width:84px;height:84px" src="logo.svg" alt=""><h2>All up to date</h2><p>We'll let you know when something new arrives.</p></div>`;
+      $("#ulist").innerHTML = `<div class="card hero" style="padding:46px"><img class="logo" style="width:84px;height:84px" src="logo.svg" alt=""><h2>All up to date</h2><p>We'll let you know when something new arrives. A safety snapshot is taken before every system update.</p></div>`;
       $("#apply").disabled = true; return;
     }
     const groups = [["Security fixes", (i) => i.security], ["System", (i) => !i.security && i.kind === "system"],

@@ -47,6 +47,7 @@ OPENERS = {
     "users": ["gnome-control-center", "users"],
     "appearance": ["zorin-appearance"],
     "firmware": ["gnome-firmware"],
+    "snapshots": ["timeshift-launcher"],
     "updates": ["hardpoint-app", "updates"],
     "accounts": ["hardpoint-app", "accounts"],
     "security": ["hardpoint-app", "security"],
