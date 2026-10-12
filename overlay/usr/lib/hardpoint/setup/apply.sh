@@ -155,6 +155,21 @@ for i in /boot/initrd.img-*; do
     log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')" | tee -a "$S/build-report.txt"
 done
 
+# Zorin's own welcome tour also opens at first sign-in; HardPoint Setup replaces it
+for f in /etc/xdg/autostart/*.desktop; do
+    [[ -f $f ]] || continue
+    case "$(basename "$f")" in hardpoint-*) continue ;; esac
+    if grep -qiE '^Exec=.*zorin.*(tour|welcome|intro)|^Exec=.*(tour|welcome|intro).*zorin' "$f" \
+       || { grep -qi zorin "$f" && grep -qiE '^Name(\[[^]]*\])?=.*(tour|welcome)' "$f"; }; then
+        if ! dpkg-divert --list "$f" | grep -q .; then
+            dpkg-divert --quiet --local --rename --divert "$f.zorin" --add "$f"
+            cp "$f.zorin" "$f"
+        fi
+        grep -q '^Hidden=true' "$f" || printf 'Hidden=true\n' >> "$f"
+        log "Turned off Zorin's welcome tour ($(basename "$f"))"
+    fi
+done
+
 # Local admins stay admins no matter what manages the "sudo" group
 bash "$D/admins.sh"
 log "HardPoint settings applied"
