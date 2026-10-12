@@ -170,6 +170,25 @@ for f in /etc/xdg/autostart/*.desktop; do
     fi
 done
 
+# One updater: HardPoint Updates. Hide Zorin/Ubuntu's Software Updater and its
+# pop-up notifier (HardPoint Updates covers system, app and firmware updates).
+hide_desktop() {  # hide_desktop <file> <key>: NoDisplay for menus, Hidden for autostart
+    local f="$1" key="$2"
+    [[ -f $f ]] || return 0
+    if ! dpkg-divert --list "$f" | grep -q .; then
+        dpkg-divert --quiet --local --rename --divert "$f.zorin" --add "$f"
+        cp "$f.zorin" "$f"
+    fi
+    grep -q "^$key=true" "$f" || printf '%s=true\n' "$key" >> "$f"
+}
+for f in /usr/share/applications/update-manager.desktop /usr/share/applications/zorin-os-upgrader*.desktop \
+         /usr/share/applications/*update-manager*.desktop; do
+    [[ -f $f ]] && hide_desktop "$f" NoDisplay && log "Hid $(basename "$f") (HardPoint Updates replaces it)"
+done
+for f in /etc/xdg/autostart/update-notifier.desktop /etc/xdg/autostart/*zorin*upgrade*.desktop; do
+    [[ -f $f ]] && hide_desktop "$f" Hidden && log "Turned off $(basename "$f")"
+done
+
 # Local admins stay admins no matter what manages the "sudo" group
 bash "$D/admins.sh"
 log "HardPoint settings applied"
