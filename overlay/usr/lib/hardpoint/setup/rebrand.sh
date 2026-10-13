@@ -150,6 +150,13 @@ while IFS= read -r -d '' f; do
 done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
     \( -iname '*zorin*' -o -ipath '*zorin*menu*/*logo*' -o -ipath '*zorin*menu*/*icon*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
+# Zorin Connect (phone link) keeps working; it just gets a HardPoint Connect icon
+while IFS= read -r -d '' f; do
+    case "$f" in *.zorin) continue ;; esac
+    grep -qxF "$f" "$S/logo-targets.txt" && continue
+    divert "$f"; cp "$f.zorin" "$f"; echo "$f" >> "$S/logo-targets.txt"
+done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
+    \( -iname '*zorin-connect*' -o -iname '*ZorinConnect*' \) \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
 log "$(wc -l < "$S/logo-targets.txt") logo images will be replaced"
 
 # Build report: what is still named Zorin, for checking the next build
