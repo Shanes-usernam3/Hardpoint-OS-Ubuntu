@@ -12,8 +12,8 @@ from PIL import Image
 ROOT, LIST, BR = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 LOGO_SVG = (BR / "hardpoint-logo.svg").read_text()
 SYMBOLIC_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="#2e3436" d="M8 .9 13.9 3v4.6c0 3.8-2.5 6.3-5.9 7.5C4.6 13.9 2.1 11.4 2.1 7.6V3Z
-     M5.5 4.5v7h1.4V8.6h2.2v2.9h1.4v-7H9.1v2.7H6.9V4.5Z" fill-rule="evenodd"/>
+  <path fill="#2e3436" fill-rule="evenodd" d="M8 .4 14.6 4.2V11.8L8 15.6 1.4 11.8V4.2Z
+     M4.6 4.8v6.9l2.1-.3V9h2.6v2.1l2.1-.3V4.1l-2.1.3v2.4H6.7V4.5Z"/>
 </svg>
 """
 big_logo = Image.open(BR / "logo-512.png").convert("RGBA")
