@@ -17,6 +17,10 @@ SYMBOLIC_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 </svg>
 """
 big_logo = Image.open(BR / "logo-512.png").convert("RGBA")
+CONNECT_SVG = (BR / "hardpoint-connect.svg").read_text() if (BR / "hardpoint-connect.svg").exists() else LOGO_SVG
+CONNECT_SYM = (BR / "hardpoint-connect-symbolic.svg").read_text() if (BR / "hardpoint-connect-symbolic.svg").exists() else SYMBOLIC_SVG
+CONNECT_PNG = BR / "connect-512.png"
+connect_img = Image.open(CONNECT_PNG).convert("RGBA") if CONNECT_PNG.exists() else big_logo
 wordmark = Image.open(BR / "wordmark.png").convert("RGBA")
 
 
@@ -35,8 +39,16 @@ for line in LIST.read_text().splitlines():
         continue
     p = ROOT / line.lstrip("/")
     try:
+        is_connect = "connect" in p.name.lower()
         if p.suffix.lower() == ".svg":
-            p.write_text(SYMBOLIC_SVG if "symbolic" in p.name else LOGO_SVG)
+            if is_connect:
+                p.write_text(CONNECT_SYM if "symbolic" in p.name else CONNECT_SVG)
+            else:
+                p.write_text(SYMBOLIC_SVG if "symbolic" in p.name else LOGO_SVG)
+        elif is_connect:
+            with Image.open(p) as old:
+                w, h = old.size
+            fit(connect_img, w, h, pad=0.0).save(p)
         else:
             with Image.open(p) as old:
                 w, h = old.size

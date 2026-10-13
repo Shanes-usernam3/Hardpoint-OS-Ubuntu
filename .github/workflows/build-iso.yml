@@ -32,7 +32,7 @@ jobs:
         run: echo "version=18.$(date -u +%Y%m%d).${{ github.run_number }}" >> "$GITHUB_OUTPUT"
       - name: Build package
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq python3-pil python3-numpy fonts-inter >/dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq python3-pil python3-numpy fonts-inter librsvg2-bin >/dev/null
           HP_PKG_VERSION=${{ steps.ver.outputs.version }} bash tools/build-deb.sh hp-pkg
           dpkg-deb -I hp-pkg/*.deb | head -20
       - uses: actions/upload-artifact@v4

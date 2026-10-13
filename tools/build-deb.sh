@@ -17,7 +17,8 @@ cp -R --preserve=mode "$HERE/overlay/." "$P/"
 B="$P/usr/share/hardpoint/branding"
 mkdir -p "$B" "$P/usr/share/backgrounds/hardpoint"
 python3 "$HERE/tools/make-branding.py" "$B" >/dev/null
-cp "$HERE/branding/hardpoint-logo.svg" "$B/"
+cp "$HERE/branding/hardpoint-logo.svg" "$HERE"/branding/hardpoint-connect*.svg "$B/"
+command -v rsvg-convert >/dev/null && rsvg-convert -w 512 -h 512 "$HERE/branding/hardpoint-connect.svg" -o "$B/connect-512.png"
 # Wallpapers as high-quality JPEG (a 4K PNG is ~10 MB per update)
 python3 - "$B" "$P/usr/share/backgrounds/hardpoint" <<'PY'
 import sys
