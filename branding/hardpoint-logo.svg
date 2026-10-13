@@ -1,16 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- HardPoint Networks hexagon "H" mark -->
   <defs>
-    <linearGradient id="byte" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#03F4D4"/>
-      <stop offset="0.5" stop-color="#706DFC"/>
-      <stop offset="1" stop-color="#FF2E96"/>
+    <linearGradient id="ring" x1="0.85" y1="0.1" x2="0.2" y2="0.9">
+      <stop offset="0" stop-color="#7FD3FF"/>
+      <stop offset="0.45" stop-color="#2AA8F2"/>
+      <stop offset="1" stop-color="#1667E0"/>
     </linearGradient>
-    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1A1B39"/>
-      <stop offset="1" stop-color="#0A0E17"/>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B3768"/>
+      <stop offset="1" stop-color="#0E2246"/>
+    </linearGradient>
+    <linearGradient id="h" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D3D9E3"/>
     </linearGradient>
   </defs>
-  <path d="M128 14 L222 48 V122 C222 182 182 222 128 242 C74 222 34 182 34 122 V48 Z"
-        fill="url(#fill)" stroke="url(#byte)" stroke-width="12" stroke-linejoin="round"/>
-  <path d="M88 72 H110 V116 H146 V72 H168 V184 H146 V138 H110 V184 H88 Z" fill="url(#byte)"/>
+  <polygon points="128.0,6.0 233.7,67.0 233.7,189.0 128.0,250.0 22.3,189.0 22.3,67.0" fill="#13284A"/>
+  <polygon points="128.0,31.0 212.0,79.5 212.0,176.5 128.0,225.0 44.0,176.5 44.0,79.5" fill="url(#core)"/>
+  <path d="M37.9 138 V76.0 L128.0 24.0 L218.1 76.0 V180.0 L128.0 232.0" fill="none" stroke="url(#ring)" stroke-width="11" stroke-linejoin="miter"/>
+  <path d="M37.9 150 V180.0 L117.2 225.8" fill="none" stroke="#F4F6FA" stroke-width="11" stroke-linejoin="miter"/>
+  <g transform="translate(128 130) skewY(-8) translate(-128 -130)">
+    <path d="M74 72 H108 V116 H148 V72 H182 V188 H148 V144 H108 V188 H74 Z" fill="url(#h)"/>
+  </g>
 </svg>

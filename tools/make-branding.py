@@ -3,7 +3,7 @@
 
     make-branding.py <out-dir>
 
-Needs Pillow and numpy. Produces logo PNGs, wallpapers, login and boot art.
+Needs Pillow, numpy and rsvg-convert (librsvg2-bin); the logo comes from branding/hardpoint-logo.svg. Produces logo PNGs, wallpapers, login and boot art.
 Byte palette: navy #0A0E17 / #1A1B39 / #0C2F35, neon cyan #03F4D4 -> violet #706DFC -> pink #FF2E96.
 """
 import math
@@ -50,59 +50,44 @@ def gradient(w, h, stops=(CYAN, VIOLET, PINK), angle=45):
     return out
 
 
-def shield_points(s):
-    """Shield outline from the SVG (viewBox 256), scaled by s."""
-    pts = [(128, 14), (222, 48), (222, 122)]
-    # cubic C222 182 182 222 128 242 and C74 222 34 182 34 122
-    def bez(p0, p1, p2, p3, n=24):
-        return [tuple((1 - t) ** 3 * np.array(p0) + 3 * (1 - t) ** 2 * t * np.array(p1)
-                      + 3 * (1 - t) * t ** 2 * np.array(p2) + t ** 3 * np.array(p3))
-                for t in np.linspace(0, 1, n)]
-    pts += bez((222, 122), (222, 182), (182, 222), (128, 242))
-    pts += bez((128, 242), (74, 222), (34, 182), (34, 122))
-    pts += [(34, 48)]
-    return [(x * s, y * s) for x, y in pts]
+LOGO_SVG = Path(__file__).resolve().parent.parent / "branding" / "hardpoint-logo.svg"
+BLUE, BLUE_LT, BLUE_DK = (42, 168, 242), (127, 211, 255), (22, 103, 224)
+_logo_cache = {}
 
 
-H_SHAPE = [(88, 72), (110, 72), (110, 116), (146, 116), (146, 72), (168, 72),
-           (168, 184), (146, 184), (146, 138), (110, 138), (110, 184), (88, 184)]
+def _render_svg(svg, px):
+    """Rasterise an SVG with rsvg-convert (librsvg2-bin)."""
+    import io, subprocess
+    png = subprocess.run(["rsvg-convert", "-w", str(px), "-h", str(px), str(svg)],
+                         check=True, capture_output=True).stdout
+    return Image.open(io.BytesIO(png)).convert("RGBA")
 
 
 def logo(size, glow=False):
-    """RGBA logo of size x size (optionally with a soft neon glow)."""
-    ss = 4
-    S = size * ss
-    k = S / 256
-    grad = gradient(S, S)
-    stroke = Image.new("L", (S, S), 0)
-    d = ImageDraw.Draw(stroke)
-    pts = shield_points(k)
-    d.line(pts + pts[:3], fill=255, width=max(1, int(12 * k)), joint="curve")
-    body = Image.new("L", (S, S), 0)
-    ImageDraw.Draw(body).polygon(shield_points(k), fill=255)
-    hmask = Image.new("L", (S, S), 0)
-    ImageDraw.Draw(hmask).polygon([(x * k, y * k) for x, y in H_SHAPE], fill=255)
-
-    fill = np.zeros((S, S, 3), np.float32)
-    yy = np.linspace(0, 1, S)[:, None]
-    fill[:] = (np.array(NAVY1) * (1 - yy) + np.array(NAVY0) * yy)[:, None, :].reshape(S, 1, 3)
-    img = np.zeros((S, S, 4), np.float32)
-    b = np.array(body, np.float32)[..., None] / 255
-    img[..., :3] = fill * b
-    img[..., 3:] = b * 255
-    for m in (stroke, hmask):
-        a = np.array(m, np.float32)[..., None] / 255
-        img[..., :3] = img[..., :3] * (1 - a) + grad * a
-        img[..., 3:] = np.maximum(img[..., 3:], a * 255)
-    out = Image.fromarray(img.clip(0, 255).astype(np.uint8), "RGBA").resize((size, size), Image.LANCZOS)
+    """HardPoint Networks hexagon-H mark as RGBA size x size (optional soft blue glow)."""
+    if size not in _logo_cache:
+        big = _render_svg(LOGO_SVG, max(size * 4, 512))
+        _logo_cache[size] = big.resize((size, size), Image.LANCZOS)
+    out = _logo_cache[size].copy()
     if glow:
-        g = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-        tint = Image.new("RGBA", (size, size), VIOLET + (150,))
-        g.paste(tint, (0, 0), out.split()[3])
-        g = g.filter(ImageFilter.GaussianBlur(size / 14))
-        g.alpha_composite(out)
-        out = g
+        pad = size // 6
+        S = size + 2 * pad
+        g = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+        tint = Image.new("RGBA", (size, size), BLUE + (170,))
+        g.paste(tint, (pad, pad), out.split()[3])
+        g = g.filter(ImageFilter.GaussianBlur(size / 12))
+        g.alpha_composite(out, (pad, pad))
+        out = g.resize((size, size), Image.LANCZOS)
     return out
+
+
+def font_file(names, size):
+    for d in FONT_DIRS:
+        for n in names:
+            p = Path(d) / n
+            if p.exists():
+                return ImageFont.truetype(str(p), size)
+    return font(True, size)
 
 
 def backdrop(w, h, dim=1.0):
@@ -138,27 +123,54 @@ def backdrop(w, h, dim=1.0):
     return Image.fromarray(img.clip(0, 255).astype(np.uint8), "RGB")
 
 
-def wordmark(height, sub=True):
-    f1 = font(True, height)
-    f2 = font(False, int(height * 0.32))
-    t1, t2 = "HardPoint OS", "BY HARDPOINT NETWORKS"
+def wordmark(height, sub="OS", dark_bg=True, mark=True):
+    """Logo + "HardPoint" ("Point" in brand blue, bold italic) with a spaced sub-line
+    such as "— OS —" or "— NETWORKS —", like the HardPoint Networks wordmark."""
+    f1 = font_file(["Inter-ExtraBoldItalic.otf", "InterDisplay-ExtraBoldItalic.otf",
+                    "Inter-BoldItalic.otf"], height)
+    f2 = font_file(["Inter-SemiBold.otf", "Inter-Medium.otf"], int(height * 0.30))
+    hard_col = (242, 244, 255, 255) if dark_bg else (44, 50, 64, 255)
+    sub_col = (176, 188, 214, 255) if dark_bg else (60, 66, 80, 255)
     tmp = ImageDraw.Draw(Image.new("L", (1, 1)))
-    w1 = int(tmp.textlength(t1, font=f1)) + 4
-    w2 = int(tmp.textlength(t2, font=f2) + len(t2) * height * 0.05)
-    lg = int(height * 1.25)
-    W = lg + int(height * 0.35) + max(w1, w2)
-    H = int(height * (1.75 if sub else 1.3))
+    wh, wp = tmp.textlength("Hard", font=f1), tmp.textlength("Point", font=f1)
+    w1 = int(wh + wp + height * 0.12)
+    track = height * 0.16
+    w2 = int(sum(tmp.textlength(c, font=f2) + track for c in sub)) if sub else 0
+    lg = int(height * 1.6) if mark else 0
+    gap = int(height * 0.32) if mark else 0
+    H = int(height * (1.75 if sub else 1.3)) if not mark else max(lg, int(height * 1.75))
+    W = lg + gap + max(w1, w2 + int(height * 1.2)) + 4
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    img.alpha_composite(logo(lg), (0, (H - lg) // 2))
+    if mark:
+        img.alpha_composite(logo(lg), (0, (H - lg) // 2))
+    x = lg + gap
+    ty = int((H - height * (1.62 if sub else 1.0)) / 2) - int(height * 0.12)
     d = ImageDraw.Draw(img)
-    x = lg + int(height * 0.35)
-    d.text((x, int(height * 0.02)), t1, font=f1, fill=(242, 244, 255, 255))
+    d.text((x, ty), "Hard", font=f1, fill=hard_col)
+    # "Point" with the brand blue gradient
+    pm = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(pm).text((x + wh, ty), "Point", font=f1, fill=255)
+    gx = np.linspace(0, 1, W)[None, :, None]
+    lo, hi = np.array(BLUE_DK, np.float32), np.array(BLUE if dark_bg else BLUE_DK, np.float32)
+    top = np.array(BLUE_LT if dark_bg else BLUE, np.float32)
+    yy = np.linspace(0, 1, H)[:, None, None]
+    col = (top * (1 - yy) + lo * yy) * 0.6 + hi * 0.4 + gx * 0
+    rgba = np.concatenate([np.broadcast_to(col, (H, W, 3)), np.array(pm, np.float32)[..., None]], axis=2)
+    img.alpha_composite(Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA"))
     if sub:
-        cx = x
-        for ch in t2:
-            d.text((cx, int(height * 1.22)), ch, font=f2, fill=(150, 160, 200, 255))
-            cx += tmp.textlength(ch, font=f2) + height * 0.05
-    return img
+        sw = w2 - track
+        cx_center = x + w1 / 2
+        sy = ty + int(height * 1.22)
+        sx = cx_center - sw / 2
+        line_y = sy + int(height * 0.17)
+        lw = max(1, height // 28)
+        d.line((x + 2, line_y, sx - height * 0.25, line_y), fill=sub_col[:3] + (150,), width=lw)
+        d.line((sx + sw + height * 0.25, line_y, x + w1, line_y), fill=sub_col[:3] + (150,), width=lw)
+        cx = sx
+        for ch in sub:
+            d.text((cx, sy), ch, font=f2, fill=sub_col)
+            cx += tmp.textlength(ch, font=f2) + track
+    return img.crop(img.getbbox())
 
 
 def main():
@@ -176,11 +188,15 @@ def main():
     login.save(OUT / "login.png", optimize=True)
 
     grub = backdrop(1920, 1080, dim=0.6)
-    grub.paste(logo(160, glow=True), (880, 300), logo(160, glow=True))
+    gl = logo(160, glow=True)
+    grub.paste(gl, (880, 300), gl)
     grub.save(OUT / "grub.png")
 
     wordmark(64).save(OUT / "wordmark.png")
-    wordmark(40, sub=False).save(OUT / "login-logo.png")
+    wordmark(40, sub=None).save(OUT / "login-logo.png")
+    # HardPoint Networks company wordmarks (dark and light backgrounds)
+    wordmark(96, sub="NETWORKS").save(OUT / "networks-wordmark-dark.png")
+    wordmark(96, sub="NETWORKS", dark_bg=False).save(OUT / "networks-wordmark-light.png")
 
     # Plymouth parts
     logo(180, glow=True).save(OUT / "plymouth-logo.png")
