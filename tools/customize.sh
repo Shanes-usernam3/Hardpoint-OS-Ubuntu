@@ -143,6 +143,9 @@ for p in zorin-os-census zorin-census; do
     if dpkg -s "$p" >/dev/null 2>&1; then apt-get purge -y -q "$p" >/dev/null && log "Removed $p"; fi
 done
 
+# Where can "Zorin" still be seen? (goes into the build report)
+bash /usr/lib/hardpoint/setup/audit-branding.sh >> "$S/build-report.txt" 2>&1 || true
+
 # ------------------------------------------------------------ clean up
 apt-get autoremove -y -q >/dev/null || true
 apt-get clean
