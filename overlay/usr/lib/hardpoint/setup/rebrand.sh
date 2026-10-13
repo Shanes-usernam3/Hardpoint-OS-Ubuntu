@@ -101,6 +101,34 @@ if [[ -d /usr/share/ubiquity-slideshow ]]; then
     cp /usr/share/hardpoint/branding/logo-glow-256.png /usr/share/ubiquity-slideshow/slides/logo.png
 fi
 
+# ------------------------------------------------------------ names inside Zorin's apps
+# Window titles and labels such as "Zorin Appearance" live in the apps' own files
+# (Python, UI and data files). Replace the visible product names only; code
+# identifiers like zorin_appearance or com.zorin.* are left alone.
+log "Renaming Zorin product names inside Zorin's apps"
+NAMES='s/Zorin OS/HardPoint OS/g; s/Zorin (Appearance|Connect|Menu|Taskbar|Welcome)/HardPoint \1/g'
+n=0
+while IFS= read -r pkg; do
+    while IFS= read -r f; do
+        [[ -f $f && ! -L $f ]] || continue
+        case "$f" in
+            /etc/*|*.zorin|*.desktop|*.mo|*.png|*.jpg|*.svg|*.so|*.so.*|*.gresource|*.pyc|*.gz) continue ;;
+        esac
+        src="$f"
+        dpkg-divert --list "$f" | grep -q . && src="$f.zorin"
+        [[ -f $src ]] || continue
+        grep -Iq . "$src" 2>/dev/null || continue                    # text files only
+        grep -qE 'Zorin (OS|Appearance|Connect|Menu|Taskbar|Welcome)' "$src" || continue
+        divert "$f"
+        sed -E "$NAMES" "$f.zorin" > "$f"
+        chmod --reference="$f.zorin" "$f"
+        n=$((n + 1))
+    done < <(dpkg -L "$pkg" 2>/dev/null)
+done < <(dpkg-query -W -f='${Package}\n' 'zorin*' 2>/dev/null)
+log "Renamed product names in $n files"
+# Schemas may contain renamed descriptions
+glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null || true
+
 # ------------------------------------------------------------ logos
 log "Finding Zorin logos to replace"
 : > "$S/logo-targets.txt"
@@ -132,6 +160,9 @@ set +e
     echo "== Image files still containing 'zorin' (not replaced)"
     find /usr/share -type f \( -iname '*.png' -o -iname '*.svg' \) -ipath '*zorin*' 2>/dev/null \
         | grep -vxFf "$S/logo-targets.txt" | grep -vE '\.zorin$|/backgrounds/|/themes/' | head -300
+    echo "== Files still showing 'Zorin Appearance' (binary or not handled)"
+    grep -rlI --exclude='*.zorin' 'Zorin Appearance' /usr/share /usr/lib/python3/dist-packages /usr/bin 2>/dev/null | head -20
+    grep -rl --exclude='*.zorin' 'Zorin Appearance' /usr/share /usr/lib/python3/dist-packages 2>/dev/null | grep -v '\.mo$' | head -20
     echo "== Zorin GNOME Shell extensions"; ls -d /usr/share/gnome-shell/extensions/*zorin* 2>/dev/null
     echo "== Menu-related settings keys"
     grep -l 'zorin' /usr/share/glib-2.0/schemas/*.xml 2>/dev/null | xargs -r grep -hoE 'name="[a-z-]*(icon|logo|button)[a-z-]*"' | sort -u
