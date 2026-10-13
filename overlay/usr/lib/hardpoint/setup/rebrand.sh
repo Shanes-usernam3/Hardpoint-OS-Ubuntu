@@ -111,6 +111,7 @@ log "Renaming Zorin product names inside Zorin's apps"
 PRODUCTS='Appearance|Connect|Menu|Taskbar|Welcome|AppIndicators|Desktop Cube|Desktop Icons|Magic Lamp Effect|Printers|Screen Keyboard Panel Button|Spatial Window Switcher|Tiling Shell|Window Move Effect|Auto Theme|Tour|Upgrader'
 SUBST="s/Zorin OS/HardPoint OS/g
 s/Zorin ($PRODUCTS)/HardPoint \1/g
+s/Zorin logomark/HardPoint logo/g
 s/'Zorin ' \+/'HardPoint ' +/g
 s/_\('Zorin'\)/_('HardPoint')/g
 s/<vendor>Zorin<\/vendor>/<vendor>HardPoint<\/vendor>/g
@@ -118,8 +119,8 @@ s/<name>Zorin<\/name>/<name>Classic<\/name>/g
 s/<name>Zorin ([^<]+)<\/name>/<name>\1<\/name>/g"
 SED_TEXT="$S/rename-text.sed"; SED_CODE="$S/rename-code.sed"
 { echo '/^[[:space:]]*(#|\*|\/\/|\/\*)/!{'; printf '%s\n' "$SUBST"; echo '}'; } > "$SED_TEXT"
-{ echo '/^[[:space:]]*(#|\*|\/\/|\/\*)/!{'; echo '/(_\(|label|[Tt]itle|"name"|[Nn]ame:)/{'; printf '%s\n' "$SUBST"; echo '}'; echo '}'; } > "$SED_CODE"
-VISIBLE="Zorin (OS|$PRODUCTS)|'Zorin '|_\('Zorin'\)|<vendor>Zorin<|<name>Zorin"
+{ echo '/^[[:space:]]*(#|\*|\/\/|\/\*)/!{'; echo '/(_\(|label|[Tt]itle|"name"|[Nn]ame:|setHeader|set_application_name)/{'; printf '%s\n' "$SUBST"; echo '}'; echo '}'; } > "$SED_CODE"
+VISIBLE="Zorin (OS|logomark|$PRODUCTS)|'Zorin '|_\('Zorin'\)|<vendor>Zorin<|<name>Zorin"
 
 rename_file() {  # rename_file <installed path>
     local f="$1" src="$1"
