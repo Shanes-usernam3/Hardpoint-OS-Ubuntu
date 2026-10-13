@@ -102,30 +102,82 @@ if [[ -d /usr/share/ubiquity-slideshow ]]; then
 fi
 
 # ------------------------------------------------------------ names inside Zorin's apps
-# Window titles and labels such as "Zorin Appearance" live in the apps' own files
-# (Python, UI and data files). Replace the visible product names only; code
-# identifiers like zorin_appearance or com.zorin.* are left alone.
+# Window titles, labels, extension names and descriptions live in the apps' own
+# files. Replace the visible names only:
+#  - comment lines (license and credit headers) are never changed
+#  - in .py/.js code only lines with visible text (_(), label, title, name) change
+#  - code identifiers (zorin_appearance, com.zorin.*, "Zorin"+colour theme ids) stay
 log "Renaming Zorin product names inside Zorin's apps"
-NAMES='s/Zorin OS/HardPoint OS/g; s/Zorin (Appearance|Connect|Menu|Taskbar|Welcome)/HardPoint \1/g'
-n=0
+PRODUCTS='Appearance|Connect|Menu|Taskbar|Welcome|AppIndicators|Desktop Cube|Desktop Icons|Magic Lamp Effect|Printers|Screen Keyboard Panel Button|Spatial Window Switcher|Tiling Shell|Window Move Effect|Auto Theme|Tour|Upgrader'
+SUBST="s/Zorin OS/HardPoint OS/g
+s/Zorin ($PRODUCTS)/HardPoint \1/g
+s/'Zorin ' \+/'HardPoint ' +/g
+s/_\('Zorin'\)/_('HardPoint')/g
+s/<vendor>Zorin<\/vendor>/<vendor>HardPoint<\/vendor>/g
+s/<name>Zorin<\/name>/<name>Classic<\/name>/g
+s/<name>Zorin ([^<]+)<\/name>/<name>\1<\/name>/g"
+SED_TEXT="$S/rename-text.sed"; SED_CODE="$S/rename-code.sed"
+{ echo '/^[[:space:]]*(#|\*|\/\/|\/\*)/!{'; printf '%s\n' "$SUBST"; echo '}'; } > "$SED_TEXT"
+{ echo '/^[[:space:]]*(#|\*|\/\/|\/\*)/!{'; echo '/(_\(|label|[Tt]itle|"name"|[Nn]ame:)/{'; printf '%s\n' "$SUBST"; echo '}'; echo '}'; } > "$SED_CODE"
+VISIBLE="Zorin (OS|$PRODUCTS)|'Zorin '|_\('Zorin'\)|<vendor>Zorin<|<name>Zorin"
+
+rename_file() {  # rename_file <installed path>
+    local f="$1" src="$1"
+    dpkg-divert --list "$f" | grep -q . && src="$f.zorin"
+    [[ -f $src ]] || return 1
+    grep -Iq . "$src" 2>/dev/null || return 1
+    grep -qE "$VISIBLE" "$src" || return 1
+    divert "$f"
+    case "$f" in
+        *.py|*.js) sed -E -f "$SED_CODE" "$f.zorin" > "$f" ;;
+        *)         sed -E -f "$SED_TEXT" "$f.zorin" > "$f" ;;
+    esac
+    chmod --reference="$f.zorin" "$f"
+}
+
+rename_gresource() {  # unpack, rename text inside, repack
+    local f="$1" src="$1" w r n=0
+    dpkg-divert --list "$f" | grep -q . && src="$f.zorin"
+    grep -q 'Zorin' "$src" 2>/dev/null || return 1
+    w="$(mktemp -d)"
+    while read -r r; do
+        mkdir -p "$w/root$(dirname "$r")"
+        gresource extract "$src" "$r" > "$w/root$r"
+    done < <(gresource list "$src")
+    while IFS= read -r -d '' t; do
+        grep -Iq . "$t" 2>/dev/null || continue
+        grep -qE "$VISIBLE" "$t" || continue
+        case "$t" in *.js) sed -E -i -f "$SED_CODE" "$t" ;; *) sed -E -i -f "$SED_TEXT" "$t" ;; esac
+        n=$((n + 1))
+    done < <(find "$w/root" -type f -print0)
+    if ((n > 0)); then
+        { echo '<?xml version="1.0" encoding="UTF-8"?><gresources><gresource prefix="/">'
+          (cd "$w/root" && find . -type f | sed 's|^\./||' | sort | sed 's|.*|<file>&</file>|')
+          echo '</gresource></gresources>'; } > "$w/res.xml"
+        divert "$f"
+        if glib-compile-resources --sourcedir="$w/root" --target="$w/out.gresource" "$w/res.xml"; then
+            cp "$w/out.gresource" "$f"; chmod 644 "$f"
+        else
+            cp "$f.zorin" "$f"; n=0
+        fi
+    fi
+    rm -rf "$w"
+    ((n > 0))
+}
+
+n=0 g=0
 while IFS= read -r pkg; do
+    case "$pkg" in zorin-os-upgrader|zorin-os-docs|zorin-os-census) continue ;; esac   # hidden / not shown
     while IFS= read -r f; do
         [[ -f $f && ! -L $f ]] || continue
         case "$f" in
-            /etc/*|*.zorin|*.desktop|*.mo|*.png|*.jpg|*.svg|*.so|*.so.*|*.gresource|*.pyc|*.gz) continue ;;
+            /etc/*|*.zorin|*.desktop|*.mo|*.png|*.jpg|*.svg|*.so|*.so.*|*.pyc|*.gz|/usr/share/doc/*|/usr/share/man/*) continue ;;
+            *.gresource) rename_gresource "$f" && g=$((g + 1)); continue ;;
         esac
-        src="$f"
-        dpkg-divert --list "$f" | grep -q . && src="$f.zorin"
-        [[ -f $src ]] || continue
-        grep -Iq . "$src" 2>/dev/null || continue                    # text files only
-        grep -qE 'Zorin (OS|Appearance|Connect|Menu|Taskbar|Welcome)' "$src" || continue
-        divert "$f"
-        sed -E "$NAMES" "$f.zorin" > "$f"
-        chmod --reference="$f.zorin" "$f"
-        n=$((n + 1))
+        rename_file "$f" && n=$((n + 1))
     done < <(dpkg -L "$pkg" 2>/dev/null)
-done < <(dpkg-query -W -f='${Package}\n' 'zorin*' 2>/dev/null)
-log "Renamed product names in $n files"
+done < <( { dpkg-query -W -f='${Package}\n' '*zorin*' 2>/dev/null; echo software-properties-gtk; } | sort -u)
+log "Renamed product names in $n files and $g resource bundles" | tee -a "$S/build-report.txt"
 # Schemas may contain renamed descriptions
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null || true
 
@@ -150,13 +202,13 @@ while IFS= read -r -d '' f; do
 done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
     \( -iname '*zorin*' -o -ipath '*zorin*menu*/*logo*' -o -ipath '*zorin*menu*/*icon*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
-# Zorin Connect (phone link) keeps working; it just gets a HardPoint Connect icon
+# Zorin Connect (phone link) and Zorin Appearance keep working; they get HardPoint icons
 while IFS= read -r -d '' f; do
     case "$f" in *.zorin) continue ;; esac
     grep -qxF "$f" "$S/logo-targets.txt" && continue
     divert "$f"; cp "$f.zorin" "$f"; echo "$f" >> "$S/logo-targets.txt"
 done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
-    \( -iname '*zorin-connect*' -o -iname '*ZorinConnect*' \) \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
+    \( -iname '*zorin-connect*' -o -iname '*ZorinConnect*' -o -iname 'zorin-appearance*' \) \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
 log "$(wc -l < "$S/logo-targets.txt") logo images will be replaced"
 
 # Build report: what is still named Zorin, for checking the next build

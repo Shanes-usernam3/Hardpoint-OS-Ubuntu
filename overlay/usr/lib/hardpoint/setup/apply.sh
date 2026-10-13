@@ -182,6 +182,7 @@ hide_desktop() {  # hide_desktop <file> <key>: NoDisplay for menus, Hidden for a
     grep -q "^$key=true" "$f" || printf '%s=true\n' "$key" >> "$f"
 }
 for f in /usr/share/applications/update-manager.desktop /usr/share/applications/zorin-os-upgrader*.desktop \
+         /usr/share/applications/*upgrader*.desktop \
          /usr/share/applications/*update-manager*.desktop; do
     [[ -f $f ]] && hide_desktop "$f" NoDisplay && log "Hid $(basename "$f") (HardPoint Updates replaces it)"
 done

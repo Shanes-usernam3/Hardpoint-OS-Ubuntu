@@ -21,6 +21,10 @@ CONNECT_SVG = (BR / "hardpoint-connect.svg").read_text() if (BR / "hardpoint-con
 CONNECT_SYM = (BR / "hardpoint-connect-symbolic.svg").read_text() if (BR / "hardpoint-connect-symbolic.svg").exists() else SYMBOLIC_SVG
 CONNECT_PNG = BR / "connect-512.png"
 connect_img = Image.open(CONNECT_PNG).convert("RGBA") if CONNECT_PNG.exists() else big_logo
+APPEAR_SVG = (BR / "hardpoint-appearance.svg").read_text() if (BR / "hardpoint-appearance.svg").exists() else LOGO_SVG
+APPEAR_SYM = (BR / "hardpoint-appearance-symbolic.svg").read_text() if (BR / "hardpoint-appearance-symbolic.svg").exists() else SYMBOLIC_SVG
+APPEAR_PNG = BR / "appearance-512.png"
+appear_img = Image.open(APPEAR_PNG).convert("RGBA") if APPEAR_PNG.exists() else big_logo
 wordmark = Image.open(BR / "wordmark.png").convert("RGBA")
 
 
@@ -39,16 +43,17 @@ for line in LIST.read_text().splitlines():
         continue
     p = ROOT / line.lstrip("/")
     try:
-        is_connect = "connect" in p.name.lower()
+        low = p.name.lower()
+        kind = "connect" if "connect" in low else ("appearance" if "appearance" in low else "logo")
         if p.suffix.lower() == ".svg":
-            if is_connect:
-                p.write_text(CONNECT_SYM if "symbolic" in p.name else CONNECT_SVG)
-            else:
-                p.write_text(SYMBOLIC_SVG if "symbolic" in p.name else LOGO_SVG)
-        elif is_connect:
+            sym = "symbolic" in low
+            svg = {"connect": (CONNECT_SYM, CONNECT_SVG), "appearance": (APPEAR_SYM, APPEAR_SVG),
+                   "logo": (SYMBOLIC_SVG, LOGO_SVG)}[kind]
+            p.write_text(svg[0] if sym else svg[1])
+        elif kind != "logo":
             with Image.open(p) as old:
                 w, h = old.size
-            fit(connect_img, w, h, pad=0.0).save(p)
+            fit(connect_img if kind == "connect" else appear_img, w, h, pad=0.0).save(p)
         else:
             with Image.open(p) as old:
                 w, h = old.size
