@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Once per user at sign-in: switch to the HardPoint (Byte) theme and the Papirus icons.
+# Runs again only when HardPoint ships a new look (bump VER); later changes you make yourself stay.
+set -uo pipefail
+VER=byte-theme-1
+mark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/theme"
+[[ $(cat "$mark" 2>/dev/null) == "$VER" ]] && exit 0
+[[ -d /usr/share/themes/HardPoint-Dark ]] || exit 0
+I=org.gnome.desktop.interface
+gsettings set $I color-scheme prefer-dark
+gsettings set $I gtk-theme HardPoint-Dark
+for icons in HardPoint-Dark Papirus-Dark; do
+    [[ -d /usr/share/icons/$icons ]] && { gsettings set $I icon-theme $icons; break; }
+done
+gsettings list-schemas 2>/dev/null | grep -qx org.gnome.shell.extensions.user-theme &&
+    gsettings set org.gnome.shell.extensions.user-theme name HardPoint-Dark
+mkdir -p "$(dirname "$mark")" && echo "$VER" > "$mark"

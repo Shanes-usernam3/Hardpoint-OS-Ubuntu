@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint theme update
+Exec=/usr/lib/hardpoint/hp-theme-migrate
+NoDisplay=true
+X-GNOME-Autostart-Phase=Initialization

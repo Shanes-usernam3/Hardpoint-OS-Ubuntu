@@ -14,8 +14,31 @@ warn() { printf '  WARN: %s\n' "$*" >&2; }
 log "Setting desktop defaults (Byte look)"
 pick_theme() { for t in "$@"; do [[ -d /usr/share/themes/$t ]] && { echo "$t"; return; }; done; }
 pick_icons() { for t in "$@"; do [[ -d /usr/share/icons/$t ]] && { echo "$t"; return; }; done; }
-GTK="$(pick_theme ZorinPurple-Dark ZorinBlue-Dark Yaru-purple-dark Adwaita-dark || true)"
-ICONS="$(pick_icons ZorinPurple-Dark ZorinBlue-Dark Yaru-purple-dark Adwaita || true)"
+# HardPoint Dark / Light: Zorin's own themes recoloured to the Byte palette (rebuilt on
+# every HardPoint update and whenever Zorin updates its themes)
+for v in Dark Light; do
+    if [[ -d /usr/share/themes/ZorinBlue-$v ]]; then
+        python3 "$D/make-theme.py" "/usr/share/themes/ZorinBlue-$v" "/usr/share/themes/HardPoint-$v" "${v,,}" ||
+            warn "HardPoint-$v theme could not be built"
+    fi
+done
+# HardPoint icon themes: modern Papirus icons, plus the HardPoint logo icons (menu button
+# etc.) linked from Zorin's icon themes, where rebrand/apply-logos put our logo
+for v in Dark Light; do
+    src=/usr/share/icons/ZorinBlue-$v dst=/usr/share/icons/HardPoint-$v
+    pap=Papirus-Dark; [[ $v == Light ]] && pap=Papirus
+    [[ -f $src/index.theme && -d /usr/share/icons/$pap ]] || continue
+    rm -rf "$dst"; mkdir -p "$dst"
+    sed -e "s/^Name=.*/Name=HardPoint-$v/" -e "s/^Inherits=.*/Inherits=$pap,ZorinBlue-$v,hicolor/" \
+        -e "s/^Comment=.*/Comment=HardPoint OS icons (Papirus with HardPoint logos)/" "$src/index.theme" > "$dst/index.theme"
+    grep -q '^Inherits=' "$dst/index.theme" || sed -i "/^Name=/a Inherits=$pap,ZorinBlue-$v,hicolor" "$dst/index.theme"
+    while IFS= read -r -d '' f; do
+        rel="${f#"$src"/}"; mkdir -p "$dst/$(dirname "$rel")"; ln -sfn "$f" "$dst/$rel"
+    done < <(find "$src" \( -type f -o -type l \) \( -iname '*zorin*' -o -iname 'start-here*' -o -iname 'distributor-logo*' \
+                -o -iname '*logo*' \) \( -iname '*.png' -o -iname '*.svg' \) ! -name '*.zorin' -print0)
+done
+GTK="$(pick_theme HardPoint-Dark ZorinPurple-Dark ZorinBlue-Dark Yaru-purple-dark Adwaita-dark || true)"
+ICONS="$(pick_icons HardPoint-Dark Papirus-Dark ZorinPurple-Dark ZorinBlue-Dark Yaru-purple-dark Adwaita || true)"
 log "Theme: ${GTK:-default}, icons: ${ICONS:-default}"
 mkdir -p /etc/dconf/db/local.d /etc/dconf/db/gdm.d /etc/dconf/profile
 {
@@ -45,6 +68,9 @@ mkdir -p /etc/dconf/db/local.d /etc/dconf/db/gdm.d /etc/dconf/profile
     echo
     echo "[org/gnome/desktop/session]"
     echo "idle-delay=uint32 600"
+    echo
+    echo "[org/gnome/shell/extensions/user-theme]"
+    [[ -n $GTK ]] && echo "name='$GTK'"
     echo
     echo "[org/gnome/mutter]"
     echo "center-new-windows=true"

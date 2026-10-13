@@ -92,10 +92,18 @@ case "$1" in
     configure)
         /usr/lib/hardpoint/setup/apply.sh || echo "hardpoint-os: some settings could not be applied (see above)" >&2
         ;;
+    triggered)
+        for v in Dark Light; do
+            [ -d /usr/share/themes/ZorinBlue-$v ] && python3 /usr/lib/hardpoint/setup/make-theme.py \
+                /usr/share/themes/ZorinBlue-$v /usr/share/themes/HardPoint-$v "$(echo $v | tr A-Z a-z)" || true
+        done
+        ;;
 esac
 exit 0
 SH
 chmod 755 "$P/DEBIAN/postinst"
+# Rebuild the HardPoint themes when Zorin updates its themes
+printf 'interest-noawait /usr/share/themes/ZorinBlue-Dark\ninterest-noawait /usr/share/themes/ZorinBlue-Light\n' > "$P/DEBIAN/triggers"
 
 # Permissions: root-owned, scripts executable
 find "$P" -path "$P/DEBIAN" -prune -o -type d -exec chmod 755 {} +
