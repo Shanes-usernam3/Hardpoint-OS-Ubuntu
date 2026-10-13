@@ -105,6 +105,7 @@ unrar
 
 # --- Gaming ---
 steam-installer
+steam-devices
 gamemode
 mangohud
 vulkan-tools
