@@ -365,13 +365,19 @@ class App(Gtk.Window):
             elif cmd == "appearance" and args and args[0] in ("dark", "light"):
                 scheme = "prefer-dark" if args[0] == "dark" else "default"
                 sh("gsettings", "set", "org.gnome.desktop.interface", "color-scheme", scheme)
-                gtk = sh("gsettings", "get", "org.gnome.desktop.interface", "gtk-theme")[1].strip("'")
-                base = gtk[:-5] if gtk.endswith("-Dark") else (gtk[:-6] if gtk.endswith("-Light") else gtk)
-                want = base + ("-Dark" if args[0] == "dark" else "-Light")
+                dark = args[0] == "dark"
+                want = "HardPoint-Dark" if dark else "HardPoint-Light"
+                if not Path("/usr/share/themes", want).is_dir():  # older system: keep Zorin's family
+                    gtk = sh("gsettings", "get", "org.gnome.desktop.interface", "gtk-theme")[1].strip("'")
+                    base = gtk[:-5] if gtk.endswith("-Dark") else (gtk[:-6] if gtk.endswith("-Light") else gtk)
+                    want = base + ("-Dark" if dark else "-Light")
                 if any(Path(d, want).is_dir() for d in ("/usr/share/themes", str(Path.home() / ".themes"))):
                     sh("gsettings", "set", "org.gnome.desktop.interface", "gtk-theme", want)
-                    if Path("/usr/share/icons", want).is_dir():
-                        sh("gsettings", "set", "org.gnome.desktop.interface", "icon-theme", want)
+                    sh("gsettings", "set", "org.gnome.shell.extensions.user-theme", "name", want)
+                    icons = next((i for i in ((want, "Papirus-Dark") if dark else (want, "Papirus"))
+                                  if Path("/usr/share/icons", i, "index.theme").exists()), want)
+                    if Path("/usr/share/icons", icons).is_dir():
+                        sh("gsettings", "set", "org.gnome.desktop.interface", "icon-theme", icons)
                 self.reply(rid, True, scheme)
             elif cmd == "update-timer" and args and args[0] in ("on", "off"):
                 verb = "enable" if args[0] == "on" else "disable"
