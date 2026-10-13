@@ -48,6 +48,13 @@ mkdir -p /etc/dconf/db/local.d /etc/dconf/db/gdm.d /etc/dconf/profile
     echo
     echo "[org/gnome/mutter]"
     echo "center-new-windows=true"
+    echo
+    echo "# Alt+Space = quick search (apps, files, settings, calculator), like PowerToys Run / Spotlight"
+    echo "[org/gnome/shell/keybindings]"
+    echo "toggle-overview=['<Alt>space', '<Super>s']"
+    echo
+    echo "[org/gnome/desktop/wm/keybindings]"
+    echo "activate-window-menu=['<Alt>F3']"
 } > /etc/dconf/db/local.d/00-hardpoint
 {
     echo "[org/gnome/login-screen]"
@@ -83,6 +90,12 @@ picture-uri='file:///usr/share/backgrounds/hardpoint/login.png'
 color-scheme='prefer-dark'
 ${GTK:+gtk-theme='$GTK'}
 ${ICONS:+icon-theme='$ICONS'}
+
+[org.gnome.shell.keybindings]
+toggle-overview=['<Alt>space', '<Super>s']
+
+[org.gnome.desktop.wm.keybindings]
+activate-window-menu=['<Alt>F3']
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
@@ -90,10 +103,12 @@ glib-compile-schemas /usr/share/glib-2.0/schemas
 log "Applying security defaults"
 sed -i 's/^ENABLED=.*/ENABLED=yes/' /etc/ufw/ufw.conf 2>/dev/null || true
 sed -i 's/^DEFAULT_INPUT_POLICY=.*/DEFAULT_INPUT_POLICY="DROP"/; s/^DEFAULT_FORWARD_POLICY=.*/DEFAULT_FORWARD_POLICY="DROP"/' /etc/default/ufw 2>/dev/null || true
-for u in ufw.service apparmor.service fwupd-refresh.timer hardpoint-firstboot.service hardpoint-touchpad.service thermald.service; do
+for u in ufw.service apparmor.service fwupd-refresh.timer hardpoint-firstboot.service hardpoint-touchpad.service hardpoint-boot.service thermald.service; do
     systemctl enable "$u" >/dev/null 2>&1 || warn "Could not enable $u"
 done
 systemctl disable usbguard.service 2>/dev/null || true   # only on in Lockdown Mode
+# Battery limit + system info now (not while building the ISO)
+[[ -z ${HP_STAGE:-} ]] && { /usr/lib/hardpoint/hp-boot || true; }
 [[ -f /etc/usbguard/usbguard-daemon.conf ]] && sed -i 's/^IPCAllowedGroups=.*/IPCAllowedGroups=sudo/' /etc/usbguard/usbguard-daemon.conf
 # No crash dumps, no core files
 mkdir -p /etc/security/limits.d && echo "* hard core 0" > /etc/security/limits.d/90-hardpoint.conf

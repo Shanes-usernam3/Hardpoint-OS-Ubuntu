@@ -91,6 +91,7 @@ network-manager-openvpn-gnome
 smartmontools
 nvme-cli
 gparted
+ntfs-3g
 testdisk
 gddrescue
 stress-ng

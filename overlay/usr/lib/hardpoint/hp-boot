@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# HardPoint OS — small tasks at every boot (and after waking from sleep).
+set -uo pipefail
+/usr/lib/hardpoint/hp-battery apply
+# Serial number for HardPoint System (the kernel only lets root read it)
+mkdir -p /var/lib/hardpoint
+cat /sys/class/dmi/id/product_serial > /var/lib/hardpoint/serial 2>/dev/null && chmod 644 /var/lib/hardpoint/serial
+exit 0

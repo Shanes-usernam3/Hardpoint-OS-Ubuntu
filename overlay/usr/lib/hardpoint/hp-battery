@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# HardPoint OS battery charge limit (stop charging at ~80% to make the battery last longer).
+#   hp-battery apply     set the limit from /etc/hardpoint/battery-limit (missing = charge to 100%)
+#   hp-battery status    print: <method> <on|off>   (method: threshold, longlife, conservation, none)
+# Works with the standard kernel limit (charge_control_end_threshold), the newer
+# "Long_Life" charge type, or Lenovo IdeaPad/ThinkBook conservation mode
+# (conservation mode stops at the level Lenovo picks, usually 80% on recent models).
+set -uo pipefail
+CONF=/etc/hardpoint/battery-limit
+limit=""; [[ -f $CONF ]] && limit="$(tr -dc 0-9 < "$CONF")"
+
+method() {
+    local b
+    for b in /sys/class/power_supply/BAT*; do
+        [[ -e $b/charge_control_end_threshold ]] && { echo "threshold $b"; return; }
+    done
+    for b in /sys/class/power_supply/BAT*; do
+        grep -qs Long_Life "$b/charge_types" && { echo "longlife $b"; return; }
+    done
+    for b in /sys/bus/platform/drivers/ideapad_acpi/*/conservation_mode; do
+        [[ -e $b ]] && { echo "conservation $b"; return; }
+    done
+    echo "none -"
+}
+
+read -r how where < <(method)
+case "${1:-status}" in
+    apply)
+        case "$how" in
+            threshold)    echo "${limit:-100}" > "$where/charge_control_end_threshold" ;;
+            longlife)     echo "$([[ -n $limit ]] && echo Long_Life || echo Standard)" > "$where/charge_types" ;;
+            conservation) echo "$([[ -n $limit ]] && echo 1 || echo 0)" > "$where" ;;
+            none)         [[ -n $limit ]] && echo "This laptop does not support a charge limit." ;;
+        esac ;;
+    status) echo "$how $([[ -n $limit ]] && echo on || echo off)" ;;
+    *) echo "usage: hp-battery apply|status" >&2; exit 2 ;;
+esac
+exit 0

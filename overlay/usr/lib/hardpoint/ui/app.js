@@ -38,11 +38,36 @@ const Mock = {
       ["dev", "com.google.AndroidStudio", "Android Studio", 1, "Android app development"],
       ["it", "com.rustdesk.RustDesk", "RustDesk", 1, "Remote support for clients"],
       ["it", "com.github.tchx84.Flatseal", "Flatseal", 1, "Manage app permissions"],
+      ["work", "apt:libreoffice-writer,libreoffice-calc,libreoffice-impress", "LibreOffice", 0, "Open and edit Word, Excel and PowerPoint files offline"],
+      ["work", "web:teams", "Microsoft Teams", 0, "Teams as its own app window (Edge web app)"],
+      ["tools", "org.gnome.DejaDup", "Backups (Déjà Dup)", 0, "Scheduled backups of your home folder"],
+      ["it", "extra:ventoy", "Ventoy", 0, "Make multi-boot USB sticks"],
     ].map(([category, id, name, d, description]) => ({ category, id, name, default: !!d, description })),
   },
   handle(m) {
     const reply = (ok, data, ms = 350) => setTimeout(() => HP._reply(m.id, ok, data), ms);
     if (m.cmd === "state") return reply(true, this.state, 50);
+    if (m.cmd === "sysinfo") return reply(true, {
+      vendor: "Lenovo", model: "ThinkBook 15 G4 IAP", machineType: "21DJ", serial: "PF3XXXXX", bios: "J6CN45WW (08/14/2025)",
+      cpu: "12th Gen Intel(R) Core(TM) i5-1235U", ramGB: 16, gpu: "Intel Corporation Alder Lake-UP3 GT2 [Iris Xe Graphics]",
+      os: "HardPoint OS 18 (Zorin Edition)", kernel: "6.14.0-33-generic", uptimeH: 3.4,
+      disks: [{ name: "nvme0n1", model: "SAMSUNG MZVL2512HCJQ", sizeGB: 512, tran: "nvme" }, { name: "nvme1n1", model: "WD Blue SN580 1TB", sizeGB: 1000, tran: "nvme" }],
+      battery: { present: true, percent: 78, status: "Charging", health: 91, cycles: 143, model: "L20M3PF0", manufacturer: "SMP" },
+      chargeLimit: { supported: true, on: false, method: "conservation" }, windowsDrive: false, focus: false,
+      checks: [
+        { key: "touchpad", name: "Touchpad", ok: true, detail: "Working", fix: "" },
+        { key: "wifi", name: "Wi-Fi", ok: true, detail: "Adapter wlp0s20f3 ready", fix: "" },
+        { key: "audio", name: "Sound", ok: true, detail: "Sound card found", fix: "" },
+        { key: "graphics", name: "Graphics", ok: true, detail: "Hardware acceleration on (i915)", fix: "" },
+        { key: "bluetooth", name: "Bluetooth", ok: true, detail: "Ready", fix: "" },
+        { key: "camera", name: "Camera", ok: true, detail: "Found", fix: "" },
+        { key: "fingerprint", name: "Fingerprint reader", ok: true, detail: "Found — add a finger in Settings → Users", fix: "fingerprint" },
+      ] }, 200);
+    if (m.cmd === "root" && m.action === "disk-health") {
+      ["DISK|/dev/nvme0n1|SAMSUNG MZVL2512HCJQ|PASSED|3%|34 Celsius", "DISK|/dev/nvme1n1|WD Blue SN580 1TB|PASSED|1%|31 Celsius"]
+        .forEach((l, i) => setTimeout(() => HP._line(m.id, l), 200 * (i + 1)));
+      return reply(true, "done", 700);
+    }
     if (m.cmd === "updates-list") return reply(true, { checked: Date.now() / 1000, items: [
       { kind: "system", id: "apt:openssl", name: "openssl", from: "3.0.13-0ubuntu3.5", to: "3.0.13-0ubuntu3.6", security: true, source: "noble-security" },
       { kind: "system", id: "apt:linux-firmware", name: "linux-firmware", from: "20240318.git3b128b60-0ubuntu2.6", to: "20240318.git3b128b60-0ubuntu2.7", security: false, source: "noble-updates" },
@@ -98,13 +123,13 @@ function show(v) {
   view = v;
   $("#shell").classList.toggle("wizard", v === "setup");
   $$(".nav").forEach((n) => n.classList.toggle("on", n.dataset.view === v));
-  ({ setup: Setup.start, updates: Updates.render, accounts: Accounts.render, security: Security.render })[v]();
+  ({ setup: Setup.start, updates: Updates.render, accounts: Accounts.render, security: Security.render, system: System.render })[v]();
 }
 $$(".nav").forEach((n) => n.addEventListener("click", () => show(n.dataset.view)));
 
 // ================================================================== SETUP
 const Setup = {
-  steps: ["welcome", "look", "account", "apps", "security", "done"],
+  steps: ["welcome", "hardware", "look", "account", "apps", "extras", "security", "done"],
   i: 0,
   picks: null,
   start() { Setup.i = 0; Setup.go(0); },
@@ -189,7 +214,7 @@ const Setup = {
   apps(page) {
     const have = new Set(S.installedApps);
     if (!Setup.picks) Setup.picks = new Set(S.catalog.filter((a) => a.default && !have.has(a.id)).map((a) => a.id));
-    const cats = { gaming: "Gaming & emulators", dev: "Development", it: "IT & remote support", media: "Media" };
+    const cats = { work: "Work & office", tools: "Everyday tools", gaming: "Gaming & emulators", dev: "Development", it: "IT & remote support", media: "Media" };
     let html = "";
     for (const [k, label] of Object.entries(cats)) {
       const list = S.catalog.filter((a) => a.category === k);
@@ -201,7 +226,7 @@ const Setup = {
           ${inst ? '<span class="pill ok">Installed</span>' : ""}</div>`;
       }).join("");
     }
-    page.innerHTML = `<div class="head"><h2>Add your apps</h2><p>Steam, VS Code, Edge, Docker and the IT toolkit are already installed. Pick extras from Flathub — they install in the background.</p></div>
+    page.innerHTML = `<div class="head"><h2>Add your apps</h2><p>Steam, VS Code, Edge, Docker and the IT toolkit are already installed. Everything here is optional — pick what you want and it installs in the background. You can come back any time with Run Setup again.</p></div>
       <div class="body"><div class="card" style="padding:8px 10px">${html}</div>
       <div id="appstatus" class="card hidden"><div class="row between"><h3 id="appmsg">Installing apps…</h3><span class="pill" id="appcount"></span></div>
       <div class="bar busy" style="margin-top:12px"><i></i></div><div class="console mono" id="applog"></div></div></div>`;
@@ -242,6 +267,23 @@ const Setup = {
     });
   },
 
+  async hardware(page) {
+    page.innerHTML = `<div class="head"><h2>Checking your hardware</h2><p>Making sure the touchpad, Wi-Fi, sound, graphics and the rest have working drivers.</p></div>
+      <div class="body"><div class="card" id="hw"><div class="bar busy"><i></i></div></div></div>`;
+    Setup.foot(page);
+    try { System.info = await HP.call("sysinfo"); } catch (e) { $("#hw", page).innerHTML = `<p class="small">Could not check: ${esc(e.message)}</p>`; return; }
+    System.drawChecks($("#hw", page), () => Setup.go(Setup.i));
+  },
+
+  async extras(page) {
+    page.innerHTML = `<div class="head"><h2>Handy extras</h2><p>Optional — switch on what suits you. All of these are also in HardPoint System.</p></div>
+      <div class="body stack" id="xb"><div class="card"><div class="bar busy"><i></i></div></div></div>`;
+    Setup.foot(page);
+    try { System.info = System.info || await HP.call("sysinfo"); } catch { System.info = {}; }
+    $("#xb", page).innerHTML = System.extrasHTML(System.info);
+    System.wireExtras(page);
+  },
+
   security(page) {
     const s = S.security;
     page.innerHTML = `<div class="head"><h2>Security &amp; updates</h2><p>HardPoint OS is locked down by default without getting in the way of games and dev work.</p></div>
@@ -258,7 +300,8 @@ const Setup = {
     page.innerHTML = `<div class="hero">
         <img class="logo" src="logo.svg" alt="">
         <h1>You're all set</h1>
-        <p>HardPoint OS is ready. Setup, Updates, Accounts and Security are always in the app menu.</p>
+        <p>HardPoint OS is ready. Setup, Updates, Accounts, Security and System are always in the app menu.</p>
+        <p class="small">Tips: <b>Alt+Space</b> searches apps, files and settings · <b>Super+V</b> clipboard history (if installed) · <b>Focus Mode</b> in the app menu silences notifications.</p>
         <div class="feature-row">
           <button class="btn" id="o-upd">Check for updates</button>
           ${S.entra.enabled && S.entra.companyPortal ? '<button class="btn" id="o-cp">Open Company Portal</button>' : ""}
@@ -444,6 +487,122 @@ const Updates = {
     $("#ulogc .bar").classList.remove("busy"); $("#ulogc .bar i").style.width = "100%";
     $("#refresh").disabled = false;
     await Updates.load();
+  },
+};
+
+// ================================================================== SYSTEM
+const System = {
+  info: null,
+  tile(label, value, sub = "") {
+    return `<div class="status"><div><span class="small muted">${esc(label)}</span><b style="display:block;margin-top:2px">${esc(value || "—")}</b>${sub ? `<p class="small">${esc(sub)}</p>` : ""}</div></div>`;
+  },
+  drawChecks(el, again) {
+    const c = System.info.checks || [];
+    const bad = c.filter((x) => !x.ok).length;
+    el.innerHTML = `<div class="row between"><h3>${bad ? `${bad} thing${bad > 1 ? "s" : ""} to look at` : "Everything is working"}</h3>
+        <button class="btn ghost small" id="recheck">Check again</button></div>
+      <div style="margin-top:10px">${c.map((x) => `<div class="item" style="cursor:default"><span class="dot ${x.ok ? "ok" : "warn"}"></span>
+        <div class="grow"><div class="name">${esc(x.name)}</div><div class="sub">${esc(x.detail)}</div></div>
+        ${x.fix ? `<button class="btn small ${x.ok ? "ghost" : ""}" data-fix="${esc(x.fix)}">${x.fix === "touchpad-fix" ? "Fix" : x.fix === "fingerprint" ? "Set up" : "Open settings"}</button>` : ""}</div>`).join("")}</div>
+      <div class="console mono" id="hwlog"></div>`;
+    $("#recheck", el).onclick = again;
+    $$("[data-fix]", el).forEach((b) => b.onclick = async () => {
+      const f = b.dataset.fix;
+      if (f === "touchpad-fix") {
+        const log = consoleBox($("#hwlog", el));
+        await busy(b, "Fixing…", () => HP.root("touchpad-fix", [], log)).then(() => toast("Touchpad check finished")).catch((x) => toast(x.message));
+        System.info = await HP.call("sysinfo"); System.drawChecks(el, again);
+      } else HP.call("open", { app: f }).catch((x) => toast(x.message));
+    });
+  },
+  extrasHTML(i) {
+    const cl = i.chargeLimit || {};
+    return `
+      <div class="card row between"><div><h3>Battery charge limit</h3><p class="small">${cl.supported
+        ? "Stops charging at about 80% so the battery lasts years longer. Best when the laptop is plugged in most of the time — turn it off before a trip for a full charge."
+        : "This PC doesn't offer a charge limit."}</p></div>${cl.supported ? toggleHTML("x-batt", cl.on) : ""}</div>
+      <div class="card row between"><div><h3>Show my Windows drive</h3><p class="small">Your Windows SSD appears in Files as “Windows” so you can copy files off it. Read-only, so nothing here can damage Windows.</p></div>${toggleHTML("x-win", i.windowsDrive)}</div>
+      <div class="card row between"><div><h3>Focus mode</h3><p class="small">Silences notification pop-ups and turns on warm Night Light. Also in the app menu as <b>Focus Mode</b>.</p></div>${toggleHTML("x-focus", i.focus)}</div>
+      <div class="card"><h3>Shortcuts worth knowing</h3><p class="small" style="margin-top:6px;line-height:1.9">
+        <b>Alt+Space</b> — search apps, files, settings and do quick maths ·
+        <b>Super</b> — app menu · <b>Super+V</b> — clipboard history (pick “Clipboard history” in Apps) ·
+        <b>Super+L</b> — lock · <b>Print Screen</b> — screenshot<br>
+        <b>Phone:</b> files sent from your phone with HardPoint Connect land in <b>Downloads</b>, and phone notifications show here.</p>
+        <div class="console mono" id="xlog"></div></div>`;
+  },
+  wireExtras(root) {
+    const flip = (id, fn) => { const t = $("#" + id, root); t && t.addEventListener("change", async () => {
+      const want = t.checked;
+      try { await fn(want); } catch (e) { t.checked = !want; toast(e.message === "cancelled" ? "Cancelled" : e.message); }
+    }); };
+    flip("x-batt", async (on) => { await HP.root("battery", [on ? "on" : "off"]); toast(on ? "Charging stops at about 80%" : "Charging to 100%"); System.info.chargeLimit.on = on; });
+    flip("x-win", async (on) => {
+      const log = consoleBox($("#xlog", root));
+      await HP.root("windows-drive", [on ? "on" : "off"], log);
+      toast(on ? "Windows drive added to Files" : "Windows drive hidden"); System.info.windowsDrive = on;
+    });
+    flip("x-focus", async (on) => { await HP.call("focus", { args: [on ? "on" : "off"] }); System.info.focus = on; });
+  },
+  async render() {
+    $("#main").innerHTML = `<div class="head"><h1>System</h1><p>This PC at a glance, health checks and one-click repair.</p></div><div class="card"><div class="bar busy"><i></i></div></div>`;
+    try { System.info = await HP.call("sysinfo"); } catch (e) { $("#main").insertAdjacentHTML("beforeend", `<p class="small">${esc(e.message)}</p>`); return; }
+    const i = System.info, b = i.battery || {};
+    const lenovo = /lenovo/i.test(i.vendor || "");
+    $("#main").innerHTML = `<div class="head row between"><div><h1>System</h1><p>This PC at a glance, health checks and one-click repair.</p></div>
+        <button class="btn primary" id="fix">Fix my PC</button></div>
+      <div class="stack">
+        <div class="card hidden" id="fixc"><div class="row between"><h3 id="fixmsg">Fixing…</h3></div><div class="bar busy" style="margin-top:12px"><i></i></div><div class="console mono" id="fixlog"></div></div>
+        <div class="card"><div class="row between"><h3>${esc(i.vendor)} ${esc(i.model)}</h3>
+          <div class="row">${i.serial ? `<button class="btn ghost small" id="copy">Copy serial</button>` : ""}${lenovo && i.serial ? `<button class="btn small" id="warranty">Check warranty</button>` : ""}</div></div>
+          <div class="grid3" style="margin-top:12px">
+            ${System.tile("Serial number", i.serial, i.machineType ? "Machine type " + i.machineType : "")}
+            ${System.tile("Processor", i.cpu)}
+            ${System.tile("Memory", i.ramGB ? i.ramGB + " GB" : "")}
+            ${System.tile("Graphics", i.gpu)}
+            ${System.tile("System", i.os, "Kernel " + i.kernel)}
+            ${System.tile("BIOS", i.bios, "Up " + i.uptimeH + " h")}
+          </div></div>
+        ${b.present ? `<div class="card"><h3>Battery</h3><div class="grid3" style="margin-top:12px">
+            ${System.tile("Charge", b.percent + "%", b.status)}
+            ${System.tile("Health", b.health ? b.health + "%" : "Unknown", b.health ? (b.health >= 80 ? "Good" : b.health >= 60 ? "Worn — still usable" : "Worn — consider a replacement") : "")}
+            ${System.tile("Charge cycles", b.cycles ? String(b.cycles) : "Not reported")}
+          </div></div>` : ""}
+        <div class="card"><div class="row between"><h3>Disks</h3><button class="btn ghost small" id="dh">Check disk health</button></div>
+          <div id="disks" style="margin-top:10px">${(i.disks || []).map((d) => `<div class="item" style="cursor:default" data-disk="/dev/${esc(d.name)}"><span class="dot"></span>
+            <div class="grow"><div class="name">${esc(d.model || d.name)}</div><div class="sub">${d.sizeGB} GB · ${esc((d.tran || "").toUpperCase())} · /dev/${esc(d.name)}</div></div><span class="pill">Not checked</span></div>`).join("")}</div></div>
+        <div class="card" id="hw"></div>
+        ${System.extrasHTML(i)}
+      </div>`;
+    System.drawChecks($("#hw"), () => System.render());
+    System.wireExtras($("#main"));
+    $("#copy")?.addEventListener("click", () => HP.call("copy", { args: [i.serial] }).then(() => toast("Serial number copied")));
+    $("#warranty")?.addEventListener("click", async () => {
+      await HP.call("copy", { args: [i.serial] }).catch(() => {});
+      toast("Serial copied — paste it on Lenovo's page");
+      HP.call("url", { url: "https://pcsupport.lenovo.com/warrantylookup" });
+    });
+    $("#dh").onclick = (ev) => busy(ev.currentTarget, "Checking…", () => HP.root("disk-health", [], System.diskLine).catch((x) => toast(x.message === "cancelled" ? "Cancelled" : x.message)));
+    $("#fix").onclick = async (ev) => {
+      $("#fixc").classList.remove("hidden");
+      const log = consoleBox($("#fixlog"));
+      $("#fixmsg").textContent = "Fixing… (a safety snapshot is taken first)";
+      try {
+        await busy(ev.currentTarget, "Fixing…", () => HP.root("repair", [], (l) => { log(l); System.diskLine(l); }));
+        $("#fixmsg").textContent = "Done — your PC has been checked and repaired";
+      } catch (e) { $("#fixmsg").textContent = e.message === "cancelled" ? "Cancelled" : "Finished with problems — see the details"; }
+      $("#fixc .bar").classList.remove("busy"); $("#fixc .bar i").style.width = "100%";
+    };
+  },
+  diskLine(l) {
+    if (!l.startsWith("DISK|")) return;
+    const [, dev, , health, wear, temp] = l.split("|");
+    const row = $(`#disks [data-disk="${CSS.escape(dev)}"]`); if (!row) return;
+    const ok = /PASSED|OK/i.test(health);
+    $(".dot", row).className = "dot " + (ok ? "ok" : health === "unknown" ? "" : "bad");
+    $(".pill", row).textContent = ok ? "Healthy" : health === "unknown" ? "No health data" : "Failing — back up now";
+    $(".pill", row).className = "pill " + (ok ? "ok" : health === "unknown" ? "" : "sec");
+    const extra = [wear && `${wear} worn`, temp && temp.replace(/ ?Celsius/, " °C")].filter(Boolean).join(" · ");
+    if (extra) $(".sub", row).textContent += " · " + extra;
   },
 };
 

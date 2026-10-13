@@ -1,4 +1,7 @@
 #!/bin/sh
-# Re-check the touchpad after waking from sleep
-[ "$1" = post ] && /usr/lib/hardpoint/hp-touchpad-fix >/dev/null 2>&1 &
+# After waking from sleep: re-check the touchpad and re-apply the battery charge limit
+if [ "$1" = post ]; then
+    /usr/lib/hardpoint/hp-touchpad-fix >/dev/null 2>&1 &
+    /usr/lib/hardpoint/hp-battery apply >/dev/null 2>&1 &
+fi
 exit 0
