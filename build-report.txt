@@ -1,0 +1,1332 @@
+== Packages skipped (not available)
+
+[1;36m  ->[0m Renamed product names in 246 files and 1 resource bundles
+== Installer: ubiquity
+== Logo images replaced
+/usr/share/pixmaps/zorin-logo-text-dark.png
+/usr/share/pixmaps/zorin-logo-text.png
+/usr/share/pixmaps/zorin-logo.svg
+/usr/share/icons/Papirus-Dark/symbolic/places/start-here-symbolic.svg
+/usr/share/icons/Papirus-Light/24x24/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus-Light/24x24/panel/start-here.svg
+/usr/share/icons/Papirus-Light/16x16/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus-Light/16x16/panel/start-here.svg
+/usr/share/icons/Papirus-Light/22x22/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus-Light/22x22/panel/start-here.svg
+/usr/share/icons/Zorin/32x32/places/start-here.png
+/usr/share/icons/Zorin/32x32/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/32x32/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/32x32/places/distributor-logo.png
+/usr/share/icons/Zorin/scalable/places/start-here-symbolic.svg
+/usr/share/icons/Zorin/24x24/places/start-here.png
+/usr/share/icons/Zorin/24x24/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/24x24/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/24x24/places/distributor-logo.png
+/usr/share/icons/Zorin/48x48/places/start-here.png
+/usr/share/icons/Zorin/48x48/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/48x48/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/48x48/places/distributor-logo.png
+/usr/share/icons/Zorin/16x16@2x/places/start-here.png
+/usr/share/icons/Zorin/16x16@2x/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/16x16@2x/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/16x16@2x/places/distributor-logo.png
+/usr/share/icons/Zorin/512x512/places/start-here.png
+/usr/share/icons/Zorin/512x512/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/512x512/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/512x512/places/distributor-logo.png
+/usr/share/icons/Zorin/24x24@2x/places/start-here.png
+/usr/share/icons/Zorin/24x24@2x/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/24x24@2x/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/24x24@2x/places/distributor-logo.png
+/usr/share/icons/Zorin/16x16/places/start-here.png
+/usr/share/icons/Zorin/16x16/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/16x16/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/16x16/places/distributor-logo.png
+/usr/share/icons/Zorin/48x48@2x/places/start-here.png
+/usr/share/icons/Zorin/48x48@2x/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/48x48@2x/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/48x48@2x/places/distributor-logo.png
+/usr/share/icons/Zorin/32x32@2x/places/start-here.png
+/usr/share/icons/Zorin/32x32@2x/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/32x32@2x/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/32x32@2x/places/distributor-logo.png
+/usr/share/icons/Zorin/512x512@2x/places/start-here.png
+/usr/share/icons/Zorin/512x512@2x/places/distributor-logo-debian.png
+/usr/share/icons/Zorin/512x512@2x/places/distributor-logo-ubuntu.png
+/usr/share/icons/Zorin/512x512@2x/places/distributor-logo.png
+/usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
+/usr/share/icons/Papirus/symbolic/places/start-here-symbolic.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/32x32/apps/distributor-logo-debian.svg
+/usr/share/icons/Papirus/24x24/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus/24x24/panel/start-here.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/24x24/apps/distributor-logo-debian.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-antergos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-elementary.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-kubuntu.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-chakra.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-centos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-mageia.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-neon.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/48x48/apps/distributor-logo-debian.svg
+/usr/share/icons/Papirus/16x16/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus/16x16/panel/start-here.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/16x16/apps/distributor-logo-debian.svg
+/usr/share/icons/Papirus/22x22/panel/start-here-lxqt.svg
+/usr/share/icons/Papirus/22x22/panel/start-here.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/22x22/apps/distributor-logo-debian.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-mac.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-salentos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-parrot.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-backbox.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-archlinux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-bunsenlabs.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-kaos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-netrunner.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-android.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-lubuntu.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-blackarch.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-archlabs.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-rosa.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-voyager.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-hyperbola.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-archman.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-manjaro.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ultimate-edition.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-fedora.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-steamos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-alt-linux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-aix.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-endeavouros.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-pclinuxos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-alpine.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-openbsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ms-dos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-kali-linux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-vanilla-os.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-pisilinux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-openmandriva.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-solus.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-pureos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-academix.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-absolute.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-midnightbsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-mx.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-freedos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-peppermint.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-knoppix.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-bodhi-linux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-deepin.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-aryalinux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-trueos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-artix.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-rhel.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-zorin.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-korora.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-devuan.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-pop-os.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-puppy-linux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-lxle.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-madlinux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-linux-mint.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ghostbsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-netbsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ubuntu-mate.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-antix.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-condres.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-void.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-simply.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-dragonflybsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-linux-lite.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-smartos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ubuntu-studio.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-opensuse.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ubuntu.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-ubuntu-budgie.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-freebsd.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-raspbian.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-calculate-linux.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-windows.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-archbang.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-nixos.svg
+/usr/share/icons/Papirus/64x64/apps/distributor-logo-debian.svg
+/usr/share/icons/HighContrast/32x32/places/start-here.png
+/usr/share/icons/HighContrast/scalable/places/start-here.svg
+/usr/share/icons/HighContrast/24x24/places/start-here.png
+/usr/share/icons/HighContrast/48x48/places/start-here.png
+/usr/share/icons/HighContrast/256x256/places/start-here.png
+/usr/share/icons/HighContrast/16x16/places/start-here.png
+/usr/share/icons/HighContrast/22x22/places/start-here.png
+/usr/share/icons/hicolor/32x32/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/48x48@2/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/32x32@2/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/24x24/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/48x48/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/16x16@2/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/512x512/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/24x24@2/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/16x16/apps/zorin-os-upgrader.png
+/usr/share/icons/hicolor/512x512@2/apps/zorin-os-upgrader.png
+/usr/share/icons/ePapirus/24x24/panel/start-here-lxqt.svg
+/usr/share/icons/ePapirus/24x24/panel/start-here.svg
+/usr/share/zorin-os-upgrader/zorin-logo.svg
+/usr/share/plymouth/themes/spinner/watermark.png
+/usr/share/plymouth/ubuntu-logo.png
+/usr/share/plymouth/zorin-logo.svg
+/usr/share/icons/Zorin/32x32/apps/zorin-connect.png
+/usr/share/icons/Zorin/24x24/apps/zorin-connect.png
+/usr/share/icons/Zorin/48x48/apps/zorin-connect.png
+/usr/share/icons/Zorin/16x16@2x/apps/zorin-connect.png
+/usr/share/icons/Zorin/512x512/apps/zorin-connect.png
+/usr/share/icons/Zorin/24x24@2x/apps/zorin-connect.png
+/usr/share/icons/Zorin/16x16/apps/zorin-connect.png
+/usr/share/icons/Zorin/48x48@2x/apps/zorin-connect.png
+/usr/share/icons/Zorin/32x32@2x/apps/zorin-connect.png
+/usr/share/icons/Zorin/512x512@2x/apps/zorin-connect.png
+/usr/share/icons/hicolor/symbolic/apps/zorin-appearance-symbolic.svg
+/usr/share/icons/hicolor/32x32/apps/zorin-appearance.png
+/usr/share/icons/hicolor/32x32/apps/zorin-connect.png
+/usr/share/icons/hicolor/scalable/apps/org.gnome.Shell.Extensions.ZorinConnect-symbolic.svg
+/usr/share/icons/hicolor/scalable/apps/org.gnome.Shell.Extensions.ZorinConnect.svg
+/usr/share/icons/hicolor/24x24/apps/zorin-appearance.png
+/usr/share/icons/hicolor/24x24/apps/zorin-connect.png
+/usr/share/icons/hicolor/48x48/apps/zorin-appearance.png
+/usr/share/icons/hicolor/48x48/apps/zorin-connect.png
+/usr/share/icons/hicolor/512x512/apps/zorin-appearance.png
+/usr/share/icons/hicolor/512x512/apps/zorin-connect.png
+/usr/share/icons/hicolor/16x16/apps/zorin-appearance.png
+/usr/share/icons/hicolor/16x16/apps/zorin-connect.png
+/usr/share/pixmaps/zorin-appearance.png
+/usr/share/pixmaps/zorin-connect.png
+/usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/zorin-icon-symbolic.svg
+== Image files still containing 'zorin' (not replaced)
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-music.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-git.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-dropbox.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/user-home.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-red.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-yellow.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-green.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-locked.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-cyan.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-brown.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-open.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-black.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-violet.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-recent.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-grey.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-orange.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-magenta.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-documents.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-videos.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-blue.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-publicshare.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-cloud.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-download.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-pictures.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-remote.png
+/usr/share/icons/ZorinOrange-Dark/32x32/places/folder-templates.png
+/usr/share/icons/ZorinOrange-Dark/32x32/mimetypes/inode-directory.png
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-lock-screen-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pan-up-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-crop-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-filter-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-filter-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-forward-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-justify-fill-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-red-eye-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-pin-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-mark-notjunk-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/zoom-out-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-strikethrough-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-mirror-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-straighten-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-circle-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/keyboard-shift-filled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/calendar-go-today-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tab-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-playback-stop-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/appointment-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/dino-tick-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-merge-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-move-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/ephy-reader-mode-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/add-files-to-archive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-send-receive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-select-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-bold-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-jump-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/address-book-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/color-select-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/list-remove-all-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-clear-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-continuous-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-redo-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/find-location-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-reply-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-bottom-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/window-minimize-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-fullwidth-inactive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/list-remove-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-tag-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-vk-inactive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/help-info-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/twitter-mentions-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/call-start-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/keyboard-layout-filled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/insert-object-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pane-hide-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-direction-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-revert-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-freeshape-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/selection-start-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/window-restore-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-save-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/application-menu-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-print-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-right-pane-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-mark-important-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-indent-more-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pan-start-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-italic-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/location-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-list-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/error-correct-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-line-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/camera-switch-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/application-exit-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/contact-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-highlight-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/selection-end-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-underline-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-polygon-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-seek-forward-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/insert-image-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-up-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/zoom-original-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/action-unavailable-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/window-maximize-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/twitter-profile-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-larger-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-brush-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-app-grid-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/insert-text-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/keyboard-caps-lock-filled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-justify-right-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-skew-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pan-down-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-arc-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-run-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-select-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-sharpen-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-rotate-right-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-bottom-pane-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tools-check-spelling-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-sort-ascending-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-rotate-left-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-more-horizontal-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/list-add-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-restore-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-direction-ltr-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/ephy-bookmarks-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-select-all-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-flip-vertical-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/sidebar-places-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-clear-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-vk-active-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-left-pane-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-switch-user-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-punc-inactive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/nautilus-file-chooser-options-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-properties-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/category-search-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-import-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-playback-start-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-revert-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-reply-all-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-message-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-dual-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-mark-read-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-mark-junk-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-rectangle-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-punc-active-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/send-to-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/keyboard-enter-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/star-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-list-video-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-more-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-send-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-first-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-paste-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/fcitx-fullwidth-active-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/insert-emoticon-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-filter-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-down-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-top-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-next-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-export-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-paged-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/focus-top-bar-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-previous-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-find-replace-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-oval-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/qrscanner-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-refresh-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-clear-all-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-last-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pane-show-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-list-images-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-list-compact-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-eject-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-straighten-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-revert-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-eraser-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/focus-legacy-systray-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-log-out-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-fullscreen-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/process-stop-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-filter-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/open-menu-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-jump-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/call-stop-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-auto-adjust-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-direction-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/folder-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-copy-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/browser-download-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-send-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-reply-all-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/image-denoise-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-print-preview-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/window-pop-out-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-find-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-sort-descending-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-skip-backward-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-column-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-playback-start-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/bookmark-new-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-suspend-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/zoom-in-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/insert-link-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-undo-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-cut-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-justify-left-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/row-preferences-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/window-close-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-record-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/link-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mark-location-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/focus-windows-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-home-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-magic-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/nautilus-folder-search-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-paint-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/keyboard-hide-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-justify-center-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-playback-pause-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-open-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-mount-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/extract-archive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-view-subtitles-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/twitter-dm-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-open-recent-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-save-as-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-top-pane-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/object-flip-horizontal-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/dino-double-tick-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pane-hide-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-indent-less-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/notification-alert-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/font-select-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-skip-forward-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-grid-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/twitter-home-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/go-jump-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/visible-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/mail-flag-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-filters-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-compact-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-remove-formatting-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/view-coverflow-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-shutdown-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/pan-end-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/format-text-smaller-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/system-hibernate-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/edit-delete-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/zoom-fit-best-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/media-seek-backward-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/tool-roundedrect-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/actions/document-page-setup-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/display-brightness-high-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/location-services-active-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/bumblebee-inactive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/weather-windy-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-cellular-no-route-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/process-completed-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/airplane-mode-disabled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wireless-signal-none-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/media-playlist-no-repeat-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-disconnected-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wireless-acquiring-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/view-wrapped-rtl-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/dialog-information-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/numlock-enabled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wireless-disconnected-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-error-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wireless-connected-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wireless-hotspot-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-receive-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/security-high-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/orientation-landscape-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/dialog-warning-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/microphone-sensitivity-high-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/battery-level-20-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/audio-volume-overamplified-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-cellular-acquiring-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/media-playlist-repeat-symbolic-rtl.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/battery-level-30-charging-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/display-brightness-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/user-idle-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/timer-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/capslock-enabled-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/thunderbolt-acquiring-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/radio-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/folder-open-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-cellular-hspa-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/radio-checked-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/network-wired-error-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/display-brightness-medium-symbolic.svg
+/usr/share/icons/ZorinOrange-Dark/scalable/status/touch-disabled-symbolic.svg
+== Files still showing 'Zorin Appearance' (binary or not handled)
+/usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/HardPoint-Light/gtk-3.0/gtk.css
+/usr/share/themes/HardPoint-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/HardPoint-Dark/gtk-3.0/gtk.css
+/usr/share/themes/HardPoint-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/HardPoint-Light/gtk-3.0/gtk.css
+/usr/share/themes/HardPoint-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/HardPoint-Dark/gtk-3.0/gtk.css
+/usr/share/themes/HardPoint-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk.css
+/usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk-dark.css
+/usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk.css
+/usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk-dark.css
+== Zorin GNOME Shell extensions
+/usr/share/gnome-shell/extensions/zorin-appindicator@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-connect@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-desktop-cube@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-desktop-icons@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-magic-lamp-effect@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-menu@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-printers@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-screen-keyboard-panel-button@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-spatial-window-switcher@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-tiling-shell@zorinos.com
+/usr/share/gnome-shell/extensions/zorin-window-move-effect@zorinos.com
+== Menu-related settings keys
+name="custom-icons"
+name="icon-add-remove-effects"
+name="icon-brightness"
+name="icon-contrast"
+name="icon-has-shadow"
+name="icon-opacity"
+name="icon-saturation"
+name="icon-size"
+name="icon-style"
+name="icon-theme"
+name="logo-icon"
+name="overlay-icon-opacity"
+name="overlay-icon-size"
+name="scroll-icon-action"
+name="show-icon"
+name="show-showdesktop-icon"
+name="showdesktop-button-width"
+name="toolbar-icons-size"
+  -> initrd.img-6.17.0-20-generic: plymouth/themes/default.plymouth plymouth/themes/details plymouth/themes/hardpoint plymouth/themes/text plymouth/themes/text.plymouth plymouth/themes/zorin-text 
+===== BRANDING AUDIT (2026-10-13) =====
+== 1. Visible app launchers mentioning Zorin (menu / app grid)
+zorin-appearance.desktop | HardPoint Appearance
+      Icon=zorin-appearance
+zorin-connect.desktop | HardPoint Connect
+      Icon=zorin-connect
+== 2. Active autostart entries mentioning Zorin
+== 3. Zorin packages installed (decide: keep / hide / remove)
+zorin-additional-drivers-checker	Automatically check if additional drivers are available
+zorin-additional-hicolor-icons	Additional hicolor icons for Zorin OS
+zorin-appearance	Modify the look and feel of your Zorin OS desktop
+zorin-appearance-layouts-shell-core	Desktop layouts in Zorin Appearance for Zorin OS Core
+zorin-appearance-layouts-shell-premium	(no description available)
+zorin-appearance-layouts-support	Zorin Appearance - Layouts Support
+zorin-auto-theme	Daemon to automatically change the theme
+zorin-connect	Connect your mobile device with your Zorin OS computer
+zorin-desktop-session	Zorin Desktop session for GNOME
+zorin-desktop-themes	Zorin OS desktop themes
+zorin-exec-guard	Shows a warning when attempting to run unknown apps
+zorin-exec-guard-app-db	Zorin Exec Guard - App Database
+zorin-gnome-tour-autostart	Zorin Tour Autostart
+zorin-icon-themes	Zorin icon themes
+zorin-os-artwork	Artwork of Zorin OS
+zorin-os-census	(no description available)
+zorin-os-default-settings	Default settings for Zorin OS
+zorin-os-desktop	The Zorin OS desktop system
+zorin-os-docs	Zorin OS Desktop Guide
+zorin-os-file-templates	File templates for Zorin OS users
+zorin-os-keyring	GnuPG keys of Zorin OS
+zorin-os-lite-tour-video	(no description available)
+zorin-os-minimal	Minimal core of Zorin OS
+zorin-os-overlay	forces Zorin OS overlay for some packages
+zorin-os-printer-test-page	Printer test page for Zorin OS
+zorin-os-standard	The Zorin OS standard system
+zorin-os-tour-video	Intro video for the Zorin OS Tour
+zorin-os-upgrader	Upgrade between versions and editions of Zorin OS
+zorin-os-wallpapers	Default wallpapers in Zorin OS
+zorin-os-wallpapers-18	Default wallpapers in Zorin OS 18
+zorin-os-wallpapers-solid	Solid colour wallpapers in Zorin OS
+zorin-os-www-browser	Dummy package which provides the www-browser virtual package
+zorin-sound-theme	Sound theme for Zorin OS
+zorin-windows-app-support-installation-shortcut	Shortcut to install Windows App Support
+== 4. GNOME Shell extensions with Zorin in their visible name
+== 5. Text UI files with a visible 'Zorin' word (excluding code identifiers)
+grep: write error: Broken pipe
+-- /usr/share/polkit-1/actions/com.zorin.desktop.upgrader.policy
+      4:  <vendor>Zorin</vendor>
+      32:    <description xml:lang="nb">Oppgrader Zorin OS til nyeste versjon</description>
+      76:    <message>To upgrade Zorin OS, you need to authenticate.</message>
+-- /usr/share/icons/Zorin/index.theme
+      2:Name=Zorin
+-- /usr/share/ubiquity/gtk/stepPrepare.ui
+      717:                        <property name="label" translatable="yes">The census lets the Zorin OS developers count the number of users anonymously.</property>
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/shell/utils.js
+      18: * Get a themed icon, using fallbacks from Zorin Connect's GResource when necessary.
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/shell/notification.js
+      236:     * Zorin Connect information
+      341: * If there is an active GtkNotificationDaemonAppSource for Zorin Connect when the
+      369: * Wrap GtkNotificationDaemon._ensureAppSource() to patch Zorin Connect's app source
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/preferences/service.js
+      23:Zorin Connect: ${Config.PACKAGE_VERSION} (${Config.IS_USER ? 'user' : 'system'})
+      275:            logError(e, 'Zorin Connect');
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/utils/setup.js
+      28: * @param {string} relativePath - A path relative to Zorin Connect's resource path
+      42:        logError(e, 'Zorin Connect');
+      63:        logError(e, 'Zorin Connect');
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/utils/remote.js
+      227: * A simple proxy wrapper for the Zorin Connect service.
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/manager.js
+      44:            'Whether debug logging is enabled in Zorin Connect',
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/init.js
+      147:    GLib.log_structured('Zorin Connect', GLib.LogLevelFlags.LEVEL_MESSAGE, {
+      383:                '-subj', `/O=Zorin OS/OU=Zorin Connect/CN=${commonName}`,
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/components/mpris.js
+      856:                if (!name.includes('Zorin Connect'))
+      868:        if (name.includes('Zorin Connect'))
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/components/atspi.js
+      33:        // will appear successful and other calls will cause Zorin Connect to exit.
+      232:                log('Zorin Connect: ignoring modifiers for unicode keyboard event');
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/plugins/sftp.js
+      247:     * Add Zorin Connect's private key identity to the authentication agent so our
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/ui/service.js
+      19:Zorin Connect: ${Config.PACKAGE_VERSION} (${Config.IS_USER ? 'user' : 'system'})
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/service/daemon.js
+      34: * Class representing the Zorin Connect service daemon.
+      381:                logError(e, `Zorin Connect: Opening ${file.get_uri()}`);
+      657:        let appName = 'Zorin Connect CLI';
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/extension.js
+      127:            logError(e, 'Zorin Connect');
+      175:            logError(e, 'Zorin Connect');
+      217:            logError(e, 'Zorin Connect');
+-- /usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/zorin-connect-preferences
+      26: * Class representing the Zorin Connect service daemon.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/utils.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/appsbackend.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/menu.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/searchProviderEmitter.js
+      7: * when called. Allows Zorin Menu to use custom search providers from extensions that use these methods.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/appGridLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/layouts.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/shortcutsLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/baseLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/standardLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/appListLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/layouts/mintLayout.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/keybinder.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+      46:    // Set Main.overview.toggle to toggle Zorin Menu instead
+      91:            //If signal ID found, block it and connect new 'overlay-key' to toggle Zorin Menu.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/extension.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+      152:                console.log(`Zorin Menu Error: panel ${i} not found. Skipping...`);
+      284:        // Add Zorin Menu as a valid option for "per window" input source switching.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/stylesheet.css
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/sections.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/widgets/secondaryMenu.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-menu@zorinos.com/widgets/widgets.js
+      2: * Zorin Menu: The official applications menu for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-screen-keyboard-panel-button@zorinos.com/extension.js
+      2: * Zorin Screen Keyboard Panel Button: Show a button to open the Screen
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/transparency.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/panelManager.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/utils.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/appIcons.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/panelPositions.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/windowPreview.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/panel.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/extension.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+      110:    // disable Zorin Dash if present
+      118:        // wait a bit so Zorin Dash can disable itself and restore the showappsbutton
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/panelSettings.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+      266:  /* Commented out as Zorin Taskbar always uses gnome-shell primary monitor
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/panelStyle.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/stylesheet.css
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/proximity.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/overview.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/notificationsMonitor.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/prefs.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/intellihide.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/gnome-shell/extensions/zorin-taskbar@zorinos.com/taskbar.js
+      2: * This file is part of the Zorin Taskbar extension for Zorin OS.
+-- /usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinOrange-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinPurple-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGrey-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBlue-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/HardPoint-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/HardPoint-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/HardPoint-Light/index.theme
+      4:Comment=HardPoint OS light theme (Byte style), based on Zorin OS themes (GPL-2)
+-- /usr/share/themes/HardPoint-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/HardPoint-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/HardPoint-Dark/index.theme
+      4:Comment=HardPoint OS dark theme (Byte style), based on Zorin OS themes (GPL-2)
+-- /usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGreen-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBlue-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBrown-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinOrange-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGreen-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGreen-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinYellow-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinYellow-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBrown-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinBrown-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGrey-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinGrey-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinRed-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinRed-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinPurple-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinPurple-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinYellow-Dark/gtk-3.0/gtk.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinYellow-Dark/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinRed-Light/gtk-3.0/gtk.css
+      2222:/******************** Zorin Appearance * */
+      2300:/******************* Zorin Menu Lite * */
+-- /usr/share/themes/ZorinRed-Light/gtk-3.0/gtk-dark.css
+      2220:/******************** Zorin Appearance * */
+      2298:/******************* Zorin Menu Lite * */
+-- /usr/share/ubiquity-slideshow/slides.zorin/welcome.html
+      1:<div class="header"><h1 class="slidetitle">Zorin OS 18</h1></div>
+-- /usr/share/nautilus-python/extensions/nautilus-zorin-connect.py
+      6:nautilus-zorin-connect.py - A Nautilus extension for sending files via Zorin Connect.
+      50:    print("Zorin Connect: {0}".format(str(e)))
+      58:    """A context menu for sending files via Zorin Connect."""
+-- /usr/share/boot-sav/gui-actions-grub.sh
+      262:		if ( [[ "$(echo "$LSBRELIS" | grep -i Mint )" ]] || [[ "$(echo "$LSBRELIS" | grep -i Zorin )" ]] && [[ "$EFIBMGRAFT" =~ buntu ]] ) \
+      561:					if ( [[ "${OSNAME[$REGRUB_PART]}" =~ buntu ]] || [[ "${OSNAME[$REGRUB_PART]}" =~ int ]] || [[ "${OSNAME[$REGRUB_PART]}" =~ Zorin ]] && [[ "$z" =~ buntu
+-- /usr/share/metainfo/com.zorin.desktop.upgrader.appdata.xml
+      6:  <project_group>Zorin OS</project_group>
+      8:  <name>Upgrade Zorin OS</name>
+      9:  <name xml:lang="zh_TW">升級 Zorin OS</name>
+-- /usr/lib/python3/dist-packages/zorin_appearance/gshellwrapper.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/utils.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/xfconf.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/desktop.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/__main__.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/listbox.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/30-zorin-touch-shell.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/10-windows-icons-shell.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/20-windows-list-shell.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/40-gnome-shell.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/layout.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/Layouts/__init__.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/fonts.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/theme.py
+      1:# This file is part of the Zorin Appearance program.
+      307:            print("Failed to enable Zorin Auto Theme")
+      320:        variant = "Zorin" + color
+-- /usr/lib/python3/dist-packages/zorin_appearance/widgets.py
+      1:# This file is part of the Zorin Appearance program.
+      1551:    if 'Zorin' in all_themes:
+      1552:        all_themes.remove('Zorin')
+-- /usr/lib/python3/dist-packages/zorin_appearance/effects.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/interface.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/layout.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/__init__.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/environment.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/zorin_appearance/windows.py
+      1:# This file is part of the Zorin Appearance program.
+-- /usr/lib/python3/dist-packages/UpdateManager/UpdatesAvailable.py
+      1149:            if group.name == "Ubuntu base" or group.name == "Zorin OS base":
+-- /usr/lib/python3/dist-packages/UpdateManager/Dialogs.py
+      263:                "\nThere will not be any further Zorin OS releases "
+      265:                "Updates for Zorin OS %s will continue until 2023-04-26.\n\n"
+      288:     * Unofficial software packages not provided by Zorin OS
+-- /usr/lib/python3/dist-packages/UpdateManager/Core/utils.py
+      450:    return 'Zorin OS'
+-- /usr/lib/python3/dist-packages/UpdateManager/Core/MetaRelease.py
+      160:                # not compatible with Zorin OS
+-- /usr/lib/python3/dist-packages/zorin_exec_guard/__init__.py
+      1:# This file is part of the Zorin Exec Guard program.
+-- /usr/lib/python3/dist-packages/zorin_exec_guard/exec_guard.py
+      1:# This file is part of the Zorin Exec Guard program.
+-- /usr/lib/python3/dist-packages/zorin_connect/gshellwrapper.py
+      1:# This file is part of the Zorin Connect program.
+-- /usr/lib/python3/dist-packages/zorin_connect/__main__.py
+      1:# This file is part of the Zorin Connect program.
+      33:# Check if Zorin Connect schema is installed
+-- /usr/lib/python3/dist-packages/zorin_connect/__init__.py
+      1:# This file is part of the Zorin Connect program.
+-- /usr/lib/python3/dist-packages/zorin_connect/environment.py
+      1:# This file is part of the Zorin Connect program.
+-- /usr/bin/do-release-upgrade
+      133:  # Never check for new Ubuntu releases in Zorin OS
+-- /usr/bin/hardpoint-app
+      370:                if not Path("/usr/share/themes", want).is_dir():  # older system: keep Zorin's family
+-- /usr/bin/zorin-exec-guard-linux
+      3:# This file is part of the Zorin Exec Guard program.
+-- /usr/bin/zorin-exec-guard-windows
+      3:# This file is part of the Zorin Exec Guard program.
+== 6. Binary files containing 'Zorin' text (resources, libraries)
+/usr/share/gnome-shell/extensions/zorin-connect@zorinos.com/org.gnome.Shell.Extensions.ZorinConnect.gresource
+/usr/lib/gnome-shell/libshell-14.so
+== 7. Help pages / docs (not changed; listed for reference)
+== 8. System identity
+      PRETTY_NAME="HardPoint OS 18 (Zorin Edition)"
+      NAME="HardPoint OS"
+      ID=hardpoint
+      lsb: DISTRIB_DESCRIPTION="HardPoint OS 18"
+      issue: HardPoint OS 18 \n \l
+      plymouth: Theme=hardpoint
+      apt sources mentioning zorin (needed for Zorin updates): /etc/apt/sources.list.d/zorinos-ubuntu-stable-noble.sources /etc/apt/sources.list.d/zorinos-ubuntu-apps-noble.sources /etc/apt/sources.list.d/zorinos-ubuntu-patches-noble.sources /etc/apt/sources.list.d/zorin.list /etc/apt/sources.list.d/zorinos-ubuntu-drivers-noble.sources 
+===== END BRANDING AUDIT =====
+Run: https://github.com/Shanes-usernam3/Hardpoint-OS-Ubuntu/actions/runs/38470280237 (commit f32894d3ea51a421bbf85899a3a31311a33766e7)
