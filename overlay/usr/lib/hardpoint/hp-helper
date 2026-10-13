@@ -7,9 +7,15 @@
 #   entra-disable
 #   lockdown on|off
 #   usb-allow <device-number>
-#   flatpak-install <app-id>...          (only ids from /usr/share/hardpoint/flatpaks.list)
+#   flatpak-install <app-id>...          (only ids from /usr/share/hardpoint/flatpaks.list;
+#                                         Flatpak, apt:, web: and extra: entries)
 #   apt-refresh
 #   apply-updates [apt:<pkg>] [flatpak:<ref>] [fw:<device-id>]...   (snapshot first)
+#   battery on|off                       charge limit (stop at 80%)
+#   windows-drive on|off                 show the Windows SSD in Files, read-only
+#   repair                               "Fix my PC"
+#   disk-health                          SMART / NVMe health of every disk
+#   touchpad-fix                         re-run the touchpad check
 set -uo pipefail
 export DEBIAN_FRONTEND=noninteractive LC_ALL=C.UTF-8 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
@@ -144,25 +150,259 @@ usb_allow() {
 }
 
 # ------------------------------------------------------------------ apps
+# Microsoft Edge web apps (own window, own launcher)
+declare -A WEBAPP_NAME=([teams]="Microsoft Teams" [outlook]="Outlook")
+declare -A WEBAPP_URL=([teams]="https://teams.microsoft.com/" [outlook]="https://outlook.office.com/mail/")
+declare -A WEBAPP_ICON=([teams]="internet-chat" [outlook]="internet-mail")
+WEBAPP_DIR=/usr/local/share/applications
+
+gh_latest_asset() {  # <owner/repo> <regex> -> prints download URL of the newest matching release asset
+    curl -fsSL --retry 3 "https://api.github.com/repos/$1/releases/latest" |
+        python3 -c 'import json,re,sys; d=json.load(sys.stdin); r=re.compile(sys.argv[1])
+for a in d.get("assets",[]):
+    if r.fullmatch(a["name"]): print(a["browser_download_url"]); break' "$2"
+}
+
+install_web() {
+    local n="$1"
+    [[ -n ${WEBAPP_URL[$n]:-} ]] || return 1
+    command -v microsoft-edge-stable >/dev/null || { say "Microsoft Edge is needed for web apps"; return 1; }
+    mkdir -p "$WEBAPP_DIR"
+    cat > "$WEBAPP_DIR/hp-web-$n.desktop" <<EOF
+[Desktop Entry]
+Type=Application
+Name=${WEBAPP_NAME[$n]}
+Comment=${WEBAPP_NAME[$n]} web app (Microsoft Edge)
+Exec=microsoft-edge-stable --app=${WEBAPP_URL[$n]} --class=hp-web-$n
+Icon=${WEBAPP_ICON[$n]}
+StartupWMClass=hp-web-$n
+Categories=Network;Office;
+EOF
+    update-desktop-database -q "$WEBAPP_DIR" 2>/dev/null || true
+}
+
+install_ventoy() {
+    local url tmp sums
+    url="$(gh_latest_asset ventoy/Ventoy 'ventoy-[0-9.]+-linux\.tar\.gz')" || true
+    [[ -n $url ]] || { say "Could not find the latest Ventoy release"; return 1; }
+    tmp="$(mktemp -d)"
+    curl -fsSL --retry 3 -o "$tmp/v.tar.gz" "$url" || return 1
+    sums="$(gh_latest_asset ventoy/Ventoy 'sha256\.txt')" || true
+    if [[ -n $sums ]] && curl -fsSL -o "$tmp/sha256.txt" "$sums"; then
+        local want; want="$(grep -F "$(basename "$url")" "$tmp/sha256.txt" | awk '{print $1}')"
+        [[ -n $want && $(sha256sum "$tmp/v.tar.gz" | awk '{print $1}') == "$want" ]] ||
+            { say "Ventoy download failed its checksum — not installed"; rm -rf "$tmp"; return 1; }
+    fi
+    rm -rf /opt/ventoy && mkdir -p /opt/ventoy
+    tar -xzf "$tmp/v.tar.gz" -C /opt/ventoy --strip-components=1
+    rm -rf "$tmp"
+    local icon=drive-removable-media
+    [[ -f /opt/ventoy/WebUI/static/img/VentoyLogo.png ]] && icon=/opt/ventoy/WebUI/static/img/VentoyLogo.png
+    mkdir -p "$WEBAPP_DIR"
+    cat > "$WEBAPP_DIR/hp-ventoy.desktop" <<EOF
+[Desktop Entry]
+Type=Application
+Name=Ventoy
+Comment=Make multi-boot USB sticks
+Exec=/opt/ventoy/VentoyGUI.x86_64
+Icon=$icon
+Categories=System;Utility;
+EOF
+}
+
+install_angryip() {
+    local url tmp
+    url="$(gh_latest_asset angryip/ipscan 'ipscan_[0-9.]+_amd64\.deb')" || true
+    [[ -n $url ]] || { say "Could not find the latest Angry IP Scanner release"; return 1; }
+    tmp="$(mktemp -d)"; chmod 755 "$tmp"
+    curl -fsSL --retry 3 -o "$tmp/ipscan.deb" "$url" && apt-get install -y -q "$tmp/ipscan.deb" | tail -n 2
+    local rc=${PIPESTATUS[0]}; rm -rf "$tmp"; return "$rc"
+}
+
+install_netlify() {
+    # Netlify CLI needs a newer Node.js than Ubuntu 24.04 ships; give it its own (Node 22 LTS)
+    local base=https://nodejs.org/dist/latest-v22.x tmp name
+    tmp="$(mktemp -d)"
+    curl -fsSL --retry 3 -o "$tmp/SHASUMS256.txt" "$base/SHASUMS256.txt" || { rm -rf "$tmp"; return 1; }
+    name="$(grep -oE 'node-v[0-9.]+-linux-x64\.tar\.xz' "$tmp/SHASUMS256.txt" | head -1)"
+    [[ -n $name ]] || { rm -rf "$tmp"; return 1; }
+    curl -fsSL --retry 3 -o "$tmp/$name" "$base/$name" || { rm -rf "$tmp"; return 1; }
+    (cd "$tmp" && grep -F " $name" SHASUMS256.txt | sha256sum -c --quiet) || { say "Node.js checksum failed"; rm -rf "$tmp"; return 1; }
+    rm -rf /opt/hardpoint/node && mkdir -p /opt/hardpoint/node
+    tar -xJf "$tmp/$name" -C /opt/hardpoint/node --strip-components=1
+    rm -rf "$tmp"
+    say "Installing Netlify CLI…"
+    PATH=/opt/hardpoint/node/bin:$PATH npm install -g --no-fund --no-audit --loglevel=error netlify-cli 2>&1 | tail -n 3
+    [[ -x /opt/hardpoint/node/bin/netlify ]] || return 1
+    cat > /usr/local/bin/netlify <<'EOF'
+#!/bin/sh
+# Netlify CLI with its own Node.js (installed by HardPoint Setup)
+PATH=/opt/hardpoint/node/bin:$PATH exec /opt/hardpoint/node/bin/netlify "$@"
+EOF
+    chmod 755 /usr/local/bin/netlify
+    ln -sf netlify /usr/local/bin/ntl
+}
+
+post_install() {  # extra setup some apps need
+    case "$1" in
+        dev.lizardbyte.app.Sunshine)
+            # virtual mouse/keyboard/controller for the streamed session
+            echo uinput > /etc/modules-load.d/hardpoint-sunshine.conf; modprobe uinput 2>/dev/null || true
+            echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' \
+                > /etc/udev/rules.d/60-hardpoint-sunshine.rules
+            udevadm control --reload-rules 2>/dev/null; udevadm trigger --name-match=uinput 2>/dev/null || true
+            # streaming ports, home/private networks only
+            if command -v ufw >/dev/null; then
+                local net
+                for net in 192.168.0.0/16 10.0.0.0/8 172.16.0.0/12; do
+                    ufw allow from "$net" to any port 47984,47989,47990,48010 proto tcp comment 'Sunshine' >/dev/null
+                    ufw allow from "$net" to any port 47998:48000 proto udp comment 'Sunshine' >/dev/null
+                done
+                say "Sunshine: streaming ports opened for home/private networks only."
+            fi ;;
+        apt:gpaste-2,*) say "Clipboard history: sign out and back in, then press Super+V." ;;
+    esac
+}
+
+app_installed() {
+    local id="$1" p
+    case "$id" in
+        apt:*)   local list="${id#apt:}"; for p in ${list//,/ }; do dpkg-query -W -f='${Status}' "$p" 2>/dev/null | grep -q 'ok installed' || return 1; done ;;
+        web:*)   [[ -f $WEBAPP_DIR/hp-web-${id#web:}.desktop ]] ;;
+        extra:ventoy)  [[ -x /opt/ventoy/VentoyGUI.x86_64 ]] ;;
+        extra:angryip) dpkg-query -W -f='${Status}' ipscan 2>/dev/null | grep -q 'ok installed' ;;
+        extra:netlify) [[ -x /usr/local/bin/netlify ]] ;;
+        *)       flatpak info --system "$id" >/dev/null 2>&1 ;;
+    esac
+}
+
 flatpak_install() {
     (($#)) || die "no apps given"
     local id ids=()
     for id in "$@"; do
-        [[ $id =~ ^[A-Za-z0-9._-]+$ ]] || die "bad app id '$id'"
+        [[ $id =~ ^(apt:[a-z0-9.+,-]+|web:[a-z]+|extra:[a-z]+|[A-Za-z0-9._-]+)$ ]] || die "bad app id '$id'"
         cut -d'|' -f2 "$CATALOG" | grep -qxF "$id" || die "'$id' is not in the HardPoint app catalog"
         ids+=("$id")
     done
-    flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    say "Installing ${#ids[@]} app(s) from Flathub — this can take a while."
-    local n=0 failed=()
+    local needs_flathub=0 apt_updated=0
+    for id in "${ids[@]}"; do [[ $id == *:* ]] || needs_flathub=1; done
+    ((needs_flathub)) && flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    say "Installing ${#ids[@]} app(s) — this can take a while."
+    local n=0 failed=() name
     for id in "${ids[@]}"; do
         n=$((n + 1))
-        say "[$n/${#ids[@]}] $id"
-        flatpak install --system --noninteractive -y flathub "$id" 2>&1 | grep -vE '^\s*$' | tail -n 3 || true
-        flatpak info --system "$id" >/dev/null 2>&1 || failed+=("$id")
+        name="$(awk -F'|' -v i="$id" '$2==i {print $3; exit}' "$CATALOG")"
+        say "[$n/${#ids[@]}] ${name:-$id}"
+        case "$id" in
+            apt:*)
+                ((apt_updated)) || { apt-get update -q >/dev/null 2>&1; apt_updated=1; }
+                local pkgs="${id#apt:}"
+                # shellcheck disable=SC2086
+                apt-get install -y -q ${pkgs//,/ } 2>&1 | tail -n 2 ;;
+            web:*)   install_web "${id#web:}" ;;
+            extra:ventoy)  install_ventoy ;;
+            extra:angryip) install_angryip ;;
+            extra:netlify) install_netlify ;;
+            *) flatpak install --system --noninteractive -y flathub "$id" 2>&1 | grep -vE '^\s*$' | tail -n 3 || true ;;
+        esac
+        if app_installed "$id"; then post_install "$id"; else failed+=("${name:-$id}"); fi
     done
     if ((${#failed[@]})); then say "Could not install: ${failed[*]}"; exit 1; fi
     say "All apps installed."
+}
+
+# ------------------------------------------------------------------ laptop & system
+BATT_CONF=/etc/hardpoint/battery-limit
+
+battery() {
+    case "${1:-}" in
+        on)  mkdir -p /etc/hardpoint; echo 80 > "$BATT_CONF" ;;
+        off) rm -f "$BATT_CONF" ;;
+        *) die "battery on|off" ;;
+    esac
+    /usr/lib/hardpoint/hp-battery apply
+}
+
+WIN_MNT=/mnt/Windows
+windows_drive() {
+    case "${1:-}" in
+        on)
+            command -v ntfs-3g >/dev/null || apt-get install -y -q ntfs-3g >/dev/null 2>&1
+            local dev found="" probe; probe="$(mktemp -d)"
+            while read -r dev fs; do
+                if [[ $fs == BitLocker ]]; then
+                    say "Found a BitLocker-encrypted drive ($dev). It can't be opened here without its recovery key — turn off BitLocker in Windows, or use the recovery key."
+                    continue
+                fi
+                [[ $fs == ntfs ]] || continue
+                mount -t ntfs-3g -o ro "$dev" "$probe" 2>/dev/null || continue
+                [[ -d $probe/Windows/System32 ]] && found="$dev"
+                umount "$probe" 2>/dev/null
+                [[ -n $found ]] && break
+            done < <(lsblk -rpno PATH,FSTYPE,TYPE | awk '$3=="part" {print $1, $2}')
+            rmdir "$probe" 2>/dev/null
+            [[ -n $found ]] || die "no Windows drive found (if Windows uses BitLocker, see the message above)"
+            local uuid; uuid="$(blkid -s UUID -o value "$found")"
+            [[ -n $uuid ]] || die "could not read the drive ID of $found"
+            sed -i '/# hardpoint-windows-drive$/d' /etc/fstab
+            echo "UUID=$uuid $WIN_MNT ntfs-3g ro,nofail,x-systemd.automount,x-systemd.idle-timeout=10min,x-gvfs-show,x-gvfs-name=Windows,umask=022 0 0 # hardpoint-windows-drive" >> /etc/fstab
+            mkdir -p "$WIN_MNT"
+            systemctl daemon-reload
+            systemctl restart local-fs.target 2>/dev/null || true
+            say "Windows ($found) now shows in Files as \"Windows\" (read-only, so nothing can damage it)."
+            say "Tip: if it shows empty, turn off Fast Startup in Windows (Control Panel → Power Options)." ;;
+        off)
+            umount "$WIN_MNT" 2>/dev/null || true
+            sed -i '/# hardpoint-windows-drive$/d' /etc/fstab
+            systemctl daemon-reload
+            rmdir "$WIN_MNT" 2>/dev/null || true
+            say "The Windows drive is hidden again." ;;
+        *) die "windows-drive on|off" ;;
+    esac
+}
+
+disk_health() {
+    command -v smartctl >/dev/null || { say "smartmontools is not installed"; return 1; }
+    local d model out health wear temp
+    while read -r d model; do
+        out="$(smartctl -H -A "$d" 2>/dev/null)"
+        health="$(grep -oE 'test result: \S+|SMART Health Status: \S+' <<<"$out" | awk '{print $NF}' | head -1)"
+        wear="$(awk -F: '/Percentage Used/ {gsub(/ /,"",$2); print $2}' <<<"$out")"
+        [[ -z $wear ]] && wear="$(awk '/Wear_Leveling_Count|Media_Wearout_Indicator/ {print 100-$4 "%"; exit}' <<<"$out")"
+        temp="$(awk -F: '/^Temperature:/ {gsub(/ /,"",$2); print $2; exit}' <<<"$out")"
+        [[ -z $temp ]] && temp="$(awk '/Temperature_Celsius/ {print $10 "C"; exit}' <<<"$out")"
+        say "DISK|$d|${model:-disk}|${health:-unknown}|${wear:-}|${temp:-}"
+    done < <(lsblk -dnpo PATH,TYPE,MODEL | awk '$2=="disk" && $1 !~ /zram|loop/ {p=$1; $1=$2=""; sub(/^ +/,""); print p, $0}')
+}
+
+repair() {
+    say "== Taking a safety snapshot"
+    /usr/lib/hardpoint/hp-snapshot create "HardPoint: before Fix my PC" || say "(snapshot skipped)"
+    say "== Finishing interrupted installs"
+    dpkg --configure -a 2>&1 | tail -n 3
+    say "== Fixing broken packages"
+    apt-get update -q 2>&1 | tail -n 1
+    apt-get -f install -y -q 2>&1 | tail -n 2
+    say "== Re-applying HardPoint settings"
+    dpkg-reconfigure -fnoninteractive hardpoint-os 2>&1 | tail -n 2 || say "(could not re-apply)"
+    say "== Repairing Flatpak apps"
+    flatpak repair --system 2>&1 | tail -n 1
+    flatpak uninstall --system --unused -y --noninteractive 2>&1 | tail -n 1
+    say "== Freeing space"
+    apt-get clean
+    journalctl --vacuum-size=300M 2>&1 | tail -n 1
+    say "== Background services"
+    local failed; failed="$(systemctl --failed --no-legend --plain | awk '{print $1}')"
+    if [[ -n $failed ]]; then
+        say "Not running: $(tr '\n' ' ' <<<"$failed")"
+        systemctl reset-failed
+    else
+        say "All services OK"
+    fi
+    say "== Disks"
+    disk_health
+    df -h / /home 2>/dev/null | awk 'NR>1 {print "Free space on " $6 ": " $4 " of " $2}' | sort -u
+    say "Fix my PC finished."
 }
 
 # ------------------------------------------------------------------ updates
@@ -206,5 +446,10 @@ case "$action" in
     flatpak-install) flatpak_install "$@" ;;
     apt-refresh)     apt_refresh ;;
     apply-updates)   apply_updates "$@" ;;
+    battery)         battery "$@" ;;
+    windows-drive)   windows_drive "$@" ;;
+    repair)          repair ;;
+    disk-health)     disk_health ;;
+    touchpad-fix)    /usr/lib/hardpoint/hp-touchpad-fix ;;
     *) die "unknown action '$action'" ;;
 esac

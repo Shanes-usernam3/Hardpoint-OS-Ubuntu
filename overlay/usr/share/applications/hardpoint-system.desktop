@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=HardPoint System
+Comment=PC info, battery and disk health, hardware check, Fix my PC
+Exec=hardpoint-app system
+Icon=hardpoint
+Categories=Settings;System;
+Keywords=system;info;serial;warranty;battery;disk;health;repair;fix;windows;drivers;
+StartupNotify=true

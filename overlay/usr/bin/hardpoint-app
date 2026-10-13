@@ -7,7 +7,7 @@ fixed list of commands; anything that needs admin rights goes through
 pkexec + /usr/lib/hardpoint/hp-helper (which re-checks every argument).
 
     hardpoint-app setup [--first-run]
-    hardpoint-app updates | accounts | security
+    hardpoint-app updates | accounts | security | system
 """
 import json
 import os
@@ -37,9 +37,11 @@ VIEWS = {
     "updates": ("HardPoint Updates", 1000, 680),
     "accounts": ("HardPoint Accounts", 1000, 680),
     "security": ("HardPoint Security", 1000, 680),
+    "system": ("HardPoint System", 1000, 700),
 }
 ROOT_ACTIONS = {"entra-enable", "entra-disable", "lockdown", "usb-allow", "flatpak-install",
-                "apt-refresh", "apply-updates"}
+                "apt-refresh", "apply-updates", "battery", "windows-drive", "repair", "disk-health",
+                "touchpad-fix"}
 OPENERS = {
     "company-portal": ["intune-portal"],
     "software": ["gnome-software"],
@@ -51,9 +53,14 @@ OPENERS = {
     "updates": ["hardpoint-app", "updates"],
     "accounts": ["hardpoint-app", "accounts"],
     "security": ["hardpoint-app", "security"],
+    "system": ["hardpoint-app", "system"],
+    "files-windows": ["xdg-open", "/mnt/Windows"],
+    "sound": ["gnome-control-center", "sound"],
+    "wifi": ["gnome-control-center", "wifi"],
+    "fingerprint": ["gnome-control-center", "users"],
 }
 URLS = re.compile(r"^https://(entra\.microsoft\.com|intune\.microsoft\.com|portal\.manage\.microsoft\.com|"
-                  r"github\.com/Shanes-usernam3|learn\.microsoft\.com|www\.xbox\.com)(/[\w\-./?=&#%]*)?$")
+                  r"github\.com/Shanes-usernam3|learn\.microsoft\.com|www\.xbox\.com|pcsupport\.lenovo\.com)(/[\w\-./?=&#%]*)?$")
 
 
 def sh(*cmd, timeout=20):
@@ -75,6 +82,127 @@ def read_catalog():
                 apps.append({"category": parts[0], "id": parts[1], "name": parts[2],
                              "default": parts[3] == "1", "description": parts[4]})
     return apps
+
+
+WEBAPP_DIR = Path("/usr/local/share/applications")
+
+
+def installed_apps(catalog):
+    """Catalog ids that are installed: Flatpak, apt:, web: and extra: entries."""
+    rc, out = sh("flatpak", "list", "--app", "--columns=application")
+    have = set(out.split()) if rc == 0 else set()
+    apt_ids = [a["id"] for a in catalog if a["id"].startswith("apt:")]
+    pkgs = sorted({p for i in apt_ids for p in i[4:].split(",")} | {"ipscan"})
+    rc, out = sh("dpkg-query", "-W", "-f=${Package} ${db:Status-Status}\n", *pkgs)
+    ok = {ln.split()[0] for ln in out.splitlines() if ln.endswith(" installed")}
+    for i in apt_ids:
+        if all(p in ok for p in i[4:].split(",")):
+            have.add(i)
+    for a in catalog:
+        i = a["id"]
+        if i.startswith("web:") and (WEBAPP_DIR / f"hp-web-{i[4:]}.desktop").exists():
+            have.add(i)
+    if Path("/opt/ventoy/VentoyGUI.x86_64").exists():
+        have.add("extra:ventoy")
+    if "ipscan" in ok:
+        have.add("extra:angryip")
+    if Path("/usr/local/bin/netlify").exists():
+        have.add("extra:netlify")
+    return sorted(have)
+
+
+def rd(path, default=""):
+    try:
+        return Path(path).read_text().strip()
+    except OSError:
+        return default
+
+
+def battery_info():
+    for b in sorted(Path("/sys/class/power_supply").glob("BAT*")):
+        def num(*names):
+            for n in names:
+                v = rd(b / n)
+                if v.isdigit():
+                    return int(v)
+            return 0
+        full, design = num("energy_full", "charge_full"), num("energy_full_design", "charge_full_design")
+        return {"present": True, "percent": num("capacity"), "status": rd(b / "status"),
+                "health": round(100 * full / design) if full and design else None,
+                "cycles": num("cycle_count") or None, "model": rd(b / "model_name"),
+                "manufacturer": rd(b / "manufacturer")}
+    return {"present": False}
+
+
+def hardware_checks():
+    """Quick check that the laptop's main parts have working drivers."""
+    checks = []
+    def add(key, name, ok, detail, fix=""):
+        checks.append({"key": key, "name": name, "ok": ok, "detail": detail, "fix": fix})
+    inputs = rd("/proc/bus/input/devices")
+    i2c_touchpad_hw = any("PNP0C50" in rd(p / "firmware_node" / "hid") or "ACPI0C50" in rd(p / "firmware_node" / "hid")
+                          for p in Path("/sys/bus/i2c/devices").glob("*"))
+    tp = re.search(r"^N: Name=.*(touchpad|synaptics|elan|SYNA|ELAN)", inputs, re.I | re.M)
+    if tp or i2c_touchpad_hw:
+        add("touchpad", "Touchpad", bool(tp), "Working" if tp else "Not detected", "" if tp else "touchpad-fix")
+    wifi = [p.parent.name for p in Path("/sys/class/net").glob("*/wireless")]
+    add("wifi", "Wi-Fi", bool(wifi), f"Adapter {wifi[0]} ready" if wifi else "No Wi-Fi adapter found", "" if wifi else "wifi")
+    cards = rd("/proc/asound/cards")
+    snd = bool(cards) and "no soundcards" not in cards
+    add("audio", "Sound", snd, "Sound card found" if snd else "No sound card found", "" if snd else "sound")
+    drv = ""
+    for c in Path("/sys/class/drm").glob("card[0-9]"):
+        try:
+            drv = os.path.basename(os.readlink(c / "device" / "driver"))
+            break
+        except OSError:
+            pass
+    accel = Path("/dev/dri/renderD128").exists()
+    add("graphics", "Graphics", accel, f"Hardware acceleration on ({drv or 'GPU'})" if accel else "Using software drawing (slow)")
+    bt = any(Path("/sys/class/bluetooth").glob("hci*"))
+    add("bluetooth", "Bluetooth", bt, "Ready" if bt else "Not found or switched off")
+    cam = any(Path("/dev").glob("video*"))
+    add("camera", "Camera", cam, "Found" if cam else "Not found (check the privacy shutter / F-key)")
+    rc, out = sh("fprintd-list", os.environ.get("USER", "root"), timeout=8)
+    if "No devices available" not in out and rc != 127:
+        enrolled = "Fingerprints for user" in out
+        add("fingerprint", "Fingerprint reader", True,
+            "Ready — finger enrolled" if enrolled else "Found — add a finger in Settings → Users",
+            "" if enrolled else "fingerprint")
+    return checks
+
+
+def system_info():
+    dmi = Path("/sys/class/dmi/id")
+    vendor, product, version = rd(dmi / "sys_vendor"), rd(dmi / "product_name"), rd(dmi / "product_version")
+    # Lenovo puts the marketing name in product_version and the machine type in product_name
+    model = version if vendor.upper().startswith("LENOVO") and version else product
+    cpu = re.search(r"^model name\s*:\s*(.+)$", rd("/proc/cpuinfo"), re.M)
+    mem = re.search(r"^MemTotal:\s*(\d+)", rd("/proc/meminfo"), re.M)
+    rc, gpu = sh("bash", "-c", "lspci -mm | awk -F'\"' '/VGA|3D|Display/ {print $4\" \"$6; exit}'")
+    rc, disks = sh("lsblk", "-dJbo", "NAME,MODEL,SIZE,TYPE,TRAN")
+    try:
+        dl = [d for d in json.loads(disks)["blockdevices"] if d["type"] == "disk" and int(d.get("size") or 0) > 0 and not d["name"].startswith(("zram", "loop"))]
+    except (ValueError, KeyError):
+        dl = []
+    rc, batt_state = sh("/usr/lib/hardpoint/hp-battery", "status")
+    how, _, on = batt_state.partition(" ")
+    fst = rd("/etc/fstab")
+    up = float(rd("/proc/uptime", "0").split()[0] or 0)
+    return {
+        "vendor": vendor.title() if vendor.isupper() else vendor, "model": model, "machineType": product,
+        "serial": rd("/var/lib/hardpoint/serial"), "bios": f"{rd(dmi / 'bios_version')} ({rd(dmi / 'bios_date')})",
+        "cpu": re.sub(r"\s+", " ", cpu.group(1)) if cpu else "", "ramGB": round(int(mem.group(1)) / 1048576) if mem else 0,
+        "gpu": re.sub(r" (Corporation|Corp\.|Inc\.|\[AMD/ATI\])", "", gpu), "os": os_info().get("PRETTY_NAME", ""), "kernel": os.uname().release,
+        "uptimeH": round(up / 3600, 1),
+        "disks": [{"name": d["name"], "model": (d.get("model") or "").strip(), "sizeGB": round(int(d["size"]) / 1e9),
+                   "tran": d.get("tran") or ""} for d in dl],
+        "battery": battery_info(),
+        "chargeLimit": {"supported": how not in ("", "none"), "on": on == "on", "method": how},
+        "windowsDrive": "# hardpoint-windows-drive" in fst,
+        "focus": sh("/usr/lib/hardpoint/hp-focus", "status")[1] == "on",
+        "checks": hardware_checks(),
+    }
 
 
 def os_info():
@@ -129,8 +257,8 @@ def security_state():
 
 
 def state():
-    rc, installed = sh("flatpak", "list", "--app", "--columns=application")
     osr = os_info()
+    catalog = read_catalog()
     pw = Path("/etc/passwd")
     user = os.environ.get("USER") or os.getlogin()
     real = user
@@ -146,8 +274,8 @@ def state():
         "os": osr.get("PRETTY_NAME", "HardPoint OS"),
         "live": "boot=casper" in Path("/proc/cmdline").read_text(),
         "setupDone": SETUP_DONE.exists(),
-        "catalog": read_catalog(),
-        "installedApps": installed.split() if rc == 0 else [],
+        "catalog": catalog,
+        "installedApps": installed_apps(catalog),
         "entra": entra_state(),
         "security": security_state(),
         "updateTimer": sh("systemctl", "--user", "is-enabled", "hardpoint-update-check.timer")[1] == "enabled",
@@ -249,6 +377,15 @@ class App(Gtk.Window):
                 verb = "enable" if args[0] == "on" else "disable"
                 rc, _ = sh("systemctl", "--user", verb, "--now", "hardpoint-update-check.timer")
                 self.reply(rid, rc == 0, args[0])
+            elif cmd == "sysinfo":
+                threading.Thread(target=lambda: GLib.idle_add(self.reply, rid, True, system_info()), daemon=True).start()
+            elif cmd == "focus" and args and args[0] in ("on", "off"):
+                rc, _ = sh("/usr/lib/hardpoint/hp-focus", args[0])
+                self.reply(rid, rc == 0, args[0])
+            elif cmd == "copy" and args and len(args[0]) < 200:
+                from gi.repository import Gdk
+                Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD).set_text(args[0], -1)
+                self.reply(rid, True, "")
             elif cmd == "setup-done":
                 CONF_DIR.mkdir(parents=True, exist_ok=True)
                 SETUP_DONE.write_text("done\n")

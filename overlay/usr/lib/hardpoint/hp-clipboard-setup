@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Clipboard history (GPaste), once per user at sign-in: switch on the panel
+# extension and make Super+V open the history, like Windows.
+set -uo pipefail
+mark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/clipboard-setup"
+[[ -f $mark ]] && exit 0
+command -v gpaste-client >/dev/null || exit 0
+gnome-extensions enable GPaste@gnome-shell-extensions.gnome.org 2>/dev/null || exit 0
+gsettings set org.gnome.GPaste show-history '<Super>v' 2>/dev/null
+# Super+V used to open the notification list; Super+M still does
+gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']" 2>/dev/null
+mkdir -p "$(dirname "$mark")" && date '+%F' > "$mark"

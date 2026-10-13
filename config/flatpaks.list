@@ -1,5 +1,23 @@
-# Apps HardPoint Setup offers to install from Flathub.
-# category|flatpak id|display name|ticked by default (1/0)|description
+# Apps HardPoint Setup offers to install (optional picks).
+# category|id|display name|ticked by default (1/0)|description
+#
+# id kinds:
+#   org.example.App          Flatpak from Flathub
+#   apt:pkg[,pkg...]         Ubuntu packages
+#   web:teams | web:outlook  Microsoft Edge web app (own window and launcher)
+#   extra:<name>             special installer in hp-helper (ventoy, angryip, netlify)
+#
+# Work & office
+work|apt:libreoffice-writer,libreoffice-calc,libreoffice-impress|LibreOffice|0|Open and edit Word, Excel and PowerPoint files offline
+work|web:teams|Microsoft Teams|0|Teams as its own app window (Edge web app)
+work|web:outlook|Outlook|0|Outlook mail and calendar as its own app window (Edge web app)
+work|com.bitwarden.desktop|Bitwarden|0|Password manager that syncs with your phone
+# Everyday tools
+tools|org.gnome.DejaDup|Backups (Déjà Dup)|0|Scheduled backups of your home folder to an external drive, network folder or cloud
+tools|apt:gpaste-2,gnome-shell-extension-gpaste|Clipboard history|0|Super+V shows everything you've copied (needs a sign-out after install)
+tools|org.flameshot.Flameshot|Flameshot|0|Screenshots with arrows, boxes, blur and text
+tools|org.keepassxc.KeePassXC|KeePassXC|0|Offline password vault (good for client credentials)
+# Gaming & emulators
 gaming|io.github.unknownskl.greenlight|Greenlight (Xbox Cloud Gaming)|1|Play Xbox Cloud Gaming and stream from your Xbox
 gaming|org.libretro.RetroArch|RetroArch|1|All-in-one emulator frontend
 gaming|org.DolphinEmu.dolphin-emu|Dolphin|1|GameCube and Wii
@@ -10,11 +28,31 @@ gaming|net.kuribo64.melonDS|melonDS|1|Nintendo DS
 gaming|info.cemu.Cemu|Cemu|1|Wii U
 gaming|org.duckstation.DuckStation|DuckStation|0|PlayStation 1
 gaming|com.heroicgameslauncher.hgl|Heroic Games Launcher|0|Epic, GOG and Amazon games
+gaming|net.lutris.Lutris|Lutris|0|Battle.net, EA, Ubisoft and other launchers
+gaming|net.davidotek.pupgui2|ProtonUp-Qt|0|Install newer Proton / Wine versions for Steam and Lutris
+gaming|com.discordapp.Discord|Discord|0|Voice and text chat
+gaming|dev.lizardbyte.app.Sunshine|Sunshine|0|Stream games from this PC to your phone or tablet (opens the ports on your home network only)
+gaming|com.moonlight_stream.Moonlight|Moonlight|0|Play games streamed from another PC
+# Development
 dev|com.google.AndroidStudio|Android Studio|1|Android app development
-dev|io.podman_desktop.PodmanDesktop|Podman Desktop|0|Containers with a GUI
+dev|io.github.shiftey.Desktop|GitHub Desktop|0|Git and GitHub with a GUI
+dev|io.dbeaver.DBeaverCommunity|DBeaver|0|Database manager (SQLite, Postgres, MySQL, SQL Server…)
+dev|rest.insomnia.Insomnia|Insomnia|0|API testing
 dev|com.getpostman.Postman|Postman|0|API testing
+dev|io.podman_desktop.PodmanDesktop|Podman Desktop|0|Containers with a GUI
+dev|apt:distrobox|Distrobox|0|Run other Linux distros (Arch, Fedora…) in a container with full desktop integration
+dev|extra:netlify|Netlify CLI|0|Deploy and test Netlify sites from Terminal (brings its own current Node.js)
+# IT & remote support
 it|com.rustdesk.RustDesk|RustDesk|1|Remote support for clients
 it|com.github.tchx84.Flatseal|Flatseal|1|Manage app permissions
+it|extra:ventoy|Ventoy|0|Make multi-boot USB sticks: copy ISO files on, boot any of them
+it|io.gitlab.adhami3310.Impression|Impression|0|Write an ISO or disk image to a USB stick
+it|com.usebottles.bottles|Bottles|0|Run small Windows-only tools
+it|extra:angryip|Angry IP Scanner|0|Fast network scanner: find every device on a network
 it|org.wireshark.Wireshark|Wireshark (Flatpak)|0|Newer Wireshark build
+# Media
 media|org.videolan.VLC|VLC|0|Plays almost any video
 media|com.obsproject.Studio|OBS Studio|0|Recording and streaming
+media|org.kde.kdenlive|Kdenlive|0|Video editor
+media|org.audacityteam.Audacity|Audacity|0|Audio recording and editing
+media|org.gimp.GIMP|GIMP|0|Photo editing

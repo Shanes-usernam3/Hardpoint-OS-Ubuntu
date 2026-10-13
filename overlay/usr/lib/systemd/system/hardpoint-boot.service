@@ -1,0 +1,10 @@
+[Unit]
+Description=HardPoint OS boot tasks (battery charge limit, system info)
+After=sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/hardpoint/hp-boot
+
+[Install]
+WantedBy=multi-user.target
