@@ -81,6 +81,10 @@ mkdir -p /etc/dconf/db/local.d /etc/dconf/db/gdm.d /etc/dconf/profile
     echo
     echo "[org/gnome/desktop/wm/keybindings]"
     echo "activate-window-menu=['<Alt>F3']"
+    echo
+    echo "# Terminal: Ctrl+V pastes like everywhere else (Ctrl+Shift+V still works)"
+    echo "[org/gnome/terminal/legacy/keybindings]"
+    echo "paste='<Primary>v'"
 } > /etc/dconf/db/local.d/00-hardpoint
 {
     echo "[org/gnome/login-screen]"
