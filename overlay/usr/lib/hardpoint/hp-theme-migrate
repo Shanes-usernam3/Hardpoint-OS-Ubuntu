@@ -2,6 +2,17 @@
 # Once per user at sign-in: switch to the HardPoint (Byte) theme and the Papirus icons.
 # Runs again only when HardPoint ships a new look (bump VER); later changes you make yourself stay.
 set -uo pipefail
+
+# Desktop icons (files and app shortcuts on the desktop) on for every account, once;
+# switching it off later in Extensions is respected
+dmark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/desktop-icons"
+if [[ ! -f $dmark ]] && [[ -d /usr/share/gnome-shell/extensions/zorin-desktop-icons@zorinos.com ]]; then
+    gnome-extensions enable zorin-desktop-icons@zorinos.com 2>/dev/null ||
+        gsettings set org.gnome.shell enabled-extensions \
+            "$(python3 -c 'import ast,sys; l=ast.literal_eval(sys.argv[1] if sys.argv[1].startswith("[") else "[]"); u="zorin-desktop-icons@zorinos.com"; l+=[u] if u not in l else []; print(l)' "$(gsettings get org.gnome.shell enabled-extensions | sed "s/^@as //")")"
+    mkdir -p "$(dirname "$dmark")" && date '+%F' > "$dmark"
+fi
+
 VER=byte-theme-1
 mark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/theme"
 [[ $(cat "$mark" 2>/dev/null) == "$VER" ]] && exit 0
