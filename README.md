@@ -48,12 +48,9 @@ Without Himmelblau packages in `extra-pkgs/` the ISO still builds, just without 
 
 ## Official releases
 
-Push a version tag and GitHub builds the ISO, tests it in a VM and publishes it on the
-**Releases** page (only if the test passes):
-
-```sh
-git tag v1.1.0 && git push origin v1.1.0
-```
+**Actions → Build HardPoint OS (Zorin Edition) ISO → Run workflow**, type a version
+(e.g. `1.1.0`) and run. GitHub builds the ISO, tests it in a VM and, if the test passes,
+publishes it on the **Releases** page as `v1.1.0`. (Pushing a `v1.1.0` git tag does the same.)
 
 The ISO is over GitHub's 2 GB file limit, so the release holds it in parts plus
 `get-hardpoint-iso.sh`, which downloads, joins and verifies it in one command
