@@ -120,7 +120,10 @@ jobs:
           path: hp-pkg
 
       - name: Build the ISO
-        run: sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" bash ./build.sh
+        run: |
+          # A version tag (v1.0.0) names the ISO hardpoint-os-zorin-1.0.0-amd64.iso
+          if [[ $GITHUB_REF == refs/tags/v* ]]; then export HP_VERSION="${GITHUB_REF_NAME#v}"; fi
+          sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" HP_VERSION="${HP_VERSION:-}" bash ./build.sh
 
       - name: Save the build report to the build-report branch
         if: always()
@@ -179,3 +182,34 @@ jobs:
           echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} (commit ${{ github.sha }})" >> summary.md
           git add -A && git commit -qm "VM test results for ${{ github.sha }}"
           git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" test-results
+
+  release:
+    name: Publish the release (version tags only)
+    needs: [build, test]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL; df -h /
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: hardpoint-os-zorin-iso
+          path: iso
+
+      - name: Split the ISO and write the notes
+        run: |
+          bash tools/make-release.sh iso/*.iso "$GITHUB_REF_NAME" rel
+          rm -rf iso
+
+      - name: Publish on the Releases page
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete "$GITHUB_REF_NAME" --yes 2>/dev/null || true
+          gh release create "$GITHUB_REF_NAME" --title "HardPoint OS ${GITHUB_REF_NAME#v} (Zorin Edition)" \
+            --notes-file rel/notes.md --latest \
+            rel/get-hardpoint-iso.sh rel/SHA256SUMS.txt rel/SHA256SUMS-parts.txt rel/*.part*
