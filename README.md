@@ -46,6 +46,19 @@ Every push to `main` builds a new ISO with GitHub Actions (about 60–90 minutes
 Local build (Ubuntu 24.04, ~40 GB free): `sudo ./build.sh` → `out/`.
 Without Himmelblau packages in `extra-pkgs/` the ISO still builds, just without work/school sign-in.
 
+## Official releases
+
+Push a version tag and GitHub builds the ISO, tests it in a VM and publishes it on the
+**Releases** page (only if the test passes):
+
+```sh
+git tag v1.1.0 && git push origin v1.1.0
+```
+
+The ISO is over GitHub's 2 GB file limit, so the release holds it in parts plus
+`get-hardpoint-iso.sh`, which downloads, joins and verifies it in one command
+(the release notes show it, including the Proxmox VE version). `tools/make-release.sh` makes these files.
+
 ## 2. Make the USB with Rufus
 
 1. Pick the USB stick and the `hardpoint-os-zorin-*.iso`.

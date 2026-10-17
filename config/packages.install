@@ -60,6 +60,8 @@ docker-buildx
 podman
 qemu-system-x86
 qemu-utils
+qemu-guest-agent
+spice-vdagent
 virt-manager
 libvirt-daemon-system
 shellcheck
