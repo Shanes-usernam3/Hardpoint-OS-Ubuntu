@@ -4,6 +4,12 @@ name: Build HardPoint OS (Zorin Edition) ISO
 # Full ISO + VM test (about 2 hours): "Run workflow" button, a v* tag, or "[iso]" in the commit message.
 on:
   workflow_dispatch:          # "Run workflow" button on GitHub
+    inputs:
+      version:
+        description: 'Release version, e.g. 1.0.0 — publishes an official release on the Releases page (leave empty for a test ISO)'
+        required: false
+        default: ''
+
   push:
     branches: [main]          # every push to main builds a fresh ISO
     tags: ['v*']
@@ -123,6 +129,7 @@ jobs:
         run: |
           # A version tag (v1.0.0) names the ISO hardpoint-os-zorin-1.0.0-amd64.iso
           if [[ $GITHUB_REF == refs/tags/v* ]]; then export HP_VERSION="${GITHUB_REF_NAME#v}"; fi
+          if [[ -n "${{ inputs.version }}" ]]; then export HP_VERSION="${{ inputs.version }}"; fi
           sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" HP_VERSION="${HP_VERSION:-}" bash ./build.sh
 
       - name: Save the build report to the build-report branch
@@ -186,9 +193,11 @@ jobs:
   release:
     name: Publish the release (version tags only)
     needs: [build, test]
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') || inputs.version != ''
     runs-on: ubuntu-24.04
     timeout-minutes: 60
+    env:
+      TAG: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('v{0}', inputs.version) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -202,14 +211,15 @@ jobs:
 
       - name: Split the ISO and write the notes
         run: |
-          bash tools/make-release.sh iso/*.iso "$GITHUB_REF_NAME" rel
+          [[ $TAG =~ ^v[0-9]+(\.[0-9]+){1,2}([.-][A-Za-z0-9]+)?$ ]] || { echo "Version must look like 1.0.0"; exit 1; }
+          bash tools/make-release.sh iso/*.iso "$TAG" rel
           rm -rf iso
 
       - name: Publish on the Releases page
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete "$GITHUB_REF_NAME" --yes 2>/dev/null || true
-          gh release create "$GITHUB_REF_NAME" --title "HardPoint OS ${GITHUB_REF_NAME#v} (Zorin Edition)" \
+          gh release delete "$TAG" --yes 2>/dev/null || true
+          gh release create "$TAG" --target "$GITHUB_SHA" --title "HardPoint OS ${TAG#v} (Zorin Edition)" \
             --notes-file rel/notes.md --latest \
             rel/get-hardpoint-iso.sh rel/SHA256SUMS.txt rel/SHA256SUMS-parts.txt rel/*.part*
