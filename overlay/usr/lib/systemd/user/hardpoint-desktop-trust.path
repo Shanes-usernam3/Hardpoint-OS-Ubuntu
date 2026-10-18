@@ -1,0 +1,9 @@
+[Unit]
+Description=Make app shortcuts on the desktop work straight away
+
+[Path]
+PathChanged=%h/Desktop
+MakeDirectory=yes
+
+[Install]
+WantedBy=default.target
