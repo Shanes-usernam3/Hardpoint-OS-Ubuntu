@@ -13,12 +13,14 @@ global-border-radius=2
 
 [org/gnome/shell/extensions/zorin-menu]
 layout='APP_GRID'
+super-hotkey=true
 
 [org/gnome/shell/keybindings]
 toggle-overview=['<Alt>space', '<Super>s', '<Super>Tab']
 toggle-quick-settings=['<Super>a']
 toggle-application-view=@as []
 toggle-message-tray=['<Super>n', '<Super>m']
+focus-active-notification=@as []
 show-screenshot-ui=['Print', '<Shift><Super>s']
 
 [org/gnome/desktop/wm/keybindings]
