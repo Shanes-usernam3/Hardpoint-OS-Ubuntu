@@ -165,6 +165,9 @@ APT::Periodic::Download-Upgradeable-Packages "1";
 APT::Periodic::Unattended-Upgrade "0";
 APT::Periodic::AutocleanInterval "7";
 EOF
+systemctl --global enable hardpoint-desktop-trust.path 2>/dev/null || {
+    mkdir -p /etc/systemd/user/default.target.wants
+    ln -sf /usr/lib/systemd/user/hardpoint-desktop-trust.path /etc/systemd/user/default.target.wants/; }
 systemctl --global enable hardpoint-update-check.timer 2>/dev/null || \
     { mkdir -p /etc/systemd/user/timers.target.wants && ln -sf /usr/lib/systemd/user/hardpoint-update-check.timer /etc/systemd/user/timers.target.wants/; }
 
