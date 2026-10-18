@@ -1,0 +1,50 @@
+name: Inspect Zorin desktop components
+
+# Manual: extracts Zorin's GNOME Shell extensions, settings schemas and layout presets
+# from the Zorin OS Core ISO to the zorin-ref branch, for working on the HardPoint layout.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reuse the downloaded Zorin OS Core ISO
+        uses: actions/cache/restore@v4
+        with:
+          path: /mnt/hp/cache
+          key: zorin-${{ hashFiles('config/base.env') }}
+      - name: Extract
+        run: |
+          sudo apt-get install -y -qq squashfs-tools libarchive-tools >/dev/null
+          sudo mkdir -p /mnt/hp/cache && sudo chown -R "$USER" /mnt/hp
+          source config/base.env
+          ISO=/mnt/hp/cache/$ZORIN_ISO
+          if [[ ! -f $ISO ]]; then
+            for m in $ZORIN_MIRRORS; do curl -fL --retry 2 -o "$ISO" "$m/$ZORIN_ISO" && break; done
+          fi
+          mkdir -p w && bsdtar -xf "$ISO" -C w casper/filesystem.squashfs
+          sudo unsquashfs -d root -f w/casper/filesystem.squashfs \
+            'usr/share/gnome-shell/extensions' 'usr/share/glib-2.0/schemas' 'usr/lib/python3/dist-packages/zorin_appearance' \
+            'usr/share/zorin-appearance' 'usr/lib/zorin-appearance' 'usr/share/zorin-os-default-settings' >/dev/null || true
+          sudo chown -R "$USER" root
+          mkdir -p ref
+          cp -r root/usr/share/gnome-shell/extensions ref/ 2>/dev/null || true
+          mkdir -p ref/schemas && cp root/usr/share/glib-2.0/schemas/*.xml root/usr/share/glib-2.0/schemas/*override* ref/schemas/ 2>/dev/null || true
+          for d in root/usr/lib/python3/dist-packages/zorin_appearance root/usr/share/zorin-appearance root/usr/lib/zorin-appearance root/usr/share/zorin-os-default-settings; do
+            [[ -d $d ]] && cp -r "$d" ref/
+          done
+          sudo unsquashfs -l w/casper/filesystem.squashfs | grep -iE 'zorin.*(appearance|layout)|desktop-session' | head -200 > ref/zorin-paths.txt || true
+          find ref -name '*.png' -o -name '*.jpg' -o -name '*.mo' | xargs -r rm -f
+          du -sh ref
+      - name: Push to the zorin-ref branch
+        run: |
+          cd ref && git init -q -b zorin-ref
+          git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
+          git add -A && git commit -qm "Zorin desktop components (reference)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" zorin-ref
