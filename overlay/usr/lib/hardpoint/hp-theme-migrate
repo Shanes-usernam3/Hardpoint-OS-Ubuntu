@@ -13,6 +13,40 @@ if [[ ! -f $dmark ]] && [[ -d /usr/share/gnome-shell/extensions/zorin-desktop-ic
     mkdir -p "$(dirname "$dmark")" && date '+%F' > "$dmark"
 fi
 
+# Windows 11 layout for accounts that existed before it shipped (once; later changes stay)
+wmark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/win11-layout"
+if [[ ! -f $wmark ]] && command -v dconf >/dev/null; then
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/panel-margin' '0'
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/panel-element-positions' ''\''{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"2":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"3":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'\'''
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/panel-element-positions-monitors-sync' 'true'
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/panel-position' ''\''BOTTOM'\'''
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/dot-style-focused' ''\''DASHES'\'''
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/dot-style-unfocused' ''\''DOTS'\'''
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/show-showdesktop-icon' 'true'
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/showdesktop-button-width' '6'
+    dconf write '/org/gnome/shell/extensions/zorin-taskbar/global-border-radius' '2'
+    dconf write '/org/gnome/shell/extensions/zorin-menu/layout' ''\''APP_GRID'\'''
+    dconf write '/org/gnome/shell/keybindings/toggle-overview' '['\''<Alt>space'\'', '\''<Super>s'\'', '\''<Super>Tab'\'']'
+    dconf write '/org/gnome/shell/keybindings/toggle-quick-settings' '['\''<Super>a'\'']'
+    dconf write '/org/gnome/shell/keybindings/toggle-application-view' '@as []'
+    dconf write '/org/gnome/shell/keybindings/toggle-message-tray' '['\''<Super>n'\'', '\''<Super>m'\'']'
+    dconf write '/org/gnome/shell/keybindings/show-screenshot-ui' '['\''Print'\'', '\''<Shift><Super>s'\'']'
+    dconf write '/org/gnome/desktop/wm/keybindings/switch-applications' '@as []'
+    dconf write '/org/gnome/desktop/wm/keybindings/switch-applications-backward' '@as []'
+    dconf write '/org/gnome/desktop/wm/keybindings/switch-windows' '['\''<Alt>Tab'\'']'
+    dconf write '/org/gnome/desktop/wm/keybindings/switch-windows-backward' '['\''<Shift><Alt>Tab'\'']'
+    dconf write '/org/gnome/desktop/wm/keybindings/show-desktop' '['\''<Super>d'\'']'
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/home' '['\''<Super>e'\'']'
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/control-center' '['\''<Super>i'\'']'
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings' '['\''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/hp-taskmgr/'\'']'
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/hp-taskmgr/name' ''\''Task Manager'\'''
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/hp-taskmgr/binding' ''\''<Primary><Shift>Escape'\'''
+    dconf write '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/hp-taskmgr/command' ''\''gnome-system-monitor'\'''
+    dconf write '/org/gnome/desktop/wm/preferences/button-layout' ''\''appmenu:minimize,maximize,close'\'''
+    dconf write '/org/gnome/desktop/interface/clock-show-date' 'true'
+    mkdir -p "$(dirname "$wmark")" && date '+%F' > "$wmark"
+fi
+
 VER=byte-theme-1
 mark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/theme"
 [[ $(cat "$mark" 2>/dev/null) == "$VER" ]] && exit 0

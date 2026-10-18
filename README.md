@@ -10,7 +10,7 @@ Sister project of the Arch-based [HardPoint OS](https://github.com/Shanes-userna
 
 | Area | Included |
 |---|---|
-| Look | Byte design language everywhere: navy glass, neon cyan → violet → pink. **HardPoint Dark / Light** desktop themes (Zorin's GPL themes recoloured by `setup/make-theme.py`) with Papirus icons. HardPoint boot splash, login screen, wallpapers, logos and installer slideshow. Zorin's Windows-style desktop layout. |
+| Look | Byte design language everywhere: navy glass, neon cyan → violet → pink. **HardPoint Dark / Light** desktop themes (Zorin's GPL themes recoloured by `setup/make-theme.py`) with Papirus icons. HardPoint boot splash, login screen, wallpapers, logos and installer slideshow. **Windows 11 layout**: centred taskbar and Start, quick settings (Win+A), notifications + calendar (Win+N), Windows shortcuts (Win+E/I/D/S, Win+Shift+S, Ctrl+Shift+Esc). |
 | HardPoint apps | **Setup** (runs on first sign-in: hardware check, look, account type, apps, extras, security), **Updates**, **Accounts**, **Security**, **System** (PC info, serial + Lenovo warranty, battery and disk health, hardware check, **Fix my PC**) — one smooth WebKit UI, admin actions through polkit |
 | Quality of life | Battery charge limit (~80%), Windows SSD shown read-only in Files, Focus Mode (no pop-ups + Night Light), **Alt+Space** quick search, **Super+V** clipboard history (optional GPaste) |
 | Optional apps | Picked in Setup: LibreOffice, Teams/Outlook web apps, Bitwarden, KeePassXC, Backups (Déjà Dup), Flameshot, Lutris, ProtonUp-Qt, Discord, Sunshine/Moonlight, GitHub Desktop, DBeaver, Insomnia, Distrobox, Netlify CLI, Ventoy, Impression, Bottles, Angry IP Scanner, Kdenlive, Audacity, GIMP and more (`config/flatpaks.list`) |

@@ -104,6 +104,8 @@ if [[ -f /etc/dconf/profile/gdm ]]; then
 else
     printf 'user-db:user\nsystem-db:gdm\nfile-db:/usr/share/gdm/greeter-dconf-defaults\n' > /etc/dconf/profile/gdm
 fi
+# Windows 11 layout: centred taskbar + Start, quick settings (Win+A), notifications (Win+N), shortcuts
+install -m 644 "$D/win11.dconf" /etc/dconf/db/local.d/10-hardpoint-win11
 dconf update
 
 # Zorin's own GSettings overrides win over dconf for some keys — add ours last

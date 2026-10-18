@@ -301,7 +301,7 @@ const Setup = {
         <img class="logo" src="logo.svg" alt="">
         <h1>You're all set</h1>
         <p>HardPoint OS is ready. Setup, Updates, Accounts, Security and System are always in the app menu.</p>
-        <p class="small">Tips: <b>Alt+Space</b> searches apps, files and settings · <b>Super+V</b> clipboard history (if installed) · <b>Focus Mode</b> in the app menu silences notifications.</p>
+        <p class="small">Same shortcuts as Windows: <b>Win+S</b> search · <b>Win+A</b> quick settings · <b>Win+N</b> notifications · <b>Win+E</b> Files · <b>Ctrl+Shift+Esc</b> Task Manager.</p>
         <div class="feature-row">
           <button class="btn" id="o-upd">Check for updates</button>
           ${S.entra.enabled && S.entra.companyPortal ? '<button class="btn" id="o-cp">Open Company Portal</button>' : ""}
@@ -524,9 +524,10 @@ const System = {
       <div class="card row between"><div><h3>Show my Windows drive</h3><p class="small">Your Windows SSD appears in Files as “Windows” so you can copy files off it. Read-only, so nothing here can damage Windows.</p></div>${toggleHTML("x-win", i.windowsDrive)}</div>
       <div class="card row between"><div><h3>Focus mode</h3><p class="small">Silences notification pop-ups and turns on warm Night Light. Also in the app menu as <b>Focus Mode</b>.</p></div>${toggleHTML("x-focus", i.focus)}</div>
       <div class="card"><h3>Shortcuts worth knowing</h3><p class="small" style="margin-top:6px;line-height:1.9">
-        <b>Alt+Space</b> — search apps, files, settings and do quick maths ·
-        <b>Super</b> — app menu · <b>Super+V</b> — clipboard history (pick “Clipboard history” in Apps) ·
-        <b>Super+L</b> — lock · <b>Print Screen</b> — screenshot<br>
+        The same keys as Windows: <b>Win</b> Start · <b>Win+S</b> or <b>Alt+Space</b> search · <b>Win+A</b> quick settings ·
+        <b>Win+N</b> notifications · <b>Win+E</b> Files · <b>Win+I</b> Settings · <b>Win+D</b> desktop · <b>Win+L</b> lock ·
+        <b>Win+Tab</b> all windows · <b>Win+Shift+S</b> screenshot · <b>Ctrl+Shift+Esc</b> Task Manager ·
+        <b>Win+V</b> clipboard history (pick “Clipboard history” in Apps)<br>
         <b>Phone:</b> files sent from your phone with HardPoint Connect land in <b>Downloads</b>, and phone notifications show here.</p>
         <div class="console mono" id="xlog"></div></div>`;
   },

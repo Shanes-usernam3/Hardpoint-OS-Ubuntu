@@ -7,6 +7,6 @@ mark="${XDG_CONFIG_HOME:-$HOME/.config}/hardpoint/clipboard-setup"
 command -v gpaste-client >/dev/null || exit 0
 gnome-extensions enable GPaste@gnome-shell-extensions.gnome.org 2>/dev/null || exit 0
 gsettings set org.gnome.GPaste show-history '<Super>v' 2>/dev/null
-# Super+V used to open the notification list; Super+M still does
-gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']" 2>/dev/null
+# Super+V used to open the notification list; Super+N (like Windows) and Super+M still do
+gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>n', '<Super>m']" 2>/dev/null
 mkdir -p "$(dirname "$mark")" && date '+%F' > "$mark"
