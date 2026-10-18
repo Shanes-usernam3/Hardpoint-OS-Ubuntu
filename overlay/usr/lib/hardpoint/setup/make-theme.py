@@ -192,6 +192,12 @@ def main():
                     f.write_text(s.replace(OLD, NAME))
             except (UnicodeDecodeError, OSError):
                 pass
+    # Windows 11 shapes for the menu, panel pop-ups, quick settings and notifications
+    extra = Path(__file__).with_name("shell-win11.css")
+    shell_css = DST / "gnome-shell" / "gnome-shell.css"
+    if extra.exists() and shell_css.exists():
+        with shell_css.open("a") as fh:
+            fh.write("\n" + extra.read_text())
     print(f"  -> {NAME} built from {OLD}")
 
 

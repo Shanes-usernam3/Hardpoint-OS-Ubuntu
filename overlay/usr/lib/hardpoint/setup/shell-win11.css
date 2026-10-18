@@ -1,0 +1,63 @@
+
+/* ==== HardPoint OS: Windows 11 shapes (appended to the HardPoint shell themes) ====
+   Colours come from the HardPoint theme above; this only changes shapes and spacing:
+   rounded 8px panels, rectangular quick-settings tiles, thin sliders, round calendar days,
+   a Start menu sized like Windows 11. */
+
+/* All panel pop-ups: Start, quick settings, calendar/notifications, tray menus */
+.popup-menu-content,
+.candidate-popup-content {
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.popup-menu-item { border-radius: 4px; }
+.popup-sub-menu { border-radius: 4px; }
+
+/* Quick settings (Wi-Fi, Bluetooth, sound, brightness, power) — like Windows 11 */
+.quick-settings { padding: 16px; border-radius: 8px; }
+.quick-settings-grid { spacing-rows: 10px; spacing-columns: 10px; }
+.quick-toggle,
+.quick-menu-toggle .quick-toggle { border-radius: 6px; min-height: 46px; }
+.quick-menu-toggle .quick-toggle:ltr { border-radius: 6px 0 0 6px; }
+.quick-menu-toggle .quick-toggle:rtl { border-radius: 0 6px 6px 0; }
+.quick-menu-toggle .quick-toggle-arrow:ltr { border-radius: 0 6px 6px 0; }
+.quick-menu-toggle .quick-toggle-arrow:rtl { border-radius: 6px 0 0 6px; }
+.quick-menu-toggle .quick-toggle:only-child { border-radius: 6px; }
+.quick-toggle-menu { border-radius: 8px; }
+.quick-settings-system-item .icon-button,
+.quick-settings .icon-button { border-radius: 6px; }
+.quick-slider .slider { -barlevel-height: 4px; -slider-handle-radius: 9px; }
+.slider { -barlevel-height: 4px; -slider-handle-radius: 9px; }
+
+/* Clock pop-up: notifications + calendar, Windows 11 style */
+.datemenu-popover { border-radius: 8px; }
+.message-list { padding: 4px 8px; }
+.message,
+.notification-banner,
+.events-button,
+.world-clocks-button,
+.weather-button,
+.datemenu-today-button { border-radius: 8px; }
+.calendar { border-radius: 8px; padding: 8px; }
+.calendar .calendar-day { border-radius: 999px; }
+.calendar .calendar-day-heading,
+.calendar .calendar-month-header .pager-button { border-radius: 999px; }
+.message-list-controls .dnd-button { border-radius: 999px; }
+.message-list-clear-button { border-radius: 6px; }
+
+/* Pop-up notifications and on-screen volume/brightness display */
+.notification-banner { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); }
+.osd-window { border-radius: 8px; }
+
+/* Start menu (app grid layout): Windows 11 proportions */
+.zorin-menu .grid-layout-box { padding: 16px 24px 8px 24px; }
+.zorin-menu .grid-layout-box .search-entry { border-radius: 999px; margin: 8px 0 16px 0; min-height: 34px; }
+.zorin-menu .grid-layout-box .session-box { padding: 8px 4px 0 4px; }
+.zorin-menu .app-menu-item,
+.zorin-menu .popup-menu-item { border-radius: 6px; }
+.zorin-menu .session-buttons-section .system-menu-action { border-radius: 6px; }
+
+/* Alt+Tab and window pickers */
+.switcher-list { border-radius: 8px; }
+.switcher-list .item-box { border-radius: 6px; }
