@@ -1,0 +1,17 @@
+{
+  "description": "Manage Jobs and Printers",
+  "extension-id": "zorin-printers",
+  "gettext-domain": "zorin-printers",
+  "name": "Zorin Printers",
+  "original-authors": [
+    "joao.caldas.lopes@gmail.com"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.zorin-printers",
+  "shell-version": [
+    "46",
+    "47",
+    "48"
+  ],
+  "uuid": "zorin-printers@zorinos.com",
+  "version": 29
+}

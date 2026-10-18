@@ -1,0 +1,15 @@
+{
+    "shell-version": [
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50"
+    ],
+    "gettext-domain": "ZorinAppIndicatorExtension",
+    "settings-schema": "org.gnome.shell.extensions.zorin-appindicator",
+    "uuid": "zorin-appindicator@zorinos.com",
+    "name": "Zorin AppIndicators",
+    "description": "Support app indicators and legacy tray icons in the panel, as the default Zorin OS experience."
+}

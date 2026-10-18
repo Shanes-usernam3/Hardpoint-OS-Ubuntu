@@ -1,0 +1,14 @@
+{
+"extension-id": "zorin-menu",
+"uuid": "zorin-menu@zorinos.com",
+"gettext-domain": "zorinmenu",
+"settings-schema": "org.gnome.shell.extensions.zorin-menu",
+"name": "Zorin Menu",
+"description": "The official applications menu for Zorin OS.",
+  "shell-version": [
+    "46",
+    "47",
+    "48"
+  ],
+"url": "https://github.com/ZorinOS/zorin-menu"
+}

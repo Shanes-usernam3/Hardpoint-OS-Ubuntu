@@ -1,0 +1,9 @@
+{
+  "uuid": "zorin-desktop-cube@zorinos.com",
+  "description": "Switch between workspaces with a desktop cube.",
+  "name": "Zorin Desktop Cube",
+  "gettext-domain": "zorin-desktop-cube",
+  "settings-schema": "org.gnome.shell.extensions.zorin-desktop-cube",
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "version": 31
+}

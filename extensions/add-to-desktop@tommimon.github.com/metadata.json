@@ -1,0 +1,16 @@
+{
+  "description": "An easy way to create desktop app shortcut in gnome",
+  "name": "Add to Desktop",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/Tommimon/add-to-desktop",
+  "uuid": "add-to-desktop@tommimon.github.com",
+  "gettext-domain": "add-to-desktop",
+  "version": 16
+}

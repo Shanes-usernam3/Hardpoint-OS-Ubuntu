@@ -1,0 +1,16 @@
+{
+    "name": "Zorin Tiling Shell",
+    "description": "Advanced tiling window management for the Zorin OS desktop. Supports multiple monitors, Snap Assistant, automatic tiling, keyboard shortcuts, customised tiling layouts and more.",
+    "uuid": "zorin-tiling-shell@zorinos.com",
+    "shell-version": [
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+    ],
+    "version": 99,
+    "version-name": "17.3",
+    "settings-schema": "org.gnome.shell.extensions.zorin-tiling-shell",
+    "gettext-domain": "tilingshell"
+}

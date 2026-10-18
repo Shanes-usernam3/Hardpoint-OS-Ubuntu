@@ -1,0 +1,6 @@
+{
+    "description": "Adds icons to the desktop. Fork of the original Desktop Icons extension, with several enhancements.",
+    "name": "Zorin Desktop Icons",
+    "shell-version": ["46", "47", "48", "49", "50"],
+    "uuid": "zorin-desktop-icons@zorinos.com"
+}

@@ -1,0 +1,9 @@
+{
+  "extension-id": "zorin-screen-keyboard-panel-button",
+  "name": "Zorin Screen Keyboard Panel Button",
+  "description": "Show a button in the panel to open the Screen Keyboard.",
+  "shell-version": [
+    "46"
+  ],
+  "uuid": "zorin-screen-keyboard-panel-button@zorinos.com"
+}

@@ -1,0 +1,8 @@
+{
+    "gettext-domain": "zorin-spatial-window-switcher",
+    "name": "Zorin Spatial Window Switcher",
+    "settings-schema": "org.gnome.shell.extensions.zorin-spatial-window-switcher",
+    "shell-version": ["46", "47"],
+    "uuid": "zorin-spatial-window-switcher@zorinos.com",
+    "description": "Replaces Alt+Tab and Super+Tab with a 3D window switcher."
+}
