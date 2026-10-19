@@ -4,7 +4,7 @@ name: Inspect base ISO (HardPoint OS 2)
 on:
   push:
     branches: [hardpoint-2]
-    paths: ['.github/workflows/inspect-base.yml']
+    paths: ['.github/workflows/inspect-base.yml']  # rerun: 2
   workflow_dispatch:
 
 permissions:
@@ -42,6 +42,13 @@ jobs:
           cp x/usr/lib/os-release ref/ 2>/dev/null
           grep -l -i -r "prompt\|kubuntu" x/usr/lib/systemd x/lib/systemd 2>/dev/null > ref/systemd-hits.txt
           ls x/var/lib/dpkg/info/*.list | sed 's|.*/||; s|\.list$||' > ref/packages.txt
+          sudo unsquashfs -d c -f "$SQ" 'usr/share/initramfs-tools/hooks/casper' 'usr/share/initramfs-tools/scripts/casper' 'usr/share/initramfs-tools/scripts/casper-helpers' 'usr/share/initramfs-tools/scripts/casper-premount' 'etc/initramfs-tools' 'usr/share/initramfs-tools/conf.d' >/dev/null 2>&1
+          sudo chown -R "$USER" c; mkdir -p ref/casper-scripts && cp -r c/. ref/casper-scripts/
+          bsdtar -xf "$ISO" casper/initrd
+          sudo apt-get install -y -qq initramfs-tools-core >/dev/null
+          lsinitramfs casper/initrd > ref/stock-initrd-files.txt 2>&1
+          mkdir -p ui && unmkinitramfs casper/initrd ui >/dev/null 2>&1; ls -la ui > ref/stock-initrd-layout.txt
+          find ui -path '*conf*' -type f -size -8k | while read f; do echo "== $f"; cat "$f"; done > ref/stock-initrd-conf.txt 2>&1
           find ref -xtype l -delete
           cd ref && git init -q -b kubuntu-ref2 && git config user.name "HardPoint CI" && git config user.email "ci@hardpoint.invalid"
           git add -A && git commit -qm ref && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kubuntu-ref2 || echo "::warning::push failed"
