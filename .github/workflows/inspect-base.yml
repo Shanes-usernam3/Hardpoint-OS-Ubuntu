@@ -4,7 +4,7 @@ name: Inspect base ISO (HardPoint OS 2)
 on:
   push:
     branches: [hardpoint-2]
-    paths: ['.github/workflows/inspect-base.yml']
+    paths: ['.github/workflows/inspect-base.yml']  # rerun: 2
   workflow_dispatch:
 
 permissions:
@@ -30,7 +30,11 @@ jobs:
           grep " \*\?$ISO\$" SHA256SUMS | sed 's/ \*/  /' | sha256sum -c
       - name: Extract layout and key files
         run: |
+          set +e
           cd /mnt/w
+          mkdir -p ref
+          exec > >(tee ref/extract-log.txt) 2>&1
+          set -x
           ISO=$(cat iso.txt)
           mkdir -p ref
           { echo "base: $(cat base.txt)"; echo "iso: $ISO"; grep "$ISO" SHA256SUMS; } > ref/iso-info.txt
@@ -63,6 +67,7 @@ jobs:
           sudo unsquashfs -l "iso/$SQ" | grep -E 'calamares|ubiquity|subiquity|desktop-bootstrap|ubuntu-desktop-installer' | head -50 > ref/installer-paths.txt || true
           du -sh ref
       - name: Push to the kubuntu-ref branch
+        if: always()
         run: |
           cd /mnt/w/ref && git init -q -b kubuntu-ref
           git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
