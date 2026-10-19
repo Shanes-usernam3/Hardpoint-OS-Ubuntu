@@ -65,6 +65,7 @@ cleanup() {
         mountpoint -q "$WORK/root/$m" && umount -lf "$WORK/root/$m"
     done
     mountpoint -q "$WORK/mnt" && umount -lf "$WORK/mnt"
+    return 0
 }
 trap cleanup EXIT
 cleanup
