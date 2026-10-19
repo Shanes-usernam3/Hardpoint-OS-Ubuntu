@@ -192,7 +192,7 @@ du -sx --block-size=1 "$R" | cut -f1 > "$C/filesystem.size"
 # Keep the base image's list of live-only packages (removed from the installed system by the installer)
 
 # Boot menu + disk info
-find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null | while read -r cfg; do
+{ find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null || true; } | while read -r cfg; do
     sed -i -e "s/Kubuntu [0-9.]*\( LTS\)\?/$HP_NAME/g" -e "s/Kubuntu/$HP_NAME/g" "$cfg"
 done
 echo "$HP_NAME $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
@@ -235,6 +235,6 @@ xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${
         fi
         echo
     done
-} >> "$OUT/build-report.txt"
+} >> "$OUT/build-report.txt" || true     # report only: never fails the build
 umount "$WORK/mnt" 2>/dev/null || true
 log "Done: $OUT/$ISO_NAME ($(du -h "$OUT/$ISO_NAME" | cut -f1))"
