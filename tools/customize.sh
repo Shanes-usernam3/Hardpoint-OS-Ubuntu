@@ -188,6 +188,18 @@ if [[ ! -f /boot/initrd.img-$KVER ]]; then
     update-initramfs -c -k "$KVER" >/dev/null
 fi
 
+# ------------------------------------------------------------ live USB boot image
+# The ISO's boot menu doesn't say "boot=casper": the live boot image carries that default itself
+# (as the base image's does). Built separately so installed PCs keep a normal boot image.
+log "Creating the live boot image"
+LIVECONF=/etc/initramfs-tools/conf.d/default-boot-to-casper.conf
+printf 'if [ -z "$BOOT" ]; then\n    export BOOT=casper\nfi\n' > "$LIVECONF"
+mkinitramfs -o "$S/live-initrd" "$KVER"
+rm -f "$LIVECONF"
+lsinitramfs "$S/live-initrd" > /tmp/live-initrd.txt
+grep -q 'conf/conf.d/default-boot-to-casper.conf' /tmp/live-initrd.txt || { warn "Live boot image is missing the casper default"; exit 1; }
+rm -f /tmp/live-initrd.txt
+
 # ------------------------------------------------------------ clean up
 for f in /etc/apt/sources.list.d/*.hp-build; do [[ -f $f ]] && mv "$f" "${f%.hp-build}"; done
 apt-get autoremove -y -q >/dev/null || true

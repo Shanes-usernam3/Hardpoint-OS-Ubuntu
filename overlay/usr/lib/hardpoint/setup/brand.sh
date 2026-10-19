@@ -280,6 +280,21 @@ done
 for f in /usr/share/applications/org.kde.plasma-welcome.desktop /usr/share/applications/*kubuntu*welcome*.desktop; do
     hide "$f" NoDisplay
 done
+# Base-system web links (its website and how-to pages) on new desktops and in the menu
+for f in /etc/skel/Desktop/org.kubuntu.web.home.desktop /etc/skel/Desktop/org.kfocus.web.howtos.desktop; do
+    [[ -e $f || -e $f.upstream ]] && divert "$f"
+done
+for f in /usr/share/applications/org.kubuntu.web.home.desktop /usr/share/applications/org.kfocus.web.howtos.desktop \
+         /usr/share/applications/org.kubuntu.restore-desktop-links.desktop; do
+    hide "$f" NoDisplay
+done
+# The Plasma welcome tour starts on its own at first sign-in; HardPoint Setup replaces it
+PW=/usr/bin/plasma-welcome
+if [[ -f $PW || -f $PW.upstream ]]; then
+    divert "$PW"
+    printf '#!/bin/sh\n# HardPoint OS: the Plasma welcome tour is replaced by HardPoint Setup\nexit 0\n' > "$PW"
+    chmod 755 "$PW"
+fi
 
 # ------------------------------------------------------------ build report
 if [[ -n ${HP_STAGE:-} ]]; then

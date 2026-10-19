@@ -60,9 +60,12 @@ ln -sf /usr/share/zoneinfo/America/Edmonton /etc/localtime
 echo 'LANG=en_US.UTF-8' > /etc/default/locale
 update-initramfs -c -k "$KVER" >/dev/null 2>&1 || update-initramfs -u -k "$KVER" >/dev/null
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ubuntu --removable --no-nvram >/dev/null
-update-grub
+GRUB_DISABLE_OS_PROBER=true update-grub
 # The removable-path GRUB looks for its menu next to itself; point it at the real one
-printf 'search --no-floppy --fs-uuid --set=root %s\nset prefix=(\$root)/boot/grub\nconfigfile \$prefix/grub.cfg\n' "\$(grub-probe --target=fs_uuid /)" > /boot/efi/EFI/BOOT/grub.cfg
+mkdir -p /boot/efi/EFI/ubuntu    # the signed GRUB (behind shim) always reads EFI/ubuntu/grub.cfg
+for d in BOOT ubuntu; do
+    printf 'search --no-floppy --fs-uuid --set=root %s\nset prefix=(\$root)/boot/grub\nconfigfile \$prefix/grub.cfg\n' "\$(grub-probe --target=fs_uuid /)" > /boot/efi/EFI/\$d/grub.cfg
+done
 ls -la /boot /boot/grub/grub.cfg /boot/efi/EFI/BOOT
 EOF
 log "Configuring (user, initramfs, bootloader)"

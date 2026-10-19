@@ -145,6 +145,9 @@ KVER="$(ls "$R/lib/modules" | sort -V | tail -1)"
 kern="$R/boot/vmlinuz-$KVER"
 initrd="$R/boot/initrd.img-$KVER"
 [[ -f $initrd ]] || die "No initrd for kernel $KVER in the customised system."
+# The live boot image (boots into the live session by default) made by customize.sh
+[[ -f $WORK/stage/live-initrd ]] && initrd="$WORK/stage/live-initrd"
+log "Live boot image: $initrd"
 if [[ ! -f $kern ]]; then
     # Ubuntu images leave the kernel out of the system image (the installer copies the live one);
     # keep the ISO's kernel, which must match the modules in the image
