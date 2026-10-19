@@ -81,6 +81,10 @@ if [[ -d /usr/share/plymouth/themes/hardpoint ]]; then
     if command -v plymouth-set-default-theme >/dev/null; then plymouth-set-default-theme hardpoint || true; fi
     log "Boot splash: $(plymouth-set-default-theme 2>/dev/null || readlink -f /etc/alternatives/default.plymouth)"
 fi
+# The boot image must work on any PC and from a USB stick: include all common storage/USB drivers
+# (a boot image made on the build server would otherwise only carry that server's drivers)
+mkdir -p /etc/initramfs-tools/conf.d
+printf '# HardPoint OS: boot from any disk or USB stick\nMODULES=most\n' > /etc/initramfs-tools/conf.d/zz-hardpoint-modules
 # Touchpad driver order applies inside the boot image too
 grep -qx 'pinctrl_alderlake' /etc/initramfs-tools/modules 2>/dev/null || printf 'pinctrl_alderlake\npinctrl_tigerlake\n' >> /etc/initramfs-tools/modules
 if [[ ${HP_SKIP_INITRAMFS:-} != 1 ]]; then

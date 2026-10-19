@@ -45,7 +45,16 @@ PY
 
 log "Adding Microsoft repositories (Edge, VS Code, Intune)"
 "${APT[@]}" install curl gpg ca-certificates >/dev/null
-curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor --yes -o /usr/share/keyrings/microsoft.gpg
+# Microsoft signs older repos with microsoft.asc and newer ones (Ubuntu 26.04) with microsoft-2025.asc
+: > /usr/share/keyrings/microsoft.gpg
+for k in microsoft.asc microsoft-2025.asc; do
+    if curl -fsSL "https://packages.microsoft.com/keys/$k" | gpg --dearmor > "/tmp/$k.gpg"; then
+        cat "/tmp/$k.gpg" >> /usr/share/keyrings/microsoft.gpg
+    else
+        warn "Could not fetch Microsoft key $k"
+    fi
+    rm -f "/tmp/$k.gpg"
+done
 cat > /etc/apt/sources.list.d/microsoft.sources <<'EOF'
 Types: deb
 URIs: https://packages.microsoft.com/repos/edge
