@@ -240,6 +240,8 @@ if CALAMARES:
                        capture_output=True, text=True)
     (OUT / "host-install.log").write_text(r.stdout + r.stderr)
     installed = r.returncode == 0
+    note("HardPoint OS" in r.stdout, "Installed system identifies as HardPoint OS"
+         + ("" if "HardPoint OS" in r.stdout else " (it does not: branding missing)"))
     note(installed, f"Install onto the test disk {'finished' if installed else 'failed (see host-install.log)'} ({(time.time() - t0) / 60:.0f} min)")
 else:
     SEED = textwrap.dedent(f"""
