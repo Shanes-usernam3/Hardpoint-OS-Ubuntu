@@ -3,9 +3,10 @@
 
 Phase 1  Live session: boot the ISO, screenshot the desktop, open HardPoint
          Setup and Updates, sign out to show the themed login screen.
-Phase 2  Automatic install with Ubiquity (preseed served over QEMU's network),
-         then boot the installed disk: boot splash, login screen, sign in and
-         the first-run HardPoint Setup.
+Phase 2  Install: Ubiquity images get an automatic preseeded install; Calamares
+         images (HardPoint OS 2) are installed by tools/host-install.sh, which does
+         the installer's steps directly. Then boot the installed disk: boot splash,
+         login screen, sign in and the first-run HardPoint Setup.
 
 Usage: vm-test.py <iso> <results-dir>     (results: PNGs, serial logs, summary.md)
 """
@@ -17,6 +18,7 @@ import socket
 import socketserver
 import subprocess
 import sys
+import textwrap
 import threading
 import time
 from pathlib import Path
@@ -64,6 +66,9 @@ kern = next(n for n in names if n.startswith("casper/vmlinuz"))
 initrd = next(n for n in names if n.startswith("casper/initrd"))
 subprocess.run(["bsdtar", "-xf", str(ISO), "-C", str(WORK), kern, initrd], check=True)
 KERNEL, INITRD = WORK / kern, WORK / initrd
+manifest = subprocess.run(["bsdtar", "-xOf", str(ISO), "casper/filesystem.manifest"], capture_output=True, text=True).stdout
+CALAMARES = any(l.split()[:1] == ["calamares"] for l in manifest.splitlines())
+log(f"Installer: {'Calamares' if CALAMARES else 'Ubiquity'}")
 
 
 class Monitor:
@@ -119,7 +124,7 @@ def shot(mon, name):
 
 
 def run_cmd(mon, command):
-    """GNOME run dialog (Alt+F2)."""
+    """Run dialog (Alt+F2: KRunner on Plasma, the run prompt on GNOME)."""
     mon.cmd("sendkey alt-f2")
     time.sleep(2)
     type_text(mon, command + "\n")
@@ -187,7 +192,7 @@ time.sleep(25)
 shot(m, "01-boot-splash")
 time.sleep(110)
 note(shot(m, "02-live-desktop"), "Live desktop booted")
-# Windows 11 layout: Start (Super), quick settings (Super+A), notifications + calendar (Super+N)
+# Windows 11 layout: Start (Win), quick settings (Win+A), calendar / notifications (Win+N)
 for key, name in (("meta_l", "02b-start-menu"), ("meta_l-a", "02c-quick-settings"), ("meta_l-n", "02d-notifications")):
     m.cmd(f"sendkey {key}")
     time.sleep(4)
@@ -207,78 +212,102 @@ time.sleep(25)
 shot(m, "05-hardpoint-updates")
 m.cmd("sendkey alt-f4")
 time.sleep(3)
-run_cmd(m, "gnome-session-quit --logout --no-prompt")
+if CALAMARES:
+    run_cmd(m, "sudo -E calamares")
+    time.sleep(25)
+    shot(m, "05b-installer-welcome")
+    for i in range(1, 6):
+        m.cmd("sendkey alt-n")
+        time.sleep(5)
+        shot(m, f"05c-installer-page{i}")
+    m.cmd("sendkey alt-c")       # Cancel
+    time.sleep(2)
+    m.cmd("sendkey alt-y")       # confirm
+    time.sleep(3)
+    run_cmd(m, "qdbus6 org.kde.Shutdown /Shutdown org.kde.Shutdown.logout")
+else:
+    run_cmd(m, "gnome-session-quit --logout --no-prompt")
 time.sleep(25)
 shot(m, "06-login-screen")
 m.cmd("quit")
 vm.wait(timeout=60)
 
-# ================= Phase 2: automatic install =================
-SEED = f"""
-d-i debian-installer/locale string en_US.UTF-8
-d-i keyboard-configuration/layoutcode string us
-d-i keyboard-configuration/xkb-keymap select us
-d-i time/zone string America/Edmonton
-d-i netcfg/get_hostname string hardpoint-test
-d-i passwd/user-fullname string HardPoint Test
-d-i passwd/username string {USER}
-d-i passwd/user-password password {PASS}
-d-i passwd/user-password-again password {PASS}
-d-i user-setup/allow-password-weak boolean true
-d-i user-setup/encrypt-home boolean false
-d-i partman-auto/disk string /dev/vda
-d-i partman-auto/method string regular
-d-i partman-auto/choose_recipe select atomic
-d-i partman-partitioning/confirm_write_new_label boolean true
-d-i partman/confirm_write_new_label boolean true
-d-i partman/choose_partition select finish
-d-i partman/confirm boolean true
-d-i partman/confirm_nooverwrite boolean true
-d-i partman-efi/non_efi_system boolean true
-ubiquity ubiquity/use_nonfree boolean false
-ubiquity ubiquity/download_updates boolean false
-ubiquity ubiquity/summary note
-ubiquity ubiquity/reboot boolean true
-ubiquity ubiquity/poweroff boolean true
-ubiquity ubiquity/success_command string echo HP-INSTALL-DONE > /dev/ttyS0
-"""
-(WORK / "www").mkdir()
-(WORK / "www" / "hp.seed").write_text(SEED)
+# ================= Phase 2: install =================
+httpd = None
+if CALAMARES:
+    t0 = time.time()
+    r = subprocess.run(["sudo", str(Path(__file__).resolve().parent / "host-install.sh"), str(ISO), str(DISK), USER, PASS],
+                       capture_output=True, text=True)
+    (OUT / "host-install.log").write_text(r.stdout + r.stderr)
+    installed = r.returncode == 0
+    note(installed, f"Install onto the test disk {'finished' if installed else 'failed (see host-install.log)'} ({(time.time() - t0) / 60:.0f} min)")
+else:
+    SEED = textwrap.dedent(f"""
+    d-i debian-installer/locale string en_US.UTF-8
+    d-i keyboard-configuration/layoutcode string us
+    d-i keyboard-configuration/xkb-keymap select us
+    d-i time/zone string America/Edmonton
+    d-i netcfg/get_hostname string hardpoint-test
+    d-i passwd/user-fullname string HardPoint Test
+    d-i passwd/username string {USER}
+    d-i passwd/user-password password {PASS}
+    d-i passwd/user-password-again password {PASS}
+    d-i user-setup/allow-password-weak boolean true
+    d-i user-setup/encrypt-home boolean false
+    d-i partman-auto/disk string /dev/vda
+    d-i partman-auto/method string regular
+    d-i partman-auto/choose_recipe select atomic
+    d-i partman-partitioning/confirm_write_new_label boolean true
+    d-i partman/confirm_write_new_label boolean true
+    d-i partman/choose_partition select finish
+    d-i partman/confirm boolean true
+    d-i partman/confirm_nooverwrite boolean true
+    d-i partman-efi/non_efi_system boolean true
+    ubiquity ubiquity/use_nonfree boolean false
+    ubiquity ubiquity/download_updates boolean false
+    ubiquity ubiquity/summary note
+    ubiquity ubiquity/reboot boolean true
+    ubiquity ubiquity/poweroff boolean true
+    ubiquity ubiquity/success_command string echo HP-INSTALL-DONE > /dev/ttyS0
+    """)
+    (WORK / "www").mkdir()
+    (WORK / "www" / "hp.seed").write_text(SEED)
 
 
-class Quiet(http.server.SimpleHTTPRequestHandler):
-    def __init__(self, *a, **k):
-        super().__init__(*a, directory=str(WORK / "www"), **k)
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *a, **k):
+            super().__init__(*a, directory=str(WORK / "www"), **k)
 
-    def log_message(self, *a):
-        log("seed fetched by VM")
+        def log_message(self, *a):
+            log("seed fetched by VM")
 
 
-httpd = socketserver.TCPServer(("0.0.0.0", 8088), Quiet)
-threading.Thread(target=httpd.serve_forever, daemon=True).start()
 
-s2, mon2 = OUT / "serial-install.log", WORK / "mon2.sock"
-t0 = time.time()
-vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
-           "-append", "boot=casper fsck.mode=skip ip=dhcp automatic-ubiquity noprompt url=http://10.0.2.2:8088/hp.seed "
-                      "debian-installer/locale=en_US.UTF-8 keyboard-configuration/layoutcode=us "
-                      "console=tty0 console=ttyS0,115200 quiet splash ---"], s2, mon2)
-m = Monitor(mon2)
-time.sleep(240)
-shot(m, "07-installer")
-installed = False
-for _ in range(60):  # up to ~60 more minutes
-    try:
-        vm.wait(timeout=60)
-        break
-    except subprocess.TimeoutExpired:
-        if int(time.time() - t0) % 600 < 60:
-            shot(m, f"07b-installer-{int((time.time() - t0) / 60)}min")
-if vm.poll() is None:
-    shot(m, "07c-installer-timeout")
-    vm.kill()
-installed = serial_has(s2, "HP-INSTALL-DONE") or (DISK.stat().st_size > 3_000_000_000)
-note(installed, f"Automatic install {'finished' if installed else 'did not finish'} ({(time.time() - t0) / 60:.0f} min)")
+    httpd = socketserver.TCPServer(("0.0.0.0", 8088), Quiet)
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+
+    s2, mon2 = OUT / "serial-install.log", WORK / "mon2.sock"
+    t0 = time.time()
+    vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
+               "-append", "boot=casper fsck.mode=skip ip=dhcp automatic-ubiquity noprompt url=http://10.0.2.2:8088/hp.seed "
+                          "debian-installer/locale=en_US.UTF-8 keyboard-configuration/layoutcode=us "
+                          "console=tty0 console=ttyS0,115200 quiet splash ---"], s2, mon2)
+    m = Monitor(mon2)
+    time.sleep(240)
+    shot(m, "07-installer")
+    installed = False
+    for _ in range(60):  # up to ~60 more minutes
+        try:
+            vm.wait(timeout=60)
+            break
+        except subprocess.TimeoutExpired:
+            if int(time.time() - t0) % 600 < 60:
+                shot(m, f"07b-installer-{int((time.time() - t0) / 60)}min")
+    if vm.poll() is None:
+        shot(m, "07c-installer-timeout")
+        vm.kill()
+    installed = serial_has(s2, "HP-INSTALL-DONE") or (DISK.stat().st_size > 3_000_000_000)
+    note(installed, f"Automatic install {'finished' if installed else 'did not finish'} ({(time.time() - t0) / 60:.0f} min)")
 
 # ================= Phase 3: installed system =================
 if installed:
@@ -289,8 +318,9 @@ if installed:
     shot(m, "08-boot-splash")
     time.sleep(75)
     note(shot(m, "09-login-screen"), "Installed system reached the login screen")
-    m.cmd("sendkey ret")
-    time.sleep(3)
+    if not CALAMARES:          # GDM: pick the user first; SDDM: password box is focused
+        m.cmd("sendkey ret")
+        time.sleep(3)
     type_text(m, PASS + "\n")
     time.sleep(60)
     shot(m, "10-first-run-setup")
@@ -311,7 +341,8 @@ if installed:
     except subprocess.TimeoutExpired:
         vm.kill()
 
-httpd.shutdown()
+if httpd:
+    httpd.shutdown()
 (OUT / "summary.md").write_text("# HardPoint OS VM test\n\n" + "\n".join(summary) + "\n\n"
                                 + "Screenshots: " + ", ".join(sorted(p.name for p in OUT.glob("*.png"))) + "\n")
 print((OUT / "summary.md").read_text())

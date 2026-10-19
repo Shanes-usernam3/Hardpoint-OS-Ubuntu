@@ -13,7 +13,7 @@ wn()   { warn=$((warn+1)); printf '%sWARN%s  %s\n' "$Y" "$N" "$*"; echo "WARN  $
 bad()  { fail=$((fail+1)); printf '%sFAIL%s  %s\n' "$R" "$N" "$*"; echo "FAIL  $*" >> "$OUT"; }
 sec()  { printf '\n== %s\n' "$*"; printf '\n== %s\n' "$*" >> "$OUT"; }
 chk()  { local d="$1"; shift; if "$@" >/dev/null 2>&1; then ok "$d"; else bad "$d"; fi; }
-gs()   { gsettings get "$@" 2>/dev/null | tr -d "'"; }
+kr()   { kreadconfig6 --file "$1" --group "$2" --key "$3" 2>/dev/null; }
 
 : > "$OUT"
 echo "HardPoint OS self-test — $(date '+%F %T')" | tee -a "$OUT"
@@ -38,23 +38,21 @@ if n="$(SUDO timeshift --list 2>/dev/null | grep -cE '^[0-9]+ +>')"; then
 else wn "Snapshots not checked (needs admin)"; fi
 
 sec "Look"
-for t in HardPoint-Dark HardPoint-Light; do [[ -f /usr/share/themes/$t/gtk-3.0/gtk.css ]] && ok "Theme $t built" || bad "Theme $t missing"; done
-[[ -f /usr/share/themes/HardPoint-Dark/gnome-shell/gnome-shell.css ]] && ok "Shell theme (menu/panel) built" || bad "Shell theme missing"
+for t in HardPointDark HardPointLight; do [[ -f /usr/share/color-schemes/$t.colors ]] && ok "Colour scheme $t" || bad "Colour scheme $t missing"; done
+[[ -d /usr/share/plasma/look-and-feel/com.hardpointnetworks.desktop ]] && ok "HardPoint desktop layout installed" || bad "HardPoint desktop layout missing"
 [[ -d /usr/share/icons/Papirus-Dark ]] && ok "Papirus icons installed" || bad "Papirus icons missing"
-gtk="$(gs org.gnome.desktop.interface gtk-theme)"; ic="$(gs org.gnome.desktop.interface icon-theme)"
-[[ $gtk == HardPoint-* ]] && ok "Your theme: $gtk" || wn "Your theme is $gtk (sign out and back in to switch)"
-[[ $ic == HardPoint-* || $ic == Papirus* ]] && ok "Your icons: $ic" || wn "Your icons are $ic"
-ut="$(gs org.gnome.shell.extensions.user-theme name)"; echo "      shell theme setting: ${ut:-not used}" | tee -a "$OUT"
+cs="$(kr kdeglobals General ColorScheme)"; ic="$(kr kdeglobals Icons Theme)"
+[[ $cs == HardPoint* ]] && ok "Your colours: $cs" || wn "Your colours are ${cs:-default}"
+[[ $ic == Papirus* ]] && ok "Your icons: $ic" || wn "Your icons are ${ic:-default}"
+[[ $(kr kdeglobals KDE LookAndFeelPackage) == com.hardpointnetworks.desktop ]] && ok "HardPoint look and feel" || wn "Look and feel: $(kr kdeglobals KDE LookAndFeelPackage)"
 grep -q '^Theme=hardpoint' /etc/plymouth/plymouthd.conf 2>/dev/null && ok "HardPoint boot splash" || bad "Boot splash not HardPoint"
+grep -qs 'hardpoint' /usr/share/sddm/themes/breeze/theme.conf.user && ok "HardPoint login screen" || wn "Login screen background not HardPoint"
 [[ -f /usr/share/hardpoint/branding/networks-wordmark-dark.png ]] && ok "HardPoint Networks logos installed" || bad "New logos missing"
 
 sec "Keyboard shortcuts"
-[[ $(gs org.gnome.shell.keybindings toggle-overview) == *Alt*space* ]] && ok "Alt+Space quick search" || wn "Alt+Space not set: $(gs org.gnome.shell.keybindings toggle-overview)"
-p="$(dconf read /org/gnome/terminal/legacy/keybindings/paste 2>/dev/null)"
-[[ -z $p || $p == *Primary*v* ]] && ok "Terminal Ctrl+V paste (default)" || wn "Terminal paste is $p"
-if command -v gpaste-client >/dev/null; then
-    [[ $(gs org.gnome.GPaste show-history) == *Super*v* ]] && ok "Super+V clipboard history" || wn "Clipboard history installed; sign out/in to enable Super+V"
-else echo "      clipboard history not installed (optional)" | tee -a "$OUT"; fi
+grep -qs 'Ctrl+Shift+Esc' /etc/xdg/kglobalshortcutsrc /usr/share/kubuntu-default-settings/kf5-settings/kglobalshortcutsrc && ok "Ctrl+Shift+Esc System Monitor, Win+I Settings" || wn "HardPoint shortcuts not set"
+command -v klipper >/dev/null || [[ -n $(ls /usr/lib/*/qt6/plugins/plasma/applets/*clipboard* 2>/dev/null) ]] || [[ -d /usr/share/plasma/plasmoids/org.kde.plasma.clipboard ]] && ok "Clipboard history (Win+V)" || wn "Clipboard history not found"
+ok "Terminal: Ctrl+Shift+C / Ctrl+Shift+V copy and paste (Konsole)"
 
 sec "Hardware"
 grep -qiE '^N: Name=.*(touchpad|synaptics|elan)' /proc/bus/input/devices && ok "Touchpad detected" || bad "Touchpad not detected"
@@ -96,14 +94,14 @@ command -v intune-portal >/dev/null && ok "Company Portal installed" || wn "Comp
 id -nG | grep -qw kvm && ok "In kvm group (VMs, Claude Cowork)" || wn "Not in kvm group: sudo usermod -aG kvm \$USER"
 
 sec "Apps"
-for a in steam code microsoft-edge-stable docker timeshift-launcher hardpoint-app claude-desktop; do
+for a in steam code microsoft-edge-stable docker timeshift-launcher hardpoint-app konsole dolphin; do
     command -v "$a" >/dev/null && ok "$a" || wn "$a not found"
 done
 flatpak remotes 2>/dev/null | grep -q flathub && ok "Flathub ready" || bad "Flathub missing"
 echo "      Flatpak apps: $(flatpak list --app --columns=name 2>/dev/null | tr '\n' ',' | sed 's/,$//')" | tee -a "$OUT"
 
 sec "Branding"
-z="$(grep -lE '^Name=.*Zorin' /usr/share/applications/*.desktop 2>/dev/null | xargs -r grep -LE '^(NoDisplay|Hidden)=true' | xargs -r -n1 basename | tr '\n' ' ')"
+z="$(grep -lE '^Name=.*Kubuntu' /usr/share/applications/*.desktop 2>/dev/null | xargs -r grep -LE '^(NoDisplay|Hidden)=true' | xargs -r -n1 basename | tr '\n' ' ')"
 [[ -z $z ]] && ok "No leftover upstream app names" || wn "Apps with upstream names: $z"
 
 printf '\n%s passed, %s warnings, %s failed\n' "$pass" "$warn" "$fail" | tee -a "$OUT"

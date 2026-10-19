@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=HardPoint clipboard history setup
-TryExec=gpaste-client
-Exec=/usr/lib/hardpoint/hp-clipboard-setup
-NoDisplay=true
-X-GNOME-Autostart-Phase=Applications

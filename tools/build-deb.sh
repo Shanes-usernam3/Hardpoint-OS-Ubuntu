@@ -2,7 +2,7 @@
 # Build the hardpoint-os package: every HardPoint file plus the setup that
 # applies branding and settings when it is installed or updated.
 #   tools/build-deb.sh <output-dir>          (needs Pillow + numpy for the artwork)
-#   HP_PKG_VERSION=18.20261012.7 tools/build-deb.sh out
+#   HP_PKG_VERSION=2.20261018.1 tools/build-deb.sh out
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # shellcheck source=config/base.env
@@ -39,25 +39,43 @@ for s in 16 22 24 32 48 64 96 128 256 512; do
     install -Dm644 "$B/logo-$s.png" "$P/usr/share/icons/hicolor/${s}x${s}/apps/hardpoint.png"
 done
 install -Dm644 "$HERE/config/flatpaks.list" "$P/usr/share/hardpoint/flatpaks.list"
-mkdir -p "$P/usr/share/gnome-background-properties"
-cat > "$P/usr/share/gnome-background-properties/hardpoint.xml" <<'XML'
-<?xml version="1.0"?>
-<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-<wallpapers>
-  <wallpaper deleted="false">
-    <name>HardPoint Byte</name>
-    <filename>/usr/share/backgrounds/hardpoint/byte-light.jpg</filename>
-    <filename-dark>/usr/share/backgrounds/hardpoint/byte-dark.jpg</filename-dark>
-    <options>zoom</options>
-    <shade_type>solid</shade_type>
-    <pcolor>#0A0E17</pcolor>
-    <scolor>#1A1B39</scolor>
-  </wallpaper>
-</wallpapers>
-XML
+# KDE Plasma: wallpaper package (light + dark), colour schemes, sign-in splash, installer art
+W="$P/usr/share/wallpapers/HardPoint"
+mkdir -p "$W/contents/images" "$W/contents/images_dark"
+cp "$P/usr/share/backgrounds/hardpoint/byte-light.jpg" "$W/contents/images/3840x2160.jpg"
+cp "$P/usr/share/backgrounds/hardpoint/byte-dark.jpg"  "$W/contents/images_dark/3840x2160.jpg"
+cat > "$W/metadata.json" <<'JSON'
+{
+    "KPlugin": {
+        "Authors": [ { "Name": "HardPoint Networks" } ],
+        "Id": "HardPoint",
+        "License": "CC-BY-SA-4.0",
+        "Name": "HardPoint Byte"
+    }
+}
+JSON
+python3 "$HERE/tools/make-colors.py" "$P/usr/share/color-schemes" >/dev/null
+L="$P/usr/share/plasma/look-and-feel/com.hardpointnetworks.desktop/contents"
+cp "$B/logo-256.png" "$L/splash/images/logo.png"
+mkdir -p "$L/previews"
+python3 - "$B" "$L/previews" <<'PY2'
+import sys
+from PIL import Image
+src, dst = sys.argv[1], sys.argv[2]
+im = Image.open(f"{src}/login.png").convert("RGB")
+im.resize((640, 360)).save(f"{dst}/preview.png")
+im.resize((1280, 720)).save(f"{dst}/fullscreenpreview.jpg", quality=90)
+im.resize((640, 360)).save(f"{dst}/splash.png")
+im.resize((640, 360)).save(f"{dst}/lockscreen.png")
+PY2
+CB="$P/etc/calamares/branding/hardpoint"
+cp "$B/logo-256.png" "$CB/logo.png"
+cp "$B/logo-64.png"  "$CB/icon.png"
+cp "$B/networks-wordmark-dark.png" "$CB/welcome.png"
 cat > "$P/usr/lib/hardpoint/setup/build.env" <<ENV
 HP_NAME="$HP_NAME"
 HP_EDITION="$HP_EDITION"
+HP_BASE_VERSION="$HP_BASE_VERSION"
 HP_VERSION="$VERSION"
 HP_HOME_URL="$HP_HOME_URL"
 ENV
@@ -73,11 +91,11 @@ Architecture: all
 Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
 Section: misc
 Priority: optional
-Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libkf6config-bin, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
 Recommends: $RECS
 Description: HardPoint OS — apps, branding, security and laptop settings
  HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
- splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ splash, Windows 11 style Plasma desktop, login screen and wallpapers, kernel hardening, Lockdown Mode, the
  I2C touchpad fix and the HardPoint update source. Updating this package
  updates HardPoint OS without reinstalling.
 CTRL
@@ -92,18 +110,10 @@ case "$1" in
     configure)
         /usr/lib/hardpoint/setup/apply.sh || echo "hardpoint-os: some settings could not be applied (see above)" >&2
         ;;
-    triggered)
-        for v in Dark Light; do
-            [ -d /usr/share/themes/ZorinBlue-$v ] && python3 /usr/lib/hardpoint/setup/make-theme.py \
-                /usr/share/themes/ZorinBlue-$v /usr/share/themes/HardPoint-$v "$(echo $v | tr A-Z a-z)" || true
-        done
-        ;;
 esac
 exit 0
 SH
 chmod 755 "$P/DEBIAN/postinst"
-# Rebuild the HardPoint themes when the base themes they are made from are updated
-printf 'interest-noawait /usr/share/themes/ZorinBlue-Dark\ninterest-noawait /usr/share/themes/ZorinBlue-Light\n' > "$P/DEBIAN/triggers"
 
 # Permissions: root-owned, scripts executable
 find "$P" -path "$P/DEBIAN" -prune -o -type d -exec chmod 755 {} +

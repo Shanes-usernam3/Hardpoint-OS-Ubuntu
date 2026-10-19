@@ -25,7 +25,7 @@ const HP = {
 // Preview data when the page is opened in a normal browser (design work, screenshots).
 const Mock = {
   state: {
-    user: "shane", realName: "Shane", host: "hardpoint-desktop", os: "HardPoint OS 18", live: false,
+    user: "shane", realName: "Shane", host: "hardpoint-desktop", os: "HardPoint OS 2", live: false,
     setupDone: false, updateTimer: true, colorScheme: "prefer-dark", installedApps: ["com.github.tchx84.Flatseal"],
     entra: { available: true, enabled: false, domain: "", active: false, companyPortal: true },
     security: { lockdown: false, firewall: true, apparmor: true, secureBoot: "off", kernelLockdown: "none", encrypted: true, usbguard: false },
@@ -50,10 +50,10 @@ const Mock = {
     if (m.cmd === "sysinfo") return reply(true, {
       vendor: "Lenovo", model: "ThinkBook 15 G4 IAP", machineType: "21DJ", serial: "PF3XXXXX", bios: "J6CN45WW (08/14/2025)",
       cpu: "12th Gen Intel(R) Core(TM) i5-1235U", ramGB: 16, gpu: "Intel Corporation Alder Lake-UP3 GT2 [Iris Xe Graphics]",
-      os: "HardPoint OS 18", kernel: "6.14.0-33-generic", uptimeH: 3.4,
+      os: "HardPoint OS 2", kernel: "6.14.0-33-generic", uptimeH: 3.4,
       disks: [{ name: "nvme0n1", model: "SAMSUNG MZVL2512HCJQ", sizeGB: 512, tran: "nvme" }, { name: "nvme1n1", model: "WD Blue SN580 1TB", sizeGB: 1000, tran: "nvme" }],
       battery: { present: true, percent: 78, status: "Charging", health: 91, cycles: 143, model: "L20M3PF0", manufacturer: "SMP" },
-      chargeLimit: { supported: true, on: false, method: "conservation" }, windowsDrive: false, focus: false,
+      chargeLimit: { supported: true, on: false, method: "conservation" }, windowsDrive: false,
       checks: [
         { key: "touchpad", name: "Touchpad", ok: true, detail: "Working", fix: "" },
         { key: "wifi", name: "Wi-Fi", ok: true, detail: "Adapter wlp0s20f3 ready", fix: "" },
@@ -522,7 +522,6 @@ const System = {
         ? "Stops charging at about 80% so the battery lasts years longer. Best when the laptop is plugged in most of the time — turn it off before a trip for a full charge."
         : "This PC doesn't offer a charge limit."}</p></div>${cl.supported ? toggleHTML("x-batt", cl.on) : ""}</div>
       <div class="card row between"><div><h3>Show my Windows drive</h3><p class="small">Your Windows SSD appears in Files as “Windows” so you can copy files off it. Read-only, so nothing here can damage Windows.</p></div>${toggleHTML("x-win", i.windowsDrive)}</div>
-      <div class="card row between"><div><h3>Focus mode</h3><p class="small">Silences notification pop-ups and turns on warm Night Light. Also in the app menu as <b>Focus Mode</b>.</p></div>${toggleHTML("x-focus", i.focus)}</div>
       <div class="card"><h3>Shortcuts worth knowing</h3><p class="small" style="margin-top:6px;line-height:1.9">
         The same keys as Windows: <b>Win</b> Start · <b>Win+S</b> or <b>Alt+Space</b> search · <b>Win+A</b> quick settings ·
         <b>Win+N</b> notifications · <b>Win+E</b> Files · <b>Win+I</b> Settings · <b>Win+D</b> desktop · <b>Win+L</b> lock ·
@@ -542,7 +541,6 @@ const System = {
       await HP.root("windows-drive", [on ? "on" : "off"], log);
       toast(on ? "Windows drive added to Files" : "Windows drive hidden"); System.info.windowsDrive = on;
     });
-    flip("x-focus", async (on) => { await HP.call("focus", { args: [on ? "on" : "off"] }); System.info.focus = on; });
   },
   async render() {
     $("#main").innerHTML = `<div class="head"><h1>System</h1><p>This PC at a glance, health checks and one-click repair.</p></div><div class="card"><div class="bar busy"><i></i></div></div>`;

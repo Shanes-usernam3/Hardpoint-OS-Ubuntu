@@ -5,4 +5,4 @@ Exec=hardpoint-app setup --first-run
 Icon=hardpoint
 NoDisplay=true
 X-GNOME-Autostart-Delay=3
-OnlyShowIn=GNOME;Zorin;
+OnlyShowIn=KDE;

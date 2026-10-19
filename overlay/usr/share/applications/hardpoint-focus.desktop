@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Focus Mode
-Comment=Silence notifications and turn on Night Light (open again to turn off)
-Exec=/usr/lib/hardpoint/hp-focus toggle
-Icon=hardpoint
-Categories=Utility;
-Keywords=focus;do not disturb;night light;

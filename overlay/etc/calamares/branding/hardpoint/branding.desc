@@ -1,0 +1,25 @@
+# HardPoint OS installer branding
+---
+componentName:  hardpoint
+windowExpanding:    fullscreen
+strings:
+    productName:         HardPoint OS
+    shortProductName:    HardPoint OS
+    version:             2
+    shortVersion:        2
+    versionedName:       HardPoint OS 2
+    shortVersionedName:  HardPoint OS 2
+    bootloaderEntryName: HardPoint OS
+    productUrl:          https://github.com/Shanes-usernam3/Hardpoint-OS-Ubuntu
+    supportUrl:          https://github.com/Shanes-usernam3/Hardpoint-OS-Ubuntu/issues
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "welcome.png"
+slideshow:               "show.qml"
+slideshowAPI:            1
+style:
+   SidebarBackground:        "#0A0E17"
+   SidebarText:              "#ECF0F7"
+   SidebarTextCurrent:       "#03F4D4"
+   SidebarBackgroundCurrent: "#1A1B39"
