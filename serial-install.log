@@ -1,0 +1,407 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01Hdhcpcd-10.0.6 starting
+dev: loaded udev
+DUID 00:03:00:01:52:54:00:12:34:56
+enp0s2: IAID 00:12:34:56
+enp0s2: carrier acquired
+enp0s2: IAID 00:12:34:56
+enp0s2: soliciting a DHCP lease
+enp0s2: offered 10.0.2.15 from 10.0.2.2
+enp0s2: probing address 10.0.2.15/24
+fsck:md5sums%
+Check skipped.
+enp0s2: leased 10.0.2.15 for 86400 seconds
+enp0s2: adding route to 10.0.2.0/24
+enp0s2: adding default route via 10.0.2.2
+exiting due to oneshot
+dhcpcd exited
+
+Generating locales (this might take a while)...
+Generation complete.
+hostname: Name or service not known
+make-ssl-cert: Could not get FQDN, using '(none)'.
+make-ssl-cert: You may want to fix your /etc/hosts and/or DNS setup and run
+make-ssl-cert: 'make-ssl-cert generate-default-snakeoil --force-overwrite'
+make-ssl-cert: again.
+chroot: can't execute 'dhclient': No such file or directory
+Connecting to 10.0.2.2:8088 (10.0.2.2:8088)
+saving to '/tmp/hp.seed'
+hp.seed              100% |********************************|  1176  0:00:00 ETA
+'/tmp/hp.seed' saved
+passwd: password changed.
+sudo: unable to resolve host (none): Name or service not known
+dbus-daemon[1628]: [session uid=1000 pid=1628] Activating service name='org.gtk.vfs.Daemon' requested by ':1.0' (uid=1000 pid=1629 comm="" label="unconfined")
+dbus-daemon[1628]: [session uid=1000 pid=1628] Successfully activated service 'org.gtk.vfs.Daemon'
+dbus-daemon[1628]: [session uid=1000 pid=1628] Activating service name='org.gtk.vfs.Metadata' requested by ':1.0' (uid=1000 pid=1629 comm="" label="unconfined")
+fuse: device not found, try 'modprobe fuse' first
+dbus-daemon[1628]: [session uid=1000 pid=1628] Successfully activated service 'org.gtk.vfs.Metadata'
+A connection to the bus can't be made
+grep: /root/etc/default/apport: No such file or directory
+Using CD-ROM mount point /cdrom/
+Identifying... [edca85e30563b69f2fa4d64c1c641da4-2]
+Scanning disc for index files...
+Found 4 package indexes, 0 source indexes, 0 translation indexes and 1 signatures
+Found label 'HardPoint OS 18.20261019 amd64 - Release'
+This disc is called: 
+'HardPoint OS 18.20261019 amd64 - Release'
+Copying package lists...gpgv: Signature made Tue Apr 14 18:15:05 2026 UTC
+gpgv:                using RSA key E4F1620C9A0CBA4CBD9BF4E638919217010EA813
+gpgv: Good signature from "Zorin OS (ISO Signing Key) <os@zoringroup.com>"
+gpgv: asserted signer 'E4F1620C9A0CBA4CBD9BF4E638919217010EA813' with algo rsa4096
+Reading Package Indexes... 0%Reading Package Indexes... 0%Reading Package Indexes... Done
+Writing new source list
+Source list entries for this disc are:
+deb cdrom:[HardPoint OS 18.20261019 amd64 - Release]/ noble main restricted
+Repeat this process for the rest of the CDs in your set.
+chown: warning: '.' should be ':': 'hardpoint.hardpoint'
+chown: warning: '.' should be ':': 'hardpoint.hardpoint'
+-.mount
+cdrom.mount
+rofs.mount
+systemd-journald.service
+dev-hugepages.mount
+dev-mqueue.mount
+sys-kernel-debug.mount
+sys-kernel-tracing.mount
+kmod-static-nodes.service
+systemd-remount-fs.service
+sys-fs-fuse-connections.mount
+sys-kernel-config.mount
+systemd-udev-trigger.service
+systemd-journal-flush.service
+systemd-random-seed.service
+keyboard-setup.service
+systemd-tmpfiles-setup-dev-early.service
+lvm2-monitor.service
+systemd-sysusers.service
+systemd-tmpfiles-setup-dev.service
+systemd-modules-load.service
+systemd-sysctl.service
+systemd-udevd.service
+systemd-zram-setup@zram0.service
+plymouth-start.service
+dev-zram0.swap
+tmp.mount
+plymouth-read-write.service
+[[0;32m  OK  [0m] Finished [0;1;39mfinalrd.service[0m - Create …untime dir for shutdown pivot root.
+finalrd.service
+         Mounting [0;1;39mproc-sys-fs-binfmt_misc.m…[0mcutable File Formats File System...
+[[0;32m  OK  [0m] Mounted [0;1;39mproc-sys-fs-binfmt_misc.mo…[0mxecutable File Formats File System.
+proc-sys-fs-binfmt_misc.mount
+[[0;32m  OK  [0m] Finished [0;1;39mqemu-kvm.service[0m - QEMU K…eparation - module, ksm, hugepages.
+qemu-kvm.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-binfmt.service[0m - Set Up Additional Binary Formats.
+systemd-binfmt.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-tmpfiles-setup.se…[0mate Volatile Files and Directories.
+systemd-tmpfiles-setup.service
+         Starting [0;1;39msystemd-journal-catalog-u…ervice[0m - Rebuild Journal Catalog...
+         Starting [0;1;39msystemd-oomd.service[0m - Us…space Out-Of-Memory (OOM) Killer...
+         Starting [0;1;39msystemd-resolved.service[0m - Network Name Resolution...
+         Starting [0;1;39msystemd-timesyncd.service[0m - Network Time Synchronization...
+         Starting [0;1;39msystemd-update-utmp.servi…[0mord System Boot/Shutdown in UTMP...
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-update-utmp.servi…[0mecord System Boot/Shutdown in UTMP.
+systemd-update-utmp.service
+[[0;32m  OK  [0m] Started [0;1;39msystemd-timesyncd.service[0m - Network Time Synchronization.
+systemd-timesyncd.service
+[[0;32m  OK  [0m] Reached target [0;1;39mtime-set.target[0m - System Time Set.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-oomd.service[0m - Userspace Out-Of-Memory (OOM) Killer.
+systemd-oomd.service
+[[0;32m  OK  [0m] Started [0;1;39msystemd-resolved.service[0m - Network Name Resolution.
+systemd-resolved.service
+[[0;32m  OK  [0m] Reached target [0;1;39mnss-lookup.target[0m - Host and Network Name Lookups.
+[[0;32m  OK  [0m] Finished [0;1;39mconsole-setup.service[0m - Set console font and keymap.
+console-setup.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-journal-catalog-u….service[0m - Rebuild Journal Catalog.
+systemd-journal-catalog-update.service
+ufw.service
+[[0;32m  OK  [0m] Finished [0;1;39mufw.service[0m - Uncomplicated firewall.
+[[0;32m  OK  [0m] Reached target [0;1;39mnetwork-pre.target[0m - Preparation for Network.
+[[0;32m  OK  [0m] Finished [0;1;39mapparmor.service[0m - Load AppArmor profiles.
+apparmor.service
+         Starting [0;1;39msnapd.apparmor.service[0m - …iles managed internally by snapd...
+[[0;32m  OK  [0m] Finished [0;1;39msnapd.apparmor.service[0m - …ofiles managed internally by snapd.
+snapd.apparmor.service
+[[0;32m  OK  [0m] Finished [0;1;39mldconfig.service[0m - Rebuild Dynamic Linker Cache.
+ldconfig.service
+         Starting [0;1;39msystemd-update-done.service[0m - Update is Completed...
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-update-done.service[0m - Update is Completed.
+[[0;32m  OK  [0m] Reached target [0;1;39msysinit.target[0m - System Initialization.
+[[0;32m  OK  [0m] Started [0;1;39mcups.path[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Started [0;1;39mwhoopsie.path[0m - Start whoo…cation of the /var/crash directory.
+[[0;32m  OK  [0m] Started [0;1;39manacron.timer[0m - Trigger anacron every hour.
+[[0;32m  OK  [0m] Started [0;1;39mapt-daily.timer[0m - Daily apt download activities.
+[[0;32m  OK  [0m] Started [0;1;39mapt-daily-upgrade.timer[0m - …y apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started [0;1;39mdpkg-db-backup.timer[0m - Daily dpkg database backup timer.
+[[0;32m  OK  [0m] Started [0;1;39me2scrub_all.timer[0m - Period…Metadata Check for All Filesystems.
+systemd-update-done.service
+[[0;32m  OK  [0m] Started [0;1;39mfstrim.timer[0m - Discard unused filesystem blocks once a week.
+[[0;32m  OK  [0m] Started [0;1;39mfwupd-refresh.timer[0m - Refresh fwupd metadata regularly.
+[[0;32m  OK  [0m] Started [0;1;39mlogrotate.timer[0m - Daily rotation of log files.
+[[0;32m  OK  [0m] Started [0;1;39mman-db.timer[0m - Daily man-db regeneration.
+[[0;32m  OK  [0m] Started [0;1;39mmotd-news.timer[0m - Message of the Day.
+[[0;32m  OK  [0m] Started [0;1;39mpodman-auto-update.timer[0m - Podman auto-update timer.
+[[0;32m  OK  [0m] Started [0;1;39msysstat-collect.timer[0m - Ru…y accounting tool every 10 minutes.
+[[0;32m  OK  [0m] Started [0;1;39msysstat-summary.timer[0m - Ge… of yesterday's process accounting.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-tmpfiles-clean.tim…[0my Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Reached target [0;1;39mboot-complete.target[0m - Boot Completion Check.
+[[0;32m  OK  [0m] Reached target [0;1;39mpaths.target[0m - Path Units.
+[[0;32m  OK  [0m] Listening on [0;1;39mavahi-daemon.socket[0m -…DNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mcups.socket[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Listening on [0;1;39mdbus.socket[0m - D-Bus System Message Bus Socket.
+         Starting [0;1;39mdocker.socket[0m - Docker Socket for the API...
+[[0;32m  OK  [0m] Listening on [0;1;39mintune-daemon.socket[0m - Intune daemon control socket.
+[[0;32m  OK  [0m] Listening on [0;1;39miscsid.socket[0m - Open-iSCSI iscsid Socket.
+         Starting [0;1;39mlibvirtd.socket[0m - libvirt legacy monolithic daemon socket...
+[[0;32m  OK  [0m] Listening on [0;1;39mpodman.socket[0m - Podman API Socket.
+         Starting [0;1;39msnapd.socket[0m - Socket activation for snappy daemon...
+[[0;32m  OK  [0m] Listening on [0;1;39muuidd.socket[0m - UUID daemon activation socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlockd.socket[0m - libvirt locking daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlockd-admin.socke…[0mibvirt locking daemon admin socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlogd.socket[0m - libvirt logging daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlogd-admin.socket[0m…ibvirt logging daemon admin socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mdocker.socket[0m - Docker Socket for the API.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd.socket[0m - lib…rt legacy monolithic daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39msnapd.socket[0m - Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd-admin.socket[0m…acy monolithic daemon admin socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd-ro.socket[0m - …monolithic daemon read-only socket.
+[[0;32m  OK  [0m] Reached target [0;1;39msockets.target[0m - Socket Units.
+[[0;32m  OK  [0m] Reached target [0;1;39mbasic.target[0m - Basic System.
+[[0;32m  OK  [0m] Started [0;1;39manacron.service[0m - Run anacron jobs.
+anacron.service
+         Starting [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack...
+         Starting [0;1;39mdbus.service[0m - D-Bus System Message Bus...
+[[0;32m  OK  [0m] Started [0;1;39mdmesg.service[0m - Save initial kernel messages after boot.
+         Starting [0;1;39me2scrub_reap.service[0m - Re…ne ext4 Metadata Check Snapshots...
+dmesg.service
+         Starting [0;1;39mgnome-remote-desktop.service[0m - GNOME Remote Desktop...
+         Starting [0;1;39mgpu-manager.service[0m - Det…and deal with any system changes...
+         Starting [0;1;39mgrub-common.service[0m - Record successful boot for GRUB...
+         Starting [0;1;39mhardpoint-boot.service[0m - …ttery charge limit, system info)...
+         Starting [0;1;39mhardpoint-touchpad.servic…[0mS touchpad check (I2C touchpads)...
+         Starting [0;1;39mlm-sensors.service[0m - Init…lize hardware monitoring sensors...
+         Starting [0;1;39mpodman-clean-transient.se…[0m- Clean up podman transient data...
+         Starting [0;1;39mpodman.service[0m - Podman API Service...
+         Starting [0;1;39mpolkit.service[0m - Authorization Manager...
+         Starting [0;1;39mpower-profiles-daemon.service[0m - Power Profiles daemon...
+         Starting [0;1;39mrsyslog.service[0m - System Logging Service...
+[[0;32m  OK  [0m] Reached target [0;1;39mgetty-pre.target[0m - Preparation for Logins.
+         Starting [0;1;39msnapd.seeded.service[0m - Wait until snapd is fully seeded...
+         Starting [0;1;39msnapd.service[0m - Snap Daemon...
+[[0;32m  OK  [0m] Reached target [0;1;39mnss-user-lookup.target[0m - User and Group Name Lookups.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-nss.soc…[0m SSSD NSS Service responder socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-autofs.…[0mSD AutoFS Service responder socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-pac.soc…[0m SSSD PAC Service responder socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-pam-pri…[0mM Service responder private socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-pam.soc…[0m SSSD PAM Service responder socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-ssh.soc…[0m SSSD SSH Service responder socket.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39msssd-sudo.so…[0mSSSD Sudo Service responder socket.
+         Starting [0;1;39maccounts-daemon.service[0m - Accounts Service...
+         Starting [0;1;39mswitcheroo-control.servic…[0mSwitcheroo Control Proxy service...
+         Starting [0;1;39msysstat.service[0m - Resets System Activity Logs...
+         Starting [0;1;39msystemd-logind.service[0m - User Login Management...
+         Starting [0;1;39msystemd-machined.service[0m …d Container Registration Service...
+[[0;32m  OK  [0m] Started [0;1;39mtouchegg.service[0m - Touchégg Daemon.
+touchegg.service
+         Starting [0;1;39mubiquity.service[0m - Ubuntu live CD installer...
+         Starting [0;1;39mudisks2.service[0m - Disk Manager...
+         Starting [0;1;39musbguard-dbus.service[0m - USBGuard D-Bus Service...
+         Starting [0;1;39musbguard.service[0m - USBGuard daemon...
+         Starting [0;1;39mvirtlockd.service[0m - libvirt locking daemon...
+         Starting [0;1;39mvirtlogd.service[0m - libvirt logging daemon...
+[[0;32m  OK  [0m] Finished [0;1;39me2scrub_reap.service[0m - Re…line ext4 Metadata Check Snapshots.
+[[0;32m  OK  [0m] Started [0;1;39mpodman.service[0m - Podman API Service.
+podman.service
+[[0;32m  OK  [0m] Finished [0;1;39mlm-sensors.service[0m - Initialize hardware monitoring sensors.
+lm-sensors.service
+[[0;32m  OK  [0m] Finished [0;1;39mgrub-common.service[0m - Record successful boot for GRUB.
+         Starting [0;1;39mgrub-initrd-fallback.service[0m - GRUB failed boot detection...
+[[0;32m  OK  [0m] Finished [0;1;39mhardpoint-boot.service[0m - …battery charge limit, system info).
+[[0;32m  OK  [0m] Finished [0;1;39mgrub-initrd-fallback.service[0m - GRUB failed boot detection.
+[[0;32m  OK  [0m] Started [0;1;39mvirtlogd.service[0m - libvirt logging daemon.
+virtlogd.service
+[[0;32m  OK  [0m] Started [0;1;39mvirtlockd.service[0m - libvirt locking daemon.
+virtlockd.service
+[[0;32m  OK  [0m] Started [0;1;39msystemd-logind.service[0m - User Login Management.
+systemd-logind.service
+[[0;32m  OK  [0m] Finished [0;1;39msysstat.service[0m - Resets System Activity Logs.
+sysstat.service
+[[0;32m  OK  [0m] Finished [0;1;39mhardpoint-touchpad.servic…[0m OS touchpad check (I2C touchpads).
+[[0;32m  OK  [0m] Started [0;1;39musbguard.service[0m - USBGuard daemon.
+usbguard.service
+[9;0][[0;32m  OK  [0m] Started [0;1;39mrsyslog.service[0m - System Logging Service.
+rsyslog.service
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mpodman-clean-trans…e[0m - Clean up podman transient data.
+See 'systemctl status podman-clean-transient.service' for details.
+tmp-syscheck\x2dmountpoint\x2d665298486.mount
+[[0;32m  OK  [0m] Finished [0;1;39mgpu-manager.service[0m - Det…s and deal with any system changes.
+[[0;32m  OK  [0m] Started [0;1;39mdbus.service[0m - D-Bus System Message Bus.
+dbus.service
+         Starting [0;1;39mNetworkManager.service[0m - Network Manager...
+         Starting [0;1;39mwpa_supplicant.service[0m - WPA supplicant...
+[[0;32m  OK  [0m] Started [0;1;39musbguard-dbus.service[0m - USBGuard D-Bus Service.
+usbguard-dbus.service
+[[0;32m  OK  [0m] Started [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack.
+avahi-daemon.service
+[[0;32m  OK  [0m] Started [0;1;39mswitcheroo-control.service[0m - Switcheroo Control Proxy service.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-machined.service[0m -…and Container Registration Service.
+switcheroo-control.service
+systemd-machined.service
+[[0;32m  OK  [0m] Started [0;1;39msnapd.service[0m - Snap Daemon.
+snapd.service
+         Starting [0;1;39msnapd.hold.service[0m - Holds Snappy daemon refresh...
+[[0;32m  OK  [0m] Started [0;1;39mwpa_supplicant.service[0m - WPA supplicant.
+wpa_supplicant.service
+         Starting [0;1;39msystemd-timedated.service[0m - Time & Date Service...
+[[0;32m  OK  [0m] Started [0;1;39mpolkit.service[0m - Authorization Manager.
+polkit.service
+power-profiles-daemon.service
+gnome-remote-desktop.service
+         Starting [0;1;39mModemManager.service[0m - Modem Manager...
+[[0;32m  OK  [0m] Started [0;1;39mpower-profiles-daemon.service[0m - Power Profiles daemon.
+[[0;32m  OK  [0m] Started [0;1;39mgnome-remote-desktop.service[0m - GNOME Remote Desktop.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-timedated.service[0m - Time & Date Service.
+systemd-timedated.service
+[[0;32m  OK  [0m] Started [0;1;39mudisks2.service[0m - Disk Manager.
+udisks2.service
+         Starting [0;1;39msystemd-hostnamed.service[0m - Hostname Service...
+accounts-daemon.service
+[[0;32m  OK  [0m] Started [0;1;39maccounts-daemon.service[0m - Accounts Service.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-hostnamed.service[0m - Hostname Service.
+systemd-hostnamed.service
+         Starting [0;1;39mNetworkManager-dispatcher…[0manager Script Dispatcher Service...
+[[0;32m  OK  [0m] Started [0;1;39mNetworkManager-dispatcher.…[0m Manager Script Dispatcher Service.
+NetworkManager-dispatcher.service
+[[0;32m  OK  [0m] Started [0;1;39mModemManager.service[0m - Modem Manager.
+ModemManager.service
+NetworkManager.service
+unattended-upgrades.service
+openvpn.service
+libvirt-guests.service
+cups.service
+containerd.service
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mpodman-auto-update…rvice[0m - Podman auto-update service.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mpodman-restart.ser…[0m With Restart Policy Set To Always.
+
+HardPoint OS 18 hardpoint ttyS0
+
+hardpoint login: HP-INSTALL-DONE
+[[0;32m  OK  [0m] Unmounted [0;1;39mrun-user-1000-doc.mount[0m - /run/user/1000/doc.
+[[0;32m  OK  [0m] Unmounted [0;1;39mrun-user-1000-gvfs.mount[0m - /run/user/1000/gvfs.
+[[0;32m  OK  [0m] Stopped [0;1;39mgnome-remote-desktop.service[0m - GNOME Remote Desktop.
+[[0;32m  OK  [0m] Stopped [0;1;39mModemManager.service[0m - Modem Manager.
+         Stopping [0;1;39mpolkit.service[0m - Authorization Manager...
+[[0;32m  OK  [0m] Stopped [0;1;39mpolkit.service[0m - Authorization Manager.
+[[0;32m  OK  [0m] Stopped [0;1;39musbguard.service[0m - USBGuard daemon.
+[[0;32m  OK  [0m] Stopped [0;1;39mupower.service[0m - Daemon for power management.
+[[0;32m  OK  [0m] Stopped [0;1;39muser@1000.service[0m - User Manager for UID 1000.
+         Stopping [0;1;39msystemd-oomd.service[0m - Us…space Out-Of-Memory (OOM) Killer...
+         Stopping [0;1;39msystemd-user-sessions.service[0m - Permit User Sessions...
+         Stopping [0;1;39muser-runtime-dir@1000.ser…[0mRuntime Directory /run/user/1000...
+[[0;32m  OK  [0m] Stopped [0;1;39mudisks2.service[0m - Disk Manager.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-oomd.service[0m - Userspace Out-Of-Memory (OOM) Killer.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-user-sessions.service[0m - Permit User Sessions.
+[[0;32m  OK  [0m] Unmounted [0;1;39mrun-user-1000.mount[0m - /run/user/1000.
+[[0;32m  OK  [0m] Stopped [0;1;39muser-runtime-dir@1000.serv…[0mr Runtime Directory /run/user/1000.
+[[0;32m  OK  [0m] Removed slice [0;1;39muser-1000.slice[0m - User Slice of UID 1000.
+[[0;32m  OK  [0m] Stopped target [0;1;39mremote-fs.target[0m - Remote File Systems.
+[[0;32m  OK  [0m] Stopped target [0;1;39mremote-fs-pre.targe…[0mreparation for Remote File Systems.
+[[0;32m  OK  [0m] Stopped [0;1;39mcups-browsed.service[0m - Mak…te CUPS printers available locally.
+[[0;32m  OK  [0m] Stopped target [0;1;39mnetwork-online.target[0m - Network is Online.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetworkManager-wait-online…vice[0m - Network Manager Wait Online.
+         Stopping [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack...
+         Stopping [0;1;39mcups.service[0m - CUPS Scheduler...
+[[0;32m  OK  [0m] Stopped [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack.
+[[0;32m  OK  [0m] Started [0;1;39mplymouth-reboot.service[0m - Show Plymouth Reboot Screen.
+plymouth-reboot.service
+         Starting [0;1;39mplymouth-switch-root-init…[0mll Plymouth To Jump To initramfs...
+
+[[0;32m  OK  [0m] Stopped [0;1;39mcups.service[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Stopped target [0;1;39mnss-user-lookup.target[0m - User and Group Name Lookups.
+[[0;32m  OK  [0m] Finished [0;1;39mplymouth-switch-root-init…[0mTell Plymouth To Jump To initramfs.
+plymouth-switch-root-initramfs.service
+[  957.982286] libvirt-guests.sh[43741]: Can't connect to default. Skipping.
+[[0;32m  OK  [0m] Stopped [0;1;39mlibvirt-guests.service[0m - l…virt guests suspend/resume service.
+[[0;32m  OK  [0m] Stopped target [0;1;39mnetwork.target[0m - Network.
+[[0;32m  OK  [0m] Stopped target [0;1;39mvirt-guest-shutdown…t[0m - libvirt guests shutdown target.
+         Stopping [0;1;39mNetworkManager.service[0m - Network Manager...
+         Stopping [0;1;39mwpa_supplicant.service[0m - WPA supplicant...
+[[0;32m  OK  [0m] Stopped [0;1;39mwpa_supplicant.service[0m - WPA supplicant.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetworkManager.service[0m - Network Manager.
+[[0;32m  OK  [0m] Stopped target [0;1;39mbasic.target[0m - Basic System.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-ask-password-plymo…[0mquests to Plymouth Directory Watch.
+[[0;32m  OK  [0m] Stopped target [0;1;39mnetwork-pre.target[0m - Preparation for Network.
+[[0;32m  OK  [0m] Stopped target [0;1;39mpaths.target[0m - Path Units.
+[[0;32m  OK  [0m] Stopped [0;1;39mcups.path[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Stopped [0;1;39mwhoopsie.path[0m - Start whoo…cation of the /var/crash directory.
+[[0;32m  OK  [0m] Stopped target [0;1;39mslices.target[0m - Slice Units.
+[[0;32m  OK  [0m] Removed slice [0;1;39mmachine.slice[0m - Virtual Machine and Container Slice.
+[[0;32m  OK  [0m] Removed slice [0;1;39muser.slice[0m - User and Session Slice.
+[[0;32m  OK  [0m] Stopped target [0;1;39msockets.target[0m - Socket Units.
+[[0;32m  OK  [0m] Closed [0;1;39mavahi-daemon.socket[0m - Avahi…DNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Closed [0;1;39mcups.socket[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Closed [0;1;39mdocker.socket[0m - Docker Socket for the API.
+[[0;32m  OK  [0m] Closed [0;1;39mintune-daemon.socket[0m - Intune daemon control socket.
+[[0;32m  OK  [0m] Closed [0;1;39miscsid.socket[0m - Open-iSCSI iscsid Socket.
+[[0;32m  OK  [0m] Closed [0;1;39mlibvirtd-admin.socket[0m - lib…acy monolithic daemon admin socket.
+[[0;32m  OK  [0m] Closed [0;1;39mlibvirtd-ro.socket[0m - libvir…monolithic daemon read-only socket.
+[[0;32m  OK  [0m] Closed [0;1;39mlibvirtd.socket[0m - libvirt legacy monolithic daemon socket.
+[[0;32m  OK  [0m] Closed [0;1;39mpodman.socket[0m - Podman API Socket.
+[[0;32m  OK  [0m] Closed [0;1;39msnapd.socket[0m - Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Closed [0;1;39msyslog.socket[0m - Syslog Socket.
+[[0;32m  OK  [0m] Closed [0;1;39msystemd-oomd.socket[0m - Users… Out-Of-Memory (OOM) Killer Socket.
+[[0;32m  OK  [0m] Closed [0;1;39muuidd.socket[0m - UUID daemon activation socket.
+[[0;32m  OK  [0m] Closed [0;1;39mvirtlockd-admin.socket[0m - libvirt locking daemon admin socket.
+[[0;32m  OK  [0m] Closed [0;1;39mvirtlockd.socket[0m - libvirt locking daemon socket.
+[[0;32m  OK  [0m] Closed [0;1;39mvirtlogd-admin.socket[0m - libvirt logging daemon admin socket.
+[[0;32m  OK  [0m] Closed [0;1;39mvirtlogd.socket[0m - libvirt logging daemon socket.
+[[0;32m  OK  [0m] Stopped target [0;1;39msysinit.target[0m - System Initialization.
+[[0;32m  OK  [0m] Stopped target [0;1;39mcryptsetup.target[0m - Local Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-ask-password-wall.…[0md Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped target [0;1;39mintegritysetup.targ…[0m Local Integrity Protected Volumes.
+[[0;32m  OK  [0m] Stopped target [0;1;39mveritysetup.target[0m - Local Verity Protected Volumes.
+         Stopping [0;1;39msystemd-binfmt.service[0m - Set Up Additional Binary Formats...
+         Stopping [0;1;39msystemd-resolved.service[0m - Network Name Resolution...
+         Stopping [0;1;39msystemd-timesyncd.service[0m - Network Time Synchronization...
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-update-done.service[0m - Update is Completed.
+[[0;32m  OK  [0m] Stopped [0;1;39mldconfig.service[0m - Rebuild Dynamic Linker Cache.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-journal-catalog-up….service[0m - Rebuild Journal Catalog.
+         Stopping [0;1;39msystemd-update-utmp.servi…[0mord System Boot/Shutdown in UTMP...
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-resolved.service[0m - Network Name Resolution.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-timesyncd.service[0m - Network Time Synchronization.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-sysctl.service[0m - Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-modules-load.service[0m - Load Kernel Modules.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-binfmt.service[0m - Set Up Additional Binary Formats.
+[[0;32m  OK  [0m] Unset automount [0;1;39mproc-sys-fs-binfmt…[0mormats File System Automount Point.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-update-utmp.servic…[0mecord System Boot/Shutdown in UTMP.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-tmpfiles-setup.ser…[0mate Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped [0;1;39mfinalrd.service[0m - Create f…untime dir for shutdown pivot root.
+[[0;32m  OK  [0m] Stopped target [0;1;39mlocal-fs.target[0m - Local File Systems.
+[[0;32m  OK  [0m] Stopped target [0;1;39msnapd.mounts.target[0m - Mounted snaps.
+[[0;32m  OK  [0m] Stopped target [0;1;39msnapd.mounts-pre.target[0m - Mounting snaps.
+         Unmounting [0;1;39mcdrom.mount[0m - /cdrom...
+         Unmounting [0;1;39mrofs.mount[0m - /rofs...
+         Unmounting [0;1;39mtmp.mount[0m - /tmp...
+[[0;1;31mFAILED[0m] Failed unmounting [0;1;39mcdrom.mount[0m - /cdrom.
+cdrom.mount
+[[0;32m  OK  [0m] Unmounted [0;1;39mrofs.mount[0m - /rofs.
+[[0;32m  OK  [0m] Unmounted [0;1;39mtmp.mount[0m - /tmp.
+[[0;32m  OK  [0m] Stopped target [0;1;39mswap.target[0m - Swaps.
+         Deactivating swap [0;1;39mdev-zram0.swap[0m - Compressed Swap on /dev/zram0...
+         Deactivating swap [0;1;39mtarget-swapfile.swap[0m - /target/swapfile...
+[[0;32m  OK  [0m] Deactivated swap [0;1;39mtarget-swapfile.swap[0m - /target/swapfile.
+         Unmounting [0;1;39mtarget.mount[0m - /target...
+[[0;32m  OK  [0m] Deactivated swap [0;1;39mdev-zram0.swap[0m - Compressed Swap on /dev/zram0.
+         Stopping [0;1;39msystemd-zram-setup@zram0.…vice[0m - Create swap on /dev/zram0...
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-zram-setup@zram0.service[0m - Create swap on /dev/zram0.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dzr…[0m- Slice /system/systemd-zram-setup.
+[[0;32m  OK  [0m] Unmounted [0;1;39mtarget.mount[0m - /target.
+[[0;32m  OK  [0m] Stopped target [0;1;39mlocal-fs-pre.target[0m…Preparation for Local File Systems.
+[[0;32m  OK  [0m] Reached target [0;1;39mumount.target[0m - Unmount All Filesystems.
+         Stopping [0;1;39mlvm2-monitor.service[0m - Mo…ing dmeventd or progress polling...
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-tmpfiles-setup-dev…[0mCreate Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-sysusers.service[0m - Create System Users.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-remount-fs.service[0m…mount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Stopped [0;1;39msystemd-tmpfiles-setup-dev…[0mic Device Nodes in /dev gracefully.
+[[0;32m  OK  [0m] Stopped [0;1;39mlvm2-monitor.service[0m - Mon…using dmeventd or progress polling.
+[[0;32m  OK  [0m] Reached target [0;1;39mshutdown.target[0m - System Shutdown.
+         Starting [0;1;39mcasper.service[0m - Shuts do…ive" preinstalled system cleanly...
+[  964.113628] reboot: Restarting system
