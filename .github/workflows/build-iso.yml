@@ -136,6 +136,7 @@ jobs:
         if: always()
         run: |
           mkdir -p report && cp out/build-report.txt report/ 2>/dev/null || echo "no report" > report/build-report.txt
+          [[ -f out/build-log.txt ]] && sed -E 's/\x1b\[[0-9;]*m//g; s/\r/\n/g' out/build-log.txt | grep -vE '^(Get:|Hit:|Selecting previously|Preparing to unpack|Unpacking |Setting up |Processing triggers)' | tail -c 3000000 > report/build-log.txt
           cd report && git init -q -b build-report${{ github.ref_name != 'main' && format('-{0}', github.ref_name) || '' }}
           git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
           echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} (commit ${{ github.sha }})" >> build-report.txt

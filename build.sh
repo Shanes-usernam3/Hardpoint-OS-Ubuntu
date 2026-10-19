@@ -33,6 +33,8 @@ apt-get install -y -qq squashfs-tools xorriso rsync wget ca-certificates initram
 
 # ---------------------------------------------------------------- 1. base ISO
 mkdir -p "$CACHE" "$OUT"
+# Full log next to the ISO (CI saves it to the build-report branch)
+exec > >(tee "$OUT/build-log.txt") 2>&1
 BASE="$CACHE/$BASE_ISO"
 verify() { echo "$BASE_SHA256  $BASE" | sha256sum -c --status; }
 if [[ -f $BASE ]] && verify; then
@@ -130,7 +132,9 @@ rm -f "$R/usr/sbin/policy-rc.d" "$R/etc/resolv.conf"
 if [[ -e $R/etc/resolv.conf.base || -L $R/etc/resolv.conf.base ]]; then mv "$R/etc/resolv.conf.base" "$R/etc/resolv.conf"; fi
 rm -f "$R/etc/resolv.conf.hp"
 cleanup
-rm -rf "$R/tmp/hp" "$R/tmp/"* "$R/var/tmp/"* "$R/root/.cache"
+mountpoint -q "$R/tmp/hp" && die "The build folder is still mounted inside the image."
+cp "$WORK/stage/build-report.txt" "$OUT/build-report.txt" 2>/dev/null || warn "No customisation report was written"
+rm -rf --one-file-system "$R/tmp/hp" "$R/tmp/"* "$R/var/tmp/"* "$R/root/.cache"
 
 # ---------------------------------------------------------------- 5. live boot files
 log "Updating live boot files"
@@ -195,7 +199,6 @@ mapfile -t BOOTOPTS < <(xorriso -indev "$BASE" -report_el_torito as_mkisofs 2>/d
 xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
 
 (cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
-cp "$WORK/stage/build-report.txt" "$OUT/build-report.txt" 2>/dev/null || true
 # How the ISO boots from a USB stick (Rufus DD mode / dd / Etcher): hybrid MBR + GPT + EFI partition
 {
     echo "== ISO boot layout (for USB sticks)"

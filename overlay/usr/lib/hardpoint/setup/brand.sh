@@ -222,6 +222,40 @@ if [[ -f /etc/calamares/settings.conf ]]; then
     fi
 fi
 
+# ------------------------------------------------------------ live USB session
+# The base image starts a "Try or Install" chooser with its own logo. HardPoint goes straight to
+# the desktop (like Windows setup media would show you the PC), with Install HardPoint OS on it.
+LIVE=/usr/libexec/start-kubuntu-live-env
+if [[ -f $LIVE || -f $LIVE.upstream ]]; then
+    log "Live session"
+    divert "$LIVE"
+    cat > "$LIVE" <<'EOF'
+#!/bin/bash
+# HardPoint OS live session (USB stick): desktop with the installer on it.
+export XDG_SESSION_CLASS="user" XDG_SESSION_DESKTOP="KDE" DESKTOP_SESSION="plasma" QT_QPA_PLATFORMTHEME="kde"
+if [[ $(cat /proc/cmdline) =~ "oem-config/enable=true" ]]; then
+    kwin_wayland --xwayland --no-lockscreen /usr/bin/calamares-launch-oem
+fi
+mkdir -p "$HOME/Desktop"
+cat > "$HOME/Desktop/install-hardpoint-os.desktop" <<'DESK'
+[Desktop Entry]
+Type=Application
+Name=Install HardPoint OS
+Comment=Install HardPoint OS on this PC
+Icon=hardpoint
+Exec=sudo /usr/bin/calamares-launch-normal
+DESK
+chmod +x "$HOME/Desktop/install-hardpoint-os.desktop"
+exec startplasma-wayland
+EOF
+    chmod 755 "$LIVE"
+    S_LIVE=/usr/share/wayland-sessions/kubuntu-live-environment.desktop
+    if [[ -f $S_LIVE ]]; then
+        divert "$S_LIVE"
+        sed -E 's/Kubuntu/HardPoint OS/g' "$S_LIVE.upstream" > "$S_LIVE"
+    fi
+fi
+
 # ------------------------------------------------------------ boot splash
 # Hide the base system's splash themes so ours is the only choice
 for t in /usr/share/plymouth/themes/kubuntu-logo /usr/share/plymouth/themes/kubuntu-text; do

@@ -60,7 +60,10 @@ ln -sf /usr/share/zoneinfo/America/Edmonton /etc/localtime
 echo 'LANG=en_US.UTF-8' > /etc/default/locale
 update-initramfs -c -k "$KVER" >/dev/null 2>&1 || update-initramfs -u -k "$KVER" >/dev/null
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ubuntu --removable --no-nvram >/dev/null
-update-grub >/dev/null 2>&1
+update-grub
+# The removable-path GRUB looks for its menu next to itself; point it at the real one
+printf 'search --no-floppy --fs-uuid --set=root %s\nset prefix=(\$root)/boot/grub\nconfigfile \$prefix/grub.cfg\n' "\$(grub-probe --target=fs_uuid /)" > /boot/efi/EFI/BOOT/grub.cfg
+ls -la /boot /boot/grub/grub.cfg /boot/efi/EFI/BOOT
 EOF
 log "Configuring (user, initramfs, bootloader)"
 chroot "$W/t" /usr/bin/env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 bash /tmp/inst.sh
