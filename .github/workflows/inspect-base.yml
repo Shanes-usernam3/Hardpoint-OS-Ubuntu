@@ -4,7 +4,7 @@ name: Inspect base ISO (HardPoint OS 2)
 on:
   push:
     branches: [hardpoint-2]
-    paths: ['.github/workflows/inspect-base.yml']  # rerun: 3
+    paths: ['.github/workflows/inspect-base.yml']  # rerun: 4
   workflow_dispatch:
 
 permissions:
@@ -69,12 +69,16 @@ jobs:
       - name: Push to the kubuntu-ref branch
         if: always()
         run: |
-          cd /mnt/w/ref
+          set +e
+          note() { echo "::warning::$*"; }
+          cd /mnt/w/ref || { note "no ref dir"; ls /mnt/w; exit 1; }
           sudo chown -R "$USER" . ; chmod -R u+rwX .
-          find . -type f -size +2M -print -delete > big-files-removed.txt
-          find . -type l ! -exec test -e {} \; -delete 2>/dev/null || true
-          du -sh .
+          find . -type f -size +2M -delete
+          find . -xtype l -delete
+          note "ref size: $(du -sh . | cut -f1), files: $(find . -type f | wc -l)"
           git init -q -b kubuntu-ref
           git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
-          git add -A 2>&1 | tail -3; git commit -qm "Kubuntu 26.04 reference" || true
-          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kubuntu-ref
+          out=$(git add -A 2>&1) || note "add: ${out: -300}"
+          out=$(git commit -qm "Kubuntu 26.04 reference" 2>&1) || note "commit: ${out: -300}"
+          out=$(git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kubuntu-ref 2>&1) || { note "push: ${out: -400}"; exit 1; }
+          note "pushed"
