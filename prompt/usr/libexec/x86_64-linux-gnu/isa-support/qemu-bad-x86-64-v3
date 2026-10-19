@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DEB_HOST_ARCH='amd64'
+DEB_HOST_ARCH_CPU='amd64'
+DEB_HOST_ARCH_BITS='64'
+DEB_HOST_MULTIARCH='x86_64-linux-gnu'
+DEB_HOST_MULTIARCH_CPU='x86_64'
+QEMU_EXTRA='@QEMU_EXTRA@'
+
+exec "qemu-$DEB_HOST_MULTIARCH_CPU" -cpu 'Nehalem-IBRS,enforce' "$@"

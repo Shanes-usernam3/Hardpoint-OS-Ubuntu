@@ -1,0 +1,68 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kaccounts-providers
+Upstream-Contact: kde-devel@kde.org
+Source: https://invent.kde.org/network/kaccounts-providers
+
+Files: *
+Copyright: 2012, Alejandro Fiestas Olivares <afiestas@kde.org>
+           2015, Martin Klapetek <mklapetek@kde.org>
+           2020, Nicolas Fella <nicolas.fella@gmx.de>
+           2019, Rituka Patwal <ritukapatwal21@gmail.com>
+License: GPL-2+
+
+Files: plugins/nextcloud-ui/package/contents/ui/Server.qml
+       plugins/nextcloud-ui/package/contents/ui/Services.qml
+       plugins/nextcloud-ui/package/contents/ui/WebLogin.qml
+       plugins/nextcloud-ui/package/contents/ui/main.qml
+       plugins/owncloud-ui/package/contents/ui/Server.qml
+       plugins/owncloud-ui/package/contents/ui/Services.qml
+       plugins/owncloud-ui/package/contents/ui/main.qml
+Copyright: 2015, Martin Klapetek <mklapetek@kde.org>
+           2020, Nicolas Fella <nicolas.fella@gmx.de>
+           2019, Rituka Patwal <ritukapatwal21@gmail.com>
+License: LGPL-2+
+
+Files: debian/*
+Copyright: 2025, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2015, Harald Sitter <sitter@kde.org>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ --
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ --
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in `/usr/share/common-licenses/LGPL-2’.

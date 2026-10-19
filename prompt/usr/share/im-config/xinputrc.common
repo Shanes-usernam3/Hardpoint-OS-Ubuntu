@@ -1,0 +1,186 @@
+# Common shell routine used by im-config
+# /usr/share/im-config/xinputrc.common
+# (C) Osamu Aoki <osamu@debian.org>, GPL-2+
+# vim: set sts=4 sw=4 expandtab:
+#
+# Functions used by parsing configuration data
+#   * /usr/share/im-config/data
+#   * ~/.xinputrc
+#   * run time program im-launch
+#############################################################
+# Common variables used by im-config and its hook script
+#############################################################
+IM_CONFIG_VERSION=0.62
+IM_CONFIG_DATA=/usr/share/im-config/data
+IM_CONFIG_XINPUTRC_USR=$HOME/.xinputrc
+IM_CONFIG_XINPUTRC_SYS=/etc/X11/xinit/xinputrc
+IM_CONFIG_VERBOSE=false
+. gettext.sh
+TEXTDOMAIN="im-config"
+export TEXTDOMAIN
+TEXTDOMAINDIR="/usr/share/locale/"
+export TEXTDOMAINDIR
+#############################################################
+# Common functions used by im-config hook script (any mode)
+#############################################################
+# run_im <config_name>
+#   run selected input method script
+run_im() {
+    IM_CONFIG_CODE="run_im"
+    if [ -r $IM_CONFIG_DATA/[012345678]?_$1.rc ]; then
+        logger_debug "    run_im: source '$1.rc'."
+        . $IM_CONFIG_DATA/[012345678]?_$1.rc
+    else
+        logger_debug "    run_im: missing '$1.rc'. (NOP)"
+    fi
+}
+
+#############################################################
+# Package status function used by im-config and auto mode
+#############################################################
+# package_status <packagename>
+#   return TRUE if the package is properly installed (dpkg)
+#   used in package_auto() {...} in $IM_CONFIG_DATA/??_${IM_CONFIG_NAME}.conf
+package_status() {
+    PACKAGE_NAME="$1"
+    if [ "$(LC_ALL=C dpkg-query -l "$PACKAGE_NAME" 2>/dev/null |
+        sed -n '6s/\([^ ]*\) .*$/\1/p')" = "ii" ]; then
+        # return TRUE
+        return 0
+    else
+        return 1
+    fi
+}
+#############################################################
+# Common functions used by auto mode
+#############################################################
+# echo_im_name <full_path>
+#   extract configuration name from file path
+echo_im_name() {
+    local x
+    x=${1#$IM_CONFIG_DATA/??_}
+    x=${x%.rc}
+    x=${x%.conf}
+    echo -n $x
+}
+
+# is_package_installed <config>
+#   return 0/1 based on configuration availability for <config>
+is_package_installed() {
+    IM_CONFIG_NAME=$1
+    if [ -z "$IM_CONFIG_NAME" ]; then
+        logger_debug "    is_package_installed(''): No (1), as expected for ''"
+        # return FALSE
+        return 1
+    elif [ -r $IM_CONFIG_DATA/??_${IM_CONFIG_NAME}.conf ]; then
+        . $IM_CONFIG_DATA/??_${IM_CONFIG_NAME}.conf
+        if package_auto ; then
+            logger_debug "    is_package_installed($IM_CONFIG_NAME): Yes (0), by executing function 'package_auto' in '${IM_CONFIG_NAME}.conf'."
+            return 0
+        else
+            logger_debug "    is_package_installed($IM_CONFIG_NAME): No (1), by executing function 'package_auto' in '${IM_CONFIG_NAME}.conf'."
+            return 1
+        fi
+    else
+        logger_debug "    is_package_installed($IM_CONFIG_NAME): No (1), missing '??_${IM_CONFIG_NAME}.conf'."
+        # return FALSE
+        return 1
+    fi
+}
+
+# echo_highest_priority_installed_im
+#   echo automatic base IM configuration name (top priority one without considering locale etc.)
+#     available script are in 10-79
+#     78 is for "none" (i.e., no im-config hooks are used), and always available and break
+#     79 is for "xim", and never reached
+echo_highest_priority_installed_im() {
+    for IM_CONFIG_SCRIPT_PATH in $IM_CONFIG_DATA/[1234567]*.rc; do
+        IM_CONFIG_SCRIPT=$(echo_im_name $IM_CONFIG_SCRIPT_PATH)
+        if is_package_installed $IM_CONFIG_SCRIPT; then
+            logger_debug "    echo_highest_priority_installed_im '$IM_CONFIG_SCRIPT'"
+            echo -n "$IM_CONFIG_SCRIPT"
+            break
+        fi
+    done
+}
+
+# echo_auto_selected_im
+#   echo automatic IM configuration name (considering all facts: GNOME, locale, automatic)
+echo_auto_selected_im() {
+    IM_CONFIG_LC_CTYPE=$(locale | sed -nr 's/LC_CTYPE=\"?([a-zA-Z_]*).*/\1/p')
+    IM_CONFIG_PREFERRED=$(echo "$IM_CONFIG_PREFERRED_RULE" | sed -rn "s/(^|.*:)${IM_CONFIG_LC_CTYPE},([^:]*)($|:.*$)/\2/p")
+    if find_match "$IM_CONFIG_CURRENT_DESKTOP" "$DESKTOP_SETUP_IBUS" ; then
+        # This is introduced to exclude GNOME which takes full control of input method setup
+        logger_debug "    echo_auto_selected_im: im="none" for GNOME: find_match=Yes with IM_CONFIG_CURRENT_DESKTOP='$IM_CONFIG_CURRENT_DESKTOP' in DESKTOP_SETUP_IBUS='$DESKTOP_SETUP_IBUS'"
+        echo -n "none"
+    elif is_package_installed "$IM_CONFIG_PREFERRED"; then
+        # This is introduced to address CJKV preferred IM: usually fcitx5
+        logger_debug "    echo_auto_selected_im: im='$IM_CONFIG_PREFERRED' for not_GNOME and CJK for IM_CONFIG_PREFERRED='$IM_CONFIG_PREFERRED'"
+        echo -n "$IM_CONFIG_PREFERRED"
+    else
+        logger_debug "    echo_auto_selected_im: im=\\\$(echo_highest_priority_installed_im) for not_GNOME and not_CJKV"
+        echo_highest_priority_installed_im
+    fi
+}
+
+# echo_cjkv_selected_im
+#   echo cjkv IM configuration name (used in data/02_cjk.*)
+#     cjkv mode behavior:
+#      case 1:
+#        * desktop is listed in CJKV_DEFAULT_DESKTOP
+#        * locale is under so-called CJKV environments
+#        --> auto mode
+#      case 2:
+#        * desktop is listed in CJKV_DEFAULT_DESKTOP
+#        * locale is *not* under so-called CJKV environments
+#        --> none mode
+#      case 3:
+#        * desktop is *not* listed in CJKV_DEFAULT_DESKTOP
+#        * locale is under any environments
+#        --> auto mode
+echo_cjkv_selected_im() {
+    if find_match "$IM_CONFIG_CURRENT_DESKTOP" "$CJKV_DEFAULT_DESKTOP" ; then
+        # locale aware IM activation
+        if find_match "$IM_CONFIG_LC_CTYPE" "$CJKV_LOCALES" ; then
+            logger_debug "    echo_cjkv_selected_im: im='auto' for find_match=true  IM_CONFIG_CURRENT_DESKTOP='$IM_CONFIG_CURRENT_DESKTOP' in CJKV_DEFAULT_DESKTOP='$CJKV_DEFAULT_DESKTOP'"
+            logger_debug "    echo_cjkv_selected_im:           and find_match=true  IM_CONFIG_LC_CTYPE='$IM_CONFIG_LC_CTYPE' in CJKV_LOCALES='$CJKV_LOCALES'"
+            echo -n "auto"
+        else
+            logger_debug "    echo_cjkv_selected_im: im='none' for find_match=true  IM_CONFIG_CURRENT_DESKTOP='$IM_CONFIG_CURRENT_DESKTOP' in CJKV_DEFAULT_DESKTOP='$CJKV_DEFAULT_DESKTOP'"
+            logger_debug "    echo_cjkv_selected_im:           and find_match=false IM_CONFIG_LC_CTYPE='$IM_CONFIG_LC_CTYPE' in CJKV_LOCALES='$CJKV_LOCALES'"
+            echo -n "none"
+        fi
+    else
+        # locale unaware IM activation (fall back to auto)
+        logger_debug "    echo_cjkv_selected_im: im='auto' for find_match=false  IM_CONFIF_CURRENT_DESKTOP='$IM_CONFIG_CURRENT_DESKTOP' in CJKV_DEFAULT_DESKTOP='$CJKV_DEFAULT_DESKTOP'"
+        echo -n "auto"
+    fi
+}
+#############################################################
+# Common functions used by auto, cjkv and ibus mode
+#############################################################
+# find_match
+#   find match of $1 (dynamic value) in $2 (static list)
+#     return 0=TRUE if match found or $2="*"
+#     return 1=FALSE if match not found or
+#                       match found with "-" preceded choices in $2
+find_match() {
+    # local: Non-POSIX per shellcheck but usable on dash/bash/zsh/...
+    local OLDIFS="$IFS" R=1 X Y
+    IFS=':'
+    if [ -n "$1" ] && [ -n "$2" ]; then
+        for X in $1; do
+            for Y in $2; do
+                if [ "*" = "$Y" ]; then
+                    R=0
+                    break 2
+                elif [ "$X" = "$Y" ]; then
+                    R=0
+                    break 2
+                fi
+            done
+        done
+    fi
+    IFS="$OLDIFS"
+    return "$R"
+}

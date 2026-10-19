@@ -1,0 +1,6 @@
+x/usr/lib/systemd/system/getty.target
+x/usr/lib/systemd/system/systemd-firstboot.service
+x/usr/lib/systemd/system/breakpoint-pre-mount.service
+x/usr/lib/systemd/system/breakpoint-pre-switch-root.service
+x/usr/lib/systemd/system/breakpoint-pre-udev.service
+x/usr/lib/systemd/system/breakpoint-pre-basic.service

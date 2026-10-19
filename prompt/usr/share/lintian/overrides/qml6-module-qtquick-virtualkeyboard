@@ -1,0 +1,4 @@
+# libqt6hunspellinputmethod6 & libQt6VirtualKeyboardQml6 are private libs installed in a public path
+qml6-module-qtquick-virtualkeyboard: package-name-doesnt-match-sonames libQt6HunspellInputMethod6 libQt6VirtualKeyboardQml6
+no-symbols-control-file usr/lib/*/libQt6HunspellInputMethod.so.6.*
+no-symbols-control-file usr/lib/*/libQt6VirtualKeyboardQml.so.6.*

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: cupshelpers
+Version: 1.0
+Summary: Helper functions and classes for using CUPS
+Maintainer: Tim Waugh
+Maintainer-email: twaugh@redhat.com
+License-File: COPYING
+License-File: AUTHORS
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: summary

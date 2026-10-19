@@ -1,0 +1,2 @@
+khelpcenter: no-manual-page [usr/bin/khelpcenter]
+khelpcenter: desktop-entry-lacks-main-category [usr/share/applications/org.kde.khelpcenter.desktop]

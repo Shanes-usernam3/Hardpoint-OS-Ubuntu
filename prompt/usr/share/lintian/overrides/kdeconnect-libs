@@ -1,0 +1,4 @@
+# We are shipping private libs, no headers.
+package-name-doesnt-match-sonames
+# no '-dev' pkg provided (private libs)
+no-symbols-control-file usr/lib/*/*

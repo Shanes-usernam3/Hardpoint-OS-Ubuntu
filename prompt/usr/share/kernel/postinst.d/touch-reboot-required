@@ -1,0 +1,16 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0
+# Copyright 2025 Salvatore Bonaccorso <carnil@debian.org>
+
+set -e
+
+if [ -d /run ]; then
+    touch /run/reboot-required
+    if [ -n "${DPKG_MAINTSCRIPT_PACKAGE}" ]; then
+        if ! grep -q "^$DPKG_MAINTSCRIPT_PACKAGE$" /run/reboot-required.pkgs 2> /dev/null ; then
+            echo "$DPKG_MAINTSCRIPT_PACKAGE" >> /run/reboot-required.pkgs
+        fi
+    fi
+fi
+
+exit 0

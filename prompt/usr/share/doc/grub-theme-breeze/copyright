@@ -1,0 +1,42 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: breeze-grub
+Source: https://invent.kde.org/plasma/breeze-grub
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2016 Harald Sitter <sitter@kde.org>
+License: GPL-3+
+
+Files: breeze/theme.txt
+Copyright: 2016, Harald Sitter <sitter@kde.org>
+License: GPL-3+KDEeV
+
+Files: debian/*
+Copyright: 2016 Harald Sitter <sitter@kde.org>
+    2020 Scarlett Moore <sgmoore@kde.org>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ See `/usr/share/common-licenses/GPL-3'.
+
+License: GPL-3+KDEeV
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 3 of
+ the License or any later version accepted by the membership of
+ KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'.

@@ -1,0 +1,2 @@
+# It is intended to add dependency to kio
+libkf5kiofilewidgets5: symbols-declares-dependency-on-other-package kio (libKF5KIOFileWidgets.so.5) [symbols]

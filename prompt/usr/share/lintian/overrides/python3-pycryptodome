@@ -1,0 +1,6 @@
+# Those 2 lib are used by Python c extensions, but are no extension themselves.
+# Since they have no dependency, they link to nothing and a warning is raised.
+# Build flags are set correctly (-lc) but because of empty dependency,
+# ldd reports statically linked.
+python3-pycryptodome: shared-library-lacks-prerequisites [usr/lib/python3/dist-packages/Cryptodome/Cipher/_raw_ecb*.so]
+python3-pycryptodome: shared-library-lacks-prerequisites [usr/lib/python3/dist-packages/Cryptodome/Util/_strxor*.so]

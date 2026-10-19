@@ -1,0 +1,75 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-vault
+Upstream-Contact: plasma-devel@kde.org
+Source: https://invent.kde.org/plasma/plasma-vault
+
+Files: *
+Copyright: 2015-2017, Ivan Cukic <ivan.cukic@kde.org>
+           2017, Kees vd Broek <cryptodude@libertymail.net>
+           2017, This_file_is_part_of_KDE
+License: GPL-2+3+KDEeV
+
+Files: asynqt/*
+       po/ca/*
+       po/ca@valencia/*
+       po/uk/*
+Copyright: 2016-2017, Ivan Čukić <ivan.cukic@kde.org>
+           2017, This_file_is_part_of_KDE
+License: LGPL-2.1+3+KDEeV
+
+Files: debian/*
+Copyright: 2017, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2022, Patrick Franz <deltaone@debian.org>
+License: LGPL-2.1+
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 2.1 can be
+ found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-2+3+KDEeV
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License or (at your option) version 3 or any later version
+ accepted by the membership of KDE e.V. (or its successor approved
+ by the membership of KDE e.V.), which shall act as a proxy
+ defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ "/usr/share/common-licenses/GPL-2", likewise, the complete text of the GNU
+ General Public License version 3 can be found in
+ "/usr/share/common-licenses/GPL-3".
+
+License: LGPL-2.1+3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 2.1 can be
+ found in "/usr/share/common-licenses/LGPL-2.1", likewise, the complete text
+ of the GNU Lesser General Public License version 3 can be found in
+ "/usr/share/common-licenses/LGPL-3".

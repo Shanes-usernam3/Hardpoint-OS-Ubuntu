@@ -1,0 +1,30 @@
+Kernel package dependency
+=========================
+
+Applications linked against libbpfcc will dynamically compile and
+load C source code into eBPF byte code at runtime and load the result
+into the kernel for various purposes (e.g. socket filtering, tracing,
+etc.).
+
+For this to work, it needs the kernel headers of the currently running
+kernel. Therefore, to use BCC you need to manually install the
+linux-image-*-dbg and linux-header-* packages that match your running
+kernel.
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Wed Oct 18 12:24:24 +0545 2017
+
+Binary package rename
+=====================
+
+Starting with version 0.2.0-2, all binary files
+have been renamed to $filename-bpfcc suffix.
+
+For example: execsnoop => execsnoop-bpfcc
+
+Similarly, the manpages have been renamed. This is done to accommodate
+users who would like to use perf-tools-unstable, parallelly with the
+eBPF Compiler Collection Tools from the bpfcc package.
+
+Both upstreams work closely on the projects, thus the common names.
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Fri, 30 Dec 2016 23:42:27 +0530

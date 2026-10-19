@@ -1,0 +1,70 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libfprint
+Source: https://gitlab.freedesktop.org/libfprint/libfprint/
+
+Files: *
+Copyright: Copyright © 2007 Daniel Drake <dsd@gentoo.org>
+           Copyright © 2006-2007 Timo Hoenig <thoenig@suse.de>
+           Copyright © 2006 Pavel Machek <pavel@suse.cz>
+           Copyright © 1999 Erik Walthinsen <omega@cse.ogi.edu>
+           Copyright © 2004,2006 Thomas Vander Stichele <thomas at apestaart dot org>
+           Copyright © 2007 Cyrille Bagard
+           Copyright © 2007 Vasily Khoruzhick
+           Copyright © 2007 Jan-Michael Brummer <buzz2@gmx.de>
+           Copyright © 2007 Anthony Bretaudeau <wxcover@users.sourceforge.net>
+           Copyright © 2018-2022 Benjamin Berg <bberg@redhat.com>
+           Copyright © 2019-2026 Marco Trevisan <mail@3v1n0.net>
+License: LGPL-2.1+
+
+Files: demo/org.freedesktop.libfprint.Demo.appdata.xml
+Copyright: Bastien Nocera <hadess@hadess.net>
+License: CC0-1.0
+
+Files: libfprint/nbis/*
+Copyright: National Institute of Standards and Technology (NIST)
+License: NIST
+
+Files: libfprint/nbis/libfprint-include/*
+Copyright: Copyright (C) 2018 Bastien Nocera <hadess@hadess.net>
+           Copyright (C) 2019 Marco Trevisan <marco.trevisan@canonical.com>
+           Benjamin Berg <bberg@redhat.com>
+License: LGPL-2.1+
+
+Files: libfprint/fpi-byte*
+Copyright: Copyright (C) 2009 Sebastian Dröge <sebastian.droege@collabora.co.uk>
+License: LGPL-2+
+
+Files: debian/*
+Copyright: Ulises Vitulli <uvitulli@fi.uba.ar>
+           Laurent Bigonville <bigon@debian.org>
+           Marco Trevisan <marco@ubuntu.com>
+License: LGPL-2.1
+
+License: NIST
+  This software was developed at the National Institute of Standards and
+  Technology (NIST) by employees of the Federal Government in the course
+  of their official duties. Pursuant to title 17 Section 105 of the
+  United States Code, this software is not subject to copyright protection
+  and is in the public domain. NIST assumes no responsibility  whatsoever for
+  its use by other parties, and makes no guarantees, expressed or implied,
+  about its quality, reliability, or any other characteristic.
+
+License: LGPL-2
+  On Debian systems, the complete text of the GNU General
+  Public License can be found in "/usr/share/common-licenses/LGPL-2"
+
+License: LGPL-2+
+  On Debian systems, the complete text of the GNU General
+  Public License can be found in "/usr/share/common-licenses/LGPL-2"
+
+License: LGPL-2.1
+  On Debian systems, the complete text of the GNU General
+  Public License can be found in "/usr/share/common-licenses/LGPL-2.1"
+
+License: LGPL-2.1+
+  On Debian systems, the complete text of the GNU General
+  Public License can be found in "/usr/share/common-licenses/LGPL-2.1"
+
+License: CC0-1.0
+  On Debian systems, the complete text of the CC0 1.0 Universal
+  License can be found in "/usr/share/common-licenses/CC0-1.0"

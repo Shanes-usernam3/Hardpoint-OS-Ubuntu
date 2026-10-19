@@ -1,0 +1,291 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kfilemetadata
+Source: https://invent.kde.org/frameworks/kfilemetadata
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2018-2019, Alexander Stippich <a.stippich@gmx.net>
+           2016, Christoph Cullmann <cullmann@kde.org>
+           2013, Denis Steckelmacher <steckdenis@yahoo.fr>
+           2010, Evgeny Egorochkin <phreedom.stdin@gmail.com>
+           2019, Friedrich W. H. Kossebau <kossebau@kde.org>
+           2017, Igor Poboiko <igor.poboiko@gmail.com>
+           2008, Jakub Stachowski <qbast@go2.pl>
+           2017, James D. Smith <smithjd15@gmail.com>
+           2009, Jos van den Oever <jos@vandenoever.info>
+           2023, Joshua Goins <josh@redstrate.com>
+           2015, Juan Palacios <jpalaciosdev@gmail.com>
+           2012, Jörg Ehrichs <joerg.ehrichs@gmx.de>
+           2022, Kai Uwe Broulik <kde@broulik.de>
+           2007, Montel Laurent <montel@kde.org>
+           2014, Nick Shaforostoff <shaforostoff@gmail.com>
+           2014, Raphael Kubo da Costa <rakuco@FreeBSD.org>
+           2018-2024, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2011, Tirtha Chatterjee <tirtha.p.chatterjee@gmail.com>
+           2016, Varun Joshi <varunj.1011@gmail.com>
+           2012-2014, Vishesh Handa <me@vhanda.in>
+License: LGPL-2.1-or-later
+Comment: Automatically extracted
+
+Files: po/*
+Copyright: 2024, Adrián Chaves (Gallaecio)
+           2015-2017, Adrián Chaves Fernández <adriyetichaves@gmail.com>
+           2014-2019, Alexander Potashev <aspotashev@gmail.com>
+           2018-2024, Alexander Yavorsky <kekcuha@gmail.com>
+           2014-2018, Andrej Mernik <andrejm@ubuntu.si>
+           2014-2019, André Marcelo Alvarenga <alvarenga@kde.org>
+           2014, Antonis Geralis <gaantonio@civil.auth.gr>
+           2014-2023, A S Alam <aalam@users.sf.net>
+           2014, Balázs Úr <urbalazs@gmail.com>
+           2014, Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
+           2014-2021, Burkhard Lück <lueck@hube-lueck.de>
+           2014-2017, Chusslove Illich <caslav.ilic@gmx.net>
+           2014, Free Software Foundation, Inc.
+           2014-2016, Dimitris Kardarakos <dimkard@gmail.com>
+           2014-2024, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2023, Enol P. <enolp@softastur.org>
+           2014, Federico Zenith <federico.zenith@member.fsf.org>
+           2014-2017, Franklin Weng <franklin at goodhorse dot idv dot tw>
+           2016-2022, Frederik Schwarzer <schwarzer@kde.org>
+           2014-2024, Freek de Kruijf <freekdekruijf@kde.nl>
+           2019, Fumiaki Okushi <fumiaki.okushi@gmail.com>
+           2014, Giovanni Sora <g.sora@tioscali.it>
+           2014-2024, G.Sora <g.sora@tiscali.it>
+           2015-2016, GunChleoc <fios@foramnagaidhlig.net>
+           2017-2024, Iñigo Salvador Azurmendi <xalba@ni.eus>
+           2016-2018, Jeff Huang <s8321414@gmail.com>
+           2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2015-2023, Karl Ove Hufthammer <karl@huftis.org>
+           2024, KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+           2023-2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2022-2024, Kishore G <kishore96@gmail.com>
+           2018-2024, Kristof Kiszel <kiszel.kristof@gmail.com>
+           2014-2015, Kristóf Kiszel <ulysses@kubuntu.org>
+           2014-2017, Lasse Liehu <lasse.liehu@gmail.com>
+           2014-2015, Liudas Ališauskas <liudas@aksioma.lt>
+           2017-2023, Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2014, Marce Villarino <mvillarino@kde-espana.org>
+           2016-2020, Marek Laane <qiilaq69@gmail.com>
+           2014-2019, Martin Schlander <mschlander@opensuse.org>
+           2019, Matej Mrenica <matejm98mthw@gmail.com>
+           2019-2023, Matjaž Jeran <matjaz.jeran@amis.net>
+           2020, Mihkel Tõnnov <mihhkel@gmail.com>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2016, Nick Shaforostoff <shafff@ukr.net>
+           2023, Oliver Kellogg <olivermkellogg@gmail.com>
+           2017, Osoitz <oelkoro@gmail.com>
+           2018-2019, pan93412 <pan93412@gmail.com>
+           2017-2018, Paolo Zamponi <feus73@gmail.com>
+           2014-2019, Roman Paholik <wizzardsk@gmail.com>
+           2015-2018, Safa Alfulaij <safa1996alfulaij@gmail.com>
+           2014-2015, Sebastien Renard <renard@kde.org>
+           2015-2022, Sergiu Bivol <sergiu@cip.md>
+           2014-2024, Shinjo Park <kde@peremen.name>
+           2017-2019, Simon Depiets <sdepiets@gmail.com>
+           2014, Sönke Dibbern <s_dibbern@web.de>
+           2014-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2021, Stelios <sstavra@gmail.com>
+           2014-2024, Steve Allewell <steve.allewell@gmail.com>
+           2014, Svetoslav Stefanov <svetlisashkov@yahoo.com>
+           2017-2024, Tommi Nieminen <translator@legisign.org>
+           2019, Tomohiro Hyakutake <tomhioo@outlook.jp>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2019, Valter Mura <valtermura@gmail.com>
+           2019, Victor Ibragimov <victor.ibragimov@gmail.com>
+           2014-2017, Vincent PINON <vpinon@kde.org>
+           2015-2024, Vincenzo Reale <smart2128vr@gmail.com>
+           2024, Vit Pelcak <vit@pelcak.org>
+           2014-2023, Vít Pelčák <vit@pelcak.org>
+           2014-2015, Volkan Gezer <volkangezer@gmail.com>
+           2018-2019, Wantoyo <wantoyek@gmail.com>
+           2023-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2020, Xəyyam <xxmn77@gmail.com>
+           2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2022-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2014-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: LGPL-2.1-or-later
+Comment: Manually collected
+
+Files: cmake/FindCatDoc.cmake
+       cmake/FindEPub.cmake
+       cmake/FindFFmpeg.cmake
+       cmake/FindLibraryWithDebug.cmake
+Copyright: 2008, Alexander Neundorf <neundorf@kde.org>
+           2007, Christian Ehrlicher <ch.ehrlicher@gmx.de>
+           2006, Matthias Kretz <kretz@kde.org>
+           2011, Michael Jansen <kde@michael-jansen.biz>
+           2008, Pino Toscano <pino@kde.org>
+           2021, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2015, Vishesh Handa <vhanda@kde.org>
+License: BSD-3-Clause
+
+Files: .gitlab-ci.yml
+Copyright: 2020, Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: src/icnamematch_p.h
+Copyright: 2024, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+License: LGPL-2.1-only
+
+Files: autotests/indexerextractortestsconfig.h.in
+       autotests/indexerextractortests.cpp
+       autotests/samplefiles/testexternalextractor/main.py
+       autotests/samplefiles/testexternalwriter/main.py
+       autotests/xmlextractortest.cpp
+       src/externalextractor.cpp
+       src/externalextractor.h
+       src/externalwriter.cpp
+       src/externalwriter.h
+       src/extractionresult.cpp
+       src/extractionresult.h
+       src/propertyinfo.cpp
+       src/propertyinfo.h
+       src/writedata.cpp
+       src/writedata.h
+       src/writercollection.cpp
+       src/writercollection.h
+       src/writer.cpp
+       src/writer.h
+       src/writer_p.h
+       src/writerplugin.cpp
+       src/writerplugin.h
+       tests/dump.cpp
+Copyright: 2015, Boudhayan Gupta <bgupta@kde.org>
+           2013, David Edmundson <davidedmundson@kde.org>
+           2018, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2016, Varun Joshi <varunj.1011@gmail.com>
+           2013-2016, Vishesh Handa <me@vhanda.in>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Automatically extracted
+
+Files: po/ca/kfilemetadata6.po
+       po/ca@valencia/kfilemetadata6.po
+       po/uk/kfilemetadata6.po
+Copyright: 2014-2024, Josep M. Ferrer <txemaq@gmail.com>
+           2014-2015, Antoni Bella Pérez <antonibella5@yahoo.com>
+           2014-2024, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Manually collected
+
+Files: debian/*
+Copyright: 2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2014-2015, Rohan Garg <rohangarg@kubuntu.org>
+           2024 Patrick Franz <deltaone@debian.org>
+License: LGPL-2.1-or-later
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 William Moreno <williamjmorenor@gmail.com> -->
+<!--
+     EmailAddress: wolfgang@rohdewald.de
+SentUpstream: 2014-09-24
+-->
+<component type="desktop-application">
+  <id>org.kde.ksudoku</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-only</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>KSudoku</name>
+  <name xml:lang="ar">ك​سودوكو</name>
+  <name xml:lang="ast">KSudoku</name>
+  <name xml:lang="ca">KSudoku</name>
+  <name xml:lang="ca-valencia">KSudoku</name>
+  <name xml:lang="cs">KSudoku</name>
+  <name xml:lang="da">KSudoku</name>
+  <name xml:lang="de">KSudoku</name>
+  <name xml:lang="en-GB">KSudoku</name>
+  <name xml:lang="eo">KSudoku</name>
+  <name xml:lang="es">KSudoku</name>
+  <name xml:lang="et">KSudoku</name>
+  <name xml:lang="eu">KSudoku</name>
+  <name xml:lang="fi">KSudoku</name>
+  <name xml:lang="fr">KSudoku</name>
+  <name xml:lang="gl">KSudoku</name>
+  <name xml:lang="he">KSudoku</name>
+  <name xml:lang="hi">के-सुडोकु</name>
+  <name xml:lang="hu">KSudoku</name>
+  <name xml:lang="id">KSudoku</name>
+  <name xml:lang="it">KSudoku</name>
+  <name xml:lang="ka">KSudoku</name>
+  <name xml:lang="ko">KSudoku</name>
+  <name xml:lang="lv">KSudoku</name>
+  <name xml:lang="nl">KSudoku</name>
+  <name xml:lang="nn">KSudoku</name>
+  <name xml:lang="pl">KSudoku</name>
+  <name xml:lang="pt">KSudoku</name>
+  <name xml:lang="pt-BR">KSudoku</name>
+  <name xml:lang="ro">KSudoku</name>
+  <name xml:lang="ru">KSudoku</name>
+  <name xml:lang="sa">केसुदोकु</name>
+  <name xml:lang="sk">KSudoku</name>
+  <name xml:lang="sl">KSudoku</name>
+  <name xml:lang="sr">К‑судоку</name>
+  <name xml:lang="sr-Latn">K‑sudoku</name>
+  <name xml:lang="sr-ijekavian">К‑судоку</name>
+  <name xml:lang="sr-ijekavianlatin">K‑sudoku</name>
+  <name xml:lang="sv">Ksudoku</name>
+  <name xml:lang="tr">K Sudoku</name>
+  <name xml:lang="uk">KSudoku</name>
+  <name xml:lang="zh-CN">KSudoku</name>
+  <name xml:lang="zh-TW">KSudoku</name>
+  <summary>Complete a numeric puzzle with the numbers from one to nine</summary>
+  <summary xml:lang="ar">أكمل لغزًا رقميًا بالأرقام من واحد إلى تسعة</summary>
+  <summary xml:lang="ca">Completeu un trencaclosques numèric amb nombres des de l'u fins al nou</summary>
+  <summary xml:lang="ca-valencia">Completeu un trencaclosques numèric amb nombres des de l'u fins al nou</summary>
+  <summary xml:lang="cs">Vyplňte číselné puzzle čísly od jedné do devíti</summary>
+  <summary xml:lang="de">Vervollständigen Sie ein Zahlenrätsel mit Zahlen von eins bis neun</summary>
+  <summary xml:lang="en-GB">Complete a numeric puzzle with the numbers from one to nine</summary>
+  <summary xml:lang="eo">Kompletigu nombran puzelon kun la nombroj de unu ĝis naŭ</summary>
+  <summary xml:lang="es">Completar un rompecabezas numérico con los números del uno al nueve</summary>
+  <summary xml:lang="et">Arvmõistatus arvude paigutamiseks ühest üheksani</summary>
+  <summary xml:lang="eu">Osatu zenbakien buru-hausgarri bat, bat eta bederatzi arteko zenbakiak erabiliz</summary>
+  <summary xml:lang="fi">Täydennä lukupalapeli numeroin yhdestä yhdeksään</summary>
+  <summary xml:lang="fr">Réalisez un casse-tête numérique avec des chiffres compris entre un et neuf</summary>
+  <summary xml:lang="gl">Complete un quebracabezas numérico cos números do 1 ao 9</summary>
+  <summary xml:lang="he">השלמת תצרף מספרי עם מספרים מאחד עד תשע</summary>
+  <summary xml:lang="hi">संख्या पहेली पूर्ण करें अंक १ से ९ लेकर</summary>
+  <summary xml:lang="hu">Számrejtvények kitöltése egy és kilenc közötti számokkal</summary>
+  <summary xml:lang="id">Melengkapi sebuah teka-teki penomoran dengan angka dari satu sampai sembilan</summary>
+  <summary xml:lang="it">Completa un rompicapo numerico con le cifra da uno a nove</summary>
+  <summary xml:lang="ka">დაასრულეთ რიცხვითი მოზაიკა ციფრებით ერთიდან ცხრამდე</summary>
+  <summary xml:lang="ko">1부터 9까지 숫자를 채워 넣는 수학 퍼즐 게임</summary>
+  <summary xml:lang="lv">Atrisiniet skaitļu mīklu ar skaitļiem no viens līdz deviņi</summary>
+  <summary xml:lang="nl">Maak een numerieke puzzel met de cijfers vanaf één tot en met negen</summary>
+  <summary xml:lang="nn">Fullfør eit slags talpuslespel med siffera 1 til 9</summary>
+  <summary xml:lang="pl">Uzupełnij układankę numeryczną cyframi od jeden do dziwięciu</summary>
+  <summary xml:lang="pt">Completar um 'puzzle' numérico com os números de um a nove</summary>
+  <summary xml:lang="pt-BR">Complete um quebra-cabela numérico com os números de um a nove</summary>
+  <summary xml:lang="ro">Completează un puzzle numeric cu numere de la unu la nouă</summary>
+  <summary xml:lang="ru">Заполнить числовую головоломку числами от одного до девяти</summary>
+  <summary xml:lang="sa">एकतः नवपर्यन्तं संख्याभिः सह संख्यात्मकं प्रहेलिकां सम्पूर्णं कुर्वन्तु</summary>
+  <summary xml:lang="sk">Úplné číselné puzzle s číslami od jedna do deväť</summary>
+  <summary xml:lang="sl">Rešite številčno uganko s številkami med 1 in 9</summary>
+  <summary xml:lang="sr">Саставите бројевну слагалицу са бројевима од један до девет</summary>
+  <summary xml:lang="sr-Latn">Sastavite brojevnu slagalicu sa brojevima od jedan do devet</summary>
+  <summary xml:lang="sr-ijekavian">Саставите бројевну слагалицу са бројевима од један до девет</summary>
+  <summary xml:lang="sr-ijekavianlatin">Sastavite brojevnu slagalicu sa brojevima od jedan do devet</summary>
+  <summary xml:lang="sv">Fyll i ett sifferpussel med siffrorna från ett till nio</summary>
+  <summary xml:lang="tr">Birden dokuza kadar sayıları kullanarak sayısal bir bulmaca tamamla</summary>
+  <summary xml:lang="uk">Розв’яжіть числову головоломку із числами від одного до дев’яти</summary>
+  <summary xml:lang="zh-CN">用数字一到九完成数字拼图</summary>
+  <summary xml:lang="zh-TW">用 1 到 9 的數字完成數獨難關</summary>
+  <description>
+    <p>
+      KSudoku is a free version of the popular logic game Sudoku developed by the KDE community.
+      The game is to fill a nine by nine grid with the numbers from one to nine filling
+      the rows, columns and three by three squares without repeating a value on them.
+    </p>
+    <p xml:lang="ar">ك​سودوكو هي نسخة مجانية من لعبة المنطق الشهيرة سودوكو طورها مجتمع كِيدِي. اللعبة هي ملء شبكة تسعة في تسعة بالأرقام من واحد إلى تسعة لملء الصفوف والأعمدة و مربعات ثلاثة في ثلاثة  دون تكرار أي رقم عليها.</p>
+    <p xml:lang="ca">El KSudoku és una versió lliure del popular joc de lògica Sudoku desenvolupat per la comunitat KDE. El joc consisteix a emplenar una quadrícula de nou per nou amb els nombres des de l'u fins al nou a les files, columnes i els quadrats de tres per tres sense repetir cap valor.</p>
+    <p xml:lang="ca-valencia">KSudoku és una versió lliure del popular joc de lògica Sudoku desenvolupat per la comunitat KDE. El joc consistix a emplenar una quadrícula de nou per nou amb els nombres des de l'u fins al nou en les files, columnes i els quadrats de tres per tres sense repetir cap valor.</p>
+    <p xml:lang="de">KSudoku ist eine freie Version des populären Logikspiels Sudoku entwickelt von der KDE-Gemeinschaft. Ziel des Spiels ist es, ein Gitter mit neun mal neun Feldern mit Zahlen von eins bis neun zu füllen, so dass jede Zahl in den Reihen, Spalten und Quadraten mit drei mal drei Feldern nur einmal vorkommt.</p>
+    <p xml:lang="en-GB">KSudoku is a free version of the popular logic game Sudoku developed by the KDE community. The game is to fill a nine by nine grid with the numbers from one to nine filling the rows, columns and three by three squares without repeating a value on them.</p>
+    <p xml:lang="eo">KSudoku estas libera versio de la populara logika ludo Sudoku evoluigita de la KDE-komunumo. La ludo estas plenigi naŭ-ope-naŭ kradon kun la nombroj de unu ĝis naŭ plenigante la vicojn, kolumnojn kaj triope tri kvadratojn sen ripeti valoron sur ili.</p>
+    <p xml:lang="es">KSudoku es una versión libre del popular juego de lógica Sudoku desarrollado por la comunidad KDE. El juego consiste en rellenar una rejilla de nueve por nueve celdas con los números del uno al nueve rellenando las filas, las columnas y los cuadros de tres por tres celdas sin repetir ningún valor en estos elementos.</p>
+    <p xml:lang="et">KSudoku on KDE kogukonna arendatud populaarse loogikamängu sudoku vaba versioon. Mängu eesmärk on täitsa üheksa korda üheksa ruudustik arvudega ühest üheksani nii, et üheski reas, veerus ega kolm korda kolm ruudustikust koosnevas plokid arvud ei korduks.</p>
+    <p xml:lang="eu">KSudoku KDE komunitateak garatu duen Sudoku logika joko ezagunaren bertsio aske bat da. Jokoa bederatzi bider bederatziko sareta bateko errenkadak, zutabeak eta hiru bider hiruko karratuak, batetik bederatzira arteko zenbakiekin, baliorik errepikatu gabe, betetzean datza.</p>
+    <p xml:lang="fi">KSudoku on KDE-yhteisön vapaa versio suositusta logiikkapelistä sudokusta. Ajatuksena on täyttää 9 × 9 ruudun ruudukko numeroin yhdestä yhdeksään toistamatta numeroita 3 × 3 ruudun lohkoissa.</p>
+    <p xml:lang="fr">KSudoku est une version libre et développée par la communauté KDE du célèbre jeu de logique Sudoku. Le jeu consiste à remplir une grille de neuf cases par neuf avec des chiffres allant de un à neuf de manière à ce que les lignes, les colonnes et les carrés de trois cases par trois ne contiennent pas deux fois la même valeur.</p>
+    <p xml:lang="gl">KSudoku é unha versión libre do popular xogo de lóxica Sudoku desenvolvido pola comunidade KDE. O xogo consiste en encher a grade de 9x9 cos números do 1 ao 9, enchendo as filas, columnas e bloques de 3x3 con valores que non se repitan.</p>
+    <p xml:lang="he">‏KSudoku היא גרסה חופשית של המשחק הלוגי הנפוץ סודוקו שפותחה על ידי קהילת KDE.מטרת המשחק היא למלא טבלה בגודל תשע על תשע עם מספרים מאחד עד תשע עד למילוי כל השורות, העמודות והריבועים הפנימיים בגודל שלוש על שלוש מבלי לחזור על הערכים בהם.</p>
+    <p xml:lang="hu">A KSudoku a KDE közösség által fejlesztett népszerű logikai játék, a sudoku ingyenes változata. A játék lényege, hogy egy kilencszer kilences rácsot kell kitölteni egytől kilencig terjedő számokkal anélkül, hogy a sorokban, oszlopokban és a háromszor hármas négyzetekben a számok ismétlődnének.</p>
+    <p xml:lang="id">KSudoku adalah versi gratis permainan Sudoku permainan logika populer yang dikembangkan oleh komunitas KDE. Permainan ini  adalah untuk mengisi kisi sembilan demi sembilan dengan angka dari satu sampai smbilan mengisi deretan, kolom, dan tiga demi tiga kotak tanpa mengulangi nilai-nilainya.</p>
+    <p xml:lang="it">KSudoku è una versione libera del popolare gioco di logica Sudoku sviluppato dalla comunità KDE. Il gioco consiste nel riempire una griglia nove per nove con le cifre da uno a nove. facendo in modo che nelle righe, nelle colonne e nei quadrati di dimensione tre per tre non si ripetano gli stessi valori.</p>
+    <p xml:lang="ka">KSudoku KDE-ის საზოგადოების მიერ შემუშავებული სუდოკუს ვარიანტია. ამ თამაშში 9x9 ბადე რიცხვებით უნდა შეავსოთ, დიაპაზონიდან 1-9, შეავსეთ სვეტები, მკრივები და სამი-სამზე კვადრატები.</p>
+    <p xml:lang="ko">KSudoku는 KDE 커뮤니티에서 개발한 자유 소프트웨어 스도쿠 논리 게임입니다. 게임의 목표는 9x9 그리드를 1부터 9까지의 숫자로 채우는 것으로, 특정한 행이나 열에는 중복되는 숫자가 있으면 안 됩니다.</p>
+    <p xml:lang="lv">„KSudoku“ ir KDE kopienas izstrādāta populārās sudoku spēles brīvā versija. Spēles uzdevums ir aizpildīt 9✕9 režģi ar skaitļiem no viens līdz deviņi, lai aizpildītu visas rindas, kolonnas un 3✕3 kvadrātus, skaitļiem neatkārtojoties.</p>
+    <p xml:lang="nl">KSudoku is een vrije versie van het populaire logische spel Sudoku ontwikkeld door de KDE gemeenschap. Het spel gaat over het vullen van een negen bij negen raster met de cijfers vanaf één tot en met negen door het vullen van de rijen, de kolommen en drie bij drie vierkantjes zonder een waarde daarin te herhalen.</p>
+    <p xml:lang="nn">KSudoku er ein fri versjon av det klassiske logikkspelet sudoku, laga av KDE-fellesskapet. Målet med spelet er å fylla eit 9 × 9-rutenett med siffera 1 til 9 slik at alle rader, alle kolonnar og alle markerte 3 × 3-felt inneheld alle siffera.</p>
+    <p xml:lang="pl">KSudoku jest darmową wersją popularnej gry logicznej Sudoku stworzoną przez społeczność KDE. Gra polega na wypełnieniu siatki o rozmiarze dziewięć na dziewięć kratek, cyframi od jeden do dziewięciu wypełniającymi wiersze, kolumny i kwadraty o rozmiarze trzy na trzy bez uzywania ponownie tej samej wartości w żadnym z nich.</p>
+    <p xml:lang="pt">O KSudoku é uma versão livre do conhecido jogo de lógica Sudoku desenvolvido pela comunidade do KDE. No jogo pretende-se preencher uma grelha de nove por nove posições, com os números de um a nove a preencher as linhas, colunas e os quadrados de três por três, sem que se repita qualquer valor nestes.</p>
+    <p xml:lang="pt-BR">KSudoku é uma versão livre do conhecido jogo de lógica Sudoku desenvolvido pela comunidade do KDE. No jogo deve-se preencher uma grade de nove por nove posições, com os números de um a nove preenchendo as linhas, colunas e os quadrados de três por três, sem repetir qualquer um dos números.</p>
+    <p xml:lang="ru">KSudoku — свободная версия популярной логической игры «судоку», разработанная сообществом KDE. Цель игры: заполнить сетку размером девять на девять числами от одного до девяти таким образом, чтобы каждое число встречалось в каждой строке, в каждом столбце и в каждом квадрате размером три на три только один раз.</p>
+    <p xml:lang="sa">KSudoku इति KDE समुदायेन विकसितस्य लोकप्रियस्य तर्कक्रीडायाः Sudoku इत्यस्य निःशुल्कसंस्करणम् अस्ति । पङ्क्तिः, स्तम्भः, त्रयः त्रयः च वर्गाः च पूरयन्तः एकतः नवपर्यन्तं संख्याभिः सह नव-नव-जालं पूरयितुं भवति, तेषु मूल्यं पुनरावृत्तिं न कृत्वा</p>
+    <p xml:lang="sk">KSudoku je slobodná verzia populárnej logickej hry Sudoku pre prostredie KDE. Cieľom je vyplniť mriežku 9x9 číslami od 1 do 9 tak, aby riadky, stĺpce a štvorce 3x3 neobsahovali žiadne opakovanie.</p>
+    <p xml:lang="sl">KSudoku je brezplačna različica priljubljene logične igre Sudoku, ustvarjena s strani skupnosti KDE. Cilj igre je zapolniti mrežo 9 krat 9 celic s številkami od 1 do 9, brez da bi se ponovile v vrstici in stolpcu.</p>
+    <p xml:lang="sr">К‑судоку је слободна верзија популарне логичке игре судоку из заједнице КДЕ. Игра се састоји у попуњавању мреже девет пута девет бројевима од један до девет, тако да ниједна врста, колона, или квадрат три пута три не садржи поновљене вредности.</p>
+    <p xml:lang="sr-Latn">K‑sudoku je slobodna verzija popularne logičke igre sudoku iz zajednice KDE. Igra se sastoji u popunjavanju mreže devet puta devet brojevima od jedan do devet, tako da nijedna vrsta, kolona, ili kvadrat tri puta tri ne sadrži ponovljene vrednosti.</p>
+    <p xml:lang="sr-ijekavian">К‑судоку је слободна верзија популарне логичке игре судоку из заједнице КДЕ. Игра се састоји у попуњавању мреже девет пута девет бројевима од један до девет, тако да ниједна врста, колона, или квадрат три пута три не садржи поновљене вредности.</p>
+    <p xml:lang="sr-ijekavianlatin">K‑sudoku je slobodna verzija popularne logičke igre sudoku iz zajednice KDE. Igra se sastoji u popunjavanju mreže devet puta devet brojevima od jedan do devet, tako da nijedna vrsta, kolona, ili kvadrat tri puta tri ne sadrži ponovljene vrednosti.</p>
+    <p xml:lang="sv">Ksudoku är en fri version av det populära logikspelet Sudoku utvecklat av KDE-gemenskapen. Spelet går ut på att fylla i ett nio gånger nio rutmönster, där siffror från ett till nio ska fylla rader, kolumner och tre gånger tre fyrkanter utan att ett värde upprepas i någon av dem.</p>
+    <p xml:lang="tr">K Sudoku, KDE topluluğu tarafından geliştirilen popüler mantık oyunu Sudoku'nun ücretsiz bir sürümüdür. Oyun, satırları, sütunları ve üçe üç olan kareleri, değerleri yinelemeden doldurma üzerine kuruludur.</p>
+    <p xml:lang="uk">KSudoku — вільна версія популярної логічної гри, судоку, яку розроблено спільнотою KDE. Гра полягає у заповненні таблиці дев’ять на дев’ять клітинок числами від одного до дев’яти так, щоб у кожному блоці таблиці розміром три на три клітинки ці числа не повторювалися.</p>
+    <p xml:lang="zh-CN">KSudoku 是由 KDE 社区开发的自由版本的数独——一种流行的逻辑游戏。游戏需要用一到九的数字不重复地填满九乘九的格子。</p>
+    <p xml:lang="zh-TW">KSudoku 是由 KDE 社群開發的開源版數獨。數獨是個知名的邏輯遊戲，目標是用 1 到 9 的數字填滿 9x9 的格線，同時確保每一列、每一欄和每個 3x3 方塊都沒有重複的數字。</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/ksudoku</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ksudoku</url>
+  <url type="help">https://docs.kde.org/?application=ksudoku</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=ksudoku&amp;source=appdata</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/ksudoku/ksudoku.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1"/>
+  <launchable type="desktop-id">org.kde.ksudoku.desktop</launchable>
+  <provides>
+    <binary>ksudoku</binary>
+  </provides>
+  <releases>
+    <release version="1.4.25123" date="2026-03-05"/>
+    <release version="1.4.25122" date="2026-02-05"/>
+    <release version="1.4.25121" date="2026-01-08"/>
+    <release version="1.4.25120" date="2025-12-11"/>
+    <release version="1.4.25083" date="2025-11-06"/>
+    <release version="1.4.25082" date="2025-10-09"/>
+    <release version="1.4.25081" date="2025-09-11"/>
+    <release version="1.4.25080" date="2025-08-14"/>
+    <release version="1.4.25043" date="2025-07-03"/>
+    <release version="1.4.25042" date="2025-06-05"/>
+    <release version="1.4.25041" date="2025-05-08"/>
+    <release version="1.4.25040" date="2025-04-17"/>
+    <release version="1.4.24123" date="2025-03-06"/>
+    <release version="1.4.24122" date="2025-02-06"/>
+    <release version="1.4.24121" date="2025-01-09"/>
+    <release version="1.4.24120" date="2024-12-12"/>
+    <release version="1.4.24083" date="2024-11-07"/>
+    <release version="1.4.24082" date="2024-10-10"/>
+    <release version="1.4.24081" date="2024-09-12"/>
+    <release version="1.4.24080" date="2024-08-22"/>
+    <release version="1.4.24052" date="2024-07-04"/>
+    <release version="1.4.24051" date="2024-06-13"/>
+    <release version="1.4.24050" date="2024-05-23"/>
+    <release version="1.4.24022" date="2024-04-11"/>
+    <release version="1.4.24021" date="2024-03-21"/>
+    <release version="1.4.24020" date="2024-02-28"/>
+    <release version="1.4.23085" date="2024-02-15"/>
+  </releases>
+</component>

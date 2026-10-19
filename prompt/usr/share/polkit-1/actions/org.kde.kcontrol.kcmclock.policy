@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+<vendor>Date and Time Control Module</vendor>
+<icon_name>preferences-system-time</icon_name>
+   <action id="org.kde.kcontrol.kcmclock.save" >
+      <description xml:lang="ar">احفظ إعدادات التّاريخ/الوقت</description>
+      <description xml:lang="az">Tarix/Vaxt ayarlarını saxlamaq</description>
+      <description xml:lang="be">Захаваць налады даты/часу</description>
+      <description xml:lang="bg">Запазване настройките за дата и час</description>
+      <description xml:lang="bn">তারিখ এবং সময় সেটিংস সংরক্ষণ করো</description>
+      <description xml:lang="bs">Sačuvaj postavke datuma i vremena</description>
+      <description xml:lang="ca">Desa la configuració de la data i hora</description>
+      <description xml:lang="cs">Uložit nastavení data a času</description>
+      <description xml:lang="csb">Zapiszë nastôw datuma ë czasu</description>
+      <description xml:lang="da">Gem dato- og klokkeslætsindstillinger</description>
+      <description xml:lang="de">Einstellungen für Datum und Zeit speichern</description>
+      <description xml:lang="el">Αποθήκευση ρυθμίσεων ημερομηνίας/ώρας</description>
+      <description>Save the date/time settings</description>
+      <description xml:lang="en_GB">Save the date/time settings</description>
+      <description xml:lang="eo">Konservu Agordon de dato kaj tempo</description>
+      <description xml:lang="es">Guardar las preferencias de fecha/hora</description>
+      <description xml:lang="et">Kuupäeva ja kellaaja seadistuste salvestamine</description>
+      <description xml:lang="eu">Gorde data- eta ordu-ezarpenak</description>
+      <description xml:lang="fi">Tallenna päiväyksen ja ajan asetukset</description>
+      <description xml:lang="fr">Enregistrer les paramètres de date et d'heure</description>
+      <description xml:lang="fy">Datum en tiid ynstellings bewarje</description>
+      <description xml:lang="ga">Sábháil na socruithe dáta/ama</description>
+      <description xml:lang="gl">Garda a configuración da data e hora</description>
+      <description xml:lang="gu">તારીખ/સમય ગોઠવણીઓ સંગ્રહો</description>
+      <description xml:lang="he">שמירת הגדרות התאריך והשעה</description>
+      <description xml:lang="hi">तारीख़ तथा समय विन्यास सहेजें</description>
+      <description xml:lang="hr">Spremi datumske/vremenske postavke</description>
+      <description xml:lang="hu">A dátum- és időbeállítások mentése</description>
+      <description xml:lang="ia">Salveguarda le preferentias de data &amp; tempore</description>
+      <description xml:lang="id">Simpan pengaturan tanggal/waktu</description>
+      <description xml:lang="ie">Gardar li parametres de date e hora</description>
+      <description xml:lang="is">Vista stillingar dagssetningar og tíma</description>
+      <description xml:lang="it">Salva le impostazioni di data e ora</description>
+      <description xml:lang="ja">日付と時刻の設定を保存</description>
+      <description xml:lang="ka">თარიღის/დროის პარამეტრების შენახვა</description>
+      <description xml:lang="kk">Күн/уақыт параметрлерін сақтау</description>
+      <description xml:lang="km">រក្សាទុកការកំណត់​ពេលវេលា/កាលបរិច្ឆេទ</description>
+      <description xml:lang="kn">ದಿನಾಂಕ/ಸಮಯ ಸಂಯೋಜನೆಗಳನ್ನು ಉಳಿಸಿ</description>
+      <description xml:lang="ko">날짜와 시간 설정 저장</description>
+      <description xml:lang="lt">Įrašyti datos/laiko nuostatas</description>
+      <description xml:lang="lv">Saglabāt datuma/laika iestatījumus</description>
+      <description xml:lang="mk">Зачувување на поставувања за датум и време</description>
+      <description xml:lang="ml">തീയതിയുടെ/സമയത്തിന്റെ സജ്ജീകരണങ്ങള്‍ സൂക്ഷിയ്ക്കുക</description>
+      <description xml:lang="mr">दिनांक व वेळ संयोजना साठवा</description>
+      <description xml:lang="nb">Lagre innstillingene for dato og klokkeslett</description>
+      <description xml:lang="nds">Instellen vun Datum un Tiet sekern</description>
+      <description xml:lang="nl">Datum- en tijdinstellingen opslaan</description>
+      <description xml:lang="nn">Lagra innstillingane for dato og klokkeslett</description>
+      <description xml:lang="pa">ਤਾਰੀਖ/ਸਮਾਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸੰਭਾਲੋ</description>
+      <description xml:lang="pl">Zapisz ustawienia daty/czasu</description>
+      <description xml:lang="pt">Mudar a configuração da data/hora</description>
+      <description xml:lang="pt_BR">Salvar as configurações de data e hora</description>
+      <description xml:lang="ro">Salvează configurările datei și orei</description>
+      <description xml:lang="ru">Сохранить параметры даты и времени</description>
+      <description xml:lang="sa">तिथि/समय समायोजनानि रक्षन्तु</description>
+      <description xml:lang="si">දිනය/වේලාව සිටුවම් සුරකින්න</description>
+      <description xml:lang="sk">Uložiť nastavenia dátumu a času</description>
+      <description xml:lang="sl">Shranjevanje nastavitev datuma in časa</description>
+      <description xml:lang="sr">Сачувај поставке датума и времена</description>
+      <description xml:lang="sv">Spara inställningar av datum och tid</description>
+      <description xml:lang="ta">தேதி மற்றும் நேர அமைப்புகளை சேமி</description>
+      <description xml:lang="tg">Нигоҳ доштани танзимоти сана/вақт</description>
+      <description xml:lang="th">จัดเก็บการตั้งค่าวันและเวลา</description>
+      <description xml:lang="tr">Tarih ve Zaman Ayarlarını Kaydet</description>
+      <description xml:lang="ug">چېسلا/ۋاقىت تەڭشىكىنى ساقلايدۇ</description>
+      <description xml:lang="uk">Зберегти параметри дати/часу</description>
+      <description xml:lang="vi">Lưu thiết lập ngày/giờ</description>
+      <description xml:lang="wa">Schaper ls apontiaedjes del date et d' l' eure</description>
+      <description xml:lang="zh_CN">保存日期和时间设置</description>
+      <description xml:lang="zh_TW">儲存日期和時間設定值</description>
+      <message xml:lang="ar">الاستيثاق لحفظ إعدادات التّاريخ/الوقت</message>
+      <message xml:lang="az">Tarix və vaxt ayarlarını dəyişmək üçün kimlik doğrulaması.</message>
+      <message xml:lang="be"></message>
+      <message xml:lang="bg"></message>
+      <message xml:lang="ca">Autenticació per a canviar la configuració de la data i hora.</message>
+      <message xml:lang="cs">Pro změnu data a času je potřeba ověřit vaši totožnost.</message>
+      <message xml:lang="da">Autorisér for at ændre dato- eller tidsindstillinger</message>
+      <message xml:lang="de"></message>
+      <message xml:lang="el">Έλεγχος ταυτότητας για να αλλάξετε τις ρυθμίσεις ημερομηνίας ή ώρας.</message>
+      <message>Authenticate to change the date or time settings.</message>
+      <message xml:lang="en_GB">Authenticate to change the date or time settings.</message>
+      <message xml:lang="eo">Aŭtentiĝu por ŝanĝi la datajn aŭ horajn agordojn.</message>
+      <message xml:lang="es">Debe autenticarse para cambiar la configuración de fecha y hora.</message>
+      <message xml:lang="eu">Kautotu data eta ordu ezarpenak aldatzeko.</message>
+      <message xml:lang="fi">Tunnistaudu muuttaaksesi päiväyksen ja ajan asetuksia.</message>
+      <message xml:lang="fr">S'authentifier pour modifier les paramètres de date et d'heure</message>
+      <message xml:lang="ga">Fíordheimhnigh chun na socruithe dáta nó ama a athrú.</message>
+      <message xml:lang="gl">Autentíquese para cambiar a configuración de data e hora.</message>
+      <message xml:lang="he">יש לעבור אימות כדי לשנות את הגדרות התאריך או השעה.</message>
+      <message xml:lang="hu">Hitelesítés szükséges a dátum- és időbeállítások módosításához.</message>
+      <message xml:lang="ia">Authentica per cambiar  le preferentias de data o tempore.</message>
+      <message xml:lang="id">Otentikasi untuk mengubah pengaturan tanggal atau waktu.</message>
+      <message xml:lang="is">Auðkenna til að breyta stillingum dagsetningar og tíma</message>
+      <message xml:lang="it">Autenticati per modificare le impostazioni di data o ora.</message>
+      <message xml:lang="ka">თარიღის/დროის პარამეტრების შესაცვლელად ავთენტიკაცია დაგჭირდებათ.</message>
+      <message xml:lang="ko">날짜와 시간 설정을 변경하려면 인증하십시오.</message>
+      <message xml:lang="lt"></message>
+      <message xml:lang="lv"></message>
+      <message xml:lang="nb">Autentiser for å endre dato og klokkeslett.</message>
+      <message xml:lang="nl">Authenticeren om datum- en tijdinstellingen te wijzigen.</message>
+      <message xml:lang="nn">Autentiser for å endra dato og klokkeslett.</message>
+      <message xml:lang="pa">ਤਾਰੀਖ ਜਾਂ ਸਮਾਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲਣ ਲਈ ਪਰਮਾਣਿਤ ਹੋਣ ਦੀ ਲੋੜ ਹੈ।</message>
+      <message xml:lang="pl"></message>
+      <message xml:lang="pt_BR">Autentique primeiro para alterar as configurações de data ou hora.</message>
+      <message xml:lang="ro">Autentificați-vă pentru a salva configurările datei și orei.</message>
+      <message xml:lang="ru">Аутентификация для изменения параметров даты или времени.</message>
+      <message xml:lang="sa">तिथिं वा समयसमायोजनानि परिवर्तयितुं प्रमाणीकरणं कुर्वन्तु।.</message>
+      <message xml:lang="sk"></message>
+      <message xml:lang="sl"></message>
+      <message xml:lang="sv">Ange behörighet för att ändra datum- eller tidsinställningar.</message>
+      <message xml:lang="ta">தேதி மற்றும் நேர அமைப்புகளை சேமிக்க சான்றளிக்கவும்</message>
+      <message xml:lang="tr">Tarih veya zaman ayarlarını değiştirmek için kimliğinizi doğrulayın.</message>
+      <message xml:lang="uk">Пройдіть розпізнавання для зміни параметрів дати або часу.</message>
+      <message xml:lang="zh_CN">请进行身份验证以更改日期和时间设置。</message>
+      <message xml:lang="zh_TW">認證以變更日期或時間設定。</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin</allow_active>
+      </defaults>
+   </action>
+</policyconfig>

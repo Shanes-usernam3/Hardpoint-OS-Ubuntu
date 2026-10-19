@@ -1,0 +1,1 @@
+libkf5service5: symbols-declares-dependency-on-other-package libkf5service-bin (libKF5Service.so.5) [symbols]

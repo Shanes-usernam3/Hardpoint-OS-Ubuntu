@@ -1,0 +1,2 @@
+# It is intended to add dependency to libkf6purpose-bin
+libkf6purpose6: symbols-declares-dependency-on-other-package libkf6purpose-bin (libKF6Purpose.so.6) [symbols]

@@ -1,0 +1,611 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that 'Do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"> <!-- do not change this! -->
+]>
+
+<book id="kmahjongg" lang="&language;"> <!-- do not change this! -->
+<bookinfo>
+	<title>The &kmahjongg; Handbook</title> <!-- This is the title of this docbook. -->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+<author>
+	<personname>
+		<firstname>John</firstname>
+		<surname>Hayes</surname>
+	</personname>
+		<email>justlinux@bellsouth.net</email>
+</author>
+<author>
+<firstname>Eugene</firstname><surname>Trounev</surname>
+<affiliation><address><email>eugene.trounev@gmail.com</email></address></affiliation>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2021-06-16</date><!-- Date of (re)writing, or update.-->
+<releaseinfo>0.9 (KDE Gear 21.04)</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para>This documentation describes the game of &kmahjongg; version 0.9</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword>KDE</keyword> <!-- do not change this! -->
+	<keyword>kdegames</keyword> <!-- do not change this! -->
+	<keyword>game</keyword> <!-- do not change this! -->
+	<keyword>KMahjongg</keyword><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword>board</keyword>
+	<keyword>arcade</keyword>
+	<keyword>tile game</keyword>
+	<keyword>tiles</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword>one player</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
+	<note><title>Gametype:</title><para>Board, Arcade</para></note><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note><title>Number of possible players:</title><para>One</para></note><!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<para>
+		&kmahjongg; is a fun board game created after the famous oriental game of Mahjong (from Chinese <foreignphrase lang="zh">麻將</foreignphrase>). Unlike the original however, &kmahjongg; is a tile matching game for one player, a variation usually known as Mahjong Solitaire.
+	</para>
+	<para>
+		In &kmahjongg; the tiles are scrambled and stacked on top of each other to resemble a certain shape. The player is then expected to remove all the tiles off the game board by locating each tile's matching pair.
+	</para>
+</chapter>
+
+<chapter id="howto"><title>How to play</title> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note><title>Objective:</title><para>Remove all tiles from the game board by locating each tile's matching pair as fast as possible.</para></note><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para>
+		&kmahjongg; will load a default layout automatically once you start the game and you can start playing right away.
+	</para>
+	<note><title>Note:</title><para>The game timer will start immediately if the game is started.</para></note>
+	<para>
+		You should carefully study the stack of tiles laid out on the game board and find two tiles matching exactly. When you have found such a pair use your mouse to select these.
+	</para>
+	<note><title>Note:</title>
+		<para>Bear in mind that you can only select the tiles which are <quote>Open</quote>.
+			Tiles are considered <quote>Blocked</quote> when they
+			are positioned behind other tiles, or when both the
+			right and left sides of the tile are filled by others.
+			If at least one of the lateral sides is empty then the
+			tile is considered <quote>Open</quote>, and can be removed.
+	</para></note>
+	<para>
+		Once you have selected the right pair of tiles they will vanish off the game board, thus revealing the tiles previously located underneath, and opening the tiles adjacent to them.
+	</para>
+	<para>
+		Find as many matches as possible to remove all the tiles from the game board.
+	</para>
+</chapter>
+
+<chapter id="rules_and_tips"><title>Game Rules, Strategies and Tips</title> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+	<sect1 id="game-screen">
+		<title>The Game Screen</title>
+		<para>
+			<screenshot>
+				<screeninfo>A screenshot of &kmahjongg;</screeninfo>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="gamescreen.png" format="PNG"/>
+					</imageobject>
+					<textobject><phrase>Screenshot</phrase></textobject>
+				</mediaobject>
+			</screenshot>
+			A quick explanation of the parts of the game screen.
+		</para>
+	<variablelist>
+		<varlistentry>
+			<term>Game Screen</term>
+			<listitem><para>
+				The Game screen is in the center of the screen and is the largest section of the window. The background is populated with the game tiles.
+			</para></listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Statusbar</term>
+			<listitem><para>
+				The status bar is located at the bottom of the screen, and contains four panes. The first pane displays the game timer, which keeps track of the elapsed time from the start of the game until the game is finished. The second pane lists the removed/total tiles and the number of matching tiles that have free sides. The third pane gives the sequence number of the game you are playing and the last pane lets the player know when the game is ready.
+			</para></listitem>
+		</varlistentry>
+	</variablelist>
+	</sect1>
+	<sect1 id="rules">
+		<title>Rules</title>
+		<para>
+			Standard Mahjong set of tiles includes:
+			<informaltable>
+				<tgroup cols="3">
+				<tbody>
+					<row><entry>Group name</entry><entry>Tile name</entry><entry>Quantity in a set</entry></row>
+					<row><entry>Dots</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>1 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>2 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>3 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>4 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>5 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>6 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>7 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>8 of Dots</entry><entry>4</entry></row>
+					<row><entry></entry><entry>9 of Dots</entry><entry>4</entry></row>
+					<row><entry>Bamboos</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>1 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>2 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>3 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>4 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>5 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>6 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>7 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>8 of Bamboos</entry><entry>4</entry></row>
+					<row><entry></entry><entry>9 of Bamboos</entry><entry>4</entry></row>
+					<row><entry>Characters</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>1 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>2 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>3 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>4 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>5 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>6 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>7 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>8 of Characters</entry><entry>4</entry></row>
+					<row><entry></entry><entry>9 of Characters</entry><entry>4</entry></row>
+					<row><entry>Winds</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>East Wind</entry><entry>4</entry></row>
+					<row><entry></entry><entry>South Wind</entry><entry>4</entry></row>
+					<row><entry></entry><entry>West Wind</entry><entry>4</entry></row>
+					<row><entry></entry><entry>North Wind</entry><entry>4</entry></row>
+					<row><entry>Dragons</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>Red Dragon</entry><entry>4</entry></row>
+					<row><entry></entry><entry>Green Dragon</entry><entry>4</entry></row>
+					<row><entry></entry><entry>White Dragon</entry><entry>4</entry></row>
+					<row><entry>Flowers</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>Plum (1)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Lily (2)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Chrysanthemum (3)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Bamboo (4)</entry><entry>1</entry></row>
+					<row><entry>Seasons</entry><entry></entry><entry></entry></row>
+					<row><entry></entry><entry>Spring (1)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Summer (2)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Autumn (3)</entry><entry>1</entry></row>
+					<row><entry></entry><entry>Winter (4)</entry><entry>1</entry></row>
+				</tbody>
+				</tgroup>
+			</informaltable>
+		</para>
+		<itemizedlist>
+			<listitem><para>The number of tiles on a &kmahjongg; board layout can differ from the number of tiles in the standard Mahjong tile set. That means that the number of occurrences of tiles of the same type can also differ from the number stated in the table above.</para></listitem>
+			<listitem><para>Only the <quote>open</quote> tiles can be selected.</para></listitem>
+			<listitem><para><quote>Open</quote> tile is the tile which has one of the tile's lateral sides open, meaning that no other tiles are located immediately next to it.</para></listitem>
+			<listitem><para>Only when matching, open tiles can be removed from the game board.</para></listitem>
+			<listitem><para>Matching tiles are those where the face pictograms match.</para></listitem>
+		</itemizedlist>
+		<note><title>Note:</title><para>There are exceptions to this rule! In the traditional game of Mahjong each tile has a matching one except for the <quote>Flowers</quote> and <quote>Seasons</quote> tiles.</para></note>
+		<itemizedlist>
+			<listitem><para>The <quote>Flowers</quote> tiles have no doubles in the set and can be matched directly to each other.</para></listitem>
+			<listitem><para>The <quote>Seasons</quote> tiles have no doubles in the set and can be matched directly to each other.</para></listitem>
+			<listitem><para>Not every &kmahjongg; game can be finished. Sometimes the tiles are mixed in such a way that it may not be possible to find all the matches. This problem can be avoided. Please refer to <link linkend="general-options">this section</link> of the configuration dialog.</para></listitem>
+			<listitem><para>To be eligible for a place amongst the high scores the player has to complete a game instance within the shortest period of time possible.</para></listitem>
+		</itemizedlist>
+		<note><title>Note:</title><para>If the player uses the <quote>Hint</quote> feature the record will not be considered as a high score.</para></note>
+
+	</sect1>
+</chapter>
+
+
+<chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
+
+<sect1 id="menu">
+<title>Menu Items</title>
+
+		<variablelist>
+			<varlistentry id="game-menu-new">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>New</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Starts a new game.</action></para></listitem>
+			</varlistentry>
+			<varlistentry  id="game-menu-load">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Load…</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Loads a saved game.</action></para></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-restart">
+				<term><menuchoice>
+					<shortcut><keycap>F5</keycap></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Restart Game</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Restarts the current game.</action></para></listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><menuchoice>
+					<guimenu>Game</guimenu>
+					<guimenuitem>New Numbered Game…</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Starts a specifically numbered game.</action>
+				<screenshot>
+					<screeninfo>Start a Numbered Game Dialog</screeninfo>
+					<mediaobject>
+						<imageobject><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+						<textobject><phrase>Start a Numbered Game Dialog</phrase></textobject>
+					</mediaobject>
+				</screenshot>
+				</para></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-save">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Save</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Saves</action> the current game.</para></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-pause">
+				<term><menuchoice>
+					<shortcut><keycap>P</keycap></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Pause</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Pauses or resumes the game. While the game is paused, all tiles are hidden.</action></para></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-highscores">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Show High Scores</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Shows the high score list.</action>
+				<screenshot>
+					<screeninfo>Show High scores</screeninfo>
+					<mediaobject>
+						<imageobject><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+						<textobject><phrase>Show High scores</phrase></textobject>
+					</mediaobject>
+				</screenshot>
+				</para>
+				<para>
+					When your game scores exceed the top ten scores listed, you are prompted to enter your name.
+				</para>	</listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-boardeditor">
+				<term><menuchoice>
+				<guimenu>Game</guimenu>
+				<guimenuitem>Board Editor</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Shows the board editor.</action>
+				<screenshot>
+					<screeninfo>The board editor</screeninfo>
+					<mediaobject>
+						<imageobject><imagedata fileref="boardeditor.png" format="PNG"/></imageobject>
+						<textobject><phrase>The board editor</phrase></textobject>
+					</mediaobject>
+				</screenshot>
+				</para>
+					<para>
+						Procedure to edit layout:
+						<orderedlist>
+							<listitem><para>Use the board editor toolbar to create a new layout or to load and edit an existing one.</para></listitem>
+							<listitem><para>Save the layout in your user's local home folder in <filename>$<envar>XDG_DATA_HOME</envar>/kmahjongg/layouts</filename></para></listitem>
+							<listitem><para>Create the <filename><replaceable>name_of_your_layout</replaceable>.desktop</filename> file in the same folder.</para></listitem>
+							<listitem><para>Put the following lines in this file using your favorite text editor:
+									<programlisting>
+[KMahjonggLayout]
+Name=<replaceable>name_of_your_layout</replaceable>
+Description=<replaceable>description_of_your_layout</replaceable>
+VersionFormat=1
+Author=<replaceable>your_name</replaceable>
+AuthorEmail=<replaceable>your_email</replaceable>
+FileName=<replaceable>name_of_your_layout</replaceable>.layout
+</programlisting></para></listitem>
+							<listitem><para>Reload &kmahjongg; to use your new layout.</para></listitem>
+						</orderedlist>
+</para>
+                                </listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></shortcut>
+					<guimenu>Game</guimenu>
+					<guimenuitem>Quit</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Quits</action> &kmahjongg;.</para></listitem>
+			</varlistentry>
+
+			<varlistentry id="move-menu-undo">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo></shortcut>
+					<guimenu>Move</guimenu>
+					<guimenuitem>Undo</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Undo</action> your last move.</para></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-redo">
+				<term><menuchoice>
+					<shortcut><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo></shortcut>
+					<guimenu>Move</guimenu>
+					<guimenuitem>Redo</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Redo</action> a move that was undone.</para></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-hint">
+				<term><menuchoice>
+					<shortcut><keycap>H</keycap></shortcut>
+					<guimenu>Move</guimenu>
+					<guimenuitem>Hint</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Gives a Hint</action> by flashing a matching pair of tiles.</para></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-demo">
+				<term><menuchoice>
+					<shortcut><keycap>D</keycap></shortcut>
+					<guimenu>Move</guimenu>
+					<guimenuitem>Demo</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Starts the game Demo</action> mode.</para></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-shuffle">
+				<term><menuchoice>
+					<guimenu>Move</guimenu>
+					<guimenuitem>Shuffle</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Shuffles the tiles</action> on the board.</para></listitem>
+			</varlistentry>
+
+			<varlistentry id="view-menu-rotate-c">
+				<term><menuchoice>
+					<shortcut><keycap>G</keycap></shortcut>
+					<guimenu>View</guimenu>
+					<guimenuitem>Rotate View Clockwise</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Rotates</action> the tile viewing angle clockwise.</para></listitem>
+			</varlistentry>
+			<varlistentry id="view-menu-rotate-cc">
+				<term><menuchoice>
+					<shortcut><keycap>F</keycap></shortcut>
+					<guimenu>View</guimenu>
+					<guimenuitem>Rotate View Counterclockwise</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Rotates</action> the tile viewing angle counter clockwise.</para></listitem>
+			</varlistentry>
+		</variablelist>
+<para>
+Additionally &kmahjongg; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Settings Menu</ulink> and <ulink url="help:/fundamentals/menus.html#menus-help">Help Menu</ulink>
+of the &kde; Fundamentals.
+</para>
+
+</sect1>
+</chapter>
+
+
+<chapter id="faq"><title>Frequently asked questions</title> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+	<qandaentry>
+		 <question><para>I want to change the way this game looks. Can I? </para></question>
+		 <answer><para>Yes. To change the way &kmahjongg; looks use the <link linkend="menu">menubar</link> to open the <link linkend="configuration">configuration utility</link>.</para></answer>
+	</qandaentry>
+	<qandaentry>
+		 <question><para>Can I use the keyboard to play the game?</para></question>
+		 <answer><para>No. This game does not feature a keyboard play mode yet.</para></answer>
+	</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<screenshot>
+<screeninfo>Configure Dialog</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="config.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Configure Dialog</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &kmahjongg;…</guimenuitem></menuchoice> opens the <guilabel>Configure - &kmahjongg;</guilabel> dialog.</para>
+
+<sect1 id="general-options"><title>General options</title>
+	<variablelist>
+		<varlistentry>
+			<term><guilabel>Blink matching tiles when first one is selected</guilabel></term>
+			<listitem><para>
+				This setting will make the game highlight the selected tile on mouse click, and flash any matching tiles that have a free side at each move. No additional tiles will be highlighted if there are no matching tiles with a free side.
+			</para></listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Generate solvable games</guilabel></term>
+			<listitem><para>
+				Selects only games that can be solved when you start a new game.
+			</para></listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Show removed tiles</guilabel></term>
+			<listitem><para>
+				If checked, this setting allows &kmahjongg; to show the removed tiles on the board.
+			</para></listitem>
+		</varlistentry>
+	</variablelist>
+</sect1>
+
+<sect1 id="layout-options"><title>Board layout options</title>
+	<variablelist>
+		<varlistentry>
+			<term><guilabel>Random Layout</guilabel></term>
+			<listitem><para>Every new game will have a random layout of the existing one in the list.
+			</para></listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Board Layout</guilabel> selector</term>
+			<listitem><para>
+				Use the <guilabel>Board Layout</guilabel> selector to pick a gameboard to play. Different boards provide variable difficulty, depending on the number of tiles and their position.
+			</para>
+			<screenshot>
+				<screeninfo>Board Layout selector</screeninfo>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="config_layout.png" format="PNG"/>
+					</imageobject>
+					<textobject><phrase>Board Layout selector</phrase></textobject>
+				</mediaobject>
+			</screenshot>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+</sect1>
+
+<sect1 id="tiles-options"><title>Tiles options</title>
+	<variablelist>
+		<varlistentry>
+			<term><guilabel>Tiles</guilabel> selector</term>
+			<listitem><para>
+				Use the <guilabel>Tiles</guilabel> selector to choose graphics for the tiles.
+			</para>
+			<screenshot>
+				<screeninfo>Tile selector</screeninfo>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="config_tiles.png" format="PNG"/>
+					</imageobject>
+					<textobject><phrase>Tiles selector</phrase></textobject>
+				</mediaobject>
+			</screenshot>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+</sect1>
+
+<sect1 id="background-options"><title>Background options</title>
+	<variablelist>
+		<varlistentry>
+			<term><guilabel>Background</guilabel> selector</term>
+			<listitem><para>
+				Use the <guilabel>Background</guilabel> selector to choose a background graphic for the game.
+			</para>
+			<screenshot>
+				<screeninfo>Background selector</screeninfo>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="config_background.png" format="PNG"/>
+					</imageobject>
+					<textobject><phrase>Background selector</phrase></textobject>
+				</mediaobject>
+			</screenshot>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+</sect1>
+
+<sect1 id="default-keybindings">
+<title>Default Keybindings</title>
+
+<para><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure Shortcuts…</guimenuitem></menuchoice> allows you to change the default keyboard bindings.</para>
+
+<para>
+The default kebindings are as follows:
+</para>
+
+<table>
+<title>Keyboard Shortcuts</title>
+<tgroup cols="2">
+<thead><row><entry>Key Combo</entry><entry>Action</entry></row></thead>
+<tbody>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></entry><entry>Starts a new game</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></entry><entry>Loads a previously saved game</entry></row>
+<row><entry><keycap>F5</keycap></entry><entry>Restart the game</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></entry><entry>Saves the game</entry></row>
+<row><entry><keycap>P</keycap></entry><entry>Pauses or resumes a game</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></entry><entry>Show the highscores</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></entry><entry>Quits the game</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo></entry><entry>Move undo</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo></entry><entry>Move redo</entry></row>
+<row><entry><keycap>H</keycap></entry><entry>Gives you a hint by flashing two matching tiles</entry></row>
+<row><entry><keycap>D</keycap></entry><entry>Plays the game in Demo mode</entry></row>
+<row><entry><keycap>G</keycap></entry><entry>Rotate the view angle clockwise</entry></row>
+<row><entry><keycap>F</keycap></entry><entry>Rotate the view angle counter-clockwise</entry></row>
+<row><entry><keycap>F1</keycap></entry><entry>Displays this handbook</entry></row>
+<row><entry><keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo></entry><entry>What's This Help</entry></row>
+
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits"><title>Credits and License</title> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+	<para>
+		&kmahjongg; by &kde;
+	</para>
+
+	<para>
+		Program Copyright &copy; 1997 <personname><firstname>Mathias</firstname><surname>Mueller</surname></personname> <email>in5y158@public.uni-hamburg.de</email>
+	</para>
+	<para>
+		Program Copyright &copy; 2007 &Mauricio.Piacentini; &Mauricio.Piacentini.mail;
+	</para>
+	<para>
+		Contributors:
+		<itemizedlist>
+			<listitem><para><personname><firstname>David</firstname><surname>Black</surname></personname> <email>david.black@lutris.com</email></para></listitem>
+			<listitem><para><personname><firstname>Michael</firstname><surname>Haertjens</surname></personname> <email>mhaertjens@modusoperandi.com</email></para></listitem>
+			<listitem><para><personname><firstname>Osvaldo</firstname><surname>Stark</surname></personname> <email>starko@dnet.it</email></para></listitem>
+			<listitem><para><personname><firstname>Benjamin</firstname><surname>Meyer</surname></personname> <email>ben+kmahjongg@meyerhome.net</email></para></listitem>
+			<listitem><para>&Albert.Astals.Cid; &Albert.Astals.Cid.mail;</para></listitem>
+			<listitem><para><personname><firstname>Raquel</firstname><surname>Ravanini</surname></personname> <email>raquel@tabuleiro.com</email></para></listitem>
+		</itemizedlist>
+	</para>
+	<para>
+		Documentation Copyright &copy; 2005 <personname><firstname>John</firstname><surname>Hayes</surname></personname> <email>justlinux@bellsouth.net</email>
+	</para>
+
+<!-- !!!do not change ANYTHING after this line!!!! -->
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;
+&underGPL;
+
+</chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

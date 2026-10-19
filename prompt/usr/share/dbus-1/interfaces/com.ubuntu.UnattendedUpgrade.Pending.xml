@@ -1,0 +1,62 @@
+<node>
+  <interface name="com.ubuntu.UnattendedUpgrade.Pending">
+    <!--
+      Postpone:
+
+      Request to postpone the pending upgrade.
+      The service may request that a user authorizes the request.
+      The request is to be considered accepted unless the method
+      returns an error.
+    -->
+    <method name="Postpone"/>
+
+    <!--
+      AboutToStart:
+      @info: Information about the pending upgrade
+
+      The upgrade is about to start, but the user may postpone it.
+      Only gets emitted if the upgrade can be postponed.
+
+      The following fields may be included in the info:
+      <variablelist>
+        <varlistentry>
+          <term>postpone-timeout-time u</term>
+          <listitem><para>
+            Amount of time available for sending a valid Postpone request,
+            in seconds
+          </para></listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>postpone-remaining-days u</term>
+          <listitem><para>
+            Number of days left until the upgrade cannot be postponed anymore,
+            and will be forced to run.
+          </para></listitem>
+        </varlistentry>
+    -->
+    <signal name="AboutToStart">
+        <arg name="info" type="a{sv}"/>
+    </signal>
+
+    <!--
+      Started:
+
+      The upgrade has started, and cannot be postponed anymore
+    -->
+    <signal name="Started"/>
+
+    <!--
+      Finished:
+
+      The upgrade has finished
+    -->
+    <signal name="Finished"/>
+
+    <!--
+      Canceled:
+
+      The upgrade has been canceled and postponed to a later time
+    -->
+    <signal name="Canceled"/>
+  </interface>
+</node>

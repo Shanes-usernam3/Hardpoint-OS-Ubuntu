@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.ufw
+Exec=/usr/lib/kf6/kauth/libexec/kde_ufw_plugin_helper
+User=root

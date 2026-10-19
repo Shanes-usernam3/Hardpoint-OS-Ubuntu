@@ -1,0 +1,2 @@
+libphonon4qt6-4t64: symbols-declares-dependency-on-other-package phonon4qt6 (libphonon4qt6.so.*) [symbols]
+libphonon4qt6-4t64: distant-prerequisite-in-shlibs

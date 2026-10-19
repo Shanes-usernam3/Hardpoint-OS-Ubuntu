@@ -1,0 +1,166 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: accounts-qml-module
+Upstream-Contact: Alberto Mardegan <alberto.mardegan@canonical.com>
+Source: https://gitlab.com/accounts-sso/accounts-qml-module
+
+Files: .gitignore
+ .gitlab-ci.yml
+ README.md
+ accounts-qml-module.pro
+ common-installs-config.pri
+ common-project-config.pri
+ common-vars.pri
+ coverage.pri
+ doc/accounts-qml-module-ubuntu.qdocconf
+ doc/accounts-qml-module-common.qdocconf
+ doc/accounts-qml-module.qdocconf
+ doc/css/qtquick.css
+ doc/css/scratch.css
+ doc/doc.pri
+ doc/html/.gitignore
+ doc/qtquick.css
+ doc/ubuntu-appdev-site-footer.qdocconf
+ doc/ubuntu-appdev-site-header.qdocconf
+ src/qmldir.in
+ src/src.pro
+ tests/data/applications/mailer.desktop
+ tests/data/bad.provider
+ tests/data/badmail.service
+ tests/data/badshare.service
+ tests/data/cool.provider
+ tests/data/coolmail.service
+ tests/data/coolpublisher.application
+ tests/data/coolshare.service
+ tests/data/e-mail.service-type
+ tests/data/mailer.application
+ tests/data/sharing.service-type
+ tests/mock/mock.pro
+ tests/tests.pro
+ tests/tst_plugin.pro
+Copyright: 2013-2016, Canoncal Ltd.
+License: LGPL-2.1
+Comment:
+ Files listed above don't provide license headers. Assuming
+ copyright holdership and license as found in majority of
+ other code files.
+
+Files: examples/create-account.qml
+ examples/simple-view.qml
+ examples/ubuntu-sdk-view.qml
+ src/account-service-model.cpp
+ src/account-service-model.h
+ src/account-service.cpp
+ src/account-service.h
+ src/account.cpp
+ src/account.h
+ src/application-model.cpp
+ src/application-model.h
+ src/application.cpp
+ src/application.h
+ src/credentials.cpp
+ src/credentials.h
+ src/debug.cpp
+ src/debug.h
+ src/manager.cpp
+ src/manager.h
+ src/plugin.cpp
+ src/plugin.h
+ src/provider-model.cpp
+ src/provider-model.h
+ tests/mock/signon.cpp
+ tests/mock/signon.h
+ tests/tst_plugin.cpp
+Copyright: 2013, Canonical Ltd.
+  2013-2016, Canonical Ltd.
+  2015-2016, Canonical Ltd.
+License: LGPL-2.1
+
+Files: doc/generate_html.sh
+ doc/index.qdoc
+ doc/manifest-files.qdoc
+ src/accounts.qdoc
+Copyright: 2012, Canonical Ltd.
+  2013, Canonical Ltd.
+  2016, Canonical Ltd.
+License: LGPL-3
+
+Files: doc/css/base.css
+Copyright: 2011, Canonical Ltd.
+License: LGPL-3
+Comment:
+ No license given in base.css, only copyright holder.
+ .
+ Assuming license from other documentation files.
+
+Files: doc/css/reset.css
+Copyright: 2010, Yahoo! Inc.
+License: BSD-3-clause
+Comment:
+ Clarifying the BSD version of the license lead to the
+ Yui project:
+ https://github.com/yui/yui3/blob/master/LICENSE.md
+ .
+ Thus, applying BSD-3-clause for the reset.css file.
+
+Files: debian/*
+Copyright: 2013-2016, Canonical Ltd.
+  2023-2024, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+License: LGPL-2.1 or LGPL-3
+
+License: LGPL-2.1
+ This package is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License, version 2.1 as
+ published by the Free Software Foundation.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: LGPL-3
+ This package is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License, version 3 as
+ published by the Free Software Foundation.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

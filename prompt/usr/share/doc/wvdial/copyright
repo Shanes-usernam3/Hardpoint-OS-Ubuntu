@@ -1,0 +1,65 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wvdial
+Source: http://open.nit.ca/
+
+Files: *
+Copyright: 1997-2005 Net Integration Technologies, Inc.
+           1998-2007 Avery Pennarun <apenwarr@alumnit.ca>
+           2000      SuSE GmbH
+           2008      Johannes Starosta
+           2009-2011 Simon Law <sfllaw@debian.org>
+           2011      Martin Bagge <brother@bsnet.se>
+License: LGPL-2
+
+Files: debian/*
+Copyright: 1997-2001 Avery Pennarun <apenwarr@debian.org>
+           2002      Moshe Zadka <moshez@debian.org>
+           2002-2007 Patrick Patterson <ppatters@debian.org>
+           2003-2004 James A. Morrison <phython@debian.org>
+           2005      Frank Lichtenheld <djpig@debian.org>
+           2005-2006 Simon Law <sfllaw@debian.org>
+           2007      William Lachance <wrlach@gmail.com>
+           2008-2012 Christian Perrier <bubulle@debian.org>
+           2009      Barry deFreese <bdefreese@debian.org>
+           2009      Luca Falavigna <dktrkranz@debian.org>
+           2010      Alessio Treglia <alessio@debian.org>
+           2011      Thierry Randrianiriana <thierry@debian.org>
+           2018      Gianfranco Costamagna <locutusofborg@debian.org>
+           2018      Helmut Grohne <helmut@subdivi.de>
+           2022-2023 Joao Eriberto Mota Filho <eriberto@debian.org>
+           2024      David da Silva Polverari <polverari@debian.org>
+License: LGPL-2+
+
+License: LGPL-2
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; version 2
+ of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+Comment:
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+Comment:
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".

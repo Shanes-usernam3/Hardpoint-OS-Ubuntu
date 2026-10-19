@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
+[Desktop Entry]
+Name=KIO Workers
+Name[ar]=عوامل الدخل/الخرج
+Name[be]=KIO Workers
+Name[bg]=KIO обработване
+Name[ca]=Processos de treball KIO
+Name[ca@valencia]=Processos de treball KIO
+Name[cs]=Nástroje KIO
+Name[da]=KIO-workers
+Name[de]=KIO-Modul
+Name[en_GB]=KIO Workers
+Name[eo]=KIO-Laboristoj
+Name[es]=Módulos de trabajo de KIO
+Name[eu]=KIO beharginak
+Name[fi]=KIO-apuohjelmat
+Name[fr]=Acteurs du module « kio »
+Name[gl]=Traballadores de KIO
+Name[he]=פעילי רקע של KIO
+Name[hu]=KIO szolgáltatások
+Name[ia]=KIO Workers (Travaliatores de KIO)
+Name[is]=KIO vinnsluferli
+Name[it]=KIO Worker
+Name[ja]=KIO ワーカー
+Name[ka]=KIO დამხმარე პროცესები
+Name[ko]=KIO 워커
+Name[lv]=KIO programmas
+Name[nl]=KIO-programma's
+Name[nn]=KIO-arbeidarar
+Name[pa]=KIO ਵਰਕਰ
+Name[pl]=Pracownicy KIO
+Name[pt]=Módulos do KIO
+Name[pt_BR]=KIO workers
+Name[ro]=Lucrători KIO
+Name[ru]=Модули KIO
+Name[sa]=केआइओ कार्यकर्ता
+Name[sk]=KIO pracovníci
+Name[sl]=KIO Workers
+Name[sv]=I/O-arbetare
+Name[ta]=KIO உதவிநிரல்கள்
+Name[tr]=KIO İşçileri
+Name[uk]=Обробники введення-виведення
+Name[vi]=Thợ KIO
+Name[zh_CN]=KIO 工作程序
+Name[zh_TW]=KIO Workers
+Icon=help-contents
+
+X-DOC-Weight=500
+
+X-KDE-KHelpcenter-Special=kioworker

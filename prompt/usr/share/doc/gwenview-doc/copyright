@@ -1,0 +1,368 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gwenview
+Upstream-Contact: kde-devel@kde.org
+Source: https://invent.kde.org/graphics/gwenview
+
+Files: *
+Copyright: 2004-2007, Albert Astals Cid <aacid@kde.org>
+           2008, Angelo Naselli <anaselli@linux.it>
+           2000-2014, Aurélien Gâteau <agateau@kde.org>
+           2000, David Faure <faure@kde.org>
+           2004-2005, Enrico Ros <eros.kde@email.it>
+           1989-1991, Free Software Foundation, Inc
+           2008, Ilya Konkov <eruart@gmail.com>
+           2014, John Zaitseff <J.Zaitseff@zap.org.au>
+           1992-2008, Trolltech ASA
+           2014, Vishesh Handa <me@vhanda.in>
+License: GPL-2.0-or-later
+Comment: Manually collected
+
+Files: app/spotlightmode.cpp
+       app/spotlightmode.h
+       lib/documentview/documentviewcontroller.cpp
+Copyright: 2011, Aurélien Gâteau <agateau@kde.org>
+           2021, Noah Davis <noahadvs@gmail.com>
+           2024, Ravil Saifullin <saifullin.dev@gmail.com>
+License: GPL-2.0-or-later
+Comment: Automatically extracted
+
+Files: po/*
+Copyright: 2007-2024, A S Alam <aalam@users.sf.net>
+           2024, Adrián Chaves (Gallaecio)
+           2007-2024, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2024, Enol P. <enolp@softastur.org>
+           2024, Flori G <Renner03@protonmail.com>
+           2008-2024, Freek de Kruijf <f.de.kruijf@hetnet.nl>
+           2023-2024, Geraldo Simiao <geraldosimiao@fedoraproject.org>
+           2013-2024, Giovanni Sora <g.sora@tiscali.it>
+           2024, Guðmundur Erlingsson <gudmundure@gmail.com>
+           2007-2024, Jure Repinc <jlp@holodeck1.com>
+           2023-2024, KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2020-2023, Kheyyam Gojayev <xxmn77@gmail.com>
+           2022-2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2021-2024, Kishore G <kishore96@gmail.com>
+           2021-2024, Kristof Kiszel <kiszel.kristof@gmail.com>
+           2019-2024, Matej Mrenica <matejm98mthw@gmail.com>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2012-2023, Roman Paholík <wizzardsk@gmail.com>
+           2023, Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+           2007-2024, Shinjo Park <kde@peremen.name>
+           2004-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2014-2024, Steve Allewell <steve.allewell@gmail.com>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2021-2024, Vit Pelcak <vit@pelcak.org>
+           2010-2023, Vít Pelčák <vit@pelcak.org>
+           2012-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2008-2024, zayed <zayed.alsaidi@gmail.com>
+           2011-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: GPL-2.0-or-later
+Comment: Automatically extracted
+
+Files: cmake/*
+Copyright: 2008, Adrian Page <adrian@pagenet.plus.com>
+           2009, Cyrille Berger <cberger@cberger.net>
+           2006, Jasem Mutlaq <mutlaqja@ikarustech.com>
+License: BSD-3-clause
+Comment: Manually collected
+
+Files: CMakePresets.json
+Copyright: 2021, Laurent Montel <montel@kde.org>
+License: BSD-3-Clause
+Comment: Automatically extracted
+
+Files: app/org.kde.gwenview.appdata.xml
+Copyright: 2014, Matthias Klumpp <matthias@tenstral.net>
+License: CC0-1.0
+Comment: Manually collected
+
+Files: .flatpak-manifest.json
+       .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+Comment: Automatically extracted
+
+Files: doc/index.docbook
+       po/*.docbook
+Copyright: Christopher Martin
+           Henry de Valence
+License: GFDL-1.2-only_NIV
+Comment: Manually collected
+
+Files: lib/libjpeg-62/*
+       lib/libjpeg-80/*
+       lib/libjpeg-90/*
+Copyright: 1991-1998, Thomas G. Lane
+           1997-2013, Thomas G. Lane, Guido Vollbeding
+License: JPEG
+Comment: Manually collected
+
+Files: po/uk/gwenview.po
+Copyright: 2007-2008, Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>
+           2008-2024, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Manually collected
+
+Files: app/alignwithsidebarwidgetaction.cpp
+       app/alignwithsidebarwidgetaction.h
+       lib/decoratedtag/decoratedtag.cpp
+       lib/decoratedtag/decoratedtag.h
+       lib/documentview/alphabackgrounditem.cpp
+       lib/documentview/alphabackgrounditem.h
+       lib/zoomcombobox/zoomcombobox.cpp
+       lib/zoomcombobox/zoomcombobox.h
+       lib/zoomcombobox/zoomcombobox_p.h
+Copyright: 2021, Arjen Hiemstra <ahiemstra@heimr.nl>
+           2021, Felix Ernst <fe.a.ernst@gmail.com>
+           2021, Noah Davis <noahadvs@gmail.com>
+License: LGPL-2.1-or-later
+
+Files: lib/cms/iccjpeg.c
+       lib/cms/iccjpeg.h
+Copyright: 1998-2004, Marti Maria <x@uknown.com>
+           1998-2004, Marti Maria <x@unknown.com>
+License: MIT
+
+Files: debian/*
+Copyright: 2011-2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2011, Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+License: GPL-2.0-or-later
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: GFDL-1.2-only_NIV
+ Permission is granted to copy, distribute and/or modify this
+ document under the terms of the GNU Free Documentation License
+ Version 1.2; with no Invariant Sections, no Front-Cover Texts, and
+ no Back-Cover Texts.
+ .
+ On Debian systems, the complete text of the GNU Free Documentation
+ License version 1.2 can be found in
+ `/usr/share/common-licenses/GFDL-1.2’.
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: JPEG
+ LEGAL ISSUES
+ ============
+ .
+ In plain English:
+ .
+ 1. We don't promise that this software works.  (But if you find any bugs,
+    please let us know!)
+ 2. You can use this software for whatever you want.  You don't have to pay us.
+ 3. You may not pretend that you wrote this software.  If you use it in a
+    program, you must acknowledge somewhere in your documentation that
+    you've used the IJG code.
+ .
+ In legalese:
+ .
+ The authors make NO WARRANTY or representation, either express or implied,
+ with respect to this software, its quality, accuracy, merchantability, or
+ fitness for a particular purpose.  This software is provided "AS IS", and you,
+ its user, assume the entire risk as to its quality and accuracy.
+ .
+ This software is copyright (C) 1991-2014, Thomas G. Lane, Guido Vollbeding.
+ All Rights Reserved except as specified below.
+ .
+ Permission is hereby granted to use, copy, modify, and distribute this
+ software (or portions thereof) for any purpose, without fee, subject to these
+ conditions:
+ (1) If any part of the source code for this software is distributed, then this
+ README file must be included, with this copyright and no-warranty notice
+ unaltered; and any additions, deletions, or changes to the original files
+ must be clearly indicated in accompanying documentation.
+ (2) If only executable code is distributed, then the accompanying
+ documentation must state that "this software is based in part on the work of
+ the Independent JPEG Group".
+ (3) Permission for use of this software is granted only if the user accepts
+ full responsibility for any undesirable consequences; the authors accept
+ NO LIABILITY for damages of any kind.
+ .
+ These conditions apply to any software derived from or based on the IJG code,
+ not just to the unmodified library.  If you use our work, you ought to
+ acknowledge us.
+ .
+ Permission is NOT granted for the use of any IJG author's name or company name
+ in advertising or publicity relating to this software or products derived from
+ it.  This software may be referred to only as "the Independent JPEG Group's
+ software".
+ .
+ We specifically permit and encourage the use of this software as the basis of
+ commercial products, provided that all warranty or liability claims are
+ assumed by the product vendor.
+ .
+ .
+ The Unix configuration script "configure" was produced with GNU Autoconf.
+ It is copyright by the Free Software Foundation but is freely distributable.
+ The same holds for its supporting scripts (config.guess, config.sub,
+ ltmain.sh).  Another support script, install-sh, is copyright by X Consortium
+ but is also freely distributable.
+ .
+ The IJG distribution formerly included code to read and write GIF files.
+ To avoid entanglement with the Unisys LZW patent (now expired), GIF reading
+ support has been removed altogether, and the GIF writer has been simplified
+ to produce "uncompressed GIFs".  This technique does not use the LZW
+ algorithm; the resulting GIF files are larger than usual, but are readable
+ by all standard GIF decoders.
+ .
+ We are required to state that
+     "The Graphics Interchange Format(c) is the Copyright property of
+     CompuServe Incorporated.  GIF(sm) is a Service Mark property of
+     CompuServe Incorporated."
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

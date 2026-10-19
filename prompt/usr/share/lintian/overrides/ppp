@@ -1,0 +1,18 @@
+# The symbols file is used only internally for tracking plugin ABI changes
+ppp binary: symbols-file-contains-current-version-with-debian-revision
+
+# false positive; radrealms.c verified to build with -D_FORTIFY_SOURCE=2
+ppp binary: hardening-no-fortify-functions [usr/lib/pppd/*/radrealms.so]
+
+# makes new files owned by group dip so that world read can be safely removed
+ppp binary: non-standard-dir-perm 2750 != 0755 [etc/chatscripts/]
+ppp binary: non-standard-dir-perm 2750 != 0755 [etc/ppp/peers/]
+
+# Documentation on connecting win9x clients to a Linux PPP server
+ppp binary: package-contains-readme-for-other-platform-or-distro [usr/share/doc/ppp/README.win9x]
+
+# setuid root required to allow non-root (members of dip) to run ppp
+ppp binary: elevated-privileges 4754 root/dip [usr/sbin/pppd]
+
+# minconn.so has no dependencies outside pppd itself
+ppp binary: shared-library-lacks-prerequisites [usr/lib/pppd/*/minconn.so]

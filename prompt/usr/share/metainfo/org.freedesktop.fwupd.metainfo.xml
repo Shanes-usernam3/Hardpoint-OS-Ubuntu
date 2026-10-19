@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<component type="console-application">
+  <id>org.freedesktop.fwupd</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LGPL-2.0+</project_license>
+  <name>fwupd</name>
+  <summary>Update device firmware on Linux</summary>
+  <description>
+    <p>
+      This project aims to make updating firmware on Linux automatic, safe and
+      reliable.
+      You can either use a GUI software manager like GNOME Software to view and
+      apply updates, the command-line tool or the D-Bus interface directly.
+    </p>
+    <p>
+      The fwupd process is a system daemon to allow session software to update
+      device firmware on your local machine.
+      It is designed for desktops, but this project is also usable on phones,
+      tablets and on headless servers.
+    </p>
+  </description>
+  <url type="bugtracker">https://github.com/fwupd/fwupd/issues</url>
+  <url type="homepage">https://fwupd.org/</url>
+  <url type="translate">https://hosted.weblate.org/projects/fwupd/fwupd/</url>
+  <url type="vcs-browser">https://github.com/fwupd/fwupd</url>
+  <update_contact>richard_at_hughsie.com</update_contact>
+  <developer_name>The fwupd authors</developer_name>
+  <developer id="org.fwupd">
+    <name translate="no">The fwupd authors</name>
+  </developer>
+  <translation type="gettext">fwupd</translation>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-info">moderate</content_attribute>
+  </content_rating>
+  <provides>
+    <binary>fwupdmgr</binary>
+    <binary>fwupdtool</binary>
+  </provides>
+  <releases>
+    <release version="2.1.1" date="2026-03-11">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add a new fwupd security check for HP Sure Start</li>
+          <li>Add a new plugin to verify Intel CSME using SMBIOS data</li>
+          <li>Add a new tpm-eventlog command to explain the TPM eventlog output</li>
+          <li>Add CycloneDX and SPDX support to uSWID</li>
+          <li>Add support for AMD Platform Secure boot</li>
+          <li>Add support for changing AMD GPU UMA carveout size</li>
+          <li>Add support for emulation for bluetooth devices</li>
+          <li>Allow systems to use the udev event source without using systemd</li>
+          <li>Disable the UEFI plugins on 32bit x86</li>
+          <li>Drop support for GPG signing of metadata and firmware</li>
+          <li>No longer depend on json-glib, libarchive or protobuf-c</li>
+          <li>Remove the concept of blocked firmware</li>
+          <li>Show translated problems when a device cannot be installed</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Add a timeout to the fwupd-refresh systemd unit</li>
+          <li>Allow systemd service to access block-sr devices</li>
+          <li>Always show the correct new firmware version in 'fwupdmgr get-history'</li>
+          <li>Be more defensive with invalid Corsair device responses</li>
+          <li>Cache the payload verification result to speed up installing modem firmware</li>
+          <li>Check for integer overflow when constructing a partial stream</li>
+          <li>Clear the remaining qc-firehose power reset logs</li>
+          <li>Decompress a zip file in Aver HID rather than a bz2 archive</li>
+          <li>Do not allow efivar update without TIME_BASED_AUTHENTICATED_WRITE_ACCESS</li>
+          <li>Do not hang when parsing an invalid USB descriptor</li>
+          <li>Do not include EV_NO_ACTION when calculating the TPM PCRs</li>
+          <li>Do not return an error if the fastboot property is not provided</li>
+          <li>Do not show all IDs as GUIDs if adding quirks after device setup</li>
+          <li>Find shim when using systemd-boot and distro-specific locations</li>
+          <li>Fix activation of dell-kestrel NVM when composite updates are completed</li>
+          <li>Fix a dell-dock regression when enumerating the status component</li>
+          <li>Fix a fuzzer timeout when parsing a Synaptics RMI SBL container</li>
+          <li>Fix a missing error check when updating Genesys USB hubs</li>
+          <li>Fix a potential heap OOB read in AMD Kria SOM EEPROM parser</li>
+          <li>Fix a potential Logitech HID++ hang when parsing unexpected payload IDs</li>
+          <li>Fix a potential out-of-bounds read in Dell dock</li>
+          <li>Fix a regression causing MBIM QDU updates to fail</li>
+          <li>Fix a regression when installing on the HP G5 dock</li>
+          <li>Fix a small memory leak when removing a bluetooth device</li>
+          <li>Fix an integer underflow when parsing a malicious PE file</li>
+          <li>Fix get-updates --json silently skipping UPDATABLE_HIDDEN devices</li>
+          <li>Fix the snapd-uefi request when multiple updates are processed</li>
+          <li>Honor polkit auth for emulation tag modify device</li>
+          <li>Make Logitech HID++ devices using RDFU actually work</li>
+          <li>Only load the history database in the daemon when required</li>
+          <li>Refactor the Snap support out into a new plugin</li>
+          <li>Remove a warning when updating Intel GSC OPROMDATA</li>
+          <li>Remove the bcm57xx recovery device support</li>
+          <li>Require a CHID for generic ElanTP devices</li>
+          <li>Speed up calculating the cabinet checksum by ~20%</li>
+          <li>Support 8bitdo firmware with multiple packed images</li>
+          <li>Try to claim the DFU USB interface more than once</li>
+          <li>Use crc32() from zlib.h when computing the most common kind of CRC32</li>
+          <li>Verify the uncompressed size when decompressing CAB files</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>Blestech Touchpads</li>
+          <li>ELAN Haptic MCU devices</li>
+          <li>FocalTouch devices</li>
+          <li>Himax Touchscreens</li>
+          <li>HP Engage One G2 Advanced Hub</li>
+          <li>KATAR PRO Wireless Gaming Dongle</li>
+          <li>Lenovo keyboard and mice accessories</li>
+          <li>Lenovo Sapphire Folio Keyboard</li>
+          <li>Lightware Taurus HC40 and HC60</li>
+          <li>Novatek touchscreens</li>
+          <li>PixArt Touchpads</li>
+          <li>Rolling RW101-CAT12 modems</li>
+          <li>Sunwinon HID devices</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.18" date="2025-12-01">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add a MOTD message for devices needing reboot after staged updates</li>
+          <li>Create the reboot-required file when a firmware update requires reboot</li>
+          <li>Record the system state for each composite emulation</li>
+          <li>Update USI docking station firmware without requiring a manual replug</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Add a MTD device problem if the Intel SPI BIOS lock is set</li>
+          <li>Allow changing the child name when using PARENT_NAME_PREFIX</li>
+          <li>Allow UpdateCapsule to work on systems that do not support SecureBoot</li>
+          <li>Correctly parse the EFI_CAPSULE_RESULT_VARIABLE_HEADER</li>
+          <li>Fall back to the SMBIOS version for BIOS MTD devices</li>
+          <li>Fix a crash when trying to record an i2c emulation</li>
+          <li>Fixed Huddly upgrade problems with major version changes</li>
+          <li>Fix man page compatibility with apropos and whatis</li>
+          <li>Fix parsing USB BOS descriptors</li>
+          <li>Fix up the x86_64-specific capsule flags when deploying UEFI firmware</li>
+          <li>Improve firmware stream searching speed by a huge amount</li>
+          <li>Only convert the release uint32_t to device version format for UEFI devices</li>
+          <li>Only handle SIGINT in fwupdtool when required</li>
+          <li>Refactor the hypervisor and container detection to be usable from plugins</li>
+          <li>Set PlatformArchitecture as the CPU architecture for RISC-V machines</li>
+          <li>Use a sensible timeout when doing qc-s5gen2 HID requests</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>HP Portable USB-C 4K HDMI Hub</li>
+          <li>Lenovo Legion Go 2 (as a HID device)</li>
+          <li>Synaptics HapticsPad</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.17" date="2025-11-05">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add support for client-side phased update deployment</li>
+          <li>Add support for post-quantum signatures</li>
+          <li>Allow clearing the cache dirirectory</li>
+          <li>Allow fwupdtpmevlog to dump the raw eventlog data</li>
+          <li>Build a NVMe GUID derived from the serial number</li>
+          <li>Make fwupdtool extract work with deeply nested images</li>
+          <li>Parse VSS and FTW variable stores from EFI volumes</li>
+          <li>Reintroduce the FreeBSD CI target</li>
+          <li>Support very old versions of UDisks</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Add 'fwupdmgr hwids' by exposing another daemon property</li>
+          <li>Add offline hashes for the Microsoft 20250902 dbx</li>
+          <li>Add the Framework-specific KEK and db hashes</li>
+          <li>Allow updating IFD BIOS region via parent MTD</li>
+          <li>Avoid showing reinstall prompts for composite devices</li>
+          <li>Clean up the fwupdtool lock file in all cases</li>
+          <li>Correctly match the correct historical composite component</li>
+          <li>Do not allow PK or KEK updates when system has a test key installed</li>
+          <li>Do not allow reinstalling when using ONLY_VERSION_UPGRADE</li>
+          <li>Do not require AC power to run the installed tests</li>
+          <li>Do not scan EFI volumes when constructing MTD BIOS devices</li>
+          <li>Ensure REGION is always set for MTD IFD children</li>
+          <li>Ensure SCSI instance IDs are valid ASCII values</li>
+          <li>Fix a critical warning when parsing invalid Jabra firmware</li>
+          <li>Fix an Ilitek parsing crash found when fuzzing</li>
+          <li>Fix an inotify race when refreshing metadata</li>
+          <li>Fix a pending-activation problem with Dell docking stations</li>
+          <li>Fix a potential hang when creating a chunk array with aligned sizes</li>
+          <li>Fix MTD emulation recording for PCI-backed devices</li>
+          <li>Fix the device order when the parent specifies install-parent-first</li>
+          <li>Fix the FLMSTR layout when reading IFD partitions</li>
+          <li>Fix the thunderbolt controller rushing to finalize before onlining retimers</li>
+          <li>Fix writing Intel GPU OptionROM data and OptionROM code</li>
+          <li>Flush stale events to make the Logitech Rallybar more reliable</li>
+          <li>Ignore all the Intel GPU MTD devices</li>
+          <li>Ignore errors when writing the last page of Dell dock firmware</li>
+          <li>Make an error message more specific</li>
+          <li>Modify the Dell dock needs-activation flag after updates are installed</li>
+          <li>Only add one devlink device for each PCI card</li>
+          <li>Parse the FMAP SBOM area as uSWID when required</li>
+          <li>Relax the USI dock DMC child device checks for new firmware</li>
+          <li>Revert back to the flashrom deprecated API as the new API is unusable</li>
+          <li>Rewrite the fwupdmgr manpage to be more useful</li>
+          <li>Use higher delay when update status for Logitech peripheral devices</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>ASUS CX9406 (touch controller)</li>
+          <li>Framework Copilot keyboard</li>
+          <li>Genesys GL352530 and GL352360</li>
+          <li>Huddly C1</li>
+          <li>Lexar and Maxio NVMe SSDs</li>
+          <li>Primax Ryder mouse 2</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.16" date="2025-09-12">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add a 'search' feature to fwupdtool and fwupdmgr</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Fix missing release locations when loading from artifact</li>
+          <li>Fix remaining issues to make updates on FreeBSD work</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.15" date="2025-09-10">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Allow child devices to use the parent name as a prefix</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Add newer commands and options for Fish completion</li>
+          <li>Allow installing archives named as .CAB rather than .cab</li>
+          <li>Erase Firehose modem devices correctly</li>
+          <li>Fix Goodix enumeration issues</li>
+          <li>Fix sending firmware reports without --force</li>
+          <li>Fix the FreeBSD build</li>
+          <li>Fix version number of BnR MTD devices</li>
+          <li>Require additional requirements for the default PS5512 devboard</li>
+          <li>Require a full system shutdown for all Micron NVMe updates</li>
+          <li>Use a better name for Elan touchpad and Intel PCH SPI devices</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>Foxconn SDX61 Modem</li>
+          <li>Jabra Evolve2 child devices</li>
+          <li>NVIDIA ConnectX-6, ConnectX-7 and ConnectX-8 NICs</li>
+        </ul>
+      </description>
+    </release>
+    </releases>
+</component>

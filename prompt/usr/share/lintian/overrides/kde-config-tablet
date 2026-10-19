@@ -1,0 +1,4 @@
+# systemsettings executable required for the KCM is provided by the systemsettings dependency
+kde-config-tablet: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_wacomtablet.desktop]
+# kde_wacom_tabletfinder is a GUI application without command line arguments
+kde-config-tablet: no-manual-page [usr/bin/kde_wacom_tabletfinder]

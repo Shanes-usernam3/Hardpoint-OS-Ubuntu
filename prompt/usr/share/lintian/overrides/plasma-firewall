@@ -1,0 +1,10 @@
+# private library
+plasma-firewall: lacks-ldconfig-trigger usr/lib/*/libkcm_firewall_core.so
+# private library
+plasma-firewall: package-name-doesnt-match-sonames libkcm-firewall-core
+# private library
+plasma-firewall: shared-library-lacks-version usr/lib/*/libkcm_firewall_core.so libkcm_firewall_core.so
+# private library
+plasma-firewall: no-symbols-control-file usr/lib/*/libkcm_firewall_core.so
+# systemsettings5 executable required for the KCM is provided by the systemsettings dependency
+plasma-firewall: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_firewall.desktop]

@@ -1,0 +1,2 @@
+#!/bin/sh
+pkexec do-release-upgrade -f DistUpgradeViewKDE -d

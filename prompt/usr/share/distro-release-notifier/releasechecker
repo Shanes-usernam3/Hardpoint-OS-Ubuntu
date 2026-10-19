@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2010 Jonathan Thomas <echidnaman@kubuntu.org>
+# SPDX-FileCopyrightText: 2018 Harald Sitter <sitter@kde.org>
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+import json
+import os
+import sys
+import time
+sys.path.insert(0, '/usr/lib/python3/dist-packages/')
+
+from UpdateManager.Core.MetaRelease import MetaReleaseCore
+from UpdateManager.Core.utils import init_proxy
+
+if __name__ == "__main__":
+    """ check for updates, if there are any say so """
+
+    init_proxy()
+
+    useDevel = 'USE_DEVEL' in os.environ
+
+    #FIXME: implement command line options for MetaReleaseCore args
+    metaRelease = MetaReleaseCore(useDevelopmentRelease=useDevel,
+                                  useProposed=False)
+    while metaRelease.downloading:
+        time.sleep(0.5)
+    new_dist = metaRelease.new_dist
+    flavor = metaRelease.flavor_name
+
+    if 'MOCK_RELEASE' in os.environ:
+        print(json.dumps({'flavor': 'MockFlavor',
+                          'new_dist_version': '42'}))
+        sys.exit(0)
+    elif new_dist is not None:
+        print(json.dumps({'flavor': flavor,
+                          'new_dist_version': new_dist.version}))
+        sys.exit(0)
+    else:
+        sys.exit(32)

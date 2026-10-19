@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.qrca</id>
+  <name>Barcode Scanner</name>
+  <name xml:lang="ar">ماسح رموز</name>
+  <name xml:lang="ast">Escáner de códigos de barres</name>
+  <name xml:lang="ca">Escàner de codi de barres</name>
+  <name xml:lang="ca-valencia">Escàner de codi de barres</name>
+  <name xml:lang="cs">Čtečka čárových kódů</name>
+  <name xml:lang="de">Barcode-Scanner</name>
+  <name xml:lang="en-GB">Barcode Scanner</name>
+  <name xml:lang="eo">Strikoda Skanilo</name>
+  <name xml:lang="es">Escáner de códigos de barras</name>
+  <name xml:lang="et">Ribakoodi skanner</name>
+  <name xml:lang="eu">Barra-kode eskanerra</name>
+  <name xml:lang="fi">Viivakoodinlukija</name>
+  <name xml:lang="fr">Scanner de codes-barres</name>
+  <name xml:lang="gl">Escáner de códigos de barras</name>
+  <name xml:lang="he">סורק ברקודים</name>
+  <name xml:lang="hi">बारकोड स्कैनर</name>
+  <name xml:lang="hu">Vonalkódolvasó</name>
+  <name xml:lang="ia">Scanner (scanditor) de Codice a barras (barcode)</name>
+  <name xml:lang="id">Barcode Scanner</name>
+  <name xml:lang="it">Scanner di codici a barre</name>
+  <name xml:lang="ka">ბარკოდის სკანერი</name>
+  <name xml:lang="ko">바코드 스캐너</name>
+  <name xml:lang="lt">Brūkšninių kodų skaitytuvas</name>
+  <name xml:lang="lv">Svītrkodu skeneris</name>
+  <name xml:lang="nl">Barcodescanner</name>
+  <name xml:lang="nn">Strekkode-skannar</name>
+  <name xml:lang="pa">ਬਾਰ-ਕੋਡ ਸਕੈਨਰ</name>
+  <name xml:lang="pl">Czytnik kodów kreskowych</name>
+  <name xml:lang="pt">Analisador de Códigos de Barras</name>
+  <name xml:lang="pt-BR">Leitor de código de barras</name>
+  <name xml:lang="ru">Сканер штрихкодов</name>
+  <name xml:lang="sa">बारकोड स्कैनर</name>
+  <name xml:lang="sk">Cítačka čiarových kódov</name>
+  <name xml:lang="sl">Skener črtne kode</name>
+  <name xml:lang="sv">Streckkodsläsare</name>
+  <name xml:lang="tg">Сканнери рамзи наворӣ</name>
+  <name xml:lang="tr">Barkod Tarayıcısı</name>
+  <name xml:lang="uk">Засіб сканування штрихкодів</name>
+  <name xml:lang="zh-CN">二维码扫描器</name>
+  <name xml:lang="zh-TW">條碼掃描器</name>
+  <summary>Scan and create QR-Codes</summary>
+  <summary xml:lang="ar">مسح وإنشاء رموز الاستجابة السريعة</summary>
+  <summary xml:lang="ast">Escania y crea códigos QR</summary>
+  <summary xml:lang="ca">Escaneja i crea codis QR</summary>
+  <summary xml:lang="ca-valencia">Escaneja i crea codis QR</summary>
+  <summary xml:lang="cs">Skenujte a vytvářejte QR kódy</summary>
+  <summary xml:lang="de">Scannen und Erstellen von QR-Codes</summary>
+  <summary xml:lang="en-GB">Scan and create QR-Codes</summary>
+  <summary xml:lang="eo">Skani kaj krei QR-kodojn</summary>
+  <summary xml:lang="es">Escanear y crear códigos QR</summary>
+  <summary xml:lang="et">QR-koodi skannimine ja loomine</summary>
+  <summary xml:lang="eu">Eskaneatu eta sortu QR-Kodeak</summary>
+  <summary xml:lang="fi">Lue ja luo QR-koodeja</summary>
+  <summary xml:lang="fr">Scannez et créez des codes QR</summary>
+  <summary xml:lang="gl">Dixitalizar e crear códigos QR</summary>
+  <summary xml:lang="he">סריקה ויצירה של קודים מסוג QR</summary>
+  <summary xml:lang="hi">QR-कोड स्कैन करें और बनाएं</summary>
+  <summary xml:lang="hu">QR-kódok olvasása és létrehozása</summary>
+  <summary xml:lang="ia">Scande e crea codices QR</summary>
+  <summary xml:lang="id">Scan dan ciptakan QR-Codes</summary>
+  <summary xml:lang="it">Scansiona e crea codici QR</summary>
+  <summary xml:lang="ka">QR კოდის სკანირება და შექმნა</summary>
+  <summary xml:lang="ko">QR 코드 스캔 및 생성</summary>
+  <summary xml:lang="lt">Skenuoti ir kurti QR kodus</summary>
+  <summary xml:lang="lv">Skenējiet un izveidojiet kvadrātkodus</summary>
+  <summary xml:lang="nl">QR-Codes scannen en aanmaken</summary>
+  <summary xml:lang="nn">Skann og lag QR-kodar</summary>
+  <summary xml:lang="pa">QR-ਕੋਡ ਸਕੈਨ ਕਰੋ ਤੇ ਬਣਾਓ</summary>
+  <summary xml:lang="pl">Skanuj i twórz kody QR</summary>
+  <summary xml:lang="pt">Digitalizar e criar códigos QR</summary>
+  <summary xml:lang="pt-BR">Leia e crie códigos QR</summary>
+  <summary xml:lang="ru">Сканирование и создание QR-кодов</summary>
+  <summary xml:lang="sa">स्कैन् कृत्वा QR-Codes रचयन्तु</summary>
+  <summary xml:lang="sk">Cítanie a vytváranie QR kódov</summary>
+  <summary xml:lang="sl">Skenira in kreira kode QR</summary>
+  <summary xml:lang="sv">Läs och skapa QR-koder</summary>
+  <summary xml:lang="tg">Рамзҳои QR-ро мушоҳида ё эҷод намоед</summary>
+  <summary xml:lang="tr">Kare kod tarayın ve oluşturun</summary>
+  <summary xml:lang="uk">Сканування і створення QR-кодів</summary>
+  <summary xml:lang="zh-CN">扫描和创建二维码</summary>
+  <summary xml:lang="zh-TW">掃描及建立 QR 碼</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <url type="homepage">https://apps.kde.org/en/qrca</url>
+  <developer id="kde.org">
+    <name translate="no">KDE</name>
+  </developer>
+  <description>
+    <p>
+      Scan QR-Codes with your camera on phones and laptops, and create your own for easily sharing data between devices.
+    </p>
+    <p xml:lang="ar">يمسح رموز الاستجابة السريعة QR باستخدام الكاميرا الموجودة على الهواتف وأجهزة الحاسوب المحمولة، وينشئ رموزك الخاصة لمشاركة البيانات بسهولة بين الأجهزة.</p>
+    <p xml:lang="ast">Escania códigos QR cola cámara de teléfonos y portátiles, y crea los de to pa compartir datos ente preseos fácilmente.</p>
+    <p xml:lang="ca">Escanegeu els codis QR amb la càmera del telèfon o portàtil, i creeu els vostres per a compartir dades amb facilitat entre diferents dispositius.</p>
+    <p xml:lang="ca-valencia">Escanegeu els codis QR amb la càmera del telèfon o portàtil, i creeu els vostres per a compartir dades amb facilitat entre diferents dispositius.</p>
+    <p xml:lang="cs">Naskenujte QR kódy fotoaparátem na telefonech a noteboocích a vytvořte si vlastní pro snadné sdílení dat mezi zařízeními.</p>
+    <p xml:lang="de">Scannen Sie QR-Codes mit Ihrer Kamera auf Telefonen und Laptops. Erstellen Sie Ihre eigenen QR-Codes, um Daten einfach zwischen Geräten zu teilen.</p>
+    <p xml:lang="en-GB">Scan QR-Codes with your camera on phones and laptops, and create your own for easily sharing data between devices.</p>
+    <p xml:lang="eo">Skanu QR-kodojn per via fotilo en telefonoj kaj tekkomputiloj, kaj kreu vian propran por facile kunhavigi datumojn inter aparatoj.</p>
+    <p xml:lang="es">Escanear códigos QR con la cámara de los teléfonos móviles y de los portátiles, y crear un código QR propio para compartir datos de forma sencilla entre dispositivos.</p>
+    <p xml:lang="et">QR-koodi skannimine telefoni või sülearvuti kaameraga ning omaenda ribakoodi loomine hõlpsaks andmete jagamiseks seadmete vahel.</p>
+    <p xml:lang="eu">Eskaneatu QR-Kodeak zure kamerarekin telefonoetan edo magalekoetan, eta sortu zure kodeak, gailuen artean datuak erraz partekatzeko.</p>
+    <p xml:lang="fi">Lue QR-koodeja puhelimesi tai tietokoneesi kameralla tai luoda oma koodisi jakaaksesi helposti tietoa laitteiden välillä.</p>
+    <p xml:lang="fr">Scannez des codes QR avec votre caméra sur votre téléphone ou votre ordinateur portable, et créez les vôtres afin de partager facilement des données entre appareils.</p>
+    <p xml:lang="gl">Dixitalice códigos QR coa cámara de teléfonos ou portátiles, e cree códigos para compartir data facilmente entre dispositivos.</p>
+    <p xml:lang="he">מאפשר סריקת קודים מסוג QR עם המצלמה בטלפונים או מחשבים ניידים וליצור קודים משלך לשיתוף פשוט של נתונים בין מכשירים.</p>
+    <p xml:lang="hi">फोन और लैपटॉप पर अपने कैमरे से क्यूआर-कोड स्कैन करें, और डिवाइसों के बीच आसानी से डेटा साझा करने के लिए अपना स्वयं का क्यूआर-कोड बनाएं।</p>
+    <p xml:lang="hu">Olvasson QR-kódokat a telefonja vagy laptopja kamerájával, és hozza létre a sajátjait az egyszerű adatmegosztáshoz különböző eszközök között.</p>
+    <p xml:lang="ia">Scande codice QR con tu camera sur telephonos e laptops, e crea tu proprie pro compartir facilemente datos inter dispositivos.</p>
+    <p xml:lang="id">Scan QR-Codes pakai kamera pada telepon dan laptop, dan ciptakan kemudahan berbagi data milikmu antara peranti.</p>
+    <p xml:lang="it">Scansiona codici QR con la fotocamera del telefono o del computer portatile, poi ne crea una copia per una condivisione semplice fra i dispositivi.</p>
+    <p xml:lang="ka">დაასკანერეთ QR კოდები თქვენი ტელეფონის ან ლეპტოპის კამერით ან შექმენით თქვენი საკუთარი, მოწყობილობებს შორის ინფორმაციის ადვილად გადასატანად.</p>
+    <p xml:lang="ko">휴대폰과 노트북의 카메라로 QR 코드를 스캔하고, 장치끼리 쉽게 데이터를 공유하는 QR 코드를 생성삽니다.</p>
+    <p xml:lang="lt">Skenuokite QR kodus naudodami savo telefono ar nešiojamojo kompiuterio kamerą bei kurkite asmeninius QR kodus, kad lengvai bendrintumėte duomenis tarp įrenginių.</p>
+    <p xml:lang="lv">Skenējiet kvadrātkodus ar savu tālruņa vai datora kameru un veidojiet paši savus, lai viegli nodotu datus starp ierīcēm.</p>
+    <p xml:lang="nl">QR-codes met uw camera op telefoons en laptops scannen en maak uw eigen codes voor gemakkelijk delen van gegevens tussen apparaten.</p>
+    <p xml:lang="nn">Skann QR-kodar med kameraet på telefonen eller datamaskina, og lag eigne kodar for enkel deling av data mellom einingar.</p>
+    <p xml:lang="pa">ਆਪਣੇ ਫ਼ੋਨ ਅਤੇ ਲੈਪਟਾਪ ਦੇ ਕੈਮਰੇ ਨਾਲ QR-ਕੋਡ ਸਕੈਨ ਕਰੋ ਅਤੇ ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ ਡਾਟਾ ਸੌਖੀ ਤਰ੍ਹਾਂ ਸਾਂਝਾ ਕਰਨ ਲਈ ਆਪਣੇ ਖੁਦ ਦੇ ਕੋਡ ਬਣਾਓ।</p>
+    <p xml:lang="pl">Skanuj kody QR przez aparat w telefonie lub laptopie i twórz swoje własne kody, żeby móc je łatwo udostępniać pomiędzy urządzeniami. </p>
+    <p xml:lang="pt">Digitalize códigos QR com a sua câmara nos telemóveis e portáteis ou crie os seus próprios para partilhar facilmente dados entre dispositivos.</p>
+    <p xml:lang="pt-BR">Leia códigos QR com sua câmera em celulares e laptops e crie seus próprios para compartilhar facilmente dados entre dispositivos.</p>
+    <p xml:lang="ru">Программа позволяет сканировать QR-коды с помощью камер на телефонах и ноутбуках, а также создавать свои собственные QR-коды для упрощения обмена данными между устройствами.</p>
+    <p xml:lang="sa">दूरभाषेषु लैपटॉपेषु च स्वस्य कॅमेरेण QR-कोड्स् स्कैन् कुर्वन्तु, तथा च उपकरणानां मध्ये सहजतया आँकडानां साझेदारी कर्तुं स्वकीयं रचयन्तु।</p>
+    <p xml:lang="sl">S telefonom skenirajte kode QR na telefonih in prenosnikih ter ustvarite svoje za preprosto izmenjavo podatkov med napravami.</p>
+    <p xml:lang="sv">Läs av QR-koder med kameran på telefoner och bärbara datorer, och skapa egna för att enkelt dela data mellan apparater.</p>
+    <p xml:lang="tg">Рамзҳои QR-ро ба воситаи камераи телефон ё ноутбуки худ мушоҳида кунед ва рамзҳои худро барои мубодилаи иттилоот байни дастгоҳҳо ба осонӣ эҷод намоед.</p>
+    <p xml:lang="tr">Telefon veya dizüstünüzün kamerasıyla kare kodları tarayın ve aygıtlar arasında kolay veri aktarımı için kendi kodlarınızı oluşturun.</p>
+    <p xml:lang="uk">Скануйте QR-коди за допомогою вашої фотокамери на телефоні або ноутбуці і створюйте ваші власні коди для передавання даних між пристроями.</p>
+    <p xml:lang="zh-CN">使用手机和笔记本电脑的摄像头扫描二维码，还可以轻松创建您自己的二维码以便在不同设备之间分享数据。</p>
+    <p xml:lang="zh-TW">使用手機或筆電上的相機掃描 QR 碼，並建立自己的 QR 碼以方便在裝置間傳輸。</p>
+  </description>
+  <launchable type="desktop-id">org.kde.qrca.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/qrca/qrca_scan.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://cdn.kde.org/screenshots/qrca/qrca_create_code.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1"/>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=qrca</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=qrca&amp;source=appdata</url>
+  <custom>
+    <value key="KDE::f_droid">https://community.kde.org/Android/F-Droid#KDE_F-Droid_Nightly_Build_Repository</value>
+  </custom>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+  </releases>
+</component>

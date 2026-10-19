@@ -1,0 +1,121 @@
+Upstream-Name: kubuntu-notification-helper
+Upstream-Contact: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Upstream-Maintainer: Harald Sitter <sitter@kde.org>
+Upstream-Source: http://quickgit.kde.org/?p=scratch%2Fsitter%2Fkubuntu-notification-helper.git
+
+Files: *
+Copyright: 2009 Amichai Rothman <amichai2@amichais.net>
+           2009-2014 Harald Sitter <sitter@kde.org>
+           2009-2010 Jonathan Thomas <echidaman@kubuntu.org>
+License: GPL-2 or GPL-3
+
+Files: autotests/*
+       src/daemon/hookevent/*
+Copyright: 2015 Harald Sitter <sitter@kde.org>
+License: GPL-3
+
+Files: src/daemon/apportevent/*
+       src/daemon/event.cpp
+       src/daemon/event.h
+       src/daemon/hookevent/*
+       src/daemon/notificationhelpermodule.cpp
+       src/daemon/notificationhelpermodule.h
+       src/daemon/rebootevent/*
+Copyright: 2009-2014 Harald Sitter <apachelogger@kubuntu.org>
+           2009 Jonathan Thomas <echidnaman@kubuntu.org>
+           2026 Erich Eickmeyer <eeickmeyer@ubuntu.com>
+License: GPL-3
+
+Files: src/daemon/configwatcher.cpp
+       src/daemon/configwatcher.h
+       src/daemon/installevent/*
+       src/kcmodule/*
+Copyright: 2009-2010 Jonathan Thomas <echidnaman@kubuntu.org>
+           2026 Erich Eickmeyer <eeickmeyer@ubuntu.com>
+License: GPL-3
+
+Files: src/daemon/driverevent/*
+       src/daemon/l10nevent/*
+Copyright: 2013 Daniel Schaal <farbing@web.de>
+           2014 Harald Sitter <apachelogger@kubuntu.org>
+           2026 Erich Eickmeyer <eeickmeyer@ubuntu.com>
+License: GPL-3
+
+Files: src/daemon/driverevent/*
+Copyright: 2014 Rohan Garg <rohan@kde.org>
+           2026 Erich Eickmeyer <eeickmeyer@ubuntu.com>
+License: GPL-3
+
+Files: src/daemon/hookevent/*
+Copyright: 2009 Amichai Rothman <amichai2@amichais.net>
+           2009, 2014-2015 Harald Sitter <apachelogger@ubuntu.com>
+           2009 Jonathan Thomas <echidnaman@kubuntu.org>
+           2026 Erich Eickmeyer <eeickmeyer@ubuntu.com>
+License: GPL-3
+
+Files: data/whoopsie-upload-all
+Copyright: 2013 Canonical Ltd.
+License: GPL-2
+
+Files: po/bg/*
+       po/cs/*
+       po/es/*
+       po/it/*
+Copyright: 2019 YEAR This_file_is_part_of_KDE
+License: GPL-2
+
+Files: po/ca/notificationhelper.po
+       po/ca@valencia/notificationhelper.po
+Copyright: 2010-2014 Rosetta Contributors
+           2015 This_file_is_part_of_KDE
+License: GPL-2
+
+Files: po/eu/kcm_notificationhelper.po
+Copyright: 2011 Rosetta Contributors
+           2018 Free Software Foundation
+License: GPL-2
+
+Files: po/pt_BR/*
+Copyright: 2010 Rosetta Contributors
+           2015 Andre Marcelo Alvarenga
+License: GPL-2
+
+Files: po/uk/*
+Copyright: 2010 This_file_is_part_of_KDE
+License: GPL-2
+
+License: GPL-2 or GPL-3
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License or (at your option) version 3 or any later version
+ accepted by the membership of KDE e.V. (or its successor approved
+ by the membership of KDE e.V.), which shall act as a proxy
+ defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License version
+ 3 can be found in "/usr/share/common-licenses/GPL-3".

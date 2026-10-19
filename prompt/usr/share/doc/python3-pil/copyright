@@ -1,0 +1,302 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pillow
+Upstream-Contact:
+Source: https://pypi.python.org/pypi/Pillow/
+Files-Excluded:
+# Missing license data, see:
+# https://github.com/python-pillow/Pillow/issues/4591#issuecomment-765711479
+ Tests/icc
+ Tests/images/a.fli
+ Tests/test_file_fli.py
+# Missing license data from https://ghrc.nsstc.nasa.gov/hydro/details/cmx3g8
+ Tests/test_file_mcidas.py
+ Tests/images/cmx3g8_wv_1998.260_0745_mcidas.ara
+ Tests/images/cmx3g8_wv_1998.260_0745_mcidas.png
+
+Files: *
+Copyright:
+ 1997-2011 Secret Labs AB
+ 1995-2011 Fredrik Lundh
+ 2010-2020 Alex Clark and contributors
+License: HPND
+ 
+Files: debian/*
+Copyright:
+ 2001 Simon Richter <sjr@debian.org>
+ 2004 Matthias Urlichs <smurf@debian.org>
+ 1998-2026 Matthias Klose <doko@debian.org>
+License: HPND
+
+Files:
+ docs/example/DdsImagePlugin.py
+ src/PIL/BlpImagePlugin.py
+ src/PIL/DdsImagePlugin.py
+ src/PIL/FtexImagePlugin.py
+ src/libImaging/BcnDecode.c
+License: public-domain
+
+Files:
+ src/libImaging/QuantOctree.c
+Copyright: 2010 Oliver Tonnhofer <olt@bogosoft.com>, Omniscale
+License:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+Files: src/Tk/_tkmini.h
+Copyright:
+  1987-1994 The Regents of the University of California.
+  1993-1996 Lucent Technologies.
+  1994-1998 Sun Microsystems, Inc.
+  1998-2000 by Scriptics Corporation.
+  2002 by Kevin B. Kenny.  All rights reserved.
+License: tcltk
+  This software is copyrighted by the Regents of the University
+  of California, Sun Microsystems, Inc., Scriptics Corporation,
+  and other parties. The following terms apply to all files
+
+# Fonts
+
+Files:
+ Tests/fonts/NotoNastaliqUrdu-Regular.ttf
+ Tests/fonts/NotoSansSymbols-Regular.ttf
+Copyright: 2018 The Noto Project Authors
+License: OFL-v1.1
+Comment: from https://github.com/googlei18n/noto-fonts
+
+Files: Tests/fonts/NotoSans-Regular.ttf
+Copyright: 2018 The Noto Project Authors
+License: OFL-v1.1
+Comment: from https://www.google.com/get/noto/
+
+Files: Tests/fonts/NotoSansJP-Regular.otf
+Copyright: 2018 The Noto Project Authors
+License: OFL-v1.1
+Comment: from https://www.google.com/get/noto/help/cjk/
+
+Files: Tests/fonts/NotoColorEmoji.ttf
+Copyright: 2018 The Noto Project Authors
+License: OFL-v1.1
+Comment: from https://github.com/googlefonts/noto-emoji
+
+Files: Tests/fonts/AdobeVFPrototype.ttf
+Copyright: 2017 Adobe
+License: OFL-v1.1
+Comment: from https://github.com/adobe-fonts/adobe-variable-font-prototype
+
+Files: Tests/fonts/TINY5x3GX.ttf
+Copyright: 2018 Velvetyne Type Foundry
+License: OFL-v1.1
+Comment: from http://velvetyne.fr/fonts/tiny
+
+Files: Tests/fonts/ArefRuqaa-Regular.ttf
+Copyright: Copyright 2015-2021 The Aref Ruqaa Project Authors
+License: OFL-v1.1
+Comment: from https://github.com/google/fonts/tree/master/ofl/arefruqaa
+
+Files: Tests/fonts/ter-x20b.pcf
+License: OFL-v1.1
+Copyright: 2010-2014 Dimitar Toshkov Zhekov
+Comment: from http://terminus-font.sourceforge.net/
+
+Files: Tests/fonts/BungeeColor-Regular_colr_Windows.ttf
+Copyright:  2016 The Bungee Project Authors (david@djr.com)
+License: OFL-v1.1
+Comment: from https://github.com/djrrb/bungee
+
+Files: Tests/fonts/FreeMono.ttf
+Copyright: 2018 GNU Freefont contributors
+License: GPLv3-with-GPL-font-exception
+
+Files: Tests/fonts/OpenSansCondensed-LightItalic.ttf
+Copyright: Steve Matteson
+Comment: from https://fonts.google.com/specimen/Open+Sans
+License: Apache-2.0
+
+Files: Tests/fonts/DejaVuSans-24-*-stripped.ttf
+Comment: based on DejaVuSans.ttf converted using FontForge to add bitmap
+ strikes and keep only the ASCII range.
+
+Files: Tests/fonts/10x20-ISO8859-1.pcf
+License: public-domain
+Comment: from https://packages.ubuntu.com/xenial/xfonts-base
+ "Public domain font.  Share and enjoy."
+
+Files: Tests/images/bmp/*
+License: public-domain
+Comment: from https://github.com/jsummers/bmpsuite
+
+License: HPND
+ By obtaining, using, and/or copying this software and/or its
+ associated documentation, you agree that you have read, understood,
+ and will comply with the following terms and conditions:
+ .
+ Permission to use, copy, modify, and distribute this software and its
+ associated documentation for any purpose and without fee is hereby
+ granted, provided that the above copyright notice appears in all
+ copies, and that both that copyright notice and this permission notice
+ appear in supporting documentation, and that the name of Secret Labs
+ AB or the author not be used in advertising or publicity pertaining to
+ distribution of the software without specific, written prior
+ permission.
+ .
+ SECRET LABS AB AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+ THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ FITNESS.  IN NO EVENT SHALL SECRET LABS AB OR THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: OFL-v1.1
+ -----------------------------------------------------------
+ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+ -----------------------------------------------------------
+ .
+ PREAMBLE
+ The goals of the Open Font License (OFL) are to stimulate worldwide
+ development of collaborative font projects, to support the font
+ creation efforts of academic and linguistic communities, and to
+ provide a free and open framework in which fonts may be shared and
+ improved in partnership with others.
+ .
+ The OFL allows the licensed fonts to be used, studied, modified and
+ redistributed freely as long as they are not sold by themselves. The
+ fonts, including any derivative works, can be bundled, embedded,
+ redistributed and/or sold with any software provided that any reserved
+ names are not used by derivative works. The fonts and derivatives,
+ however, cannot be released under any other type of license. The
+ requirement for fonts to remain under this license does not apply to
+ any document created using the fonts or their derivatives.
+ .
+ DEFINITIONS
+ "Font Software" refers to the set of files released by the Copyright
+ Holder(s) under this license and clearly marked as such. This may
+ include source files, build scripts and documentation.
+ .
+ "Reserved Font Name" refers to any names specified as such after the
+ copyright statement(s).
+ .
+ "Original Version" refers to the collection of Font Software
+ components as distributed by the Copyright Holder(s).
+ .
+ "Modified Version" refers to any derivative made by adding to,
+ deleting, or substituting -- in part or in whole -- any of the
+ components of the Original Version, by changing formats or by porting
+ the Font Software to a new environment.
+ .
+ "Author" refers to any designer, engineer, programmer, technical
+ writer or other person who contributed to the Font Software.
+ .
+ PERMISSION & CONDITIONS
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of the Font Software, to use, study, copy, merge, embed,
+ modify, redistribute, and sell modified and unmodified copies of the
+ Font Software, subject to the following conditions:
+ .
+ 1) Neither the Font Software nor any of its individual components, in
+ Original or Modified Versions, may be sold by itself.
+ .
+ 2) Original or Modified Versions of the Font Software may be bundled,
+ redistributed and/or sold with any software, provided that each copy
+ contains the above copyright notice and this license. These can be
+ included either as stand-alone text files, human-readable headers or
+ in the appropriate machine-readable metadata fields within text or
+ binary files as long as those fields can be easily viewed by the user.
+ .
+ 3) No Modified Version of the Font Software may use the Reserved Font
+ Name(s) unless explicit written permission is granted by the
+ corresponding Copyright Holder. This restriction only applies to the
+ primary font name as presented to the users.
+ .
+ 4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+ Software shall not be used to promote, endorse or advertise any
+ Modified Version, except to acknowledge the contribution(s) of the
+ Copyright Holder(s) and the Author(s) or with their explicit written
+ permission.
+ .
+ 5) The Font Software, modified or unmodified, in part or in whole,
+ must be distributed entirely under this license, and must not be
+ distributed under any other license. The requirement for fonts to
+ remain under this license does not apply to any document created using
+ the Font Software.
+ .
+ TERMINATION
+ This license becomes null and void if any of the above conditions are
+ not met.
+ .
+ DISCLAIMER
+ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+ OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+ OTHER DEALINGS IN THE FONT SOFTWARE.
+
+License: Apache-2.0
+ On Debian systems the full text of the Apache-2.0 license can be found in
+ /usr/share/common-licenses/Apache-2.0.
+
+License: GPLv3-with-GPL-font-exception
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or (at your
+ option) any later version.
+ .
+ The fonts are distributed in the hope that they will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in "/usr/share/common-licenses/GPL-3".
+ .
+ As a special exception, if you create a document which uses this font, and
+ embed this font or unaltered portions of this font into the document, this
+ font does not by itself cause the resulting document to be covered by the GNU
+ General Public License. This exception does not however invalidate any other
+ reasons why the document might be covered by the GNU General Public License.
+ If you modify this font, you may extend this exception to your version of the
+ font, but you are not obligated to do so. If you do not wish to do so, delete
+ this exception statement from your version.
+ .
+ Clarification of exception, regarding intended use of embedded fonts
+ .
+ The exception to the GNU General Public License for the GNU FreeFont software
+ exempts a user that embeds part or all of the GNU FreeFont software in a
+ document, as well as subsequent users and distributors of the document, from
+ complying with the GNU GPL under some circumstances.
+ .
+ Specifically, this exemption applies when the embedder has not modified the
+ GNU FreeFont software before embedding it. This is true even though portions
+ of the software become part of the document.
+ .
+ Therefore users of fonts released with this exception need not concern
+ themselves with the license terms to:
+ .
+     Create a printable file using the fonts.
+     Publish such a file.
+     Redistribute such a file.
+     Publicly display such a file.
+     Print such a file or display it on the screen.
+ .
+ However anyone distributing the font software as software separately from the
+ document, even if the way the font software was obtained was to extract it
+ from a document, would have to comply with the GNU GPL.
+ .
+ A modified version of the GNU FreeFont software must comply with the GNU GPL.
+ It may optionally carry the same exception as the GNU FreeFont software
+ itself, and we recommend releasing modified versions that way. If it does,
+ then users will likewise be permitted to embed the modified version in
+ documents and be exempt from the GNU GPL requirements on those documents.

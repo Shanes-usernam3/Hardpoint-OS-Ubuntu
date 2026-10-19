@@ -1,0 +1,4 @@
+# The library is physically in libsdl2-classic, but it won't be in the
+# linker's search path until libsdl2-2.0-0 is installed
+libsdl2-classic: distant-prerequisite-in-shlibs libsdl2-2.0-0 (>= 2.32.10+dfsg) [shlibs]
+libsdl2-classic: symbols-declares-dependency-on-other-package libsdl2-2.0-0 (libSDL2-2.0.so.0) [symbols]

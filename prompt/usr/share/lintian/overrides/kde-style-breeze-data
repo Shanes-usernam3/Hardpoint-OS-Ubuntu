@@ -1,0 +1,2 @@
+# kcmshell6 executable required for the KCM is provided by the Recommends: libkf6kcmutils-bin dependency added to both kde-breeze-style and kde-breeze-style-qt5
+kde-style-breeze-data: desktop-command-not-in-package kcmshell6 [usr/share/applications/breezestyleconfig.desktop]

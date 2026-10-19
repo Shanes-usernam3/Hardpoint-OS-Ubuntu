@@ -1,0 +1,20 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+	echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+	prereqs
+	exit 0
+	;;
+esac
+
+# These sometimes don't get probed automatically, but we need them
+# for efifb etc. when SYSFB_SIMPLEFB=y, or with framebuffer-coreboot
+/sbin/modprobe simpledrm || /sbin/modprobe simplefb || true

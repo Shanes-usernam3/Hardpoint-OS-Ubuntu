@@ -1,0 +1,43 @@
+[Desktop Entry]
+X-KDE-Solid-Predicate=[StorageVolume.ignored == false AND OpticalDisc.availableContent & 'Audio']
+Actions=open;
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=kioclient exec audiocd:/?device=%d
+Icon=media-default-album
+Name=Open Audio with File Manager
+Name[ar]=افتح الصوت بمدير الملفات
+Name[bg]=Отваряне на аудио с файлов мениджър
+Name[ca]=Obre l'àudio amb el gestor de fitxers
+Name[ca@valencia]=Obri l'àudio amb el gestor de fitxers
+Name[cs]=Otevřít zvuk ve správci souborů
+Name[de]=Audio mit Dateiverwaltung öffnen
+Name[eo]=Malfermi Aŭdaĵon per Dosiermastrumilo
+Name[es]=Abrir audio con el gestor de archivos
+Name[eu]=Ireki audioa fitxategi-kudeatzailearekin
+Name[fi]=Avaa ääni tiedostonhallintaan
+Name[fr]=Ouvrir un flux audio avec le gestionnaire de fichiers
+Name[gl]=Abrir o son co xestor de ficheiros
+Name[he]=פתיחת קטע שמע עם מנהל קבצים
+Name[hu]=Hang megnyitása fájlkezelővel
+Name[ia]=Aperi Audio con un gerente de file
+Name[is]=Opna hljóð með skráastjóra
+Name[it]=Apri audio con il gestore dei file
+Name[ka]=აუდიოს გახსნა ფაილების მმართველში
+Name[ko]=파일 관리자로 오디오 열기
+Name[lv]=Atvērt skaņas datni datņu pārvaldniekā
+Name[nl]=Audio openen met bestandsbeheerder
+Name[nn]=Opna lyd i filhandsamar
+Name[pl]=Otwórz dźwięk w przeglądarce plików
+Name[pt_BR]=Abrir áudio com o gerenciador de arquivos
+Name[ro]=Deschide audio cu gestionarul de fișiere
+Name[ru]=Открыть звуковые данные в диспетчере файлов
+Name[sl]=Odpri zvok z upravljalnikom datotek
+Name[sv]=Öppna ljud med filhanterare
+Name[ta]=கோப்பு மேலாளியில் ஒலிக்கோப்பை திற
+Name[tr]=Dosya Yöneticisi ile Ses Aç
+Name[uk]=Відкрити звукові дані за допомогою менеджера файлів
+Name[zh_CN]=用文件管理器打开音频
+Name[zh_TW]=使用檔案管理員開啟音訊

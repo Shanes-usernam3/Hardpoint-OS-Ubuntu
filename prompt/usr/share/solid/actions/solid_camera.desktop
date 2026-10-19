@@ -1,0 +1,53 @@
+[Desktop Entry]
+X-KDE-Solid-Predicate=Camera.supportedDrivers == 'gphoto'
+Type=Service
+Actions=open;
+
+[Desktop Action open]
+Exec=kioclient5 exec camera:/
+Icon=system-file-manager
+Name=View Photos with File Manager
+Name[ar]=اعرض الصور بمدير الملفات
+Name[az]=Şəkillərə fayl menecerində baxmaq
+Name[bg]=Преглед на снимките с файлов мениджър
+Name[ca]=Visualitza fotos amb el gestor de fitxers
+Name[ca@valencia]=Visualitza fotos amb el gestor de fitxers
+Name[cs]=Prohlížet fotografie ve správci souborů
+Name[da]=Vis fotos med filhåndtering
+Name[de]=Fotos in Dateiverwaltung ansehen
+Name[el]=Άνοιγμα φωτογραφιών με τον διαχειριστή αρχείων
+Name[en_GB]=View Photos with File Manager
+Name[eo]=Rigardi Fotojn per Dosiermastrumilo
+Name[es]=Ver fotos con el gestor de archivos
+Name[et]=Fotode vaatamine failihalduriga
+Name[eu]=Ikusi argazkiak fitxategi kudeatzailearekin
+Name[fi]=Katsele kuvia tiedostonhallinnassa
+Name[fr]=Afficher les photos dans le gestionnaire de fichiers
+Name[gl]=Ver as fotos co xestor de ficheiros
+Name[he]=הצגת תמונות עם מנהל הקבצים
+Name[hu]=Fényképek megtekintése fájlkezelővel
+Name[ia]=Aperi file con le gerente de file
+Name[id]=Tampilan Foto dengan Pengelola File
+Name[is]=Skoða myndir með skráastjóra
+Name[it]=Visualizza le foto con il gestore dei file
+Name[ka]=ფოტოების ფაილების მმართველით ნახვა
+Name[ko]=파일 관리자로 사진 보기
+Name[lt]=Rodyti nuotraukas naudojant failų tvarkytuvę
+Name[lv]=Foto pārlūkošana datņu pārvaldniekā
+Name[ml]=ചിത്രം ഫയൽ മേനജീരിൽ കാണുക
+Name[nl]=Foto's bekijken met bestandsbeheerder
+Name[nn]=Opna foto med filhandsamar
+Name[pl]=Obejrzyj zdjęcia w przeglądarce plików
+Name[pt]=Ver as Fotografias com o Gestor de Ficheiros
+Name[pt_BR]=Visualizar fotos com o gerenciador de arquivos
+Name[ro]=Vezi poze cu gestionarul de fișiere
+Name[ru]=Просмотр фотографий в диспетчере файлов
+Name[sa]=सञ्चिकाप्रबन्धकेन सह छायाचित्रं पश्यन्तु
+Name[sk]=Zobraziť Fotky v správcovi súborov
+Name[sl]=Ogleduje fotografije v upravljalniku datotek
+Name[sv]=Visa foton med filhanterare
+Name[tr]=Fotoğrafları Dosya Yöneticisi ile Görüntüle
+Name[uk]=Переглянути фотографії за допомогою менеджера файлів
+Name[vi]=Xem ảnh bằng trình quản lí tệp
+Name[zh_CN]=用文件管理器查看照片
+Name[zh_TW]=使用檔案管理員檢視圖片

@@ -1,0 +1,15 @@
+<!DOCTYPE ksudoku-graph>
+<ksudoku-graph>
+ <graph sizeX="9" sizeY="9" sizeZ="1" order="9" name="Aztec" type="custom" specific-type="Aztec" >
+  <sudokugroups at="0" withblocks="0" />
+  <clique size="9" >0 1 9 10 11 19 20 21 29 </clique>
+  <clique size="9" >18 27 28 36 37 38 45 46 54 </clique>
+  <clique size="9" >47 55 56 57 63 64 65 72 73 </clique>
+  <clique size="9" >2 3 4 5 6 12 13 14 22 </clique>
+  <clique size="9" >30 31 32 39 40 41 48 49 50 </clique>
+  <clique size="9" >58 66 67 68 74 75 76 77 78 </clique>
+  <clique size="9" >7 8 15 16 17 23 24 25 33 </clique>
+  <clique size="9" >26 34 35 42 43 44 52 53 62 </clique>
+  <clique size="9" >51 59 60 61 69 70 71 79 80 </clique>
+ </graph>
+</ksudoku-graph>

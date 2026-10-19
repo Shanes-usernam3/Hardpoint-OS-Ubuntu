@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  - SPDX-License-Identifier: CC0-1.0
+  - SPDX-FileCopyrightText: 2020-2021 Carl Schwan <carlschwan@kde.org>
+  - SPDX-FileCopyrightText: 2020-2021 Tobias Fella <tobias.fella@kde.org>
+ -->
+<component type="desktop">
+  <id>org.kde.neochat</id>
+  <provides>
+    <binary>neochat</binary>
+  </provides>
+  <name>NeoChat</name>
+  <name xml:lang="ar">نيوتشات</name>
+  <name xml:lang="ast">NeoChat</name>
+  <name xml:lang="az">NeoChat</name>
+  <name xml:lang="ca">NeoChat</name>
+  <name xml:lang="ca-valencia">NeoChat</name>
+  <name xml:lang="cs">NeoChat</name>
+  <name xml:lang="de">NeoChat</name>
+  <name xml:lang="el">NeoChat</name>
+  <name xml:lang="en-GB">NeoChat</name>
+  <name xml:lang="eo">NeoChat</name>
+  <name xml:lang="es">NeoChat</name>
+  <name xml:lang="eu">NeoChat</name>
+  <name xml:lang="fi">NeoChat</name>
+  <name xml:lang="fr">NeoChat</name>
+  <name xml:lang="gl">NeoChat</name>
+  <name xml:lang="he">NeoChat</name>
+  <name xml:lang="hi">नियोचैट</name>
+  <name xml:lang="hu">NeoChat</name>
+  <name xml:lang="ia">Neochat</name>
+  <name xml:lang="id">NeoChat</name>
+  <name xml:lang="ie">NeoChat</name>
+  <name xml:lang="it">NeoChat</name>
+  <name xml:lang="ka">NeoChat</name>
+  <name xml:lang="ko">NeoChat</name>
+  <name xml:lang="lv">NeoChat</name>
+  <name xml:lang="nl">NeoChat</name>
+  <name xml:lang="nn">NeoChat</name>
+  <name xml:lang="pa">ਨਿਓ-ਚੈਟ</name>
+  <name xml:lang="pl">NeoChat</name>
+  <name xml:lang="pt">NeoChat</name>
+  <name xml:lang="pt-BR">NeoChat</name>
+  <name xml:lang="ro">NeoChat</name>
+  <name xml:lang="ru">NeoChat</name>
+  <name xml:lang="sa">नवचैट्</name>
+  <name xml:lang="sk">NeoChat</name>
+  <name xml:lang="sl">NeoChat</name>
+  <name xml:lang="sv">NeoChat</name>
+  <name xml:lang="ta">நியோச்சாட்</name>
+  <name xml:lang="tr">NeoChat</name>
+  <name xml:lang="uk">NeoChat</name>
+  <name xml:lang="zh-CN">NeoChat</name>
+  <name xml:lang="zh-TW">NeoChat</name>
+  <summary>Chat on Matrix</summary>
+  <summary xml:lang="ar">دردش على ماتركس</summary>
+  <summary xml:lang="ca">Xat a Matrix</summary>
+  <summary xml:lang="ca-valencia">Xat a Matrix</summary>
+  <summary xml:lang="de">Über Matrix unterhalten</summary>
+  <summary xml:lang="en-GB">Chat on Matrix</summary>
+  <summary xml:lang="eo">Babilo en Matrix</summary>
+  <summary xml:lang="es">Charle en Matrix</summary>
+  <summary xml:lang="eu">Berriketa Matrix-en</summary>
+  <summary xml:lang="fi">Keskustelu Matrixissä</summary>
+  <summary xml:lang="fr">Discuter sur Matrix</summary>
+  <summary xml:lang="gl">Charlar en Matrix</summary>
+  <summary xml:lang="he">התכתבות דרך Matrix</summary>
+  <summary xml:lang="hi">मैट्रिक्स पर चैट करें</summary>
+  <summary xml:lang="hu">Csevegés Matrixon</summary>
+  <summary xml:lang="ia">Conversation en ditecto sur Matrix</summary>
+  <summary xml:lang="it">Chat su Matrix</summary>
+  <summary xml:lang="ka">ისაუბრეთ Matrix-ზე</summary>
+  <summary xml:lang="ko">Matrix에서 대화하기</summary>
+  <summary xml:lang="lv">Tērzējiet „Matrix“ tīklā</summary>
+  <summary xml:lang="nl">Chat op Matrix</summary>
+  <summary xml:lang="nn">Prat med via Matrix</summary>
+  <summary xml:lang="pl">Rozmawiaj na Matriksie</summary>
+  <summary xml:lang="pt-BR">Bate-papo na Matrix</summary>
+  <summary xml:lang="ro">Discutați pe Matrix</summary>
+  <summary xml:lang="ru">Общение в Matrix</summary>
+  <summary xml:lang="sa">Matrix इत्यत्र गपशपं कुर्वन्तु</summary>
+  <summary xml:lang="sl">Klepet na Matrixu</summary>
+  <summary xml:lang="sv">Chatta på Matrix</summary>
+  <summary xml:lang="ta">மேட்ரிக்ஸுக்கான உரையாடல் செயலி</summary>
+  <summary xml:lang="tr">Matrix Üzerinde Sohbet</summary>
+  <summary xml:lang="uk">Спілкування у Matrix</summary>
+  <summary xml:lang="zh-TW">在 Matrix 上聊天</summary>
+  <description>
+    <p>NeoChat is a chat app that lets you take full advantage of the Matrix network. It provides you with a secure way to send text messages, videos and audio files to your family, colleagues and friends.</p>
+    <p xml:lang="ar">نيوتشات هو تطبيق دردشة يتيح لك الاستفادة الكاملة من شبكة Matrix. فهو يوفر لك طريقة آمنة لإرسال الرسائل النصية ومقاطع الفيديو والملفات الصوتية إلى عائلتك وزملائك وأصدقائك.</p>
+    <p xml:lang="ca">El NeoChat és una aplicació de xat que us permet aprofitar plenament la xarxa Matrix. Proporciona una manera segura d'enviar missatges de text, vídeos i arxius d'àudio a la vostra família, companys i amics.</p>
+    <p xml:lang="ca-valencia">NeoChat és una aplicació de xat que us permet aprofitar plenament la xarxa Matrix. Proporciona una manera segura d'enviar missatges de text, vídeos i arxius d'àudio a la vostra família, companys i amics.</p>
+    <p xml:lang="de">NeoChat ist eine Anwendung für Unterhaltungen mit allen Vorteilen des Matrix-Netzwerkes. Sie bietet eine sichere Möglichkeit zum Versenden von Nachrichten, Videos und Audiodateien and die Familienmitglieder.</p>
+    <p xml:lang="el">Το NeoChat είναι μια εφαρμογή συνομιλίας που σας επιτρέπει να εκμεταλλευτείτε πλήρως το δίκτυο Matrix. Σας παρέχει έναν ασφαλή τρόπο να στέλνετε μηνύματα κειμένου, βίντεο και αρχεία ήχου στην οικογένεια, τους συναδέλφους και τους φίλους σας.</p>
+    <p xml:lang="en-GB">NeoChat is a chat app that lets you take full advantage of the Matrix network. It provides you with a secure way to send text messages, videos and audio files to your family, colleagues and friends.</p>
+    <p xml:lang="eo">NeoChat estas babilej-apo, kiu ebligas al vi plene profiti de la Matrix-reto. Ĝi provizas al vi sekuran manieron sendi tekstmesaĝojn, filmetojn kaj sondosierojn al via familio, kolegoj kaj amikoj.</p>
+    <p xml:lang="es">NeoChat es una aplicación de chat que le permite aprovechar al máximo la red Matrix. Le proporciona un modo seguro de enviar mensajes de texto, vídeos y archivos de sonido a su familia, colegas y amigos.</p>
+    <p xml:lang="eu">NeoChat, Matrix sarearen abantaila guztiei probetsua ateratzeko aukera ematen dizun berriketa aplikaizo bat da. Zure familiari, kideei eta lagunei testu mezuak, bideoak eta audio fitxategiak era seguruan bidaltzeko aukera ematen dizu.</p>
+    <p xml:lang="fi">NeoChat on keskustelusovellus, jolla Matrix-verkosta saa täyden hyödyn. Se tarjoaa salatun kanavan lähettää perheelle, työkavereille ja ystäville tekstiviestejä sekä video- ja äänitiedostoja.</p>
+    <p xml:lang="fr">NeoChat est une application de discussions vous permettant de profiter pleinement du réseau Matrix. Elle vous offre un moyen sécurisé d'envoyer des messages de texte, des vidéos et des fichiers audio à votre famille, vos collègues et vos ami(e)s.</p>
+    <p xml:lang="gl">NeoChat é unha aplicación de conversa que lle permite usar todas as funcionalidades da rede Matrix. Fornece unha forma segura de enviar mensaxes de texto e ficheiros de vídeo e son a familiares, amizades ou no traballo.</p>
+    <p xml:lang="he">NeoChat הוא יישום התכתבות שמאפשר לך לנצל את רשת Matrix במלואה. הוא מספק דרך מאובטחת לשליחת הודעות כתובות, סרטונים וקובצי שמע למשפחה, לעמיתים לעבודה ולחברים.</p>
+    <p xml:lang="hi">नियोचैट एक चैट ऐप है जो आपको मैट्रिक्स नेटवर्क का पूरा लाभ उठाने देता है। यह आपको अपने परिवार, सहकर्मियों और दोस्तों को टेक्स्ट संदेश, वीडियो और ऑडियो फ़ाइलें भेजने का एक सुरक्षित तरीका प्रदान करता है।</p>
+    <p xml:lang="hu">A NeoChat egy olyan csevegőalkalmazás, amellyel teljes mértékben kihasználhatja a Matrix hálózatot. Biztonságos módot biztosít szöveges üzenetek, videók és hangfájlok küldéséhez családtagjainak, kollégáinak és barátainak.</p>
+    <p xml:lang="ia">NeoChat es un app de conversation que te permitte prender avantage plen del rete Matrix. Il te forni un modo secur de inviar messages de texto, videos e files audio a tui familia, collegas e amicos.</p>
+    <p xml:lang="it">NeoChat è un'applicazione di chat che ti consente di sfruttare appieno la rete Matrix. Ti fornisce un modo sicuro per inviare messaggi di testo, video e file audio a familiari, colleghi e amici.</p>
+    <p xml:lang="ka">NeoChat ჩატის აპია, რომელიც საშუალება გაძლევთ, Matrix-ის ქსელის საშუალებები ბოლომდე გამოიყენოთ. ის გაძლევთ უსაფრთხო გზას, გააგზავნოთ ტექსტური შეტყობინებები, ვიდეოებ და აუდიოფაილები თქვენს ოჯახთან, კოლეგებთან და მეგობრებთან.</p>
+    <p xml:lang="ko">NeoChat은 Matrix 네트워크를 사용하는 채팅 앱입니다. 텍스트 메시지, 동영상, 오디오 파일을 가족, 친구, 동료와 안전하게 공유할 수 있습니다.</p>
+    <p xml:lang="lv">„NeoChat“ ir tērzēšanas programma, kas ļauj pilnvērtīgi izmantot „Matrix“ tīklu. Tā sniedz drošu veidu teksta ziņu, video un audio sūtīšanai ģimenes locekļiem, kolēģiem un draugiem.</p>
+    <p xml:lang="nl">NeoChat is een chat-toepassing die u het volledige voordeel van het Matrix-netwerk laat genieten. Het levert u op een veilige manier tekstberichten, video's en geluidsbestanden naar uw familie, collega's en vrienden te verzenden.</p>
+    <p xml:lang="nn">NeoChat er ein prateapp som lèt deg bruka all funksjonalitet i Matrix-nettverket. Du kan utveksla tekst, lyd og videoar med vennar, familie og kollegaar på ein trygg måte.</p>
+    <p xml:lang="pl">NoeChat to aplikacja do rozmów, która umożliwia wykorzystanie wszystkich możliwości Matriksa. Umożliwia wysyłanie wiadomości tekstowych, filmów i dźwięków w bezpieczny sposób do twojej rodziny, kolegów i przyjaciół.</p>
+    <p xml:lang="pt-BR">O NeoChat é um aplicativo de bate-papo que permite que você aproveite ao máximo a rede Matrix. Ele oferece uma maneira segura de enviar mensagens de texto, vídeos e arquivos de áudio para sua família, colegas e amigos.</p>
+    <p xml:lang="ro">NeoChat e o aplicație de discuții ce vă ajută să profitați din plin de rețeaua Matrix. Aceasta oferă o modalitate sigură de a trimite mesaje textuale, videoclipuri și fișiere audio familiei, colegilor și prietenilor.</p>
+    <p xml:lang="ru">NeoChat — приложение для общения, предоставляющее все преимущества сети Matrix. С его помощью можно безопасно отправлять текстовые сообщения, видеозаписи и звуковые файлы родственникам, коллегам и друзьям.</p>
+    <p xml:lang="sa">NeoChat इति एकं गपशप-अनुप्रयोगं यत् भवान् Matrix-जालस्य पूर्णं लाभं ग्रहीतुं शक्नोति । एतत् भवन्तं भवतः परिवाराय, सहकारिभ्यः, मित्रेभ्यः च पाठसन्देशान्, भिडियो, श्रव्यसञ्चिकाः च प्रेषयितुं सुरक्षितं मार्गं प्रदाति ।</p>
+    <p xml:lang="sl">NeoChat je aplikacija za klepet, ki vam omogoča, da v celoti izkoristite omrežje Matrix. Zagotavlja vam varen način za pošiljanje besedilnih sporočil, videoposnetkov in zvočnih datotek vaši družini, sodelavcem in prijateljem.</p>
+    <p xml:lang="sv">NeoChat är ett chattprogram som låter dig dra full nytta av Matrix-nätverket. Det ger dig ett säkert sätt att skicka textmeddelanden, videor och ljudfiler till din familj, kollegor och vänner.</p>
+    <p xml:lang="tr">NeoChat, Matrix ağının tüm özelliklerini kullanan bir sohbet uygulamasıdır. Ailenize, arkadaşlarınıza ve iş arkadaşlarınıza metin iletileri, ses ve video dosyaları göndermenin kolay bir yolunu sunar.</p>
+    <p xml:lang="uk">NeoChat є програмою для спілкування, за допомогою якої ви можете скористатися усіма перевагами мережі Matrix. За її допомогою ви можете безпечно надсилати текстові повідомлення, відео та звукові файли вашим родичам, колегам та друзям.</p>
+    <p xml:lang="zh-TW">NeoChat 是一個讓您能夠完全利用 Matrix 網路的聊天應用程式。它讓您安全地傳送文字訊息、影片或音訊檔給家人、同事或朋友等等。</p>
+    <p>NeoChat aims to be a fully featured application for the Matrix specification. As such everything in the current stable specification with the notable exceptions of VoIP, threads and some aspects of End-to-End Encryption are supported. There are a few other smaller omissions due to the fact that the Matrix spec is constantly evolving but the aim remains to provide eventual support for the entire spec.</p>
+    <p xml:lang="ar">يهدف نيوتشات إلى أن يكون تطبيقًا كامل الميزات لمواصفات ماتركس. يوفر نيوتشات كل شيء في المواصفات المستقرة الحالية مع الاستثناءات الملحوظة لـ VoIP و تعدد الخيوط وبعض جوانب التعمية من طرف إلى طرف. هناك عدد قليل من الإغفالات الصغيرة الأخرى بسبب حقيقة أن مواصفات ماتركس تتطور باستمرار، ولكن يبقى الهدف توفير تطبيق للمواصفات بأكملها.</p>
+    <p xml:lang="ca">NeoChat pretén ser una aplicació amb totes les característiques per a l'especificació de Matrix. Com a tal, s'ha implementat tota l'especificació actual estable amb les notables excepcions de la VoIP, fils i alguns aspectes de l'encriptatge d'extrem a extrem. Hi ha algunes altres omissions més petites a causa del fet que l'especificació de Matrix està evolucionant constantment, però l'objectiu segueix sent proporcionar suport eventual per a tota l'especificació.</p>
+    <p xml:lang="ca-valencia">NeoChat pretén ser una aplicació amb totes les característiques per a l'especificació de Matrix. Com a tal, s'ha implementat tota l'especificació actual estable amb les notables excepcions de la VoIP, fils i alguns aspectes de l'encriptació d'extrem a extrem. Hi ha algunes altres omissions més xicotetes a causa del fet que l'especificació de Matrix està evolucionant constantment, però l'objectiu seguix sent proporcionar suport eventual per a tota l'especificació.</p>
+    <p xml:lang="de">NeoChat versucht eine vollumfängliche Anwendung für die Spezifikation von Matrix zu sein. Damit wird alles der aktuellen stabilen Spezifikation mit den erwähnenswerten Ausnahmen von VoIP, Diskussionsfäden und ein paar Teilen der Ende-zu-Ende-Verschlüsselung unterstützt. Zudem sind andere kleinere Auslassungen vorhanden, da sich die Matrixspezifikation ständig weiterentwickelt. Nichtsdestotrotz soll letztendlich die gesamte Spezifikation unterstützt werden.</p>
+    <p xml:lang="el">Το NeoChat στοχεύει να είναι μια πλήρως εξοπλισμένη εφαρμογή για τις προδιαγραφές Matrix. Ως εκ τούτου, υποστηρίζονται όλα τα στοιχεία της τρέχουσας σταθερής προδιαγραφής με τις αξιοσημείωτες εξαιρέσεις του VoIP, των νημάτων και ορισμένων πτυχών της κρυπτογράφησης στα άκρα. Υπάρχουν μερικές άλλες μικρότερες παραλείψεις που οφείλονται στο γεγονός ότι η προδιαγραφή Matrix εξελίσσεται συνεχώς, αλλά ο στόχος παραμένει να παρέχεται τελικά υποστήριξη για ολόκληρη την προδιαγραφή.</p>
+    <p xml:lang="en-GB">NeoChat aims to be a fully featured application for the Matrix specification. As such everything in the current stable specification with the notable exceptions of VoIP, threads and some aspects of End-to-End Encryption are supported. There are a few other smaller omissions due to the fact that the Matrix spec is constantly evolving but the aim remains to provide eventual support for the entire spec.</p>
+    <p xml:lang="eo">NeoChat celas esti plene kapabla aplikaĵo por la Matrix-specifo. Kiel tia, ĉio en la nuna stabila specifo kun la rimarkindaj esceptoj de VoIP, fadenoj kaj kelkaj aspektoj de Fin-al-Fina Ĉifrado estas subtenataj. Estas kelkaj aliaj pli malgrandaj preterlasoj pro la fakto, ke la Matrix-speco konstante evoluas, sed la celo restas provizi finfine subtenon por la tuta specifaĵo.</p>
+    <p xml:lang="es">NeoChat pretende ser una aplicación con todas las funciones para la especificación de Matrix. Como tal, admite todo en la especificación estable actual, con las notables excepciones de VoIP, subprocesos y algunas funciones de cifrado de extremo a extremo. Existen algunas omisiones menos importantes debido al hecho de que la especificación de Matrix está en constante evolución, pero el objetivo sigue siendo brindar compatibilidad final con toda la especificación.</p>
+    <p xml:lang="eu">«NeoChat»ek «Matrix» zehaztapenaren ezaugarri guztiak eskaintzen dituen aplikazio bat izan nahi du. Beraz, egungo zehaztapen egonkorrean dagoen guztiaren euskarria du, VoIP, hariak eta muturren artean zifratzeko salbuespen nabarmenekin. Badira beste ez-betetze txikiago batzuk, «Matrix»en zehaztapena etengabe eboluzioan dagoelako, baina azken helburua zehaztapen osoaren euskarria ematea izaten jarraitzen du.</p>
+    <p xml:lang="fi">NeoChat pyrkii olemaan Matrix-määritelmän täysominaisuuksinen sovellus, joten se tukee kaikkea nykyisessä vakaassa määritelmässä muutamaa huomattavaa poikkeusta lukuun ottamatta (VoIP, säikeet ja jotkin piirteet päästä päähän -salauksessa). Joitakin pienempiäkin puutteita on Matrix-määritelmän jatkuvan kehityksen vuoksi, mutta lopputavoitteena on tarjota määritelmän täysi tuki.</p>
+    <p xml:lang="fr">L'objectif de NeoChat est d'être une application complète pour le protocole Matrix. En tant que tel, tout dans la spécification stable actuelle avec les exceptions notables de VoIP, les processus et certains aspects du chiffrement de bout en bout sont pris en charge. Il y a quelques autres petites omissions en raison du fait que la spécification du protocole Matrix est en constante évolution. Cependant, l'objectif reste de fournir un soutien éventuel pour l'ensemble de la spécification.</p>
+    <p xml:lang="gl">NeoChat pretende ser unha aplicación completa para a especificación de Matrix. Coas excepcións de VoIP, conversas fiadas e algúns aspectos da cifraxe de extremo a extremo, a versión estábel segue as especificacións. Existen algunhas outras pequenas omisións debido ao feito de que Matrix está en continua evolución pero a intención é fornecer compatibilidade coa especificación completa.</p>
+    <p xml:lang="he">NeoChat מתיימר להיות יישום עתיר יכולות לפי מפרט Matrix. כיוון שזה ייעודו, כל מה שבמפרט היציב עם חריגות משמעותיות כגון VoIP, שרשורים ועוד מגוון היבטים של הצפנה מקצה לקצה נתמכים גם הם. יש מספר השמטות קטן עקב העובדה שהמפרט של Matrix ממשיך להתפתח אך המטרה היא להמשיך לספק תמיכה בסופו של דבר לכל המפרט.</p>
+    <p xml:lang="hi">नियोचैट का लक्ष्य मैट्रिक्स विनिर्देश के लिए एक पूर्ण विशेषताओं वाला अनुप्रयोग बनना है। इस प्रकार वर्तमान स्थिर विनिर्देश में वीओआईपी, थ्रेड्स और एंड-टू-एंड एन्क्रिप्शन के कुछ पहलुओं के उल्लेखनीय अपवादों के साथ सब कुछ समर्थित है। मैट्रिक्स विनिर्देश लगातार विकसित हो रहा है, इस तथ्य के कारण कुछ अन्य छोटी चूकें हैं, लेकिन उद्देश्य पूरे विनिर्देश के लिए अंतिम समर्थन प्रदान करना है।</p>
+    <p xml:lang="hu">A NeoChat célja, hogy a Matrix specifikációnak megfelelő teljes funkcionalitású alkalmazás legyen. Mint ilyen, a jelenlegi stabil specifikáció támogatott a VoIP, a szálak és a végpontok közötti titkosítás egyes elemeinek kivételével. Van még néhány kisebb hiányosság annak köszönhetően, hogy a Matrix specifikáció folyamatosan fejlődik, de végső cél a teljes specifikáció megvalósítása.</p>
+    <p xml:lang="ia">NeoChat aspira a esser un application plenmente eminente per le specification de Matrix. Tal como omne cosas in le specification currentemente stabile con le exceptiones notabile de VOIP, threads e alcun aspectos del cryptation End-to-End es supportate. Il ha ltere pauc omissiones, debite al facto que le specification de Matrix es in evolution constante ma le aspiration remane a fornir supporto eventual per le integre specification.</p>
+    <p xml:lang="it">NeoChat mira ad essere un'applicazione completa per le specifiche Matrix. Pertanto, sono supportati tutti gli elementi dell'attuale specifica stabile con le notevoli eccezioni di VoIP, conversazioni e alcuni aspetti della cifratura end-to-end. Ci sono alcune altre piccole omissioni dovute al fatto che le specifiche Matrix sono in continua evoluzione, ma l'obiettivo rimane quello di fornire un eventuale supporto per l'intera specifica.</p>
+    <p xml:lang="ka">NeoChat მიზნად ისახავს Matrix სპეციფიკაციის სრული განხორციელება ჰქონდეს. როგორც ასეთი, ყველაფერი მიმდინარე სპეციფიკაციიდან, VoIP-ის, ძაფებისა და გამჭოლი დაშიფვრის ზოგიერთი ასპექტის გარდა, მხარდაჭერილია. შეძლება ასევე იყოს მცირე ლაფსუსებიც იმის გამო, რომ Matrix-ის სპეციფიკაცია მუდმივად ვითარდება, მაგრამ ჩვენი მიზანი მისი სრული მხარდაჭერაა.</p>
+    <p xml:lang="ko">NeoChat은 Matrix 표준을 따르는 프로그램을 목표로 합니다. 현재 안정 버전의 표준에서 제공하는 기능의 대부분을 지원하며, VoIP, 스레드, 일부 종단간 암호화와 같은 기능은 아직 지원하지 않습니다. Matrix 표준은 계속하여 진화 중이기 때문에 일부 기능이 빠져 있을 수도 있지만 장기적으로는 전체 표준을 지원하는 것이 목표입니다.</p>
+    <p xml:lang="lv">„NeoChat“ mērķis ir piedāvāt plašas iespējas atbilstoši „Matrix“ specifikācijai. Līdz ar to programma atbalsta visu pašreizējā stabilajā specifikācijā, izņemot VoIP, pavedienus un dažos aspektos galšifrēšanu. Pastāv citas atsevišķas sīkas neieviestas daļas, jo „Matrix“ specifikācija nepārtraukti attīstās, tomēr mērķis ir ar laiku nodrošināt atbalstu pilnai specifikācijai.</p>
+    <p xml:lang="nl">NeoChat richt zich op het volledig bieden van alle mogelijkheden van de Matrix-specificatie. Alles in de huidige stabiele specificatie met merkbare uitzondering van VoIP, gekoppelde discussies en sommige aspecten van eind-tot-eind versleuteling worden ondersteund. Er zijn een paar andere kleinere omissies vanwege het feit dat de Matrix specificatie constant evolueert maar het doel blijft het eventueel bieden van ondersteuning van de gehele specificatie.</p>
+    <p xml:lang="nn">NeoChat har som mål å støtta all funksjonalitet i Matrix-spesifikasjonen. Førebels er alt i den gjeldande stabile spesifikasjonen støtta, med unntak av VoIP, trådar og nokre delar av ende-til-kryptering. Det finst òg andre småting som ikkje er støtta, sidan Matrix-spesifikasjon er i stadig endring, men målet er altså støtte for alt.</p>
+    <p xml:lang="pl">NeoChat w zamyśle ma być pełnowartościową aplikacją wg wytycznych Matriksa. Z tego powodu, wszystko, co jest obecnie w stabilnych wytycznych z pominięciem VoIP, wątków i niektórych części szyfrowania Użytkownik-do-Użytkownika są obecnie obsługiwane. Pominięto też kilka mniejszych rzeczy ze względu na ciągły rozwój wytycznych Matriksa, lecz celem nadal jest zapewnienie obsługi wszystkich wytycznych.</p>
+    <p xml:lang="pt">O NeoChat pretende ser uma aplicação completa para a especificação do Matrix. Como tal, tudo o que existe na especificação estável actual, com as notáveis excepções do VoIP, tópicos e alguns aspectos da Encriptação Ponto-a-Ponto, são suportados. Existem mais algumas omissões, devido ao facto que a norma do Matrix está em constante evolução, mas o objectivo continua a ser oferecer o suporte eventual para a norma por inteiro.</p>
+    <p xml:lang="pt-BR">O NeoChat pretende ser um aplicativo completo para a especificação Matrix. Dessa forma, tudo na especificação estável atual, com as notáveis exceções de VoIP, tópicos e alguns aspectos da criptografia de ponta a ponta, é suportado. Há algumas outras pequenas omissões devido ao fato de a especificação Matrix estar em constante evolução, mas o objetivo continua sendo fornecer suporte eventual para toda a especificação.</p>
+    <p xml:lang="ro">NeoChat vrea să fie o aplicație completă pentru specificațiile Matrix. Astfel, susține tot ce se găsește acum în specificațiile stabile cu excepția VoIP, a firelor de discuții, și a unor părți din criptarea punct-la-punct. Sunt și câteva omisiuni minore din cauza faptului că specificația Matrix evoluează continuu, dar scopul rămâne acela de a implementa întreaga specificație.</p>
+    <p xml:lang="ru">Целью создания NeoChat является полноценная реализация программы для спецификации Matrix. Как следствие, реализовано всё в текущей стабильной спецификации (за исключением голосовой интернет-связи, потоков и некоторых аспектов сквозного шифрования). Есть также несколько других незначительных пробелов, обусловленных постоянными изменениями спецификации Matrix. Тем не менее, стоит задача в итоге предоставить полную поддержку спецификации.</p>
+    <p xml:lang="sa">NeoChat इत्यस्य उद्देश्यं Matrix विनिर्देशस्य कृते पूर्णतया विशेषतायुक्तः अनुप्रयोगः भवितुम् अस्ति । यथा तथा वर्तमानस्थिरविनिर्देशे सर्वं VoIP इत्यस्य उल्लेखनीयअपवादैः सह, थ्रेड्स तथा च End-to-End Encryption इत्यस्य केचन पक्षाः समर्थिताः सन्ति । अन्ये कतिचन लघु लोपाः सन्ति यतोहि Matrix spec निरन्तरं विकसितः अस्ति परन्तु उद्देश्यं सम्पूर्ण spec कृते अन्ततः समर्थनं प्रदातुं अवशिष्टम् अस्ति</p>
+    <p xml:lang="sl">Neochat cilja, da bi bila popolna aplikacija po specifikaciji Matrixa. Kot takšna vsebuje vse v trenutni stabilni specifikaciji z pomembnimi izjemami pri VoIP, nitih in nekaterih vidikov šifriranja od konca do konca. Obstaja nekaj drugih manjših opustitev zaradi dejstva, da se specifikacija Matrix nenehno razvija, vendar cilj ostaja zagotoviti morebitno podporo celotni specifikaciji.</p>
+    <p xml:lang="sv">NeoChat har som mål att vara ett fullständigt program enligt Matrix-specifikationen. Som sådant stöds allt i den nuvarande stabila specifikationen, med de nämnvärda undantagen VoIP, trådar och några aspekter av kryptering hela vägen. Det finns några ytterligare utelämnanden på grund av att Matrix-specifikationen hela tiden utvecklas, men målet förblir att till slut erbjuda stöd för hela specifikationen.</p>
+    <p xml:lang="tr">NeoChat, Matrix belirtimi için tam özellikli bir uygulama olmayı hedefler. Bu nedenle; VoIP, ileti zincirleri ve Uçtan Uca Şifreleme’nin bazı yönleri gibi dikkate değer istisnalar dışında var olan kararlı belirtimdeki her şey desteklenir. Matrix belirtiminin sürekli gelişmesi nedeniyle birkaç küçük eksiklik daha var; ancak amaç tüm belirtim için nihai destek sağlamak olmayı sürdürüyor.</p>
+    <p xml:lang="uk">Метою створення NeoChat є повноцінна реалізація програми для специфікації Matrix. Як наслідок, реалізовано усе у поточній стабільній специфікації, окрім голосового інтернет-зв'язку, потоків та деяких аспектів міжвузлового шифрування. Є також декілька інших незначних прогалин через те, що специфікація Matrix постійно змінюється, але метою лишається повна підтримка специфікації.</p>
+    <p xml:lang="zh-TW">NeoChat 以完整支援 Matrix 標準為目標，因此目前穩定版標準除了 VoIP、對話串與端對端加密的某些部分以外的所有部分都有支援。其他部分還有一些較小的不支援的部分，這是因為 Matrix 標準隨時都在改進，但目標仍然時最終提供整個標準的完整支援。</p>
+    <p>Due to the nature of the Matrix specification development NeoChat also supports numerous unstable features. Currently these are:</p>
+    <p xml:lang="ar">نظرًا لطبيعة تطوير مواصفات ماتركس، يوفر نيوتشات أيضًا العديد من الميزات غير المستقرة وهي:</p>
+    <p xml:lang="ca">A causa de la naturalesa del desenvolupament de l'especificació de Matrix, el NeoChat també implementa nombroses característiques inestables. Actualment són:</p>
+    <p xml:lang="ca-valencia">A causa de la naturalea del desenvolupament de l'especificació de Matrix, NeoChat també implementa nombroses característiques inestables. Actualment són:</p>
+    <p xml:lang="de">Durch die Weiterentwicklung der Matrix-Spezifikation unterstützt auch NeoChat einige als noch instabil gekennzeichnete Funktionen. Derzeit sind das:</p>
+    <p xml:lang="el">Λόγω της φύσης της ανάπτυξης των προδιαγραφών Matrix, το NeoChat υποστηρίζει επίσης πολλά ασταθή χαρακτηριστικά. Επί του παρόντος, αυτά είναι:</p>
+    <p xml:lang="en-GB">Due to the nature of the Matrix specification development NeoChat also supports numerous unstable features. Currently these are:</p>
+    <p xml:lang="eo">Pro la naturo de la Matrix-specifevoluo NeoChat ankaŭ subtenas multajn malstabilajn funkciojn. Nuntempe ĉi tiuj estas:</p>
+    <p xml:lang="es">Debido a la naturaleza del desarrollo de la especificación de Matrix, NeoChat también permite numerosas funciones no estables, como:</p>
+    <p xml:lang="eu">«Matrix» zehaztapenaren garapenaren izaeragatik, «Neo¢hat»ek ezaugarri ezegonkor ugari ere onartzen ditu. Gaur egun hauek:</p>
+    <p xml:lang="fi">Matrix-määritelmän kehittyessä NeoChat tukee myös monia epävakaita ominaisuuksia. Tällä hetkellä näitä ovat:</p>
+    <p xml:lang="fr">En raison de la nature du développement des spécifications du protocole Matrix, NeoChat prend également en charge de nombreuses fonctionnalités instables. Actuellement, ce sont :</p>
+    <p xml:lang="gl">Debido á natureza do desenvolvemento da especificación de Matrix, NeoChat tamén inclúe varias funcionalidades non estábeis:</p>
+    <p xml:lang="he">מטבע הדברים, הפיתוח של NeoChat תומך במגוון יכולות מפוקפקות כתלות בהתפתחות המפרט הטכני של Matrix. היכולות האלה הן:</p>
+    <p xml:lang="hi">मैट्रिक्स विनिर्देश विकास की प्रकृति के कारण नियोचैट कई अस्थिर सुविधाओं का भी समर्थन करता है। वर्तमान में ये हैं:</p>
+    <p xml:lang="hu">A Matrix specifikáció fejlesztésének jellegéből adódóan a NeoChat számos instabil funkciót is támogat. Jelenleg a következőket:</p>
+    <p xml:lang="ia">Debite al natura del disveloppamento de specification de Matrix NeoChat tamben supporta numerose characteristicas instabile. Currentemente istes es:</p>
+    <p xml:lang="it">A causa della natura dello sviluppo delle specifiche Matrix, NeoChat supporta anche numerose funzionalità instabili. Attualmente queste sono:</p>
+    <p xml:lang="ka">Matrix-ის სპეციფიკაციის განვითარების ბუნების გამო NeoChat-ს ასევე აქვს უამრავი არასტაბილური ფუნქციაც. ახლა ისინია:</p>
+    <p xml:lang="ko">Matrix 표준 개발의 특징으로 인하여 NeoChat은 일부 실험적인 기능을 지원합니다. 현재 지원하는 기능은 다음과 같습니다.</p>
+    <p xml:lang="lv">„Matrix“ specifikācijas veida dēļ „NeoChat“ attīstība atbalsta arī vairākas nestabilas iespējas, šobrīd šādas ir:</p>
+    <p xml:lang="nl">Vanwege de aard van de ontwikkeling van de Matrix specificatie ondersteunt NeoChat ook talloze onstabiele mogelijkheden. Dit zijn nu:</p>
+    <p xml:lang="nn">På grunn av måten Matrix-spesifikasjonen vert utvikla på, støttar NeoChat òg nokre uferdige funksjonar:</p>
+    <p xml:lang="pl">Ze względu na sposób rozwoju Matriksa, NeoChat obsługuje także kilka niestabilnych możliwości. Obecnie są to:</p>
+    <p xml:lang="pt">Devido à natureza do desenvolvimento da especificação do Matrix, o NeoChat também suporta diversas funcionalidades instáveis. De momento são:</p>
+    <p xml:lang="pt-BR">Devido à natureza do desenvolvimento da especificação Matrix, o NeoChat também suporta diversos recursos instáveis. Atualmente, são eles:</p>
+    <p xml:lang="ro">Datorită modului de dezvoltare a specificațiilor Matrix, NeoChat susține și numeroase caracteristici nestabile. Acum, acestea sunt:</p>
+    <p xml:lang="ru">В силу природы разработки спецификации Matrix в NeoChat тоже предусмотрена поддержка многочисленных нестабильных возможностей. В текущей версии это следующие возможности:</p>
+    <p xml:lang="sa">Matrix विनिर्देशविकासस्य प्रकृतेः कारणात् NeoChat अपि अनेकानाम् अस्थिरविशेषतानां समर्थनं करोति । सम्प्रति एते सन्ति :</p>
+    <p xml:lang="sl">Zaradi narave razvoja specifikacije Matrixa NeoChat podpira tudi številne nestabilne zmožnosti. Trenutno so to:</p>
+    <p xml:lang="sv">På grund av sättet Matrix-specifikationens utvecklas, stöder NeoChat också ett stor antal instabila funktioner. För närvarande är de:</p>
+    <p xml:lang="ta">மேட்ரிக்ஸு நெறிமுறை வரையறுக்கப்படும் வித‍த்தின் காரணமாக, பல நிலையற்ற அம்சங்களையும் நியோச்சாட் ஆதரிக்கிறது. தற்போது ஆதரிக்கப்படுபவை:</p>
+    <p xml:lang="tr">NeoChat, Matrix belirtimi geliştirmesinin doğası gereği çok sayıda kararsız özelliği de destekler. Şu anda bunlar:</p>
+    <p xml:lang="uk">Через природу розробки специфікації Matrix, у NeoChat також передбачено підтримку численних нестабільних можливостей. У поточній версії цими можливостями є:</p>
+    <p xml:lang="zh-TW">由於 Matrix 標準的開發流程的緣故，NeoChat 也支援數個非穩定版的功能。目前這些功能是：</p>
+    <ul>
+      <li>Polls - MSC3381</li>
+      <li xml:lang="ar">التصويت - MSC3381</li>
+      <li xml:lang="ca">Votacions - MSC3381</li>
+      <li xml:lang="ca-valencia">Votacions - MSC3381</li>
+      <li xml:lang="de">Umfragen – MSC3381</li>
+      <li xml:lang="el">Δημοσκοπήσεις - MSC3381</li>
+      <li xml:lang="en-GB">Polls - MSC3381</li>
+      <li xml:lang="eo">Enketoj - MSC3381</li>
+      <li xml:lang="es">Encuestas - MSC3381</li>
+      <li xml:lang="eu">Polls - MSC3381</li>
+      <li xml:lang="fi">Kyselyt – MSC3381</li>
+      <li xml:lang="fr">Sondages - MSC3381</li>
+      <li xml:lang="gl">Enquisas — MSC3381</li>
+      <li xml:lang="he">סקרים - MSC3381</li>
+      <li xml:lang="hi">पोल - MSC3381</li>
+      <li xml:lang="hu">Szavazások - MSC3381</li>
+      <li xml:lang="ia">Inquestas - MSC3381</li>
+      <li xml:lang="it">Sondaggi - MSC3381</li>
+      <li xml:lang="ka">Polls - MSC3381</li>
+      <li xml:lang="ko">투표 - MSC3381</li>
+      <li xml:lang="lv">Aptaujas — MSC3381</li>
+      <li xml:lang="nl">Polls - MSC3381</li>
+      <li xml:lang="nn">Avstemmingar – MSC3381</li>
+      <li xml:lang="pl">Ankiety - MSC3381</li>
+      <li xml:lang="pt">Inquéritos - MSC3381</li>
+      <li xml:lang="pt-BR">Enquetes - MSC3381</li>
+      <li xml:lang="ro">Sondaje - MSC3381</li>
+      <li xml:lang="ru">Голосования — MSC3381</li>
+      <li xml:lang="sa">मतदान - MSC3381</li>
+      <li xml:lang="sl">Polls - MSC3381</li>
+      <li xml:lang="sv">Polls - MSC3381</li>
+      <li xml:lang="ta">வாக்கெடுப்புகள் - MSC3381</li>
+      <li xml:lang="tr">Anketler — MSC3381</li>
+      <li xml:lang="uk">Опитування - MSC3381</li>
+      <li xml:lang="zh-TW">投票 - MSC3381</li>
+      <li>Sticker Packs - MSC2545</li>
+      <li xml:lang="ar">حزم الملصقات - MSC2545</li>
+      <li xml:lang="ca">Paquets d'adhesius - MSC2545</li>
+      <li xml:lang="ca-valencia">Paquets d'adhesius - MSC2545</li>
+      <li xml:lang="de">Sticker-Pakete – MSC2545</li>
+      <li xml:lang="el">Πακέτα αυτοκόλλητων - MSC2545</li>
+      <li xml:lang="en-GB">Sticker Packs - MSC2545</li>
+      <li xml:lang="eo">Glumark-Pakoj - MSC2545</li>
+      <li xml:lang="es">Paquetes de pegatinas - MSC2545</li>
+      <li xml:lang="eu">Eranskailu paketeak - MSC2545</li>
+      <li xml:lang="fi">Tarrapakkaukset – MSC2545</li>
+      <li xml:lang="fr">Paquets d'auto-collants - MSC2545</li>
+      <li xml:lang="gl">Paquetes de adhesivos — MSC2545</li>
+      <li xml:lang="he">חבילות מדבקות - MSC2545</li>
+      <li xml:lang="hi">स्टिकर पैक - MSC2545</li>
+      <li xml:lang="hu">Matricacsomagok - MSC2545</li>
+      <li xml:lang="ia">Etiquetta gummate (sticker) -MSC2545</li>
+      <li xml:lang="it">Pacchetti di adesivi - MSC2545</li>
+      <li xml:lang="ka">სტიკერების პაკეტები - MSC2545</li>
+      <li xml:lang="ko">스티커 팩 - MSC2545</li>
+      <li xml:lang="lv">Uzlīmju pakas — MSC2545</li>
+      <li xml:lang="nl">Sticker Packs - MSC2545</li>
+      <li xml:lang="nn">Klistremerke-pakkar – MSC2545</li>
+      <li xml:lang="pl">Paczki naklejek - MSC2545</li>
+      <li xml:lang="pt">Pacotes de Autocolantes - MSC2545</li>
+      <li xml:lang="pt-BR">Pacotes de Stickers - MSC2545</li>
+      <li xml:lang="ro">Colecții de abțibilduri - MSC2545</li>
+      <li xml:lang="ru">Наборы стикеров — MSC2545</li>
+      <li xml:lang="sa">स्टिकर पैक - MSC2545</li>
+      <li xml:lang="sl">Sticker Packs - MSC2545</li>
+      <li xml:lang="sv">Sticker Packs - MSC2545</li>
+      <li xml:lang="ta">ஒட்டி தொகுப்புகள் - MSC2545</li>
+      <li xml:lang="tr">Çıkartma Paketleri — MSC2545</li>
+      <li xml:lang="uk">Пакунки наліпок - MSC2545</li>
+      <li xml:lang="zh-TW">貼圖包 - MSC2545</li>
+      <li>Location Events - MSC3488</li>
+      <li xml:lang="ar">موقع الأحداث - MSC3488</li>
+      <li xml:lang="ca">Esdeveniments d'ubicació - MSC3488</li>
+      <li xml:lang="ca-valencia">Esdeveniments d'ubicació - MSC3488</li>
+      <li xml:lang="de">Veranstaltungen mit Ortsangabe – MSC3488</li>
+      <li xml:lang="el">Τοποθεσία γεγονότα - MSC3488</li>
+      <li xml:lang="en-GB">Location Events - MSC3488</li>
+      <li xml:lang="eo">Lokaj Eventoj - MSC3488</li>
+      <li xml:lang="es">Eventos de ubicación - MSC3488</li>
+      <li xml:lang="eu">Kokaleku-gertaerak - MSC3488</li>
+      <li xml:lang="fi">Sijaintitapahtumat – MSC3488</li>
+      <li xml:lang="fr">Événements de lieu - MSC3488</li>
+      <li xml:lang="gl">Localización de eventos — MSC3488</li>
+      <li xml:lang="he">אירועי מקום - MSC3488</li>
+      <li xml:lang="hi">स्थान घटनाएँ - MSC3488</li>
+      <li xml:lang="hu">Események helyadatai - MSC3488</li>
+      <li xml:lang="ia">Eventos de Location - MSC3488</li>
+      <li xml:lang="it">Località eventi - MSC3488</li>
+      <li xml:lang="ka">მდებარეობის მოვლენები - MSC3488</li>
+      <li xml:lang="ko">위치 이벤트 - MSC3488</li>
+      <li xml:lang="lv">Atrašanās vietas notikumi — MSC3488</li>
+      <li xml:lang="nl">Locatie gebeurtenissen - MSC3488</li>
+      <li xml:lang="nn">Posisjonshendingar – MSC3488</li>
+      <li xml:lang="pl">Wydarzenia w miejscach - MSC3488</li>
+      <li xml:lang="pt">Eventos com Localizações - MSC3488</li>
+      <li xml:lang="pt-BR">Localização de eventos - MSC3488</li>
+      <li xml:lang="ro">Evenimente de amplasare - MSC3488</li>
+      <li xml:lang="ru">События местоположения — MSC3488</li>
+      <li xml:lang="sa">स्थान घटनाएँ - MSC3488</li>
+      <li xml:lang="sl">Location Events - MSC3488</li>
+      <li xml:lang="sv">Location Events - MSC3488</li>
+      <li xml:lang="ta">இட நிகழ்வுகள் - MSC3488</li>
+      <li xml:lang="tr">Konum Etkinlikleri — MSC3488</li>
+      <li xml:lang="uk">Місцеві зустрічі - MSC3488</li>
+      <li xml:lang="zh-TW">位置事件 - MSC3488</li>
+    </ul>
+  </description>
+  <url type="homepage">https://apps.kde.org/neochat</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=NeoChat</url>
+  <url type="vcs-browser">https://invent.kde.org/network/neochat</url>
+  <url type="contact">https://go.kde.org/matrix/#/#neochat:kde.org</url>
+  <url type="donation">https://kde.org/community/donations/?app=neochat</url>
+  <url type="contribute">https://community.kde.org/Get_Involved/</url>
+  <categories>
+    <category>Network</category>
+  </categories>
+  <keywords>
+    <keyword>Matrix</keyword>
+    <keyword>Kirigami</keyword>
+  </keywords>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+    <url>https://kde.org</url>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <custom>
+    <value key="KDE::matrix">#neochat:kde.org</value>
+    <value key="KDE::windows_store">https://www.microsoft.com/store/apps/9PNXWVNRC29H</value>
+    <value key="KDE::mastodon">https://kde.social/@neochat</value>
+    <value key="KDE::windows_store::StoreLogo9x16">https://invent.kde.org/network/neochat/-/raw/master/icons/windows/storelogo-720x1080.png</value>
+    <value key="KDE::windows_store::StoreLogoSquare">https://invent.kde.org/network/neochat/-/raw/master/icons/windows/storelogo-1080x1080.png</value>
+    <value key="KDE::windows_store::Icon">https://invent.kde.org/network/neochat/-/raw/master/icons/300-apps-neochat.png</value>
+    <value key="KDE::windows_store::PromotionalArt16x9">https://invent.kde.org/network/neochat/-/raw/master/icons/windows/promoimage-1920x1080.png</value>
+    <value key="KDE::supporters">Anonymous donor, Akseli</value>
+  </custom>
+  <launchable type="desktop-id">org.kde.neochat.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/neochat/application.png</image>
+      <caption>Main view with room list, chat, and room information</caption>
+      <caption xml:lang="ar">العرض الرئيسة مع قائمة الغرف والدردشات و معلومات الغرفة</caption>
+      <caption xml:lang="ca">Vista principal amb la llista de sales, xats i informació de les sales</caption>
+      <caption xml:lang="ca-valencia">Vista principal amb la llista de sales, xats i informació de les sales</caption>
+      <caption xml:lang="de">Hauptansicht mit Raumliste, Unterhaltung und Raum-Informationen</caption>
+      <caption xml:lang="el">Κύρια προβολή με λίστα δωματίων, συνομιλία και πληροφορίες δωματίων</caption>
+      <caption xml:lang="en-GB">Main view with room list, chat, and room information</caption>
+      <caption xml:lang="eo">Ĉefa vido kun ĉambra listo, babilejo kaj ĉambra informo</caption>
+      <caption xml:lang="es">Vista principal con la lista de salas, chat e información de la sala</caption>
+      <caption xml:lang="eu">Ikuspegi nagusia gela-zerrenda, berriketa, eta gelako informazioarekin</caption>
+      <caption xml:lang="fi">Päänäkymä, jossa huoneluettelo, keskustelu ja huoneen tiedot</caption>
+      <caption xml:lang="fr">Vue principale avec la liste des salons ainsi que des informations sur les salons et forums de discussions</caption>
+      <caption xml:lang="gl">Vista principal coa lista de salas, a charla, e información da sala.</caption>
+      <caption xml:lang="he">תצוגה ראשית עם רשימת חדרים, צ׳אט ופרטי חדר</caption>
+      <caption xml:lang="hi">कमरे की सूची, चैट और कमरे की जानकारी के साथ मुख्य दृश्य</caption>
+      <caption xml:lang="hu">A fő nézet a szobalistával, csevegéssel és szobainformációkkal</caption>
+      <caption xml:lang="ia">Vista principal con lista de sala, chat e information de sala</caption>
+      <caption xml:lang="it">Vista principale con elenco delle stanze, chat e informazioni sulla stanza</caption>
+      <caption xml:lang="ka">მთავარი ხედი სურათების სიით, ჩატით და ოთახის ინფორმაციით</caption>
+      <caption xml:lang="ko">대화방 목록, 채팅, 대화방 정보가 표시된 주 보기</caption>
+      <caption xml:lang="lv">Pamata skats ar istabu sarakstu, tērzēšanu un istabas informāciju</caption>
+      <caption xml:lang="nl">Hoofdweergave met lijst met rooms, chat en roominformatie</caption>
+      <caption xml:lang="nn">Hovudvising med romliste, pratevindauge og rominformasjon</caption>
+      <caption xml:lang="pl">Główny widok z wykazem pokojów, rozmowami i szczegółami pokojów</caption>
+      <caption xml:lang="pt">A área principal com a lista de salas e com informações sobre a conversa e a sala</caption>
+      <caption xml:lang="pt-BR">Visão principal com lista de salas, bate-papo e informações sobre as salas</caption>
+      <caption xml:lang="ro">Vederea principală cu lista de camere, discuție, și informații despre cameră</caption>
+      <caption xml:lang="ru">Главное окно со списком комнат, чатом и информацией о комнате</caption>
+      <caption xml:lang="sa">कक्षसूची, गपशपः, कक्षसूचना च सह मुख्यदृश्यम्</caption>
+      <caption xml:lang="sl">Glavni pogled s seznamom sob, klepetom in informacijami o sobah</caption>
+      <caption xml:lang="sv">Huvudvy med rumslista, chatt, och rumsinformation</caption>
+      <caption xml:lang="ta">அரங்குப்பட்டியல், உரையாடல், மற்றும் அரங்குவிவரங்களைக் கொண்டுள்ள பிரதான காட்சி</caption>
+      <caption xml:lang="tr">Oda listesini, sohbet penceresini ve oda bilgisini gösteren ana görünüm</caption>
+      <caption xml:lang="uk">Головна панель із списком кімнат, спілкуванням та даними щодо кімнати</caption>
+      <caption xml:lang="zh-TW">主頁面，包含聊天室列表、聊天內容，與聊天室資訊</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/neochat/spaces.png</image>
+      <caption>Discover new communities with Matrix Spaces</caption>
+      <caption xml:lang="ar">اكتشف مجتمعات جديدة مع فضاءات ماتركس</caption>
+      <caption xml:lang="ca">Descobriu comunitats noves amb els espais de Matrix</caption>
+      <caption xml:lang="ca-valencia">Descobriu comunitats noves amb els espais de Matrix</caption>
+      <caption xml:lang="de">Neue Gemeinschaften mit den Umgebungen von Matrix erkunden</caption>
+      <caption xml:lang="el">Ανακαλύψτε νέες κοινότητες με το Matrix Spaces</caption>
+      <caption xml:lang="en-GB">Discover new communities with Matrix Spaces</caption>
+      <caption xml:lang="eo">Malkovru novajn komunumojn per Matrix Spaces</caption>
+      <caption xml:lang="es">Descubra nuevas comunidades con los espacios de Matrix</caption>
+      <caption xml:lang="eu">Ezagutu komunitate berriak Matrixeko Tokiak erabiliz</caption>
+      <caption xml:lang="fi">Löydä uusia yhteisöjä Matrix Spacesillä</caption>
+      <caption xml:lang="fr">Découvrez de nouvelles communautés avec les espaces sous Matrix</caption>
+      <caption xml:lang="gl">Descubra novas comunidades dos espazos de Matrix.</caption>
+      <caption xml:lang="he">אפשר להיחשף לקהילות חדשות דרך Matrix Spaces</caption>
+      <caption xml:lang="hi">मैट्रिक्स स्पेस के साथ नए समुदायों की खोज करें</caption>
+      <caption xml:lang="hu">Fedezzen fel új közösségeket a Matrix Terek segítségével</caption>
+      <caption xml:lang="ia">Discoperi nove communitate con Matrix Spaces (Spatios de Matrix)</caption>
+      <caption xml:lang="it">Scopri nuove comunità con Matrix Spaces</caption>
+      <caption xml:lang="ka">აღმოაჩინეთ ახალი საზოგადოებები Matrix Spaces-თან ერთად</caption>
+      <caption xml:lang="ko">Matrix 스페이스에서 새로운 커뮤니티 탐험</caption>
+      <caption xml:lang="lv">Atklājiet jaunas kopienas ar „Matrix“ telpām</caption>
+      <caption xml:lang="nl">Ontdek nieuwe gemeenschappen met Matrix-ruimten</caption>
+      <caption xml:lang="nn">Oppdag nye fellesskap med Matrix Spaces</caption>
+      <caption xml:lang="pl">Odkrywaj nowe społeczności w Przestrzeniach Matriksa</caption>
+      <caption xml:lang="pt-BR">Descubra novas comunidades com os Espaços Matrix</caption>
+      <caption xml:lang="ro">Descoperiți comunități noi cu Spații Matrix</caption>
+      <caption xml:lang="ru">Поиск новых сообществ с помощью Matrix Spaces</caption>
+      <caption xml:lang="sa">Matrix Spaces इत्यनेन सह नूतनानां समुदायानाम् अन्वेषणं कुर्वन्तु</caption>
+      <caption xml:lang="sl">Odkrijte nove skupnosti z Matrix Spaces</caption>
+      <caption xml:lang="sv">Upptäck nya gemenskaper med Matrix Spaces</caption>
+      <caption xml:lang="ta">மேட்ரிக்ஸு இடங்களின் மூலம் புதிய சமூகங்களைக் கண்டுபிடிக்கலாம்</caption>
+      <caption xml:lang="tr">Matrix Alanlar ile yeni topluluklar keşfedin</caption>
+      <caption xml:lang="uk">Пошук нових спільнот за допомогою Matrix Spaces</caption>
+      <caption xml:lang="zh-TW">利用 Matrix 聊天空間發現新的社群</caption>
+    </screenshot>
+    <!--
+    Currently invalid. See https://github.com/ximion/appstream/issues/611
+    <screenshot type="default" environment="plasma-mobile">
+      <image>https://cdn.kde.org/screenshots/neochat/neochat-1.png</image>
+      <caption>List of chats on mobile</caption>
+    </screenshot>
+    -->
+    <screenshot environment="windows">
+      <image>https://cdn.kde.org/screenshots/neochat/NeoChat-Windows-Timeline.png</image>
+      <caption>Main view with room list, chat, and room information</caption>
+      <caption xml:lang="ar">العرض الرئيسة مع قائمة الغرف والدردشات و معلومات الغرفة</caption>
+      <caption xml:lang="ca">Vista principal amb la llista de sales, xats i informació de les sales</caption>
+      <caption xml:lang="ca-valencia">Vista principal amb la llista de sales, xats i informació de les sales</caption>
+      <caption xml:lang="de">Hauptansicht mit Raumliste, Unterhaltung und Raum-Informationen</caption>
+      <caption xml:lang="el">Κύρια προβολή με λίστα δωματίων, συνομιλία και πληροφορίες δωματίων</caption>
+      <caption xml:lang="en-GB">Main view with room list, chat, and room information</caption>
+      <caption xml:lang="eo">Ĉefa vido kun ĉambra listo, babilejo kaj ĉambra informo</caption>
+      <caption xml:lang="es">Vista principal con la lista de salas, chat e información de la sala</caption>
+      <caption xml:lang="eu">Ikuspegi nagusia gela-zerrenda, berriketa, eta gelako informazioarekin</caption>
+      <caption xml:lang="fi">Päänäkymä, jossa huoneluettelo, keskustelu ja huoneen tiedot</caption>
+      <caption xml:lang="fr">Vue principale avec la liste des salons ainsi que des informations sur les salons et forums de discussions</caption>
+      <caption xml:lang="gl">Vista principal coa lista de salas, a charla, e información da sala.</caption>
+      <caption xml:lang="he">תצוגה ראשית עם רשימת חדרים, צ׳אט ופרטי חדר</caption>
+      <caption xml:lang="hi">कमरे की सूची, चैट और कमरे की जानकारी के साथ मुख्य दृश्य</caption>
+      <caption xml:lang="hu">A fő nézet a szobalistával, csevegéssel és szobainformációkkal</caption>
+      <caption xml:lang="ia">Vista principal con lista de sala, chat e information de sala</caption>
+      <caption xml:lang="it">Vista principale con elenco delle stanze, chat e informazioni sulla stanza</caption>
+      <caption xml:lang="ka">მთავარი ხედი სურათების სიით, ჩატით და ოთახის ინფორმაციით</caption>
+      <caption xml:lang="ko">대화방 목록, 채팅, 대화방 정보가 표시된 주 보기</caption>
+      <caption xml:lang="lv">Pamata skats ar istabu sarakstu, tērzēšanu un istabas informāciju</caption>
+      <caption xml:lang="nl">Hoofdweergave met lijst met rooms, chat en roominformatie</caption>
+      <caption xml:lang="nn">Hovudvising med romliste, pratevindauge og rominformasjon</caption>
+      <caption xml:lang="pl">Główny widok z wykazem pokojów, rozmowami i szczegółami pokojów</caption>
+      <caption xml:lang="pt">A área principal com a lista de salas e com informações sobre a conversa e a sala</caption>
+      <caption xml:lang="pt-BR">Visão principal com lista de salas, bate-papo e informações sobre as salas</caption>
+      <caption xml:lang="ro">Vederea principală cu lista de camere, discuție, și informații despre cameră</caption>
+      <caption xml:lang="ru">Главное окно со списком комнат, чатом и информацией о комнате</caption>
+      <caption xml:lang="sa">कक्षसूची, गपशपः, कक्षसूचना च सह मुख्यदृश्यम्</caption>
+      <caption xml:lang="sl">Glavni pogled s seznamom sob, klepetom in informacijami o sobah</caption>
+      <caption xml:lang="sv">Huvudvy med rumslista, chatt, och rumsinformation</caption>
+      <caption xml:lang="ta">அரங்குப்பட்டியல், உரையாடல், மற்றும் அரங்குவிவரங்களைக் கொண்டுள்ள பிரதான காட்சி</caption>
+      <caption xml:lang="tr">Oda listesini, sohbet penceresini ve oda bilgisini gösteren ana görünüm</caption>
+      <caption xml:lang="uk">Головна панель із списком кімнат, спілкуванням та даними щодо кімнати</caption>
+      <caption xml:lang="zh-TW">主頁面，包含聊天室列表、聊天內容，與聊天室資訊</caption>
+    </screenshot>
+    <screenshot environment="windows">
+      <image>https://cdn.kde.org/screenshots/neochat/NeoChat-Windows-Login.png</image>
+      <caption>Login screen</caption>
+      <caption xml:lang="ar">شاشة الدخول</caption>
+      <caption xml:lang="ca">Pantalla d'inici de sessió</caption>
+      <caption xml:lang="ca-valencia">Pantalla d'inici de sessió</caption>
+      <caption xml:lang="cs">Přihlašovací obrazovka</caption>
+      <caption xml:lang="de">Anmeldebildschirm</caption>
+      <caption xml:lang="el">Οθόνη εισόδου</caption>
+      <caption xml:lang="en-GB">Login screen</caption>
+      <caption xml:lang="eo">Ensaluta ekrano</caption>
+      <caption xml:lang="es">Pantalla de inicio de sesión</caption>
+      <caption xml:lang="eu">Saio-hasteko pantaila</caption>
+      <caption xml:lang="fi">Kirjautumisnäkymä</caption>
+      <caption xml:lang="fr">Écran de connexion</caption>
+      <caption xml:lang="gl">Pantalla de identificación.</caption>
+      <caption xml:lang="he">מסך כניסה</caption>
+      <caption xml:lang="hi">लॉगिन स्क्रीन</caption>
+      <caption xml:lang="hu">Bejelentkező képernyő</caption>
+      <caption xml:lang="ia">Schermo de accesso</caption>
+      <caption xml:lang="it">Schermata di accesso</caption>
+      <caption xml:lang="ka">შესვლის ეკრანი</caption>
+      <caption xml:lang="ko">로그인 화면</caption>
+      <caption xml:lang="lv">Ierakstīšanās logs</caption>
+      <caption xml:lang="nl">Aanmeldscherm</caption>
+      <caption xml:lang="nn">Innloggingsbilete</caption>
+      <caption xml:lang="pl">Ekran logowania</caption>
+      <caption xml:lang="pt">Ecrã de autenticação</caption>
+      <caption xml:lang="pt-BR">Tela de login</caption>
+      <caption xml:lang="ro">Ecran de autentificare</caption>
+      <caption xml:lang="ru">Окно входа</caption>
+      <caption xml:lang="sa">लॉगिन् स्क्रीन</caption>
+      <caption xml:lang="sl">Prijavni zaslon</caption>
+      <caption xml:lang="sv">Inloggningsfönster</caption>
+      <caption xml:lang="ta">நுழைவுத் திரை</caption>
+      <caption xml:lang="tr">Oturum açma ekranı</caption>
+      <caption xml:lang="uk">Вікно входу</caption>
+      <caption xml:lang="zh-TW">登入畫面</caption>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+    <release version="24.12.3" date="2025-03-06"/>
+    <release version="24.12.2" date="2025-02-06"/>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
+    <release version="24.08.2" date="2024-10-10"/>
+    <release version="24.08.1" date="2024-09-12"/>
+    <release version="24.08.0" date="2024-08-22"/>
+    <release version="24.05.2" date="2024-07-04"/>
+    <release version="24.05.1" date="2024-06-13"/>
+    <release version="24.05.0" date="2024-05-23"/>
+    <release version="24.02.2" date="2024-04-11"/>
+    <release version="24.02.1" date="2024-03-21"/>
+    <release version="24.02.0" date="2024-02-28">
+      <url>https://kde.org/announcements/megarelease/6/#neochat</url>
+      <description>
+        <p>In the newest version, when launching the app, you will get a welcome page that lets you choose which account you want to use and lets you log in to other accounts. The welcome screen will also warn you when NeoChat cannot load an account.</p>
+        <p xml:lang="ar">في الإصدار الأحدث، عند تشغيل التطبيق، ستظهر صفحة ترحيب تتيح اختيار الحساب المراد استخدامه وتسمح بالولوج إلى حسابات أخرى. كما تحذر شاشة الترحيب عندما يتعذر على نيوتشات تحميل حساب ما.</p>
+        <p xml:lang="ca">En la versió més recent, en llançar l'aplicació, obtindreu una pàgina de benvinguda que us permetrà triar quin compte voleu utilitzar i permetrà iniciar sessió en altres comptes. La pantalla de benvinguda també us avisarà quan el NeoChat no pugui carregar un compte.</p>
+        <p xml:lang="ca-valencia">En la versió més recent, en iniciar l'aplicació, obtindreu una pàgina de benvinguda que us permetrà triar quin compte voleu utilitzar i permetrà iniciar sessió en altres comptes. La pantalla de benvinguda també vos avisarà quan NeoChat no puga carregar un compte.</p>
+        <p xml:lang="he">בגרסה החדשה ביותר, כשטוענים את היישום, מופיע עמוד קבלת פנים שמאפשר לך לבחור באיזה חשבון להשתמש ומאפשר לך להיכנס לחשבונות אחרים. מסך קבלת הפנים גם יזהיר אותך כש־NeoChat לא יכול לטעון חשבון.</p>
+        <p xml:lang="it">Nella versione più recente, all'avvio dell'applicazione, sarà visualizzata una pagina di benvenuto che consente di scegliere l'account da utilizzare e di accedere ad altri account. La schermata di benvenuto avvisa anche quando NeoChat non riesce a caricare un account.</p>
+        <p xml:lang="nl">In de nieuwste versie krijgt u bij het opstarten van de toepassing een welkomstpagina te zien waar u kunt kiezen welk account u wilt gebruiken en waarmee u zich kunt aanmelden op andere accounts. Het welkomstscherm waarschuwt u ook als NeoChat een account niet kan laden.</p>
+        <p xml:lang="pt-BR">Na versão mais recente, ao iniciar o aplicativo, você verá uma página de boas-vindas que permite escolher qual conta deseja usar e fazer login em outras contas. A tela de boas-vindas também avisará quando o NeoChat não conseguir carregar uma conta.</p>
+        <p xml:lang="ru">В новой версии при запуске приложения открывается страница приветствия, на которой можно выбрать учётную запись для входа или добавить другие учётные записи. Также на странице приветствия отображается предупреждение, если NeoChat не удалось загрузить учётную запись.</p>
+        <p xml:lang="sl">V najnovejši različici boste ob zagonu aplikacije prejeli pozdravno stran, kjer lahko izberete, kateri račun želite uporabiti, in se prijavite v druge račune. Pozdravna stran vas bo opozorila tudi, ko NeoChat ne bo mogel naložiti računa.</p>
+        <p xml:lang="uk">У найновішій версії, під час запуску програми, ви побачите сторінку вітання, за допомогою якої ви можете вибрати обліковий запис, яким ви хочете скористатися, та надасть вам змогу увійти в інші облікові записи. Сторінка вітання також попередить вас, коли NeoChat не зможе завантажити обліковий запис.</p>
+        <p>NeoChat will also let you register a new account directly from the app itself. Deactivating your Matrix account is also possible from within NeoChat.</p>
+        <p xml:lang="ar">يتيح نيوتشات أيضاً تسجيل حساب جديد مباشرة من التطبيق نفسه. كما يمكن تعطيل حساب ماتركس من داخل نيوتشات.</p>
+        <p xml:lang="ca">El NeoChat també us permetrà registrar un compte nou directament des de l'aplicació mateixa. També és possible desactivar el vostre compte de Matrix des del NeoChat.</p>
+        <p xml:lang="ca-valencia">NeoChat també us permetrà registrar un compte nou directament des de l'aplicació mateixa. També és possible desactivar el vostre compte de Matrix des de NeoChat.</p>
+        <p xml:lang="he">NeoChat יאפשר לך לרשום חשבון חדש ישירות מהיישום עצמו. השבתת חשבון ה־Matrix שלך גם היא אפשרית מתוך NeoChat.</p>
+        <p xml:lang="it">NeoChat ti permetterà anche di registrare un nuovo account direttamente dall'applicazione. Puoi anche disattivare il tuo account Matrix direttamente da NeoChat.</p>
+        <p xml:lang="nl">NeoChat biedt u ook de mogelijkheid om direct vanuit de toepassing een nieuw account aan te maken. U kunt uw Matrix-account ook deactiveren vanuit NeoChat.</p>
+        <p xml:lang="pt-BR">O NeoChat também permite que você registre uma nova conta diretamente pelo aplicativo. Desativar sua conta Matrix também é possível a partir do NeoChat.</p>
+        <p xml:lang="ru">В NeoChat также можно зарегистрировать новую учётную запись Matrix. Учётную запись Matrix также можно деактивировать непосредственно в NeoChat.</p>
+        <p xml:lang="sl">NeoChat vam omogoča tudi registracijo novega računa neposredno iz same aplikacije. Deaktivacija računa Matrix je mogoča tudi znotraj NeoChata.</p>
+        <p xml:lang="uk">NeoChat також надасть вам змогу зареєструвати новий обліковий запис безпосередньо з програми. Деактивувати обліковий запис Matrix також можна з NeoChat.</p>
+        <p>Spaces are a relatively new feature of Matrix that let you group chat channels together. This is used to improve the discoverability of rooms, manage large communities, or just tidy all the channels you are in. You can now do all this without leaving NeoChat.</p>
+        <p xml:lang="ar">الفضاءات هي ميزة جديدة نسبياً في ماتركس تسمح بتجميع قنوات الدردشة معاً. يُستخدم هذا لتحسين قابلية اكتشاف الغرف، أو إدارة المجتمعات الكبيرة، أو مجرد ترتيب القنوات المشترك فيها. يمكن القيام بكل ذلك الآن دون مغادرة نيوتشات.</p>
+        <p xml:lang="ca">Els espais són una característica relativament nova de Matrix que us permet agrupar canals de xat junts. Això s'utilitza per a millorar la descoberta de sales, gestionar comunitats grans, o simplement ordenar tots els canals en els quals esteu. Ara podeu fer tot això sense sortir del NeoChat.</p>
+        <p xml:lang="ca-valencia">Els espais són una característica relativament nova de Matrix que us permet agrupar canals de xat junts. Açò s'utilitza per a millorar la descoberta de sales, gestionar comunitats grans, o senzillament ordenar tots els canals en els quals esteu. Ara podeu fer tot açò sense eixir de NeoChat.</p>
+        <p xml:lang="it">Gli spazi sono una funzionalità relativamente nuova di Matrix che consente di raggruppare i canali di chat. Questa funzionalità viene utilizzata per migliorare la visibilità delle stanze, gestire grandi comunità o semplicemente riordinare tutti i canali in cui si è presenti. Ora è possibile fare tutto questo senza uscire da NeoChat.</p>
+        <p xml:lang="nl">Ruimtes zijn een relatief nieuwe functie van Matrix waarmee u chatkanalen kunt groeperen. Dit wordt gebruikt om de vindbaarheid van rooms te verbeteren, grote gemeenschappen te beheren of gewoon alle kanalen waarin u zit overzichtelijk te houden. U kunt dit nu allemaal doen zonder NeoChat te verlaten.</p>
+        <p xml:lang="pt-BR">Os Espaços são um recurso relativamente novo do Matrix que permite agrupar canais de bate-papo. Isso é usado para melhorar a visibilidade das salas, gerenciar grandes comunidades ou simplesmente organizar todos os canais dos quais você participa. Agora você pode fazer tudo isso sem sair do NeoChat.</p>
+        <p xml:lang="ru">Пространства — это относительно новая функция Matrix, позволяющая группировать каналы чатов. Они используются для упрощения поиска комнат, управления большими сообществами или просто для упорядочивания всех ваших каналов. Теперь это можно делать, не покидая NeoChat.</p>
+        <p xml:lang="sl">Prostori so relativno nova funkcija Matrixa, ki omogoča združevanje klepetalnih kanalov. To se uporablja za izboljšanje vidnosti sob, upravljanje velikih skupnosti ali preprosto urejanje vseh kanalov, v katerih ste. Zdaj lahko vse to storite, ne da bi zapustili NeoChat.</p>
+        <p xml:lang="uk">Простори — відносно нова можливість Matrix, яка надає змогу групувати канали спілкування. Це використовують для покращення видимості кімнат, керування великими спільнотами або просто сортування всіх каналів, у яких ви перебуваєте. Тепер ви можете робити все це, не виходячи з NeoChat.</p>
+        <p>NeoChat won't let you miss any new notifications anymore. We added a new page that includes all your recent notifications and when NeoChat is closed, you will still be able to receive push notifications. The main timeline will let you know when more messages are loading and when you reach the end of it.</p>
+        <p xml:lang="ar">لن يفوّت نيوتشات أي تنبيهات جديدة بعد الآن. أُضيفت صفحة جديدة تتضمن كافة التنبيهات الأخيرة، وعند إغلاق نيوتشات، ستظل القدرة على استقبال التنبيهات الدفعية قائمة. يُعلِمك الخط الزمني الرئيسي عند تحميل مزيد من الرسائل وعند الوصول إلى نهايته.</p>
+        <p xml:lang="ca">El NeoChat ja no deixarà que us perdeu cap notificació nova. Hem afegit una pàgina nova que inclou totes les notificacions recents i quan el NeoChat estigui tancat, encara podreu rebre notificacions automàtiques. La línia de temps principal us avisarà quan s'estiguin carregant més missatges i quan arribeu al seu final.</p>
+        <p xml:lang="ca-valencia">NeoChat ja no deixarà que vos perdeu cap notificació nova. Hem afegit una pàgina nova que inclou totes les notificacions recents i quan NeoChat estiga tancat, encara podreu rebre notificacions automàtiques. La línia de temps principal vos avisarà quan s'estiguen carregant més missatges i quan arribeu fins al seu final.</p>
+        <p xml:lang="it">NeoChat non ti farà più perdere nessuna nuova notifica. Abbiamo aggiunto una nuova pagina che include tutte le tue notifiche recenti e, anche quando NeoChat è chiuso, potrai comunque ricevere notifiche push. La cronologia principale ti informerà quando vengono caricati altri messaggi e quando ne hai raggiunto la fine.</p>
+        <p xml:lang="nl">NeoChat zorgt ervoor dat u geen nieuwe meldingen meer mist. We hebben een nieuwe pagina toegevoegd met al uw recente meldingen. Zelfs als NeoChat gesloten is, kunt u nog steeds push-meldingen ontvangen. De hoofdtijdlijn laat u weten wanneer er meer berichten worden geladen en wanneer u het einde van de tijdlijn hebt bereikt.</p>
+        <p xml:lang="pt-BR">O NeoChat não deixará você perder mais nenhuma notificação. Adicionamos uma nova página que inclui todas as suas notificações recentes e, mesmo com o NeoChat fechado, você ainda poderá receber notificações push. A linha do tempo principal mostrará quando novas mensagens estiverem sendo carregadas e quando você chegar ao final.</p>
+        <p xml:lang="ru">Вы более не пропустите ни одного нового уведомления NeoChat. Добавлена страница со всеми последними уведомлениями, а при закрытии приложения будут приходить push-уведомления. Основная лента сообщений теперь показывает процесс загрузки новых сообщений и её окончание.</p>
+        <p xml:lang="sl">Z NeoChatom ne boste več zamudili nobenega novega obvestila. Dodali smo novo stran, ki vključuje vsa vaša nedavna obvestila, in ko je NeoChat zaprt, boste še vedno lahko prejemali potisna obvestila. Glavna časovnica vas bo obvestila, kdaj se nalagajo nova sporočila in kdaj pridete do konca.</p>
+        <p xml:lang="uk">З новою версією NeoChat ви більше не пропускатимете нові сповіщення Ми додали нову сторінку, яка містить усі ваші останні сповіщення, і коли NeoChat буде закрито, ви все одно зможете отримувати імпульсні повідомлення.</p>
+        <p>More NeoChat Goodies</p>
+        <p xml:lang="ar">مزايا إضافية في نيوتشات</p>
+        <p xml:lang="ca">Més millores del NeoChat</p>
+        <p xml:lang="ca-valencia">Més millores de NeoChat</p>
+        <p xml:lang="he">עוד פינוקים ב־NeoChat</p>
+        <p xml:lang="it">Altre chicche di NeoChat</p>
+        <p xml:lang="nl">Meer NeoChat-goodies</p>
+        <p xml:lang="pt-BR">Mais novidades do NeoChat</p>
+        <p xml:lang="ru">Дополнительные возможности NeoChat</p>
+        <p xml:lang="sl">Več dobrot NeoChata</p>
+        <p xml:lang="uk">Додаткові корисні можливості NeoChat</p>
+        <ul>
+          <li>QR Codes to share contacts</li>
+          <li xml:lang="ar">رموز استجابة سريعة (QR) لمشاركة جهات الاتصال</li>
+          <li xml:lang="ca">Codis QR per a compartir contactes</li>
+          <li xml:lang="ca-valencia">Codis QR per a compartir contactes</li>
+          <li xml:lang="es">Códigos QR para compartir contactos</li>
+          <li xml:lang="he">קודים מסוג QR לשיתוף אנשי קשר</li>
+          <li xml:lang="ia">Codices QR per compartir contactos</li>
+          <li xml:lang="it">Codice QR per condividere i contatti</li>
+          <li xml:lang="nl">QR-codes om contactpersonen te delen</li>
+          <li xml:lang="pt-BR">Códigos QR para compartilhar contatos</li>
+          <li xml:lang="ru">QR-коды для обмена контактами;</li>
+          <li xml:lang="sl">QR kode za deljenje stikov</li>
+          <li xml:lang="uk">QR-коди для оприлюднення записів контактів</li>
+          <li>Improved room upgrades</li>
+          <li xml:lang="ar">ترقيات محسّنة للغرف</li>
+          <li xml:lang="ca">Actualitzacions millorades de les sales</li>
+          <li xml:lang="ca-valencia">Actualitzacions millorades de les sales</li>
+          <li xml:lang="he">שדרוגי חדרים משופרים</li>
+          <li xml:lang="ia">Meliorate actualisationes de sala</li>
+          <li xml:lang="it">Aggiornamenti delle stanze migliorati</li>
+          <li xml:lang="nl">Opwaarderen van room verbeterd</li>
+          <li xml:lang="pt-BR">Melhorias nas salas</li>
+          <li xml:lang="ru">Улучшены процедуры обновления комнат;</li>
+          <li xml:lang="sl">Izboljšane nadgradnje sob</li>
+          <li xml:lang="uk">Удосконалено оновлення кімнати</li>
+          <li>Added button to reject invitation and ignore user</li>
+          <li xml:lang="ar">أُضيف زر لرفض الدعوة وتجاهل المستخدم</li>
+          <li xml:lang="ca">S'ha afegit un botó per a rebutjar una invitació i ignorar l'usuari</li>
+          <li xml:lang="ca-valencia">S'ha afegit un botó per a rebutjar una invitació i ignorar l'usuari</li>
+          <li xml:lang="he">נוסף כפתור לדחיית הזמנה והתעלמות ממשתמש</li>
+          <li xml:lang="ia">Addite button per refusar invitation e ignorar usator</li>
+          <li xml:lang="it">Aggiunto un pulsante per rifiutare l'invito e ignorare l'utente</li>
+          <li xml:lang="nl">Toegevoegde knop om uitnodiging af te wijzen en gebruiker te negeren</li>
+          <li xml:lang="pt-BR">Adicionado botão para rejeitar convite e ignorar usuário</li>
+          <li xml:lang="ru">Добавлена кнопка для отклонения приглашения и игнорирования пользователя;</li>
+          <li xml:lang="sl">Dodan gumb za zavrnitev povabila in ignoriranje uporabnika</li>
+          <li xml:lang="uk">Додано кнопку для відмови у запрошенні та ігнорування користувача</li>
+          <li>Display device security details</li>
+          <li xml:lang="ar">عرض تفاصيل أمان الجهاز</li>
+          <li xml:lang="ca">Mostra els detalls de seguretat del dispositiu</li>
+          <li xml:lang="ca-valencia">Mostra els detalls de seguretat del dispositiu</li>
+          <li xml:lang="es">Mostrar detalles de la seguridad del dispositivo</li>
+          <li xml:lang="he">הצגת פרטי אבטחת מכשיר</li>
+          <li xml:lang="ia">Monstra detalios de securitate de dispositivo</li>
+          <li xml:lang="it">Visualizza i dettagli di sicurezza del dispositivo</li>
+          <li xml:lang="nl">Details van apparaatbeveiliging tonen</li>
+          <li xml:lang="pt-BR">Exibir detalhes de segurança do dispositivo</li>
+          <li xml:lang="ru">Просмотр подробных сведений о безопасности устройства;</li>
+          <li xml:lang="sl">Prikaži varnostne podrobnosti naprave</li>
+          <li xml:lang="uk">Реалізовано показ подробиць щодо захисту пристрою</li>
+          <li>Added room security settings</li>
+          <li xml:lang="ar">أُضيفت إعدادات أمان الغرفة</li>
+          <li xml:lang="ca">S'ha afegit la configuració de seguretat de la sala</li>
+          <li xml:lang="ca-valencia">S'ha afegit la configuració de seguretat de la sala</li>
+          <li xml:lang="es">Se han añadido ajustes de la seguridad de las salas</li>
+          <li xml:lang="he">נוספו הגדרות אבטחת חדר</li>
+          <li xml:lang="ia">Addite preferentias de securitate de sala</li>
+          <li xml:lang="it">Aggiunte impostazioni di sicurezza delle stanze</li>
+          <li xml:lang="nl">Beveiligingsinstelling voor room toegevoegd</li>
+          <li xml:lang="pt-BR">Adicionadas configurações de segurança da sala</li>
+          <li xml:lang="ru">Добавлены параметры безопасности комнат;</li>
+          <li xml:lang="sl">Dodane varnostne nastavitve sobe</li>
+          <li xml:lang="uk">Додано параметри захисту кімнати</li>
+        </ul>
+      </description>
+    </release>
+    <release version="23.08.5" date="2024-02-15"/>
+    <release version="23.08.4" date="2023-12-07"/>
+    <release version="23.08.3" date="2023-11-09"/>
+    <release version="23.08.2" date="2023-10-12"/>
+    <release version="23.08.0" date="2023-08-24">
+      <url>https://kde.org/announcements/gear/23.08.0/#neochathttpsappskdeorgneochat</url>
+      <description>
+        <p>Apart from a visual overhaul, NeoChat can now display location events and also a map with the location of all the users currently broadcasting their location using Itineray's Matrix integration. Great for locating where your friends are.</p>
+        <p xml:lang="ar">بعيداً عن التجديد البصري، يمكن لنيوتشات الآن عرض أحداث الموقع وكذلك خريطة بمواقع جميع المستخدمين الذين يبثون مواقعهم حالياً باستخدام تكامل ماتركس مع Itineray. يعد هذا رائعاً لتحديد أماكن الأصدقاء.</p>
+        <p xml:lang="ca">A part d'una revisió visual, ara el NeoChat pot mostrar esdeveniments d'ubicació i també un mapa amb la ubicació de tots els usuaris que actualment emeten la seva ubicació utilitzant la integració de Matrix de l'Itineray. És genial per a localitzar on són els vostres amics.</p>
+        <p xml:lang="ca-valencia">A part d'una revisió visual, ara NeoChat pot mostrar esdeveniments d'ubicació i també un mapa amb la ubicació de tots els usuaris que actualment emeten la seua ubicació utilitzant la integració de Matrix de l'Itineray. És genial per a localitzar on són els vostres amics.</p>
+        <p xml:lang="it">Oltre a una revisione visuale, NeoChat ora può visualizzare eventi di localizzazione e anche una mappa con la posizione di tutti gli utenti che attualmente trasmettono la loro posizione utilizzando l'integrazione Matrix di Itineray. Ottimo per localizzare dove si trovano i tuoi amici.</p>
+        <p xml:lang="nl">Naast een visuele herziening kan NeoChat nu locatiegebeurtenissen tonen en ook een kaart met de locatie van alle gebruikers die nu hun locatie uitzenden met de Matrix-integratie van Itineray. Geweldig voor lokaliseren waar uw vrienden zijn.</p>
+        <p xml:lang="pt-BR">Além de uma reformulação visual, o NeoChat agora pode exibir eventos de localização e também um mapa com a localização de todos os usuários que estão transmitindo sua localização usando a integração Matrix do Itineray. Ótimo para localizar seus amigos.</p>
+        <p xml:lang="ru">Помимо визуального обновления, в NeoChat добавлена возможность отображения событий местоположения, а также карты с местоположением всех пользователей, которые в данный момент транслируют свои геоданные через интеграцию с Itineray в Matrix. Это удобно для того, чтобы узнать, где находятся ваши друзья.</p>
+        <p xml:lang="sl">Poleg vizualne prenove lahko NeoChat zdaj prikazuje lokacijske dogodke in tudi zemljevid z lokacijo vseh uporabnikov, ki trenutno oddajajo svojo lokacijo, z uporabo integracije Itineray Matrix. Odlično za iskanje lokacij vaših prijateljev.</p>
+        <p xml:lang="uk">Окрім оновлення візуальної частини, у новій версії NeoChat можливий показ пов'язаних із місцями подій, а також реалізовано карту з місцями, про які повідомляють трансляції користувачів, на основі інтеграції Itinerary та Matrix. Чудова можливість для визначення місця перебування ваших друзів.</p>
+      </description>
+    </release>
+    <release version="23.04.3" date="2023-07-06"/>
+    <release version="23.04.2" date="2023-06-08"/>
+    <release version="23.04.1" date="2023-05-11"/>
+    <release version="23.04.0" date="2023-04-20">
+      <url>https://kde.org/announcements/gear/23.04.0/#neochathttpsappskdeorgneochat</url>
+      <description>
+        <p>NeoChat improves its design with tweaks that provide a more compact layout and a simpler menu which works better for the collapsed room list.</p>
+        <p xml:lang="ar">يُحسّن نيوتشات تصميمه بتعديلات توفر مخططاً أكثر ضغطاً وقائمة أبسط تعمل بشكل أفضل مع قائمة الغرف المطوية.</p>
+        <p xml:lang="ca">El NeoChat millora el seu disseny amb retocs que proporcionen una disposició més compacta i un menú més senzill que funciona millor per a la llista reduïda de sales.</p>
+        <p xml:lang="ca-valencia">NeoChat millora el seu disseny amb retocs que proporcionen una disposició més compacta i un menú més senzill que funciona millor per a la llista reduïda de sales.</p>
+        <p xml:lang="it">NeoChat migliora il suo aspetto con modifiche che offrono una disposizione più compatta e un menu più semplice, più adatto all'elenco delle stanze ridotto.</p>
+        <p xml:lang="nl">NeoChat verbetert zijn ontwerp met aanpassingen die zorgen voor een compactere indeling en een eenvoudiger menu dat beter werkt voor de ingeklapte roomslijst.</p>
+        <p xml:lang="pt-BR">O NeoChat aprimorou seu design com ajustes que proporcionam um layout mais compacto e um menu mais simples, que funciona melhor para a lista de salas recolhida.</p>
+        <p xml:lang="ru">В оформлении NeoChat реализованы изменения для более компактного расположения элементов и упрощённого меню, которое лучше работает со свёрнутым списком комнат.</p>
+        <p xml:lang="sl">NeoChat izboljšuje svojo zasnovo s prilagoditvami, ki zagotavljajo bolj kompaktno postavitev in enostavnejši meni, ki bolje deluje za strnjen seznam sob.</p>
+        <p xml:lang="uk">У новій версії NeoChat удосконалено дизайн програм, зокрема компонування стало компактнішим, а меню простішим, отже, меню працює краще для згорнутого списку кімнат.</p>
+        <p>We have also improved the video controls, added a new command /knock &lt;room-id&gt; to send a knock event to a room, and you can now edit a prior message inline, within the chat pane.</p>
+        <p xml:lang="ar">حُسّنت أيضاً عناصر التحكم في الفيديو، وأُضيف أمر جديد /knock &lt;room-id&gt; لإرسال حدث طرق إلى غرفة، ويمكن الآن تحرير رسالة سابقة في السطر نفسه داخل لوحة الدردشة.</p>
+        <p xml:lang="ca">També hem millorat els controls de vídeo, s'ha afegit una nova ordre /knock &lt;id-sala&gt; per a enviar un esdeveniment «knock» a una sala, i ara podeu editar un missatge anterior inclòs, dins de la subfinestra de xat.</p>
+        <p xml:lang="ca-valencia">També hem millorat els controls de vídeo, s'ha afegit una nova ordre /knock &lt;id-sala&gt; per a enviar un esdeveniment «knock» a una sala, i ara podeu editar un missatge anterior inclòs, dins de la subfinestra de xat.</p>
+        <p xml:lang="it">Abbiamo anche migliorato i controlli video, aggiunto un nuovo comando /knock &lt;room-id&gt; per inviare un evento knock a una stanza e ora puoi modificare un messaggio precedente in linea, all'interno del riquadro della chat.</p>
+        <p xml:lang="nl">We hebben ook de videobediening verbeterd, een nieuw commando /knock &lt;room-id&gt; toegevoegd om een ​​klopgebeurtenis naar een room te sturen, en u kunt nu een eerder bericht rechtstreeks in het chatvenster bewerken.</p>
+        <p xml:lang="pt-BR">Também melhoramos os controles de vídeo, adicionamos um novo comando /knock &lt;room-id&gt; para enviar um evento knock para uma sala, e agora você pode editar uma mensagem anterior em linha, no painel de bate-papo.</p>
+        <p xml:lang="ru">Также улучшены элементы управления видео, добавлена новая команда /knock &lt;room-id&gt; для отправки события knock в комнату, а также реализовано редактирование предыдущих сообщений непосредственно в области чата.</p>
+        <p xml:lang="sl">Izboljšali smo tudi video kontrole, dodali nov ukaz /knock &lt;room-id&gt; za pošiljanje dogodka knock v sobo, zdaj pa lahko urejate prejšnje sporočilo v vrstici, v podoknu za klepet.</p>
+        <p xml:lang="uk">Нами також удосконалено засоби керування відео, додано нову команду `/knock &lt;ідентифікатор_кімнати&gt;` для надсилання події *стук* до кімнати. У новій версії ви зможете редагувати попереднє повідомлення на місці, у межах панелі спілкування.</p>
+        <p>Other usability improvements include an overhaul of the keyboard navigation and shortcuts like Ctrl+PgUp/PgDn that allow you to skip from room to room.</p>
+        <p xml:lang="ar">تتضمن تحسينات سهولة الاستخدام الأخرى تجديد التنقل عبر لوحة المفاتيح واختصارات مثل Ctrl+PgUp/PgDn التي تسمح بالانتقال السريع بين الغرف.</p>
+        <p xml:lang="ca">Altres millores d'usabilitat inclouen una revisió de la navegació amb el teclat i dreceres com Ctrl+Re Pàg/Av Pàg que us permeten saltar de sala en sala.</p>
+        <p xml:lang="ca-valencia">Altres millores d'usabilitat inclouen una revisió de la navegació amb el teclat i dreceres com Ctrl+«Re Pàg»/«Av Pàg» que vos permeten saltar de sala en sala.</p>
+        <p xml:lang="it">Altri miglioramenti dell'usabilità includono una revisione della navigazione tramite tastiera e scorciatoie come Ctrl+PagSu/PagGiù che consentono di passare da una stanza all'altra.</p>
+        <p xml:lang="nl">Andere verbeteringen op het gebied van gebruiksgemak zijn onder meer een herziening van de toetsenbordnavigatie en sneltoetsen zoals Ctrl+PgUp/PgDn waarmee u van room naar room kunt springen.</p>
+        <p xml:lang="pt-BR">Outras melhorias de usabilidade incluem uma reformulação da navegação pelo teclado e atalhos como Ctrl+PgUp/PgDn que permitem que você pule de sala em sala.</p>
+        <p xml:lang="ru">К другим улучшениям в удобстве использования относится переработанная навигация с клавиатурой и комбинации клавиш, такие как Ctrl+PgUp/PgDn, для быстрого перехода между комнатами.</p>
+        <p xml:lang="sl">Druge izboljšave uporabnosti vključujejo prenovo navigacije s tipkovnico in bližnjice, kot sta Ctrl+PgUp/PgDn, ki omogočajo preskakovanje med sobami.</p>
+        <p xml:lang="uk">Серед інших удосконалень користування перегляд навігації за допомогою клавіатури та комбінації клавіш, такі як Ctrl+PgUp/PgDn, які надають змогу переходити з кімнати в кімнату.</p>
+      </description>
+      <artifacts>
+        <artifact type="binary" platform="x86_64-windows-msvc">
+          <location>https://download.kde.org/stable/release-service/23.04.0/windows/neochat-23.04.0-512-windows-cl-msvc2019-x86_64.exe</location>
+          <checksum type="sha256">85e17fdd9b128bfdd171a93b11f7a95febeff0a00df9261df11f6ff67637686d</checksum>
+          <size type="download">58032464</size>
+        </artifact>
+      </artifacts>
+    </release>
+    <release version="23.01" date="2023-01-30">
+      <url>https://plasma-mobile.org/2023/01/30/january-blog-post/</url>
+      <description>
+        <p>New features and bugfixes:</p>
+        <p xml:lang="ar">ميزات جديدة وإصلاحات للعلل:</p>
+        <p xml:lang="ca">Característiques noves i correccions d'errors:</p>
+        <p xml:lang="ca-valencia">Característiques noves i esmenes d'errors:</p>
+        <p xml:lang="es">Nuevas funciones y corrección de fallos:</p>
+        <p xml:lang="he">יכולות חדשות ותיקוני תקלות:</p>
+        <p xml:lang="ia">Nove characteristicas e correctiones de faltas:</p>
+        <p xml:lang="it">Nuove funzionalità e correzioni di bug:</p>
+        <p xml:lang="nl">Nieuwe functies en reparaties van bugs:</p>
+        <p xml:lang="pt-BR">Novas funcionalidades e correções de bugs:</p>
+        <p xml:lang="ru">Новые возможности и исправления ошибок:</p>
+        <p xml:lang="sl">Nove zmožnosti in popravki napak:</p>
+        <p xml:lang="uk">Нові можливості і виправлення вад:</p>
+        <ul>
+          <li>Notifications will now be shown for all accounts, not just the active one</li>
+          <li xml:lang="ar">تُعرض التنبيهات الآن لكافة الحسابات، وليس فقط الحساب النشط</li>
+          <li xml:lang="ca">Ara es mostraran les notificacions per a tots els comptes, no només l'actiu</li>
+          <li xml:lang="ca-valencia">Ara es mostraran les notificacions per a tots els comptes, no només l'actiu</li>
+          <li xml:lang="es">Se muestran notificaciones de todas las cuentas, no solo de la activa</li>
+          <li xml:lang="he">התראות תופענה לכל החשבונות, לא רק לחשבון הפעיל</li>
+          <li xml:lang="ia">Notificationes nunc essera monstrate per tote le contos,non solmente perlo que es active</li>
+          <li xml:lang="it">Le notifiche saranno ora visualizzate per tutti gli account, non solo per quello attivo</li>
+          <li xml:lang="nl">Meldingen worden nu voor alle accounts weergegeven, niet alleen voor het actieve account.</li>
+          <li xml:lang="pt-BR">Agora, as notificações serão exibidas para todas as contas, não apenas para a conta ativa</li>
+          <li xml:lang="ru">Уведомления будут выводиться для всех учётных записей, а не только для активной;</li>
+          <li xml:lang="sl">Obvestila bodo zdaj prikazana za vse račune, ne le za aktivnega</li>
+          <li xml:lang="uk">Сповіщення тепер буде показано для всіх облікових записів, а не лише для активного</li>
+          <li>There is a new "compact" mode for the room list</li>
+          <li xml:lang="ar">يوجد وضع "مضغوط" جديد لقائمة الغرف</li>
+          <li xml:lang="ca">Hi ha un mode «compacte» nou per a la llista de sales</li>
+          <li xml:lang="ca-valencia">Hi ha un mode «compacte» nou per a la llista de sales</li>
+          <li xml:lang="es">Nuevo modo «compacto» para la lista de salas</li>
+          <li xml:lang="he">יש מצב „מצומצם” חדש לרשימת החדרים</li>
+          <li xml:lang="ia">Il ha un nove modo 'compacte' per le lista de sala</li>
+          <li xml:lang="it">C'è una nuova modalità «compatta» per l'elenco delle stanze</li>
+          <li xml:lang="nl">Er is een nieuwe "compacte" modus voor de roomslijst.</li>
+          <li xml:lang="pt-BR">Existe um novo modo "compacto" para a lista de salas</li>
+          <li xml:lang="ru">Добавлен новый компактный режим списка комнат;</li>
+          <li xml:lang="sl">Za seznam sob je na voljo nov "kompaktni" način.</li>
+          <li xml:lang="uk">Передбачено новий «компактний» режим для списку кімнат</li>
+          <li>You can now search in the room history</li>
+          <li xml:lang="ar">يمكن البحث الآن في تاريخ الغرفة</li>
+          <li xml:lang="ca">Ara podeu cercar a l'historial de sales</li>
+          <li xml:lang="ca-valencia">Ara podeu buscar en l'historial de sales</li>
+          <li xml:lang="es">Ahora se puede buscar en el historial de salas</li>
+          <li xml:lang="he">אפשר לחפש מעתה בהיסטוריית החדר</li>
+          <li xml:lang="ia">Tu pote nunc cercar in lechronologia de sala</li>
+          <li xml:lang="it">Ora è possibile cercare nella cronologia della stanza</li>
+          <li xml:lang="nl">U kunt nu zoeken in de roomgeschiedenis.</li>
+          <li xml:lang="pt-BR">Agora você pode pesquisar no histórico da sala</li>
+          <li xml:lang="ru">Добавлен поиск по истории комнат;</li>
+          <li xml:lang="sl">Zdaj lahko iščete po zgodovini sobe</li>
+          <li xml:lang="uk">У новій версії ви можете шукати у журналі кімнати</li>
+          <li>Emojis and Reactions have been significantly improved</li>
+          <li xml:lang="ar">حُسّنت الرموز التعبيرية والتفاعلات بشكل ملحوظ</li>
+          <li xml:lang="ca">Els emojis i les reaccions s'han millorat significativament</li>
+          <li xml:lang="ca-valencia">Els emoji i les reaccions s'han millorat significativament</li>
+          <li xml:lang="es">Los emojis y las reacciones se han mejorado significativamente</li>
+          <li xml:lang="ia">Emojis e Reactiones ha essite meliorate significativemente</li>
+          <li xml:lang="it">Emoji e reazioni sono state notevolmente migliorate</li>
+          <li xml:lang="nl">Emoji's en reacties zijn aanzienlijk verbeterd.</li>
+          <li xml:lang="pt-BR">Os emojis e as reações foram significativamente aprimorados</li>
+          <li xml:lang="ru">Эмодзи и реакции были значительно улучшены;</li>
+          <li xml:lang="sl">Čustvenčki in reakcije so bili znatno izboljšani</li>
+          <li xml:lang="uk">Значно удосконалено емоційки і реакції</li>
+          <li>Fixed several crashes around user invitations</li>
+          <li xml:lang="ar">أُصلحت عدة انهيارات تتعلق بدعوات المستخدمين</li>
+          <li xml:lang="ca">S'han corregit diverses fallades respecte les invitacions d'usuari</li>
+          <li xml:lang="ca-valencia">S'han corregit diverses fallades respecte les invitacions d'usuari</li>
+          <li xml:lang="es">Se han corregido varios fallos relacionados con las invitaciones de los usuarios</li>
+          <li xml:lang="ia">Corrigite multe fracassos circa invitationes de usator</li>
+          <li xml:lang="it">Corretti diversi arresti anomali relativi agli inviti degli utenti</li>
+          <li xml:lang="nl">Diverse crashes rondom gebruikersuitnodigingen zijn verholpen.</li>
+          <li xml:lang="pt-BR">Corrigidas várias falhas relacionadas a convites de usuários</li>
+          <li xml:lang="ru">Исправлено несколько аварийных завершений, связанных с приглашениями пользователей;</li>
+          <li xml:lang="sl">Odpravljenih je bilo več sesutij pri povabilih uporabnikov</li>
+          <li xml:lang="uk">Усунено декілька аварійних завершень роботи при запрошенні користувачів</li>
+          <li>Room permission settings can now be configured</li>
+          <li xml:lang="ar">يمكن ضبط إعدادات أذونات الغرفة الآن</li>
+          <li xml:lang="ca">Ara es pot configurar les opcions dels permisos de sala</li>
+          <li xml:lang="ca-valencia">Ara es pot configurar les opcions dels permisos de sala</li>
+          <li xml:lang="es">Ahora se pueden configurar los ajustes de los permisos de las salas</li>
+          <li xml:lang="ia">Preferentias depermission de sala nun pote esser configurate</li>
+          <li xml:lang="it">Ora è possibile configurare le impostazioni dei permessi della stanza</li>
+          <li xml:lang="nl">De toegangsinstellingen voor rooms kunnen nu worden geconfigureerd.</li>
+          <li xml:lang="pt-BR">Agora é possível configurar as permissões da sala</li>
+          <li xml:lang="ru">Добавлена возможность настраивать разрешения для комнат;</li>
+          <li xml:lang="sl">Nastavitve dovoljenj za sobo je zdaj mogoče konfigurirati</li>
+          <li xml:lang="uk">У новій версії може бути налаштовано параметри доступу до кімнат</li>
+        </ul>
+      </description>
+    </release>
+    <release version="22.11" date="2022-11-30">
+      <url>https://plasma-mobile.org/2022/11/30/plasma-mobile-gear-22-11/</url>
+    </release>
+    <release version="22.09" date="2022-09-27">
+      <url>https://www.plasma-mobile.org/2022/09/27/plasma-mobile-gear-22-09/</url>
+    </release>
+    <release version="22.06" date="2022-06-24">
+      <url>https://www.plasma-mobile.org/2022/06/28/plasma-mobile-gear-22-06/</url>
+      <description>
+        <p>This release brings you various small bugfixes and improvements:</p>
+        <p xml:lang="ar">يوفر هذا الإصدار إصلاحات وتحسينات متنوعة صغيرة:</p>
+        <p xml:lang="ca">Aquesta versió us ofereix diverses correccions d'errors i millores petites:</p>
+        <p xml:lang="ca-valencia">Esta versió vos oferix diverses esmenes d'errors i millores xicotetes:</p>
+        <p xml:lang="es">Esta versión proporciona diversas mejoras menores y correcciones de fallos:</p>
+        <p xml:lang="ia">Iste version te porta varie parve correctiones de faltas e melioramentos:</p>
+        <p xml:lang="it">Questa versione apporta diverse piccole correzioni di bug e miglioramenti:</p>
+        <p xml:lang="nl">Deze uitgave bevat diverse kleine reparaties van fouten en verbeteringen:</p>
+        <p xml:lang="pt-BR">Esta versão traz diversas pequenas correções de bugs e melhorias:</p>
+        <p xml:lang="ru">В этом выпуске исправлены различные ошибки и внесены улучшения:</p>
+        <p xml:lang="sl">Ta izdaja vam prinaša različne manjše popravke napak in izboljšave:</p>
+        <p xml:lang="uk">У цьому випуску ви зможете скористатися різноманітними невеличкими виправленнями вад і удосконаленнями:</p>
+        <ul>
+          <li>Sending of typing notifications can now be disabled.</li>
+          <li xml:lang="ar">يمكن تعطيل إرسال تنبيهات الكتابة الآن.</li>
+          <li xml:lang="ca">Ara es pot desactivar l'enviament de notificacions d'escriptura.</li>
+          <li xml:lang="ca-valencia">Ara es pot desactivar l'enviament de notificacions d'escriptura.</li>
+          <li xml:lang="he">אפשר להשבית שליחת התראות הקלדה.</li>
+          <li xml:lang="it">Ora è possibile disattivare l'invio di notifiche di digitazione.</li>
+          <li xml:lang="nl">Het verzenden van meldingen over typen kan nu worden uitgeschakeld.</li>
+          <li xml:lang="pt-BR">Agora é possível desativar o envio de notificações de digitação.</li>
+          <li xml:lang="ru">Отправку уведомлений о наборе текста теперь можно отключить;</li>
+          <li xml:lang="sl">Pošiljanje obvestil o tipkanju je zdaj mogoče onemogočiti.</li>
+          <li xml:lang="uk">У новій версії можна вимкнути сповіщення щодо набирання тексту повідомлення.</li>
+          <li>In the room list, the scrollbar will now disappear correctly when it is not needed.</li>
+          <li xml:lang="ar">في قائمة الغرف، يختفي شريط التمرير الآن بشكل صحيح عند عدم الحاجة إليه.</li>
+          <li xml:lang="ca">A la llista de sales, la barra de desplaçament ara desapareixerà correctament quan no es necessiti.</li>
+          <li xml:lang="ca-valencia">En la llista de sales, la barra de desplaçament ara desapareixerà correctament quan no es necessite.</li>
+          <li xml:lang="he">ברשימת החדרים, סרגל הגלילה יוסתר מעתה כראוי כשאין בו צורך.</li>
+          <li xml:lang="it">NeoChat migliora il suo aspetto con modifiche che offrono una disposizione più compatta e un menu più semplice, più adatto all'elenco delle stanze ridotto.</li>
+          <li xml:lang="nl">In de roomlijst verdwijnt de schuifbalk nu correct wanneer deze niet nodig is.</li>
+          <li xml:lang="pt-BR">Na lista de salas, a barra de rolagem agora desaparecerá corretamente quando não for necessária.</li>
+          <li xml:lang="ru">В списке комнат полоса прокрутки теперь скрывается, если не нужна;</li>
+          <li xml:lang="sl">Na seznamu sob bo drsnik zdaj pravilno izginil, ko ga ne boste potrebovali.</li>
+          <li xml:lang="uk">У списку кімнат реалізовано належне зникнення смужки гортання, коли вона непотрібна.</li>
+          <li>On wayland, NeoChat will now raise correctly when clicking on a notification.</li>
+          <li xml:lang="ar">في ويلاند، يبرز نيوتشات الآن بشكل صحيح عند النقر على التنبيه.</li>
+          <li xml:lang="ca">Al Wayland, ara el NeoChat elevarà correctament en fer clic a una notificació.</li>
+          <li xml:lang="ca-valencia">A Wayland, ara NeoChat elevarà correctament quan es clique damunt d'una notificació.</li>
+          <li xml:lang="he">ב־Wayland,‏ NeoChat יופיע כראוי בלחיצה על התראה.</li>
+          <li xml:lang="it">Su Wayland, NeoChat ora si aprirà correttamente quando fai clic su una notifica.</li>
+          <li xml:lang="nl">Op Wayland zal NeoChat nu correct openen wanneer u op een melding klikt.</li>
+          <li xml:lang="pt-BR">No Wayland, o NeoChat agora será exibido corretamente ao clicar em uma notificação.</li>
+          <li xml:lang="ru">В сеансах Wayland NeoChat теперь активируется при щелчке по уведомлению;</li>
+          <li xml:lang="sl">Na Waylandu se NeoChat zdaj pravilno sproži ob kliku na obvestilo.</li>
+          <li xml:lang="uk">У wayland NeoChat у новій версії належним чином відкривається при натисканні на сповіщенні.</li>
+          <li>Several bugs have been fixed that would sometimes cause messages containing markdown and/or HTML elements to be sent incorrectly.</li>
+          <li xml:lang="ar">أُصلحت عدة علل كانت تتسبب أحياناً في إرسال الرسائل التي تحتوي على عناصر markdown أو HTML بشكل غير صحيح.</li>
+          <li xml:lang="ca">S'han corregit diversos errors que de vegades feien que els missatges que contenien elements de Markdown i/o HTML s'enviessin incorrectament.</li>
+          <li xml:lang="ca-valencia">S'han corregit diversos errors que de vegades feien que els missatges que contenien elements de Markdown i/o HTML s'enviaren incorrectament.</li>
+          <li xml:lang="he">תוקנו מגוון תקלות שגרמו לפעמים להודעות שמכילות רכיבי Markdown ו/או HTML להישלח בצורה שגויה.</li>
+          <li xml:lang="it">Sono stati corretti diversi bug che a volte causavano l'invio errato di messaggi contenenti elementi markdown e/o HTML.</li>
+          <li xml:lang="nl">Er zijn diverse fouten verholpen die er soms voor zorgden dat berichten met markdown- en/of HTML-elementen onjuist werden verzonden.</li>
+          <li xml:lang="pt-BR">Diversos erros foram corrigidos, os quais, por vezes, causavam o envio incorreto de mensagens contendo elementos Markdown e/ou HTML.</li>
+          <li xml:lang="ru">Исправлены ошибки, из-за которых сообщения, содержащие элементы разметки Markdown и/или HTML, иногда отправлялись некорректно;</li>
+          <li xml:lang="sl">Odpravljenih je bilo več hroščev, zaradi katerih so bila sporočila, ki so vsebovala elemente Markdown in/ali HTML, včasih napačno poslana.</li>
+          <li xml:lang="uk">Виправлено кілька помилок, які іноді призводили до неправильного надсилання повідомлень, що містили елементи markdown та/або HTML.</li>
+          <li>The quick switcher can now be controlled using the mouse.</li>
+          <li xml:lang="ar">يمكن التحكم في المبدل السريع باستخدام الفأرة الآن.</li>
+          <li xml:lang="ca">El commutador ràpid ara es pot controlar amb el ratolí.</li>
+          <li xml:lang="ca-valencia">El commutador ràpid ara es pot controlar amb el ratolí.</li>
+          <li xml:lang="he">אפשר לשלוט מעתה בבורר המהיר בעזרת העכבר.</li>
+          <li xml:lang="it">Ora è possibile controllare il cambio rapido tramite mouse.</li>
+          <li xml:lang="nl">De snelschakelaar kan nu met de muis worden bediend.</li>
+          <li xml:lang="pt-BR">O seletor rápido agora pode ser controlado usando o mouse.</li>
+          <li xml:lang="ru">Для быстрого переключения теперь возможно  использовать мышь;</li>
+          <li xml:lang="sl">Hitri preklopnik je zdaj mogoče upravljati z miško.</li>
+          <li xml:lang="uk">У новій версії швидким перемикачем можна керувати за допомогою миші.</li>
+          <li>There is now an option to disable automatic room sidebar opening when resizing the window.</li>
+          <li xml:lang="ar">يتوفر الآن خيار لتعطيل الفتح الآلي للشريط الجانبي للغرفة عند تغيير حجم النافذة.</li>
+          <li xml:lang="ca">Ara hi ha una opció per a desactivar l'obertura automàtica de la barra lateral de la sala en canviar la mida de la finestra.</li>
+          <li xml:lang="ca-valencia">Ara hi ha una opció per a desactivar l'obertura automàtica de la barra lateral de la sala en canviar la mida de la finestra.</li>
+          <li xml:lang="he">מעתה יש אפשרות להשבית סרגל צד חדרים אוטומטי בעת שינוי גודל החלון.</li>
+          <li xml:lang="it">Ora è disponibile un'opzione per disattivare l'apertura automatica della barra laterale della stanza quando si ridimensiona la finestra.</li>
+          <li xml:lang="nl">Er is nu een optie om het automatisch openen van de roomzijbalk bij het wijzigen van de venstergrootte uit te schakelen.</li>
+          <li xml:lang="pt-BR">Agora existe uma opção para desativar a abertura automática da barra lateral da sala ao redimensionar a janela.</li>
+          <li xml:lang="ru">Добавлена возможность отключить автоматическое открытие боковой панели комнат при изменении размера окна;</li>
+          <li xml:lang="sl">Zdaj je na voljo možnost onemogočanja samodejnega odpiranja stranske vrstice sobe pri spreminjanju velikosti okna.</li>
+          <li xml:lang="uk">У новій версії передбачено пункт вимикання автоматичного відкриття бічної панелі кімнати під час зміни розміру вікна.</li>
+          <li>Creation of custom emojis has been fixed.</li>
+          <li xml:lang="ar">أُصلح إنشاء الرموز التعبيرية المخصصة.</li>
+          <li xml:lang="ca">S'ha corregit la creació d'emojis personalitzats.</li>
+          <li xml:lang="ca-valencia">S'ha corregit la creació d'emoji personalitzats.</li>
+          <li xml:lang="es">Se ha corregido la creación de emojis personalizados.</li>
+          <li xml:lang="he">יצירת אמוג׳ים בהתאמה אישית תוקנה.</li>
+          <li xml:lang="ia">Creation de emojis personalisate ha essite corrigite.</li>
+          <li xml:lang="it">È stata corretta la creazione di emoji personalizzate.</li>
+          <li xml:lang="nl">Het aanmaken van aangepaste emoji's is nu verholpen.</li>
+          <li xml:lang="pt-BR">A criação de emojis personalizados foi corrigida.</li>
+          <li xml:lang="ru">Исправлено создание пользовательских эмодзи;</li>
+          <li xml:lang="sl">Ustvarjanje čustvenčkov po meri je bilo popravljeno.</li>
+          <li xml:lang="uk">Виправлено створення нетипових емоційок.</li>
+          <li>Editing or replying to the last message using the keyboard shortcuts now works correctly.</li>
+          <li xml:lang="ar">يعمل تحرير الرسالة الأخيرة أو الرد عليها باستخدام اختصارات لوحة المفاتيح بشكل صحيح الآن.</li>
+          <li xml:lang="ca">L'edició o la resposta a l'últim missatge utilitzant les dreceres de teclat ara funciona correctament.</li>
+          <li xml:lang="ca-valencia">L'edició o la resposta a l'últim missatge utilitzant les dreceres de teclat ara funciona correctament.</li>
+          <li xml:lang="he">עריכה או תגובה להודעה האחרונה באמצעות מקשי קיצור במקלדת עובדת כראוי מעתה.</li>
+          <li xml:lang="it">Ora la modifica o la risposta all'ultimo messaggio tramite le scorciatoie da tastiera funzionano correttamente.</li>
+          <li xml:lang="nl">Het bewerken of beantwoorden van het laatste bericht met behulp van de sneltoetsen werkt nu correct.</li>
+          <li xml:lang="pt-BR">Agora, editar ou responder à última mensagem usando os atalhos de teclado funciona corretamente.</li>
+          <li xml:lang="ru">Исправлена работа комбинаций клавиш для редактирования или ответа на последнее сообщение.</li>
+          <li xml:lang="sl">Urejanje ali odgovarjanje na zadnje sporočilo z uporabo bližnjic na tipkovnici zdaj deluje pravilno.</li>
+          <li xml:lang="uk">Відновлено належну роботу редагування або створення відповіді на останнє повідомлення за допомогою клавіатурних скорочень.</li>
+          <li>When switching between rooms using the keyboard, the switching direction is now correct.</li>
+          <li xml:lang="ar">عند التبديل بين الغرف باستخدام لوحة المفاتيح، يكون اتجاه التبديل صحيحاً الآن.</li>
+          <li xml:lang="ca">Quan es canvia entre sales utilitzant el teclat, la direcció de commutació ara és correcta.</li>
+          <li xml:lang="ca-valencia">Quan es canvia entre sales utilitzant el teclat, la direcció de commutació ara és correcta.</li>
+          <li xml:lang="he">בעת מעבר בין חדרים בעזרת המקלדת, כיוון ההחלפה הוא נכון מעתה.</li>
+          <li xml:lang="it">Quando si passa da una stanza all'altra tramite la tastiera, la direzione del cambio è ora corretta.</li>
+          <li xml:lang="nl">Bij het wisselen tussen rooms met behulp van het toetsenbord is de wisselrichting nu correct.</li>
+          <li xml:lang="pt-BR">Ao alternar entre salas usando o teclado, a direção da alternância agora está correta.</li>
+          <li xml:lang="ru">При переключении между комнатами с клавиатуры направление переключения теперь корректное;</li>
+          <li xml:lang="sl">Pri preklapljanju med sobami s tipkovnico je smer preklapljanja zdaj pravilna.</li>
+          <li xml:lang="uk">Реалізовано правильний напрямок при перемиканні між кімнатами за допомогою клавіатури.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="22.04" date="2022-04-26">
+      <url>https://www.plasma-mobile.org/2022/04/26/plasma-mobile-gear-22-04/</url>
+      <description>
+        <p>NeoChat now lets you filter and enter a room directly from KRunner (Plasma Search). Aside from that there is also various bug fixes regarding the typing notifications.</p>
+        <p xml:lang="ar">يتيح نيوتشات الآن ترشيح ودخول الغرفة مباشرة من KRunner (بحث بلازما). وبالإضافة إلى ذلك، تتوفر إصلاحات متنوعة للعلل المتعلقة بتنبيهات الكتابة.</p>
+        <p xml:lang="ca">El NeoChat ara permet filtrar i entrar a una sala directament des del KRunner (Cerca del Plasma). A part d'això també hi ha diverses correccions d'errors pel que fa a les notificacions d'escriptura.</p>
+        <p xml:lang="ca-valencia">NeoChat ara permet filtrar i entrar a una sala directament des de KRunner (Busca de Plasma). A part d'açò també hi ha diverses esmenes d'errors pel que fa a les notificacions d'escriptura.</p>
+        <p xml:lang="it">NeoChat ora consente di filtrare e accedere a una stanza direttamente da KRunner (Plasma Search). Oltre a ciò, sono state apportate diverse correzioni di bug riguardanti le notifiche di digitazione.</p>
+        <p xml:lang="nl">NeoChat biedt nu de mogelijkheid om rechtstreeks vanuit KRunner (Plasma zoeken) een chatroom te filteren en binnen te gaan. Daarnaast zijn er diverse reparaties van fouten doorgevoerd met betrekking tot de meldingen over typen.</p>
+        <p xml:lang="pt-BR">O NeoChat agora permite filtrar e entrar em uma sala diretamente do KRunner (Busca do Plasma). Além disso, também foram feitas diversas correções de bugs relacionados às notificações de digitação.</p>
+        <p xml:lang="ru">Добавлена возможность фильтрации и входа в комнату прямо из KRunner (поиск Plasma). Кроме того, исправлены различные ошибки, связанные с уведомлениями о наборе текста.</p>
+        <p xml:lang="sl">NeoChat zdaj omogoča filtriranje in vstop v sobo neposredno iz KRunnerja (iskanje v Plasmi). Poleg tega so bile odpravljene tudi različne napake v zvezi z obvestili o tipkanju.</p>
+        <p xml:lang="uk">У новій версії NeoChat уможливлено фільтрування та вхід до кімнати безпосередньо з KRunner (Пошуку Плазми). Окрім цього, також виправлено різні помилки щодо сповіщень про введення тексту.</p>
+      </description>
+    </release>
+    <release version="22.02" date="2022-02-09">
+      <description>
+        <p>NeoChat 22.02 focus on stability and adds a few quality of life improvements</p>
+        <p xml:lang="ar">يركز نيوتشات 22.02 على الاستقرار ويضيف بعض تحسينات جودة الاستخدام</p>
+        <p xml:lang="ca">El NeoChat 22.02 se centra en l'estabilitat i afegeix algunes millores de qualitat de vida</p>
+        <p xml:lang="ca-valencia">NeoChat 22.02 se centra en l'estabilitat i afig algunes millores de qualitat de vida</p>
+        <p xml:lang="he">NeoChat 22.02 מתמקד ביציבות ומוסיף מגוון שיפורים באיכות החיים</p>
+        <p xml:lang="it">NeoChat 22.02 si concentra sulla stabilità e aggiunge alcuni miglioramenti alla qualità della vita</p>
+        <p xml:lang="nl">NeoChat 22.02 richt zich op stabiliteit en voegt een aantal verbeteringen toe die het gebruiksgemak vergroten.</p>
+        <p xml:lang="pt-BR">O NeoChat 22.02 foca na estabilidade e adiciona algumas melhorias de usabilidade</p>
+        <p xml:lang="ru">В NeoChat 22.02 основное внимание уделено стабильности и добавлено несколько улучшений для удобства использования.</p>
+        <p xml:lang="sl">NeoChat 22.02 se osredotoča na stabilnost in dodaja nekaj izboljšav kakovosti življenja</p>
+        <p xml:lang="uk">Акцент у NeoChat 22.02 зосереджено на стабільності та додано кілька удосконалень, пов'язаних із зручністю</p>
+        <ul>
+          <li>Add support for minimizing to system tray on startup</li>
+          <li xml:lang="ar">إضافة دعم التصغير إلى صينية النظام عند بدء التشغيل</li>
+          <li xml:lang="ca">Afegeix la implementació per a minimitzar a la safata del sistema en iniciar</li>
+          <li xml:lang="ca-valencia">Afig la implementació per a minimitzar a la safata del sistema en iniciar</li>
+          <li xml:lang="he">נוספה תמיכה למזעור לשורת המערכת עם ההפעלה</li>
+          <li xml:lang="it">Aggiunge il supporto per la minimizzazione nella barra delle applicazioni all'avvio</li>
+          <li xml:lang="nl">Voeg ondersteuning toe voor het minimaliseren naar het systeemvak bij het opstarten</li>
+          <li xml:lang="pt-BR">Adicionado suporte para minimizar para a bandeja do sistema na inicialização</li>
+          <li xml:lang="ru">Добавлена поддержка сворачивания в системный лоток при запуске;</li>
+          <li xml:lang="sl">Dodajte podporo za minimitziranje v sistemsko vrstico ob zagonu</li>
+          <li xml:lang="uk">Додано підтримку мінімізації до системного лотка після запуску</li>
+          <li>Improved internet connectivity check</li>
+          <li xml:lang="ar">تحسين فحص الاتصال بالإنترنت</li>
+          <li xml:lang="ca">Millora de la verificació de la connectivitat a Internet</li>
+          <li xml:lang="ca-valencia">Millora de la verificació de la connectivitat a Internet</li>
+          <li xml:lang="es">Se ha mejorado la comprobación de la conectividad con internet.</li>
+          <li xml:lang="he">בדיקת החיבור לאינטרנט השתפרה</li>
+          <li xml:lang="it">Controllo della connettività Internet migliorato</li>
+          <li xml:lang="nl">Verbeterde controle van internetverbinding</li>
+          <li xml:lang="pt-BR">Verificação de conectividade de internet aprimorada</li>
+          <li xml:lang="ru">Улучшена проверка подключения к Интернету;</li>
+          <li xml:lang="sl">Izboljšano preverjanje internetne povezave</li>
+          <li xml:lang="uk">Удосконалено перевірку можливості з'єднання з інтернетом</li>
+          <li>Add support for sharing images and files with other apps (Nextcloud, Imgur, ...)</li>
+          <li xml:lang="ar">إضافة دعم مشاركة الصور والملفات مع تطبيقات أخرى (نكست كلاود، إمجور، ...)</li>
+          <li xml:lang="ca">Afegeix la implementació per a compartir imatges i fitxers amb altres aplicacions (Nextcloud, Imgur...)</li>
+          <li xml:lang="ca-valencia">Afig la implementació per a compartir imatges i fitxers amb altres aplicacions (Nextcloud, Imgur…)</li>
+          <li xml:lang="es">Se ha añadido compatibilidad para compartir imágenes y archivos con otras aplicaciones (Nextcloud, Imgur, etc.).</li>
+          <li xml:lang="he">נוספה תמיכה בשיתוף תמונות וקבצים עם יישומים אחרים (Nextcloud,‏ Imgur, …)</li>
+          <li xml:lang="it">Aggiunge il supporto per la condivisione di immagini e file con altre applicazioni (Nextcloud, Imgur, ...)</li>
+          <li xml:lang="nl">Voeg ondersteuning toe voor het delen van afbeeldingen en bestanden met andere toepassingen (Nextcloud,Imgur, ...).</li>
+          <li xml:lang="pt-BR">Adicionado suporte para compartilhamento de imagens e arquivos com outros aplicativos (Nextcloud, Imgur, ...)</li>
+          <li xml:lang="ru">Добавлена возможность обмена изображениями и файлами с другими приложениями (Nextcloud, Imgur, и прочими службами);</li>
+          <li xml:lang="sl">Doda podporo za deljenje slik in datotek z drugimi aplikacijami (Nextcloud, Imgur, ...)</li>
+          <li xml:lang="uk">Додано підтримку оприлюднення зображень і файлів за допомогою інших програм (Nextcloud, Imgur, ...)</li>
+          <li>Implement adding labels for account. This allow for an easier organization when using multiple accounts.</li>
+          <li xml:lang="ar">تطبيق إضافة لصائق للحساب. يسمح هذا بتنظيم أسهل عند استخدام حسابات متعددة.</li>
+          <li xml:lang="ca">Implementa l'addició d'etiquetes al compte. Això permet una organització més fàcil quan s'utilitzen diversos comptes.</li>
+          <li xml:lang="ca-valencia">Implementa l'addició d'etiquetes al compte. Açò permet una organització més fàcil quan s'utilitzen diversos comptes.</li>
+          <li xml:lang="he">מומשה הוספהת תוויות לחשבון. כך אפשר לסדר בקלות יותר כשמשתמשים במגוון חשבונות.</li>
+          <li xml:lang="it">Implementa l'aggiunta di etichette per account. Ciò semplifica l'organizzazione quando si utilizzano più account.</li>
+          <li xml:lang="nl">Voeg labels toe aan accounts. Dit maakt een overzichtelijkere organisatie mogelijk bij het gebruik van meerdere accounts.</li>
+          <li xml:lang="pt-BR">Implementada a adição de etiquetas para contas. Isso facilita a organização ao usar várias contas.</li>
+          <li xml:lang="ru">Реализовано добавление меток для учётных записей; это упрощает организацию при использовании нескольких учётных записей.</li>
+          <li xml:lang="sl">Implementira dodajanje oznak za račun. To omogoča lažjo organizacijo pri uporabi več računov.</li>
+          <li xml:lang="uk">Реалізовано додавання міток до облікового запису. Це спрощує упорядковування під час використання кількох облікових записів.</li>
+          <li>Redesign of our config dialogs to follow the new Plasma System Settings style</li>
+          <li xml:lang="ar">إعادة تصميم حوارات الضبط لاتباع نمط إعدادات نظام بلازما الجديد</li>
+          <li xml:lang="ca">Redisseny dels diàlegs de configuració per a seguir l'estil nou de l'arranjament del sistema del Plasma</li>
+          <li xml:lang="ca-valencia">Redisseny dels diàlegs de configuració per a seguir l'estil nou de Configuració del sistema de Plasma</li>
+          <li xml:lang="he">חלוניות ההגדרות שלנו עוצבו מחדש כך שתיראנה יותר כמו סגנון הגדרות מערכת פלזמה החדש</li>
+          <li xml:lang="it">Riprogettazione delle nostre finestre di configurazione per seguire il nuovo stile delle impostazioni di sistema di Plasma</li>
+          <li xml:lang="nl">Het ontwerp van onze configuratiedialogen is aangepast aan de nieuwe stijl van de Plasma-systeeminstellingen</li>
+          <li xml:lang="pt-BR">Redesenho das caixas de diálogo de configuração para seguir o novo estilo das Configurações do Sistema do Plasma.</li>
+          <li xml:lang="ru">Реализован редизайн диалогов настройки в соответствии со стилем нового приложения «Параметры системы» Plasma;</li>
+          <li xml:lang="sl">Preoblikovanje naših konfiguracijskih pogovornih oken, da sledijo novemu slogu nastavitev sistema Plasma</li>
+          <li xml:lang="uk">Перероблено дизайн наших діалогових вікон налаштування відповідно до нового стилю «Системних параметрів» Плазми</li>
+          <li>Fix various others issues and small feature requests. Decreasing the total amount of open issues by 20%.</li>
+          <li xml:lang="ar">إصلاح قضايا متنوعة أخرى وطلبات ميزات صغيرة، مما يقلل إجمالي القضايا المفتوحة بنسبة 20%.</li>
+          <li xml:lang="ca">Corregeix diversos problemes i peticions de funcionalitats petites. Disminució de la quantitat total de problemes oberts en un 20%.</li>
+          <li xml:lang="ca-valencia">Corregix diversos problemes i peticions de característiques xicotetes. Disminució de la quantitat total de problemes oberts en un 20%.</li>
+          <li xml:lang="he">תוקנו מגוון תקלות שונות ובקשות מימוש קטנות. מה שמקטין את כמות הסוגיות הפתוחות ב־20%.</li>
+          <li xml:lang="it">Corregge vari altri problemi e richieste di piccole funzionalità. Riduzione del 20% del numero totale di problemi aperti.</li>
+          <li xml:lang="nl">Diverse andere problemen en kleine functieverzoeken opgelost. Het totale aantal openstaande problemen met 20% verminderd.</li>
+          <li xml:lang="pt-BR">Corrigido diversos outros problemas e implementação de pequenas solicitações de melhorias. Reduzido o número total de bugs em aberto em 20%.</li>
+          <li xml:lang="ru">Исправлены прочие ошибки и реализованы небольшие запросы на новые возможности; общее количество открытых проблем сокращено на 20%.</li>
+          <li xml:lang="sl">Odpravi različne druge težave in manjše zahteve za zmožnosti. Zmanjšajte skupno število odprtih težav za 20%.</li>
+          <li xml:lang="uk">Виправлення різних інших проблем та невеликих запитів на нові функції. Зменшення загальної кількості відкритих вад на 20%.</li>
+        </ul>
+      </description>
+      <url>https://www.plasma-mobile.org/2022/02/09/plasma-mobile-gear-22-02/#neochat</url>
+    </release>
+    <release version="21.12" date="2021-12-07">
+      <description>
+        <p>NeoChat 21.12 brings lots of new features and fixes</p>
+        <p xml:lang="ar">يوفر نيوتشات 21.12 الكثير من الميزات والإصلاحات الجديدة</p>
+        <p xml:lang="ca">El NeoChat 21.12 aporta moltes funcionalitats noves i correccions</p>
+        <p xml:lang="ca-valencia">NeoChat 21.12 aporta moltes característiques noves i correccions</p>
+        <p xml:lang="es">NeoChat 21.12 proporciona muchas funciones nuevas y correcciones.</p>
+        <p xml:lang="he">ב־NeoChat 21.12 הוצגו מגוון יכולות ותיקונים חדשים</p>
+        <p xml:lang="it">NeoChat 21.12 porta con sé tante nuove funzionalità e correzioni</p>
+        <p xml:lang="nl">NeoChat 21.12 brengt veel nieuwe functies en reparaties van fouten met zich mee.</p>
+        <p xml:lang="pt-BR">O NeoChat 21.12 traz muitas novidades e correções</p>
+        <p xml:lang="ru">В NeoChat 21.12 добавлено множество новых возможностей и исправлений</p>
+        <p xml:lang="sl">NeoChat 21.12 prinaša veliko novih zmožnosti in popravkov</p>
+        <p xml:lang="uk">У NeoChat 21.12 реалізовано багато нових можливостей і виправлень</p>
+        <ul>
+          <li>Solved various problems related to login, logout and account switching</li>
+          <li xml:lang="ar">حُلّت مشكلات متنوعة متعلقة بالولوج والخروج وتبديل الحسابات</li>
+          <li xml:lang="ca">S'han resolt diversos problemes relacionats amb l'inici de sessió, la sortida i el canvi de compte</li>
+          <li xml:lang="ca-valencia">S'han resolt diversos problemes relacionats amb l'inici de sessió, l'eixida i el canvi de compte</li>
+          <li xml:lang="es">Se han solucionado diversos problemas relacionados con el inicio y el cierre de sesión y con el cambio de cuenta.</li>
+          <li xml:lang="he">נפתרו מספר בעיות שקשורות בכניסה ויציאה לחשבון והחלפת חשבונות</li>
+          <li xml:lang="it">Risolti vari problemi relativi all'accesso, alla disconnessione e al cambio di account</li>
+          <li xml:lang="nl">Diverse problemen opgelost met betrekking tot aanmelden, afmelden en wisseling van account.</li>
+          <li xml:lang="pt-BR">Resolvidos diversos problemas relacionados a login, logout e troca de contas</li>
+          <li xml:lang="ru">Устранены проблемы, связанные с входом, выходом и переключением учётных записей;</li>
+          <li xml:lang="sl">Rešene različne težave, povezane s prijavo, odjavo in preklapljanjem računov</li>
+          <li xml:lang="uk">Виправлено різноманітні проблеми, пов'язані із входом, виходом та перемиканням облікових записів</li>
+          <li>Fixed a few problems in the timeline layout</li>
+          <li xml:lang="ar">أُصلحت بعض المشكلات في مخطط الخط الزمني</li>
+          <li xml:lang="ca">S'han corregit alguns problemes en la disposició de la línia de temps</li>
+          <li xml:lang="ca-valencia">S'han corregit alguns problemes en la disposició de la línia de temps</li>
+          <li xml:lang="es">Se han corregido varios problemas en la disposición de la línea de tiempo</li>
+          <li xml:lang="he">תוקנו מספר בעיות בפריסת ציר הזמן</li>
+          <li xml:lang="it">Corretti alcuni problemi nella disposizione della linea temporale</li>
+          <li xml:lang="nl">Enkele problemen in de tijdlijnindeling zijn opgelost</li>
+          <li xml:lang="pt-BR">Corrigidos alguns problemas no layout da linha do tempo</li>
+          <li xml:lang="ru">Исправлены некоторые проблемы в расположении ленты событий;</li>
+          <li xml:lang="sl">Odpravljenih je bilo nekaj težav v postavitvi časovnice</li>
+          <li xml:lang="uk">Виправлено декілька проблем із компонуванням розкладу</li>
+          <li>Added Spell checking while writing a message</li>
+          <li xml:lang="ar">أُضيف التدقيق الإملائي أثناء كتابة الرسالة</li>
+          <li xml:lang="ca">S'ha afegit la verificació ortogràfica mentre s'escriu un missatge</li>
+          <li xml:lang="ca-valencia">S'ha afegit la verificació ortogràfica mentre s'escriu un missatge</li>
+          <li xml:lang="es">Se ha añadido comprobación ortográfica durante la escritura de mensajes.</li>
+          <li xml:lang="he">נוספה בדיקת איות בזמן כתיבת הודעות</li>
+          <li xml:lang="it">Aggiunto il controllo ortografico durante la scrittura di un messaggio</li>
+          <li xml:lang="nl">Spellingcontrole toegevoegd tijdens het schrijven van een bericht</li>
+          <li xml:lang="pt-BR">Adicionada verificação ortográfica durante a escrita de mensagens</li>
+          <li xml:lang="ru">Добавлена проверка орфографии при написании сообщения;</li>
+          <li xml:lang="sl">Dodano preverjanje črkovanja med pisanjem sporočila</li>
+          <li xml:lang="uk">Додано перевірку правопису під час написання повідомлення</li>
+          <li>Improved Settings pages</li>
+          <li xml:lang="ar">تحسين صفحات الإعدادات</li>
+          <li xml:lang="ca">Pàgines de configuració millorades</li>
+          <li xml:lang="ca-valencia">Pàgines de configuració millorades</li>
+          <li xml:lang="es">Se han mejorado las páginas de preferencias.</li>
+          <li xml:lang="he">עמודי ההגדרות השתפרו</li>
+          <li xml:lang="it">Pagine delle impostazioni migliorate</li>
+          <li xml:lang="nl">Verbeterde instellingenpagina's</li>
+          <li xml:lang="pt-BR">Páginas de configurações aprimoradas</li>
+          <li xml:lang="ru">Улучшены страницы настроек;</li>
+          <li xml:lang="sl">Izboljšane strani z nastavitvami</li>
+          <li xml:lang="uk">Удосконалено сторінку параметрів</li>
+          <li>Many improvements to the android and general mobile support</li>
+          <li xml:lang="ar">تحسينات كثيرة لدعم أندرويد والأجهزة المحمولة بشكل عام</li>
+          <li xml:lang="ca">Moltes millores a l'Android i suport general de mòbils</li>
+          <li xml:lang="ca-valencia">Moltes millores a Android i suport general de mòbils</li>
+          <li xml:lang="he">מגוון שיפורים לתמיכה ב־Android ובניידים בכלל</li>
+          <li xml:lang="it">Molti miglioramenti al supporto Android e mobile in generale</li>
+          <li xml:lang="nl">Veel verbeteringen aan de Android- en algemene mobiele ondersteuning</li>
+          <li xml:lang="pt-BR">Muitas melhorias no Android e no suporte geral para dispositivos móveis</li>
+          <li xml:lang="ru">Многочисленные улучшения для Android и мобильных устройств в целом;</li>
+          <li xml:lang="sl">Številne izboljšave podpore za Android in splošno mobilno tehnologijo</li>
+          <li xml:lang="uk">Багато удосконалень у версії для android та загальній підтримці мобільних пристроїв</li>
+          <li>Show blurhashes while images load</li>
+          <li xml:lang="ar">عرض blurhashes أثناء تحميل الصور</li>
+          <li xml:lang="ca">Mostra «blurhashes» mentre es carreguen les imatges</li>
+          <li xml:lang="ca-valencia">Mostra «blurhashes» mentre es carreguen les imatges</li>
+          <li xml:lang="he">בזמן טעינת תמונה מופיעים אזורים מטושטשים</li>
+          <li xml:lang="it">Mostra i trattini sfocati durante il caricamento delle immagini</li>
+          <li xml:lang="nl">Toon wazige hashes terwijl de afbeeldingen laden</li>
+          <li xml:lang="pt-BR">Exibir os ícones de desfoque enquanto as imagens carregam</li>
+          <li xml:lang="ru">Отображение размытых хешей во время загрузки изображений;</li>
+          <li xml:lang="sl">Prikaži zamegljene črtice med nalaganjem slik</li>
+          <li xml:lang="uk">Реалізовано пошук розмитої схеми, доки завантажується зображення</li>
+          <li>Support showing custom emojis</li>
+          <li xml:lang="ar">دعم عرض الرموز التعبيرية المخصصة</li>
+          <li xml:lang="ca">Permet mostrar emojis personalitzats</li>
+          <li xml:lang="ca-valencia">Permet mostrar emoji personalitzats</li>
+          <li xml:lang="es">Compatibilidad con emojis personalizados.</li>
+          <li xml:lang="he">תמיכה בהצגת אמוג׳ים מותאמים אישית</li>
+          <li xml:lang="it">Supporto per la visualizzazione di emoji personalizzati</li>
+          <li xml:lang="nl">Ondersteuning voor het weergeven van aangepaste emoji's</li>
+          <li xml:lang="pt-BR">Suporte para exibição de emojis personalizados</li>
+          <li xml:lang="ru">Отображение пользовательских эмодзи;</li>
+          <li xml:lang="sl">Podpora za prikazovanje čustvenčkov po meri</li>
+          <li xml:lang="uk">Підтримка показу нетипових емоційок</li>
+          <li>Added a global menu</li>
+          <li xml:lang="ar">أُضيفت قائمة عامة</li>
+          <li xml:lang="ca">S'ha afegit un menú global</li>
+          <li xml:lang="ca-valencia">S'ha afegit un menú global</li>
+          <li xml:lang="es">Se ha añadido un menú global.</li>
+          <li xml:lang="he">נוסף תפריט מקיף</li>
+          <li xml:lang="it">Aggiunto un menu globale</li>
+          <li xml:lang="nl">Een globaal menu toegevoegd</li>
+          <li xml:lang="pt-BR">Adicionado um menu global</li>
+          <li xml:lang="ru">Добавлено глобальное меню;</li>
+          <li xml:lang="sl">Dodan globalni meni</li>
+          <li xml:lang="uk">Додано загальне меню</li>
+          <li>Added support for spoilers</li>
+          <li xml:lang="ar">أُضيف دعم المحتوى المحروق</li>
+          <li xml:lang="ca">S'ha afegit la implementació per als espòilers</li>
+          <li xml:lang="ca-valencia">S'ha afegit la implementació per als espòilers</li>
+          <li xml:lang="he">נוספה תמיכה בקלקלנים</li>
+          <li xml:lang="it">Aggiunto supporto per gli spoiler</li>
+          <li xml:lang="nl">Ondersteuning voor spoilers toegevoegd</li>
+          <li xml:lang="pt-BR">Adicionado suporte para spoilers</li>
+          <li xml:lang="ru">Добавлена поддержка скрытого текста;</li>
+          <li xml:lang="sl">Dodana podpora za spojlerje</li>
+          <li xml:lang="uk">Додано підтримку спойлерів</li>
+          <li>Added a quick switcher to switch between rooms</li>
+          <li xml:lang="ar">أُضيف مبدل سريع للتبديل بين الغرف</li>
+          <li xml:lang="ca">S'ha afegit un commutador ràpid per a canviar entre sales</li>
+          <li xml:lang="ca-valencia">S'ha afegit un commutador ràpid per a canviar entre sales</li>
+          <li xml:lang="es">Se ha añadido un selector rápido para cambiar de sala.</li>
+          <li xml:lang="he">נוסף בורר מהיר למעבר בין חדרים</li>
+          <li xml:lang="it">Aggiunto un commutatore rapido per passare da una stanza all'altra</li>
+          <li xml:lang="nl">Een snelschakelaar toegevoegd om tussen rooms te wisselen</li>
+          <li xml:lang="pt-BR">Adicionado um botão de troca rápida para alternar entre salas</li>
+          <li xml:lang="ru">Добавлен быстрый переключатель для перехода между комнатами;</li>
+          <li xml:lang="sl">Dodan hitri preklopnik za preklapljanje med sobami</li>
+          <li xml:lang="uk">Додано швидкий перемикач між кімнатами</li>
+          <li>Added support for an optional fancy blur background effect</li>
+          <li xml:lang="ar">أُضيف دعم لتأثير خلفية ضبابية أنيقة اختياري</li>
+          <li xml:lang="ca">S'ha afegit la implementació per a un efecte de difuminat de fons opcional</li>
+          <li xml:lang="ca-valencia">S'ha afegit la implementació per a un efecte de difuminat de fons opcional</li>
+          <li xml:lang="he">נוספה תמיכה באפקט רקע מטושטש מרהיב כרשות</li>
+          <li xml:lang="it">Aggiunto supporto per un effetto di sfocatura dello sfondo opzionale</li>
+          <li xml:lang="nl">Ondersteuning toegevoegd voor een optioneel, fraai wazig achtergrondeffect</li>
+          <li xml:lang="pt-BR">Adicionada a opção de um efeito de desfoque de fundo sofisticado</li>
+          <li xml:lang="ru">Добавлена поддержка необязательного эффекта размытого фона;</li>
+          <li xml:lang="sl">Dodana podpora za izbirni učinek zameglitve ozadja</li>
+          <li xml:lang="uk">Додано підтримку додаткового ефекту розмивання тла</li>
+          <li>Resizable left and right drawers</li>
+          <li xml:lang="ar">أدراج يمنى ويسرى قابلة لتغيير الحجم</li>
+          <li xml:lang="ca">Calaixos esquerra i dreta redimensionables</li>
+          <li xml:lang="ca-valencia">Calaixos esquerra i dreta redimensionables</li>
+          <li xml:lang="he">מגירות גמישות משמאל ומימין</li>
+          <li xml:lang="it">Cassetti sinistro e destro ridimensionabili</li>
+          <li xml:lang="nl">Verstelbare lades links en rechts</li>
+          <li xml:lang="pt-BR">Gavetas redimensionáveis ​​à esquerda e à direita</li>
+          <li xml:lang="ru">Изменяемые размеры левой и правой панелей;</li>
+          <li xml:lang="sl">Spremenljiva velikost levega in desnega predala</li>
+          <li xml:lang="uk">Реалізовано ліву і праву бічні ковзні панелі змінної ширини</li>
+          <li>Added Syntax highlighting in raw json messages</li>
+          <li xml:lang="ar">أُضيف تمييز الصيغة في رسائل json الخام</li>
+          <li xml:lang="ca">S'ha afegit el ressaltat de sintaxi en els missatges JSON en brut</li>
+          <li xml:lang="ca-valencia">S'ha afegit el ressaltat de sintaxi en els missatges JSON en brut</li>
+          <li xml:lang="he">נוספה הדגשת תחביר בהודעות json גולמיות</li>
+          <li xml:lang="it">Aggiunta l'evidenziazione della sintassi nei messaggi JSON non elaborati</li>
+          <li xml:lang="nl">Accentuering van syntaxis toegevoegd aan onbewerkte JSON-berichten</li>
+          <li xml:lang="pt-BR">Adicionada a coloração de sintaxe em mensagens JSON brutas</li>
+          <li xml:lang="ru">Добавлена подсветка синтаксиса в необработанных JSON-сообщениях;</li>
+          <li xml:lang="sl">Dodano označevanje skladnje v sporočilih raw json</li>
+          <li xml:lang="uk">Додано підсвічування синтаксису у прості повідомлення json</li>
+          <li>Better wayland support</li>
+          <li xml:lang="ar">دعم أفضل لويلاند</li>
+          <li xml:lang="ca">Millor suport del Wayland</li>
+          <li xml:lang="ca-valencia">Millor suport de Wayland</li>
+          <li xml:lang="es">Mejor compatibilidad con Wayland.</li>
+          <li xml:lang="he">תמיכה משופרת ב־Wayland</li>
+          <li xml:lang="it">Miglior supporto Wayland</li>
+          <li xml:lang="nl">Betere Wayland-ondersteuning</li>
+          <li xml:lang="pt-BR">Melhor suporte ao Wayland</li>
+          <li xml:lang="ru">Улучшена поддержка Wayland;</li>
+          <li xml:lang="sl">Boljša podpora za Wayland</li>
+          <li xml:lang="uk">Удосконалено підтримку wayland</li>
+          <li>Improved file reception and download</li>
+          <li xml:lang="ar">تحسين استقبال الملفات وتنزيلها</li>
+          <li xml:lang="ca">Recepció i baixada de fitxers millorades</li>
+          <li xml:lang="ca-valencia">Recepció i baixada de fitxers millorades</li>
+          <li xml:lang="es">Se ha mejorado la recepción y la descarga de archivos.</li>
+          <li xml:lang="he">קבלה והורדה משופרת של קבצים</li>
+          <li xml:lang="it">Miglioramento della ricezione e dello scaricamento dei file</li>
+          <li xml:lang="nl">Verbeterde bestandsontvangst en -download</li>
+          <li xml:lang="pt-BR">Recepção e download de arquivos aprimorados</li>
+          <li xml:lang="ru">Улучшены приём и загрузка файлов;</li>
+          <li xml:lang="sl">Izboljšan sprejem in prenos datotek</li>
+          <li xml:lang="uk">Удосконалено прийняття і отримання файлів</li>
+        </ul>
+      </description>
+      <url>https://www.plasma-mobile.org/2021/12/07/plasma-mobile-gear-21-12/</url>
+    </release>
+    <release version="1.2.0" date="2021-06-01">
+      <description>
+        <p>NeoChat 1.2 brings a major redesign of the user interface. The chat page is now using bubbles for the messages and the input component was completely rewritten with a nicer look as well.</p>
+        <p xml:lang="ar">يوفر نيوتشات 1.2 إعادة تصميم كبرى لواجهة المستخدم. تستخدم صفحة الدردشة الآن فقاعات للرسائل، كما أُعيدت كتابة مكون الإدخال بالكامل بمظهر أجمل.</p>
+        <p xml:lang="ca">El NeoChat 1.2 aporta un redisseny important de la interfície d'usuari. La pàgina de xat ara utilitza bombolles per als missatges i el component d'entrada s'ha reescrit completament amb un aspecte més agradable també.</p>
+        <p xml:lang="ca-valencia">NeoChat 1.2 aporta un redisseny important de la interfície d'usuari. La pàgina de xat ara utilitza bambolles per als missatges i el component d'entrada s'ha reescrit completament amb un aspecte més agradable també.</p>
+        <p xml:lang="it">NeoChat 1.2 presenta un'importante riprogettazione dell'interfaccia utente. La pagina della chat ora utilizza le bolle per i messaggi e anche il componente di input è stato completamente riscritto con un aspetto più gradevole.</p>
+        <p xml:lang="nl">NeoChat 1.2 brengt een grote herziening van de gebruikersinterface. De chatpagina gebruikt nu bubbels voor de berichten en het invoerveld is volledig opnieuw ontworpen met een mooier uiterlijk.</p>
+        <p xml:lang="pt-BR">O NeoChat 1.2 traz uma grande reformulação da interface do usuário. A página de bate-papo agora utiliza balões para as mensagens e o componente de entrada foi completamente reescrito com um visual mais agradável.</p>
+        <p xml:lang="ru">В версии NeoChat 1.2 полностью изменён пользовательский интерфейс. На странице чата сообщения отображаются в виде пузырей, а компонент ввода был полностью переписан и получил более приятный внешний вид.</p>
+        <p xml:lang="sl">NeoChat 1.2 prinaša veliko prenovo uporabniškega vmesnika. Stran za klepet zdaj uporablja mehurčke za sporočila, vhodna komponenta pa je bila popolnoma prepisana in ima lepši videz.</p>
+        <p xml:lang="uk">NeoChat 1.2 пропонує суттєво перероблений інтерфейс користувача. Сторінка спілкування у новій версії використовує вигулькні панелі для повідомлень, а компонент введення також був повністю переписаний і тепер має приємніший вигляд.</p>
+        <p>It's now possible to send custom reactions by replying to a comment with /react &lt;message&gt;.</p>
+        <p xml:lang="ar">أصبح من الممكن الآن إرسال تفاعلات مخصصة عبر الرد على تعليق بالأمر /react &lt;message&gt;.</p>
+        <p xml:lang="ca">Ara és possible enviar reaccions personalitzades responent a un comentari amb /react &lt;missatge&gt;.</p>
+        <p xml:lang="ca-valencia">Ara és possible enviar reaccions personalitzades responent a un comentari amb /react &lt;missatge&gt;.</p>
+        <p xml:lang="he">מעתה ניתן לשלוח סימני רגש מותאמים אישית על ידי תגובה להערה עם ‎/react &lt;message&gt;.</p>
+        <p xml:lang="it">Ora è possibile inviare reazioni personalizzate rispondendo a un commento con /react &lt;messaggio&gt;.</p>
+        <p xml:lang="nl">Het is nu mogelijk om aangepaste reacties te versturen door op een opmerking te antwoorden met /react &lt;bericht&gt;.</p>
+        <p xml:lang="pt-BR">Agora é possível enviar reações personalizadas respondendo a um comentário com /react &lt;mensagem&gt;.</p>
+        <p xml:lang="ru">Теперь можно отправлять собственные реакции, ответив на сообщение командой /react &lt;сообщение&gt;.</p>
+        <p xml:lang="sl">Zdaj je mogoče poslati odzive po meri tako, da na komentar odgovorite z /react &lt;message&gt;.</p>
+        <p xml:lang="uk">Тепер можна надсилати власні реакції, відповідаючи на коментар з використанням /react &lt;повідомлення&gt;.</p>
+        <p>NeoChat now supports opening Matrix URIs from your browser.</p>
+        <p xml:lang="ar">يدعم نيوتشات الآن فتح معرفات Matrix URI من المتصفح.</p>
+        <p xml:lang="ca">El NeoChat ara permet obrir els URI de Matrix des del navegador.</p>
+        <p xml:lang="ca-valencia">NeoChat ara permet obrir els URI de Matrix des del navegador.</p>
+        <p xml:lang="he">NeoChat תומך מעתה בפתיחת כתובות פנימיות של Matrix מהדפדפן שלך.</p>
+        <p xml:lang="it">NeoChat ora supporta l'apertura degli URI Matrix dal tuo browser.</p>
+        <p xml:lang="nl">NeoChat ondersteunt nu het openen van Matrix-URI's vanuit uw browser.</p>
+        <p xml:lang="pt-BR">O NeoChat agora suporta a abertura de URIs do Matrix a partir do seu navegador.</p>
+        <p xml:lang="ru">В NeoChat добавлена поддержка открытия URI Matrix из браузера.</p>
+        <p xml:lang="sl">NeoChat zdaj podpira odpiranje URI-jev Matrix iz vašega brskalnika.</p>
+        <p xml:lang="uk">У новій версії NeoChat передбачено підтримку відкриття адрес Matrix з вашого браузера</p>
+      </description>
+      <url>https://carlschwan.eu/2021/06/01/neochat-1.2/</url>
+    </release>
+    <release urgency="critical" version="1.1.1" date="2021-02-23"/>
+    <release version="1.1.0" date="2021-02-22">
+      <description>
+        <p>Probably the highlight of this release is the completely new login page. It detects the server configuration based on your Matrix Id. This allows you to login to servers requiring Single Sign On (SSO) (like the Mozilla or the incoming Fedora Matrix instance).</p>
+        <p xml:lang="ar">لعل أبرز ما في هذا الإصدار هو صفحة الولوج الجديدة كلياً. فهي تكتشف ضبط الخادم بناءً على معرف ماتركس الخاص بك. يتيح هذا الولوج إلى الخوادم التي تتطلب الولوج الموحد (SSO) (مثل خوادم موزيلا أو خادم ماتركس القادم لفيدورا).</p>
+        <p xml:lang="ca">Probablement el més destacat d'aquest llançament és la pàgina d'inici de sessió completament nova. Detecta la configuració del servidor basant-se en l'identificador de Matrix. Això permet iniciar sessió en servidors que requereixen inici de sessió únic (SSO) (com el Mozilla o la instància d'entrada de Matrix de Fedora).</p>
+        <p xml:lang="ca-valencia">Probablement el més destacat d'este llançament és la pàgina d'inici de sessió completament nova. Detecta la configuració del servidor basant-se en l'identificador de Matrix. Açò permet iniciar sessió en servidors que requerixen inici de sessió únic (SSO) (com Mozilla o la instància d'entrada de Matrix de Fedora).</p>
+        <p xml:lang="he">גולת הכותרת, לכאורה, של המהדורה הזאת היא עמוד הכניסה המחודש לגמרי. הוא מזהה את הגדרות השרת לפי מזהה ה־Matrix שלך. כך מתאפשר לך להיכנס לשרתים שדורשים כניסה אחודה (SSO - כגון Mozilla או עותק ה־Matrix של Fedora שעתיד לקום).</p>
+        <p xml:lang="it">Probabilmente il punto forte di questa versione è la pagina di accesso completamente rinnovata. Rileva la configurazione del server in base al tuo ID Matrix. Questo ti permette di accedere ai server che richiedono Single Sign-On (SSO) (come Mozilla o l'istanza Matrix in arrivo di Fedora).</p>
+        <p xml:lang="nl">Het hoogtepunt van deze release is waarschijnlijk de volledig nieuwe aanmeldpagina. Deze detecteert de serverconfiguratie op basis van uw Matrix-ID. Hierdoor kunt u zich aanmelden op servers die Single Sign-On (SSO) vereisen (zoals Mozilla of het aankomende Fedora Matrix-exemplaar).</p>
+        <p xml:lang="pt-BR">Provavelmente, o grande destaque desta versão é a página de login completamente nova. Ela detecta a configuração do servidor com base no seu ID do Matrix. Isso permite que você faça login em servidores que exigem Single Sign-On (SSO) (como a instância do Mozilla Matrix ou a futura instância do Fedora Matrix).</p>
+        <p xml:lang="ru">Главным нововведением этой версии стала полностью переработанная страница входа. Она определяет конфигурацию сервера по вашему идентификатору Matrix, что позволяет входить на серверы с единой системой аутентификации (например, Mozilla или готовящийся к запуску экземпляр Fedora Matrix).</p>
+        <p xml:lang="sl">Verjetno vrhunec te izdaje je popolnoma nova prijavna stran. Zazna konfiguracijo strežnika na podlagi vašega Matrix ID-ja. To vam omogoča prijavo na strežnike, ki zahtevajo enotno prijavo (SSO) (kot sta Mozilla ali prihajajoči pojavek Fedora Matrix).</p>
+        <p xml:lang="uk">Ймовірно, родзинкою цього випуску є абсолютно нова сторінка входу. Вона визначає налаштування сервера на основі вашого ідентифікатора Matrix. Це надає вам змогу входити на сервери, що вимагають єдиного засобу входу (SSO) (наприклад, Mozilla або вхідний екземпляр Fedora Matrix).</p>
+        <p>Servers that require agreeing to the TOS before usage are correctly detected now and redirect to their TOS webpage, allowing the user to agree to them instead of silently failing to load the account.</p>
+        <p xml:lang="ar">تُكتشف الخوادم التي تتطلب الموافقة على شروط الخدمة قبل الاستخدام بشكل صحيح الآن وتُحوّل إلى صفحة شروط الخدمة الخاصة بها، مما يسمح للمستخدم بالموافقة عليها بدلاً من فشل تحميل الحساب بصمت.</p>
+        <p xml:lang="ca">Els servidors que requereixen acceptar el TOS abans de l'ús ara es detecten correctament i redirigeixen a la seva pàgina web del TOS, que permet a l'usuari acceptar-lo en lloc de no carregar el compte en silenci.</p>
+        <p xml:lang="ca-valencia">Els servidors que requerixen acceptar TOS abans de l'ús ara es detecten correctament i redirigixen a la seua pàgina web de TOS, que permet a l'usuari acceptar-lo en lloc de no carregar el compte en silenci.</p>
+        <p xml:lang="he">שרתים שדורשים הסכמה לתנאי השירות לפי שאפשר להשתמש בהם מזוהים כעת ומופנים לעמוד תנאי השירות שלהם, כך מתאפשר למשתמש להסכים להם במקום להיכשל בשקט ולהיכשל בטעינת החשבון.</p>
+        <p xml:lang="it">I server che richiedono l'accettazione dei termini di servizio prima dell'utilizzo ora vengono rilevati correttamente e reindirizzano alla pagina web dei termini di servizio, consentendo all'utente di accettarli invece di bloccare silenziosamente il caricamento dell'account.</p>
+        <p xml:lang="nl">Servers die vereisen dat de gebruiker akkoord gaat met de gebruiksvoorwaarden voordat ze gebruikt kunnen worden, worden nu correct gedetecteerd en doorverwezen naar de pagina met de gebruiksvoorwaarden, waardoor de gebruiker hiermee akkoord kan gaan in plaats van dat het laden van het account stilzwijgend wordt geweigerd.</p>
+        <p xml:lang="pt-BR">Os servidores que exigem a aceitação dos Termos de Serviço antes do uso agora são detectados corretamente e redirecionam para a página dos Termos de Serviço, permitindo que o usuário os aceite em vez de simplesmente não conseguir carregar a conta.</p>
+        <p xml:lang="ru">Теперь серверы, требующие согласия с условиями использования перед началом работы, определяются корректно и перенаправляют пользователя на соответствующую веб-страницу, позволяя принять условия вместо аварийного завершения загрузки учётной записи.</p>
+        <p xml:lang="sl">Strežniki, ki pred uporabo zahtevajo strinjanje s pogoji uporabe, so zdaj pravilno zaznani in preusmerjajo na njihovo spletno stran s pogoji uporabe, kar uporabniku omogoča, da se z njimi strinja, namesto da se račun tiho ne naloži.</p>
+        <p xml:lang="uk">Сервери, які вимагають погодження з умовами використання перед використанням, у новій версії правильно виявляються та перенаправляють на свою вебсторінку з умовами використання, що надає змогу користувачеві погодитися з ними, замість того, щоб мовчки не завантажувати обліковий запис.</p>
+        <p>It is now possible to open a room into a new window. This allows you to view and interact with multiple rooms at the same time.</p>
+        <p xml:lang="ar">أصبح من الممكن الآن فتح غرفة في نافذة جديدة. يتيح هذا عرض غرف متعددة والتفاعل معها في الوقت ذاته.</p>
+        <p xml:lang="ca">Ara és possible obrir una sala en una finestra nova. Això permet veure i interactuar amb diverses sales alhora.</p>
+        <p xml:lang="ca-valencia">Ara és possible obrir una sala en una finestra nova. Açò permet veure i interactuar amb diverses sales alhora.</p>
+        <p xml:lang="he">מעתה ניתן לפתוח חדר בחלון חדש. כך ניתן לצפות ולהתנהל מול מגוון חדרים באותו הזמן.</p>
+        <p xml:lang="it">Ora è possibile aprire una stanza in una nuova finestra. Questo consente di visualizzare e interagire con più stanze contemporaneamente.</p>
+        <p xml:lang="nl">Het is nu mogelijk om een room in een nieuw venster te openen. Hierdoor kunt u meerdere kamers tegelijk bekijken en ermee werken.</p>
+        <p xml:lang="pt-BR">Agora é possível abrir uma sala em uma nova janela. Isso permite visualizar e interagir com várias salas ao mesmo tempo.</p>
+        <p xml:lang="ru">Добавлена возможность открытия комнаты в отдельном окне для одновременного просмотра и взаимодействия с несколькими комнатами.</p>
+        <p xml:lang="sl">Zdaj je mogoče odpreti sobo v novem oknu. To vam omogoča ogled in interakcijo z več sobami hkrati.</p>
+        <p xml:lang="uk">У новій версії можна відкрити кімнату у новому вікні. Це надає змогу переглядати та взаємодіяти з кількома кімнатами одночасно.</p>
+        <p>We added a few commands to NeoChat (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="ar">أُضيفت بضعة أوامر لنيوتشات (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="ca">Hem afegit algunes ordres al NeoChat (/shrug, /lenny, /join, /ignore...).</p>
+        <p xml:lang="ca-valencia">Hem afegit algunes ordres a NeoChat (/shrug, /lenny, /join, /ignore…).</p>
+        <p xml:lang="he">הוספנו מספר פקודות ל־NeoChat‏ (‎/shrug,‏ ‎/lenny,‏ ‎/join,‏ ‎/ignore, …).</p>
+        <p xml:lang="it">Abbiamo aggiunto alcuni comandi a NeoChat (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="nl">We hebben een paar commando's aan NeoChat toegevoegd (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="pt-BR">Adicionamos alguns comandos ao NeoChat (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="ru">Добавлены команды для NeoChat (/shrug, /lenny, /join, /ignore, …).</p>
+        <p xml:lang="sl">V NeoChat smo dodali nekaj ukazov (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p xml:lang="uk">Нами додано декілька команд NeoChat (/shrug, /lenny, /join, /ignore, ...).</p>
+        <p>We improved the Plasma integration a bit. Now the number of unread messages is displayed in the Plasma Taskbar.</p>
+        <p xml:lang="ar">حُسّن تكامل بلازما قليلاً. يُعرض الآن عدد الرسائل غير المقروءة في شريط مهام بلازما.</p>
+        <p xml:lang="ca">Hem millorat una mica la integració amb el Plasma. Ara es mostra el nombre de missatges sense llegir a la barra de tasques del Plasma.</p>
+        <p xml:lang="ca-valencia">Hem millorat una mica la integració amb Plasma. Ara es mostra el nombre de missatges sense llegir a la barra de tasques de Plasma.</p>
+        <p xml:lang="he">שיפרנו מעט את השילוב מול פלזמה. כעת מספר ההודעות שלא נקראות מופיע בשורת המשימות של פלזמה.</p>
+        <p xml:lang="it">Abbiamo migliorato leggermente l'integrazione con Plasma. Ora il numero di messaggi non letti viene visualizzato nella barra delle applicazioni di Plasma.</p>
+        <p xml:lang="nl">We hebben de Plasma-integratie iets verbeterd. Het aantal ongelezen berichten wordt nu weergegeven in de Plasma-taakbalk.</p>
+        <p xml:lang="pt-BR">Aprimoramos um pouco a integração com o Plasma. Agora, o número de mensagens não lidas é exibido na barra de tarefas do Plasma.</p>
+        <p xml:lang="ru">Улучшена интеграция с Plasma. Теперь число непрочитанных сообщений отображается в панели задач Plasma.</p>
+        <p xml:lang="sl">Nekoliko smo izboljšali integracijo s Plasmo. Zdaj je število neprebranih sporočil prikazano v opravilni vrstici Plasme.</p>
+        <p xml:lang="uk">Нами дещо удосконалено інтеграцію з Плазмою. Тепер кількість непрочитаних повідомлень буде показано на панелі завдань Плазми.</p>
+      </description>
+      <url>https://carlschwan.eu/2021/02/22/neochat-1.1/</url>
+    </release>
+    <release version="1.0.1" date="2021-01-13">
+      <description>
+        <p>This version fixes several bugs.</p>
+        <p xml:lang="ar">تُصلح هذه النسخة عدة علل.</p>
+        <p xml:lang="ca">Aquesta versió corregeix diversos errors.</p>
+        <p xml:lang="ca-valencia">Esta versió corregix diversos errors.</p>
+        <p xml:lang="es">Esta versión corrige algunos fallos.</p>
+        <p xml:lang="he">הגרסה הזאת מתקנת מגוון תקלות.</p>
+        <p xml:lang="it">Questa versione corregge diversi bug.</p>
+        <p xml:lang="nl">Deze versie verhelpt diverse fouten.</p>
+        <p xml:lang="pt-BR">Esta versão corrige vários bugs.</p>
+        <p xml:lang="ru">В этой версии исправлены несколько ошибок.</p>
+        <p xml:lang="sl">Ta različica odpravlja več napak.</p>
+        <p xml:lang="uk">У цій версії виправлено декілька вад.</p>
+        <ul>
+          <li>NeoChat doesn't require a .well-know configuration in the server to work.</li>
+          <li xml:lang="ar">لا يتطلب نيوتشات ضبط .well-know في الخادم ليعمل.</li>
+          <li xml:lang="ca">El NeoChat no requereix una configuració «.well-know» al servidor per a funcionar.</li>
+          <li xml:lang="ca-valencia">NeoChat no requerix una configuració «.well-know» al servidor per a funcionar.</li>
+          <li xml:lang="he">‏NeoChat לא דורש הגדרות ‎.well-know בשרת כדי לעבוד.</li>
+          <li xml:lang="it">Per funzionare, NeoChat non richiede una configurazione .well-know sul server.</li>
+          <li xml:lang="nl">NeoChat vereist geen .well-know-configuratie op de server om te functioneren.</li>
+          <li xml:lang="pt-BR">O NeoChat não requer uma configuração .well-know no servidor para funcionar.</li>
+          <li xml:lang="ru">Для работы NeoChat не требуется конфигурация .well-known на сервере;</li>
+          <li xml:lang="sl">NeoChat za delovanje ne potrebuje konfiguracije .well-know na strežniku.</li>
+          <li xml:lang="uk">Для роботи NeoChat не потрібні налаштування .well-know на сервері.</li>
+          <li>Edited messages won't show up duplicated anymore.</li>
+          <li xml:lang="ar">لن تظهر الرسائل المحررة مكررة بعد الآن.</li>
+          <li xml:lang="ca">Els missatges editats ja no es mostraran duplicats.</li>
+          <li xml:lang="ca-valencia">Els missatges editats ja no es mostraran duplicats.</li>
+          <li xml:lang="he">הודעות שנערכו לא תופענה עוד ככפולות.</li>
+          <li xml:lang="it">I messaggi modificati non saranno più visualizzati come duplicati.</li>
+          <li xml:lang="nl">Bewerkte berichten worden niet langer dubbel weergegeven.</li>
+          <li xml:lang="pt-BR">As mensagens editadas não aparecerão mais duplicadas.</li>
+          <li xml:lang="ru">Редактируемые сообщения больше не отображаются как дубликаты;</li>
+          <li xml:lang="sl">Urejena sporočila se ne bodo več prikazovala kot podvojena.</li>
+          <li xml:lang="uk">У новій версії усунено дублювання показу редагованих повідомлень.</li>
+          <li>Various graphic glitches have been fixed.</li>
+          <li xml:lang="ar">أُصلحت مشكلات رسومية متنوعة.</li>
+          <li xml:lang="ca">S'han corregit diversos errors gràfics.</li>
+          <li xml:lang="ca-valencia">S'han corregit diversos errors gràfics.</li>
+          <li xml:lang="he">מגוון עיוותים גרפיים תוקנו.</li>
+          <li xml:lang="it">Sono stati risolti vari problemi grafici.</li>
+          <li xml:lang="nl">Diverse grafische problemen zijn verholpen.</li>
+          <li xml:lang="pt-BR">Diversos problemas gráficos foram corrigidos.</li>
+          <li xml:lang="ru">Исправлены различные графические дефекты;</li>
+          <li xml:lang="sl">Odpravljene so bile različne grafične napake.</li>
+          <li xml:lang="uk">Виправлено різноманітні помилки у графіці програми.</li>
+          <li>NeoChat now ask for consent to terms and conditions if required instead of displaying nothing.</li>
+          <li xml:lang="ar">يطلب نيوتشات الآن الموافقة على الشروط والأحكام إذا كانت مطلوبة بدلاً من عدم عرض شيء.</li>
+          <li xml:lang="ca">El NeoChat ara demana consentiment als termes i condicions si es requereixen en lloc de no mostrar res.</li>
+          <li xml:lang="ca-valencia">NeoChat ara demana consentiment als termes i condicions si es requerixen en lloc de no mostrar res.</li>
+          <li xml:lang="he">NeoChat מבקש מעתה להסכים לתנאים ולהתניות במקרה הצורך במקום לא להציג כלום.</li>
+          <li xml:lang="it">NeoChat ora chiede il consenso ai termini e alle condizioni, se necessario, anziché non visualizzare nulla.</li>
+          <li xml:lang="nl">NeoChat vraagt ​​nu, indien nodig, om toestemming voor de algemene voorwaarden in plaats van niets weer te geven.</li>
+          <li xml:lang="pt-BR">O NeoChat agora solicita a aceitação dos termos e condições, se necessário, em vez de não exibir nada.</li>
+          <li xml:lang="ru">В NeoChat реализован запрос согласия с условиями использования, если это требуется;</li>
+          <li xml:lang="sl">NeoChat zdaj po potrebi zahteva soglasje s pogoji uporabe, namesto da ne prikaže ničesar.</li>
+          <li xml:lang="uk">У новій версії NeoChat просить про згоду з умовами користування, якщо це необхідно, замість того, щоб нічого не показувати.</li>
+          <li>Users avatar in the room list are now displayed correctly.</li>
+          <li xml:lang="ar">تُعرض صور المستخدمين الرمزية في قائمة الغرف بشكل صحيح الآن.</li>
+          <li xml:lang="ca">Els avatars d'usuaris a la llista de sales ara es mostren correctament.</li>
+          <li xml:lang="ca-valencia">Els avatars d'usuaris a la llista de sales ara es mostren correctament.</li>
+          <li xml:lang="he">התמונות הייצוגיות של המשתמשים מופיעות נכון מעתה ברשימת החדרים.</li>
+          <li xml:lang="it">Gli avatar degli utenti nell'elenco delle stanze ora vengono visualizzati correttamente.</li>
+          <li xml:lang="nl">De avatars van gebruikers worden nu correct weergegeven in de lijst met rooms.</li>
+          <li xml:lang="pt-BR">Os avatares dos usuários na lista de salas agora são exibidos corretamente.</li>
+          <li xml:lang="ru">Аватары пользователей в списке комнат отображаются корректно;</li>
+          <li xml:lang="sl">Uporabnikovi avatarji v seznamu sob so zdaj pravilno prikazani.</li>
+          <li xml:lang="uk">У новій версії програма належним чином показує аватари користувачів у списку кімнат.</li>
+          <li>Fix image saving</li>
+          <li xml:lang="ar">إصلاح حفظ الصور</li>
+          <li xml:lang="ca">Corregeix el desament de les imatges</li>
+          <li xml:lang="ca-valencia">Corregix la guardada de les imatges</li>
+          <li xml:lang="he">תוקנה שמירת תמונות</li>
+          <li xml:lang="it">Corregge il salvataggio delle immagini</li>
+          <li xml:lang="nl">Opslaan van afbeeldingen gerepareerd</li>
+          <li xml:lang="pt-BR">Corrigido salvamento de imagem</li>
+          <li xml:lang="ru">Исправлено сохранение изображений;</li>
+          <li xml:lang="sl">Popravi shranjevanje slike</li>
+          <li xml:lang="uk">Виправлено збереження зображень</li>
+        </ul>
+      </description>
+      <url>https://carlschwan.eu/2020/01/13/neochat-1.0.1/</url>
+    </release>
+    <release version="1.0" date="2020-12-23">
+      <description>
+        <p>Initial release of NeoChat, the KDE matrix client.</p>
+        <p xml:lang="ar">الإصدار الأولي لنيوتشات، عميل ماتركس لكيدي.</p>
+        <p xml:lang="ca">Versió inicial de NeoChat, el client de Matrix de KDE.</p>
+        <p xml:lang="ca-valencia">Versió inicial de NeoChat, el client de Matrix de KDE.</p>
+        <p xml:lang="he">המהדורה הראשונית של NeoChat, לקוח המטריקס של KDE.</p>
+        <p xml:lang="it">Versione iniziale di NeoChat, il client matrix di KDE.</p>
+        <p xml:lang="nl">Eerste versie van NeoChat, de KDE Matrix-client.</p>
+        <p xml:lang="pt-BR">Lançamento inicial do NeoChat, o cliente Matrix do KDE.</p>
+        <p xml:lang="ru">Первый выпуск NeoChat — клиента Matrix для KDE.</p>
+        <p xml:lang="sl">Začetna izdaja NeoChata, odjemalca matrixa za KDE.</p>
+        <p xml:lang="uk">Початковий випуск NeoChat, клієнта matrix KDE.</p>
+      </description>
+      <url>https://carlschwan.eu/2020/12/23/announcing-neochat-1.0-the-kde-matrix-client/</url>
+    </release>
+  </releases>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <branding>
+    <color type="primary" scheme_preference="light">#a6e4f3</color>
+    <color type="primary" scheme_preference="dark">#235670</color>
+  </branding>
+</component>

@@ -1,0 +1,5 @@
+# Upstream doesn’t provide a manpage
+kdialog: no-manual-page [usr/bin/kdialog]
+# Upstream doesn’t provide a manpage
+kdialog: no-manual-page [usr/bin/kdialog_progress_helper]
+

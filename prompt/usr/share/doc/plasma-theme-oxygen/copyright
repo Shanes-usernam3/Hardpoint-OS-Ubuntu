@@ -1,0 +1,321 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: oxygen
+Source: https://invent.kde.org/plasma/oxygen/
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2006-2007, Casper Boemann <cbr@boemann.dk>
+           2007-2009, Christoph Feck <christoph@maxiom.de>
+           2003-2004, David Johnson <david@usermode.org>
+           2009-2010, Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2001, Karol Szwed <gallium@kde.org>
+           2009, Long Huynh Huu <long.upcase@googlemail.com>
+           2004-2008, Lubos Lunak <l.lunak@kde.org>
+           2003, Maksim Orlovich <maksim.orlovich@kdemail.net>
+           2009, Matthew Woehlke <mw.triad@users.sourceforge.net>
+           2023 Nicolas Fella <nicolas.fella@gmx.de>
+           2006-2007, Riccardo Iaconelli <riccardo@kde.org>
+           2006-2007, Riccardo Iaconelli <ruphy@fsfe.org>
+           2003, Sandro Giessl <ceebx@users.sourceforge.net>
+           2007, Thomas Luebking <thomas.luebking@web.de>
+           2020 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+License: Expat
+
+Files: cursors/src/*
+Copyright: 2007-2008, David Miller <miller@oxygen-icons.org>
+           2007, Free Software Foundation, Inc. <http://fsf.org/>
+           2007-2008, Matthew Woehlke <mw_triad@users.sourceforge.net>
+           2007-2008, Riccardo Iaconelli <riccardo@kde.org>
+License: GPL-3+
+
+Files: kstyle/oxygenmnemonics.cpp
+       kstyle/oxygenmnemonics.h
+       kstyle/oxygensplitterproxy.cpp
+       kstyle/oxygensplitterproxy.h
+       kstyle/oxygenstyle.cpp
+       kstyle/oxygenstyle.h
+       kstyle/oxygenstylehelper.cpp
+       kstyle/oxygenstylehelper.h
+       kdecoration/oxygendecohelper.cpp
+       kdecoration/oxygendecohelper.h
+       liboxygen/oxygenhelper.cpp
+       liboxygen/oxygenhelper.h
+       liboxygen/oxygentileset.cpp
+       liboxygen/oxygentileset.h
+Copyright: 2007-2017, Casper Boemann <cbr@boemann.dk>
+           2001-2002, Chris Lee <clee@kde.org>
+           2000, Daniel M. Duley <mosfet@kde.org>
+           2015 David Edmundson <davidedmundson@kde.org>
+           2000, Dirk Mueller <mueller@kde.org>
+           2001-2007, Fredrik H?glund <fredrik@kde.org>
+           2009-2013, Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2001-2002, Karol Szwed <gallium@kde.org>
+           2008, Long Huynh Huu <long.upcase@googlemail.com>
+           2002-2003, Maksim Orlovich <mo002j@mail.rochester.edu>
+           2002, Malte Starostik <malte@kde.org>
+           2001, Martijn Klingens <klingens@kde.org>
+           2007, Matthew Woehlke <mw_triad@users.sourceforge.net>
+           2003-2005, Sandro Giessl <sandro@giessl.com>
+           2011, Thomas Luebking <thomas.luebking@web.de>
+License: LGPL-2
+
+Files: kstyle/animations/oxygenbusyindicatordata.cpp
+       kstyle/animations/oxygentabbardata.h
+       kstyle/animations/oxygentabbarengine.cpp
+       kstyle/animations/oxygentabbarengine.h
+       kstyle/config/oxygenstyleconfigmodule.cpp
+       kstyle/config/oxygenstyleconfigmodule.h
+       kstyle/oxygen.h
+       kstyle/oxygenstyleplugin.cpp
+       kstyle/oxygenstyleplugin.h
+       kstyle/oxygenwindowmanager.h
+       kdecoration/config-oxygen.h.cmake
+       liboxygen/config-liboxygen.h.cmake
+       liboxygen/liboxygen.h
+       lookandfeel/contents/splash/Splash.qml
+Copyright: 1989-1991, Free Software Foundation, Inc
+           2014, Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2014, Marco Martin <mart@kde.org>
+License: GPL-2+
+
+Files: kstyle/oxygenpropertynames.cpp
+       kstyle/oxygenpropertynames.h
+       kstyle/demo/oxygenstylechooser.cpp
+       kstyle/demo/oxygenstylechooser.h
+Copyright: 2003-2010, Craig <Drummond,craig.p.drummond@gmail.com>
+           2012, Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2016 René J.V. Bertin <rjvbertin@gmail.com>
+License: LGPL-2+
+
+Files: kdecoration/oxygensettingsprovider.h
+       kdecoration/oxygen.h
+       kdecoration/oxygenbutton.h
+       kdecoration/oxygensettingsprovider.cpp
+       kdecoration/oxygendecoration.h
+       kdecoration/oxygendecoration.cpp
+       kdecoration/oxygenbutton.cpp
+Copyright: 2015 David Edmundson <davidedmundson@kde.org>
+           2014 Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2006, 2007 Casper Boemann <cbr@boemann.dk>
+           2014 Martin Gräßlin <mgraesslin@kde.org>
+           2006, 2007 Riccardo Iaconelli <riccardo@kde.org>
+License: GPL-2+3+KDEeV
+
+Files: kstyle/animations/oxygentabbardata.cpp
+       kstyle/oxygenwindowmanager.cpp
+Copyright: 2009-2014, Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2007, Thomas Luebking <thomas.luebking@web.de>
+License: GPL-2+Expat
+
+Files: kstyle/demo/oxygenschemechooser.cpp
+       kstyle/demo/oxygenschemechooser.h
+Copyright: 2017 René J.V. Bertin <rjvbertin@gmail.com>
+           2016 Zhigalin Alexander <alexander@zhigalin.tk>
+License: LGPL-3+KDEeV
+
+Files: .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2014, Jonathan Riddell <jriddell@ubuntu.com>
+           2024 Patrick Franz <deltaone@debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: LGPL-2
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License version 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2+
+ This  library is free  software; you can  redistribute it and/or
+ modify it  under  the terms  of the  GNU Lesser  General  Public
+ License  as published  by the Free  Software  Foundation; either
+ version 2 of the License, or( at your option ) any later version.
+ .
+ This library is distributed  in the hope that it will be useful,
+ but  WITHOUT ANY WARRANTY; without even  the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License  along  with  this library;  if not,  write to  the Free
+ Software Foundation, Inc., 51  Franklin St, Fifth Floor, Boston,
+ MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: GPL-2+Expat
+ /*************************************************************************
+  * Copyright (C) 2014 by Hugo Pereira Da Costa <hugo.pereira@free.fr>    *
+  *                                                                       *
+  * This program is free software; you can redistribute it and/or modify  *
+  * it under the terms of the GNU General Public License as published by  *
+  * the Free Software Foundation; either version 2 of the License, or     *
+  * (at your option) any later version.                                   *
+  *                                                                       *
+  * This program is distributed in the hope that it will be useful,       *
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+  * GNU General Public License for more details.                          *
+  *                                                                       *
+  * You should have received a copy of the GNU General Public License     *
+  * along with this program; if not, write to the                         *
+  * Free Software Foundation, Inc.,                                       *
+  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+  *************************************************************************/
+ .
+ //////////////////////////////////////////////////////////////////////////////
+ // oxygentabbardata.cpp
+ // data container for QTabBar animations
+ // -------------------
+ //
+ // Copyright (c) 2009 Hugo Pereira Da Costa <hugo.pereira@free.fr>
+ //
+ // Permission is hereby granted, free of charge, to any person obtaining a copy
+ // of this software and associated documentation files (the "Software"), to
+ // deal in the Software without restriction, including without limitation the
+ // rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ // sell copies of the Software, and to permit persons to whom the Software is
+ // furnished to do so, subject to the following conditions:
+ //
+ // The above copyright notice and this permission notice shall be included in
+ // all copies or substantial portions of the Software.
+ //
+ // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ // IN THE SOFTWARE.
+ //////////////////////////////////////////////////////////////////////////////
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".
+
+License: LGPL-3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: GPL-2+3+KDEeV
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License or (at your option) version 3 or any later version
+ accepted by the membership of KDE e.V. (or its successor approved
+ by the membership of KDE e.V.), which shall act as a proxy
+ defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the full text of the GNU General Public License version 2
+ can be found in the file `/usr/share/common-licenses/GPL-2', likewise, the full
+ text of the GNU General Public License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.

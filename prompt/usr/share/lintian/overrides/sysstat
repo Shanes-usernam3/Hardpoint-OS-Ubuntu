@@ -1,0 +1,4 @@
+# These man pages document internal programs shipped in /usr/libexec/sysstat
+sysstat: spare-manual-page [usr/share/man/man8/sa1.8.gz]
+sysstat: spare-manual-page [usr/share/man/man8/sa2.8.gz]
+sysstat: spare-manual-page [usr/share/man/man8/sadc.8.gz]

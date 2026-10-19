@@ -1,0 +1,2 @@
+# Takes no command line options
+libbaloowidgets-bin: no-manual-page [usr/bin/baloo_filemetadata_temp_extractor]

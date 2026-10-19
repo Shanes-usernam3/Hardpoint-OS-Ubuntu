@@ -1,0 +1,6 @@
+# to make lintian/ftp-master happy :-/
+embedded-library usr/lib/*/libQt6Pdf.so.6.*.*: freetype
+embedded-library usr/lib/*/libQt6Pdf.so.6.*.*: lcms2
+
+libqt6pdf6: embedded-library freetype [usr/lib/*/libQt6Pdf.so.6.*.*]
+libqt6pdf6: embedded-library lcms2 [usr/lib/*/libQt6Pdf.so.6.*.*]

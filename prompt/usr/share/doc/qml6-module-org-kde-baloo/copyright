@@ -1,0 +1,592 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: baloo
+Source: https://invent.kde.org/frameworks/baloo
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2015, Ashish Bansal <bansal.ashish096@gmail.com>
+           2016, Christian Ehrlicher <ch.ehrlicher@gmx.de>
+           2017-2018, James D. Smith <smithjd15@gmail.com>
+           2018, Michael Heidelbach <ottwolt@gmail.com>
+           2015, Pinak Ahuja <pinak.ahuja@gmail.com>
+           2010-2011, Sebastian Trueg <trueg@kde.org>
+           2020, Stefan Brüns <bruns@kde.org>
+           2021, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2010, Tobias Koenig <tokoe@kde.org>
+           2010-2014, Vishesh Handa <handa.vish@gmail.com>
+           2012-2015, Vishesh Handa <me@vhanda.in>
+           2013-2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: po/*
+Copyright: 2014-2024, A S Alam <aalam@users.sf.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2023, Enol P. <enolp@softastur.org>
+           2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2023, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2022-2024, Kishore G <kishore96@gmail.com>
+           2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2024, Stefan Asserhäll <stefan.asserhall@bredband.net>
+           2013-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2014-2024, Steve Allewell <steve.allewell@gmail.com>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2020-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2023-2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2021-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: cmake/FindLMDB.cmake
+Copyright: 2013 Conrad Steenberg <conrad.steenberg@gmail.com,
+           2006, Laurent Montel <montel@kde.org>
+License: BSD-3-Clause
+Comment: Manually collected
+
+Files: src/engine/valgrind.h
+Copyright: 2000-2017, Julian Seward. All rights reserved.
+License: bzip2-1.0.6
+
+Files: .gitlab-ci.yml
+Copyright: 2020, Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: autotests/unit/file/kinotifytest.cpp
+       src/engine/experimental/databasesanitizer.cpp
+       src/engine/experimental/databasesanitizer.h
+       src/kioworkers/timeline/kio_timeline.cpp
+       src/tools/balooctl/main.cpp
+       src/tools/balooshow/main.cpp
+       src/tools/experimental/baloodb/main.cpp
+Copyright: 2018, Michael Heidelbach <heidelbach@web.de>
+           2018, Michael Heidelbach <ottwolt@gmail.com>
+           2010, Sebastian Trueg <trueg at kde.org>
+           2009-2010, Sebastian Trueg <trueg@kde.org>
+           2018-2020, Stefan Brüns <bruns@kde.org>
+           2012-2015, Vishesh Handa <me@vhanda.in>
+           2014, Vishesh Handa <vhanda@kde.org>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: src/kioworkers/search/kio_search.cpp
+Copyright: 2008-2010, Sebastian Trueg <trueg at kde.org>
+           2020, Stefan Brüns <bruns@kde.org>
+           2012-2014, Vishesh Handa <me@vhanda.in>
+License: GPL-2.0-or-later
+
+Files: src/engine/fsutils.cpp
+       src/file/fileexcludefilters.cpp
+       src/file/fileexcludefilters.h
+       src/file/fileindexerconfig.cpp
+       src/file/fileindexerconfig.h
+       src/file/filewatch.cpp
+       src/file/filewatch.h
+       src/file/kinotify.cpp
+       src/file/kinotify.h
+       src/file/metadatamover.cpp
+       src/file/metadatamover.h
+       src/file/powerstatemonitor.cpp
+       src/file/powerstatemonitor.h
+       src/file/priority.cpp
+       src/file/priority.h
+       src/kioworkers/common/udstools.h
+       src/kioworkers/common/usergroupcache.h
+       src/kioworkers/timeline/timelinetools.h
+       src/qml/queryresultsmodel.cpp
+       src/qml/queryresultsmodel.h
+Copyright: 2014, Alex Richardson <arichardson@kde.org>
+           2014, Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+           2020, Benjamin Port <benjamin.port@enioka.com>
+           1999, Carsten Pfeiffer <pfeiffer@kde.org>
+           2014, Daniel Vrátil <dvratil@redhat.com>
+           1999-2005, David Faure <faure@kde.org>
+           2018, Friedrich W. H. Kossebau <kossebau@kde.org>
+           2006-2007, Jos van den Oever <jos@vandenoever.info>
+           2007-2011, Sebastian Trueg <trueg@kde.org>
+           2020, Stefan Brüns <bruns@kde.org>
+           2007, Thiago Macieira <thiago@kde.org>
+           2005, Till Adam <adam@kde.org>
+           2010, Tobias Koenig <tokoe@kde.org>
+           2012-2014, Vishesh Handa <me@vhanda.in>
+           2010-2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.0-or-later
+
+Files: autotests/integration/basicindexingbenchmark.cpp
+       autotests/unit/codecs/positioncodectest.cpp
+       autotests/unit/file/extractorcommandpipetest.cpp
+       autotests/unit/file/extractorcommandpipe_worker.cpp
+       autotests/unit/file/extractorprocess_fake.cpp
+       autotests/unit/file/extractorprocesstest.cpp
+       autotests/unit/file/fileindexerconfigtest.cpp
+       autotests/unit/file/fileindexerconfigutils.h
+       autotests/unit/file/filtereddiriteratortest.cpp
+       autotests/unit/file/pendingfilequeuetest.cpp
+       autotests/unit/file/testsconfig.h.in
+       autotests/unit/file/unindexedfileiteratortest.cpp
+       src/engine/fsutils.h
+       src/engine/global.cpp
+       src/engine/global.h
+       src/engine/idutils.h
+       src/engine/indexerstate.cpp
+       src/engine/indexerstate.h
+       src/file/basicindexingjob.cpp
+       src/file/basicindexingjob.h
+       src/file/extractor/app.cpp
+       src/file/extractor/app.h
+       src/file/extractor/commandpipe.cpp
+       src/file/extractor/commandpipe.h
+       src/file/extractor/main.cpp
+       src/file/extractor/result.cpp
+       src/file/extractor/result.h
+       src/file/main.cpp
+       src/file/pendingfilequeue.cpp
+       src/file/pendingfilequeue.h
+       src/file/regexpcache.cpp
+       src/file/regexpcache.h
+       src/file/storagedevices.cpp
+       src/file/storagedevices.h
+       src/file/timeestimator.cpp
+       src/file/timeestimator.h
+       src/file/unindexedfileindexer.cpp
+       src/file/unindexedfileindexer.h
+       src/kioworkers/kded/baloosearchmodule.cpp
+       src/kioworkers/kded/baloosearchmodule.h
+       src/kioworkers/search/kio_search.h
+       src/kioworkers/tags/kio_tags.cpp
+       src/kioworkers/tags/kio_tags.h
+       src/kioworkers/timeline/kio_timeline.h
+       src/kioworkers/timeline/timelinetools.cpp
+       src/lib/file.cpp
+       src/lib/file.h
+       src/lib/query.cpp
+       src/lib/query.h
+       src/lib/queryrunnable.cpp
+       src/lib/queryrunnable.h
+       src/lib/resultiterator.cpp
+       src/lib/resultiterator.h
+       src/lib/searchstore.cpp
+       src/lib/searchstore.h
+       src/lib/term.cpp
+       src/lib/term.h
+       src/qml/experimental/monitor.cpp
+       src/qml/experimental/monitor.h
+       src/tools/balooctl/indexer.cpp
+       src/tools/balooctl/indexer.h
+       src/tools/balooctl/monitorcommand.cpp
+       src/tools/balooctl/monitorcommand.h
+       src/tools/baloosearch/main.cpp
+       tests/benchmarks/unindexedfileiteratortest.cpp
+       tests/engine/documenturldbtest.cpp
+       tests/engine/memorytest.cpp
+       tests/engine/writeiotest.cpp
+       tests/file/filtereddiriteratorbenchmark.cpp
+       tests/file/indexerconfigtest.cpp
+       tests/file/inotify.cpp
+       tests/file/remainingtimetest.cpp
+       tests/file/storagedevicestest.cpp
+       tests/file/util.h
+Copyright: 2015, Ashish Bansal <bansal.ashish096@gmail.com>
+           2016, Christian Ehrlicher <ch.ehrlicher@gmx.de>
+           2017-2018, James D. Smith <smithjd15@gmail.com>
+           2018, Michael Heidelbach <ottwolt@gmail.com>
+           2015, Pinak Ahuja <pinak.ahuja@gmail.com>
+           2010-2011, Sebastian Trueg <trueg@kde.org>
+           2020, Stefan Brüns <bruns@kde.org>
+           2021-2023, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2010, Tobias Koenig <tokoe@kde.org>
+           2010-2014, Vishesh Handa <handa.vish@gmail.com>
+           2012-2015, Vishesh Handa <me@vhanda.in>
+           2013-2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: autotests/benchmarks/positioncodecbenchmark.cpp
+       autotests/integration/dbstate.h
+       autotests/integration/querytest.cpp
+       autotests/integration/writetransactiontest.cpp
+       autotests/unit/codecs/doctermscodectest.cpp
+       autotests/unit/codecs/postingcodectest.cpp
+       autotests/unit/engine/andpostingiteratortest.cpp
+       autotests/unit/engine/dbtest.cpp
+       autotests/unit/engine/dbtest.h
+       autotests/unit/engine/documentdatadbtest.cpp
+       autotests/unit/engine/documentdbtest.cpp
+       autotests/unit/engine/documentiddbtest.cpp
+       autotests/unit/engine/documenttimedbtest.cpp
+       autotests/unit/engine/documenturldbtest.cpp
+       autotests/unit/engine/idfilenamedbtest.cpp
+       autotests/unit/engine/idtreedbtest.cpp
+       autotests/unit/engine/mtimedbtest.cpp
+       autotests/unit/engine/orpostingiteratortest.cpp
+       autotests/unit/engine/phraseanditeratortest.cpp
+       autotests/unit/engine/positiondbtest.cpp
+       autotests/unit/engine/postingdbtest.cpp
+       autotests/unit/engine/postingiteratortest.cpp
+       autotests/unit/engine/termgeneratortest.cpp
+       autotests/unit/file/basicindexingjobtest.cpp
+       autotests/unit/file/filewatchtest.cpp
+       autotests/unit/file/metadatamovertest.cpp
+       autotests/unit/file/propertyserializationtest.cpp
+       autotests/unit/lib/advancedqueryparsertest.cpp
+       autotests/unit/lib/filefetchjobtest.cpp
+       autotests/unit/lib/filemonitortest.cpp
+       autotests/unit/lib/queryserializationtest.cpp
+       src/codecs/doctermscodec.cpp
+       src/codecs/doctermscodec.h
+       src/codecs/positioncodec.cpp
+       src/codecs/positioncodec.h
+       src/codecs/postingcodec.cpp
+       src/codecs/postingcodec.h
+       src/engine/andpostingiterator.cpp
+       src/engine/andpostingiterator.h
+       src/engine/database.cpp
+       src/engine/databasedbis.h
+       src/engine/database.h
+       src/engine/databasesize.h
+       src/engine/document.cpp
+       src/engine/documentdatadb.cpp
+       src/engine/documentdatadb.h
+       src/engine/documentdb.cpp
+       src/engine/documentdb.h
+       src/engine/document.h
+       src/engine/documentiddb.cpp
+       src/engine/documentiddb.h
+       src/engine/documentoperations.h
+       src/engine/documenttimedb.cpp
+       src/engine/documenttimedb.h
+       src/engine/documenturldb.cpp
+       src/engine/documenturldb.h
+       src/engine/enginequery.cpp
+       src/engine/enginequery.h
+       src/engine/idfilenamedb.cpp
+       src/engine/idfilenamedb.h
+       src/engine/idtreedb.cpp
+       src/engine/idtreedb.h
+       src/engine/mtimedb.cpp
+       src/engine/mtimedb.h
+       src/engine/orpostingiterator.cpp
+       src/engine/orpostingiterator.h
+       src/engine/phraseanditerator.cpp
+       src/engine/phraseanditerator.h
+       src/engine/positiondb.cpp
+       src/engine/positiondb.h
+       src/engine/positioninfo.h
+       src/engine/postingdb.cpp
+       src/engine/postingdb.h
+       src/engine/postingiterator.cpp
+       src/engine/postingiterator.h
+       src/engine/termgenerator.cpp
+       src/engine/termgenerator.h
+       src/engine/transaction.cpp
+       src/engine/transaction.h
+       src/engine/vectorpositioninfoiterator.cpp
+       src/engine/vectorpositioninfoiterator.h
+       src/engine/vectorpostingiterator.cpp
+       src/engine/vectorpostingiterator.h
+       src/engine/writetransaction.cpp
+       src/engine/writetransaction.h
+       src/file/extractorprocess.cpp
+       src/file/extractorprocess.h
+       src/file/filecontentindexer.cpp
+       src/file/filecontentindexer.h
+       src/file/filecontentindexerprovider.cpp
+       src/file/filecontentindexerprovider.h
+       src/file/fileindexscheduler.cpp
+       src/file/fileindexscheduler.h
+       src/file/filtereddiriterator.cpp
+       src/file/filtereddiriterator.h
+       src/file/firstrunindexer.cpp
+       src/file/firstrunindexer.h
+       src/file/indexcleaner.cpp
+       src/file/indexcleaner.h
+       src/file/mainhub.cpp
+       src/file/mainhub.h
+       src/file/migrator.cpp
+       src/file/migrator.h
+       src/file/modifiedfileindexer.cpp
+       src/file/modifiedfileindexer.h
+       src/file/newfileindexer.cpp
+       src/file/newfileindexer.h
+       src/file/pendingfile.cpp
+       src/file/pendingfile.h
+       src/file/propertydata.cpp
+       src/file/propertydata.h
+       src/file/unindexedfileiterator.cpp
+       src/file/unindexedfileiterator.h
+       src/file/xattrindexer.cpp
+       src/file/xattrindexer.h
+       src/lib/advancedqueryparser.cpp
+       src/lib/advancedqueryparser.h
+       src/lib/filemonitor.cpp
+       src/lib/filemonitor.h
+       src/lib/indexerconfig.cpp
+       src/lib/indexerconfig.h
+       src/lib/taglistjob.cpp
+       src/lib/taglistjob.h
+       src/tools/balooctl/command.cpp
+       src/tools/balooctl/command.h
+       src/tools/balooctl/configcommand.cpp
+       src/tools/balooctl/configcommand.h
+       src/tools/balooctl/statuscommand.cpp
+Copyright: 2020, Benjamin Port <benjamin.port@enioka.com>
+           2016, Christoph Cullmann <cullmann@kde.org>
+           2014, Denis Steckelmacher <steckdenis@yahoo.fr>
+           2014-2015, Pinak Ahuja <pinak.ahuja@gmail.com>
+           2019, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+           2013-2015, Vishesh Handa <me@vhanda.in>
+           2013-2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.1-or-later
+
+Files: src/codecs/coding.cpp
+       src/codecs/coding.h
+Copyright: 2011, The LevelDB Authors. All rights reserved.
+           2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.1-or-later AND BSD-3-Clause
+
+Files: src/lib/result_p.h
+Copyright: 2021, Stefan Brüns <stefan.bruens@rwth-aachen.de>
+License: LGPL-2.1-or-later OR LicenseRef-KDE-Accepted-LGPL
+
+Files: debian/*
+Copyright: 2022-2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2014 Scarlett Clark <scarlett@scarlettgatelyclark.com>
+License: LGPL-2.0-or-later
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: bzip2-1.0.6
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. The origin of this software must not be misrepresented; you must
+ not claim that you wrote the original software. If you use this
+ software in a product, an acknowledgment in the product
+ documentation would be appreciated but is not required.
+ .
+ 3. Altered source versions must be plainly marked as such, and must
+ not be misrepresented as being the original software.
+ .
+ 4. The name of the author may not be used to endorse or promote
+ products derived from this software without specific prior written
+ permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ Julian Seward, jseward@bzip.org bzip2/libbzip2 version 1.0.6 of 6
+ September 2010
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-3.0-only
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GPL License as published by the Free
+ Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version that is accepted by the membership
+ of KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy as defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.

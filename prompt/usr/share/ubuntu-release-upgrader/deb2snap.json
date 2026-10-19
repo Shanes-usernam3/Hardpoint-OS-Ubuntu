@@ -1,0 +1,71 @@
+{
+    "seeded": {
+        "core24": {
+            "from_channel": "stable",
+            "to_channel": "stable",
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true
+        },
+        "firmware-updater": {
+            "metapkg": "ubuntu-desktop-minimal",
+            "force_switch": true,
+            "from_channel": "1/stable/ubuntu-{FROM_VERSION}",
+            "to_channel": "1/stable/ubuntu-{TO_VERSION}"
+        },
+        "gnome-46-2404": {
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true
+        },
+        "mesa-2404": {
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true
+        },
+        "gtk-common-themes": {
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true
+        },
+        "snap-store": {
+            "deb": "gnome-software",
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true,
+            "from_channel": "2/stable/ubuntu-{FROM_VERSION}",
+            "to_channel": "2/stable/ubuntu-{TO_VERSION}"
+        },
+        "snapd-desktop-integration": {
+            "metapkg": "ubuntu-desktop-minimal",
+            "force_switch": true
+        },
+        "desktop-security-center": {
+            "metapkg": "ubuntu-desktop-minimal",
+            "to_channel": "1/stable/ubuntu-{TO_VERSION}",
+            "force_switch": true
+        },
+        "prompting-client": {
+            "metapkg": "ubuntu-desktop-minimal",
+            "to_channel": "1/stable/ubuntu-{TO_VERSION}",
+            "force_switch": true
+        },
+        "firefox": {
+            "metapkg": "ubuntu-desktop-minimal",
+            "force_switch": true
+        },
+        "thunderbird": {
+            "metapkg": "ubuntu-desktop",
+            "force_switch": true
+        }
+    },
+    "unseeded": {
+        "gnome-calculator": {
+            "deb": "gnome-calculator",
+            "metapkg": "ubuntu-desktop"
+        },
+        "gnome-characters": {
+            "deb": "gnome-characters",
+            "metapkg": "ubuntu-desktop"
+        },
+        "gnome-logs": {
+            "deb": "gnome-logs",
+            "metapkg": "ubuntu-desktop"
+        }
+    }
+}

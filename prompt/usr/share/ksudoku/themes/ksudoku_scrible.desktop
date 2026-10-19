@@ -1,0 +1,163 @@
+[KGameTheme]
+Name=Scribble
+Name[ar]=خربشة
+Name[bs]=Piskaranje
+Name[ca]=Scribble
+Name[ca@valencia]=Scribble
+Name[cs]=Scribble
+Name[da]=Scribble
+Name[de]=Scribble
+Name[el]=Scribble
+Name[en_GB]=Scribble
+Name[eo]=Scribble
+Name[es]=Garabatos
+Name[et]=Scribble
+Name[eu]=Zirriborroa («Scribble»)
+Name[fa]=بد خط
+Name[fi]=Scribble
+Name[fr]=Scribble
+Name[ga]=Scribble
+Name[gl]=Manuscrito
+Name[he]=שבץ־נא
+Name[hne]=स्क्रिबल
+Name[hr]=Scribble
+Name[hu]=Scribble
+Name[it]=Scarabocchio
+Name[ja]=落書き
+Name[ka]=სკრიბლი
+Name[kk]=Шимай
+Name[km]=គូរ​វាស
+Name[ko]=낙서
+Name[lv]=Scribble
+Name[ml]=സ്‌ക്രിബിൾ
+Name[mr]=स्क्रिबल
+Name[nb]=Scribble
+Name[nds]=Kritteln
+Name[nl]=Scribble
+Name[nn]=Rabling
+Name[pl]=Scribble
+Name[pt]=Scribble
+Name[pt_BR]=Rabisco
+Name[ro]=Scribble
+Name[ru]=Мазня
+Name[sa]=स्क्रिबल
+Name[sk]=Scribble
+Name[sl]=Čačke
+Name[sq]=Scribble
+Name[sr]=Пискарало
+Name[sr@ijekavian]=Пискарало
+Name[sr@ijekavianlatin]=Piskaralo
+Name[sr@latin]=Piskaralo
+Name[sv]=Kladd
+Name[te]=స్క్రిబ్బిల్
+Name[tr]=Scribble
+Name[uk]=Шкрябанина
+Name[wa]=Scribble
+Name[zh_CN]=涂鸦
+Name[zh_TW]=Scribble
+Description=KSudoku Scribble theme for KDE 4
+Description[ar]=سمة خربشة لكسودوكو لكِيدِي 4
+Description[bs]=KSudoku Piskaranje tema za KDE 4
+Description[ca]=Tema Scribble per al KSudoku per al KDE 4
+Description[ca@valencia]=Tema Scribble per a KSudoku per a KDE 4
+Description[da]=KSudoku Scrible-tema til KDE 4
+Description[de]=Ein Scribble-Design für KSudoku in KDE 4.
+Description[el]=Θέμα Scribble του KSudoku για το KDE 4
+Description[en_GB]=KSudoku Scribble theme for KDE 4
+Description[eo]=KSudoku Scribble-etoso por KDE 4
+Description[es]=Tema Garabatos de KSudoku para KDE 4
+Description[et]=KSudoku KDE4 Scribble teema
+Description[eu]=KDE 4rako KSudoku Zirriborroa («Scribble») gaia
+Description[fi]=KSudokun Scribble-teema KDE4:lle
+Description[fr]=Thème « Scribble » pour KSudoku de KDE 4
+Description[ga]=Téama Scribble KSudoku le haghaidh KDE 4
+Description[gl]=Tema visual de garabatos de KSudoku para KDE 4
+Description[he]=ערכת עיצוב של שבץ־נא ל־KSudoku עבור KDE 4
+Description[hu]=KSudoku Scribble téma a KDE 4-hez
+Description[it]=Il tema Scribble per KSudoku in KDE4
+Description[ka]=KSudoku-ის მიჯღაბნილი თემა KDE 4-სთვის
+Description[kk]=KSudoku "шимайы" KDE4-тің нақышы
+Description[km]=ស្បែក​គូស​វាស​របស់ KSudoku  សម្រាប់ KDE 4
+Description[ko]=KDE 4용 KSudoku 낙서 테마
+Description[lv]=„KSudoku“ ar KDE 4 „Scribble“ motīvu
+Description[ml]=കെ‌ഡി‌ഇ 4 നായുള്ള കെ‌സുഡോകു സ്‌ക്രിബിൾ തീം
+Description[nb]=KSudoku rabletema for KDE4
+Description[nds]=KSudoku-Krittelmuster för KDE 4
+Description[nl]=KSudoku Scribble-thema voor KDE 4
+Description[nn]=«Handteikna» sudokubrett.
+Description[pl]=Wystrój Scribble dla KSudoku w KDE 4
+Description[pt]=Tema do Scribble para o KSudoku do KDE 4
+Description[pt_BR]=Tema rabisco do KSudoku para o KDE 4
+Description[ru]=Небрежное оформление для KSudoku из KDE4
+Description[sa]=KDE 4 कृते KSudoku Scribble विषयः
+Description[sk]=KSudoku Scribble téma pre KDE 4
+Description[sl]=Tema Čačke KSudoku za KDE4
+Description[sr]=Рукописана тема К‑судокуа за КДЕ‑4
+Description[sr@ijekavian]=Рукописана тема К‑судокуа за КДЕ‑4
+Description[sr@ijekavianlatin]=Rukopisana tema K‑sudokua za KDE4
+Description[sr@latin]=Rukopisana tema K‑sudokua za KDE4
+Description[sv]=Kladdtema för Ksudoku i KDE4
+Description[tr]=KDE4 için K Sudoku Scrible teması
+Description[uk]=Тема «Карлючки» KSudoku для KDE 4
+Description[zh_CN]=为 KDE 4 设计的 KSudoku 涂鸦主题
+Description[zh_TW]=KSudoku 在 KDE4 的 Scribble 主題
+VersionFormat=1
+Author=Johannes Bergmeier
+AuthorEmail=Johannes.Bergmeier@gmx.net
+Type=SVG
+FileName=ksudoku_scrible.svgz
+Preview=scribble_preview.png
+
+[Graphics]
+#### Background ####
+Background=background
+
+#### Cells ####
+Cell=cell
+Cell-Given=cell
+Cell-Mistake=cell_mistake1,cell_mistake2
+Cell-Marker=cell
+
+#### Cells3D ####
+Cell-3D=cell3d
+Cell-3D-Given=cell3d
+Cell-3D-Mistake=cell3d
+Cell-3D-Marker=cell3d
+
+#### Cursor ####
+Cursor=cursor
+
+#### Groups,Borders,Highlights ####
+# %1 gets replaced with the digits for the belonging neighbour-cells
+# if no
+Group-Column=
+Group-Column-Highlighted=column_h1_%1, column_h2_%1
+Group-Row=
+Group-Row-Highlighted=row_h1_%1, row_h2_%
+Group-Block=block_%1
+Group-Block-Highlighed=block_h1_%1, block_h2_%1, block_h3_%1
+Group-Special=special_%1
+Group-Special-Highlighted=special_h1_%1, special_h2_%1, special_h3_%1
+
+#### Positions of symbols ####
+# %1 for markers gets replaced with the value of the symbol to be positioned
+# %2 for markers gets replaced with the biggest number (=9 in normal sudoku)
+Symbol-Pos=symbol_1
+Symbol-PosRelativeTo=cell_symbol
+Marker-Pos=markers%2_%1
+Marker-PosRelativeTo=cell_markers%2
+Symbol-3D-Pos=symbol3d_1
+Symbol-3D-PosRelativeTo=cell3d_symbols
+Marker-3D-Pos=markers%2_%1
+Marker-3D-PosRelativeTo=cell_markers%2
+
+
+#### Symbols ####
+# %1 gets replaced by the symbol
+# %2 gets replaced by the symbol-theme-name
+Symbols=symbol_%2_%1_1,symbol_%2_%1_2,symbol_%2_%1_3
+Symbols-Mistake=symbol_%2_%1_1,symbol_%2_%1_2,symbol_%2_%1_3
+Symbols-Given=given_%2_%1
+Symbols-3D=symbol_%2_%1_1,symbol_%2_%1_2,symbol_%2_%1_3
+Symbols-3D-Mistake=(symbol_%2_%1_1,symbol_%2_%1_2,symbol_%2_%1_3
+Symbols-3D-Given=given_%2_%1

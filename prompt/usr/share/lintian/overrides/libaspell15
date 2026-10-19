@@ -1,0 +1,11 @@
+# These .info files are not documentation
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/context-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/ddtp-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/debctrl-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/email-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/html-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/markdown-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/nroff-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/sgml-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/tex-filter.info]
+libaspell15: package-contains-documentation-outside-usr-share-doc [usr/lib/aspell/*/texinfo-filter.info]

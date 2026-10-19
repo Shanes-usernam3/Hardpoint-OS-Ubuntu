@@ -1,0 +1,196 @@
+#!/bin/python3 -su
+
+# pylint: disable=invalid-name,broad-exception-caught
+
+"""
+A simple app for helping the user choose whether to launch Discover or
+Synaptic.
+"""
+
+import sys
+import subprocess
+import traceback
+import signal
+from typing import NoReturn
+from types import FrameType
+
+from PyQt6.QtCore import Qt, QTimer
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import (
+    QApplication,
+    QDialog,
+    QHBoxLayout,
+    QLabel,
+    QMessageBox,
+    QPushButton,
+    QVBoxLayout,
+    QWidget,
+    QSpacerItem,
+    QSizePolicy,
+)
+
+
+# pylint: disable=too-few-public-methods
+class ManageSoftwareWindow(QDialog):
+    """
+    The application's primary window.
+    """
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        """
+        Constructor for primary window. Also shows the window after it is set
+        up.
+        """
+
+        super().__init__(parent)
+        self.setWindowTitle("Kubuntu Manage Software")
+
+        self.core_layout: QVBoxLayout = QVBoxLayout()
+
+        self.header_label: QLabel = QLabel("<h2>Launch a Package Manager</h2>")
+        self.header_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        self.core_layout.addWidget(self.header_label)
+
+        self.desc_label: QLabel = QLabel("""\
+<p>
+\u2022 Use Discover for Snaps, most Debian packages, and Flatpaks.<br>
+\u2022 Use Synaptic to view and manage ALL Debian packages.<br>
+\u2022 See <a href="https://kfocus.org/wf/update.html">Manage Software
+HOW-TO</a> for more details.
+</p>
+"""
+        )
+        self.desc_label.setContentsMargins(10, 0, 10, 0)
+        self.desc_label.setOpenExternalLinks(True)
+        self.core_layout.addWidget(self.desc_label)
+        self.core_layout.addSpacerItem(
+            QSpacerItem(
+                0, 15, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed
+            )
+        )
+
+        self.core_layout.addStretch()
+
+        self.button_layout: QHBoxLayout = QHBoxLayout()
+
+        self.discover_button: QPushButton = QPushButton("&Discover")
+        self.discover_button.setIcon(
+            self.get_icon(["plasmadiscover", "system-software-update"])
+        )
+        self.discover_button.clicked.connect(
+            lambda: self.launch_app(
+                "Discover", "/usr/bin/plasma-discover", "plasma-discover"
+            )
+        )
+        self.discover_button.setAutoDefault(False)
+        self.discover_button.setDefault(False)
+        self.button_layout.addWidget(self.discover_button)
+
+        self.synaptic_button: QPushButton = QPushButton("&Synaptic")
+        self.synaptic_button.setIcon(
+            self.get_icon(["synaptic", "system-software-update"])
+        )
+        self.synaptic_button.clicked.connect(
+            lambda: self.launch_app(
+                "Synaptic", "/usr/bin/synaptic-pkexec", "synaptic"
+            )
+        )
+        self.synaptic_button.setAutoDefault(False)
+        self.synaptic_button.setDefault(False)
+        self.button_layout.addWidget(self.synaptic_button)
+
+        self.button_layout.addStretch()
+
+        self.cancel_button: QPushButton = QPushButton("&Cancel")
+        self.cancel_button.setIcon(QIcon.fromTheme("dialog-cancel"))
+        self.cancel_button.clicked.connect(self.accept)
+        self.cancel_button.setAutoDefault(False)
+        self.cancel_button.setDefault(False)
+        self.button_layout.addWidget(self.cancel_button)
+
+        self.core_layout.addLayout(self.button_layout)
+
+        self.setLayout(self.core_layout)
+        self.show()
+
+    @staticmethod
+    def get_icon(icon_name_list: list[str]) -> QIcon:
+        """
+        Iterates through the list of icon names and grabs the first icon that
+        is found.
+        """
+
+        icon: QIcon = QIcon()
+
+        for icon_name in icon_name_list:
+            icon: QIcon = QIcon.fromTheme(icon_name)
+            if not icon.isNull():
+                break
+
+        return icon
+
+    def launch_app(
+        self, app_name: str, app_path: str, package_name: str
+    ) -> None:
+        """
+        Launches the program at app_path. If the app does not exist, displays
+        a message to the user telling them how to install it.
+        """
+
+        try:
+            # pylint: disable=consider-using-with
+            subprocess.Popen(app_path)
+            self.accept()
+        except FileNotFoundError:
+            QMessageBox.warning(
+                self,
+                "Error - Kubuntu Manage Software",
+                f"{app_name} is not installed. Please install the "
+                + f"{package_name} package (for example, run "
+                + f"<code>sudo apt install {package_name}</code> in a "
+                + "terminal), then try again.",
+            )
+            self.reject()
+        except Exception:
+            emsg: QMessageBox = QMessageBox(self)
+            emsg.setWindowTitle("Error - Kubuntu Manage Software")
+            emsg.setText("An unhandled error occurred. Please report this bug!")
+            emsg.setInformativeText(
+                Qt.convertFromPlainText(traceback.format_exc())
+            )
+            emsg.exec()
+            self.reject()
+
+
+# pylint: disable=unused-argument
+def signal_handler(sig: int, frame: FrameType | None) -> None:
+    """
+    Handles SIGINT and SIGTERM.
+    """
+
+    print("Received SIGINT or SIGTERM, exiting.", file=sys.stderr)
+    sys.exit(128 + sig)
+
+
+def main() -> NoReturn:
+    """
+    Main function.
+    """
+
+    app: QApplication = QApplication(sys.argv)
+
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+
+    timer: QTimer = QTimer()
+    timer.timeout.connect(lambda: None)
+    timer.start(500)
+
+    app.setDesktopFileName("kubuntu-manage-software")
+    # pylint: disable=unused-variable
+    msw = ManageSoftwareWindow()
+    sys.exit(app.exec())
+
+
+if __name__ == "__main__":
+    main()

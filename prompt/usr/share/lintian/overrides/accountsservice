@@ -1,0 +1,2 @@
+# required, see https://bugs.debian.org/1038137
+accountsservice: package-contains-empty-directory [usr/share/accountsservice/interfaces/]

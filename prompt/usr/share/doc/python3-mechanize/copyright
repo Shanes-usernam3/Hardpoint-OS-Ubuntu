@@ -1,0 +1,182 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mechanize
+Upstream-Contact: Kovid Goyal
+Source: https://pypi.org/project/mechanize/
+Files-Excluded: mechanize.egg-info
+
+Files: *
+Copyright: Copyright (C) 2008-2017 Kovid Goyal, John J Lee, Gisle Aas, Johnny Lee, Andy Lester
+License: BSD-3-clause-like
+
+Files: test/test_http.py
+Copyright: 2019, Kovid Goyal <kovid at kovidgoyal.net>
+License: BSD-3-clause-like
+Comment: The sources as distributed state GPL3 as license, but this
+  was changed by the author in git commit
+  https://github.com/python-mechanize/mechanize/commit/cd37011a8a61595c003d3c0c1fa60010bc576a8c
+  to remove the GPL3 text and thus the files are licensed according
+  to the global copyright file, tht is BSD-3-clause-like.
+  See also https://github.com/python-mechanize/mechanize/issues/48
+
+Files: mechanize/polyglot.py
+Copyright: 2018, Kovid Goyal <kovid at kovidgoyal.net>
+License: BSD-3-clause-like
+Comment: The sources as distributed state GPL3 as license, but this
+  was changed by the author in git commit
+  https://github.com/python-mechanize/mechanize/commit/cd37011a8a61595c003d3c0c1fa60010bc576a8c
+  to remove the GPL3 text and thus the files are licensed according
+  to the global copyright file, tht is BSD-3-clause-like.
+  See also https://github.com/python-mechanize/mechanize/issues/48
+
+Files: mechanize/_entities.py mechanize/_equiv.py publish.py
+Copyright: 2017, Kovid Goyal <kovid at kovidgoyal.net>
+License: BSD-3-clause
+
+Files: mechanize/_auth.py mechanize/_response.py mechanize/_rfc3986.py
+Copyright: 2006 John J. Lee <jjl@pobox.com>
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_headersutil.py
+Copyright: 1997-1998, Gisle Aas
+           2002-2006, John J. Lee
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_http.py mechanize/_util.py
+Copyright: 2002-2006 John J Lee <jjl@pobox.com>
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_mechanize.py
+Copyright: 2003-2006 John J. Lee <jjl@pobox.com>
+           2003 Andy Lester (original Perl code)
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_opener.py mechanize/_request.py
+Copyright: 2004-2006 John J. Lee <jjl@pobox.com>
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_useragent.py
+Copyright: 2003-2006 John J. Lee <jjl@pobox.com>
+License: BSD-3-clause or Zope-2.1
+
+Files: mechanize/_urllib2_fork.py
+Copyright: 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Python Software Foundation
+           2002-2009 John J Lee <jjl@pobox.com>
+License: BSD-3-clause or Zope-2.1
+
+Files: test/test_form.py
+Copyright: 2002-2005 John J. Lee <jjl@pobox.com>
+           2005 Gary Poster
+           2005 Zope Corporation
+           1998-2000 Gisle Aas
+License: BSD-3-clause
+
+Files: test/test_form_data/FullSearch.html
+ test/test_form_data/GeneralSearch.html
+ test/test_form_data/MarkedRecords.html
+ test/test_form_data/MarkedResults.html
+ test/test_form_data/Results.html
+ test/test_form_data/SearchType.html
+Copyright: 2002, Institute for Scientific Information
+License: BSD-3-clause-like
+
+Files: test/test_form_data/Auth.html
+Copyright: 2002 EduServ.
+License: BSD-3-clause-like
+
+Files: debian/*
+Copyright: Norbert Preining
+           YOKOTA Hiroshi
+License: BSD-3-clause
+
+License: BSD-3-clause-like
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its contributors
+ may be used to endorse or promote products derived from this software without
+ specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ Redistributions of source code must retain the above copyright notice, this
+ list of conditions and the following disclaimer.
+ .
+ Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ .
+ Neither the name of the contributors nor the names of their employers may be
+ used to endorse or promote products derived from this software without
+ specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: Zope-2.1
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions in source code must retain the accompanying copyright
+ notice, this list of conditions, and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the accompanying copyright
+ notice, this list of conditions, and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ 3. Names of the copyright holders must not be used to endorse or promote
+ products derived from this software without prior written permission from
+ the copyright holders.
+ .
+ The right to distribute this software or to use it for any purpose does not
+ give you the right to use Servicemarks (sm) or Trademarks (tm) of the
+ copyright holders. Use of them is covered by separate agreement with the
+ copyright holders.
+ .
+ If any files are modified, you must cause the modified files to carry
+ prominent notices stating that you changed the files and the date of any
+ change.
+ .
+ Disclaimer
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
+ EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

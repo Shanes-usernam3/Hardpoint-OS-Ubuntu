@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>megolm</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<h1 id="megolm-group-ratchet">Megolm group ratchet</h1>
+<p>An AES-based cryptographic ratchet intended for group
+communications.</p>
+<h2 id="background">Background</h2>
+<p>The Megolm ratchet is intended for encrypted messaging applications
+where there may be a large number of recipients of each message, thus
+precluding the use of peer-to-peer encryption systems such as <a
+href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md">Olm</a>.</p>
+<p>It also allows a recipient to decrypt received messages multiple
+times. For instance, in client/server applications, a copy of the
+ciphertext can be stored on the (untrusted) server, while the client
+need only store the session keys.</p>
+<h2 id="overview">Overview</h2>
+<p>Each participant in a conversation uses their own outbound session
+for encrypting messages. A session consists of a ratchet and an <a
+href="http://ed25519.cr.yp.to/">Ed25519</a> keypair.</p>
+<p>Secrecy is provided by the ratchet, which can be wound forwards but
+not backwards, and is used to derive a distinct message key for each
+message.</p>
+<p>Authenticity is provided via Ed25519 signatures.</p>
+<p>The value of the ratchet, and the public part of the Ed25519 key, are
+shared with other participants in the conversation via secure
+peer-to-peer channels. Provided that peer-to-peer channel provides
+authenticity of the messages to the participants and deniability of the
+messages to third parties, the Megolm session will inherit those
+properties.</p>
+<h2 id="the-megolm-ratchet-algorithm">The Megolm ratchet algorithm</h2>
+<p>The Megolm ratchet <span class="math inline">R_i</span> consists of
+four parts, <span class="math inline">R_{i,j}</span> for <span
+class="math inline">j \in {0,1,2,3}</span>. The length of each part
+depends on the hash function in use (256 bits for this version of
+Megolm).</p>
+<p>The ratchet is initialised with cryptographically-secure random data,
+and advanced as follows:</p>
+<p><span class="math display">\begin{aligned}
+R_{i,0} &amp;=
+  \begin{cases}
+  H_0\left(R_{2^{24}(n-1),0}\right) &amp;\text{if }\exists n | i =
+2^{24}n\\
+  R_{i-1,0} &amp;\text{otherwise}
+  \end{cases}\\
+R_{i,1} &amp;=
+  \begin{cases}
+  H_1\left(R_{2^{24}(n-1),0}\right) &amp;\text{if }\exists n | i =
+2^{24}n\\
+  H_1\left(R_{2^{16}(m-1),1}\right) &amp;\text{if }\exists m | i =
+2^{16}m\\
+  R_{i-1,1} &amp;\text{otherwise}
+  \end{cases}\\
+R_{i,2} &amp;=
+  \begin{cases}
+  H_2\left(R_{2^{24}(n-1),0}\right) &amp;\text{if }\exists n | i =
+2^{24}n\\
+  H_2\left(R_{2^{16}(m-1),1}\right) &amp;\text{if }\exists m | i =
+2^{16}m\\
+  H_2\left(R_{2^8(p-1),2}\right) &amp;\text{if }\exists p | i = 2^8p\\
+  R_{i-1,2} &amp;\text{otherwise}
+  \end{cases}\\
+R_{i,3} &amp;=
+  \begin{cases}
+  H_3\left(R_{2^{24}(n-1),0}\right) &amp;\text{if }\exists n | i =
+2^{24}n\\
+  H_3\left(R_{2^{16}(m-1),1}\right) &amp;\text{if }\exists m | i =
+2^{16}m\\
+  H_3\left(R_{2^8(p-1),2}\right) &amp;\text{if }\exists p | i = 2^8p\\
+  H_3\left(R_{i-1,3}\right) &amp;\text{otherwise}
+  \end{cases}
+\end{aligned}</span></p>
+<p>where <span class="math inline">H_0</span>, <span
+class="math inline">H_1</span>, <span class="math inline">H_2</span>,
+and <span class="math inline">H_3</span> are different hash functions.
+In summary: every <span class="math inline">2^8</span> iterations, <span
+class="math inline">R_{i,3}</span> is reseeded from <span
+class="math inline">R_{i,2}</span>. Every <span
+class="math inline">2^{16}</span> iterations, <span
+class="math inline">R_{i,2}</span> and <span
+class="math inline">R_{i,3}</span> are reseeded from <span
+class="math inline">R_{i,1}</span>. Every <span
+class="math inline">2^{24}</span> iterations, <span
+class="math inline">R_{i,1}</span>, <span
+class="math inline">R_{i,2}</span> and <span
+class="math inline">R_{i,3}</span> are reseeded from <span
+class="math inline">R_{i,0}</span>.</p>
+<p>The complete ratchet value, <span class="math inline">R_{i}</span>,
+is hashed to generate the keys used to encrypt each message. This scheme
+allows the ratchet to be advanced an arbitrary amount forwards while
+needing at most 1020 hash computations. A client can decrypt chat
+history onwards from the earliest value of the ratchet it is aware of,
+but cannot decrypt history from before that point without reversing the
+hash function.</p>
+<p>This allows a participant to share its ability to decrypt chat
+history with another from a point in the conversation onwards by giving
+a copy of the ratchet at that point in the conversation.</p>
+<h2 id="the-megolm-protocol">The Megolm protocol</h2>
+<h3 id="session-setup">Session setup</h3>
+<p>Each participant in a conversation generates their own Megolm
+session. A session consists of three parts:</p>
+<ul>
+<li>a 32 bit counter, <span class="math inline">i</span>.</li>
+<li>an <a href="http://ed25519.cr.yp.to/">Ed25519</a> keypair, <span
+class="math inline">K</span>.</li>
+<li>a ratchet, <span class="math inline">R_i</span>, which consists of
+four 256-bit values, <span class="math inline">R_{i,j}</span> for <span
+class="math inline">j \in {0,1,2,3}</span>.</li>
+</ul>
+<p>The counter <span class="math inline">i</span> is initialised to
+<span class="math inline">0</span>. A new Ed25519 keypair is generated
+for <span class="math inline">K</span>. The ratchet is simply
+initialised with 1024 bits of cryptographically-secure random data.</p>
+<p>A single participant may use multiple sessions over the lifetime of a
+conversation. The public part of <span class="math inline">K</span> is
+used as an identifier to discriminate between sessions.</p>
+<h3 id="sharing-session-data">Sharing session data</h3>
+<p>To allow other participants in the conversation to decrypt messages,
+the session data is formatted as described in <a
+href="#session-sharing-format">Session-sharing format</a>. It is then
+shared with other participants in the conversation via a secure
+peer-to-peer channel (such as that provided by <a
+href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md">Olm</a>).</p>
+<p>When the session data is received from other participants, the
+recipient first checks that the signature matches the public key. They
+then store their own copy of the counter, ratchet, and public key.</p>
+<h3 id="message-encryption">Message encryption</h3>
+<p>This version of Megolm uses <a
+href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">AES-256</a>
+in <a
+href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">CBC</a>
+mode with <a href="https://tools.ietf.org/html/rfc2315">PKCS#7</a>
+padding and <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a> (truncated
+to 64 bits). The 256 bit AES key, 256 bit HMAC key, and 128 bit AES IV
+are derived from the megolm ratchet <span
+class="math inline">R_i</span>:</p>
+<p><span class="math display">\begin{aligned}
+\mathit{AES\_KEY}_{i}\;\parallel\;\mathit{HMAC\_KEY}_{i}\;\parallel\;\mathit{AES\_IV}_{i}
+    &amp;=
+\operatorname{HKDF}\left(0,\,R_{i},\text{&quot;MEGOLM\_KEYS&quot;},\,80\right)
+\\
+\end{aligned}</span></p>
+<p>where <span class="math inline">\parallel</span> represents string
+splitting, and <span
+class="math inline">\operatorname{HKDF}\left(\mathit{salt},\,\mathit{IKM},\,\mathit{info},\,L\right)</span>
+refers to the <a href="https://tools.ietf.org/html/rfc5869">HMAC-based
+key derivation function</a> using using <a
+href="https://tools.ietf.org/html/rfc6234">SHA-256</a> as the hash
+function (<a
+href="https://tools.ietf.org/html/rfc5869">HKDF-SHA-256</a>) with a salt
+value of <span class="math inline">\mathit{salt}</span>, input key
+material of <span class="math inline">\mathit{IKM}</span>, context
+string <span class="math inline">\mathit{info}</span>, and output keying
+material length of <span class="math inline">L</span> bytes.</p>
+<p>The plain-text is encrypted with AES-256, using the key <span
+class="math inline">\mathit{AES\_KEY}_{i}</span> and the IV <span
+class="math inline">\mathit{AES\_IV}_{i}</span> to give the cipher-text,
+<span class="math inline">X_{i}</span>.</p>
+<p>The ratchet index <span class="math inline">i</span>, and the
+cipher-text <span class="math inline">X_{i}</span>, are then packed into
+a message as described in <a href="#message-format">Message format</a>.
+Then the entire message (including the version bytes and all payload
+bytes) are passed through HMAC-SHA-256. The first 8 bytes of the MAC are
+appended to the message.</p>
+<p>Finally, the authenticated message is signed using the Ed25519
+keypair; the 64 byte signature is appended to the message.</p>
+<p>The complete signed message, together with the public part of <span
+class="math inline">K</span> (acting as a session identifier), can then
+be sent over an insecure channel. The message can then be authenticated
+and decrypted only by recipients who have received the session data.</p>
+<h3 id="advancing-the-ratchet">Advancing the ratchet</h3>
+<p>After each message is encrypted, the ratchet is advanced. This is
+done as described in <a href="#the-megolm-ratchet-algorithm">The Megolm
+ratchet algorithm</a>, using the following definitions:</p>
+<p><span class="math display">\begin{aligned}
+    H_0(A) &amp;\equiv \operatorname{HMAC}(A,\text{``\char`\\x00&quot;})
+\\
+    H_1(A) &amp;\equiv \operatorname{HMAC}(A,\text{``\char`\\x01&quot;})
+\\
+    H_2(A) &amp;\equiv \operatorname{HMAC}(A,\text{``\char`\\x02&quot;})
+\\
+    H_3(A) &amp;\equiv \operatorname{HMAC}(A,\text{``\char`\\x03&quot;})
+\\
+\end{aligned}</span></p>
+<p>where <span class="math inline">\operatorname{HMAC}(A, T)</span> is
+the HMAC-SHA-256 of <code>T</code>, using <code>A</code> as the key.</p>
+<p>For outbound sessions, the updated ratchet and counter are stored in
+the session.</p>
+<p>In order to maintain the ability to decrypt conversation history,
+inbound sessions should store a copy of their earliest known ratchet
+value (unless they explicitly want to drop the ability to decrypt that
+history - see <a href="#partial-forward-secrecy">Partial Forward
+Secrecy</a>). They may also choose to cache calculated ratchet values,
+but the decision of which ratchet states to cache is left to the
+application.</p>
+<h2 id="data-exchange-formats">Data exchange formats</h2>
+<h3 id="session-sharing-format">Session sharing format</h3>
+<p>This format is used for the initial sharing of a Megolm session with
+other group participants who need to be able to read messages encrypted
+by this session.</p>
+<p>The session sharing format is as follows:</p>
+<pre><code>+---+----+--------+--------+--------+--------+------+-----------+
+| V | i  | R(i,0) | R(i,1) | R(i,2) | R(i,3) | Kpub | Signature |
++---+----+--------+--------+--------+--------+------+-----------+
+0   1    5        37       69      101      133    165         229   bytes</code></pre>
+<p>The version byte, <code>V</code>, is <code>"\x02"</code>.</p>
+<p>This is followed by the ratchet index, <span
+class="math inline">i</span>, which is encoded as a big-endian 32-bit
+integer; the ratchet values <span class="math inline">R_{i,j}</span>;
+and the public part of the Ed25519 keypair <span
+class="math inline">K</span>.</p>
+<p>The data is then signed using the Ed25519 keypair, and the 64-byte
+signature is appended.</p>
+<h3 id="session-export-format">Session export format</h3>
+<p>Once the session is initially shared with the group participants,
+each participant needs to retain a copy of the session if they want to
+maintain their ability to decrypt messages encrypted with that
+session.</p>
+<p>For forward-secrecy purposes, a participant may choose to store a
+ratcheted version of the session. But since the ratchet index is covered
+by the signature, this would invalidate the signature. So we define a
+similar format, called the <em>session export format</em>, which is
+identical to the <a href="#session-sharing-format">session sharing
+format</a> except for dropping the signature.</p>
+<p>The Megolm session export format is thus as follows:</p>
+<pre><code>+---+----+--------+--------+--------+--------+------+
+| V | i  | R(i,0) | R(i,1) | R(i,2) | R(i,3) | Kpub |
++---+----+--------+--------+--------+--------+------+
+0   1    5        37       69      101      133    165   bytes</code></pre>
+<p>The version byte, <code>V</code>, is <code>"\x01"</code>.</p>
+<p>This is followed by the ratchet index, <span
+class="math inline">i</span>, which is encoded as a big-endian 32-bit
+integer; the ratchet values <span class="math inline">R_{i,j}</span>;
+and the public part of the Ed25519 keypair <span
+class="math inline">K</span>.</p>
+<h3 id="message-format">Message format</h3>
+<p>Megolm messages consist of a one byte version, followed by a variable
+length payload, a fixed length message authentication code, and a fixed
+length signature.</p>
+<pre><code>+---+------------------------------------+-----------+------------------+
+| V | Payload Bytes                      | MAC Bytes | Signature Bytes  |
++---+------------------------------------+-----------+------------------+
+0   1                                    N          N+8                N+72   bytes</code></pre>
+<p>The version byte, <code>V</code>, is <code>"\x03"</code>.</p>
+<p>The payload uses a format based on the <a
+href="https://developers.google.com/protocol-buffers/docs/encoding">Protocol
+Buffers encoding</a>. It consists of the following key-value pairs:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Tag</strong></th>
+<th style="text-align: center;"><strong>Type</strong></th>
+<th style="text-align: center;"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Message-Index</td>
+<td style="text-align: center;">0x08</td>
+<td style="text-align: center;">Integer</td>
+<td style="text-align: center;">The index of the ratchet, i</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cipher-Text</td>
+<td style="text-align: center;">0x12</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The cipher-text, Xi, of the message</td>
+</tr>
+</tbody>
+</table>
+<p>Within the payload, integers are encoded using a variable length
+encoding. Each integer is encoded as a sequence of bytes with the high
+bit set followed by a byte with the high bit clear. The seven low bits
+of each byte store the bits of the integer. The least significant bits
+are stored in the first byte.</p>
+<p>Strings are encoded as a variable-length integer followed by the
+string itself.</p>
+<p>Each key-value pair is encoded as a variable-length integer giving
+the tag, followed by a string or variable-length integer giving the
+value.</p>
+<p>The payload is followed by the MAC. The length of the MAC is
+determined by the authenticated encryption algorithm being used (8 bytes
+in this version of the protocol). The MAC protects all of the bytes
+preceding the MAC.</p>
+<p>The length of the signature is determined by the signing algorithm
+being used (64 bytes in this version of the protocol). The signature
+covers all of the bytes preceding the signature.</p>
+<h2 id="limitations">Limitations</h2>
+<h3 id="message-replays">Message Replays</h3>
+<p>A message can be decrypted successfully multiple times. This means
+that an attacker can re-send a copy of an old message, and the recipient
+will treat it as a new message.</p>
+<p>To mitigate this it is recommended that applications track the
+ratchet indices they have received and that they reject messages with a
+ratchet index that they have already decrypted.</p>
+<h3 id="lack-of-transcript-consistency">Lack of Transcript
+Consistency</h3>
+<p>In a group conversation, there is no guarantee that all recipients
+have received the same messages. For example, if Alice is in a
+conversation with Bob and Charlie, she could send different messages to
+Bob and Charlie, or could send some messages to Bob but not Charlie, or
+vice versa.</p>
+<p>Solving this is, in general, a hard problem, particularly in a
+protocol which does not guarantee in-order message delivery. For now it
+remains the subject of future research.</p>
+<h3 id="lack-of-backward-secrecy">Lack of Backward Secrecy</h3>
+<p><a
+href="https://intensecrypto.org/public/lec_08_hash_functions_part2.html#sec-forward-and-backward-secrecy">Backward
+secrecy</a> (also called ‘future secrecy’ or ‘post-compromise security’)
+is the property that if current private keys are compromised, an
+attacker cannot decrypt future messages in a given session. In other
+words, when looking <strong>backwards</strong> in time at a compromise
+which has already happened, <strong>current</strong> messages are still
+secret.</p>
+<p>By itself, Megolm does not possess this property: once the key to a
+Megolm session is compromised, the attacker can decrypt any message that
+was encrypted using a key derived from the compromised or subsequent
+ratchet values.</p>
+<p>In order to mitigate this, the application should ensure that Megolm
+sessions are not used indefinitely. Instead it should periodically start
+a new session, with new keys shared over a secure channel.</p>
+<!-- TODO: Can we recommend sensible lifetimes for Megolm sessions? Probably
+   depends how paranoid we're feeling, but some guidelines might be useful. -->
+<h3 id="partial-forward-secrecy">Partial Forward Secrecy</h3>
+<p><a
+href="https://intensecrypto.org/public/lec_08_hash_functions_part2.html#sec-forward-and-backward-secrecy">Forward
+secrecy</a> (also called ‘perfect forward secrecy’) is the property that
+if the current private keys are compromised, an attacker cannot decrypt
+<em>past</em> messages in a given session. In other words, when looking
+<strong>forwards</strong> in time towards a potential future compromise,
+<strong>current</strong> messages will be secret.</p>
+<p>In Megolm, each recipient maintains a record of the ratchet value
+which allows them to decrypt any messages sent in the session after the
+corresponding point in the conversation. If this value is compromised,
+an attacker can similarly decrypt past messages which were encrypted by
+a key derived from the compromised or subsequent ratchet values. This
+gives ‘partial’ forward secrecy.</p>
+<p>To mitigate this issue, the application should offer the user the
+option to discard historical conversations, by winding forward any
+stored ratchet values, or discarding sessions altogether.</p>
+<h3 id="dependency-on-secure-channel-for-key-exchange">Dependency on
+secure channel for key exchange</h3>
+<p>The design of the Megolm ratchet relies on the availability of a
+secure peer-to-peer channel for the exchange of session keys. Any
+vulnerabilities in the underlying channel are likely to be amplified
+when applied to Megolm session setup.</p>
+<p>For example, if the peer-to-peer channel is vulnerable to an unknown
+key-share attack, the entire Megolm session become similarly vulnerable.
+For example: Alice starts a group chat with Eve, and shares the session
+keys with Eve. Eve uses the unknown key-share attack to forward the
+session keys to Bob, who believes Alice is starting the session with
+him. Eve then forwards messages from the Megolm session to Bob, who
+again believes they are coming from Alice. Provided the peer-to-peer
+channel is not vulnerable to this attack, Bob will realise that the
+key-sharing message was forwarded by Eve, and can treat the Megolm
+session as a forgery.</p>
+<p>A second example: if the peer-to-peer channel is vulnerable to a
+replay attack, this can be extended to entire Megolm sessions.</p>
+<h2 id="license">License</h2>
+<p>The Megolm specification (this document) is licensed under the Apache
+License, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.</p>
+</body>
+</html>

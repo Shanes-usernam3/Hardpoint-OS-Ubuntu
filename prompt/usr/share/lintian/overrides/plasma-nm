@@ -1,0 +1,11 @@
+plasma-nm: package-name-doesnt-match-sonames libplasmanm-editor libplasmanm-internal
+plasma-nm: shared-library-lacks-version usr/lib/*/libplasmanm_editor.so libplasmanm_editor.so
+plasma-nm: shared-library-lacks-version usr/lib/*/libplasmanm_internal.so libplasmanm_internal.so
+plasma-nm: lacks-ldconfig-trigger usr/lib/*/libplasmanm_internal.so
+plasma-nm: no-symbols-control-file usr/lib/*/libplasmanm_internal.so
+plasma-nm: no-symbols-control-file usr/lib/*/libplasmanm_editor.so
+plasma-nm: arch-dep-package-has-big-usr-share
+plasma-nm: spelling-error-in-binary
+# systemsettings5 executable required for the KCM is provided by the Recommends: systemsettings dependency
+plasma-nm: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_networkmanagement.desktop]
+plasma-nm: desktop-command-not-in-package systemsettings [usr/share/applications/org.kde.vpnimport.desktop]

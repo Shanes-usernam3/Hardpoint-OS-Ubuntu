@@ -1,0 +1,202 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kactivitymanagerd
+Source: https://invent.kde.org/plasma/kactivitymanagerd
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2010-2016, Ivan Cukic <ivan.cukic@kde.org>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: po/*
+Copyright: 2022-2024, Emir SARI <emir_sari@icloud.com>
+           2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2014-2024, Josep M. Ferrer <txemaq@gmail.com>
+           2024, kali <shreekantkalwar@gmail.com>
+           2023-2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2023-2024, Kishore G <kishore96@gmail.com>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2012-2024, Vit Pelcak <vit@pelcak.org>
+           2023, Yaron Shahrabani <sh.yaron@gmail.com>
+           2021-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2012-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: src/service/plugins/activitytemplates/TemplatesPlugin.cpp
+       src/service/plugins/activitytemplates/TemplatesPlugin.h
+       src/service/plugins/globalshortcuts/GlobalShortcutsPlugin.cpp
+       src/service/plugins/globalshortcuts/GlobalShortcutsPlugin.h
+       src/service/plugins/krunner/ActivityRunner.cpp
+       src/service/plugins/krunner/ActivityRunner.h
+       src/service/plugins/krunner/dbusutils.h
+       src/service/plugins/libreoffice-spy/LibreOfficeEventSpy.cpp
+       src/service/plugins/libreoffice-spy/LibreOfficeEventSpy.h
+       src/service/plugins/recentlyused-eventspy/RecentlyUsedEventSpy.cpp
+       src/service/plugins/recentlyused-eventspy/RecentlyUsedEventSpy.h
+       src/service/plugins/runapplication/RunApplicationPlugin.cpp
+       src/service/plugins/runapplication/RunApplicationPlugin.h
+       src/service/plugins/sqlite/Database.cpp
+       src/service/plugins/sqlite/Database.h
+       src/service/plugins/sqlite/ResourceLinking.cpp
+       src/service/plugins/sqlite/ResourceLinking.h
+       src/service/plugins/sqlite/ResourceScoreCache.cpp
+       src/service/plugins/sqlite/ResourceScoreCache.h
+       src/service/plugins/sqlite/ResourceScoreMaintainer.cpp
+       src/service/plugins/sqlite/ResourceScoreMaintainer.h
+       src/service/plugins/sqlite/StatsPlugin.cpp
+       src/service/plugins/sqlite/StatsPlugin.h
+       src/service/plugins/sqlite/Utils.h
+Copyright: 2011, Aaron Seigo <aseigo@kde.org>
+           2021, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2011-2015, Ivan Cukic <ivan.cukic(at)kde.org>
+           2012, Makis Marimpis <makhsm@gmail.com>
+           2019, Méven Car <meven.car@kdemail.net>
+           2023, Méven Car <meven@kde.org>
+License: GPL-2.0-or-later
+
+Files: src/common/dbus/org.kde.ActivityManager.Activities.h
+       .vim-template:cpp
+       .vim-template:h
+Copyright: %YEAR% %USER% <%MAIL%>
+           2010-2016, Ivan Cukic <ivan.cukic(at)kde.org>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Automatically extracted
+
+Files: po/ca/kactivities6.po
+       po/ca@valencia/kactivities6.po
+       po/uk/kactivities6.po
+Copyright: 2014-2021, Antoni Bella Pérez <antonibella5@yahoo.com>
+           2019, Empar Montoro Martín <montoro_mde@gva.es>
+           2014-2015, Josep M. Ferrer <txemaq@gmail.com>
+           2016-2021, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Manually collected
+
+Files: debian/*
+Copyright: 2024-2025, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2016, Jonathan Riddell <jr@jriddell.org>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-3.0-only
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GPL License as published by the Free
+ Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version that is accepted by the membership
+ of KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy as defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.

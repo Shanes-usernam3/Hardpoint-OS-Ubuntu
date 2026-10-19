@@ -1,0 +1,4 @@
+# libkf6service-bin already depends on libkf6service6, but we want libkf6service-bin to be installed
+# along libkf6service6. Adding a Depends: would create a circular dependency, hence the "trick" with
+# the symbols file.
+libkf6service6: symbols-declares-dependency-on-other-package libkf6service-bin (libKF6Service.so.6) [symbols]

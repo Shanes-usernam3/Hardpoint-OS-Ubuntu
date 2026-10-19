@@ -1,0 +1,16 @@
+# The log files may contain private information, so they shouldn't be readable
+# by default; this is the safest way to achieve it.
+speech-dispatcher: non-standard-dir-perm 0700 != 0755 [var/log/speech-dispatcher/]
+
+# Yes, we make two calls depending on the content of the previously-used
+# default file.
+speech-dispatcher: duplicate-updaterc.d-calls-in-postinst speech-dispatcher
+
+# This is on purpose: upstream uses speech-dispatcherd and we want to avoid to
+# see systemd generating a speech-dispatcher sysv init script.
+speech-dispatcher: service-file-is-not-a-file lib/systemd/system/speech-dispatcher.service
+
+# Yes, but the situation is complex so we have to do it by hand
+speech-dispatcher: maintainer-script-should-not-use-dpkg-maintscript-helper preinst:8
+speech-dispatcher: maintainer-script-should-not-use-dpkg-maintscript-helper preinst:13
+speech-dispatcher: maintainer-script-should-not-use-dpkg-maintscript-helper preinst:18

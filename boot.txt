@@ -1,0 +1,13 @@
+-rw------- root/root          11001551 2026-04-13 08:12 squashfs-root/boot/System.map-7.0.0-14-generic
+-rw-r--r-- root/root            308479 2026-04-13 08:12 squashfs-root/boot/config-7.0.0-14-generic
+drwxr-xr-x root/root                58 2026-04-23 00:47 squashfs-root/boot/grub
+-rw-r--r-- root/root               712 2026-04-23 00:47 squashfs-root/boot/grub/gfxblacklist.txt
+-rw-r--r-- root/root           2413171 2026-04-23 00:47 squashfs-root/boot/grub/unicode.pf2
+lrwxrwxrwx root/root                27 2026-04-23 00:48 squashfs-root/boot/initrd.img -> initrd.img-7.0.0-14-generic
+-rw-r--r-- root/root          95111628 2026-04-23 00:49 squashfs-root/boot/initrd.img-7.0.0-14-generic
+lrwxrwxrwx root/root                27 2026-04-23 00:48 squashfs-root/boot/initrd.img.old -> initrd.img-7.0.0-14-generic
+-rw-r--r-- root/root            156672 2025-11-29 08:22 squashfs-root/boot/mt86+ia32
+-rw-r--r-- root/root            161280 2025-11-29 08:22 squashfs-root/boot/mt86+x64
+lrwxrwxrwx root/root                24 2026-04-23 00:48 squashfs-root/boot/vmlinuz -> vmlinuz-7.0.0-14-generic
+-rw------- root/root          17275272 2026-04-13 08:14 squashfs-root/boot/vmlinuz-7.0.0-14-generic
+lrwxrwxrwx root/root                24 2026-04-23 00:48 squashfs-root/boot/vmlinuz.old -> vmlinuz-7.0.0-14-generic

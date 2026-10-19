@@ -1,0 +1,20 @@
+lrwxrwxrwx squashfs-root/bin -> usr/bin
+drwxr-xr-x squashfs-root/boot  
+drwxr-xr-x squashfs-root/dev  
+drwxr-xr-x squashfs-root/etc  
+drwxr-xr-x squashfs-root/home  
+lrwxrwxrwx squashfs-root/lib -> usr/lib
+lrwxrwxrwx squashfs-root/lib64 -> usr/lib64
+drwxr-xr-x squashfs-root/media  
+drwxr-xr-x squashfs-root/mnt  
+drwxr-xr-x squashfs-root/opt  
+drwxr-xr-x squashfs-root/proc  
+drwx------ squashfs-root/root  
+drwxr-xr-x squashfs-root/run  
+lrwxrwxrwx squashfs-root/sbin -> usr/sbin
+drwxr-xr-x squashfs-root/snap  
+drwxr-xr-x squashfs-root/srv  
+drwxr-xr-x squashfs-root/sys  
+drwxrwxrwt squashfs-root/tmp  
+drwxr-xr-x squashfs-root/usr  
+drwxr-xr-x squashfs-root/var  

@@ -1,0 +1,4 @@
+ssl-cert: no-debconf-config
+ssl-cert: debconf-is-not-a-registry
+ssl-cert: postinst-uses-db-input
+ssl-cert: non-standard-dir-perm 0700 != 0755 [etc/ssl/private/]

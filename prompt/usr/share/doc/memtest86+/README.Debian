@@ -1,0 +1,37 @@
+memtest86+ for Debian
+---------------------
+
+Multiple binary images are provided:
+
+  - A legacy bios 32bit /boot/memtest86+ia32.bin that uses Linux zImage
+    boot protocol.
+
+  - A legacy bios 64bit /boot/memtest86+x64.bin that uses Linux zImage
+    boot protocol.
+
+  - A 32bit EFI Image /boot/memtest86+ia32.efi
+
+  - A 64bit EFI Image /boot/memtest86+x64.efi
+
+These are automatically registered with grub2.
+For other bootloaders you'll need to do some manual setup (see
+examples/grub-menu.lst for GRUB Legacy), or to make a
+boot-floppy, and reboot on this image.
+
+32bit and 64bit ISO Images with EFI and legacy boot support are provided at
+/usr/lib/memtest86+/
+
+There are some grub2 variable supported in /etc/default/grub:
+
+  - GRUB_DISABLE_MEMTEST: if true don't add any memtest86+ entries
+  - GRUB_MEMTEST_DISABLE_SERIAL: if true don't add serial entries
+  - GRUB_MEMTEST_SERIAL_PARAMS: custom serial parameters, default is
+    ttyS0,115200
+    Expected argument is like console=ttySx,y with x being the serial
+    port address (0 = 0x3F8 / 1 = 0x2F8 / 2 = 0x3E8 / 3 = 0x2E8) and y
+    is an optional baud rate to choose from the following list: 9600,
+    19200, 38400, 54600, 115200 (default if not specified or invalid),
+    230400.
+
+
+ -- Fabio Fantoni <fantonifabio@tiscali.it>  Fri, 22 Apr 2022 12:11:26 +0200

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AccountsService 23.13.9 Documentation</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="index"></a>AccountsService 23.13.9 Documentation</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Matthias</span> <span class="surname">Clasen</span></h3><div class="affiliation"><div class="address"><p><br />
+            <code class="email">&lt;<a class="email" href="mailto:mclasen@redhat.com">mclasen@redhat.com</a>&gt;</code><br />
+          </p></div></div></div></div></div><div><p class="releaseinfo">Version 23.13.9</p></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="part"><a href="#id1337">I. Reference</a></span></dt><dd><dl><dt><span class="reference"><a href="#dbus-reference">I. D-Bus API Reference</a></span></dt><dd><dl><dt><span class="refentrytitle"><a href="#Accounts">org.freedesktop.Accounts</a></span><span class="refpurpose"> — Accounts interface</span></dt><dt><span class="refentrytitle"><a href="#User">org.freedesktop.Accounts.User</a></span><span class="refpurpose"> — User interface</span></dt></dl></dd></dl></dd><dt><span class="index"><a href="#id1338">Index</a></span></dt></dl></div><div class="part"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Part I. Reference</h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="reference"><a href="#dbus-reference">I. D-Bus API Reference</a></span></dt><dd><dl><dt><span class="refentrytitle"><a href="#Accounts">org.freedesktop.Accounts</a></span><span class="refpurpose"> — Accounts interface</span></dt><dt><span class="refentrytitle"><a href="#User">org.freedesktop.Accounts.User</a></span><span class="refpurpose"> — User interface</span></dt></dl></dd></dl></div><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="dbus-reference"></a>D-Bus API Reference</h1></div></div><hr /></div><div class="partintro"><div></div><p>
+        The AccountsService provides a D-Bus API for programs to obtain
+        information about user accounts that are present on a system.
+        </p><p>
+        Please see the other sections of this manual for an introduction to
+        these concepts.
+        </p><p>
+        This API is not yet stable and is likely to change in the future.
+        </p><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="refentrytitle"><a href="#Accounts">org.freedesktop.Accounts</a></span><span class="refpurpose"> — Accounts interface</span></dt><dt><span class="refentrytitle"><a href="#User">org.freedesktop.Accounts.User</a></span><span class="refpurpose"> — User interface</span></dt></dl></div></div><div class="refentry"><a id="Accounts"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>org.freedesktop.Accounts — Accounts interface</p></div><div class="refsynopsisdiv"><h2>Methods</h2><pre class="synopsis"><a class="link" href="#Accounts.ListCachedUsers">ListCachedUsers</a>   (out 'ao' users)
+<a class="link" href="#Accounts.FindUserById">FindUserById</a>      (in  'x'  id,
+                   out 'o'  user)
+<a class="link" href="#Accounts.FindUserByName">FindUserByName</a>    (in  's'  name,
+                   out 'o'  user)
+<a class="link" href="#Accounts.CreateUser">CreateUser</a>        (in  's'  name,
+                   in  's'  fullname,
+                   out 'o'  user,
+                   in  'i'  accountType)
+<a class="link" href="#Accounts.CacheUser">CacheUser</a>         (in  's'  name,
+                   out 'o'  user)
+<a class="link" href="#Accounts.UncacheUser">UncacheUser</a>       (in  's'  name)
+<a class="link" href="#Accounts.DeleteUser">DeleteUser</a>        (in  'x'  id,
+                   in  'b'  removeFiles)
+<a class="link" href="#Accounts.GetUsersLanguages">GetUsersLanguages</a> (out 'as' languages)
+</pre></div><div class="refsect1"><a id="id1444"></a><h2>Signals</h2><pre class="synopsis"><a class="link" href="#Accounts::UserAdded">UserAdded</a>   ('o' user)
+<a class="link" href="#Accounts::UserDeleted">UserDeleted</a> ('o' user)
+</pre></div><div class="refsect1"><a id="id1449"></a><h2>Implemented Interfaces</h2><p>
+    Objects implementing org.freedesktop.Accounts also implements
+    org.freedesktop.DBus.Introspectable,
+    org.freedesktop.DBus.Properties
+    </p></div><div class="refsect1"><a id="id1452"></a><h2>Properties</h2><pre class="synopsis"><a class="link" href="#Accounts:DaemonVersion">'DaemonVersion'</a>       read      's'
+<a class="link" href="#Accounts:HasNoUsers">'HasNoUsers'</a>          read      'b'
+<a class="link" href="#Accounts:HasMultipleUsers">'HasMultipleUsers'</a>    read      'b'
+<a class="link" href="#Accounts:AutomaticLoginUsers">'AutomaticLoginUsers'</a> read      'ao'
+</pre></div><div class="refsect1"><a id="id1459"></a><h2>Description</h2><p></p></div><div class="refsect1"><a id="id1462"></a><h2>Details</h2><div class="refsect2"><a id="id1339"></a><h3><a id="Accounts.ListCachedUsers"></a>ListCachedUsers ()</h3><a id="id1466" class="indexterm"></a><pre class="programlisting">ListCachedUsers (out 'ao' users)</pre><p>
+            Lists users which have logged into the system locally before.
+            This is not meant to return an exhaustive list of all users.
+            It is possible for <a class="link" href="#Accounts.FindUserByName"><code class="function">FindUserByName()</code></a>
+            to return a user that's not on the list.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>users</code></em>:</span></dt><dd><p>Object paths of cached users</p></dd></dl></div></div><div class="refsect2"><a id="id1340"></a><h3><a id="Accounts.FindUserById"></a>FindUserById ()</h3><a id="id1481" class="indexterm"></a><pre class="programlisting">FindUserById (in  'x' id,
+              out 'o' user)</pre><p>
+            Finds a user by uid.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>id</code></em>:</span></dt><dd><p>The uid to look up</p></dd><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd><p>Object path of user</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if no user with the given uid exists</dd></dl></div></div></div><div class="refsect2"><a id="id1341"></a><h3><a id="Accounts.FindUserByName"></a>FindUserByName ()</h3><a id="id1507" class="indexterm"></a><pre class="programlisting">FindUserByName (in  's' name,
+                out 'o' user)</pre><p>
+            Finds a user by its username.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>The username to look up</p></dd><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd><p>Object path of user</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if no user with the given username exists</dd></dl></div></div></div><div class="refsect2"><a id="id1342"></a><h3><a id="Accounts.CreateUser"></a>CreateUser ()</h3><a id="id1533" class="indexterm"></a><pre class="programlisting">CreateUser (in  's' name,
+            in  's' fullname,
+            out 'o' user,
+            in  'i' accountType)</pre><p>
+            Creates a new user account.
+          </p><p>
+          The accountType argument can take the following values:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>0: </strong></span>Standard user</p></li><li class="listitem"><p><span class="bold"><strong>1: </strong></span>Administrator</p></li></ul></div><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>The username for the new user</p></dd><dt><span class="term"><em class="parameter"><code>fullname</code></em>:</span></dt><dd><p>The real name for the new user</p></dd><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd><p>Object path of the new user</p></dd><dt><span class="term"><em class="parameter"><code>accountType</code></em>:</span></dt><dd><p>The account type, encoded as an integer</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+          The caller needs the org.freedesktop.accounts.user-administration PolicyKit authorization.
+        </p></div></div><div class="refsect2"><a id="id1343"></a><h3><a id="Accounts.CacheUser"></a>CacheUser ()</h3><a id="id1585" class="indexterm"></a><pre class="programlisting">CacheUser (in  's' name,
+           out 'o' user)</pre><p>
+            Caches a user account, so that it shows up in ListCachedUsers() output.
+            The user name may be a remote user, but the system must be able to lookup
+            the user name and resolve the user information.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>The username for the user</p></dd><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd><p>Object path of user</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.UserDoesNotExist</code></em>:</span></dt><dd>if the user name cannot be resolved</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+          The caller needs the org.freedesktop.accounts.user-administration PolicyKit authorization.
+        </p></div></div><div class="refsect2"><a id="id1344"></a><h3><a id="Accounts.UncacheUser"></a>UncacheUser ()</h3><a id="id1619" class="indexterm"></a><pre class="programlisting">UncacheUser (in  's' name)</pre><p>
+            Releases all metadata about a user account, including icon, language and session. If the user account is
+            from a remote server and the user has never logged in before, then that account will no longer show up
+            in ListCachedUsers() output.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>The username for the user</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.UserDoesNotExist</code></em>:</span></dt><dd>if the user name cannot be resolved</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+          The caller needs the org.freedesktop.accounts.user-administration PolicyKit authorization.
+        </p></div></div><div class="refsect2"><a id="id1345"></a><h3><a id="Accounts.DeleteUser"></a>DeleteUser ()</h3><a id="id1648" class="indexterm"></a><pre class="programlisting">DeleteUser (in  'x' id,
+            in  'b' removeFiles)</pre><p>
+            Deletes a user account.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>id</code></em>:</span></dt><dd><p>The uid to delete</p></dd><dt><span class="term"><em class="parameter"><code>removeFiles</code></em>:</span></dt><dd><p>Whether to remove the users files</p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+          The caller needs the org.freedesktop.accounts.user-administration PolicyKit authorization.
+        </p></div></div><div class="refsect2"><a id="id1346"></a><h3><a id="Accounts.GetUsersLanguages"></a>GetUsersLanguages ()</h3><a id="id1682" class="indexterm"></a><pre class="programlisting">GetUsersLanguages (out 'as' languages)</pre><p>
+          Lists all the languages set by all the users, sorted in order from most used to least used,
+          in XPG locale format.
+        </p><p>
+          Note that the languages are not parsed, and functional duplicates can occur (for instance,
+          en_GB and en_GB.UTF-8 may both end up in the list, even though they are the same).
+        </p><p>
+          The expectation is that package installers will use
+          this to know which languages users are interested in, so as
+          to install extra data, like translations, dictionaries, etc.
+          system-wide.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>languages</code></em>:</span></dt><dd><p>
+          List users' preferred languages, as an array of locale specification like "de_DE.UTF-8".
+        </p></dd></dl></div></div></div><div class="refsect1"><a id="id1695"></a><h2>Signal Details</h2><div class="refsect2"><a id="id1347"></a><h3><a id="Accounts::UserAdded"></a>The UserAdded signal</h3><a id="id1699" class="indexterm"></a><pre class="programlisting">UserAdded ('o' user)</pre><p>
+            Emitted when a user is added.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd>Object path of the user that was added.</dd></dl></div></div><div class="refsect2"><a id="id1348"></a><h3><a id="Accounts::UserDeleted"></a>The UserDeleted signal</h3><a id="id1712" class="indexterm"></a><pre class="programlisting">UserDeleted ('o' user)</pre><p>
+            Emitted when a user is deleted.
+          </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>user</code></em>:</span></dt><dd>Object path of the user that was deleted.</dd></dl></div></div></div><div class="refsect1"><a id="id1723"></a><h2>Property Details</h2><div class="refsect2"><a id="id1349"></a><h3><a id="Accounts:DaemonVersion"></a>The "DaemonVersion" property</h3><a id="id1727" class="indexterm"></a><pre class="programlisting">'DaemonVersion'  read      's'
+</pre><p>
+           The version of the running daemon.
+         </p></div><div class="refsect2"><a id="id1350"></a><h3><a id="Accounts:HasNoUsers"></a>The "HasNoUsers" property</h3><a id="id1734" class="indexterm"></a><pre class="programlisting">'HasNoUsers'  read      'b'
+</pre><p>
+           Whether or not the system has no users
+         </p></div><div class="refsect2"><a id="id1351"></a><h3><a id="Accounts:HasMultipleUsers"></a>The "HasMultipleUsers" property</h3><a id="id1741" class="indexterm"></a><pre class="programlisting">'HasMultipleUsers'  read      'b'
+</pre><p>
+           Whether or not the system has multiple users
+         </p></div><div class="refsect2"><a id="id1352"></a><h3><a id="Accounts:AutomaticLoginUsers"></a>The "AutomaticLoginUsers" property</h3><a id="id1748" class="indexterm"></a><pre class="programlisting">'AutomaticLoginUsers'  read      'ao'
+</pre><p>
+           Users to automatically log in as
+         </p></div></div></div><div class="refentry"><div class="refentry.separator"><hr /></div><a id="User"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>org.freedesktop.Accounts.User — User interface</p></div><div class="refsynopsisdiv"><h2>Methods</h2><pre class="synopsis"><a class="link" href="#User.SetUserName">SetUserName</a>                 (in  's'      name)
+<a class="link" href="#User.SetRealName">SetRealName</a>                 (in  's'      name)
+<a class="link" href="#User.SetEmail">SetEmail</a>                    (in  's'      email)
+<a class="link" href="#User.SetLanguage">SetLanguage</a>                 (in  's'      language)
+<a class="link" href="#User.SetLanguages">SetLanguages</a>                (in  'as'     languages)
+<a class="link" href="#User.SetFormatsLocale">SetFormatsLocale</a>            (in  's'      formats_locale)
+<a class="link" href="#User.SetInputSources">SetInputSources</a>             (in  'aa{ss}' sources)
+<a class="link" href="#User.SetXSession">SetXSession</a>                 (in  's'      x_session)
+<a class="link" href="#User.SetSession">SetSession</a>                  (in  's'      session)
+<a class="link" href="#User.SetSessionType">SetSessionType</a>              (in  's'      session_type)
+<a class="link" href="#User.SetLocation">SetLocation</a>                 (in  's'      location)
+<a class="link" href="#User.SetHomeDirectory">SetHomeDirectory</a>            (in  's'      homedir)
+<a class="link" href="#User.SetShell">SetShell</a>                    (in  's'      shell)
+<a class="link" href="#User.SetXHasMessages">SetXHasMessages</a>             (in  'b'      has_messages)
+<a class="link" href="#User.SetXKeyboardLayouts">SetXKeyboardLayouts</a>         (in  'as'     layouts)
+<a class="link" href="#User.SetBackgroundFile">SetBackgroundFile</a>           (in  's'      filename)
+<a class="link" href="#User.SetIconFile">SetIconFile</a>                 (in  's'      filename)
+<a class="link" href="#User.SetLocked">SetLocked</a>                   (in  'b'      locked)
+<a class="link" href="#User.SetAccountType">SetAccountType</a>              (in  'i'      accountType)
+<a class="link" href="#User.SetPasswordMode">SetPasswordMode</a>             (in  'i'      mode)
+<a class="link" href="#User.SetPassword">SetPassword</a>                 (in  's'      password,
+                             in  's'      hint)
+<a class="link" href="#User.SetPasswordHint">SetPasswordHint</a>             (in  's'      hint)
+<a class="link" href="#User.SetAutomaticLogin">SetAutomaticLogin</a>           (in  'b'      enabled)
+<a class="link" href="#User.GetPasswordExpirationPolicy">GetPasswordExpirationPolicy</a> (out 'x'      expiration_time,
+                             out 'x'      last_change_time,
+                             out 'x'      min_days_between_changes,
+                             out 'x'      max_days_between_changes,
+                             out 'x'      days_to_warn,
+                             out 'x'      days_after_expiration_until_lock)
+<a class="link" href="#User.SetPasswordExpirationPolicy">SetPasswordExpirationPolicy</a> (in  'x'      min_days_between_changes,
+                             in  'x'      max_days_between_changes,
+                             in  'x'      days_to_warn,
+                             in  'x'      days_after_expiration_until_lock)
+<a class="link" href="#User.SetUserExpirationPolicy">SetUserExpirationPolicy</a>     (in  'x'      expiration_time)
+</pre></div><div class="refsect1"><a id="id1788"></a><h2>Signals</h2><pre class="synopsis"><a class="link" href="#User::Changed">Changed</a> ()
+</pre></div><div class="refsect1"><a id="id1792"></a><h2>Implemented Interfaces</h2><p>
+    Objects implementing org.freedesktop.Accounts.User also implements
+    org.freedesktop.DBus.Introspectable,
+    org.freedesktop.DBus.Properties
+    </p></div><div class="refsect1"><a id="id1795"></a><h2>Properties</h2><pre class="synopsis"><a class="link" href="#User:Uid">'Uid'</a>              read      't'
+<a class="link" href="#User:UserName">'UserName'</a>         read      's'
+<a class="link" href="#User:RealName">'RealName'</a>         read      's'
+<a class="link" href="#User:AccountType">'AccountType'</a>      read      'i'
+<a class="link" href="#User:HomeDirectory">'HomeDirectory'</a>    read      's'
+<a class="link" href="#User:Shell">'Shell'</a>            read      's'
+<a class="link" href="#User:Email">'Email'</a>            read      's'
+<a class="link" href="#User:Language">'Language'</a>         read      's'
+<a class="link" href="#User:Languages">'Languages'</a>        read      'as'
+<a class="link" href="#User:Session">'Session'</a>          read      's'
+<a class="link" href="#User:SessionType">'SessionType'</a>      read      's'
+<a class="link" href="#User:FormatsLocale">'FormatsLocale'</a>    read      's'
+<a class="link" href="#User:InputSources">'InputSources'</a>     read      'aa{ss}'
+<a class="link" href="#User:XSession">'XSession'</a>         read      's'
+<a class="link" href="#User:Location">'Location'</a>         read      's'
+<a class="link" href="#User:LoginFrequency">'LoginFrequency'</a>   read      't'
+<a class="link" href="#User:LoginTime">'LoginTime'</a>        read      'x'
+<a class="link" href="#User:LoginHistory">'LoginHistory'</a>     read      'a(xxa{sv})'
+<a class="link" href="#User:XHasMessages">'XHasMessages'</a>     read      'b'
+<a class="link" href="#User:XKeyboardLayouts">'XKeyboardLayouts'</a> read      'as'
+<a class="link" href="#User:BackgroundFile">'BackgroundFile'</a>   read      's'
+<a class="link" href="#User:IconFile">'IconFile'</a>         read      's'
+<a class="link" href="#User:Saved">'Saved'</a>            read      'b'
+<a class="link" href="#User:Locked">'Locked'</a>           read      'b'
+<a class="link" href="#User:PasswordMode">'PasswordMode'</a>     read      'i'
+<a class="link" href="#User:PasswordHint">'PasswordHint'</a>     read      's'
+<a class="link" href="#User:AutomaticLogin">'AutomaticLogin'</a>   read      'b'
+<a class="link" href="#User:SystemAccount">'SystemAccount'</a>    read      'b'
+<a class="link" href="#User:LocalAccount">'LocalAccount'</a>     read      'b'
+</pre></div><div class="refsect1"><a id="id1827"></a><h2>Description</h2><p></p></div><div class="refsect1"><a id="id1830"></a><h2>Details</h2><div class="refsect2"><a id="id1353"></a><h3><a id="User.SetUserName"></a>SetUserName ()</h3><a id="id1834" class="indexterm"></a><pre class="programlisting">SetUserName (in  's' name)</pre><p>
+          Sets the userʼs username. Note that it is usually not allowed
+          to have multiple users with the same username.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>
+          The new username.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the username of any user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1354"></a><h3><a id="User.SetRealName"></a>SetRealName ()</h3><a id="id1867" class="indexterm"></a><pre class="programlisting">SetRealName (in  's' name)</pre><p>
+          Sets the userʼs real name.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>name</code></em>:</span></dt><dd><p>
+          The new name, typically in the form "Firstname Lastname".
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own name</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the name of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1355"></a><h3><a id="User.SetEmail"></a>SetEmail ()</h3><a id="id1903" class="indexterm"></a><pre class="programlisting">SetEmail (in  's' email)</pre><p>
+          Sets the userʼs email address.
+        </p><p>
+          Note that setting an email address in the AccountsService is
+          not the same as configuring a mail client. Mail clients might
+          default to email address that is configured here, though.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>email</code></em>:</span></dt><dd><p>
+          The new email address.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own email address</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the email address of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1356"></a><h3><a id="User.SetLanguage"></a>SetLanguage ()</h3><a id="id1940" class="indexterm"></a><pre class="programlisting">SetLanguage (in  's' language)</pre><p>
+          Sets the user's language.
+        </p><p>
+          The expectation is that display managers will start the
+          userʼs session with this locale.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>language</code></em>:</span></dt><dd><p>
+          The new language, as a locale specification like "de_DE.UTF-8".
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1357"></a><h3><a id="User.SetLanguages"></a>SetLanguages ()</h3><a id="id1977" class="indexterm"></a><pre class="programlisting">SetLanguages (in  'as' languages)</pre><p>
+          Sets the userʼs preferred languages. The first item in the list will
+          be used to set the Language property.
+        </p><p>
+          The expectation is that package installers will use
+          this to know which languages the user is interested in, so as
+          to install extra data, like translations, dictionaries, etc.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>languages</code></em>:</span></dt><dd><p>
+          The user's preferred languages, as an array of locale specification like "de_DE.UTF-8".
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own preferred languages</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the preferred languages of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1358"></a><h3><a id="User.SetFormatsLocale"></a>SetFormatsLocale ()</h3><a id="id2014" class="indexterm"></a><pre class="programlisting">SetFormatsLocale (in  's' formats_locale)</pre><p>
+          Sets the users regional formats.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>formats_locale</code></em>:</span></dt><dd><p>
+          The new regional formats, as a locale specification like "de_DE.UTF-8".
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change his own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1359"></a><h3><a id="User.SetInputSources"></a>SetInputSources ()</h3><a id="id2050" class="indexterm"></a><pre class="programlisting">SetInputSources (in  'aa{ss}' sources)</pre><p>
+          Sets the user's input sources.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>sources</code></em>:</span></dt><dd><p>
+          A list of input sources.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change his own input sources</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the input sources of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1360"></a><h3><a id="User.SetXSession"></a>SetXSession ()</h3><a id="id2086" class="indexterm"></a><pre class="programlisting">SetXSession (in  's' x_session)</pre><p>
+          Sets the userʼs x session.
+        </p><p>
+          The expectation is that display managers will log the user in to this
+          specified session, if available.
+
+          Note this call is deprecated and has been superceded by SetSession since
+          not all graphical sessions use X as the display server.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>x_session</code></em>:</span></dt><dd><p>
+          The new xsession to start (e.g. "gnome")
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1361"></a><h3><a id="User.SetSession"></a>SetSession ()</h3><a id="id2123" class="indexterm"></a><pre class="programlisting">SetSession (in  's' session)</pre><p>
+          Sets the userʼs wayland or x session.
+        </p><p>
+          The expectation is that display managers will log the user in to this
+          specified session, if available.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>session</code></em>:</span></dt><dd><p>
+          The new session to start (e.g. "gnome-xorg")
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1362"></a><h3><a id="User.SetSessionType"></a>SetSessionType ()</h3><a id="id2160" class="indexterm"></a><pre class="programlisting">SetSessionType (in  's' session_type)</pre><p>
+          Sets the session type of the userʼs session.
+        </p><p>
+          Display managers may use this property to decide what type of display server to use when
+          loading the session
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>session_type</code></em>:</span></dt><dd><p>
+          The type of the new session to start (e.g. "wayland" or "x11")
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1363"></a><h3><a id="User.SetLocation"></a>SetLocation ()</h3><a id="id2197" class="indexterm"></a><pre class="programlisting">SetLocation (in  's' location)</pre><p>
+          Sets the userʼs location.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>location</code></em>:</span></dt><dd><p>
+          The new location as a freeform string.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own location</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the location of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1364"></a><h3><a id="User.SetHomeDirectory"></a>SetHomeDirectory ()</h3><a id="id2233" class="indexterm"></a><pre class="programlisting">SetHomeDirectory (in  's' homedir)</pre><p>
+          Sets the userʼs home directory.
+        </p><p>
+          Note that changing the userʼs home directory moves all the content
+          from the old location to the new one, and is potentially an
+          expensive operation.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>homedir</code></em>:</span></dt><dd><p>
+          The new homedir as an absolute path.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the home directory of a user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1365"></a><h3><a id="User.SetShell"></a>SetShell ()</h3><a id="id2267" class="indexterm"></a><pre class="programlisting">SetShell (in  's' shell)</pre><p>
+          Sets the userʼs shell.
+        </p><p>
+          Note that setting the shell to a non-allowed program may
+          prevent the user from logging in.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>shell</code></em>:</span></dt><dd><p>
+          The new user shell.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the shell of a user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1366"></a><h3><a id="User.SetXHasMessages"></a>SetXHasMessages ()</h3><a id="id2301" class="indexterm"></a><pre class="programlisting">SetXHasMessages (in  'b' has_messages)</pre><p>
+          Sets whether the user has messages waiting for them.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>has_messages</code></em>:</span></dt><dd><p>
+          Whether the user has messages waiting for them.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change his or her own status</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the status of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1367"></a><h3><a id="User.SetXKeyboardLayouts"></a>SetXKeyboardLayouts ()</h3><a id="id2337" class="indexterm"></a><pre class="programlisting">SetXKeyboardLayouts (in  'as' layouts)</pre><p>
+          Sets the user's keyboard layouts.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>layouts</code></em>:</span></dt><dd><p>
+          The name of the keyboard layouts to use as the user's keyboard layout.  The first is the default.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change his or her own keyboard layouts</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the keyboard layouts of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1368"></a><h3><a id="User.SetBackgroundFile"></a>SetBackgroundFile ()</h3><a id="id2373" class="indexterm"></a><pre class="programlisting">SetBackgroundFile (in  's' filename)</pre><p>
+          Sets the users background.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>filename</code></em>:</span></dt><dd><p>
+          The absolute filename of a png file to use as the users background.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change his own background</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the background of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1369"></a><h3><a id="User.SetIconFile"></a>SetIconFile ()</h3><a id="id2409" class="indexterm"></a><pre class="programlisting">SetIconFile (in  's' filename)</pre><p>
+          Sets the userʼs icon.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>filename</code></em>:</span></dt><dd><p>
+          The absolute filename of a png file to use as the userʼs icon.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own icon</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the icon of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1370"></a><h3><a id="User.SetLocked"></a>SetLocked ()</h3><a id="id2445" class="indexterm"></a><pre class="programlisting">SetLocked (in  'b' locked)</pre><p>
+          Locks or unlocks a userʼs account.
+        </p><p>
+          Locking an account prevents the user from logging in.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>locked</code></em>:</span></dt><dd><p>
+          Whether to lock or unlock the userʼs account.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To lock or unlock user accounts</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1371"></a><h3><a id="User.SetAccountType"></a>SetAccountType ()</h3><a id="id2479" class="indexterm"></a><pre class="programlisting">SetAccountType (in  'i' accountType)</pre><p>
+          Changes the userʼs account type.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>accountType</code></em>:</span></dt><dd><p>
+          The new account type, encoded as an integer:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>0: </strong></span>Standard user</p></li><li class="listitem"><p><span class="bold"><strong>1: </strong></span>Administrator</p></li></ul></div><p>
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change an account type</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1372"></a><h3><a id="User.SetPasswordMode"></a>SetPasswordMode ()</h3><a id="id2519" class="indexterm"></a><pre class="programlisting">SetPasswordMode (in  'i' mode)</pre><p>
+          Changes the userʼs password mode.
+        </p><p>
+          Note that changing the password mode has the side-effect of
+          unlocking the account.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>mode</code></em>:</span></dt><dd><p>
+          The new password mode, encoded as an integer:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>0: </strong></span>Regular password</p></li><li class="listitem"><p><span class="bold"><strong>1: </strong></span>Password must be set at next login</p></li><li class="listitem"><p><span class="bold"><strong>2: </strong></span>No password</p></li></ul></div><p>
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change a userʼs password mode</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1373"></a><h3><a id="User.SetPassword"></a>SetPassword ()</h3><a id="id2563" class="indexterm"></a><pre class="programlisting">SetPassword (in  's' password,
+             in  's' hint)</pre><p>
+          Sets a new password for this user.
+        </p><p>
+          Note that setting a password has the side-effect of
+          unlocking the account.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>password</code></em>:</span></dt><dd><p>
+          The crypted password.
+        </p></dd><dt><span class="term"><em class="parameter"><code>hint</code></em>:</span></dt><dd><p>
+          The password hint.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the password of a user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1374"></a><h3><a id="User.SetPasswordHint"></a>SetPasswordHint ()</h3><a id="id2602" class="indexterm"></a><pre class="programlisting">SetPasswordHint (in  's' hint)</pre><p>
+          Sets the userʼs password hint.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>hint</code></em>:</span></dt><dd><p>
+          The password hint.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.change-own-user-data: </strong></span>To change their own language</p></li><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.user-administration: </strong></span>To change the language of another user</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1375"></a><h3><a id="User.SetAutomaticLogin"></a>SetAutomaticLogin ()</h3><a id="id2638" class="indexterm"></a><pre class="programlisting">SetAutomaticLogin (in  'b' enabled)</pre><p>
+          Enables or disables automatic login for a user.
+        </p><p>
+          Note that usually only one user can have automatic login
+          enabled, so turning it on for a user will disable it for
+          the previously configured autologin user.
+        </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>enabled</code></em>:</span></dt><dd><p>
+          Whether to enable automatic login for this user.
+        </p></dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Errors</h3><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.PermissionDenied</code></em>:</span></dt><dd>if the caller lacks the appropriate PolicyKit authorization</dd><dt><span class="term"><em class="parameter"><code>org.freedesktop.Accounts.Error.Failed</code></em>:</span></dt><dd>if the operation failed</dd></dl></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">
+        The caller needs one of the following PolicyKit authorizations:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>org.freedesktop.accounts.set-login-option: </strong></span>To change the login screen configuration</p></li></ul></div><p class="permission">
+      </p></div></div><div class="refsect2"><a id="id1376"></a><h3><a id="User.GetPasswordExpirationPolicy"></a>GetPasswordExpirationPolicy ()</h3><a id="id2672" class="indexterm"></a><pre class="programlisting">GetPasswordExpirationPolicy (out 'x' expiration_time,
+                             out 'x' last_change_time,
+                             out 'x' min_days_between_changes,
+                             out 'x' max_days_between_changes,
+                             out 'x' days_to_warn,
+                             out 'x' days_after_expiration_until_lock)</pre><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>expiration_time</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>last_change_time</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>min_days_between_changes</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>max_days_between_changes</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>days_to_warn</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>days_after_expiration_until_lock</code></em>:</span></dt><dd><p></p></dd></dl></div></div><div class="refsect2"><a id="id1377"></a><h3><a id="User.SetPasswordExpirationPolicy"></a>SetPasswordExpirationPolicy ()</h3><a id="id2709" class="indexterm"></a><pre class="programlisting">SetPasswordExpirationPolicy (in  'x' min_days_between_changes,
+                             in  'x' max_days_between_changes,
+                             in  'x' days_to_warn,
+                             in  'x' days_after_expiration_until_lock)</pre><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>min_days_between_changes</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>max_days_between_changes</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>days_to_warn</code></em>:</span></dt><dd><p></p></dd><dt><span class="term"><em class="parameter"><code>days_after_expiration_until_lock</code></em>:</span></dt><dd><p></p></dd></dl></div></div><div class="refsect2"><a id="id1378"></a><h3><a id="User.SetUserExpirationPolicy"></a>SetUserExpirationPolicy ()</h3><a id="id2736" class="indexterm"></a><pre class="programlisting">SetUserExpirationPolicy (in  'x' expiration_time)</pre><div class="variablelist"><dl class="variablelist"><dt><span class="term"><em class="parameter"><code>expiration_time</code></em>:</span></dt><dd><p></p></dd></dl></div></div></div><div class="refsect1"><a id="id2746"></a><h2>Signal Details</h2><div class="refsect2"><a id="id1379"></a><h3><a id="User::Changed"></a>The Changed signal</h3><a id="id2750" class="indexterm"></a><pre class="programlisting">Changed ()</pre><p>
+           Emitted when the user is changed.
+        </p></div></div><div class="refsect1"><a id="id2755"></a><h2>Property Details</h2><div class="refsect2"><a id="id1380"></a><h3><a id="User:Uid"></a>The "Uid" property</h3><a id="id2759" class="indexterm"></a><pre class="programlisting">'Uid'  read      't'
+</pre><p>
+          The uid of the user.
+        </p></div><div class="refsect2"><a id="id1381"></a><h3><a id="User:UserName"></a>The "UserName" property</h3><a id="id2766" class="indexterm"></a><pre class="programlisting">'UserName'  read      's'
+</pre><p>
+          The username of the user.
+        </p></div><div class="refsect2"><a id="id1382"></a><h3><a id="User:RealName"></a>The "RealName" property</h3><a id="id2773" class="indexterm"></a><pre class="programlisting">'RealName'  read      's'
+</pre><p>
+          The userʼs real name.
+        </p></div><div class="refsect2"><a id="id1383"></a><h3><a id="User:AccountType"></a>The "AccountType" property</h3><a id="id2780" class="indexterm"></a><pre class="programlisting">'AccountType'  read      'i'
+</pre><p>
+          The userʼs account type, encoded as an integer:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>0: </strong></span>Standard user</p></li><li class="listitem"><p><span class="bold"><strong>1: </strong></span>Administrator</p></li></ul></div><p>
+        </p></div><div class="refsect2"><a id="id1384"></a><h3><a id="User:HomeDirectory"></a>The "HomeDirectory" property</h3><a id="id2794" class="indexterm"></a><pre class="programlisting">'HomeDirectory'  read      's'
+</pre><p>
+          The userʼs home directory.
+        </p></div><div class="refsect2"><a id="id1385"></a><h3><a id="User:Shell"></a>The "Shell" property</h3><a id="id2801" class="indexterm"></a><pre class="programlisting">'Shell'  read      's'
+</pre><p>
+          The userʼs shell.
+        </p></div><div class="refsect2"><a id="id1386"></a><h3><a id="User:Email"></a>The "Email" property</h3><a id="id2808" class="indexterm"></a><pre class="programlisting">'Email'  read      's'
+</pre><p>
+          The email address.
+        </p></div><div class="refsect2"><a id="id1387"></a><h3><a id="User:Language"></a>The "Language" property</h3><a id="id2815" class="indexterm"></a><pre class="programlisting">'Language'  read      's'
+</pre><p>
+          The user's main language, as a locale specification like "de_DE.UTF-8".
+        </p></div><div class="refsect2"><a id="id1388"></a><h3><a id="User:Languages"></a>The "Languages" property</h3><a id="id2822" class="indexterm"></a><pre class="programlisting">'Languages'  read      'as'
+</pre><p>
+          The user's other preferred languages, as a locale specification like "de_DE.UTF-8".
+        </p></div><div class="refsect2"><a id="id1389"></a><h3><a id="User:Session"></a>The "Session" property</h3><a id="id2829" class="indexterm"></a><pre class="programlisting">'Session'  read      's'
+</pre><p>
+          The userʼs Wayland or X session.
+        </p></div><div class="refsect2"><a id="id1390"></a><h3><a id="User:SessionType"></a>The "SessionType" property</h3><a id="id2836" class="indexterm"></a><pre class="programlisting">'SessionType'  read      's'
+</pre><p>
+          The type of session the user should use (e.g. "wayland" or "x11")
+        </p></div><div class="refsect2"><a id="id1391"></a><h3><a id="User:FormatsLocale"></a>The "FormatsLocale" property</h3><a id="id2843" class="indexterm"></a><pre class="programlisting">'FormatsLocale'  read      's'
+</pre><p>
+          The users regional formats, as a locale specification like "de_DE.UTF-8".
+        </p></div><div class="refsect2"><a id="id1392"></a><h3><a id="User:InputSources"></a>The "InputSources" property</h3><a id="id2850" class="indexterm"></a><pre class="programlisting">'InputSources'  read      'aa{ss}'
+</pre><p>
+          The user's input sources.
+        </p></div><div class="refsect2"><a id="id1393"></a><h3><a id="User:XSession"></a>The "XSession" property</h3><a id="id2857" class="indexterm"></a><pre class="programlisting">'XSession'  read      's'
+</pre><p>
+          The userʼs x session.
+        </p></div><div class="refsect2"><a id="id1394"></a><h3><a id="User:Location"></a>The "Location" property</h3><a id="id2864" class="indexterm"></a><pre class="programlisting">'Location'  read      's'
+</pre><p>
+          The userʼs location.
+        </p></div><div class="refsect2"><a id="id1395"></a><h3><a id="User:LoginFrequency"></a>The "LoginFrequency" property</h3><a id="id2871" class="indexterm"></a><pre class="programlisting">'LoginFrequency'  read      't'
+</pre><p>
+          How often the user has logged in.
+        </p></div><div class="refsect2"><a id="id1396"></a><h3><a id="User:LoginTime"></a>The "LoginTime" property</h3><a id="id2878" class="indexterm"></a><pre class="programlisting">'LoginTime'  read      'x'
+</pre><p>
+          The last login time.
+        </p></div><div class="refsect2"><a id="id1397"></a><h3><a id="User:LoginHistory"></a>The "LoginHistory" property</h3><a id="id2885" class="indexterm"></a><pre class="programlisting">'LoginHistory'  read      'a(xxa{sv})'
+</pre><p>
+          The login history for this user.
+          Each entry in the array represents a login session. The first two
+          members are the login time and logout time, as timestamps (seconds since the epoch). If the session is still running, the logout time
+          is 0.
+        </p><p>
+          The a{sv} member is a dictionary containing additional information
+          about the session. Possible members include 'type' (with values like ':0', 'tty0', 'pts/0' etc).
+        </p></div><div class="refsect2"><a id="id1398"></a><h3><a id="User:XHasMessages"></a>The "XHasMessages" property</h3><a id="id2893" class="indexterm"></a><pre class="programlisting">'XHasMessages'  read      'b'
+</pre><p>
+           Whether the user has messages waiting for them.
+        </p></div><div class="refsect2"><a id="id1399"></a><h3><a id="User:XKeyboardLayouts"></a>The "XKeyboardLayouts" property</h3><a id="id2900" class="indexterm"></a><pre class="programlisting">'XKeyboardLayouts'  read      'as'
+</pre><p>
+           The names of the user's keyboard layouts.
+        </p></div><div class="refsect2"><a id="id1400"></a><h3><a id="User:BackgroundFile"></a>The "BackgroundFile" property</h3><a id="id2907" class="indexterm"></a><pre class="programlisting">'BackgroundFile'  read      's'
+</pre><p>
+           The filename of a png file containing the users background.
+        </p></div><div class="refsect2"><a id="id1401"></a><h3><a id="User:IconFile"></a>The "IconFile" property</h3><a id="id2914" class="indexterm"></a><pre class="programlisting">'IconFile'  read      's'
+</pre><p>
+           The filename of a png file containing the userʼs icon.
+        </p></div><div class="refsect2"><a id="id1402"></a><h3><a id="User:Saved"></a>The "Saved" property</h3><a id="id2921" class="indexterm"></a><pre class="programlisting">'Saved'  read      'b'
+</pre><p>
+           Whether the userʼs account has retained state
+        </p></div><div class="refsect2"><a id="id1403"></a><h3><a id="User:Locked"></a>The "Locked" property</h3><a id="id2928" class="indexterm"></a><pre class="programlisting">'Locked'  read      'b'
+</pre><p>
+           Whether the userʼs account is locked.
+        </p></div><div class="refsect2"><a id="id1404"></a><h3><a id="User:PasswordMode"></a>The "PasswordMode" property</h3><a id="id2935" class="indexterm"></a><pre class="programlisting">'PasswordMode'  read      'i'
+</pre><p>
+          The password mode for the user account, encoded as an integer:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>0: </strong></span>Regular password</p></li><li class="listitem"><p><span class="bold"><strong>1: </strong></span>Password must be set at next login</p></li><li class="listitem"><p><span class="bold"><strong>2: </strong></span>No password</p></li></ul></div><p>
+        </p></div><div class="refsect2"><a id="id1405"></a><h3><a id="User:PasswordHint"></a>The "PasswordHint" property</h3><a id="id2952" class="indexterm"></a><pre class="programlisting">'PasswordHint'  read      's'
+</pre><p>
+           The password hint for the user.
+        </p></div><div class="refsect2"><a id="id1406"></a><h3><a id="User:AutomaticLogin"></a>The "AutomaticLogin" property</h3><a id="id2959" class="indexterm"></a><pre class="programlisting">'AutomaticLogin'  read      'b'
+</pre><p>
+           Whether automatic login is enabled for the user.
+        </p></div><div class="refsect2"><a id="id1407"></a><h3><a id="User:SystemAccount"></a>The "SystemAccount" property</h3><a id="id2966" class="indexterm"></a><pre class="programlisting">'SystemAccount'  read      'b'
+</pre><p>
+           Whether this is a 'system' account, like 'root' or 'nobody'.
+           System accounts should normally not appear in lists of
+           users, and ListCachedUsers will not include such accounts.
+        </p></div><div class="refsect2"><a id="id1408"></a><h3><a id="User:LocalAccount"></a>The "LocalAccount" property</h3><a id="id2973" class="indexterm"></a><pre class="programlisting">'LocalAccount'  read      'b'
+</pre><p>
+          Whether the user is a local account or not.
+        </p></div></div></div></div></div><div class="index"><div class="titlepage"><div><div><h1 class="title"><a id="id1338"></a>Index</h1></div></div></div><div xmlns:xlink="http://www.w3.org/1999/xlink" class="index"><div class="indexdiv"><h3>A</h3><dl><dt id="ientry-id2780">AccountType</dt><dd><dl><dt>User, <a class="indexterm" href="#id1383">The "AccountType" property</a></dt></dl></dd><dt id="ientry-id2959">AutomaticLogin</dt><dd><dl><dt>User, <a class="indexterm" href="#id1406">The "AutomaticLogin" property</a></dt></dl></dd><dt id="ientry-id1748">AutomaticLoginUsers</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1352">The "AutomaticLoginUsers" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>B</h3><dl><dt id="ientry-id2907">BackgroundFile</dt><dd><dl><dt>User, <a class="indexterm" href="#id1400">The "BackgroundFile" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>C</h3><dl><dt id="ientry-id1585">CacheUser</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1343">CacheUser ()</a></dt></dl></dd><dt id="ientry-id2750">Changed</dt><dd><dl><dt>User, <a class="indexterm" href="#id1379">The Changed signal</a></dt></dl></dd><dt id="ientry-id1533">CreateUser</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1342">CreateUser ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>D</h3><dl><dt id="ientry-id1727">DaemonVersion</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1349">The "DaemonVersion" property</a></dt></dl></dd><dt id="ientry-id1648">DeleteUser</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1345">DeleteUser ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>E</h3><dl><dt id="ientry-id2808">Email</dt><dd><dl><dt>User, <a class="indexterm" href="#id1386">The "Email" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>F</h3><dl><dt id="ientry-id1481">FindUserById</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1340">FindUserById ()</a></dt></dl></dd><dt id="ientry-id1507">FindUserByName</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1341">FindUserByName ()</a></dt></dl></dd><dt id="ientry-id2843">FormatsLocale</dt><dd><dl><dt>User, <a class="indexterm" href="#id1391">The "FormatsLocale" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>G</h3><dl><dt id="ientry-id2672">GetPasswordExpirationPolicy</dt><dd><dl><dt>User, <a class="indexterm" href="#id1376">GetPasswordExpirationPolicy ()</a></dt></dl></dd><dt id="ientry-id1682">GetUsersLanguages</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1346">GetUsersLanguages ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>H</h3><dl><dt id="ientry-id1741">HasMultipleUsers</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1351">The "HasMultipleUsers" property</a></dt></dl></dd><dt id="ientry-id1734">HasNoUsers</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1350">The "HasNoUsers" property</a></dt></dl></dd><dt id="ientry-id2794">HomeDirectory</dt><dd><dl><dt>User, <a class="indexterm" href="#id1384">The "HomeDirectory" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>I</h3><dl><dt id="ientry-id2914">IconFile</dt><dd><dl><dt>User, <a class="indexterm" href="#id1401">The "IconFile" property</a></dt></dl></dd><dt id="ientry-id2850">InputSources</dt><dd><dl><dt>User, <a class="indexterm" href="#id1392">The "InputSources" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>L</h3><dl><dt id="ientry-id2815">Language</dt><dd><dl><dt>User, <a class="indexterm" href="#id1387">The "Language" property</a></dt></dl></dd><dt id="ientry-id2822">Languages</dt><dd><dl><dt>User, <a class="indexterm" href="#id1388">The "Languages" property</a></dt></dl></dd><dt id="ientry-id1466">ListCachedUsers</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1339">ListCachedUsers ()</a></dt></dl></dd><dt id="ientry-id2973">LocalAccount</dt><dd><dl><dt>User, <a class="indexterm" href="#id1408">The "LocalAccount" property</a></dt></dl></dd><dt id="ientry-id2864">Location</dt><dd><dl><dt>User, <a class="indexterm" href="#id1394">The "Location" property</a></dt></dl></dd><dt id="ientry-id2928">Locked</dt><dd><dl><dt>User, <a class="indexterm" href="#id1403">The "Locked" property</a></dt></dl></dd><dt id="ientry-id2871">LoginFrequency</dt><dd><dl><dt>User, <a class="indexterm" href="#id1395">The "LoginFrequency" property</a></dt></dl></dd><dt id="ientry-id2885">LoginHistory</dt><dd><dl><dt>User, <a class="indexterm" href="#id1397">The "LoginHistory" property</a></dt></dl></dd><dt id="ientry-id2878">LoginTime</dt><dd><dl><dt>User, <a class="indexterm" href="#id1396">The "LoginTime" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>P</h3><dl><dt id="ientry-id2952">PasswordHint</dt><dd><dl><dt>User, <a class="indexterm" href="#id1405">The "PasswordHint" property</a></dt></dl></dd><dt id="ientry-id2935">PasswordMode</dt><dd><dl><dt>User, <a class="indexterm" href="#id1404">The "PasswordMode" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>R</h3><dl><dt id="ientry-id2773">RealName</dt><dd><dl><dt>User, <a class="indexterm" href="#id1382">The "RealName" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>S</h3><dl><dt id="ientry-id2921">Saved</dt><dd><dl><dt>User, <a class="indexterm" href="#id1402">The "Saved" property</a></dt></dl></dd><dt id="ientry-id2829">Session</dt><dd><dl><dt>User, <a class="indexterm" href="#id1389">The "Session" property</a></dt></dl></dd><dt id="ientry-id2836">SessionType</dt><dd><dl><dt>User, <a class="indexterm" href="#id1390">The "SessionType" property</a></dt></dl></dd><dt id="ientry-id2479">SetAccountType</dt><dd><dl><dt>User, <a class="indexterm" href="#id1371">SetAccountType ()</a></dt></dl></dd><dt id="ientry-id2638">SetAutomaticLogin</dt><dd><dl><dt>User, <a class="indexterm" href="#id1375">SetAutomaticLogin ()</a></dt></dl></dd><dt id="ientry-id2373">SetBackgroundFile</dt><dd><dl><dt>User, <a class="indexterm" href="#id1368">SetBackgroundFile ()</a></dt></dl></dd><dt id="ientry-id1903">SetEmail</dt><dd><dl><dt>User, <a class="indexterm" href="#id1355">SetEmail ()</a></dt></dl></dd><dt id="ientry-id2014">SetFormatsLocale</dt><dd><dl><dt>User, <a class="indexterm" href="#id1358">SetFormatsLocale ()</a></dt></dl></dd><dt id="ientry-id2233">SetHomeDirectory</dt><dd><dl><dt>User, <a class="indexterm" href="#id1364">SetHomeDirectory ()</a></dt></dl></dd><dt id="ientry-id2409">SetIconFile</dt><dd><dl><dt>User, <a class="indexterm" href="#id1369">SetIconFile ()</a></dt></dl></dd><dt id="ientry-id2050">SetInputSources</dt><dd><dl><dt>User, <a class="indexterm" href="#id1359">SetInputSources ()</a></dt></dl></dd><dt id="ientry-id1940">SetLanguage</dt><dd><dl><dt>User, <a class="indexterm" href="#id1356">SetLanguage ()</a></dt></dl></dd><dt id="ientry-id1977">SetLanguages</dt><dd><dl><dt>User, <a class="indexterm" href="#id1357">SetLanguages ()</a></dt></dl></dd><dt id="ientry-id2197">SetLocation</dt><dd><dl><dt>User, <a class="indexterm" href="#id1363">SetLocation ()</a></dt></dl></dd><dt id="ientry-id2445">SetLocked</dt><dd><dl><dt>User, <a class="indexterm" href="#id1370">SetLocked ()</a></dt></dl></dd><dt id="ientry-id2563">SetPassword</dt><dd><dl><dt>User, <a class="indexterm" href="#id1373">SetPassword ()</a></dt></dl></dd><dt id="ientry-id2709">SetPasswordExpirationPolicy</dt><dd><dl><dt>User, <a class="indexterm" href="#id1377">SetPasswordExpirationPolicy ()</a></dt></dl></dd><dt id="ientry-id2602">SetPasswordHint</dt><dd><dl><dt>User, <a class="indexterm" href="#id1374">SetPasswordHint ()</a></dt></dl></dd><dt id="ientry-id2519">SetPasswordMode</dt><dd><dl><dt>User, <a class="indexterm" href="#id1372">SetPasswordMode ()</a></dt></dl></dd><dt id="ientry-id1867">SetRealName</dt><dd><dl><dt>User, <a class="indexterm" href="#id1354">SetRealName ()</a></dt></dl></dd><dt id="ientry-id2123">SetSession</dt><dd><dl><dt>User, <a class="indexterm" href="#id1361">SetSession ()</a></dt></dl></dd><dt id="ientry-id2160">SetSessionType</dt><dd><dl><dt>User, <a class="indexterm" href="#id1362">SetSessionType ()</a></dt></dl></dd><dt id="ientry-id2267">SetShell</dt><dd><dl><dt>User, <a class="indexterm" href="#id1365">SetShell ()</a></dt></dl></dd><dt id="ientry-id2736">SetUserExpirationPolicy</dt><dd><dl><dt>User, <a class="indexterm" href="#id1378">SetUserExpirationPolicy ()</a></dt></dl></dd><dt id="ientry-id1834">SetUserName</dt><dd><dl><dt>User, <a class="indexterm" href="#id1353">SetUserName ()</a></dt></dl></dd><dt id="ientry-id2301">SetXHasMessages</dt><dd><dl><dt>User, <a class="indexterm" href="#id1366">SetXHasMessages ()</a></dt></dl></dd><dt id="ientry-id2337">SetXKeyboardLayouts</dt><dd><dl><dt>User, <a class="indexterm" href="#id1367">SetXKeyboardLayouts ()</a></dt></dl></dd><dt id="ientry-id2086">SetXSession</dt><dd><dl><dt>User, <a class="indexterm" href="#id1360">SetXSession ()</a></dt></dl></dd><dt id="ientry-id2801">Shell</dt><dd><dl><dt>User, <a class="indexterm" href="#id1385">The "Shell" property</a></dt></dl></dd><dt id="ientry-id2966">SystemAccount</dt><dd><dl><dt>User, <a class="indexterm" href="#id1407">The "SystemAccount" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>U</h3><dl><dt id="ientry-id2759">Uid</dt><dd><dl><dt>User, <a class="indexterm" href="#id1380">The "Uid" property</a></dt></dl></dd><dt id="ientry-id1619">UncacheUser</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1344">UncacheUser ()</a></dt></dl></dd><dt id="ientry-id1699">UserAdded</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1347">The UserAdded signal</a></dt></dl></dd><dt id="ientry-id1712">UserDeleted</dt><dd><dl><dt>Accounts, <a class="indexterm" href="#id1348">The UserDeleted signal</a></dt></dl></dd><dt id="ientry-id2766">UserName</dt><dd><dl><dt>User, <a class="indexterm" href="#id1381">The "UserName" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>X</h3><dl><dt id="ientry-id2893">XHasMessages</dt><dd><dl><dt>User, <a class="indexterm" href="#id1398">The "XHasMessages" property</a></dt></dl></dd><dt id="ientry-id2900">XKeyboardLayouts</dt><dd><dl><dt>User, <a class="indexterm" href="#id1399">The "XKeyboardLayouts" property</a></dt></dl></dd><dt id="ientry-id2857">XSession</dt><dd><dl><dt>User, <a class="indexterm" href="#id1393">The "XSession" property</a></dt></dl></dd></dl></div></div></div></div></body></html>

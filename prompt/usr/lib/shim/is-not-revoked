@@ -1,0 +1,70 @@
+#!/bin/bash
+set -e
+# we need to set lastpipe so we can read the signers into the signers array below
+shopt -s lastpipe
+
+exit=0
+
+quiet=""
+if [ "$1" = "-q" ]; then
+	quiet=true
+	shift
+fi
+
+compress_type() {
+	local file="$1"
+	magic="$(od -x -N2 "$file" | head -1 | cut -d' ' -f2)"
+	case $magic in
+		8b1f)
+			echo "gzip"
+			;;
+		*)
+			echo "none"
+			;;
+	esac
+}
+
+for signed_binary in "$@"; do
+	if [ ! -e "$signed_binary" ]; then
+		echo "E: $signed_binary: file not found">&2
+		exit=1
+		continue
+	fi
+
+	if [ "$(compress_type "$signed_binary")" = "gzip" ]; then
+		_signed_binary="$(mktemp)"
+		trap 'rm -f "$_signed_binary"' EXIT
+		gunzip < "$signed_binary" > "$_signed_binary"
+	else
+		_signed_binary="$signed_binary"
+	fi
+	sbverify --list "$_signed_binary" | grep subject: | grep -E -o "CN=([^/]|\\/)*" | readarray -t signers
+	if [ -z "$signers" ]; then
+		echo "E: $signed_binary: Could not find signing subject, sbverify output follows:">&2
+		sbverify --list "$_signed_binary" >&2
+		exit=1
+		continue
+	fi
+
+	for signer in "${signers[@]}"; do
+		revoked=$(grep -xF "$signer" << EOF
+CN=Canonical Ltd. Secure Boot Signing
+CN=Canonical Ltd. Secure Boot Signing (2017)
+CN=Canonical Ltd. Secure Boot Signing (ESM 2018)
+CN=Canonical Ltd. Secure Boot Signing (2019)
+CN=Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019)
+CN=Canonical Ltd. Secure Boot Signing (2021 v1)
+CN=Canonical Ltd. Secure Boot Signing (2021 v2)
+CN=Canonical Ltd. Secure Boot Signing (2021 v3)
+EOF
+	) || true
+
+		if [ "$revoked" ]; then
+			if [ -z "$quiet" ]; then
+				echo "E: $signed_binary: revoked key $revoked used">&2
+			fi
+			exit=1
+		fi
+    done
+done
+exit $exit

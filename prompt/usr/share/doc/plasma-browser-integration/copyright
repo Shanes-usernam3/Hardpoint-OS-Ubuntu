@@ -1,0 +1,178 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-browser-integration
+Source: https://invent.kde.org/plasma/plasma-browser-integration
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2017-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+           2018 David Edmundson <davidedmundson@kde.org>
+           2017-2020 Vít Pelčák <vit@pelcak.org>
+           2018-2019 Martin Schlander <mschlander@opensuse.org>
+           2017-2019 Burkhard Lück <lueck@hube-lueck.de>
+           2017-2019 Steve Allewell <steve.allewell@gmail.com>
+           2017-2019 Eloy Cuadra <ecuadra@eloihr.net>
+           2019, 2020 Marek Laaneyhu <qiilaq69@gmail.com>
+           2018, 2019 Iñigo Salvador Azurmendi <xalba@euskalnet.net>
+           2017-2019 Tommi Nieminen <translator@legisign.org>
+           2019 William Oprandi <william.oprandi@gmail.com>
+           2018 Simon Depiets <sdepiets@gmail.com>
+           2017 Vincent Pinon <vpinon@kde.org>
+           2017-2020 Adrián Chaves (Gallaecio) <adrian@chaves.io>
+           2018-2019 Wantoyo <wantoyek@gmail.com>
+           2017-2019 Luigi Toscano <luigi.toscano@tiscali.it>
+           2019 Japanese KDE translation team <kde-jp@kde.org>
+           2017-2020 Shinjo Park <kde@peremen.name>
+           2018 Øystein Steffensen-Alværvik <ystein@posteo.net>
+           2017-2019 Freek de Kruijf <freekdekruijf@kde.nl>
+           2018-2019 Karl Ove Hufthammer <karl@huftis.org>
+           2017 A S Alam <aalam@users.sf.net>
+           2017-2019 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2017-2019, José Nuno Coelho Pires <zepires@gmail.com>
+           2017-2019 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2019 Alexander Yavorsky <kekcuha@gmail.com>
+           2017-2018 Alexander Potashev <aspotashev@gmail.com>
+           2017-2019 Roman Paholik <wizzardsk@gmail.com>
+           2019 Matej Mrenica <matejm98mthw@gmail.com>
+           2018 Andrej Mernik <andrejm@ubuntu.si>
+           2017 Chusslove Illich <caslav.ilic@gmx.net>
+           2017-2019, Stefan Asserhäll <stefan.asserhall@bredband.net>
+           2017 Kaan <kaanozdincer@gmail.com>
+           2019 Guo Yunhe (guoyunhe)
+           2019 pan93412 <pan93412@gmail.com>
+           2019, 2020 Kiszel Kristóf <ulysses@kubuntu.org>
+           2019, 2020 Giovanni Sora <g.sora@tiscali.it>
+           2019 enolp <enolp@softastur.org>
+           2020 Tomohiro Hyakutake <tomhioo@outlook.jp>
+           2019 Victor Ibragimov <victor.ibragimov@gmail.com>
+           2020 Norwegian Nynorsk <l10n-no@lister.huftis.org>
+License: GPL-3+
+
+Files: host/abstractbrowserplugin.cpp
+    host/abstractbrowserplugin.h
+    host/connection.cpp
+    host/connection.h
+    host/downloadjob.cpp
+    host/downloadjob.h
+    host/downloadplugin.cpp
+    host/downloadplugin.h
+    host/kdeconnectplugin.cpp
+    host/kdeconnectplugin.h
+    host/main.cpp
+    host/mprisplugin.cpp
+    host/mprisplugin.h
+    host/purposeplugin.cpp
+    host/purposeplugin.h
+    host/settings.cpp
+    host/settings.h
+    host/tabsrunnerplugin.cpp
+    host/tabsrunnerplugin.h
+Copyright: 2017, David Edmundson <davidedmundson@kde.org>
+           2017-2019, Kai Uwe Broulik <kde@privat.broulik.de>
+License: Expat
+
+Files: po/ca/*
+       po/ca@valencia/*
+       po/uk/*
+Copyright: 2017-2019, Josep Ma. Ferrer <txemaq@gmail.com>
+           2019 Empar Montoro Martín <montoro_mde@gva.es>
+           2017-2019, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1 or LGPL-3, and KDEeV
+
+Files: reminder/*
+Copyright: 2018, David Edmundson <davidedmundson@kde.org>
+           2018, Eike Hein <hein@kde.org>
+           2009, Marco Martin <notmart@gmail.com>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2018-2020, Scarlett Moore <sgmoore@kde.org>
+           2018, Jonathan Riddell <jr@jriddell.org>
+           2022, Patrick Franz <deltaone@debian.org>
+           2024, Piper McCorkle <contact@piperswe.me>
+License: GPL-3+
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ --
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 3 of
+ the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ --
+ The complete text of version 3 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-3'.
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation;
+ version 2.1.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: LGPL-3
+ This package is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 3 of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-3'.
+
+License: KDEeV
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.

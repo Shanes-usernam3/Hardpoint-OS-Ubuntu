@@ -1,0 +1,271 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://invent.kde.org/libraries/kdsoap-ws-discovery-client
+Upstream-Name: kdsoap-ws-discovery-client
+
+Files: autotests/CMakeLists.txt
+       autotests/test_wsdiscoveryclient.cpp
+       CMakeLists.txt
+       docs/CMakeLists.txt
+       examples/CMakeLists.txt
+       examples/onvif-discover/CMakeLists.txt
+       examples/onvif-discover/main.cpp
+       examples/onvif-discover/onvifdiscover.cpp
+       examples/onvif-discover/onvifdiscover.h
+       README.md
+       src/CMakeLists.txt
+       src/wsdiscoveryclient.cpp
+       src/wsdiscoveryclient.h
+       src/wsdiscoveryprobejob.cpp
+       src/wsdiscoveryprobejob.h
+       src/wsdiscoveryserviceaggregator.cpp
+       src/wsdiscoveryserviceaggregator.h
+       src/wsdiscoveryserviceaggregator_p.h
+       src/wsdiscoverytargetservice.cpp
+       src/wsdiscoverytargetservice.h
+       wsdl/download.sh
+Copyright: 2019-2020, Casper Meijn <casper@meijn.net>
+           2023, Harald Sitter <sitter@kde.org>
+License: GPL-3+
+
+Files: .git-blame-ignore-revs
+       .gitignore
+       .gitlab-ci.yml
+       .kde-ci.yml
+       KDSoapWSDiscoveryClientConfig.cmake.in
+Copyright: 2019, Casper Meijn <casper@meijn.net>
+License: CC0-1.0
+
+Files: wsdl/docs.oasis-open.org/ws-dd/discovery/1.1/os/wsdd-discovery-1.1-schema-os.xsd
+       wsdl/docs.oasis-open.org/ws-dd/discovery/1.1/os/wsdd-discovery-1.1-wsdl-os.wsdl
+Copyright: OASIS(r) 2009. All Rights Reserved.
+License: LicenseRef-OASIS
+
+Files: wsdl/schemas.xmlsoap.org/ws/2004/08/addressing
+Copyright: 2004-0, BEA Systems Inc., International Business Machines Corporation, Microsoft Corporation, Inc, SAP AG, and Sun Microsystems, Inc.. All rights reserved.
+License: LicenseRef-WS-Addressing
+
+Files: wsdl/schemas.xmlsoap.org/ws/2005/04/discovery/ws-discovery.wsdl
+       wsdl/schemas.xmlsoap.org/ws/2005/04/discovery/ws-discovery.xsd
+Copyright: 2004-2005, Microsoft Corporation, Inc. All rights reserved.
+License: LicenseRef-WS-Discovery
+
+Files: wsdl/www.w3.org/2006/03/addressing/ws-addr.xsd
+Copyright: 2005, World Wide Web Consortium
+License: W3C
+
+Files:  debian/*
+Copyright: 2025 Patrick Franz <deltaone@debian.org>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in `/usr/share/common-licenses/GPL-3’.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: LicenseRef-OASIS
+ All capitalized terms in the following text have the meanings assigned to them in the OASIS
+ Intellectual Property Rights Policy (the "OASIS IPR Policy"). The full Policy may be found
+ at the OASIS website.
+ .
+ This document and translations of it may be copied and furnished to others, and derivative works
+ that comment on or otherwise explain it or assist in its implementation may be prepared, copied,
+ published, and distributed, in whole or in part, without restriction of any kind, provided that
+ the above copyright notice and this section are included on all such copies and derivative works.
+ However, this document itself may not be modified in any way, including by removing the copyright
+ notice or references to OASIS, except as needed for the purpose of developing any document or
+ deliverable produced by an OASIS Technical Committee (in which case the rules applicable to
+ copyrights, as set forth in the OASIS IPR Policy, must be followed) or as required to translate
+ it into languages other than English.
+ .
+ The limited permissions granted above are perpetual and will not be revoked by OASIS or its successors or assigns.
+ .
+ This document and the information contained herein is provided on an "AS IS" basis and OASIS
+ DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE
+ USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS OR ANY IMPLIED WARRANTIES
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+ .
+ OASIS requests that any OASIS Party or any other party that believes it has patent claims that
+ would necessarily be infringed by implementations of this OASIS Committee Specification or OASIS
+ Standard, to notify OASIS TC Administrator and provide an indication of its willingness to grant
+ patent licenses to such patent claims in a manner consistent with the IPR Mode of the OASIS
+ Technical Committee that produced this specification.
+ .
+ OASIS invites any party to contact the OASIS TC Administrator if it is aware of a claim of ownership
+ of any patent claims that would necessarily be infringed by implementations of this specification by a
+ patent holder that is not willing to provide a license to such patent claims in a manner consistent
+ with the IPR Mode of the OASIS Technical Committee that produced this specification. OASIS may
+ include such claims on its website, but disclaims any obligation to do so.
+ .
+ OASIS takes no position regarding the validity or scope of any intellectual property or other rights
+ that might be claimed to pertain to the implementation or use of the technology described in this
+ document or the extent to which any license under such rights might or might not be available; neither
+ does it represent that it has made any effort to identify any such rights. Information on OASIS'
+ procedures with respect to rights in any document or deliverable produced by an OASIS Technical Committee
+ can be found on the OASIS website. Copies of claims of rights made available for publication and any
+ assurances of licenses to be made available, or the result of an attempt made to obtain a general license
+ or permission for the use of such proprietary rights by implementers or users of this OASIS Committee
+ Specification or OASIS Standard, can be obtained from the OASIS TC Administrator. OASIS makes no
+ representation that any information or list of intellectual property rights will at any time be complete,
+ or that any claims in such list are, in fact, Essential Claims.
+ .
+ The name "OASIS" is trademarks of OASIS, the owner and developer of this specification, and should be
+ used only to refer to the organization and its official outputs. OASIS welcomes reference to, and
+ implementation and use of, specifications, while reserving the right to enforce its marks against
+ misleading uses. Please see http://www.oasis-open.org/who/trademark.php for above guidance.
+
+License: LicenseRef-WS-Addressing
+ Permission to copy, display, perform, modify and distribute the WS-Addressing Specification,
+ and to authorize others to do the foregoing, in any medium without fee or royalty is hereby
+ granted for the purpose of developing and evaluating the WS-Addressing Specification.
+ .
+ BEA, IBM, Microsoft, SAP AG, and Sun Microsystems (collectively, the "Authors") each agree
+ to grant a license to third parties, under royalty-free  and otherwise reasonable,
+ non-discriminatory terms and conditions, to their respective essential patent claims that
+ they deem necessary to implement the WS-Addressing Specification.
+ .
+ DISCLAIMERS:
+ .
+ THE WS-Addressing Specification IS PROVIDED "AS IS", AND THE AUTHORS MAKE NO REPRESENTATIONS
+ OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE
+ CONTENTS OF THE WS-Addressing Specification IS SUITABLE FOR ANY PURPOSE; NOR THAT THE
+ IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
+ TRADEMARKS OR OTHER RIGHTS.
+ .
+ THE AUTHORS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+ DAMAGES ARISING OUT OF ANY USE OF THE WS-Addressing Specification OR THE PERFORMANCE OR
+ IMPLEMENTATION OF THE CONTENTS THEREOF.
+ .
+ You may remove these disclaimers from your modified versions of the WS-Addressing
+ Specification provided that you effectively disclaim all warranties and liabilities on behalf
+ of all copyright holders in the copies of any such modified versions you distribute.
+ .
+ The name and trademarks of the Authors may NOT be used in any manner, including advertising
+ or publicity pertaining to the WS-Addressing Specification or its contents without specific,
+ written prior permission. Title to copyright in the WS-Addressing Specification will at all
+ times remain with the Authors.
+ .
+ No other rights are granted by implication, estoppel or otherwise.
+
+License: LicenseRef-WS-Discovery
+ Permission to copy, display, perform, modify and distribute the
+ WS-Discovery Specification (the "Specification", which includes
+ WSDL and schema documents), and to authorize others to do the
+ foregoing, in any medium without fee or royalty is hereby granted
+ for the purpose of developing and evaluating the Specification.
+ .
+ BEA Systems, Canon, Intel, Microsoft, and webMethods, Inc.
+ (collectively, the "Co-Developers") each agree to grant a license
+ to third parties, under royalty-free and other reasonable,
+ non-discriminatory terms and conditions, to their respective
+ essential Licensed Claims, which reasonable, non-discriminatory
+ terms and conditions may include, for example, but are not limited
+ to, an affirmation  of the obligation to grant reciprocal licenses
+ under any of the licensee's patents that are necessary to implement
+ the Specification.
+ .
+ DISCLAIMERS:
+ .
+ THE SPECIFICATION IS PROVIDED "AS IS," AND THE CO-DEVELOPERS MAKE
+ NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING,
+ BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS
+ OF THE SPECIFICATION ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE
+ IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY
+ PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+ .
+ THE CO-DEVELOPERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT,
+ SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY
+ USE OF THE SPECIFICATION OR THE PERFORMANCE OR IMPLEMENTATION OF
+ THE CONTENTS THEREOF.
+ .
+ You may remove these disclaimers from your modified versions of the
+ Specification provided that you effectively disclaim all warranties
+ and liabilities on behalf of all Co-developers and any copyright
+ holders in the copies of any such modified versions you distribute.
+ .
+ The name and trademarks of the Co-developers may NOT be used in any
+ manner, including advertising or publicity pertaining to the
+ Specification or its contents without specific, written prior
+ permission. Title to copyright in the Specification will at all
+ times remain with Microsoft.
+ .
+ No other rights are granted by implication, estoppel or otherwise.
+
+License: W3C
+ W3C SOFTWARE NOTICE AND LICENSE
+ .
+ This work (and included software, documentation such as READMEs, or other related items)
+ is being provided by the copyright holders under the following license.
+ .
+ License
+ .
+ By obtaining, using and/or copying this work, you (the licensee) agree that you have read,
+ understood, and will comply with the following terms and conditions.
+ .
+ Permission to copy, modify, and distribute this software and its documentation, with or
+ without modification, for any purpose and without fee or royalty is hereby granted, provided
+ that you include the following on ALL copies of the software and documentation or portions
+ thereof, including modifications:
+ .
+ The full text of this NOTICE in a location viewable to users of the redistributed or derivative work.
+ .
+ Any pre-existing intellectual property disclaimers, notices, or terms and conditions. If none exist,
+ the W3C Software Short Notice should be included (hypertext is preferred, text is permitted) within
+ the body of any redistributed or derivative code.
+ .
+ Notice of any changes or modifications to the files, including the date changes were made.
+ (We recommend you provide URIs to the location from which the code is derived.)
+ .
+ Disclaimers
+ .
+ THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR
+ WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS
+ FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENTATION WILL NOT INFRINGE ANY
+ THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+ .
+ COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING
+ OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.
+ .
+ The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to
+ the software without specific, written prior permission. Title to copyright in this software and any
+ associated documentation will at all times remain with copyright holders.
+ .
+ Notes
+ .
+ This version: http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231
+ .
+ This formulation of W3C's notice and license became active on December 31 2002. This version removes
+ the copyright ownership notice such that this license can be used with materials other than those owned
+ by the W3C, reflects that ERCIM is now a host of the W3C, includes references to this specific dated
+ version of the license, and removes the ambiguous grant of "use". Otherwise, this version is the same
+ as the previous version and is written so as to preserve the Free Software Foundation's assessment of
+ GPL compatibility and OSI's certification under the Open Source Definition.

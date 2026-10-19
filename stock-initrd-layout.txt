@@ -1,0 +1,6 @@
+total 20
+drwxr-xr-x 5 runner runner 4096 Oct 19 08:41 .
+drwxr-xr-x 8 runner runner 4096 Oct 19 08:41 ..
+drwxr-xr-x 3 runner runner 4096 Oct 19 08:41 early
+drwxr-xr-x 3 runner runner 4096 Oct 19 08:41 early2
+drwxr-xr-x 9 runner runner 4096 Oct 19 08:41 main

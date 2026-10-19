@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: FSFAP
+  SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
+ -->
+<component type="addon">
+  <id>org.kde.kio.admin</id>
+  <extends>org.kde.kio</extends>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KIO Admin</name>
+  <name xml:lang="ar">مدير KIO</name>
+  <name xml:lang="be">KIO Admin</name>
+  <name xml:lang="bg">KIO Admin</name>
+  <name xml:lang="ca">KIO Admin</name>
+  <name xml:lang="ca-valencia">KIO Admin</name>
+  <name xml:lang="cs">KIO Admin</name>
+  <name xml:lang="de">KIO-Admin</name>
+  <name xml:lang="en-GB">KIO Admin</name>
+  <name xml:lang="eo">KIO-Admin</name>
+  <name xml:lang="es">KIO Admin</name>
+  <name xml:lang="eu">KIO Admin</name>
+  <name xml:lang="fi">KIO Admin</name>
+  <name xml:lang="fr">KIO Admin</name>
+  <name xml:lang="ga">Riarthóir KIO</name>
+  <name xml:lang="gl">KIO Admin</name>
+  <name xml:lang="he">KIO ניהול</name>
+  <name xml:lang="ia">KIO Admin</name>
+  <name xml:lang="ie">KIO Admin</name>
+  <name xml:lang="it">KIO Admin</name>
+  <name xml:lang="ka">KIO ადმინი</name>
+  <name xml:lang="ko">KIO Admin</name>
+  <name xml:lang="nl">KIO Admin</name>
+  <name xml:lang="nn">KIO-admin</name>
+  <name xml:lang="pl">KIO Admin</name>
+  <name xml:lang="pt">KIO Admin</name>
+  <name xml:lang="pt-BR">KIO Admin</name>
+  <name xml:lang="ro">KIO Admin</name>
+  <name xml:lang="ru">Администратор KIO</name>
+  <name xml:lang="sk">KIO Admin</name>
+  <name xml:lang="sl">KIO Admin</name>
+  <name xml:lang="sv">I/O-administration</name>
+  <name xml:lang="tr">KIO Yöneticisi</name>
+  <name xml:lang="uk">KIO адміністрування</name>
+  <name xml:lang="zh-CN">KIO 管理员</name>
+  <name xml:lang="zh-TW">KIO Admin</name>
+  <summary>Enables administrative access for KIO-enabled applications</summary>
+  <summary xml:lang="ar">تمكن الوصول كمدير/جذر لجميع التطبيقات التي تدعم KIO</summary>
+  <summary xml:lang="be">Уключае доступ ад імя адміністратара для праграм з падтрымкай KIO</summary>
+  <summary xml:lang="bg">Позволява административни права на приложения с KIO функции </summary>
+  <summary xml:lang="ca">Habilita l'accés d'administració per a les aplicacions que permeten el KIO</summary>
+  <summary xml:lang="ca-valencia">Habilita l'accés d'administració per a les aplicacions que permeten KIO</summary>
+  <summary xml:lang="de">Systemverwalterrechte für KIO-fähige Anwendungen aktivieren</summary>
+  <summary xml:lang="en-GB">Enables administrative access for KIO-enabled applications</summary>
+  <summary xml:lang="eo">Ebligas administran aliron por KIO-povaj aplikaĵoj</summary>
+  <summary xml:lang="es">Activa el acceso de administrador en las aplicaciones que usan KIO</summary>
+  <summary xml:lang="eu">KIO gaituta duten aplikazioetan sarbide administratiboa gaitzen du</summary>
+  <summary xml:lang="fi">Sallii ylläpitäjäkäytön KIO-tietoisissa sovelluksissa</summary>
+  <summary xml:lang="fr">Active l'accès d'administrateur pour les applications intégrant « KIO »</summary>
+  <summary xml:lang="gl">Permite acceso administrativo para aplicacións que usan KIO</summary>
+  <summary xml:lang="he">הפעלת גישה ניהולית ליישומים תומכי KIO</summary>
+  <summary xml:lang="ia">Habilita accesso administrative per applicationes habilitate per KIO</summary>
+  <summary xml:lang="ie">Provide un accesse administrativ por applicationes quel supporta KIO</summary>
+  <summary xml:lang="it">Consente l'accesso amministrativo per le applicazioni abilitate per KIO</summary>
+  <summary xml:lang="ka">ადმინისტრირების წვდომა KIO-ჩართული აპლიკაციებისთვის</summary>
+  <summary xml:lang="ko">KIO를 사용하는 앱에서 관리자 접근 활성화</summary>
+  <summary xml:lang="nl">Schakelt toegang als systeembeheerder in voor toepassingen met KIO ingeschakeld</summary>
+  <summary xml:lang="nn">Gjev administrativ tilgang for program med KIO-støtte</summary>
+  <summary xml:lang="pl">Włącza dostęp administracyjny dla aplikacji obsługujących KIO</summary>
+  <summary xml:lang="pt">Activa o acesso como administrador às aplicações com suporte para o KIO</summary>
+  <summary xml:lang="pt-BR">Habilita acesso administrativo para aplicativos com suporte a KIO</summary>
+  <summary xml:lang="ro">Permite accesul administrativ pentru aplicații ce folosesc KIO</summary>
+  <summary xml:lang="ru">Использование доступа с правами администратора в приложениях, использующих подсистему KIO</summary>
+  <summary xml:lang="sl">Omogoča skrbniški dostop do aplikacij, ki omogočajo KIO</summary>
+  <summary xml:lang="sv">Möjliggör administratörsåtkomst för I/O-medvetna program</summary>
+  <summary xml:lang="tr">KIO etkinleştirilmiş uygulamalar için yönetimsel erişimi etkinleştirir</summary>
+  <summary xml:lang="uk">Уможливлює адміністративний доступ до програм із уможливленим KIO</summary>
+  <summary xml:lang="zh-CN">为使用 KIO 的应用程序启用管理员权限访问</summary>
+  <summary xml:lang="zh-TW">為支援 KIO 的應用程式提供管理員存取權</summary>
+  <description>
+    <p>KIO Admin is a KIO worker plugin that enables KIO-aware applications (such as Dolphin, Kate or Gwenview) to access files as administrator/root.</p>
+    <p xml:lang="ar">مدير KIO هي ملحقة تمكّن التطبيقات المدركة لـ KIO (مثل دولفين أو كيت أو حونفيو) من الوصول إلى الملفات كمدير/جذر.</p>
+    <p xml:lang="be">KIO Admin - гэта ўбудова KIO worker, якая дазваляе праграмам, якія працуюць з KIO (напрыклад, Dolphin, Kate або Gwenview), атрымліваць доступ да файлаў ад імя адміністратара/суперкарыстальніка.</p>
+    <p xml:lang="bg">KIO Admin е приставка за  KIO worker, която позволява административен достъп на приложения с KIO функции (като Dolphin, Kate или Gwenview).</p>
+    <p xml:lang="ca">El KIO Admin és un connector de procés de treball KIO que habilita les aplicacions preparades per al KIO (com el Dolphin, Kate o Gwenview) accedeixin als fitxers com a administrador/root.</p>
+    <p xml:lang="ca-valencia">KIO Admin és un connector de procés de treball KIO que habilita les aplicacions preparades per a KIO (com Dolphin, Kate o Gwenview) accedisquen als fitxers com a administrador/root.</p>
+    <p xml:lang="de">KIO-Admin ist ein Ein-/Ausgabemodul, mit dem Anwendungen wie Dolphin, Kate oder Gwenview als Systemverwalter auf Dateien zugreifen und bearbeiten können.</p>
+    <p xml:lang="en-GB">KIO Admin is a KIO worker plugin that enables KIO-aware applications (such as Dolphin, Kate or Gwenview) to access files as administrator/root.</p>
+    <p xml:lang="eo">KIO Admin estas KIO-laborista kromaĵo kiu ebligas KIO-konsciajn aplikojn (kiel Dolphin, Kate aŭ Gwenview) aliri dosierojn kiel administranto/radiko.</p>
+    <p xml:lang="es">KIO Admin es un complemento del módulo de trabajo KIO que activa el acceso como administrador/root en las aplicaciones que usan KIO (como Dolphin, Kate o Gwenview).</p>
+    <p xml:lang="eu">KIO Admin KIO behargin plugin bat da, KIO-jakitun diren aplikazioek (Dolphin, Kate, Gwenview eta halakoak) fitxategiak administratzaile/root gisa atzitzea gaitzen duena.</p>
+    <p xml:lang="fi">KIO Admin on KIO-työskentelijä, joka antaa KIO-tietoisten sovellusten (kuten Dolphinin, Katen tai Gwenview’n) käyttää tiedostoja ylläpitäjäoikeuksin.</p>
+    <p xml:lang="fr">KIO Admin est un module externe de travail « KIO » permettant aux applications « KIO » (comme Dolphin, Kate ou Gwenview) d'accéder aux fichiers en tant qu'administrateur.</p>
+    <p xml:lang="gl">KIO Admin é un complemento de traballador de KIO que permite a aplicacións que usan KIO (como Dolphin, Kate ou Gwenview) acceder a ficheiros como a persoa administradora ou root.</p>
+    <p xml:lang="he">KIO ניהול הוא תוסף הפעלה של KIO שמאפשר ליישומים מודעי KIO (כגון Dolphin,‏ Kate או Gwenview) כדי לגשת קבצים עם הרשאות ניהול/root/משתמש־על.</p>
+    <p xml:lang="ia">KIO Admin es un plugin laborator que habilita applicationes conscie de KIO (tal como Dolphin, Kate o Gwenview)  a acceder a files como administrator/root.</p>
+    <p xml:lang="ie">KIO Admin es un plugin de KIO quel permisse a applicationes quel supporta KIO (quam Dolphin, Kate o Gwenview) acceder files quam li administrator (superusator).</p>
+    <p xml:lang="it">KIO Admin è un estensione del worker KIO che consente alle applicazioni compatibili con KIO (come Dolphin, Kate o Gwenview) di accedere ai file come amministratore/root.</p>
+    <p xml:lang="ka">KIOAdmin-ი KIO დამხმარე პროცესის დამატებას წარმოადგენს, რომლებიც აპლიკაციებს, რომლებმაც იციან, KIO რა არის (მაგ: Dolphin, Kate და Gwenview) ფაილებთან ადმინისტრატორის/root წვდომა იქონიონ.</p>
+    <p xml:lang="ko">KIO Admin은 KIO를 사용할 수 있는 앱(Dolphin, Kate, Gwenview 등)에서 관리자/루트 권한으로 파일에 접근할 수 있는 KIO 워커 플러그인입니다.</p>
+    <p xml:lang="nl">KIO Admin is een KIO-worker die met KIO bekende toepassingen (zoals Dolphin, Kate of Gwenview) toegang geeft tot bestanden als systeembeheerder/root.</p>
+    <p xml:lang="nn">KIO Admin er ein KIO-arbeidar som lèt program som brukar KIO (for eksempel Dolphin, Kate og Gwenview) få lese- og skrivetilgang til filene som administrator/rotbrukar.</p>
+    <p xml:lang="pl">KIO Admin jest wtyczką pracownika KIO, która daje aplikacjom z obsługą KIO (takim jak Dolphin, Kate czy Gwenview) dostęp do plików w trybie administratora.</p>
+    <p xml:lang="pt">O KIO Admin é um módulo do KIO que permite às aplicações com suporte para o KI (como o Dolphin, o Kate ou o Gwenview) acederem aos ficheiros como administrador ('root').</p>
+    <p xml:lang="pt-BR">KIO Admin é um plugin KIO worker que habilita aplicativos com suporte a KIO (como Dolphin, Kate ou Gwenview) acesso a arquivos como administrador/root.</p>
+    <p xml:lang="ro">Kio Admin e o extensie de lucrător KIO ce permite aplicațiilor bazate pe KIO (cum ar fi Dolphin, Kate și Gwenview) să acceseze fișiere ca administrator/root.</p>
+    <p xml:lang="ru">Администратор KIO — модуль KIO, обеспечивающий доступ к файлам с правами администратора / суперпользователя из приложений, основанных на модуле KIO (диспетчер файлов Dolphin, текстовый редактор Kate, приложение для просмотра изображений Gwenview и прочих).</p>
+    <p xml:lang="sl">KIO Admin je vtičnik za program KIO worker, ki omogoča aplikacijam, ki poznajo KIO (kot so Dolphin, Kate ali Gweview) dostop do datotek kot skrbnik/root.</p>
+    <p xml:lang="sv">I/O-administration är ett I/O-arbetarinsticksprogram som möjliggör för I/O-medvetna program (som Dolphin, Kate eller Gwenview) att komma åt filer som systemadministratör.</p>
+    <p xml:lang="tr">KIO Yöneticisi, KIO ile tümleşmiş uygulamaların (Dolphin, Kate, Gwenview gibi), dosyalara yönetici/kök olarak erişmesine izin veren bir KIO çalışan eklentisidir.</p>
+    <p xml:lang="uk">KIO адміністрування є додатком-обробником KIO, який уможливлює для програм із KIO (зокрема Dolphin, Kate і Gwenview) доступ до файлів від імені адміністратора/root.</p>
+    <p xml:lang="zh-CN">KIO 管理员是一款用于为基于 KIO 的应用程序 (例如 Dolphin、Kate、Gwenview 等) 提供管理员/根权限访问的 KIO 工作程序。</p>
+    <p xml:lang="zh-TW">KIO Admin 是讓支援 KIO 的應用程式（例如 Dolphin、Kate 或 Gwenview）以管理員 / root 模式存取檔案的 KIO worker 外掛程式。</p>
+  </description>
+  <project_group>KDE</project_group>
+  <url type="homepage">https://kde.org</url>
+  <developer_name>Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ar">هارالد سِتِر &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="be">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="bg">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ca">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ca-valencia">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="cs">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="de">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="en-GB">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="eo">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="es">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="eu">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="fi">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="fr">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ga">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="gl">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="he">הרלד סיטר &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ia">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ie">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="it">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ka">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ko">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="nl">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="nn">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="pl">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="pt">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="pt-BR">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ro">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ru">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="sk">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="sl">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="sv">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="tr">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="uk">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="zh-CN">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <developer_name xml:lang="zh-TW">Harald Sitter &lt;sitter@kde.org&gt;</developer_name>
+  <categories>
+    <category>System</category>
+  </categories>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+    <release version="24.12.3" date="2025-03-06"/>
+    <release version="24.12.2" date="2025-02-06"/>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
+    <release version="24.08.2" date="2024-10-10"/>
+    <release version="24.08.1" date="2024-09-12"/>
+    <release version="24.08.0" date="2024-08-22"/>
+    <release version="24.05.2" date="2024-07-04"/>
+    <release version="24.05.1" date="2024-06-13"/>
+    <release version="24.05.0" date="2024-05-23"/>
+    <release version="24.02.2" date="2024-04-11"/>
+    <release version="24.02.1" date="2024-03-21"/>
+    <release version="24.02.0" date="2024-02-28"/>
+    <release version="23.08.5" date="2024-02-15"/>
+  </releases>
+</component>

@@ -1,0 +1,9 @@
+# Private library
+plasma-widgets-addons: lacks-ldconfig-trigger usr/lib/*/libweatherdata.so usr/lib/*/libweatherion.so
+# Private library
+plasma-widgets-addons: package-name-doesnt-match-sonames libweatherdata libweatherion
+# Private library
+plasma-widgets-addons: shared-library-lacks-version usr/lib/*/libweatherdata.so libweatherdata.so
+# Private library
+plasma-widgets-addons: shared-library-lacks-version usr/lib/*/libweatherion.so libweatherion.so
+

@@ -1,0 +1,3 @@
+kubuntu-installer-prompt: no-manual-page [usr/bin/kubuntu-installer-prompt]
+kubuntu-installer-prompt: desktop-entry-lacks-icon-entry [usr/share/xsessions/kubuntu-live-environment.desktop]
+kubuntu-installer-prompt: desktop-entry-lacks-keywords-entry [usr/share/xsessions/kubuntu-live-environment.desktop]

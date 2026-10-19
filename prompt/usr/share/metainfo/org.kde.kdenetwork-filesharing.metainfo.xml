@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="addon">
+  <id>org.kde.kdenetwork_filesharing</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <extends>org.kde.dolphin.desktop</extends>
+  <name>Samba Filesharing Plugin</name>
+  <name xml:lang="ar">ملحقة مشاركة سامبا</name>
+  <name xml:lang="az">Samba fayl paylaşımı qoşması</name>
+  <name xml:lang="be">Убудова для абагульвання файлаў з дапамогай Samba</name>
+  <name xml:lang="bg">Приставка за файлови споделяния със Samba</name>
+  <name xml:lang="ca">Connector d'intercanvi de fitxers del Samba</name>
+  <name xml:lang="ca-valencia">Connector d'intercanvi de fitxers de Samba</name>
+  <name xml:lang="cs">Modul pro sdílení souborů Samba</name>
+  <name xml:lang="da">Plugin til Samba-fildeling</name>
+  <name xml:lang="de">Samba-Modul zur Dateifreigabe</name>
+  <name xml:lang="el">Πρόσθετο διαμοιρασμού αρχείων Samba</name>
+  <name xml:lang="en-GB">Samba Filesharing Plugin</name>
+  <name xml:lang="eo">Samba-dosierkomuniga kromprogramo</name>
+  <name xml:lang="es">Complemento para compartir archivos con Samba</name>
+  <name xml:lang="et">Samba failijagamise plugin</name>
+  <name xml:lang="eu">Fitxategiak partekatzeko Samba plugina</name>
+  <name xml:lang="fi">Samba-tiedostojakoliitännäinen</name>
+  <name xml:lang="fr">Module externe de partage de fichiers Samba</name>
+  <name xml:lang="gl">Complemento de compartición de ficheiros de Samba</name>
+  <name xml:lang="he">תוסף שיתוף קבצים עם Samba</name>
+  <name xml:lang="hu">Samba fájlmegosztó bővítmény</name>
+  <name xml:lang="ia">Plugin de compartir file de Samba</name>
+  <name xml:lang="id">Plugin BerbagiFile Samba</name>
+  <name xml:lang="is">Viðbótareiginleikar Samba-skráadeilingar</name>
+  <name xml:lang="it">Estensione di condivisione dei file con Samba</name>
+  <name xml:lang="ka">ფაილების Samba-ით გაზიარების დამატება</name>
+  <name xml:lang="ko">Samba 파일 공유 플러그인</name>
+  <name xml:lang="lt">Samba failų bendrinimo įskiepis</name>
+  <name xml:lang="lv">Samba datņu kopīgošanas spraudnis</name>
+  <name xml:lang="nl">Plug-in voor Samba bestanden delen</name>
+  <name xml:lang="nn">Samba-basert fildelingstillegg</name>
+  <name xml:lang="pl">Wtyczka współdzielenia plików Samba</name>
+  <name xml:lang="pt">'Plugin' de Partilha de Ficheiros do Samba</name>
+  <name xml:lang="pt-BR">Plugin de compartilhamento de arquivos do Samba</name>
+  <name xml:lang="ro">Extensie de partajare fișiere Samba</name>
+  <name xml:lang="ru">Предоставление общего доступа Samba</name>
+  <name xml:lang="sa">साम्बा सञ्चिकासाझेदारी प्लगिन्</name>
+  <name xml:lang="sk">Samba Filesharing Plugin</name>
+  <name xml:lang="sl">Vtičnik deljenja datotek v Sambi</name>
+  <name xml:lang="sv">Samba fildelningsinsticksprogram</name>
+  <name xml:lang="tr">Samba Dosya Paylaşım Eklentisi</name>
+  <name xml:lang="uk">Додаток оприлюднення файлів у Samba</name>
+  <name xml:lang="zh-CN">Samba 文件共享插件</name>
+  <name xml:lang="zh-TW">Samba 檔案分享外掛程式</name>
+  <summary>Adds Configuration of Samba sharing for folders in Dolphin</summary>
+  <summary xml:lang="ar">يضيف ضبط مشاركة سامبا للمجلدات في دولفين</summary>
+  <summary xml:lang="az">Dolphin-də qovluq üçün Samba paylaşımı tənzimləmələrini əlavə edir</summary>
+  <summary xml:lang="be">Дадае для каталогаў у Dolphin канфігурацыю абагульвання з дапамогай Samba</summary>
+  <summary xml:lang="bg">Настройки на споделяния на папки със Samba в Dolphin</summary>
+  <summary xml:lang="ca">Afegeix la configuració d'ús compartit de Samba al Dolphin per a les carpetes</summary>
+  <summary xml:lang="ca-valencia">Afig la configuració d'ús compartit de Samba en Dolphin per a les carpetes</summary>
+  <summary xml:lang="da">Tilføjer konfiguration af Samba-deling for mapper i Dolphin</summary>
+  <summary xml:lang="de">Einrichtung von Samba-Freigaben für Ordner in Dolphin</summary>
+  <summary xml:lang="el">Προσθέτει τη διαμόρφωση της κοινής χρήσης Samba για φακέλους στο Dolphin</summary>
+  <summary xml:lang="en-GB">Adds Configuration of Samba sharing for folders in Dolphin</summary>
+  <summary xml:lang="eo">Aldonas agordon de Samba-komunigo por dosierujoj en Dolfin</summary>
+  <summary xml:lang="es">Añade configuración para compartir carpetas con Samba en Dolphin</summary>
+  <summary xml:lang="et">Samba jagamise seadistamise lisamine Dolphini kataloogidele</summary>
+  <summary xml:lang="eu">Dolphinen Samba bidez karpetak partekatzeko konfigurazioa gehitzen du</summary>
+  <summary xml:lang="fi">Lisää Dolphinin kansiolle Samba-jakoasetukset</summary>
+  <summary xml:lang="fr">Ajoute la configuration des partages Samba pour les dossiers dans Dolphin</summary>
+  <summary xml:lang="gl">Engade configuración de compartición de Samba de cartafoles en Dolphin</summary>
+  <summary xml:lang="he">מוסיף הגדרות לשיתוף עם Samba לתיקיות ב־Dolphin</summary>
+  <summary xml:lang="hu">Samba megosztási beállítások hozzáadása mappákhoz Dolphinban</summary>
+  <summary xml:lang="ia">Adde configuration de compartir de Samba per dossieres in Dolphin</summary>
+  <summary xml:lang="id">Menambahkan Konfigurasi si berbagi Samba untuk folder-folder di dalam Dolphin</summary>
+  <summary xml:lang="is">Uppsetning stillinga Samba til deilingar á möppum í Dolphin</summary>
+  <summary xml:lang="it">Aggiunge le configurazione della condivisione tramite Samba delle cartelle in Dolphin</summary>
+  <summary xml:lang="ka">Dolphin-ში საქაღალდეების Samba-ით გაზიარების ჩანართის დამატება</summary>
+  <summary xml:lang="ko">Dolphin에 Samba 폴더 공유 설정 추가</summary>
+  <summary xml:lang="lt">Prideda Samba bendrinimo konfigūraciją aplankams Dolphin programoje</summary>
+  <summary xml:lang="lv">Pievieno „Samba“ datņu kopīgošanas konfigurēšanu „Dophin“ datņu pārvaldniekā</summary>
+  <summary xml:lang="nl">Voegt configuratie van Samba delen van mappen toe in Dolphin</summary>
+  <summary xml:lang="nn">Legg til oppsett av Samba-deling av mapper i Dolphin</summary>
+  <summary xml:lang="pl">Dodaje ustawienia Samby do współdzielenia katalogów w Dolphinie</summary>
+  <summary xml:lang="pt">Adiciona a configuração da partilha por Samba de pastas no Dolphin</summary>
+  <summary xml:lang="pt-BR">Adiciona a configuração do compartilhamento de pastas no Dolphin pelo Samba</summary>
+  <summary xml:lang="ro">Adaugă configurări ale partajării Samba pentru dosare în Dolphin</summary>
+  <summary xml:lang="ru">Конфигурация общего доступа Samba для папок в Dolphin</summary>
+  <summary xml:lang="sa">Dolphin इत्यस्मिन् पुटस्य कृते Samba sharing इत्यस्य Configuration योजयति</summary>
+  <summary xml:lang="sk">Pridá podporu zdieľania Samba pre priečinky v Dolphine</summary>
+  <summary xml:lang="sl">Doda nastavitve skupne rabe Sambe za mape v Dolphinu</summary>
+  <summary xml:lang="sv">Lägger till inställning av delning av kataloger i Dolphin med Samba</summary>
+  <summary xml:lang="tr">Dolphin’deki klasörler için Samba paylaşımının yapılandırmasını ekler</summary>
+  <summary xml:lang="uk">Додає пункти налаштовування спільного використання тек Samba у Dolphin</summary>
+  <summary xml:lang="zh-CN">在 Dolphin 中为文件夹添加 Samba 共享配置</summary>
+  <summary xml:lang="zh-TW">加入 Samba 共享資料夾設定到 Dolphin 中</summary>
+  <description>
+    <p>With this plugin you can set your folders to be shared on your local network using Samba, which talks the SMB protocol common on Windows and other platforms.</p>
+    <p xml:lang="ar">باستخدام هذا الملحق، يمكنك إعداد مجلداتك لمشاركتها على شبكتك المحلية باستخدام سامبا، الذي يتحدث بروتوكول SMB الشائع على نظام تشغيل ويندوز والمنصات الأخرى.</p>
+    <p xml:lang="az">Windows və digər platformalarındakı SMB protokolunun köməyi ilə, Samba istifadə edərək yerli şəbəkəniz üzərindən paylaşılacaq qovluqları bu qoşma vasitəsi ilə təyin edə bilərsiniz.</p>
+    <p xml:lang="be">З дапамогай гэтай убудовы вы можаце наладзіць абагульванне сваіх каталогаў у лакальнай сетцы з дапамогай Samba, якая выкарыстоўвае пратакол SMB, распаўсюджаны ў Windows і на іншых платформах.</p>
+    <p xml:lang="bg">С този плъгин можете да настроите папките си да бъдат споделени в локалната мрежа със Samba и протокола SMB, общ за Windows и други платформи.</p>
+    <p xml:lang="ca">Amb aquest connector podreu establir les vostres carpetes perquè es comparteixin a la xarxa local usant Samba, el qual parla el protocol SMB comú al Windows i a altres plataformes.</p>
+    <p xml:lang="ca-valencia">Amb este connector podreu establir les vostres carpetes perquè es compartisquen en la xarxa local utilitzant Samba, el qual parla el protocol SMB comú a Windows i a altres plataformes.</p>
+    <p xml:lang="da">Med dette plugin kan du indstille dine mapper til at blive delt på dit lokale netværk ved at bruge Samba, som taler med SMB-protokollen, der er almindelig på Windows og andre platforme.</p>
+    <p xml:lang="de">Mit diesem Modul können Sie Ihre Ordner in Ihrem lokalen Netzwerk freigegeben. Dazu wird Samba mit SMB-Protokoll verwendet, das auf Windows und anderen Plattformen verbreitet ist.</p>
+    <p xml:lang="el">Με αυτό το πρόσθετο μπορείτε να ρυθμίσετε τους φακέλους σας σε κοινή χρήση με τη Samba, η οποία επικοινωνεί με το SMB πρωτόκολλο που είναι κοινό στα Windows και σε άλλες πλατφόρμες.</p>
+    <p xml:lang="en-GB">With this plugin you can set your folders to be shared on your local network using Samba, which talks the SMB protocol common on Windows and other platforms.</p>
+    <p xml:lang="eo">Kun tiu kromprogramo vi povas disponigi viajn dosierujojn por komunigo en via loka reto uzante Samba, kiu parolas la SMB-protokolon kutiman en Vindozo kaj alia platformoj.</p>
+    <p xml:lang="es">Con este complemento puede configurar las carpetas a compartir en la red local usando Samba, que usa el protocolo SMB típico de Windows y de otras plataformas.</p>
+    <p xml:lang="et">Selle plugina abil saab määrata kindlaks kataloogid, mida soovid jagada kohtvõrgus Samba abil, mis suudab suhelda SMB protokolliga, mis on levinud Windowsis ja teistel platvormidel.</p>
+    <p xml:lang="eu">Plugin honekin zure karpetak tokiko sarean Samba erabiliz partekatzeko ezar ditzakezu. Samba, Windows eta beste plataforma batzuetan ohikoa den SMB protokoloan mintzatzen da.</p>
+    <p xml:lang="fi">Tällä liitännäisellä voit asettaa kansiosi jaettaviksi paikallisverkossa Samballa, joka käyttää samaa SMB-yhteyskäytäntöä kuin Windows ja muut alustat.</p>
+    <p xml:lang="fr">Grâce à ce module externe, vous pouvez configurer les dossiers que vous partagez sur votre réseau local à l'aide de « Samba », qui permet de dialoguer en utilisant le protocole « SMB » avec Windows et d'autres plate-formes.</p>
+    <p xml:lang="gl">Con este complemento pode definir os seus cartafoles para que se compartan na súa rede local usando Samba, que se comunica usando o protocolo SMB común en Windows e outras plataformas.</p>
+    <p xml:lang="he">עם התוסף הזה אפשר להגדיר את שיתוף התיקיות שלך ברשת המקומית עם Samba שמשתמשת בפרוטוקול SMB שנפוץ ב־Windows ופלטפורמות נוספות.</p>
+    <p xml:lang="hu">Ezzel a bővítménnyel beállíthatja, hogy a mappák megosztását a helyi hálózaton a Samba használatával, amely a Windows és más platformokon elterjedt SMB protokollt alkalmazza.</p>
+    <p xml:lang="ia">Con iste plugin tu pte fixar tu dossieres que debe esser compartite sur tu rete local usante Samba, le qual parla le protocollo SMB commun sur Windows e altere platteformas.</p>
+    <p xml:lang="id">Dengan plugin ini kamu bisa mengatur foldermu untuk dibagikan di jaringan lokalmu menggunakan Samba, yang mengkomunikasikan protokol SMB yang pada umumnya di Windows dan platform lainnya.</p>
+    <p xml:lang="is">Með þessu viðbótarforriti geturðu stillt möppurnar þínar á að deilast á staðarnetinu með hjálp Samba, sem notar SMB-samskiptamátann til að virka með Windows og fleiri stýrikerfi.</p>
+    <p xml:lang="it">Con questa estensione puoi configurare le tue cartelle perché siano condivise sulla rete locale tramite Samba, che parla il protocollo SMB comune a Windows e ad altre piattaforme.</p>
+    <p xml:lang="ka">ამ დამატებით შეგიძლიათ თქვენი საქაღალდეები ლოკალურ ქსელში Samba-ით გააზიაროთ, რომელიც Windows-ის და სხვა პლატფორმების ფაილების გასაზიარებელი პროტოკოლია.</p>
+    <p xml:lang="ko">이 플러그인을 사용하여 Windows나 다른 플랫폼에서 자주 사용되는 SMB 프로토콜을 지원하는 Samba를 통해서 네트워크에 폴더를 공유할 수 있습니다.</p>
+    <p xml:lang="lt">Naudodami šį įskiepį galite nusistatyti, kurie aplankai bus bendrinami jūsų vietiniame tinkle naudojant Samba, kuri bendrauja su „Windows“ ir kitose platformose paplitusiu SMB protokolu.</p>
+    <p xml:lang="lv">Ar šo spraudni varat iestatīt mapju kopīgošanu lokālajā tīklā, izmantojot „Samba“. Šī sistēma izmanto „Windows“ un citās platformās bieži izmantoto SMB protokolu.</p>
+    <p xml:lang="nl">Met deze plug-in kunt u uw te delen mappen op uw lokale netwerk met Samba instellen, die het SMB-protocol gebruikt wat algemeen is op Windows en andere platformen.</p>
+    <p xml:lang="nn">Men dette programtillegget kan du setja opp mappene for deling på lokalnettet via Samba, som vert brukt med SMB-protokollen på Windows og andre plattformer.</p>
+    <p xml:lang="pl">Dzięki tej wtyczce można współdzielić katalogi w sieci lokalnej przy użyciu Samby, która porozumiewa się przy użyciu protokołu SMB na Windowsie i innych platformach.</p>
+    <p xml:lang="pt">Com este 'plugin', poderá configurar as suas pastas para ficarem partilhadas na sua rede local com o Samba, que por sua vez fala o protocolo SMB comum do Windows e das outras plataformas.</p>
+    <p xml:lang="pt-BR">Com este plugin você poderá configurar as suas pastas para ficarem compartilhadas na sua rede local usando o Samba, que por sua vez, utiliza o protocolo SMB comum do Windows e de outras plataformas.</p>
+    <p xml:lang="ro">Cu această extensie, puteți partaja dosare în rețeaua locală folosind Samba, care vorbește protocolul SMB întâlnit pe Windows și alte platforme.</p>
+    <p xml:lang="ru">Этот модуль позволяет настроить общий доступ к папкам в локальной сети с помощью Samba (используется протокол SMB, который работает в Windows и на других платформах).</p>
+    <p xml:lang="sa">एतेन प्लगिन् इत्यनेन भवान् Samba इत्यस्य उपयोगेन स्वस्य स्थानीयजालपुटे साझां कर्तुं स्वस्य समुच्चय सेट् कर्तुं शक्नोति, यत् विण्डोज इत्यादिषु मञ्चेषु सामान्यं SMB प्रोटोकॉलं वदति ।</p>
+    <p xml:lang="sk">Pomocou tohto doplnku môžete nastaviť zdieľanie priečinkov vo vašej miestnej sieti pomocou Samby, ktorá používa protokol SMB, ktorý je bežný vo Windowse a na iných platformách.</p>
+    <p xml:lang="sl">S tem vtičnikom lahko nastavite vaše mape v skupni rabi v lokalnem omrežju s pomočjo Sambe, ki uporablja protokol SMB, ki je običajen za Windows in druge platforme.</p>
+    <p xml:lang="sv">Med det här insticksprogrammet kan du ställa in kataloger att delas på det lokala nätverket genom att använda Samba, vilket använder SMB-protokollet gemensamt med Windows och andra plattformar.</p>
+    <p xml:lang="tr">Bu eklentiyle, Windows ve diğer platformlarda ortak olan SMB protokolünü konuşan Samba kullanarak yerel ağınızda paylaşılacak klasörlerinizi ayarlayabilirsiniz.</p>
+    <p xml:lang="uk">За допомогою цього додатка ви можете налаштувати ваші теки на спільне використання у локальній мережі за допомогою Samba, системи обміну даними протоколом SMB, який є поширеним протоколом у Windows та на інших платформах.</p>
+    <p xml:lang="zh-CN">您可以使用此插件来将本地文件夹通过 Samba 共享到本地网络。Samba 共享使用的是通用的 SMB 协议，能够与 Windows 以及其他平台建立通信。</p>
+    <p xml:lang="zh-TW">使用這個外掛程式您可以設定透過 Samba 向您的區域網路分享資料夾。Samba 使用 Windows 和其他平台也使用的 SMB 協定。</p>
+  </description>
+  <url type="homepage">https://www.kde.org</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=dolphin</url>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://cdn.kde.org/screenshots/kdenetwork-filesharing/kdenetwork-filesharing.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <categories>
+    <category>System</category>
+  </categories>
+  <icon type="stock">system-file-manager</icon>
+</component>

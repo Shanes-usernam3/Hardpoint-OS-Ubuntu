@@ -1,0 +1,164 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kup
+Upstream-Contact: Simon Persson <simonpersson1@gmail.com>
+Source: https://www.linux-apps.com/p/1127689/
+
+Files: *
+Copyright: 2011-2020 Simon Persson <simon.persson@mykolab.com>
+License: GPL-3+ or LicenseRef-KDE-Accepted-GPL
+
+Files: org.kde.kup.appdata.xml
+Copyright: 2011-2020 Simon Persson <simon.persson@mykolab.com>
+License: FSFAP
+
+Files: debian/*
+Copyright: 2017 Thomas Pierson <contact@thomaspierson.fr>
+           2025 Benxi Yang <ybx332@gmail.com>
+License: GPL-2+
+
+Files: kcm/folderselectionmodel.cpp
+       kcm/folderselectionmodel.h
+Copyright: 2003 Scott Wheeler <wheeler@kde.org>
+           2004 Max Howell <max.howell@methylblue.com>
+           2004 Mark Kretschmann <markey@web.de>
+           2008 Seb Ruiz <ruiz@kde.org>
+           2008 Sebastian Trueg <trueg@kde.org>
+           2020 Simon Persson <simon.persson@mykolab.com>
+License: GPL-2
+
+Files: kcm/kbuttongroup.cpp
+       kcm/kbuttongroup.h
+Copyright: 2006 Pino Toscano <toscano.pino@tiscali.it>
+           2020 Simon Persson <simon.persson@mykolab.com>
+License: GPL-3+ or GPL-2+
+
+Files: */CMakeLists.txt
+       CMakeLists.txt
+Copyright: 2020 Simon Persson <simon.persson@mykolab.com>
+License: GPL-2+
+
+Files: po/uk/kup.po
+Copyright: 2019-2021 KDE e.V.
+           2019-2024 Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1 or LGPL-3+
+
+Files: po/ca/kup.po
+       po/ca@valencia/kup.po
+Copyright: 2019-2024 KDE e.V.
+           2019-2020 Antoni Bella Pérez <antonibella5@yahoo.com>
+           2020-2024 Josep M. Ferrer <txemaq@gmail.com>
+License: LGPL-2.1 or LGPL-3+
+
+Files: po/sk/kup.po
+Copyright: 2019,2021 Roman Paholík <wizzardsk@gmail.com>
+License: GPL-3+ or LicenseRef-KDE-Accepted-GPL
+Comment: contacted the copyright holder by email to clearify the license.
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see
+ <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see
+ <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published
+ by the Free Software Foundation; version 2.1.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ See the GNU Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, see
+ <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: LGPL-3+
+ This program is free software: you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation, either version 3 of
+ the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this program. If not, see
+ <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.  This file is offered as-is,
+ without any warranty.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 3 of
+ the license or (at your option) at any later version that is
+ accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.

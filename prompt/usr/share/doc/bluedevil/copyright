@@ -1,0 +1,110 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: bluedevil
+Source: https://invent.kde.org/plasma/bluedevil
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2010-2013, Alejandro Fiestas Fiestas <afiestas@kde.org>
+           2010, Alejandro Fiestas Olivares <alex@eyeos.org>
+           2010, Alejandro Fiestas Olivares <alex@ufocoders.com>
+           2010, Eduardo Robles Elvira <edulix@gmail.com>
+           2010, Nokia Corporation and/or its subsidiary(-ies)
+           2010, Rafael Fernández López <ereslibre@kde.org>
+           2010-2011, UFO Coders <info@ufocoders.com>
+License: GPL-2+
+
+Files: src/kio/bluetooth/kiobluetooth.h
+       src/sendfile/discoverwidget.cpp
+       src/sendfile/discoverwidget.h
+       src/sendfile/pages/connectingpage.cpp
+       src/sendfile/pages/connectingpage.h
+       src/sendfile/pages/selectdeviceandfilespage.cpp
+       src/sendfile/pages/selectdeviceandfilespage.h
+       src/sendfile/pages/selectdevicepage.cpp
+       src/sendfile/pages/selectdevicepage.h
+       src/sendfile/pages/selectfilespage.cpp
+       src/sendfile/pages/selectfilespage.h
+       src/sendfile/sendfilesjob.cpp
+       src/sendfile/sendfilesjob.h
+       src/sendfile/sendfilewizard.cpp
+       src/sendfile/sendfilewizard.h
+       src/wizard/pages/fail.cpp
+       src/wizard/pages/fail.h
+       src/wizard/pages/pairing.cpp
+       src/wizard/pages/pairing.h
+Copyright: 2010-2011, Alejandro Fiestas Olivares <afiestas@kde.org>
+           2014, David Rosca <nowrep@gmail.com>
+           2010, Eduardo Robles Elvira <edulix@gmail.com>
+           2010, Rafael Fernández López <ereslibre@kde.org>
+           2010-2011, UFO Coders <info@ufocoders.com>
+License: LGPL-2+
+
+Files: src/wizard/bluewizard.cpp
+       src/wizard/bluewizard.h
+       src/wizard/pages/discover.cpp
+       src/wizard/pages/discover.h
+Copyright: 2010, Alejandro Fiestas Olivares <alex@ufocoders.com>
+           2010, Alex Fiestas <alex@eyeos.org>
+           2010, Rafael Fernández López <ereslibre@kde.org>
+           2010, UFO Coders <info@ufocoders.com>
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2010-2011, Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+           2022 Patrick Franz <deltaone@debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the
+ Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 3 can be found in `/usr/share/common-licenses/GPL-3'.

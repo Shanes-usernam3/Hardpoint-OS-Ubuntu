@@ -1,0 +1,10 @@
+module QtQuick.VirtualKeyboard.Plugins
+linktarget Qt6::qtvkbpluginsplugin
+optional plugin qtvkbpluginsplugin
+classname QtQuick_VirtualKeyboard_PluginsPlugin
+typeinfo qtvkbpluginsplugin.qmltypes
+import QtQuick.VirtualKeyboard.Plugins.Hangul auto
+import QtQuick.VirtualKeyboard.Plugins.Hunspell auto
+import QtQuick.VirtualKeyboard.Plugins.Thai auto
+prefer :/qt-project.org/imports/QtQuick/VirtualKeyboard/Plugins/
+

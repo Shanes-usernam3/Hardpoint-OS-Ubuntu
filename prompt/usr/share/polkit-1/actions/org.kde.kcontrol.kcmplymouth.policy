@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+<vendor>Plymouth Control Module</vendor>
+<icon_name>preferences-desktop-display</icon_name>
+   <action id="org.kde.kcontrol.kcmplymouth.install" >
+      <description xml:lang="ar">ثبّت سمة Plymouth جديدة</description>
+      <description xml:lang="be">Усталяваць новую тэму Plymouth</description>
+      <description xml:lang="bg">Инсталиране на нова тема за Plymouth</description>
+      <description xml:lang="ca">Instal·la un tema nou del Plymouth</description>
+      <description xml:lang="cs">Nainstalovat nový motiv Plymouth</description>
+      <description xml:lang="da">Installér et nyt Plymouth-tema</description>
+      <description xml:lang="de">Neues Plymouth-Design installieren</description>
+      <description xml:lang="el">Εγκατάσταση νέου θέματος Plymouth</description>
+      <description>Install a new Plymouth Theme</description>
+      <description xml:lang="en_GB">Install a new Plymouth Theme</description>
+      <description xml:lang="eo">Instali novan Plymouth-etoson</description>
+      <description xml:lang="es">Instalar un nuevo tema de Plymouth</description>
+      <description xml:lang="et">Uue Plymouthi teema paigaldamine</description>
+      <description xml:lang="eu">Instalatu Plymouth-en gai berri bat</description>
+      <description xml:lang="fi">Asenna uusi Plymouth-teema</description>
+      <description xml:lang="fr">Installer un nouveau thème Plymouth</description>
+      <description xml:lang="gl">Instalar un novo tema de Plymouth</description>
+      <description xml:lang="he">התקנת ערכת עיצוב חדשה של Plymouth</description>
+      <description xml:lang="hi">नया प्लायमाउथ थीम स्थापित करें</description>
+      <description xml:lang="hu">Új Plymouth téma telepítése</description>
+      <description xml:lang="ia">Installa un nove thema Plymouth</description>
+      <description xml:lang="id">Instal sebuah Tema Plymouth baru</description>
+      <description xml:lang="it">Installa un nuovo tema Plymouth</description>
+      <description xml:lang="ja">新しい Plymouth テーマをインストール</description>
+      <description xml:lang="ka">Plymouth-ის ახალი თემის დაყენება</description>
+      <description xml:lang="ko">새 Plymouth 테마 설치</description>
+      <description xml:lang="lt">Įdiegti naują Plymouth apipavidalinimą</description>
+      <description xml:lang="lv">Instalēt jaunu „Plymouth“ motīvu</description>
+      <description xml:lang="nl">Een nieuw Plymouth thema installeren</description>
+      <description xml:lang="nn">Installer nytt Plymouth-tema</description>
+      <description xml:lang="pa">ਨਵਾਂ ਪਲੇਮਾਊਥ ਥੀਮ ਇੰਸਟਾਲ ਕਰੋ</description>
+      <description xml:lang="pl">Wgraj nowy wygląd Plymouth</description>
+      <description xml:lang="pt">Instalar um Novo Tema do Plymouth</description>
+      <description xml:lang="pt_BR">Instalar um novo tema do Plymouth</description>
+      <description xml:lang="ro">Instalează tematică Plymouth nouă</description>
+      <description xml:lang="ru">Установка темы Plymouth</description>
+      <description xml:lang="sa">एकं नूतनं Plymouth Theme संस्थापयन्तु</description>
+      <description xml:lang="sk">Nainštalovať novú tému Plymouth</description>
+      <description xml:lang="sl">Namesti novo temo za Plymouth</description>
+      <description xml:lang="sr">Инсталирај нову Плимутову тему</description>
+      <description xml:lang="sv">Installera ett nytt Plymouth-tema</description>
+      <description xml:lang="tr">Yeni bir Plymouth Teması Kur</description>
+      <description xml:lang="uk">Встановлення нової теми Plymouth</description>
+      <description xml:lang="zh_CN">安装一个新的 Plymouth 主题</description>
+      <description xml:lang="zh_TW">安裝新 Plymouth 主題</description>
+      <message xml:lang="ar">الاستيثاق لتثبيت سمة Plymouth.</message>
+      <message xml:lang="be"></message>
+      <message xml:lang="bg"></message>
+      <message xml:lang="ca">Autenticació per a instal·lar un tema del Plymouth.</message>
+      <message xml:lang="cs">Pro instalaci nového motivu Plymouth je potřeba ověřit vaši totožnost.</message>
+      <message xml:lang="de"></message>
+      <message>Authenticate to install a Plymouth theme.</message>
+      <message xml:lang="en_GB">Authenticate to install a Plymouth theme.</message>
+      <message xml:lang="eo">Aŭtentiĝu por instali Plymouth-etoson.</message>
+      <message xml:lang="es">Debe autenticarse para instalar un tema de Plymouth.</message>
+      <message xml:lang="eu"></message>
+      <message xml:lang="fi">Tunnistaudu asentaaksesi Plymouth-teeman.</message>
+      <message xml:lang="fr">S'authentifier pour modifier pour installer un nouveau thème de Plymouth</message>
+      <message xml:lang="gl">Autentíquese para instalar un novo tema de Plymouth.</message>
+      <message xml:lang="he">יש לעבור אימות כדי להתקין ערכת עיצוב של Plymouth.</message>
+      <message xml:lang="hi">प्लायमाउथ थीम स्थापित करने के लिए प्रमाणीकरण करें।</message>
+      <message xml:lang="hu">Hitelesítés szükséges Plymouth téma telepítéséhez.</message>
+      <message xml:lang="ia">Authentica per installar un thema de Plymouth.</message>
+      <message xml:lang="it">Autenticati per installare un tema Plymouth.</message>
+      <message xml:lang="ka">Plymouth-ის ახალი თემის დასაყენებლად ავთენტიკაცია დაგჭირდებათ.</message>
+      <message xml:lang="ko">Plymouth 테마를 설치하려면 인증하십시오.</message>
+      <message xml:lang="lt">Patvirtinkite tapatybę norėdami įdiegti Plymouth apipavidalinimą.</message>
+      <message xml:lang="lv"></message>
+      <message xml:lang="nl">Authenticeren om een Plymouth-thema te installeren.</message>
+      <message xml:lang="nn">Autentiser for å installera nytt Plymouth-tema.</message>
+      <message xml:lang="pa">ਪਲੇਮਾਊਥ ਥੀਮ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਪਰਮਾਣਿਤ ਹੋਵੋ।</message>
+      <message xml:lang="pl"></message>
+      <message xml:lang="pt_BR">Autentique para instalar um tema do Plymouth.</message>
+      <message xml:lang="ro">Autentificați-vă pentru a instala o tematică Plymouth.</message>
+      <message xml:lang="ru">Для установки экрана загрузки Plymouth требуется аутентификация.</message>
+      <message xml:lang="sa">प्लायमाउथ् विषयवस्तु संस्थापयितुं प्रमाणीकरणं कुर्वन्तु।</message>
+      <message xml:lang="sl"></message>
+      <message xml:lang="sv">Ange behörighet för att installera ett Plymouth-tema.</message>
+      <message xml:lang="tr">Bir Plymouth teması kurmak için kimliğinizi doğrulayın.</message>
+      <message xml:lang="uk">Пройдіть розпізнавання для встановлення теми Plymouth.</message>
+      <message xml:lang="zh_CN">请进行身份验证以安装 Plymouth 主题。</message>
+      <message xml:lang="zh_TW">認證以安裝新 Plymouth 主題。</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.kcontrol.kcmplymouth.save" >
+      <description xml:lang="ar">احفظ سمة Plymouth</description>
+      <description xml:lang="be">Захаваць тэму Plymouth</description>
+      <description xml:lang="bg">Запазване на темата за Plymouth</description>
+      <description xml:lang="ca">Desa el tema del Plymouth</description>
+      <description xml:lang="cs">Uložit motiv Plymouth</description>
+      <description xml:lang="da">Gem Plymouth-tema</description>
+      <description xml:lang="de">Plymouth-Design speichern</description>
+      <description xml:lang="el">Αποθήκευση θέματος Plymouth</description>
+      <description>Save the Plymouth Theme</description>
+      <description xml:lang="en_GB">Save the Plymouth Theme</description>
+      <description xml:lang="eo">Konservi la Plymouth-Etoson</description>
+      <description xml:lang="es">Guardar el tema de Plymouth</description>
+      <description xml:lang="et">Plymouthi teema salvestamine</description>
+      <description xml:lang="eu">Gorde Plymouth-en gaia</description>
+      <description xml:lang="fi">Tallenna Plymouth-teema</description>
+      <description xml:lang="fr">Enregistrer le thème Plymouth</description>
+      <description xml:lang="gl">Gardar o tema de Plymouth</description>
+      <description xml:lang="he">שמירת ערכת העיצוב של Plymouth</description>
+      <description xml:lang="hi">प्लायमाउथ थीम को बचाओ</description>
+      <description xml:lang="hu">Plymouth téma mentése</description>
+      <description xml:lang="ia">Salveguarda le thema Plymouth</description>
+      <description xml:lang="id">Simpan Tema Plymouth</description>
+      <description xml:lang="it">Salva il tema Plymouth</description>
+      <description xml:lang="ja">Plymouth テーマを保存</description>
+      <description xml:lang="ka">Plymouth-ის თემის შენახვა</description>
+      <description xml:lang="ko">Plymouth 테마 저장</description>
+      <description xml:lang="lt">Įrašyti Plymouth apipavidalinimą</description>
+      <description xml:lang="lv">Saglabāt „Plymouth“ motīvu</description>
+      <description xml:lang="nl">Het Plymouth-thema opslaan</description>
+      <description xml:lang="nn">Lagra Plymouth-temaet</description>
+      <description xml:lang="pa">ਪਲੇਮਾਊਥ ਥੀਮ ਨੂੰ ਸੰਭਾਲੋ</description>
+      <description xml:lang="pl">Zapisz wygląd Plymouth</description>
+      <description xml:lang="pt">Gravar o Tema do Plymouth</description>
+      <description xml:lang="pt_BR">Salvar o tema do Plymouth</description>
+      <description xml:lang="ro">Salvează tematica Plymouth</description>
+      <description xml:lang="ru">Смена темы Plymouth</description>
+      <description xml:lang="sa">प्लायमाउथ विषयं रक्षतु</description>
+      <description xml:lang="sk">Uložiť tému Plymouth</description>
+      <description xml:lang="sl">Shrani temo za Plymouth</description>
+      <description xml:lang="sr">Сачувај Плимутову тему</description>
+      <description xml:lang="sv">Spara Plymouth-temat</description>
+      <description xml:lang="tr">Plymouth Temasını Kaydet</description>
+      <description xml:lang="uk">Збереження теми Plymouth</description>
+      <description xml:lang="zh_CN">保存 Plymouth 主题</description>
+      <description xml:lang="zh_TW">儲存 Plymouth 主題</description>
+      <message xml:lang="ar">الاستيثاق لتغيير شاشة الإقلاع</message>
+      <message xml:lang="be"></message>
+      <message xml:lang="bg"></message>
+      <message xml:lang="ca">Autenticació per a canviar la configuració de la pantalla de presentació d'arrencada.</message>
+      <message xml:lang="cs">Pro změnu vzhledu úvodní startovací obrazovky je potřeba ověřit vaši totožnost.</message>
+      <message xml:lang="de"></message>
+      <message>Authenticate to change the boot splash screen.</message>
+      <message xml:lang="en_GB">Authenticate to change the boot splash screen.</message>
+      <message xml:lang="eo">Aŭtentiĝu por ŝanĝi la praŝargan ŝprucekranon.</message>
+      <message xml:lang="es">Debe autenticarse para modificar la pantalla de arranque.</message>
+      <message xml:lang="eu"></message>
+      <message xml:lang="fi">Tunnistaudu vaihtaaksesi käynnistyskuvan.</message>
+      <message xml:lang="fr">S'authentifier pour modifier l'écran de démarrage du système.</message>
+      <message xml:lang="gl">Autentíquese para cambiar a configuración da pantalla de arranque.</message>
+      <message xml:lang="he">יש לעבור אימות כדי להחליף את מסך הפתיח בטעינת מערכת ההפעלה.</message>
+      <message xml:lang="hi">बूट स्प्लैश स्क्रीन को बदलने के लिए प्रमाणीकरण करें।</message>
+      <message xml:lang="hu">Hitelesítés szükséges a rendszerindító nyitóképernyő megváltoztatásához.</message>
+      <message xml:lang="ia"></message>
+      <message xml:lang="it">Autenticati per modificare la schermata d'avvio.</message>
+      <message xml:lang="ka">ჩატვირთვისას ნაჩვენები სურათის შესაცვლელად ავთენტიკაცია დაგჭირდებათ.</message>
+      <message xml:lang="ko">부트 화면을 변경하려면 인증하십시오.</message>
+      <message xml:lang="lt">Patvirtinkite tapatybę norėdami keisti OS paleidimo prisistatymo langą.</message>
+      <message xml:lang="lv"></message>
+      <message xml:lang="nl">Authenticeren om het opstartstartscherm te wijzigen.</message>
+      <message xml:lang="nn">Autentiser for å endra velkomstbiletet brukt ved maskinstart.</message>
+      <message xml:lang="pa">ਬੂਟ ਸਪਲੈਸ਼ ਸਕਰੀਨ ਬਦਲਣ ਲਈ ਪਰਮਾਣਿਤ ਹੋਵੋ।</message>
+      <message xml:lang="pl"></message>
+      <message xml:lang="pt_BR">Autentique para alterar a tela de inicialização.</message>
+      <message xml:lang="ro">Autentificați-vă pentru a schimba ecranul de întâmpinare la demarare.</message>
+      <message xml:lang="ru">Для изменения экрана загрузки требуется аутентификация.</message>
+      <message xml:lang="sa">बूट् स्प्लैश स्क्रीन परिवर्तयितुं प्रमाणीकरणं कुर्वन्तु ।</message>
+      <message xml:lang="sl"></message>
+      <message xml:lang="sv">Ange behörighet för att ändra startskärmen.</message>
+      <message xml:lang="tr">Önyükleme açılış ekranını değiştirmek için kimliğinizi doğrulayın.</message>
+      <message xml:lang="uk">Пройдіть розпізнавання для внесення змін до вікна вітання під час завантаження.</message>
+      <message xml:lang="zh_CN">请进行身份验证以更改开机屏幕。</message>
+      <message xml:lang="zh_TW">認證以變更開機啟動畫面。</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.kcontrol.kcmplymouth.uninstall" >
+      <description xml:lang="ar">أزل سمة Plymouth الجديدة</description>
+      <description xml:lang="be">Выдаліць новую тэму Plymouth</description>
+      <description xml:lang="bg">Деинсталиране на тема за Plymouth</description>
+      <description xml:lang="ca">Desinstal·la un tema nou del Plymouth</description>
+      <description xml:lang="cs">Odinstalovat nový motiv Plymouth</description>
+      <description xml:lang="da">Afinstallér et nyt Plymouth-tema</description>
+      <description xml:lang="de">Neues Plymouth-Design deinstallieren</description>
+      <description xml:lang="el">Απεγκατάσταση ενός νέου θέματος Plymouth</description>
+      <description>Uninstall a new Plymouth Theme</description>
+      <description xml:lang="en_GB">Uninstall a new Plymouth Theme</description>
+      <description xml:lang="eo">Malinstali novan Plymouth-etoson</description>
+      <description xml:lang="es">Desinstalar un tema de Plymouth</description>
+      <description xml:lang="et">Uue Plymouthi teema eemaldamine</description>
+      <description xml:lang="eu">Desinstalatu Plymouth-en gai berri bat</description>
+      <description xml:lang="fi">Poista Plymouth-teeman asennus</description>
+      <description xml:lang="fr">Désinstaller un nouveau thème Plymouth</description>
+      <description xml:lang="gl">Desinstalar un tema de Plymouth</description>
+      <description xml:lang="he">הסרת ערכת עיצוב של Plymouth</description>
+      <description xml:lang="hi">नया प्लायमाउथ थीम अनइंस्टॉल करें</description>
+      <description xml:lang="hu">Plymouth téma eltávolítása</description>
+      <description xml:lang="ia">De-Installa un nove thema Plymouth</description>
+      <description xml:lang="id">Uninstal sebuah Tema Plymouth baru</description>
+      <description xml:lang="it">Disinstalla un nuovo tema Plymouth</description>
+      <description xml:lang="ja">Plymouth テーマをアンインストール</description>
+      <description xml:lang="ka">Plymouth-ისა ახალი თემის წაშლა</description>
+      <description xml:lang="ko">새 Plymouth 테마 삭제</description>
+      <description xml:lang="lt">Šalinti naują Plymouth apipavidalinimą</description>
+      <description xml:lang="lv">Atinstalēt jaunu „Plymouth“ motīvu</description>
+      <description xml:lang="nl">Een nieuw Plymouth thema deïnstalleren</description>
+      <description xml:lang="nn">Avinstaller Plymouth-tema</description>
+      <description xml:lang="pa">ਨਵਾਂ ਪਲੇਮਾਊਥ ਥੀਮ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ</description>
+      <description xml:lang="pl">Usuń nowy wygląd Plymouth</description>
+      <description xml:lang="pt">Desinstalar um Tema do Plymouth</description>
+      <description xml:lang="pt_BR">Desinstalar um novo tema do Plymouth</description>
+      <description xml:lang="ro">Dezinstalează tematică Plymouth nouă</description>
+      <description xml:lang="ru">Удаление темы Plymouth</description>
+      <description xml:lang="sa">एकं नूतनं Plymouth Theme अनइन्स्टॉल कुर्वन्तु</description>
+      <description xml:lang="sk">Odinštalovať nové tému Plymouth</description>
+      <description xml:lang="sl">Odstrani temo za Plymouth</description>
+      <description xml:lang="sr">Деинсталирај нову Плимутову тему</description>
+      <description xml:lang="sv">Avinstallera ett nytt Plymouth-tema</description>
+      <description xml:lang="tr">Plymouth Temasını Kaldır</description>
+      <description xml:lang="uk">Вилучення теми Plymouth</description>
+      <description xml:lang="zh_CN">卸载新的 Plymouth 主题</description>
+      <description xml:lang="zh_TW">解除安裝新 Plymouth 主題</description>
+      <message xml:lang="ar">الاستيثاق لإزالة سمة Plymouth.</message>
+      <message xml:lang="be"></message>
+      <message xml:lang="bg"></message>
+      <message xml:lang="ca">Autenticació per a desinstal·lar un tema del Plymouth.</message>
+      <message xml:lang="cs">Pro odinstalaci motivu Plymouth je potřeba ověřit vaši totožnost.</message>
+      <message xml:lang="de"></message>
+      <message>Authenticate to uninstall a Plymouth theme.</message>
+      <message xml:lang="en_GB">Authenticate to uninstall a Plymouth theme.</message>
+      <message xml:lang="eo">Aŭtentiĝu por malinstali Plymouth-etoson.</message>
+      <message xml:lang="es">Debe autenticarse para desinstalar un tema de Plymouth.</message>
+      <message xml:lang="eu"></message>
+      <message xml:lang="fi">Tunnistaudu poistaaksesi Plymouth-teeman.</message>
+      <message xml:lang="fr">S'authentifier pour désinstaller un thème de Plymouth.</message>
+      <message xml:lang="gl">Autentíquese para desinstalar un novo tema de Plymouth.</message>
+      <message xml:lang="he">יש לעבור אימות כדי להסיר ערכת עיצוב של Plymouth.</message>
+      <message xml:lang="hi">प्लायमाउथ थीम को अनइंस्टॉल करने के लिए प्रमाणीकरण करें।</message>
+      <message xml:lang="hu">Hitelesítés szükséges Plymouth téma eltávolításához.</message>
+      <message xml:lang="ia">Authentica per de-installar un thema de Plymouth.</message>
+      <message xml:lang="it">Autenticati per disinstallare un tema Plymouth.</message>
+      <message xml:lang="ka">Plymouth-ის თემის წასაშლელად ავთენტიკაცია დაგჭირდებათ.</message>
+      <message xml:lang="ko">Plymouth 테마를 삭제하려면 인증하십시오.</message>
+      <message xml:lang="lt">Patvirtinkite tapatybę norėdami pašalinti Plymouth apipavidalinimą.</message>
+      <message xml:lang="lv"></message>
+      <message xml:lang="nl">Authenticeren om een Plymouth-thema te verwijderen.</message>
+      <message xml:lang="nn">Autentiser for å avinstallera Plymouth-tema.</message>
+      <message xml:lang="pa">ਪਲੇਮਾਊਥ ਥੀਮ ਨੂੰ ਅਣ-ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਪਰਮਾਣਿਤ ਹੋਵੋ।</message>
+      <message xml:lang="pl"></message>
+      <message xml:lang="pt_BR">Autentique para desinstalar um tema do Plymouth.</message>
+      <message xml:lang="ro">Autentificați-vă pentru a dezinstala o tematică Plymouth.</message>
+      <message xml:lang="ru">Для удаления экрана загрузки Plymouth требуется аутентификация.</message>
+      <message xml:lang="sa">प्लायमाउथ् विषयवस्तुं विस्थापयितुं प्रमाणीकरणं कुर्वन्तु।</message>
+      <message xml:lang="sl"></message>
+      <message xml:lang="sv">Ange behörighet för att avinstallera ett Plymouth-tema.</message>
+      <message xml:lang="tr">Bir Plymouth temasını kaldırmak için kimliğinizi doğrulayın.</message>
+      <message xml:lang="uk">Пройдіть розпізнавання для вилучення теми Plymouth.</message>
+      <message xml:lang="zh_CN">请进行身份验证以卸载 Plymouth 主题。</message>
+      <message xml:lang="zh_TW">認證以解除安裝新 Plymouth 主題。</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin</allow_active>
+      </defaults>
+   </action>
+</policyconfig>

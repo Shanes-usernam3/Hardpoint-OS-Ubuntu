@@ -1,0 +1,59 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: TPM2.0-TSS
+Source: https://github.com/tpm2-software/tpm2-tss
+
+Files: *
+Copyright: 2015, Intel Corporation
+License: BSD-2-clause
+
+Files: debian/*
+Copyright: 2016 Canonical Ltd.
+	   2016 Mathieu Trudel-Lapierre <mathieu.trudel-lapierre@canonical.com>
+	   2017 Ivan Hu <ivan.hu@ubuntu.com>
+	   2017 Ying-Chun Liu (PaulLiU) <paulliu@debian.org>
+License: GPL-3
+
+Files: debian/patches/*
+       debian/tpm-udev*
+Copyright: Intel Corporation and individual contributors
+           2019 Ying-Chun Liu (PaulLiu) <paulliu@debian.org>
+License: BSD-2-clause
+
+Files: debian/patches/0001_disable_fapi_io_test.patch
+Comment: Please consider licensing under BSD-2-clause to remove this paragraph
+Copyright: 2017 Ying-Chun Liu (PaulLiU) <paulliu@debian.org>
+License: GPL-3
+
+Files: debian/patches/0002-fix-version.patch
+       debian/patches/disable-tests-on-big-endian.patch
+Comment: Please consider licensing under BSD-2-clause to remove this paragraph
+Copyright: 2016 Canonical Ltd.
+License: GPL-3
+
+License: GPL-3
+ On Debian systems the full text of the GNU General Public
+ License can be found in the `/usr/share/common-licenses/GPL-3'
+ file.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+ THE POSSIBILITY OF SUCH DAMAGE.

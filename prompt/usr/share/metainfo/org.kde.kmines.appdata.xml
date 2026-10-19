@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kmines</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>KMines</name>
+  <name xml:lang="ar">الألغام ك</name>
+  <name xml:lang="ast">KMines</name>
+  <name xml:lang="ca">KMines</name>
+  <name xml:lang="ca-valencia">KMines</name>
+  <name xml:lang="cs">KMines</name>
+  <name xml:lang="da">KMines</name>
+  <name xml:lang="de">KMines</name>
+  <name xml:lang="el">KMines</name>
+  <name xml:lang="en-GB">KMines</name>
+  <name xml:lang="eo">KMines</name>
+  <name xml:lang="es">KMines</name>
+  <name xml:lang="et">KMines</name>
+  <name xml:lang="eu">KMines</name>
+  <name xml:lang="fi">KMines</name>
+  <name xml:lang="fr">KMines</name>
+  <name xml:lang="gl">KMines</name>
+  <name xml:lang="he">KMines</name>
+  <name xml:lang="hu">KMines</name>
+  <name xml:lang="ia">KMines</name>
+  <name xml:lang="id">KMines</name>
+  <name xml:lang="is">KMines</name>
+  <name xml:lang="it">KMines</name>
+  <name xml:lang="ka">KMines</name>
+  <name xml:lang="ko">KMines</name>
+  <name xml:lang="lv">KMines</name>
+  <name xml:lang="nl">KMines</name>
+  <name xml:lang="nn">KMinesveipar</name>
+  <name xml:lang="pl">KMiny</name>
+  <name xml:lang="pt">Campo Minado</name>
+  <name xml:lang="pt-BR">KMines</name>
+  <name xml:lang="ro">KMine</name>
+  <name xml:lang="ru">KMines</name>
+  <name xml:lang="sa">KMines</name>
+  <name xml:lang="sk">KMines</name>
+  <name xml:lang="sl">KMines</name>
+  <name xml:lang="sr">К‑мине</name>
+  <name xml:lang="sr-Latn">K‑mine</name>
+  <name xml:lang="sr-ijekavian">К‑мине</name>
+  <name xml:lang="sr-ijekavianlatin">K‑mine</name>
+  <name xml:lang="sv">Minröjaren</name>
+  <name xml:lang="tr">K Mayın Tarlası</name>
+  <name xml:lang="uk">KMines</name>
+  <name xml:lang="zh-CN">KMines</name>
+  <name xml:lang="zh-TW">KMines 踩地雷</name>
+  <summary>Minesweeper-like Game</summary>
+  <summary xml:lang="ar">لعبة مثل كاسحة الألغام</summary>
+  <summary xml:lang="ca">Joc a l'estil del dragamines</summary>
+  <summary xml:lang="ca-valencia">Joc a l'estil del dragamines</summary>
+  <summary xml:lang="cs">Hra s minovým polem</summary>
+  <summary xml:lang="de">„Minesweeper“-Spiel</summary>
+  <summary xml:lang="el">Παιχνίδι παρόμοιο με το Ναρκαλιευτή</summary>
+  <summary xml:lang="en-GB">Minesweeper-like Game</summary>
+  <summary xml:lang="eo">Ludo simial al Minesweeper</summary>
+  <summary xml:lang="es">Juego similar al Buscaminas</summary>
+  <summary xml:lang="et">Minesweeperi moodi mäng</summary>
+  <summary xml:lang="eu">Mina bilatzailearen antzeko jokoa</summary>
+  <summary xml:lang="fi">Miinaharava-tyylinen peli</summary>
+  <summary xml:lang="fr">Jeu dans le style du démineur</summary>
+  <summary xml:lang="gl">Xogo como o busca minas</summary>
+  <summary xml:lang="he">משחק דמוי שולה מוקשים</summary>
+  <summary xml:lang="hu">Aknakeresőszerű játék</summary>
+  <summary xml:lang="id">Permainan Seperti Minesweeper</summary>
+  <summary xml:lang="is">KMines er hefðbundinn sprengjuleitarleikur sem líkist Minesweeper</summary>
+  <summary xml:lang="it">Gioco simile a Mine</summary>
+  <summary xml:lang="ka">Minesweeper-ის მსგავსი თამაში</summary>
+  <summary xml:lang="ko">지뢰찾기 게임</summary>
+  <summary xml:lang="lv">„Minesweeper“ līdzīga spēle</summary>
+  <summary xml:lang="nl">Mijnenvegerachtig spel</summary>
+  <summary xml:lang="nn">Minesveipar-liknande spel</summary>
+  <summary xml:lang="pl">Gra typu saper</summary>
+  <summary xml:lang="pt">Jogo semelhante ao Minesweeper</summary>
+  <summary xml:lang="pt-BR">Jogo semelhante ao Campo Minado</summary>
+  <summary xml:lang="ro">Un joc ca Detectorul de mine</summary>
+  <summary xml:lang="ru">Игра в сапёра</summary>
+  <summary xml:lang="sa">माइनस्वीपर-सदृशः क्रीडा</summary>
+  <summary xml:lang="sk">Hra typu hľadanie mín</summary>
+  <summary xml:lang="sl">Igra podobna Minolovcu</summary>
+  <summary xml:lang="sr">Игра налик на Миноловац</summary>
+  <summary xml:lang="sr-Latn">Igra nalik na Minolovac</summary>
+  <summary xml:lang="sr-ijekavian">Игра налик на Миноловац</summary>
+  <summary xml:lang="sr-ijekavianlatin">Igra nalik na Minolovac</summary>
+  <summary xml:lang="sv">Minröjarliknande spel</summary>
+  <summary xml:lang="tr">Mayın Tarlası benzeri Oyun</summary>
+  <summary xml:lang="uk">Гра у сапера</summary>
+  <summary xml:lang="zh-CN">扫雷游戏</summary>
+  <summary xml:lang="zh-TW">類似踩地雷的遊戲</summary>
+  <description>
+    <p>KMines is a classic Minesweeper game. The idea is to uncover all the squares without blowing up any mines. When a mine is blown up, the game is over.</p>
+    <p xml:lang="ar">الألغام ك هي لعبة كاسحة ألغام كلاسيكية. الفكرة هي الكشف عن جميع المربعات دون تفجير أي ألغام. عندما ينفجر لغم، تنتهي اللعبة.</p>
+    <p xml:lang="ca">El KMines és un joc clàssic de dragamines. La idea és descobrir tots els quadrats sense que exploti cap mina. Quan una mina explota, el joc acaba.</p>
+    <p xml:lang="ca-valencia">KMines és un joc clàssic de dragamines. La idea és descobrir tots els quadrats sense que explote cap mina. Quan una mina explota, el joc acaba.</p>
+    <p xml:lang="cs">KMines je klasická hra Miny. Úkolem je odkrýt všechny čtverce aniž byste odpálili jakoukoliv minu. Pokud mina vybuchne, hra skončila.</p>
+    <p xml:lang="de">KMines ist ein klassische Minesweeper-Spiel. Ziel ist es, alle leeren Felder aufzudecken, ohne dass eine Mine explodiert. Das Spiel ist beendet, wenn eine Mine explodiert.</p>
+    <p xml:lang="el">Το KMines είναι ένα κλασικό παιχνίδι Ναρκαλιευτής. Η ιδέα είναι να αποκαλυφθούν όλα τα τετράγωνα χωρίς να εκραγεί καμία νάρκη. Όταν μία νάρκη εκρήγνυται, το παιχνίδι τελειώνει.</p>
+    <p xml:lang="en-GB">KMines is a classic Minesweeper game. The idea is to uncover all the squares without blowing up any mines. When a mine is blown up, the game is over.</p>
+    <p xml:lang="eo">KMines estas klasika Minesweeper-ludo. La ideo estas malkovri ĉiujn kvadratojn sen eksplodigi iujn minojn. Kiam mino estas krevigita, la ludo finiĝas.</p>
+    <p xml:lang="es">KMines es el clásico juego de Buscaminas. El objetivo consiste en descubrir todos los cuadrados sin hacer estallar las minas. Si una mina estalla, el juego acaba.</p>
+    <p xml:lang="et">KMines on klassikaline Minesweeperi mäng. Selle siht on avada kõik ruudud, ilma ühelgi miinil õhku lendamata. Kui miin plahvatab, on mäng läbi.</p>
+    <p xml:lang="eu">KMines mina bilatzaile joko klasikoa da. Ideia nagusia, minak eztandarik egin gabe lauki guztiak estalgabetzea da. Mina batek eztanda egiten badu, jokoa amaitu da.</p>
+    <p xml:lang="fi">KMines on perinteinen miinaharavapeli. Tavoitteena on paljastaa kaikki ruudut räjäyttämättä miinoja. Miinan räjähdettyä peli loppuu.</p>
+    <p xml:lang="fr">KMines est un jeu dans le style du démineur. L'objectif est de révéler tous les carrés sans faire exploser la moindre mine. Lorsqu'une mine explose, la partie est terminée.</p>
+    <p xml:lang="gl">KMines é un xogo clásico de buscar minas. A idea é descubrir todos os cadrados sen estourar ningunha mina. Cando unha mina estoura acaba a partida.</p>
+    <p xml:lang="he">KMines הוא משחק שולה מוקשים קלסי. הרעיון הוא לחשוף את כל הריבועים מבלי לפוצץ מוקשים. פיצוץ מוקש מסיים את המשחק.</p>
+    <p xml:lang="hu">A KMines egy klasszikus aknakereső játék. A cél az összes mező felfedése anélkül, hogy egy aknát is felrobbantana. Ha egy akna felrobban, a játék véget ér.</p>
+    <p xml:lang="id">KMines adalah permainan Minesweeper klasik. Gagasannya adalah untuk mengungkap semua persegi tanpa meledakkan ranjau apa pun. Ketika sebuah ranjau diledakkan, tamatlah permainan.</p>
+    <p xml:lang="is">KMines er hefðbundinn sprengjuleitarleikur sem líkist Minesweeper. Hugmyndin er að afhjúpa alla reiti nema þá sem springa í andlitið á manni. Ef það gerist, er leiknum lokið.</p>
+    <p xml:lang="it">KMines è un classico gioco del campo minato. Si devono individuare tutte le caselle libere senza saltare in aria su una mina. Quando una mina esplode, il gioco termina.</p>
+    <p xml:lang="ka">KMines კლასიკური განნაღმვის თამაშია. აზრია გამოაჩინოს კვადრატები ნაღმზე აფეთქების გარეშე. თუ ნაღმი აგიფეთქდათ, თამაში დასრულდება.</p>
+    <p xml:lang="ko">KMines는 고전 지뢰찾기 게임입니다. 지뢰를 터트리지 않고 모든 사각형을 드러내십시오. 지뢰가 터지면 게임이 끝납니다.</p>
+    <p xml:lang="lv">„KMines“ ir klasiska mīnu meklēšanas spēle. Spēles mērķis is atklāt visas spēles šūnas, neuzspridzinot mīnas. Ja mīna sprāgst, spēle beidzas.</p>
+    <p xml:lang="nl">KMines is het klassieke mijnenvegerspel. Het idee is alle vierkantjes open te maken zonder een mijn op te blazen. Als er een mijn ontploft is het spel afgelopen.</p>
+    <p xml:lang="nn">KMinesveipar er eit klassisk minesveiparspel. Målet er å avdekkja alle ruter som ikkje har miner på seg. Treff du derimot på ei rute med ei mine, går mina av og du tapar spelet.</p>
+    <p xml:lang="pl">KMiny jest klasyczną grą w sapera. Polega ona na odkryciu wszystkich pól bez wysadzenia żadnej z min. Po napotkaniu na minę, gra się kończy.</p>
+    <p xml:lang="pt">O KMines é um jogo clássico de Campo Minado (Minesweeper). A ideia é destapar todos os quadrados sem rebentar nenhuma mina. Quando for estoirada uma mina, o jogo termina.</p>
+    <p xml:lang="pt-BR">KMines é o jogo clássico chamado Campo Minado. Você precisa descobrir todos os quadrados vazios sem explodir nenhuma mina. O jogo termina quando uma mina explode.</p>
+    <p xml:lang="ro">KMine e un joc clasic ca „Detectorul de mine”. Ideea e să descoperiți cât mai multe pătrate fără a declanșa vreo mină. Jocul e pierdut la explozia unei mine.</p>
+    <p xml:lang="ru">KMines — классическая игра в сапёра. Необходимо открыть все квадраты, не взорвав ни одной мины. Если мина взорвалась, игра окончена.</p>
+    <p xml:lang="sa">KMines इति एकः क्लासिकः Minesweeper इति क्रीडा । विचारः अस्ति यत् सर्वाणि चतुष्कोणानि विना किमपि खानिं न विस्फोटयितव्यम्। यदा खानिः विस्फोटितः भवति तदा क्रीडा समाप्तः भवति।</p>
+    <p xml:lang="sk">KMines je klasická hra Hľadanie mín. Cieľom je odkryť všetky štvorce bez odpálenia mín. Ak sa mína odpáli, hra končí.</p>
+    <p xml:lang="sl">KMines je klasična igra Minolovca. Cilj igre je odkriti vse kvadratke, brez da bi naleteli na mino. Ko se slednje zgodi, je igre konec.</p>
+    <p xml:lang="sr">К‑мине је класична игра Миноловца. Треба открити сва поља тако да се не активира ниједна мина. Ако мина експлодира, то је крај партије.</p>
+    <p xml:lang="sr-Latn">K‑mine je klasična igra Minolovca. Treba otkriti sva polja tako da se ne aktivira nijedna mina. Ako mina eksplodira, to je kraj partije.</p>
+    <p xml:lang="sr-ijekavian">К‑мине је класична игра Миноловца. Треба открити сва поља тако да се не активира ниједна мина. Ако мина експлодира, то је крај партије.</p>
+    <p xml:lang="sr-ijekavianlatin">K‑mine je klasična igra Minolovca. Treba otkriti sva polja tako da se ne aktivira nijedna mina. Ako mina eksplodira, to je kraj partije.</p>
+    <p xml:lang="sv">Minröjaren är ett klassiskt minröjarspel. Idén är att frilägga alla rutor utan att detonera några minor. När en mina detonerar är spelet slut.</p>
+    <p xml:lang="tr">K Mayın Tarlası klasik bir Mayın Tarlası oyunudur. Amacı, tüm kareleri herhangi bir mayını patlamadan ortaya çıkarmaktır. Bir mayın patladığında oyun sona erer.</p>
+    <p xml:lang="uk">KMines — це класична гра у сапера. Ідея гри полягає у тому, щоб розкрити всі клітинки без підриву жодної з мін. Якщо ви натрапите на міну, гру буде програно.</p>
+    <p xml:lang="zh-CN">KMines 是一款经典扫雷游戏。目标是不引爆地雷的情况下，揭开所有方格。当地雷被引爆时，游戏结束。</p>
+    <p xml:lang="zh-TW">KMines 是典型的踩地雷遊戲。遊戲目標是要打開所有方塊，並避免讓地雷爆炸。地雷爆炸時遊戲即會結束。</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/kmines</url>
+  <url type="bugtracker">https://bugs.kde.org</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kmines&amp;source=appdata</url>
+  <url type="help">https://docs.kde.org/?application=kmines</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/kmines/kmines.png</image>
+    </screenshot>
+  </screenshots>
+  <launchable type="desktop-id">org.kde.kmines.desktop</launchable>
+  <provides>
+    <binary>kmines</binary>
+  </provides>
+  <project_group>KDE</project_group>
+  <releases>
+    <release version="4.0.25123" date="2026-03-05"/>
+    <release version="4.0.25122" date="2026-02-05"/>
+    <release version="4.0.25121" date="2026-01-08"/>
+    <release version="4.0.25120" date="2025-12-11"/>
+    <release version="4.0.25083" date="2025-11-06"/>
+    <release version="4.0.25082" date="2025-10-09"/>
+    <release version="4.0.25081" date="2025-09-11"/>
+    <release version="4.0.25080" date="2025-08-14"/>
+    <release version="4.0.25043" date="2025-07-03"/>
+    <release version="4.0.25042" date="2025-06-05"/>
+    <release version="4.0.25041" date="2025-05-08"/>
+    <release version="4.0.25040" date="2025-04-17"/>
+    <release version="4.0.24123" date="2025-03-06"/>
+    <release version="4.0.24122" date="2025-02-06"/>
+    <release version="4.0.24121" date="2025-01-09"/>
+    <release version="4.0.24120" date="2024-12-12"/>
+    <release version="4.0.24083" date="2024-11-07"/>
+    <release version="4.0.24082" date="2024-10-10"/>
+    <release version="4.0.24081" date="2024-09-12"/>
+    <release version="4.0.24080" date="2024-08-22"/>
+    <release version="4.0.24052" date="2024-07-04"/>
+    <release version="4.0.24051" date="2024-06-13"/>
+    <release version="4.0.24050" date="2024-05-23"/>
+    <release version="4.0.24022" date="2024-04-11"/>
+    <release version="4.0.24021" date="2024-03-21"/>
+    <release version="4.0.24020" date="2024-02-28"/>
+    <release version="4.0.23085" date="2024-02-15"/>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">mild</content_attribute>
+  </content_rating>
+</component>

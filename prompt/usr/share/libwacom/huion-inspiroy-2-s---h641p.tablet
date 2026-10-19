@@ -1,0 +1,54 @@
+# Huion
+# Inspiroy 2S
+# H641
+#
+# sysinfo.25eW86cnXE.tar.gz
+# https://github.com/linuxwacom/wacom-hid-descriptors/issues/379
+#
+# Button Map:
+# (A=1, B=2, C=3, ...)
+#
+#    +----------------------------------+
+#    |                                  |
+#  A |                                  |
+#  B |                                  |
+#  C |                                  |
+#    |                                  |
+#    |                                  |
+#  D |                                  |
+#  E |                                  |
+#  F |                                  |
+#    |                                  |
+#    +----------------------------------+
+#
+# Dial Map:
+# (A=1st ring, B=2nd ring, ...)
+#
+#    *-----------------------*
+#    |                       |
+#  A |        TABLET         |
+#    |                       |
+#    *-----------------------*
+
+[Device]
+Name=Inspiroy 2 S
+ModelName=H641P
+DeviceMatch=usb|256c|0066;
+Width=6
+Height=4
+Layout=huion-inspiroy-2-s---h641p.svg
+Styli=@generic-no-eraser;
+IntegratedIn=
+
+[Features]
+NumStrips=0
+NumRings=0
+NumDials=1
+Reversible=true
+Stylus=true
+Touch=false
+TouchSwitch=false
+
+[Buttons]
+Left=A;B;C;D;E;F
+EvdevCodes=BTN_0;BTN_1;BTN_2;BTN_3;BTN_4;BTN_5

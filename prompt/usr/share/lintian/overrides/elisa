@@ -1,0 +1,4 @@
+# Elisa doesn’t have any command line argument
+elisa: no-manual-page [usr/bin/elisa]
+# private location for the libraries
+elisa: custom-library-search-path RUNPATH /usr/lib/*/elisa *

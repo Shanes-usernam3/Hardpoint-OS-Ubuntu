@@ -1,0 +1,204 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kscreenlocker
+Source: https://invent.kde.org/plasma/kscreenlocker
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 1998, Caldera, Inc
+           2015, Rosetta Contributors and Canonical Ltd 2015
+           2012-2015, This_file_is_part_of_KDE
+           2011, Aaron Seigo <aseigo@kde.org>
+           2015, Bhushan Shah <bhush94@gmail.com>
+           1998, Caldera, Inc
+           2008, Chani Armitage <chanika@gmail.com>
+           2004, Chris Howells <howells@kde.org>
+           1998, Christian Esken <esken@kde.org>
+           1995, Christophe Wolfhugel
+           2020 Cyril Rossi <cyril.rossi@enioka.com>
+           2011-2022, David Edmundson <kde@davidedmundson.co.uk>
+           2020 David Redondo <kde@david-redondo.de>
+           1989-1991, Free Software Foundation, Inc
+           2023 Harald Sitter <sitter@kde.org>
+           2019 Kevin Ottens <kevin.ottens@enioka.com>
+           2002, Luboš Luňák <l.lunak@kde.org>
+           2014, Marco Martin <mart@kde.org>
+           1999, Mark Davies <mark@MCS.VUW.AC.NZ>
+           2011-2015, Martin Gräßlin <mgraesslin@kde.org>
+           2011, Martin Klapetek <martin.klapetek@gmail.com>
+           1999, Martin R. Jones <mjones@kde.org>
+           2023 Nate Graham <nate@kde.org>
+           2003, Oswald Buddenhagen <ossi@kde.org>
+           2001, Reza Arbab <arbab@austin.ibm.com>
+License: GPL-2+
+
+Files: po/ca/kscreenlocker.po
+       po/ca/kscreenlocker_greet.po
+       po/ca@valencia/kscreenlocker.po
+       po/ca@valencia/kscreenlocker_greet.po
+       po/uk/kscreenlocker.po
+       po/uk/kscreenlocker_greet.po
+       greeter/pamauthenticator.h
+       greeter/pamauthenticators.h
+       greeter/powermanagement.cpp
+       greeter/pamauthenticator.cpp
+       greeter/powermanagement.h
+       greeter/pamauthenticators.cpp
+       tests/powermanagement.qml
+       tests/powermanagementtest.cpp
+Copyright: 2012-2015, This_file_is_part_of_KDE
+           2020 David Edmundson <davidedmundson@kde.org>
+           2023 Janet Blackquill <uhhadd@gmail.com>
+           2016 Martin Gräßlin <mgraesslin@kde.org>
+License: LGPL-3+KDEeV
+
+Files: kcm/ui/Appearance.qml
+       kcm/ui/main.qml
+       kcm/ui/ShellConfig.qml
+       kcm/ui/WallpaperConfig.qml
+       settings/shell_integration.cpp
+       settings/shell_integration.h
+       settings/wallpaper_integration.cpp
+       settings/wallpaper_integration.h
+Copyright: 2020 David Redondo <kde@david-redondo.de>
+           2019 Kevin Ottens <kevin.ottens@enioka.com>
+           2016 Martin Gräßlin <mgraesslin@kde.org>
+License: LicenseRef-KDE-Accepted-GPL
+
+Files: cmake/FindConsoleKit.cmake
+       cmake/Findloginctl.cmake
+Copyright: 2016 Martin Gräßlin <mgraesslin@kde.org>
+           2017 Tobias C. Berner <tcberner@FreeBSD.org>
+License: BSD-3-clause
+
+Files: x11info.h
+       kcm/ui/DurationPromptDialog.qml
+Copyright: 2023 Fushan Wen <qydwhotmail@gmail.com>
+           2024 Jakob Petsovits <jpetso@petsovits.com>
+           2024 Kristen McWilliam <kmcwilliampublic@gmail.com>
+License: LGPL-2.1+
+
+Files: .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2015, Rohan Garg <rohan@kde.org>
+           2022-2024, Patrick Franz <deltaone@debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: LGPL-3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".
+
+License: BSD-3-clause
+ You may use this file under the terms of the BSD license as follows:
+ .
+ "Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.
+   * Neither the name of The Qt Company Ltd nor the names of its
+     contributors may be used to endorse or promote products derived
+     from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 3 of
+ the license or (at your option) at any later version that is
+ accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".

@@ -1,0 +1,7 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = rtupdate ]; then
+	py3clean -p bup /usr/lib/bup
+	py3compile -p bup -V 3.14 /usr/lib/bup
+fi

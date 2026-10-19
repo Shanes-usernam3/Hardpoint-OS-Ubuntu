@@ -1,0 +1,2 @@
+#!/bin/sh
+if [ -x /usr/share/bug/libreoffice-core/script ]; then /usr/share/bug/libreoffice-core/script; fi

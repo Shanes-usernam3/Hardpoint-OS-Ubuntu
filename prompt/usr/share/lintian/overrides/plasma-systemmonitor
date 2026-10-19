@@ -1,0 +1,9 @@
+# libPlasmaSystemMonitorPage & libPlasmaSystemMonitorTable are internal libraries
+plasma-systemmonitor: lacks-ldconfig-trigger usr/lib/*/libPlasmaSystemMonitorPage.so usr/lib/*/libPlasmaSystemMonitorTable.so
+plasma-systemmonitor: no-symbols-control-file usr/lib/*/libPlasmaSystemMonitorPage.so
+plasma-systemmonitor: no-symbols-control-file usr/lib/*/libPlasmaSystemMonitorTable.so
+plasma-systemmonitor: package-name-doesnt-match-sonames libPlasmaSystemMonitorPage libPlasmaSystemMonitorTable
+plasma-systemmonitor: shared-library-lacks-version usr/lib/*/libPlasmaSystemMonitorPage.so libPlasmaSystemMonitorPage.so
+plasma-systemmonitor: shared-library-lacks-version usr/lib/*/libPlasmaSystemMonitorTable.so libPlasmaSystemMonitorTable.so
+
+plasma-systemmonitor: no-manual-page [usr/bin/plasma-systemmonitor]

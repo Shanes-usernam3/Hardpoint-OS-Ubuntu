@@ -1,0 +1,8 @@
+[Daemon]
+Autolock=true
+Timeout=15
+
+[Greeter][Wallpaper][org.kde.image][General]
+DynamicMode=1
+Image=file:///usr/share/wallpapers/Kubuntu/#day-night
+PreviewImage=file:///usr/share/wallpapers/Kubuntu/#day-night

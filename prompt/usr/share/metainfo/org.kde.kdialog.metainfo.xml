@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="console-application">
+  <id>org.kde.kdialog</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KDialog</name>
+  <name xml:lang="ar">حواريك</name>
+  <name xml:lang="ast">KDialog</name>
+  <name xml:lang="az">KDialog</name>
+  <name xml:lang="be">KDialog</name>
+  <name xml:lang="bg">KDialog</name>
+  <name xml:lang="ca">KDialog</name>
+  <name xml:lang="ca-valencia">KDialog</name>
+  <name xml:lang="cs">KDialog</name>
+  <name xml:lang="da">KDialog</name>
+  <name xml:lang="de">KDialog</name>
+  <name xml:lang="el">KDialog</name>
+  <name xml:lang="en-GB">KDialog</name>
+  <name xml:lang="eo">KDialog</name>
+  <name xml:lang="es">KDialog</name>
+  <name xml:lang="et">KDialog</name>
+  <name xml:lang="eu">KDialog</name>
+  <name xml:lang="fi">KDialog</name>
+  <name xml:lang="fr">KDialog</name>
+  <name xml:lang="gl">KDialog</name>
+  <name xml:lang="he">KDialog</name>
+  <name xml:lang="hi">के-डायलॉग</name>
+  <name xml:lang="hu">KDialog</name>
+  <name xml:lang="ia">KDialog</name>
+  <name xml:lang="id">KDialog</name>
+  <name xml:lang="is">KDialog</name>
+  <name xml:lang="it">KDialog</name>
+  <name xml:lang="ka">KDialog</name>
+  <name xml:lang="ko">KDialog</name>
+  <name xml:lang="lv">KDialog</name>
+  <name xml:lang="nl">KDialog</name>
+  <name xml:lang="nn">KDialog</name>
+  <name xml:lang="pl">KDialog</name>
+  <name xml:lang="pt">KDialog</name>
+  <name xml:lang="pt-BR">KDialog</name>
+  <name xml:lang="ro">KDialog</name>
+  <name xml:lang="ru">KDialog</name>
+  <name xml:lang="sa">केसंवादः</name>
+  <name xml:lang="sk">KDialog</name>
+  <name xml:lang="sl">KDialog</name>
+  <name xml:lang="sv">Kdialog</name>
+  <name xml:lang="tr">KDialog</name>
+  <name xml:lang="uk">KDialog</name>
+  <name xml:lang="vi">KDialog</name>
+  <name xml:lang="zh-CN">KDialog</name>
+  <name xml:lang="zh-TW">KDialog</name>
+  <summary>Display dialog boxes from shell scripts</summary>
+  <summary xml:lang="ar">عرض مربعات الحوار من البرامج النصية شل</summary>
+  <summary xml:lang="az">Dialoq qutusunu üz qabığı (shell) skriptindən göstərmək</summary>
+  <summary xml:lang="be">Паказваць дыялогавыя вокны для скрыптоў праграмнай абалонкі</summary>
+  <summary xml:lang="bg">Показване на диалогови прозорци от скриптове на обвивката</summary>
+  <summary xml:lang="ca">Mostra quadres de diàleg des de scripts de l'intèrpret d'ordres</summary>
+  <summary xml:lang="ca-valencia">Mostra diàlegs des de scripts de l'intèrpret d'ordres</summary>
+  <summary xml:lang="da">Vis dialogbokse fra skal-scripts</summary>
+  <summary xml:lang="de">Anzeige von Dialogen aus Shell-Skripten</summary>
+  <summary xml:lang="el">Εμφανίζει πλαίσια διαλόγου από σενάρια φλοιού</summary>
+  <summary xml:lang="en-GB">Display dialogue boxes from shell scripts</summary>
+  <summary xml:lang="eo">Montri dialogskatolojn el ŝelskriptoj</summary>
+  <summary xml:lang="es">Mostrar cuadros de diálogo desde los scripts del intérprete de órdenes</summary>
+  <summary xml:lang="et">Shelliskriptidega dialoogikastide näitamine</summary>
+  <summary xml:lang="eu">Bistaratu elkarrizketa-koadroak «shell script»etatik</summary>
+  <summary xml:lang="fi">Näytä komentotulkkiskriptistä kyselyikkunoita</summary>
+  <summary xml:lang="fr">Affiche des boites de dialogue depuis un script shell</summary>
+  <summary xml:lang="gl">Amosar cadros de diálogo a partir de guións de intérprete de ordes</summary>
+  <summary xml:lang="he">הצגת תיבות בחלוניות מסקריפטים של מעטפת</summary>
+  <summary xml:lang="hi">शेल स्क्रिप्टों से संवाद बक्से प्रदर्शित करें</summary>
+  <summary xml:lang="hu">Párbeszédablakok megjelenítése parancsfájlokból</summary>
+  <summary xml:lang="ia">Monstra quadratos de dialogo ex scripts de shell</summary>
+  <summary xml:lang="id">Displai kotak dialog dari skrip shell</summary>
+  <summary xml:lang="is">Birtir samskiptaglugga frá skeljaskriftum</summary>
+  <summary xml:lang="it">Visualizza finestre di dialogo da script di shell</summary>
+  <summary xml:lang="ka">სკრიპტებიდან ფანჯრების ჩვენება</summary>
+  <summary xml:lang="ko">셸 스크립트에서 대화 상자 표시</summary>
+  <summary xml:lang="lv">Parāda dialoglogus no čaulas skriptiem</summary>
+  <summary xml:lang="nl">Dialoogvensters uit shell-scripts</summary>
+  <summary xml:lang="nn">Vis dialogvindauge frå kommandolinjeskript</summary>
+  <summary xml:lang="pl">Wyświetla okna dialogowe ze skryptów powłoki</summary>
+  <summary xml:lang="pt">Mostra janelas a partir de programas</summary>
+  <summary xml:lang="pt-BR">Mostra caixas de diálogo a partir scripts do shell</summary>
+  <summary xml:lang="ro">Afișează casete de dialog din scripturi de consolă</summary>
+  <summary xml:lang="ru">KDialog служит для показа диалоговых окон из сценариев оболочки</summary>
+  <summary xml:lang="sa">शेल् स्क्रिप्ट् तः संवादपेटिकाः प्रदर्शयन्तु</summary>
+  <summary xml:lang="sk">Zobraziť dialógové okná zo shellových príkazov</summary>
+  <summary xml:lang="sl">Prikažite pogovorna okna iz shell skripta</summary>
+  <summary xml:lang="sv">Visa dialogrutor från skalskript</summary>
+  <summary xml:lang="ta">சிறுநிரல்களிலிருந்து தேர்வுச்சாளரங்களைக் காட்ட உதவும்</summary>
+  <summary xml:lang="tr">Kabuk betiklerinden iletişim kutuları görüntüler</summary>
+  <summary xml:lang="uk">Відкриття діалогових вікон з скриптів командної оболонки</summary>
+  <summary xml:lang="vi">Hiển thị các hộp thoại từ các kịch bản hệ vỏ</summary>
+  <summary xml:lang="zh-CN">通过 Shell 脚本显示对话框</summary>
+  <summary xml:lang="zh-TW">在 Shell 指令稿顯示對話框</summary>
+  <description>
+    <p>
+      KDialog allows you to display dialog boxes from shell scripts.
+      The syntax is very much inspired from the "dialog" command
+      (which shows text mode dialogs).
+    </p>
+    <p xml:lang="ar">يتيح لك حواريك عرض مربعات الحوار من نصوص شل النصية. بناء الجملة مستوحى إلى حد كبير من أمر "الحوار" (الذي يعرض مربعات حوار وضع النص).</p>
+    <p xml:lang="be">KDialog дае вам магчымасць паказваць дыялогавыя вокны са скрыптоў абалонкі. Сінтаксіс шмат у чым узяты з каманды "dialog" (які паказвае дыялогі тэкставага рэжыму).</p>
+    <p xml:lang="bg">KDialog ви позволява да показвате диалогови прозорци от шел скриптове. Синтаксисът е вдъхновен от командата "dialog" (която показва диалог  в текстов режим).</p>
+    <p xml:lang="ca">El KDialog permet mostrar quadres de diàleg des de scripts de l'intèrpret d'ordres. La sintaxi està molt inspirada en l'ordre «dialog» (la qual mostra diàlegs en mode text).</p>
+    <p xml:lang="ca-valencia">KDialog permet mostrar diàlegs des de scripts de l'intèrpret d'ordres. La sintaxi està molt inspirada en l'ordre «dialog» (la qual mostra diàlegs en mode text).</p>
+    <p xml:lang="da">Med KDialog kan man vise dialogbokse fra skal-scripts. Syntaksen er meget inspireret af "dialog"-kommandoen (som viser dialoger i tekstform).</p>
+    <p xml:lang="de">Mit KDialog können grafische Dialoge aus Shell-Skripten aufgerufen werden. Die Syntax ist vom Befehl „dialog“ inspiriert, das jedoch nur Dialoge im Textmodus anzeigt.</p>
+    <p xml:lang="el">Το KDialog σας επιτρέπει να εμφανίζετε πλαίσια διαλόγου από σενάρια φλοιού. Η σύνταξη έχει επηρεαστεί πολύ από την εντολή "dialog" (η οποία εμφανίζει κείμενο και διαλόγους).</p>
+    <p xml:lang="en-GB">KDialog allows you to display dialog boxes from shell scripts. The syntax is very much inspired from the "dialog" command (which shows text mode dialogs).</p>
+    <p xml:lang="eo">Kdialog permesas al vi montri dialogkestojn el ŝelskriptoj. La sintakso estas pleje inspirita de la komando "dialog" (kiu montras tekstreĝimajn dialogujojn).</p>
+    <p xml:lang="es">KDialog le permite mostrar cuadros de diálogo desde los scripts del intérprete de órdenes. Su sintaxis está muy inspirada en la orden «dialog» (que muestra diálogos en modo de texto).</p>
+    <p xml:lang="eu">«KDialog»ek oskoleko gidoietatik elkarrizketa-koadroak azaltzen uzten dizu. Sintaxia "dialog" komandoan (testu-moduko elkarrizketa-koadroak erakusten dituena) oso inspiratua dago.</p>
+    <p xml:lang="fi">KDialogilla voi näyttää kyselyikkunoita komentotulkkiskriptistä. Syntaksi on saanut vaikutteita dialog-komennosta (joka näyttää tekstitilan kyselyikkunoita).</p>
+    <p xml:lang="fr">KDialog vous permet d'afficher des boites de dialogue depuis des scripts shell. Sa syntaxe s'inspire largement de celle de la commande « dialog » (qui affiche des boites de dialogue en mode texte).</p>
+    <p xml:lang="gl">KDialog permítelle amosar cadros de diálogo a partir de guións de intérprete de ordes. A sintaxe está inspirada en gran medida na orde «dialog» (que mostra diálogos en modo texto).</p>
+    <p xml:lang="he">KDialog מאפשר לך להציג חלוניות מסקריפטים של מעטפת. התחביר מושפע למכביר מהפקודה „dialog” (שמציגה חלוניות במצב טקסט).</p>
+    <p xml:lang="hu">A KDialog lehetővé teszi párbeszédablakok megjelenítését parancsfájlokból. A szintaxisára nagy hatással volt a „dialog” parancs (amely szöveges párbeszédablakokat jelenít meg).</p>
+    <p xml:lang="ia">KDialog te permitte monstrar quadros de dialogo ex scripts de shell. Le synthaxe es multe inspirate al commando  "dialog"  (que monstra dialogos de modo texto).</p>
+    <p xml:lang="is">Með KDialog geturðu opnað svarglugga úr skeljaskriftum. Málsniðið er að miklu leyti byggt á "dialog"-skipuninni (sem sýnir svarglugga á textasniði).</p>
+    <p xml:lang="it">KDialog ti permette di visualizzare delle finestre di dialogo da script di shell. La sintassi prende decisamente ispirazione dal comando «dialog» (che mostra finestre in modalità testuale).</p>
+    <p xml:lang="ka">KDialog საშუალებას გაძლევთ, გრაფიკული ფანჯრები გარსის სკრიპტებიდან გამოიძახოთ. სინტაქსი ძალიან წააგავს "dialog" ბრძანებისას (რომელიც იგივეს ტექსტურ რეჟიმში აკეთებს).</p>
+    <p xml:lang="ko">KDialog를 사용하여 셸 스크립트에서 대화 상자를 표시할 수 있습니다. 텍스트 모드 대화 상자를 표시하는 "dialog" 명령의 문법에서 많은 영향을 받았습니다.</p>
+    <p xml:lang="lv">„KDialog“ ir paredzēts dialoglogu parādīšanai, izpildot čaulas skriptus. Sintakse ir ļoti tuva „dialog“ komandas sintaksei (kas parāda teksta režīma dialoglogus).</p>
+    <p xml:lang="nl">KDialog biedt u dialoogvensters te tonen uit shell-scripts. De syntaxis is zeer geïnspireerd op het commando "dialog" (die dialogen toont in tekstmodus).</p>
+    <p xml:lang="nn">KDialog lèt deg visa dialogvindauge frå kommandolinjeskript. Syntaksen er sterkt inspirert av «dialog»-kommandoen (som viser tekstbaserte dialogvindauge).</p>
+    <p xml:lang="pl">KDialog umożliwia wyświetlanie okien dialogowych ze skryptów powłoki. Składnia naśladuje polecenie "dialog" (które pokazuje tekstowe okna dialogowe).</p>
+    <p xml:lang="pt-BR">O KDialog permite-lhe mostrar caixas de diálogo a partir de scripts do shell. A sintaxe é muito semelhante à do comando "dialog" (que mostra caixa de diálogos em modo de texto).</p>
+    <p xml:lang="ro">KDialog permite afișarea casetelor de dialog din scripturi de consolă. Sintaxa e inspirată din comanda „dialog” (care arată dialoguri în regim textual).</p>
+    <p xml:lang="ru">KDialog служит для показа диалоговых окон из сценариев оболочки. Синтаксис основан на синтаксисе программы «dialog», предназначенной для показа диалоговых окон в текстовом режиме.</p>
+    <p xml:lang="sa">KDialog इत्यनेन शेल् स्क्रिप्ट् तः संवादपेटिकाः प्रदर्शयितुं शक्यन्ते । वाक्यविन्यासः "dialog" आदेशात् (यत् पाठविधिसंवादं दर्शयति) अतीव प्रेरितम् अस्ति ।</p>
+    <p xml:lang="sl">kdialog omogoča prikazovanje pogovornih oken iz shell skripta. Skladnja je navdihnjena iz ukaza "dialog" (ki prikazuje besedilni način dialogov).</p>
+    <p xml:lang="sv">Kdialog låter dig visa dialogrutor från skalskript. Syntaxen är i stor utsträckning inspirerad av kommandot "dialog" (som visar dialogrutor i textläge).</p>
+    <p xml:lang="tr">KDialog, kabuk betiklerinden iletişim kutuları görüntülemenize izin verir. Sözdizim, büyük ölçüde "dialog" komutundan (metin kipi iletişim kutuları gösterir) esinlenmiştir.</p>
+    <p xml:lang="uk">За допомогою KDialog можна відкривати діалогові вікна зі скриптів командної оболонки. Синтаксис команд є дуже схожим на синтаксис команд програми «dialog» (яка показу діалогові вікна у текстовому режимі).</p>
+    <p xml:lang="zh-CN">KDialog 用于通过 Shell 脚本显示对话框。KDialog 的语法在很大程度上参考了 dialog 命令 (此命令用于显示文本模式的对话信息)。</p>
+    <p xml:lang="zh-TW">kDialog 讓您能使用 Shell 指令稿顯示對話框。語法不少啟發自「dialog」（顯示文字模式的對話框）指令。</p>
+  </description>
+  <icon type="stock">dialog-question</icon>
+  <url type="homepage">https://www.kde.org</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdialog</url>
+  <url type="help">https://techbase.kde.org/Development/Tutorials/Shell_Scripting_with_KDE_Dialogs</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kdialog&amp;source=appdata</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/kdialog/kdialog.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kdialog</binary>
+  </provides>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+    <release version="24.12.3" date="2025-03-06"/>
+    <release version="24.12.2" date="2025-02-06"/>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
+    <release version="24.08.2" date="2024-10-10"/>
+    <release version="24.08.1" date="2024-09-12"/>
+    <release version="24.08.0" date="2024-08-22"/>
+    <release version="24.05.2" date="2024-07-04"/>
+    <release version="24.05.1" date="2024-06-13"/>
+    <release version="24.05.0" date="2024-05-23"/>
+    <release version="24.02.2" date="2024-04-11"/>
+    <release version="24.02.1" date="2024-03-21"/>
+    <release version="24.02.0" date="2024-02-28"/>
+    <release version="23.08.5" date="2024-02-15"/>
+  </releases>
+</component>

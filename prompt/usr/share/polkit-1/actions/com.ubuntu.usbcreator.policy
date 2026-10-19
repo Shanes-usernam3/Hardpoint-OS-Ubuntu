@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+
+  <vendor>Startup Disk Creator</vendor>
+  <vendor_url>https://launchpad.net/usb-creator</vendor_url>
+  <icon_name>usb-creator-gtk</icon_name>
+
+  <action id="com.ubuntu.usbcreator.image">
+    <description gettext-domain="usbcreator">Image the device</description>
+    <message gettext-domain="usbcreator">System policy prevents writing a disk image to this device</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+  <action id="com.ubuntu.usbcreator.kvm">
+    <description gettext-domain="usbcreator">Run KVM</description>
+    <message gettext-domain="usbcreator">System policy prevents running KVM</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+</policyconfig>

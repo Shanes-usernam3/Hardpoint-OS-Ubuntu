@@ -1,0 +1,3 @@
+# Web fonts are put in a fontconfig-safe location on purpose.
+font-outside-font-dir [usr/share/fonts-ibm-plex/woff/*]
+font-outside-font-dir [usr/share/fonts-ibm-plex/woff2/*]

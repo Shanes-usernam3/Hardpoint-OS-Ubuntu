@@ -1,0 +1,6 @@
+# private library
+gwenview: package-name-doesnt-match-sonames libgwenviewlib5
+# private library
+gwenview: no-symbols-control-file
+gwenview: no-manual-page [usr/bin/gwenview]
+gwenview: no-manual-page [usr/bin/gwenview_importer]

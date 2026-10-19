@@ -1,0 +1,35 @@
+This work was packaged for Debian by:
+
+    Jon Dowland <jmtd@debian.org> on Thu, 01 Apr 2010 10:05:55 +0100
+
+It was downloaded from:
+
+    <http://github.com/apenwarr/bup>
+
+Upstream Authors:
+
+    Rob Browning
+    Avery Pennarun 'apenwarr'
+
+Copyright:
+
+    Copyright © 2010 Rob Browning
+    Copyright © 2010 Avery Pennarun
+
+Additional copyright holders:
+
+./wvtestrun:
+        Copyright © 2007-2009 Versabanq Innovations Inc. and contributors.
+
+License:
+
+    GNU LGPL version 2
+    See "/usr/share/common-licenses/LGPL-2".
+
+The Debian packaging is:
+
+    Copyright © 2010-2012 Jon Dowland <jmtd@debian.org>
+    Copyright © 2013 Robert S. Edmonds <edmonds@debian.org>
+
+and is similarly licensed under the LGPL version 2,
+see "/usr/share/common-licenses/LGPL-2".

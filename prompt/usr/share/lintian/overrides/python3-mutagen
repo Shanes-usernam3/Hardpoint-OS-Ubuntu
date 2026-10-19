@@ -1,0 +1,3 @@
+# These are "demo" type utilities
+python3-mutagen binary: application-in-library-section
+python3-mutagen binary: library-package-name-for-application

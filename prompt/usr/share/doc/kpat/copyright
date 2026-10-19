@@ -1,0 +1,559 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kpat
+Upstream-Contact: Parker Coates <parker.coates@kdemail.net>
+                  Albert Astals Cid <aacid@kde.org>
+                  Wolfgang Rohdewald <wolfgang@rohdewald.de>
+Source: http://www.kde.org/download/
+
+Files: *
+Copyright: 2008, Andreas Pakulat <apaku@gmx.de>
+           1998, Bjarni R. Einarsson
+           2009, Davide Bettio <davide.bettio@kdemail.net>
+           1999-2002, Meni Livne <livne@kde.org>
+           2007-2010, Parker Coates <coates@kde.org>
+           2001-2009, Stephan Kulow <coolo@kde.org>
+           2002-2014, This_file_is_part_of_KDE
+           1998-2002, Tom Holroyd <tomh@kurage.nimh.nih.gov>
+           2021 Michael Lang <criticaltemp@protonmail.com>
+           2001,2002 Frikkie Thirion <frix@expertron.co.za>
+           2002 Isam Bayazidi <bayazidi@arabeyes.org>
+           2007 Youssef Chahibi <chahibi@gmail.com>
+           2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2023 Enol P. <enolp@softastur.org>
+           2007 Siarhei Liantsevich <serzh.by@gmail.com>
+           2007 Darafei Praliaskouski <komzpa@licei2.com>
+           2008 Darafei Praliaskouski <komzpa@gmail.com>
+           2007 Zlatko Popov <zlatkopopov@fsa-bg.org>
+           2009 Petar Toushkov <pt.launchpad@gmail.com>
+           1998 JaÃ±-Mai Drapier <jdrapier@club-internet.fr>
+           2004 Dusica Bogojevic <ddush_b@yahoo.co.uk>
+           2011 KDE 4 <megaribi@epn.ba>
+           2007 Mark KwidziÅsczi <mark@linuxcsb.org>
+           2007, 2008 MichÃŽÅ Ãstrowsczi <michol@linuxcsb.org>
+           2010 LukÃ¡Å¡ Tinkl <ltinkl@redhat.com>
+           2010-2020 VÃ­t PelÄÃ¡k <vit@pelcak.org>
+           2012 TomÃ¡Å¡ ChvÃ¡tal <tomas.chvatal@gmail.com>
+           2021-2024 Vit Pelcak <vit@pelcak.org>
+           2003 www.kyfieithu.co.uk<kyfieithu@dotmon.com>
+           2005 Kevin Donnelly <kevin@dotmon.com>
+           1999-2005 Erik KjÃŠr Pedersen <erik@binghamton.edu>
+           2008-2014 Martin Schlander <mschlander@opensuse.org>
+           2008, 2009 Jan Madsen <jan-portugal@opensuse.org>
+           2017 scootergrisen
+           2003 Thomas Diehl <thd@kde.org>
+           2004-2007 Stefan Winter <swinter@kde.org>
+           2005 Stephan Johach <hunsum@gmx.de>
+           2005-2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+           2007 Stephan Kulow <coolo@kde.org>
+           2008-2021 Burkhard LÃŒck <lueck@hube-lueck.de>
+           2009-2011 Johannes Obermayr <johannesobermayr@gmx.de>
+           2009, 2011 Panagiotis Papadopoulos <pano_90@gmx.net>
+           2010-2016 Frederik Schwarzer <schwarzer@kde.org>
+           2011 Wolfgang Rohdewald <wolfgang@rohdewald.de>
+           2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
+           2002-2004 Stergios Dramis <sdramis@egnatia.ee.auth.gr>
+           2005-2007 Spiros Georgaras <sng@hellug.gr>
+           2006-2009 Toussis Manolis <manolis@koppermind.homelinux.org>
+           2008 Î£ÏÏÏÎ¿Ï ÎÎµÏÏÎ³Î±ÏÎ¬Ï <sngeorgaras@otenet.gr>
+           2008 Spiros Georgaras <sngeorgaras@otenet.gr>
+           2008 George Pantsis <gpantsis@gmail.com>
+           2011 Dimitrios Glentadakis <dglent@gmail.com>
+           2011, 2012 Antonis Geralis <capoiosct@gmail.com>
+           2016-2021 Stelios <sstavra@gmail.com>
+           2002-2009 Malcolm Hunter <malcolm.hunter@gmx.co.uk>
+           2004-2011 Andrew Coles <andrew_coles@yahoo.co.uk>
+           2014-2022 Steve Allewell <steve.allewell@gmail.com>
+           1998 Wolfram Diestel <diestel@rzaix340.rz.uni-leipzig.de>
+           2023 Oliver Kellogg <olivermkellogg@gmail.com>
+           SofÃ­a Priego <spriego@darksylvania.net>
+           2002, 2003 Miguel Revilla RodrÃ­guez <yo@miguelrevilla.com>
+           2003 Lucas Garcia <tanke@escomposlinux.org>
+           2004 Rafael Osuna <rosuna@wol.es>
+           2004, 2005 Santiago Fernandez Sancho <santi@kde-es.org>
+           2007, 2008 Santiago FernÃ¡ndez Sancho <santi@kde-es.org>
+           2009-2024 Eloy Cuadra <ecuadra@eloihr.net>
+           2009 Huever
+           2010-2012 Kira J. Fernandez <kirajfdez@gmail.com>
+           2013, 2014 Rocio Gallego <traducciones@rociogallego.com>
+           2014 David Paul <eodos0@gmail.com>
+           1999 Hasso Tepper <hasso@linux.ee>
+           2002 Anti Veeranna <duke@linux.ee>
+           2007-2020. Marek Laane <bald@smail.ee>
+           2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2005 Ion GaztaÃ±aga <igaztanaga@gmail.com>
+           2005 Marcos  <marcos@euskalgnu.org>
+           2009 IÃ±aki LarraÃ±aga Murgoitio <dooteo@euskalgnu.org>
+           2018 Ander Elortondo <ander.elor@gmail.com>
+           2023 IÃ±igo Salvador Azurmendi <xalba@ni.eus>
+           2006 Mahdi Foladgar <foladgar@itland.ir>
+           2006 Nasim Daniarzadeh <daniarzadeh@itland.ir>
+           2006, 2007 Nazanin Kazemi <kazemi@itland.ir>
+           2006 MaryamSadat Razavi <razavi@itland.ir>
+           2006 Tahereh Dadkhahfar <dadkhahfar@itland.ir>
+           2002, 2004 Kim Enkovaara <kim.enkovaara@iki.fi>
+           2003 Teemu Rytilahti <teemu.rytilahti@d5k.net>
+           2003, 2008 Teemu Rytilahti <teemu.rytilahti@kde-fi.org>
+           2005 Ilpo Kantonen <ilpo@iki.fi>
+           2008 Mikko Piippo <piippo@cc.helsinki.fi>
+           2010-2023 Tommi Nieminen <translator@legisign.org>
+           2010-2022 Lasse Liehu <lasse.liehu@gmail.com>
+           2011 Jorma Karvonen <karvonen.jorma@gmail.com>
+           2013-2024 Xavier Besnard <xavier.besnard@kde.org>
+           Serge "sergio" TellÃšne <tells@mygale.org>
+           Philippe Thomin <Philippe.Thomin@univ-valenciennes.fr>
+           2002, 2004 GÃ©rard Delafond <gerard@delafond.org>
+           2003 Robert Jacolin <rjacolin@ifrance.com>
+           2003 Cedric Pasteur <cedric.pasteur@free.fr>
+           2004 Matthieu Robin <kde@macolu.org>
+           2004, 2005 Yann Verley <yann.verley@free.fr>
+           2006 Nicolas Ternisien <nicolas.ternisien@gmail.com>
+           2007-2010 Mickael Sibelle <kimael@gmail.com>
+           2008 SÃ©bastien Renard <Sebastien.Renard@digitalfox.org>
+           2009 Kevin Scannell <kscanne@gmail.com>
+           2024 AdriÃ¡n Chaves (Gallaecio)
+           2004 Leandro Regueiro <unho@gulo.org>
+           2007, 2008 mvillarino <mvillarino@users.sourceforge.net>
+           2009-2017 AdriÃ¡n Chaves FernÃ¡ndez <adriyetichaves@gmail.com>
+           2012 XosÃ© <xosecalvo@gmail.com>
+           2013, 2014 Marce Villarino <mvillarino@kde-espana.org>
+           1999-2002 Meni Livne <livne@kde.org>
+           2005, 2012 Diego Iastrubni <elcuco@kde.org>
+           2005 Israel Berger <israelb@gmail.com>
+           2017 Elkana Bardugo <ttv200@gmail.com>
+           2024 Yaron Shahrabani <sh.yaron@gmail.com>
+           2007 Ravishankar Shrivastava <raviratlami@yahoo.com>
+           2021, 2022 Raghavendra Kamath <raghu@raghukamath.com>
+           2010 Andrej Dundovic <andrej@dundovic.com.hr>
+           1997 John Zero <johnzero@telnet.hu>
+           2010 Laszlo Papp <djszapi@archlinux.us>
+           2010 Kiszel KristÃ³f <ulysses@kubuntu.org>
+           2010, 2011, 2015 KristÃ³f Kiszel <ulysses@kubuntu.org>
+           2012, 2013 BalÃ¡zs Ãr <urbalazs@gmail.com>
+           2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
+           2023 giovanni <g.sora@tiscali.it>
+           2014 wantoyo <wantoyo@yahoo.com>
+           2017-2022 Wantoyo <wantoyek@gmail.com>
+           1998 Bjarni R. Einarsson, <bre@mmedia.is>
+           2004 Pjetur G. Hjaltason <pjetur@pjetur.net>
+           2004 ÃrÃ¶stur Svanbergsson <throstur@bylur.net>
+           2009-2015 Sveinn Ã­ Felli <sveinki@nett.is>
+           2017-2024 Vincenzo Reale <smart2128vr@gmail.com>
+           2009 Tore Brigaglia <opensourcecat@gmail.com>
+           2003-2012 Andrea Celli <andrea.celli@libero.it>
+           2012 Valter Mura <valtermura@gmail.com>
+           2013, 2014 Andrea Celli <a.celli.casa@gmail.com>
+           2002 Taiki Komoda <kom@kde.gr.jp>
+           2004 Takuro Ashie <ashie@homa.ne.jp>
+           2004 Kurose Shushi <md81@bird.email.ne.jp>
+           2005 Naoya KOJIMA <naoya@fullmoon.dyndns.org>
+           2007, 2008, 2010 Yukiko Bando <ybando@k6.dion.ne.jp>
+           2011 Fumiaki Okushi <okushi@kde.gr.jp>
+           2023 Temuri Doghonadze <temuri.doghonadze@gmail.com>
+           2012, 2013 Sairan Kikkarin <sairan@computer.org>
+           2006-2008 Auk Piseth <piseth_dv@khmeros.info>
+           2007-2009 Khoem Sokhem <khoemsokhem@khmeros.info>
+           2009 Morn Met
+           1999 Byeong-Chan Kim <redhands@linux.sarang.net>
+           2007-2024 Shinjo Park <kde@peremen.name>
+           2005 Donatas Glodenis <dgvirtual@akl.lt>
+           2011 Remigijus JarmalaviÄius <remigijus@jarmalavicius.lt>
+           2015 Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>
+           2023 Toms Trasuns <toms.trasuns@posteo.net>
+           2005 Maris Nartiss <maris.nartiss@gmail.com>
+           2006-2024 Maris Nartiss <maris.kde@gmail.com>
+           2008 Viesturs Zarins <viesturs.zarins@mii.lu.lv>
+           2010, 2012 Einars Sprugis <einars8@gmail.com>
+           2010 Rajesh Ranjan <rajesh672@gmail.com>
+           2003 Jovan Kostovski <chombium@localhost.localdomain>
+           2003 Jovan Kostovski <chombium@freemail.com.mk>
+           2004, 2006 Zaklina Gjalevska <gjalevska@yahoo.com>
+           2004, 2007 Bozidar Proevski <bobibobi@freemail.com.mk>
+           2019 Vivek KJ Pazhedath <vivekkj2004@gmail.com>
+           2013 Chetan Khona <chetan@kompkin.com>
+           2008 Muhammad Najmi bin Ahmad Zabidi <najmi.zabidi@gmail.com>
+           1998, 1999, 2000 Hans Petter Bieker <bieker@kde.org>
+           2002 Knut Yrvin <knut.yrvin@gmail.com>
+           2004 Klaus Ade Johnstad <klaus@skolelinux.no>
+           2005 Karl Ove Hufthammer <karl@huftis.org>
+           2005 Nils Kristian Tomren <slx@nilsk.net>
+           2008-2014 BjÃžrn Steensrud <bjornst@skogkatt.homelinux.org>
+           2006-2011 Manfred Wiese <m.j.wiese@web.de>
+           2006-2014 SÃ¶nke Dibbern <s_dibbern@web.de>
+           2006 Mahesh Subedi <submanesh@yahoo.com>
+           2007 Nabin Gautam <nabin@mpp.org.np>
+           Gelezen, Rinse
+           2000, 2001, 2002 KDE-vertaalgroep Nederlands <i18n@kde.nl)
+           2003, 2004 Rinse de Vries <rinse@kde.nl>
+           2004 Bram Schoenmakers <bramschoenmakers@kde.nl>
+           2004-2009 Rinse de Vries <rinsedevries@kde.nl>
+           2009 Kristof Bal <kristof.bal@gmail.com>
+           2009-2022 Freek de Kruijf <freekdekruijf@kde.nl>
+           2009 Eirik U. Birkeland <eirbir@gmail.com>
+           2024 Karl Ove Hufthammer <karl@huftis.org>
+           2007, 2008 Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>
+           2004, 2005 Amanpreet Singh Alam <aalam@redhat.com>
+           2007, 2014 A S Alam <aalam@users.sf.net>
+           2011-2024 Åukasz WojniÅowicz <lukasz.wojnilowicz@gmail.com>
+           1999 Piotr Roszatycki <dexter@fnet.pl>
+           2002 MichaÅ Rudolf <mrudolf@kdewebdev.org>
+           2003-2009 Michal Rudolf <mrudolf@kdewebdev.org>
+           2010 Maciej WikÅo <maciej.wiklo@wp.pl>
+           2002, 2003 Lisiane Sztoltz <lisiane@conectiva.com.br>
+           2003 Joao Emanuel <jesgnulinux@terra.com.br>
+           2004 Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>
+           2004 Lisiane Sztoltz Teixeira <lisiane@kdemail.net>
+           2005 Stephen Killing <stephen.killing@kdemail.net>
+           2007, 2008, 2009 Mauricio Piacentini <piacentini@kde.org>
+           2008 Diniz Bortolotto <diniz.bortolotto@gmail.com>
+           2009-2023 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2009-2020 AndrÃ© Marcelo Alvarenga <alvarenga@kde.org>
+           2023 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+           2022 JosÃ© Nuno Pires <zepires@gmail.com>
+           2008-2022 Sergiu Bivol <sergiu@cip.md>
+           2016 Ovidiu-Florin Bogdan <ovidiu.b13@gmail.com>
+           2000 Dmitri Ovechkin <d_ovechkin@hotmail.com>
+           2001 Konstantin Volckov <goldhead@linux.ru.net>
+           2003-2007 Nick Shaforostoff <shaforostoff@kde.ru>
+           2008, 2009, 2010 Artem Sereda <overmind88@gmail.com>
+           2008 Evgeniy Ivanov <powerfox@kde.ru>
+           2011-2017 Alexander Potashev <aspotashev@gmail.com>
+           2012 Yury G. Kudryashov <urkud.urkud@gmail.com>
+           2013 Alexander Lakhin <exclusion@gmail.com>
+           2022, 2023 Olesya Gerasimenko <translation-team@basealt.ru>
+           2006, 2010 BÃžrre Gaup <boerre@skolelinux.no>
+           2001,2002 Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>
+           2003, 2004 Stanislav Visnovsky <visnovsky@kde.org>
+           2006, 2009 Richard Fric <Richard.Fric@kdemail.net>
+           2010, 2011 Michal Sulek <misurel@gmail.com>
+           2012-2019 Roman PaholÃ­k <wizzardsk@gmail.com>
+           2019, 2020 Matej Mrenica <matejm98mthw@gmail.com>
+           1999 Marko Samastur <markos@elite.org>
+           2000 PrimoÅŸ Peterlin <primoz.peterlin@biofiz.mf.uni-lj.si>
+           2003, 2004, 2005 Gregor Rakar <gregor.rakar@kiss.si>
+           2006, 2008, 2009 Jure Repinc <jlp@holodeck1.com>
+           2007 Matej Repinc <mrepinc@gmail.com>
+           2012-2016 Andrej Mernik <andrejm@ubuntu.si>
+           2019-2022 MatjaÅŸ Jeran <matjaz.jeran@amis.net>
+           2009 Vilson Gjeci <vilsongjeci@gmail.com>
+           2001 Milos Puzovic <m.puzovic@etoncollege.org.uk>
+           2003 Bojan Bozovic <bole89@infosky.net>
+           2003-2016 Chusslove Illich <caslav.ilic@gmx.net>
+           2009, 2010 Slobodan Simic <slsimic@gmail.com>
+           2010, 2011 Dalibor Djuric <daliborddjuric@gmail.com>
+           1998 Christer Gustavsson <f93-cgn@sm.luth.se>
+           2000 Per LindstrÃ¶m <per.lindstrom@osd.privataccess.nu>
+           2003 Mattias Newzella <newzella@linux.nu>
+           2004-2022 Stefan Asserhall <stefan.asserhall@gmail.com>
+           2004 Ambalam <tamilpc@ambalam.com>
+           2004 root <root@intranet.ddsl>
+           2004 infoDev, a World Bank organization
+           2004 Khujand Computer Technologies, Inc.
+           2004 KCT1, NGO
+           2003, 2005 Youth Opportunities NGO
+           2004 Dilshod Marupov <dma165@hotmail.com>
+           2004 Hiromon <H_Abrorova@rambler.ru>
+           2005 Victor Ibragimov <youth_opportunities@tajikngo.org>
+           2010 Thanomsub Noppaburana <donga.nb@gmail.com>
+           2005 BÃŒlent ÅENER <bulent@kde.org.tr>
+           2003 GÃ¶rkem Ãetin <gorkem@kde.org>
+           2002 Ãmer FadÄ±l USTA <omer_fad@hotmail.com>
+           2004 Ãmer FadÄ±l USTA <omer_fad@yahoo.com>
+           2010,2013 Ozan ÃaÄlayan <ozan@pardus.org.tr>
+           2010 Serdar DalgÄ±Ã§
+           2008-2009 obsoleteman <tulliana@gmail.com>
+           2013-2014 Volkan Gezer <volkangezer@gmail.com>
+           2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+           2011 Sahran <sahran.ug@gmail.com>
+           2007 Jean Cayron <jean.cayron@tele2allin.vbe>
+           2007, 2009, 2011 Jean Cayron <jean.cayron@gmail.com>
+           2001,2002 Antoinette Dekeni <antoinette@transalate.org.za>
+           2002 Thelma Lungcuzo <thelma@translate.org.za>
+           2002 Lwandle Mgidlana <lwandle@translate.org.za>
+           2003 Hydonsingore Sie <hydonsingore@mail.educities.edu.tw>
+           2006-2014 Franklin Weng <franklin@goodhorse.idv.tw>
+           2016 Jeff Huang <s8321414@gmail.com>
+           2018, 2020 pan93412 <pan93412@gmail.com>
+           2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+License: GPL-2+
+
+Files: autotests/freecell_solver.cpp
+       autotests/golf_solver_wins.cpp
+       autotests/shuffle_test.cpp
+       autotests/solve_by_name.cpp
+       cmake/fcs_soft_suspend_test.c
+Copyright: 2018-2019, Shlomi Fish <shlomif@cpan.org>
+License: Expat
+
+Files: autotests/settings_for_tests.cpp
+Copyright: 2019, Shlomi Fish <shlomif@cpan.org>
+License: MIT
+
+Files: autotests/solver_format.cpp
+       src/clock.cpp
+       src/clock.h
+       src/dealer.cpp
+       src/dealer.h
+       src/dealerinfo.cpp
+       src/dealerinfo.h
+       src/fortyeight.cpp
+       src/fortyeight.h
+       src/freecell.cpp
+       src/freecell.h
+       src/gamestate.h
+       src/golf.cpp
+       src/golf.h
+       src/grandf.cpp
+       src/grandf.h
+       src/gypsy.cpp
+       src/gypsy.h
+       src/hint.h
+       src/idiot.cpp
+       src/idiot.h
+       src/klondike.cpp
+       src/klondike.h
+       src/libkcardgame/kcardpile.cpp
+       src/libkcardgame/kcardpile.h
+       src/libkcardgame/kcardscene.cpp
+       src/libkcardgame/kcardscene.h
+       src/main.cpp
+       src/mainwindow.cpp
+       src/mainwindow.h
+       src/mod3.cpp
+       src/mod3.h
+       src/shuffle.h
+       src/simon.cpp
+       src/simon.h
+       src/spider.cpp
+       src/spider.h
+       src/statisticsdialog.cpp
+       src/statisticsdialog.h
+       src/view.cpp
+       src/view.h
+       src/yukon.cpp
+       src/yukon.h
+Copyright: 2004, Bart Vanhauwaert <bvh-cplusplus@irule.be>
+           1989-1991, Free Software Foundation, Inc
+           2003, Josh Metzler <joshdeb@metzlers.org>
+           1997, Mario Weilguni <mweilguni@sime.com>
+           2008-2010, Parker Coates <coates@kde.org>
+           1995, Paul Olav Tvete <paul@troll.no>
+           1997, Rodolfo Borges <barrett@labma.ufrj.br>
+           1998-2009, Stephan Kulow <coolo@kde.org>
+License: GPL-2+_or_MIT/X11
+
+Files: doc/*
+       po/cs/docs/*
+       po/de/docs/kpat/index.docbook
+       po/es/docs/kpat/index.docbook
+       po/et/docs/kpat/index.docbook
+       po/fr/docs/kpat/index.docbook
+       po/it/docs/kpat/index.docbook
+       po/nl/docs/kpat/index.docbook
+       po/pl/docs/*
+       po/pt/docs/kpat/index.docbook
+       po/pt_BR/docs/kpat/index.docbook
+       po/ru/docs/kpat/index.docbook
+       po/sv/docs/kpat/index.docbook
+       po/uk/docs/kpat/index.docbook
+Copyright: 2001-2004, Maren Pakura <maren@kde.org>
+           2000, Paul Olav Tvete <paul@troll.no>
+           2007, Stephan Kulow <coolo@kde.org>
+License: GFDL-1.2+
+
+Files: po/ca/*
+       po/ca@valencia/*
+Copyright: 2000, 2001 Francesc J Devesa i Berenguer <frandeve@hotmail.com>
+           2003, 2004, 2005, 2008 Albert Astals Cid <aacid@kde.org>
+           2007 Aleix Pol <aleixpol@gmail.com>
+           2007-2022 Josep M. Ferrer <txemaq@gmail.com>
+           2009 Joan Maspons <joanmaspons@gmail.com>
+           2010, 2011 Manuel Tortosa <manutortosa@chakra-project.org>
+           2016-2021 Antoni Bella PÃ©rez <antonibella5@yahoo.com>
+License: LGPL-2+
+
+Files: po/uk/kpat.po
+Copyright: 2003 Gladky Dima <gladimdim@inbox.ru>
+           2003 Andriy Rysin <rysin@kde.org>
+           2004 Eugene Onischenko <oneugene@ukr.net>
+           2005, 2007 Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>
+           2008-2022 Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1+3+KDEeV
+
+Files: CMakePresets.json
+       cmake/InternalMacros.cmake
+Copyright: 2021 Laurent Montel <montel@kde.org>
+           2021, 2023 Friedrich W. H. Kossebau <kossebau@kde.org>
+License: BSD-3-Clause
+
+Files: cmake/FindBlackHoleSolver.cmake
+       cmake/FindFreecellSolver.cmake
+Copyright: 2023 Friedrich W. H. Kossebau <kossebau@kde.org>
+License: BSD-2-Clause
+
+Files: src/org.kde.kpat.appdata.xml
+Copyright: KDE
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2007-2013, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: GPL-2+
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all copyright
+ and related and neighboring rights to this software to the public domain
+ worldwide. This software is distributed without any warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication along
+ with this software. If not, see 
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain Dedication
+ can be found in "/usr/share/common-licenses/CC0-1.0".
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy 
+ of this software and associated documentation files (the "Software"), to deal 
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: GFDL-1.2+
+ Permission is granted to copy, distribute and/or modify this document
+ under the terms of the GNU Free Documentation License, Version 1.2
+ or any later version published by the Free Software Foundation;
+ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ A copy of the license is included in the section entitled "GNU
+ Free Documentation License".
+ .
+ On Debian systems, the complete text of the GNU Free Documentation
+ License version 1.2 can be found in "/usr/share/common-licenses/GFDL-1.2".
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GPL-2+_or_MIT/X11
+ License of original code:
+ -------------------------------------------------------------------------
+   Permission to use, copy, modify, and distribute this software and its
+   documentation for any purpose and without fee is hereby granted,
+   provided that the above copyright notice appear in all copies and that
+   both that copyright notice and this permission notice appear in
+   supporting documentation.
+ .
+   This file is provided AS IS with no warranties of any kind.  The author
+   shall have no liability with respect to the infringement of copyrights,
+   trade secrets or any patents by this file or any part thereof.  In no
+   event will the author be liable for any lost revenue or profits or
+   other special, indirect and consequential damages.
+ -------------------------------------------------------------------------
+ .
+ License of modifications/additions made after 2009-01-01:
+ -------------------------------------------------------------------------
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License as
+   published by the Free Software Foundation; either version 2 of
+   the License, or (at your option) any later version.
+ .
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ .
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -------------------------------------------------------------------------
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ The complete text of the GNU Library General Public License version 2 can be
+ found in `/usr/share/common-licenses/LGPL-2'.
+
+License: LGPL-2.1+3+KDEeV
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.
+ .
+ On Debian systems, the full text of the GNU Library General Public
+ License version 2.1 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
+ .
+ On Debian systems, the full text of the GNU Library General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+
+License: MIT
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  .
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  .
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -1,0 +1,8 @@
+# Since upstream version 2.12, upstream bash-completion installs
+# etc/bash_completion.d/000_bash_completion_compat.bash, which provides
+# compatibility and consolidates deprecation of functions and variables.
+# Lintian checks for anything under etc/bash_completion.d/ so that it catches
+# other packages adding files to this directory, but we want to allow upstream
+# to use it.
+bash-completion: package-installs-into-obsolete-dir : ^etc/bash_completion.d/ -> usr/share/bash-completion/completions Ensure new filename matches stricter requirements (see https://bugs.debian.org/776954 and https://bugs.debian.org/814599) [etc/bash_completion.d/000_bash_completion_compat.bash]
+bash-completion: package-installs-into-obsolete-dir : ^etc/bash_completion.d/ -> usr/share/bash-completion/completions Ensure new filename matches stricter requirements (see https://bugs.debian.org/776954 and https://bugs.debian.org/814599) [etc/bash_completion.d/]

@@ -1,0 +1,12 @@
+[Default Applications]
+application/pdf=okularApplication_pdf.desktop;
+text/html=firefox_firefox.desktop
+text/markdown=org.kde.kate.desktop;
+x-scheme-handler/http=firefox_firefox.desktop
+x-scheme-handler/https=firefox_firefox.desktop
+x-scheme-handler/mailto=thunderbird_thunderbird.desktop;
+
+[Removed Associations]
+application/pdf=com.google.Chrome.desktop;
+text/markdown=okularApplication_txt.desktop;
+

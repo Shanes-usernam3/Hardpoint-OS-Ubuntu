@@ -1,0 +1,3 @@
+# libQt6VirtualKeyboardSettings is a private library installed into a public path
+libqt6virtualkeyboard6: ships-undeclared-shared-library libQt6VirtualKeyboardSettings 6 for usr/lib/*/libQt6VirtualKeyboardSettings.so.6.* [shlibs]
+libqt6virtualkeyboard6: shared-library-symbols-not-tracked libQt6VirtualKeyboardSettings 6 for usr/lib/*/libQt6VirtualKeyboardSettings.so.6.* [symbols]

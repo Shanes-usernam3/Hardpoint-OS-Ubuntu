@@ -1,0 +1,151 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: audiocd-kio
+Upstream-Contact: kde-multimedia@kde.org
+Source: https://invent.kde.org/multimedia/audiocd-kio
+
+Files: *
+Copyright: 2001, Adrian Schroeter <adrian@suse.de>
+           2004-2005, Benjamin Meyer <ben@meyerhome.net>
+           2001, Carsten Duvenhorst <duvenhorst@m2.uni-hannover.de>
+           2004, Ingo Kloecker <kloecker@kde.org>
+           2000-2002, Michael Matz <matz@kde.org>
+           2003, Richard Lärkäng <richard@goteborg.utfors.se>
+           2000, Rik Hemsley <rik@kde.org>
+           2003, Scott Wheeler <wheeler@kde.org>
+	   2018, Yuri Chornoivan <yurchor@mageia.org>
+License: GPL-2+
+
+Files: cmake/*
+Copyright: 2007, Allen Winter <winter@kde.org>
+           2006, Richard Lärkäng <richard@goteborg.utfors.se>
+License: BSD-3-clause
+
+Files: data/org.kde.kio_audiocd.metainfo.xml
+Copyright: None
+License: CC0-1.0
+
+Files: doc/*
+Copyright: Rik Hemsley <rik@kde.org>
+           Benjamin Meyer <ben at meyerhome dot net>
+License: GFDL-NIV-1.2+
+
+Files: plugins/flac/*
+Copyright: 2004, Allan Sandfeld Jensen <kde@carewolf.com>
+           2005, Benjamin Meyer <ben@meyerhome.net>
+License: LGPL-2+
+
+Files: po/ca@valencia/audiocd_encoder_lame.po
+       po/ca@valencia/audiocd_encoder_opus.po
+       po/ca@valencia/kio_audiocd.po
+       po/ca@valencia/audiocd_encoder_flac.po
+       po/ca@valencia/audiocd_encoder_vorbis.po
+       po/ca@valencia/kcmaudiocd.po
+       po/uk/audiocd_encoder_lame.po
+       po/uk/audiocd_encoder_opus.po
+       po/uk/kio_audiocd.po
+       po/uk/audiocd_encoder_flac.po
+       po/uk/audiocd_encoder_vorbis.po
+       po/uk/kcmaudiocd.po
+       po/ca/audiocd_encoder_lame.po
+       po/ca/audiocd_encoder_opus.po
+       po/ca/kio_audiocd.po
+       po/ca/audiocd_encoder_flac.po
+       po/ca/audiocd_encoder_vorbis.po
+       po/ca/kcmaudiocd.po
+Copyright: 2001-2020, This_file_is_part_of_KDE
+License: LGPL-2.1+3+KDEeV-translations
+
+Files: debian/*
+Copyright: 2022, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2013, Pino Toscano <pino@debian.org>
+License: GPL-2+
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: GFDL-NIV-1.2+
+ Permission is granted to copy, distribute and/or modify this document under
+ the terms of the GNU Free Documentation License, Version 1.2 or any later
+ version published by the Free Software Foundation; with no Invariant
+ Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ .
+ On Debian systems, the complete text of the GNU Free Documentation License
+ version 1.2 can be found in `/usr/share/common-licenses/GFDL-1.2'.
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version. 
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details. 
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ --
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library. If not, see <https://www.gnu.org/licenses/>.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1+3+KDEeV-translations
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1’,
+ likewise, the complete text of the GNU Lesser General Public License version
+ 3 can be found in `/usr/share/common-licenses/LGPL-3’.
+

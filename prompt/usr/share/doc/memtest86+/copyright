@@ -1,0 +1,37 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Memtest86+
+Upstream-Contact: Samuel Demeulemeester <memtest@memtest.org>
+Source: https://github.com/memtest86plus/memtest86plus
+
+Files: *
+Copyright: 2011, Intel Corporation; author Matt Fleming
+           1991-1992, Linus Torvalds
+           2024, Lionel Debroux
+           2024, Loongson Technology Corporation Limited
+           2020-2025, Martin Whitaker
+           Chris Brad <cbrady@sgi.com>
+           Rick van Rein
+           2004-2025, Samuel Demeulemeester <sdemeule@memtest.org>
+License: GPL-2
+
+Files: debian/*
+Copyright: Yann Dirson <dirson@debian.org>
+           Fabio Fantoni <fantonifabio@tiscali.it>
+           Felix Zielcke <fzielcke@z-51.de>
+License: GPL-2
+
+License: GPL-2
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see https://www.gnu.org/licenses/.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.

@@ -1,0 +1,195 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: spectacle
+Upstream-Contact: kde-devel@kde.org
+Source: https://download.kde.org/
+
+Files: *
+Copyright: 2021-2024, A S Alam <aalam@satluj.org>
+           2023-2024, Adrián Chaves (Gallaecio)
+           2020, Ahmad Samir <a.samirh78@gmail.com>
+           2022-2023, Aleix Pol Gonzalez <aleixpol@kde.org>
+           2018-2024, Alexander Yavorsky <kekcuha@gmail.com>
+           2018, Ambareesh "Amby" Balaji <ambareeshbalaji@gmail.com>
+           2015-2019, Boudhayan Gupta <bgupta@kde.org>
+           2019, David Redondo <kde@david-redondo.de>
+           2024, Dinesh Manajipet <noahadvs@gmail.com>
+           2015-2024, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2023-2024, Enol P. <enolp@softastur.org>
+           2015-2024, Freek de Kruijf <freekdekruijf@kde.nl>
+           2023-2024, Geraldo Simiao <geraldosimiao@fedoraproject.org>
+           2021-2023, giovanni <g.sora@tiscali.it>
+           2023-2024, Guðmundur Erlingsson <gudmundure@gmail.com>
+           2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2024, Jure Repinc <jlp@holodeck1.com>
+           2023-2024, KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2024, Kimmo Kujansuu <mrkujansuu@gmail.com>
+           2023-2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2021-2024, Kishore G <kishore96@gmail.com>
+           2021-2024, Kristof Kiszel <ulysses@fsf.hu>
+           2015-2024, Lasse Liehu <lasse.liehu@gmail.com>
+           2022, Marco Martin <mart@kde.org>
+           2019-2024, Matej Mrenica <matejm98mthw@gmail.com>
+           2019-2024, Matjaž Jeran <matjaz.jeran@amis.net>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2016, Martin Graesslin <mgraesslin@kde.org>
+           2022-2024, Noah Davis <noahadvs@gmail.com>
+           2015-2023, Roman Paholik <wizzardsk@gmail.com>
+           2015-2024, Shinjo Park <kde@peremen.name>
+           2015-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2024, Steve Allewell 2015
+           2023-2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2015-2024, Vit Pelcak <vit@pelcak.org>
+           2021, Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+           2020-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2023-2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2021-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2015-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: LGPL-2+
+
+Files: CMakePresets.json.license
+Copyright: 2021, Laurent Montel <montel@kde.org>
+License: BSD-3-Clause
+
+Files: desktop/org.kde.spectacle.appdata.xml
+Copyright: 2016, Burkhard Lück <lueck@hube-lueck.de>
+License: CC0-1.0
+
+Files: doc/*
+Copyright: 2015, Boudhayan Gupta
+           2000, Matthias Ettrich
+           1997-2000, Richard J. Moore
+License: GFDL-NIV-1.2+
+
+Files: src/Gui/SettingsDialog/ShortcutsOptionsPage.cpp
+       src/Gui/SettingsDialog/ShortcutsOptionsPage.h
+       src/ShortcutActions.cpp
+       src/ShortcutActions.h
+Copyright: 2019, David Redondo <kde@david-redondo.de>
+License: GPL-2+
+
+Files: src/Platforms/screencasting.cpp
+       src/Platforms/screencasting.h
+Copyright: 2020, Aleix Pol Gonzalez <aleixpol@kde.org>
+License: GPL-2.1+3+KDEeV
+
+Files: tests/FilenameTest.cpp
+Copyright: 2019, David Redondo <kde@david-redondo.de>
+License: GPL-2.1+3+KDEeV
+
+Files: debian/*
+Copyright: 2011, Harald Sitter <apachelogger@ubuntu.com>
+           2011-2024, Debian Qt/KDE Team <debian-qt-kde@lists.debian.org>
+License: GPL-2+
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all copyright
+ and related and neighboring rights to this software to the public domain
+ worldwide. This software is distributed without any warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication along
+ with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain Dedication
+ can be found in "/usr/share/common-licenses/CC0-1.0".
+
+License: GFDL-NIV-1.2+
+ Permission is granted to copy, distribute and/or modify this document under
+ the terms of the GNU Free Documentation License, Version 1.2 or any later
+ version published by the Free Software Foundation; with no Invariant
+ Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ .
+ On Debian systems, the complete text of the GNU Free Documentation License
+ version 1.2 can be found in `/usr/share/common-licenses/GFDL-1.2'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The full text of the GNU Lesser General Public License version 2 can be found
+ in the file `/usr/share/common-licenses/LGPL-2'.
+
+License: GPL-2.1+3+KDEeV
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ --
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2', likewise, the
+ complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'.
+Comment: There is no GPL-2.1. This is most likely a typo either for GPL-2 or
+ LGPL-2.1. As stated it would be under the GPL-3.
+ ... Copy and paste error in the license of a text editor.

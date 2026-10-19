@@ -1,0 +1,60 @@
+#! /bin/sh
+
+PREREQ=""
+DESCRIPTION="Generating APT cache for cdrom"
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+fill_apt_cache_cdrom()
+{
+    # Build the APT cache for the CDROM (LP: #2145807)
+    # Previously, this was automatically done using apt-cdrom
+    lower=/root/etc/apt
+    work=/tmp/apt-overlay/workdir
+    upper=/tmp/apt-overlay/upperdir
+
+    mkdir --parents -- "$work"
+    mkdir --parents -- "$upper"
+
+    mount overlay -t overlay \
+      -o "workdir=$work,upperdir=$upper,lowerdir=$lower,xino=off" \
+      /root/etc/apt
+
+    # Keep only cdrom.sources
+    find /root/etc/apt/sources.list.d \
+      -mindepth 1 \
+      '!' -name cdrom.sources \
+      -exec rm -f -- {} ';'
+    chroot /root apt-get update --no-list-cleanup
+
+    umount /root/etc/apt
+
+    rm -rf /tmp/apt-overlay
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+log_begin_msg "$DESCRIPTION"
+
+mount -n -o bind /sys /root/sys
+mount -n -o bind /proc /root/proc
+mount -n -o bind /dev /root/dev
+
+fill_apt_cache_cdrom
+
+umount /root/dev
+umount /root/proc
+umount /root/sys
+
+log_end_msg

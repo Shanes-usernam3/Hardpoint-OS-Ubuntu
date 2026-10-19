@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.KIOFuse
+Exec=/usr/lib/x86_64-linux-gnu/libexec/kio-fuse -f
+SystemdService=kio-fuse.service

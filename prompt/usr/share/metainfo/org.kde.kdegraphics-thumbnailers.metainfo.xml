@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="addon">
+  <id>org.kde.kdegraphics_thumbnailers</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <extends>org.kde.dolphin.desktop</extends>
+  <extends>org.kde.konqueror.desktop</extends>
+  <extends>org.kde.krusader.desktop</extends>
+  <extends>org.kde.gwenview.desktop</extends>
+  <name>kdegraphics-thumbnailers</name>
+  <name xml:lang="ar">مصغرات kdegraphics</name>
+  <name xml:lang="bg">kdegraphics-thumbnailers</name>
+  <name xml:lang="ca">kdegraphics-thumbnailers</name>
+  <name xml:lang="ca-valencia">kdegraphics-thumbnailers</name>
+  <name xml:lang="da">kdegraphics-thumbnailers</name>
+  <name xml:lang="de">kdegraphics-thumbnailers</name>
+  <name xml:lang="el">kdegraphics-thumbnailers</name>
+  <name xml:lang="en-GB">kdegraphics-thumbnailers</name>
+  <name xml:lang="eo">kdegraphics-thumbnailers</name>
+  <name xml:lang="es">kdegraphics-thumbnailers</name>
+  <name xml:lang="et">kdegraphics-thumbnailers</name>
+  <name xml:lang="eu">kdegraphics-koadro-txiki-egileak</name>
+  <name xml:lang="fi">kdegraphics-thumbnailers</name>
+  <name xml:lang="fr">kdegraphics-thumbnailers</name>
+  <name xml:lang="gl">kdegraphics-thumbnailers</name>
+  <name xml:lang="he">kdegraphics-thumbnailers</name>
+  <name xml:lang="hi">केडीईग्राफ़िक्स-लघुछविकार</name>
+  <name xml:lang="hu">kdegraphics-thumbnailers</name>
+  <name xml:lang="ia">kdegraphics-thumbnailers</name>
+  <name xml:lang="is">kdegraphics-thumbnailers</name>
+  <name xml:lang="it">kdegraphics-thumbnailers</name>
+  <name xml:lang="ka">kdegraphics-thumbnailers</name>
+  <name xml:lang="ko">kdegraphics-thumbnailers</name>
+  <name xml:lang="lt">kdegraphics-thumbnailers</name>
+  <name xml:lang="lv">kdegraphics-thumbnailers</name>
+  <name xml:lang="nl">kdegraphics-thumbnailers</name>
+  <name xml:lang="nn">kdegraphics-thumbnailers</name>
+  <name xml:lang="pl">kdegraphics-thumbnailers</name>
+  <name xml:lang="pt">kdegraphics-thumbnailers</name>
+  <name xml:lang="pt-BR">kdegraphics-thumbnailers</name>
+  <name xml:lang="ro">kdegraphics-thumbnailers</name>
+  <name xml:lang="ru">kdegraphics-thumbnailers</name>
+  <name xml:lang="sk">kdegraphics-thumbnailers</name>
+  <name xml:lang="sl">kdegraphics-thumbnailers</name>
+  <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
+  <name xml:lang="tr">kdegraphics-thumbnailers</name>
+  <name xml:lang="uk">kdegraphics-thumbnailers</name>
+  <name xml:lang="vi">kdegraphics-thumbnailers</name>
+  <name xml:lang="zh-CN">kdegraphics-thumbnailers</name>
+  <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
+  <summary>Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="ar">مصغرات لملفات الرسوميات لتطبيقات كِيدِي</summary>
+  <summary xml:lang="bg">Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="da">Miniaturedannelse til grafikfilformater til KDE-programmer</summary>
+  <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
+  <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
+  <summary xml:lang="en-GB">Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="eo">Grafikdosierformataj bildetigiloj por KDE-apliaĵoj</summary>
+  <summary xml:lang="es">Generadores de miniaturas de formatos gráficos para aplicaciones de KDE</summary>
+  <summary xml:lang="et">Graafikafaili vormingus pisipildid KDE rakendustele</summary>
+  <summary xml:lang="eu">KDE aplikazioetarako formatu grafikoen koadro-txiki egilea</summary>
+  <summary xml:lang="fi">Luo grafiikkatiedostoista pienoiskuvat KDE-sovelluksiin</summary>
+  <summary xml:lang="fr">Créateurs de vignettes de fichiers au format graphique pour les applications KDE</summary>
+  <summary xml:lang="gl">Xeradores de miniaturas para formatos de ficheiro gráficos para aplicacións de KDE</summary>
+  <summary xml:lang="he">מציג תמונות הדגמה ממוזערות של סוגי קובצי גרפיקה ליישומי KDE</summary>
+  <summary xml:lang="hi">केडीई अनुप्रयोगों के लिए ग्राफ़िक्स फाइल प्रारूप लघुछविकार</summary>
+  <summary xml:lang="hu">Grafikus fájlformátumok bélyegképeinek készítése KDE alkalmazásokhoz</summary>
+  <summary xml:lang="ia">Formato de file graphic thumbnailers (de miniaturas) per applicationes de KDE</summary>
+  <summary xml:lang="id">File grafik format thumbnailer untuk aplikasi KDE</summary>
+  <summary xml:lang="is">Gerð smámynda fyrir skráasnið í KDE-forritum</summary>
+  <summary xml:lang="it">Generatori di miniature dei file di formati grafici per le applicazioni di KDE</summary>
+  <summary xml:lang="ka">გრაფიკული ფაილების მინიატურები KDE-ის აპლიკაციებისთვის</summary>
+  <summary xml:lang="ko">KDE 앱의 그래픽 파일 섬네일 생성 도구</summary>
+  <summary xml:lang="lt">Grafikos failo formatų miniatiūrų kūrimo įrankis, skirtas KDE programoms</summary>
+  <summary xml:lang="lv">Grafikas datņu formātu sīktēlu veidotāji KDE programmām</summary>
+  <summary xml:lang="nl">Grafisch bestandsformaat van miniaturen voor KDE toepassingen</summary>
+  <summary xml:lang="nn">Miniatyrbiletlagar for ymse grafikkformat for bruk i KDE-program</summary>
+  <summary xml:lang="pl">Twórcy miniatur dla plików graficznych dla aplikacji KDE</summary>
+  <summary xml:lang="pt">Miniaturas de formatos de ficheiros gráficos para as aplicações do KDE</summary>
+  <summary xml:lang="pt-BR">Miniaturas de formatos de arquivo gráficos para os aplicativos do KDE</summary>
+  <summary xml:lang="ro">Generatori de miniaturi pentru formate grafice, pentru aplicații KDE</summary>
+  <summary xml:lang="ru">Создание миниатюр графических файлов для приложений KDE</summary>
+  <summary xml:lang="sk">Miniatúry formátov grafických súborov pre aplikácie KDE</summary>
+  <summary xml:lang="sl">Orodje za pripravo sličic za aplikacije KDE iz grafičnih datotek</summary>
+  <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
+  <summary xml:lang="tr">KDE uygulamaları için grafik dosya biçimi küçük önizleyicileri</summary>
+  <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
+  <summary xml:lang="vi">Bộ tạo hình nhỏ định dạng tệp đồ hoạ cho các ứng dụng KDE</summary>
+  <summary xml:lang="zh-CN">KDE 应用程序的图形和图像文件缩略图生成器</summary>
+  <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
+  <description>
+    <p>These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
+    <p xml:lang="ar">تسمح هذه المكونات الإضافية لبرنامج كِيدِي بعرض صور مصغرة لتنسيقات ملفات الرسوم المتقدمة PostScript و Raw و Mobipocket و ملفات بلندر.</p>
+    <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript, Raw, Mobipocket и Blender.</p>
+    <p xml:lang="ca">Aquests connectors permeten que el programari KDE mostri miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
+    <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE mostre miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
+    <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript, RAW und Blender angezeigt werden.</p>
+    <p xml:lang="en-GB">These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
+    <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-programaro montri bildetojn por dosieroj PostScript, RAW, Mobipocket kaj Blender.</p>
+    <p xml:lang="es">Estos complementos permiten al software de KDE mostrar miniaturas de los archivos PostScript, RAW, Mobipocket y Blender.</p>
+    <p xml:lang="eu">Plugin hauek KDE softwareari, PostScript, RAW, Mobipocket, eta Blender fitxategien koadro-txikiak azaltzeko aukera ematen diote.</p>
+    <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia PostScript-, RAW-, Mobipocket- ja Blender-tiedostoista.</p>
+    <p xml:lang="fr">Ces modules externes permettent aux logiciels de KDE de créer des vignettes pour les formats de fichiers « PostScript », « Raw », « Mobipocket » et « Blender ».</p>
+    <p xml:lang="gl">Complementos que permiten aos programas de KDE amosar miniaturas de ficheiros PostScript, RAW (imaxes en cru), Mobipocket e Blender.</p>
+    <p xml:lang="he">התוספים האלו מאפשרים לתוכנות של KDE להציג תמונות ממוזערות לקובצי PostScript,‏ RAW (גולמי), Mobipocket ו־Blender.</p>
+    <p xml:lang="hu">Ezek a bővítmények lehetővé teszik a KDE szoftverek számára a PostScript, RAW, Mobipocket és Blender fájlok bélyegképeinek megjelenítését.</p>
+    <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per files de PostScript, Raw, Mobypocket e Blender.</p>
+    <p xml:lang="is">Þessar viðbætur gerir KDE-hugbúnaði kleift að birta smámyndir fyrir PostScript, RAW, Mobipocket og Blender skrár.</p>
+    <p xml:lang="it">Queste estensioni permettono al software di KDE di visualizzare le miniature per i file PostScript, RAW, Mobipocket e Blender.</p>
+    <p xml:lang="ka">ეს დამატება საშუალებას აძლევს KDE-ის პროგრამებს შექმნან მინიატურები ისეთი ფაილის ფორმატების, როგორიცაა პოსტსკრიპტი, RAW, Mobipocket და Blender-ის ფაილებიდან.</p>
+    <p xml:lang="ko">이 플러그인을 사용하여 KDE 앱에서 포스트스크립트, RAW, Mobipocket, Blender 파일 등의 섬네일을 만들 수 있습니다.</p>
+    <p xml:lang="lt">Šie įskiepiai leidžia KDE programinei įrangai atvaizduoti PostScript, RAW, Mobipocket ir Blender failų miniatiūras.</p>
+    <p xml:lang="lv">Šie spraudņi ļauj KDE programmām parādīt sīktēlus „PostScript“, RAW, „Mobipocket“ un „Blender“ datnēm.</p>
+    <p xml:lang="nl">Deze plug-ins bieden KDE software het tonen van miniaturen PostScript, RAW, Mobipocket en Blender-bestanden.</p>
+    <p xml:lang="nn">Desse programtillegga gjer det mogleg for KDE-programvare å visa miniatyrbilete for PostScript-, råbilet-, Mobipocket- og Blender-filer.</p>
+    <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE wyświetlanie miniatur dla plików PostScript, RAW, Mobipocket oraz Blender.</p>
+    <p xml:lang="pt-BR">Estes plugins permitem aos aplicativos do KDE exibirem miniaturas para arquivos RAW, Mobipocket e Blender.</p>
+    <p xml:lang="ro">Aceste extensii permit programelor KDE să afișeze miniaturi pentru fișiere PostScript, RAW, Mobipocket, și Blender.</p>
+    <p xml:lang="ru">Эти подключаемые модули служат для вывода миниатюр файлов форматов PostScript, RAW, Mobipocket и Blender в приложениях KDE.</p>
+    <p xml:lang="sl">Ti vtičniki omogočajo programski opremi KDE, da prikazuje sličice iz datotek PostScript, RAW, Mobipocket in Blender.</p>
+    <p xml:lang="sv">Insticksprogrammen låter KDE-programvara visa miniatyrbilder för Postscript, Mobipocket Blender och obehandlade filer.</p>
+    <p xml:lang="tr">Bu eklentiler; KDE yazılımlarının PostScript, RAW, Mobipocket ve Blender dosyaları için küçük görseller görüntülemesine olanak tanır.</p>
+    <p xml:lang="uk">Ці додатки уможливлюють для програмного забезпечення KDE показ мініатюр для вмісту файлів PostScript, RAW, Mobipocket і Blender.</p>
+    <p xml:lang="zh-CN">这些插件用于在 KDE 软件中显示 PostScript、RAW、Mobipocket 和 Blender 等文件格式的缩略图。</p>
+    <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能夠顯示 PostScript、RAW、Mobipocket 及 Blender 檔案的縮圖。</p>
+  </description>
+  <url type="homepage">https://www.kde.org</url>
+  <url type="bugtracker">https://bugs.kde.org/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
+      <caption>Dolphin with PostScript thumbnail</caption>
+      <caption xml:lang="ar">دولفين بمصغرة PostScript</caption>
+      <caption xml:lang="bg">Dolphin с миниатюри на PostScript</caption>
+      <caption xml:lang="ca">El Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="ca-valencia">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="da">Dolphin med PostScript-miniature</caption>
+      <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
+      <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
+      <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
+      <caption xml:lang="eo">Dolfin kun PostScript-bildeto</caption>
+      <caption xml:lang="es">Dolphin con miniaturas de PostScript</caption>
+      <caption xml:lang="et">Dolphin PostScripti pisipildiga</caption>
+      <caption xml:lang="eu">Dolphin PostScript baten koadro-txiki batekin</caption>
+      <caption xml:lang="fi">PostScript-pienoiskuva Dolphinissa</caption>
+      <caption xml:lang="fr">Dolphin avec une vignette PostScript</caption>
+      <caption xml:lang="gl">Dolphin cunha miniatura de PostScript</caption>
+      <caption xml:lang="he">Dolphin עם תמונית הדגמה של PostScript</caption>
+      <caption xml:lang="hi">पोस्टस्क्रिप्ट लघुछवि के साथ डॉलफ़िन</caption>
+      <caption xml:lang="hu">Dolphin egy PostScript bélyegképpel</caption>
+      <caption xml:lang="ia">Dolphin con thumbnai (miniatura) PostScript</caption>
+      <caption xml:lang="id">Dolphin dengan thumbnail PostScript</caption>
+      <caption xml:lang="is">Dolphin með PostScript-smámynd</caption>
+      <caption xml:lang="it">Dolphin con le miniature PostScript</caption>
+      <caption xml:lang="ka">Dolphin პოსტსკრიპტის მინიატურით</caption>
+      <caption xml:lang="ko">포스트스크립트 섬네일이 표시된 Dolphin</caption>
+      <caption xml:lang="lt">Dolphin su PostScript miniatiūra</caption>
+      <caption xml:lang="lv">„Dolphin“ ar „PostScript“ sīktēlu</caption>
+      <caption xml:lang="nl">Dolphin met PostScript-miniatuur</caption>
+      <caption xml:lang="nn">Dolphin med miniatyrbilete for PostScript-fil</caption>
+      <caption xml:lang="pl">Dolphin z miniaturami PostScript</caption>
+      <caption xml:lang="pt">O Dolphin com uma miniatura de PostScript</caption>
+      <caption xml:lang="pt-BR">O Dolphin com miniatura de PostScript</caption>
+      <caption xml:lang="ro">Dolphin cu miniatură PostScript</caption>
+      <caption xml:lang="ru">Миниатюра файла в формате PostScript в диспетчере файлов Dolphin</caption>
+      <caption xml:lang="sk">Dolphin s miniatúrou PostScript</caption>
+      <caption xml:lang="sl">Dolphin s sličico iz PostScripta</caption>
+      <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
+      <caption xml:lang="tr">PostScript küçük görseli görüntüleyen Dolphin</caption>
+      <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
+      <caption xml:lang="vi">Dolphin với hình nhỏ PostScript</caption>
+      <caption xml:lang="zh-CN">Dolphin 正在显示 PostScript 缩略图</caption>
+      <caption xml:lang="zh-TW">有 PostScript 縮圖的 Dolphin</caption>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <categories>
+    <category>Graphics</category>
+  </categories>
+  <icon type="stock">application-postscript</icon>
+</component>

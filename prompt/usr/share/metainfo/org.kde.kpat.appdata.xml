@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kpat</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>KPatience</name>
+  <name xml:lang="ar">الصبر</name>
+  <name xml:lang="ast">KPatience</name>
+  <name xml:lang="bg">KPatience</name>
+  <name xml:lang="ca">KPatience</name>
+  <name xml:lang="ca-valencia">KPatience</name>
+  <name xml:lang="cs">KPatience</name>
+  <name xml:lang="da">KPatience</name>
+  <name xml:lang="de">KPatience</name>
+  <name xml:lang="el">KPatience</name>
+  <name xml:lang="en-GB">KPatience</name>
+  <name xml:lang="eo">KPatience</name>
+  <name xml:lang="es">KPatience</name>
+  <name xml:lang="et">KPatience</name>
+  <name xml:lang="eu">KPatience</name>
+  <name xml:lang="fi">KPatience</name>
+  <name xml:lang="fr">KPatience</name>
+  <name xml:lang="gl">KPatience</name>
+  <name xml:lang="he">KPatience</name>
+  <name xml:lang="hu">KPatience</name>
+  <name xml:lang="ia">KPatience</name>
+  <name xml:lang="id">KPatience</name>
+  <name xml:lang="it">KPatience</name>
+  <name xml:lang="ka">KPatience</name>
+  <name xml:lang="ko">KPatience</name>
+  <name xml:lang="lv">KPatience</name>
+  <name xml:lang="nl">KPatience</name>
+  <name xml:lang="nn">KPatience</name>
+  <name xml:lang="pl">KPasjans</name>
+  <name xml:lang="pt">Paciência</name>
+  <name xml:lang="pt-BR">KPatience</name>
+  <name xml:lang="ro">KPasențe</name>
+  <name xml:lang="ru">KPatience</name>
+  <name xml:lang="sa">केधैर्यम्</name>
+  <name xml:lang="sk">KPatience</name>
+  <name xml:lang="sl">KPatience</name>
+  <name xml:lang="sv">Patiens</name>
+  <name xml:lang="tr">K Sabır</name>
+  <name xml:lang="uk">KPatience</name>
+  <name xml:lang="zh-CN">KPatience</name>
+  <name xml:lang="zh-TW">KPatience 接龍</name>
+  <summary>Solitaire card game</summary>
+  <summary xml:lang="ar">لعبة ورق سوليتير</summary>
+  <summary xml:lang="bg">Пасианс с карти</summary>
+  <summary xml:lang="ca">Joc de cartes al solitari</summary>
+  <summary xml:lang="ca-valencia">Joc de cartes al solitari</summary>
+  <summary xml:lang="cs">Karetní hra Solitaire</summary>
+  <summary xml:lang="de">Solitär-Kartenspiel</summary>
+  <summary xml:lang="el">Παιχνίδι καρτών solitaire</summary>
+  <summary xml:lang="en-GB">Solitaire card game</summary>
+  <summary xml:lang="eo">Solitaire-kartludo</summary>
+  <summary xml:lang="es">Juego de cartas de tipo solitario</summary>
+  <summary xml:lang="et">Solitaire kaardimäng</summary>
+  <summary xml:lang="eu">Bakarkako karta-jokoa</summary>
+  <summary xml:lang="fi">Pasianssikorttipeli</summary>
+  <summary xml:lang="fr">Jeu de solitaire</summary>
+  <summary xml:lang="gl">Xogo de cartas do solitario</summary>
+  <summary xml:lang="he">משחק קלפים יחידני</summary>
+  <summary xml:lang="hu">Pasziánsz kártyajáték</summary>
+  <summary xml:lang="ia">Joco de cartas solitario</summary>
+  <summary xml:lang="id">Permainan kartu solitaire</summary>
+  <summary xml:lang="it">Solitari con le carte</summary>
+  <summary xml:lang="ka">კარტის თამაში Solitaire</summary>
+  <summary xml:lang="ko">솔리테어 카드 게임</summary>
+  <summary xml:lang="lv">Pasjansa kāršu spēle</summary>
+  <summary xml:lang="nl">Solitaire kaartspel</summary>
+  <summary xml:lang="nn">Kabelspel</summary>
+  <summary xml:lang="pl">Gra karciana pasjans</summary>
+  <summary xml:lang="pt">Jogo de cartas do solitário</summary>
+  <summary xml:lang="pt-BR">Jogo de cartas paciência</summary>
+  <summary xml:lang="ro">Joc de cărți Solitaire</summary>
+  <summary xml:lang="ru">Косынка</summary>
+  <summary xml:lang="sa">एकांत ताश खेल</summary>
+  <summary xml:lang="sk">Kartová hra typu Solitaire</summary>
+  <summary xml:lang="sl">Igra s kartami pasjanse</summary>
+  <summary xml:lang="sv">Patienskortspel</summary>
+  <summary xml:lang="tr">Solitaire kart oyunu</summary>
+  <summary xml:lang="uk">Карткова гра у пасьянс</summary>
+  <summary xml:lang="zh-CN">纸牌游戏</summary>
+  <summary xml:lang="zh-TW">接龍卡片遊戲</summary>
+  <description>
+    <p>KPat (aka KPatience) is a relaxing card sorting game. To win the game a player has to arrange a single deck of cards in certain order amongst each other.</p>
+    <p xml:lang="ar">لعبة الصبر هي لعبة فرز بطاقات مريحة. للفوز باللعبة، يتعين على اللاعب ترتيب مجموعة واحدة من البطاقات بترتيب معين فيما بينها.</p>
+    <p xml:lang="bg">KPat (известна още като KPatience) е релаксираща игра за подреждане на карти. За да спечели играта, играчът трябва да подреди едно тесте карти в определен ред.</p>
+    <p xml:lang="ca">El KPat (o KPatience) és un joc d'ordenació relaxant de cartes. Per a guanyar la partida, un jugador ha d'organitzar una baralla única de cartes en un ordre determinat contra un altre.</p>
+    <p xml:lang="ca-valencia">KPat (o KPatience) és un joc d'ordenació relaxant de cartes. Per a guanyar la partida, un jugador ha d'organitzar una baralla única de cartes en un ordre determinat contra un altre.</p>
+    <p xml:lang="cs">KPat (jako KPatience) je uvolňující karetní hra. Chcete-li tuto hru vyhrát, musíte uspořádat karty z jednoho balíčku v jistém pořadí naproti sobě.</p>
+    <p xml:lang="de">KPat (auch bekannt als KPatience) ist ein entspannendes Kartensortierspiel. Um das Spiel zu gewinnen, muss der Spieler einen einzelnen Kartenstapel in einer bestimmten Reihenfolge zwischen einzelnen anderen Karten anordnen.</p>
+    <p xml:lang="el">Το KPat (ή αλλιώς KPatience) είναι ένα ευχάριστο παιχνίδι ταξινόμησης καρτών. Ο παίκτης για να κερδίσει πρέπει να διευθετήσει μια τράπουλα σε ορισμένη σειρά.</p>
+    <p xml:lang="en-GB">KPat (aka KPatience) is a relaxing card sorting game. To win the game a player has to arrange a single deck of cards in certain order amongst each other.</p>
+    <p xml:lang="eo">KPat (alinome KPatience) estas malstreĉa kartordiga ludo. Por venki en la ludo, ludanto devas aranĝi ununuran ludkartaron en certa sinsekvo inter si.</p>
+    <p xml:lang="es">KPat (también conocido como KPatience) es un relajante juego de ordenar cartas. Para ganar la partida, el jugador debe colocar las cartas de una baraja en un orden determinado.</p>
+    <p xml:lang="et">KPat (tuntud ka kui KPatience) leevendust ja meelerahu pakkuv kaartide sortimise mäng. Võitmiseks tuleb üks kaardipakk korraldada ümber teatud kindlaid reegleid järgides.</p>
+    <p xml:lang="eu">KPat, KPatience bezala ere ezaguna, kartak sailkatzeko karta-joko lasaigarri bat da. Jokoa irabazteko, jokalariak karta-sorta bakar bat karten elkarrekiko hurrenkera jakin batean antolatu behar du.</p>
+    <p xml:lang="fi">KPat (tai KPatience) on rento korttien lajittelupeli. Pelin voittaakseen pelaajan on järjestettävä kortit määräjärjestykseen.</p>
+    <p xml:lang="fr">KPat (alias KPatience) est un jeu de cartes conçu pour la détente. Afin de remporter la partie, le joueur doit trier un jeu de cartes dans un certain ordre.</p>
+    <p xml:lang="gl">KPat (tamén chamado KPatience) é un xogo relaxante que consiste en ordenar cartas. Para gañar hai que ordenar un mazo de cartas dun xeito concreto.</p>
+    <p xml:lang="he">KPat (מוכר גם בתור KPatience) הוא משחק סידור קלפים מרגיע. כדי לנצח על השחקן לסדר חפיסה אחת של קלפים בסדר מסוים בינם לבין עצמם.</p>
+    <p xml:lang="hu">A KPat (más néven KPatience) egy pihentető kártyaválogató játék. A játék megnyeréséhez a játékosnak egyetlen pakli kártyát kell bizonyos sorrendbe rendeznie.</p>
+    <p xml:lang="id">KPat (juga dikenal sebagai KPatience) adalah sebuah permainan mengurutkan kartu secara santai. Untuk memenangkan permainan seorang pemain haruslah mengatur dek kartu dalam urutan tertentu di antara satu sama lain.</p>
+    <p xml:lang="it">KPat (conosciuto anche come KPatience) è un rilassante gioco di ordinamento delle carte. Per vincere la partita un giocatore deve mettere un mazzo di carte in un certo ordine tra di loro.</p>
+    <p xml:lang="ka">KPat (ე.წ. KPatience) დასასვენებელი კარტების დალაგების თამაშია. მის მოსაგებად მოთამაშემ ერთი დასტა გარკვეული თანამიმდევრობით უნდა დაალაგოს ერთმანეთზე.</p>
+    <p xml:lang="ko">KPat은 카드 게임입니다. 게임을 이기려면 카드 덱을 순서대로 정렬하십시오.</p>
+    <p xml:lang="lv">„KPat“ (arī „KPatience“) ir relaksējoša kāršu kārtošanas spēle. Lai uzvarētu spēli, spēlētājam jāsakārto vienas kāršu kavas kārtis noteiktā secībā cita aiz citas.</p>
+    <p xml:lang="nl">KPat (ook KPatience) is een ontspannend kaart sorteerspel. Om het spel te winnen moet een speler een enkel kaartdek in een bepaalde volgorde naast elke andere arrangeren.</p>
+    <p xml:lang="nn">KPatience (Kpat) er eit avslappande kabalspel. For å vinna må du sortera kort frå ein stokka kortstokk i ei spesiell rekkjefølgje eller i eit spesielt mønster.</p>
+    <p xml:lang="pl">KPat (znany również jako KPatience) jest odprężającą grą w układanie kart. Aby wygrać grę, gracz musi ułożyć pojedynczą talię kart w odpowiedniej kolejności względem siebie.</p>
+    <p xml:lang="pt">O KPat (ou KPatience) é um jogo de cartas relaxante. Para ganhar o jogo, o jogador tem de organizar um único baralho de cartas de acordo com uma dada ordem entre si.</p>
+    <p xml:lang="pt-BR">KPat (ou KPatience) é um relaxante jogo de ordenação de cartas. Para ganhar o jogo, o jogador tem que arranjar um baralho de cartas em uma certa ordem entre as cartas.</p>
+    <p xml:lang="ru">KPat (или KPatience) — расслабляющая игра на упорядочивание карт. Чтобы выиграть игру, игрок должен расположить колоду карт в определённом порядке.</p>
+    <p xml:lang="sa">KPat (उर्फ KPatience) एकः आरामदायकः कार्ड-क्रमण-क्रीडा अस्ति । क्रीडां जितुम् क्रीडकेन परस्परं निश्चितक्रमेण एकं ताशपत्रं व्यवस्थितं कर्तव्यम् ।</p>
+    <p xml:lang="sk">KPat (aka KPatience) je relaxačná hra na triedenie kariet. Aby hráč vyhral hru, musí si medzi sebou usporiadať jeden balíček kariet v určitom poradí.</p>
+    <p xml:lang="sl">KPat (ali KPatience) (sl. pasjansa) je sprostitvena igra z urejanjem kart. Za zmago v igri mora igralec zložiti en komplet igralnih kart v določenem redu.</p>
+    <p xml:lang="sv">KPat (också känt som Patiens) är ett avkopplande kortsorteringsspel. För att vinna spelet måste spelaren arrangera korten i en kortlek i en viss ordning bland varandra.</p>
+    <p xml:lang="tr">KPat (diğer adıyla K Sabır), rahatlatıcı bir kart sıralama oyunudur. Oyunu kazanmak için oyuncu bir kart destesini belirli bir sırada dizmelidir.</p>
+    <p xml:lang="uk">KPat (або KPatience) — заспокійлива гра в упорядковування набору карт. Щоб виграти гру, гравцеві слід за певними правилами упорядкувати колоди карт.</p>
+    <p xml:lang="zh-CN">KPat (又称 KPatience) 是一个轻松的卡牌排序游戏。玩家必须率先按一定顺序排序一层卡牌，才能赢下游戏。</p>
+    <p xml:lang="zh-TW">KPat（又稱 KPatience 接龍）是一個讓人放鬆的卡片排序遊戲。To win the game a player has to arrange a single deck of cards in certain order amongst each other.</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/kpat</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kpat</url>
+  <url type="help">https://docs.kde.org/?application=kpat</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kpat&amp;source=appdata</url>
+  <launchable type="desktop-id">org.kde.kpat.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Solitaire selection screen</caption>
+      <caption xml:lang="ar">شاشة اختيار سوليتير</caption>
+      <caption xml:lang="bg">Екран за избор на пасианс</caption>
+      <caption xml:lang="ca">Pantalla de selecció del solitari</caption>
+      <caption xml:lang="ca-valencia">Pantalla de selecció del solitari</caption>
+      <caption xml:lang="cs">Obrazovka výběru her pro jednoho hráče</caption>
+      <caption xml:lang="de">Auswahl eines Solitärspiels</caption>
+      <caption xml:lang="el">Οθόνη επιλογής solitaire</caption>
+      <caption xml:lang="en-GB">Solitaire selection screen</caption>
+      <caption xml:lang="eo">Elekta ekrano de Solitaire</caption>
+      <caption xml:lang="es">Pantalla de selección de solitario</caption>
+      <caption xml:lang="et">KPatience'i valikuekraan</caption>
+      <caption xml:lang="eu">Bakar-jokoa hautatzeko pantaila</caption>
+      <caption xml:lang="fi">Pasianssi valintanäkymä</caption>
+      <caption xml:lang="fr">Écran de sélection du solitaire</caption>
+      <caption xml:lang="gl">Pantalla de selección do solitario</caption>
+      <caption xml:lang="he">מסך בחירת משחק יחידני</caption>
+      <caption xml:lang="hu">Játékmódválasztó képernyő</caption>
+      <caption xml:lang="ia">Schermo de selection de solitario</caption>
+      <caption xml:lang="id">Layar pemilihan solitaire</caption>
+      <caption xml:lang="it">Schermata di selezione del solitario</caption>
+      <caption xml:lang="ka">Solitaire -ის ეკრანის არჩევა</caption>
+      <caption xml:lang="ko">솔리테어 선택 화면</caption>
+      <caption xml:lang="lv">Pasjansa izvēlnes ekrāns</caption>
+      <caption xml:lang="nl">Selectiescherm van Solitaire</caption>
+      <caption xml:lang="nn">Val av kabaltype</caption>
+      <caption xml:lang="pl">Ekran wyboru pasjansa</caption>
+      <caption xml:lang="pt">Ecrã de selecção do solitário</caption>
+      <caption xml:lang="pt-BR">Tela de seleção de paciência</caption>
+      <caption xml:lang="ro">Ecranul de alegere Solitaire</caption>
+      <caption xml:lang="ru">Окно выбора пасьянса</caption>
+      <caption xml:lang="sa">एकान्तवासी चयन पटल</caption>
+      <caption xml:lang="sk">Obrazovka výberu solitaire</caption>
+      <caption xml:lang="sl">Izbirni zaslon vrste pasjanse</caption>
+      <caption xml:lang="sv">Skärm för val av patiens</caption>
+      <caption xml:lang="tr">Solitaire seçim ekranı</caption>
+      <caption xml:lang="uk">Вікно вибору пасьянсу</caption>
+      <caption xml:lang="zh-CN">纸牌选择界面</caption>
+      <caption xml:lang="zh-TW">接龍選取畫面</caption>
+      <image>https://cdn.kde.org/screenshots/kpatience/kpatience.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kpat</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+    <release version="24.12.3" date="2025-03-06"/>
+    <release version="24.12.2" date="2025-02-06"/>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
+    <release version="24.08.2" date="2024-10-10"/>
+    <release version="24.08.1" date="2024-09-12"/>
+    <release version="24.08.0" date="2024-08-22"/>
+    <release version="24.05.2" date="2024-07-04"/>
+    <release version="24.05.1" date="2024-06-13"/>
+    <release version="24.05.0" date="2024-05-23"/>
+    <release version="24.02.2" date="2024-04-11"/>
+    <release version="24.02.1" date="2024-03-21"/>
+    <release version="24.02.0" date="2024-02-28"/>
+    <release version="23.08.5" date="2024-02-15"/>
+  </releases>
+</component>

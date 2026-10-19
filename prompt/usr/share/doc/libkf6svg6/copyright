@@ -1,0 +1,161 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ksvg
+Source: https://invent.kde.org/frameworks/ksvg
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2006-2010, Aaron Seigo <aseigo@kde.org>
+           2009, Alan Alpert <alan.alpert@nokia.com>
+           2014, Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+           2014-2020, David Edmundson <davidedmundson@kde.org>
+           2010-2014, Marco Martin <mart@kde.org>
+           2008-2010, Marco Martin <notmart@gmail.com>
+           2010, Ménard Alexis <menard@kde.org>
+           2023, Noah Davis <noahadvs@gmail.com>
+           2013, Sebastian Kügler <sebas@kde.org>
+License: LGPL-2.0-or-later
+
+Files: po/*
+Copyright: 2023, Adrián Chaves (Gallaecio) <adrian@chaves.io>
+           2024, Alexander Yavorsky <kekcuha@gmail.com>
+           2023, Eloy Cuadra <ecuadra@eloihr.net>
+           2023, Emir SARI <emir_sari@icloud.com>
+           2023, Enol P. <enolp@softastur.org>
+           2023, Karl Ove Hufthammer <karl@huftis.org>
+           2023, Frederik Schwarzer <schwarzer@kde.org>
+           2023, Freek de Kruijf <freekdekruijf@kde.nl>
+           2023, Iñigo Salvador Azurmendi <xalba@ni.eus>
+           KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2024, Kristof Kiszel <ulysses@fsf.hu>
+           2023, Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2023, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2023, giovanni <g.sora@tiscali.it>
+           2023, Matjaž Jeran <matjaz.jeran@amis.net>
+           2023, Mincho Kondarev <mkondarev@yahoo.de>
+           2023, Oliver Kellogg <okellogg@users.sourceforge.net
+           2023, Roman Paholík <wizzardsk@gmail.com>
+           2024, Sergiu Bivol <sergiu@cip.md>
+           2023, Shinjo Park <kde@peremen.name>
+           2024, Sveinn í Felli <sv1@fellsnet.is>
+           2023, Tommi Nieminen <translator@legisign.org>
+           2023, Vincenzo Reale <smart2128vr@gmail.com>
+           2023, Vit Pelcak <vit@pelcak.org>
+           2023, Xavier Besnard <xavier.besnard@kde.org>
+           2023, Yuri Chornoivan <yurchor@ukr.net>
+           2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+License: LGPL-2.0-or-later
+
+Files: po/ca/*
+       po/ca@valencia/*
+Copyright: 2023, Josep M. Ferrer <txemaq@gmail.com>
+           2023, This_file_is_part_of_KDE
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: src/declarativeimports/framesvgitem.h
+       src/declarativeimports/svgitem.h
+       src/tools/inkscape?extensions/plasmarename.py
+       tests/selected_svg.qml
+       tests/shadows.qml
+Copyright: 2021, Arjen Hiemstra <ahiemstra@heimr.nl>
+           2014, David Edmundson <davidedmundson@kde.org>
+           2010-2016, Marco Martin <mart@kde.org>
+           2009, Marco Martin <notmart@gmail.com>
+License: GPL-2.0-or-later
+
+Files: debian/*
+Copyright: 2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2024, Simon Quigley <tsimonq2@ubuntu.com>
+License: LGPL-2.0-or-later
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.

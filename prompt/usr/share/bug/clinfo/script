@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Installed ICDs:" >&3
+test ! -d /etc/OpenCL/vendors || ls -lAR /etc/OpenCL/vendors/ >&3

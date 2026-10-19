@@ -1,0 +1,4 @@
+# drkonqi-coredumup-gui is a GUI with no command line arguments
+no-manual-page [usr/bin/drkonqi-coredump-gui]
+# drkonqi-sentry-data has no command line arguments
+drkonqi: no-manual-page [usr/bin/drkonqi-sentry-data]

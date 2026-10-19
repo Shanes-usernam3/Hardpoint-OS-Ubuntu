@@ -1,0 +1,31 @@
+# this is sourced
+# vim: set sts=4 expandtab:
+# Copyright (C) 2012-2026 Osamu Aoki <osamu@debian.org>
+# Copyright (C) 2012 Aron Xu <aron@debian.org>
+# GNU General Public License version 2 or later.
+#
+# If im-config is removed but not purged, keep hands off :-)
+# initialize all im-config common functions and parameters
+#
+# source /etc/default/im-config and get config reading functions
+#
+unset TEXTDOMAIN
+unset TEXTDOMAINDIR
+. /usr/share/im-config/xinputrc.common
+logger_debug "  @ IM_CONFIG_PHASE='$IM_CONFIG_PHASE'"
+if [ -r "$IM_CONFIG_XINPUTRC_USR" ]; then
+    logger_debug "    Source IM_CONFIG_XINPUTRC_USR='$IM_CONFIG_XINPUTRC_USR' (user)"
+    . $IM_CONFIG_XINPUTRC_USR
+elif [ -r "$IM_CONFIG_XINPUTRC_SYS" ]; then
+    logger_debug "    Source IM_CONFIG_XINPUTRC_SYS='$IM_CONFIG_XINPUTRC_SYS' (system)"
+    . $IM_CONFIG_XINPUTRC_SYS
+fi
+# always export variables even for manual configuration.
+if [ "$IM_CONFIG_PHASE" = "1" ]; then
+    logger_info "  >>> GTK_IM_MODULE='$GTK_IM_MODULE' QT_IM_MODULE='$QT_IM_MODULE' CLUTTER_IM_MODULE='$CLUTTER_IM_MODULE' SDL_IM_MODULE='$SDL_IM_MODULE' XMODIFIERS='$XMODIFIERS'"
+fi
+export XMODIFIERS
+export GTK_IM_MODULE
+export QT_IM_MODULE
+export CLUTTER_IM_MODULE
+export SDL_IM_MODULE

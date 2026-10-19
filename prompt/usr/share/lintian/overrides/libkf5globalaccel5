@@ -1,0 +1,2 @@
+# It is intended to add dependency to libkf5globalaccel-bin.
+libkf5globalaccel5: symbols-declares-dependency-on-other-package libkf5globalaccel-bin (libKF5GlobalAccel.so.5) [symbols]

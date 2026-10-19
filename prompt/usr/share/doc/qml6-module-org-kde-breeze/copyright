@@ -1,0 +1,143 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qqc2-breeze-style
+Source: https://invent.kde.org/plasma/qqc2-breeze-style
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2020, Noah Davis <noahadvs@gmail.com>
+License: LGPL-3+KDEeV
+
+Files: kirigami-plasmadesktop-integration/kirigamiplasmafactory.cpp
+       kirigami-plasmadesktop-integration/kirigamiplasmafactory.h
+       kirigami-plasmadesktop-integration/plasmadesktoptheme.cpp
+       kirigami-plasmadesktop-integration/plasmadesktoptheme.h
+       kirigami-plasmadesktop-integration/units.cpp
+       kirigami-plasmadesktop-integration/units.h
+       style/impl/CursorHandle.qml
+       style/impl/Units.qml
+       style/qtquickcontrols/MobileTextActionsToolBar.qml
+Copyright: 2015-2018, Marco Martin <mart@kde.org>
+           2016, Marco Martin <notmart@gmail.com>
+           2020, Noah Davis <noahadvs@gmail.com>
+           2014 Sebastian Kügler <sebas@kde.org>
+           2014 David Edmundson <davidedmunsdon@kde.org>
+           2021 Jonah Brüchert <jbb@kaidan.im>
+           2021 Arjen Hiemstra <ahiemstra@heimr.nl>
+           2021 Dan Leinir Turthra Jensen <admin@leinir.dk>
+License: LGPL-2+
+
+Files: style/impl/iconlabellayout.cpp
+       style/impl/iconlabellayout.h
+       style/impl/iconlabellayout_p.h
+       style/impl/qquickicon.cpp
+       style/impl/qquickicon_p.h
+       style/qtquickcontrols/Drawer.qml
+       style/qtquickcontrols/HorizontalHeaderView.qml
+       style/qtquickcontrols/MenuBar.qml
+       style/qtquickcontrols/MenuBarItem.qml
+       style/qtquickcontrols/MenuItem.qml
+       style/qtquickcontrols/Menu.qml
+       style/qtquickcontrols/Popup.qml
+       style/qtquickcontrols/RoundButton.qml
+       style/qtquickcontrols/SplitView.qml
+       style/qtquickcontrols/VerticalHeaderView.qml
+Copyright: 2017-2018, Marco Martin <mart@kde.org>
+           2020, Noah Davis <noahadvs@gmail.com>
+           2017-2020, The Qt Company Ltd.
+License: LGPL-3_or_GPL-2+
+
+Files: style/impl/SliderGroove.qml
+       style/qtquickcontrols/RangeSlider.qml
+Copyright: 2017, Marco Martin <mart@kde.org>
+           2020, Noah Davis <noahadvs@gmail.com>
+           2017, The Qt Company Ltd.
+License: LGPL-3+KDEeV_or_GPL-2++KDEeV
+
+Files: .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2022-2024, Patrick Franz <deltaone@debian.org>
+           2021, Norbert Preining <norbert@preining.info>
+License: LGPL-2+
+
+License: LGPL-2+
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: LGPL-3+KDEeV_or_GPL-2++KDEeV
+ LGPL-3.0-only OR GPL-2.0-or-later OR LicenseRef-KDE-Accepted-LGPL OR LicenseRef-KFQF-Accepted-GPL
+ --
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ Alternatively, this file may be used under the terms of the GNU
+ General Public License version 2.0 or (at your option) the GNU General
+ Public license version 3 or any later version approved by the KDE Free
+ Qt Foundation. The licenses are as published by the Free Software
+ Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+ included in the packaging of this file. Please review the following
+ information to ensure the GNU General Public License requirements will
+ be met: https://www.gnu.org/licenses/gpl-2.0.html and
+ https://www.gnu.org/licenses/gpl-3.0.html.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 3 can be found in `/usr/share/common-licenses/LGPL-3’,
+ likewise, the complete text of the GNU General Public License version 2
+ can be found in `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-3_or_GPL-2+
+ LGPL-3.0-only OR GPL-2.0-or-later
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 3 can be found in `/usr/share/common-licenses/LGPL-3’,
+ likewise, the complete text of the GNU General Public License version 2
+ can be found in `/usr/share/common-licenses/GPL-2’.
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".

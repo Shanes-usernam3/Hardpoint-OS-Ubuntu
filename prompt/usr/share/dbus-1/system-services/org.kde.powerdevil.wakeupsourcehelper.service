@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.powerdevil.wakeupsourcehelper
+Exec=/usr/lib/kf6/kauth/libexec/wakeupsourcehelper
+User=root

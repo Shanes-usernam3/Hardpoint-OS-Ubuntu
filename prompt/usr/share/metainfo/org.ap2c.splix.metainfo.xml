@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <id>org.ap2c.splix</id>
+  <metadata_license>MIT</metadata_license>
+  <name>printer-driver-splix</name>
+  <summary>Driver for Samsung and Xerox SPL2 and SPLc laser printers</summary>
+  <description>
+    <p>Support for printing to SPL2- and SPLc-based printers. These
+    are most of the cheaper Samsung laser printers which do not
+    understand standard languages like PostScript or PCL. Both
+    monochrome (ML-15xx, ML-16xx, ML-17xx, ML-2xxx) and color
+    (CLP-5xx, CLP-6xx) models are supported.  Also some rebranded
+    Samsungs like the Xerox Phaser 6100 work with this driver.</p>
+    <p>Note that older SPL1-based models (ML-12xx, ML-14xx) do not
+    work. Use these printers with the older "gdi" driver which is
+    built into GhostScript.</p>
+  </description>
+  <url type="homepage">https://openprinting.github.io/splix/</url>
+  <provides>
+    <modalias>usb:v04E8p323Ad*</modalias>
+    <modalias>usb:v04E8p323Bd*</modalias>
+    <modalias>usb:v04E8p323Dd*</modalias>
+    <modalias>usb:v04E8p3242d*</modalias>
+    <modalias>usb:v04E8p324Cd*</modalias>
+    <modalias>usb:v04E8p324Dd*</modalias>
+    <modalias>usb:v04E8p325Bd*</modalias>
+    <modalias>usb:v04E8p325Fd*</modalias>
+    <modalias>usb:v04E8p3260d*</modalias>
+    <modalias>usb:v04E8p3268d*</modalias>
+    <modalias>usb:v04E8p3276d*</modalias>
+    <modalias>usb:v04E8p341Bd*</modalias>
+    <modalias>usb:v04E8p3426d*</modalias>
+  </provides>
+</component>

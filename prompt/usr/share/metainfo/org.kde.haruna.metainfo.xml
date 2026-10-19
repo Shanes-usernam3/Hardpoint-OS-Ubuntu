@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+
+ SPDX-License-Identifier: CC-BY-4.0
+ -->
+<component type="desktop-application">
+  <name>Haruna</name>
+  <name xml:lang="ar">هارونا</name>
+  <name xml:lang="ca">Haruna</name>
+  <name xml:lang="ca-valencia">Haruna</name>
+  <name xml:lang="cs">Haruna</name>
+  <name xml:lang="de">Haruna</name>
+  <name xml:lang="en-GB">Haruna</name>
+  <name xml:lang="eo">Haruna</name>
+  <name xml:lang="es">Haruna</name>
+  <name xml:lang="eu">Haruna</name>
+  <name xml:lang="fi">Haruna</name>
+  <name xml:lang="fr">Haruna</name>
+  <name xml:lang="gl">Haruna</name>
+  <name xml:lang="he">Haruna</name>
+  <name xml:lang="ia">Haruna</name>
+  <name xml:lang="id">Haruna</name>
+  <name xml:lang="it">Haruna</name>
+  <name xml:lang="ka">Haruna</name>
+  <name xml:lang="ko">Haruna</name>
+  <name xml:lang="lt">Haruna</name>
+  <name xml:lang="lv">Haruna</name>
+  <name xml:lang="nl">Haruna</name>
+  <name xml:lang="pl">Haruna</name>
+  <name xml:lang="pt-BR">Haruna</name>
+  <name xml:lang="ru">Haruna</name>
+  <name xml:lang="sa">हारून</name>
+  <name xml:lang="sk">Haruna</name>
+  <name xml:lang="sl">Haruna</name>
+  <name xml:lang="sv">Haruna</name>
+  <name xml:lang="tr">Haruna</name>
+  <name xml:lang="uk">Haruna</name>
+  <name xml:lang="zh-CN">Haruna 媒体播放器</name>
+  <name xml:lang="zh-TW">Haruna</name>
+  <id>org.kde.haruna</id>
+  <launchable type="desktop-id">org.kde.haruna.desktop</launchable>
+  <metadata_license>CC-BY-4.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <url type="homepage">https://haruna.kde.org</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=haruna</url>
+  <url type="donation">https://github.com/sponsors/g-fb</url>
+  <url type="vcs-browser">https://invent.kde.org/multimedia/haruna</url>
+  <summary>Media player</summary>
+  <summary xml:lang="ar">مشغل وسائط</summary>
+  <summary xml:lang="ca">Reproductor multimèdia</summary>
+  <summary xml:lang="ca-valencia">Reproductor multimèdia</summary>
+  <summary xml:lang="cs">Přehrávač médií</summary>
+  <summary xml:lang="de">Medienspieler</summary>
+  <summary xml:lang="en-GB">Media player</summary>
+  <summary xml:lang="eo">Ludilo por aŭdvidaĵoj</summary>
+  <summary xml:lang="es">Reproductor multimedia</summary>
+  <summary xml:lang="eu">Hedabide-jotzailea</summary>
+  <summary xml:lang="fi">Mediasoitin</summary>
+  <summary xml:lang="fr">Lecteur de média</summary>
+  <summary xml:lang="gl">Reprodutor multimedia</summary>
+  <summary xml:lang="he">נגן מדיה</summary>
+  <summary xml:lang="ia">Media Player (Reproductor de Media)</summary>
+  <summary xml:lang="id">Pemutar media</summary>
+  <summary xml:lang="it">Lettore multimediale</summary>
+  <summary xml:lang="ka">მედია დამკვრელი</summary>
+  <summary xml:lang="ko">미디어 재생기</summary>
+  <summary xml:lang="lt">Medijos leistuvė</summary>
+  <summary xml:lang="lv">Multivides atskaņotājs</summary>
+  <summary xml:lang="nl">Haruna mediaspeler</summary>
+  <summary xml:lang="pl">Odtwarzacz multimedialny</summary>
+  <summary xml:lang="pt-BR">Reprodutor de mídia</summary>
+  <summary xml:lang="ru">Медиапроигрыватель</summary>
+  <summary xml:lang="sa">मीडिया प्लेयर</summary>
+  <summary xml:lang="sk">Prehrávač médií</summary>
+  <summary xml:lang="sl">Predvajalnik medijev</summary>
+  <summary xml:lang="sv">Mediaspelare</summary>
+  <summary xml:lang="tr">Ortam Oynatıcısı</summary>
+  <summary xml:lang="uk">Мультимедійний програвач</summary>
+  <summary xml:lang="zh-CN">媒体播放器</summary>
+  <summary xml:lang="zh-TW">媒體播放器</summary>
+  <developer id="org.kde">
+    <name translate="no">George Florea Bănuș</name>
+  </developer>
+  <description>
+    <p>Open source media player with lots of options to make it work the way you want it.</p>
+    <p xml:lang="ar">مشغل وسائط مفتوح المصدر مع الكثير من الخيارات لتشغيله بالطريقة التي تريدها.</p>
+    <p xml:lang="ca">Reproductor multimèdia de codi obert amb moltes opcions per a fer que funcioni de la manera que vulgueu.</p>
+    <p xml:lang="ca-valencia">Reproductor multimèdia de codi obert amb moltes opcions per a fer que funcione de la manera que vulgueu.</p>
+    <p xml:lang="de">Open-Source-Medienspieler mit vielen Einstellungsmöglichkeiten, damit er genau so funktioniert, wie Sie es möchten.</p>
+    <p xml:lang="es">Reproductor multimedia de código abierto con muchas opciones para que funcione a su gusto.</p>
+    <p xml:lang="eu">Sorburu irekiko hedabide jotzailea zuk nahi duzun bezala ibiltzeko aukera asko dituena.</p>
+    <p xml:lang="fi">Avoimen lähdekoodin mediasoitin, jonka runsain asetuksin saat toimimaan juuri kuten haluat.</p>
+    <p xml:lang="fr">Lecteur multimédia « Open source » proposant de nombreuses options pour qu'il fonctionne exactement comme vous le souhaitez.</p>
+    <p xml:lang="he">נגן מדיה בקוד פתוח עם מגוון רחב של אפשרויות כדי שיפעל כמו שמתאים לך.</p>
+    <p xml:lang="it">Riproduttore multimediale open source ricco di opzioni e con grandi possibilità di personalizzazione.</p>
+    <p xml:lang="ka">ღია კოდის მქონე მედიის დამკვრელი ბევრი პარამეტრებით, რომ ის ისე მოირგოთ, როგორც თქვენ გნებავთ.</p>
+    <p xml:lang="ko">원하는 대로 설정할 수 있는 오픈 소스 미디어 재생기입니다.</p>
+    <p xml:lang="lt">Atvirojo kodo medijos leistuvė su daugybe parinkčių, skirtų pritaikyti leistuvę savo poreikiams.</p>
+    <p xml:lang="lv">Atvērtā pirmkoda multivides atskaņotājs ar plašām iespējām, ļaujot to pielāgot savai gaumei.</p>
+    <p xml:lang="nl">Open de bronmediaspeler met heel veel opties om het te laten werken op de manier zoals u wilt.</p>
+    <p xml:lang="pt-BR">Reprodutor de mídia de código aberto com muitas opções para fazê-lo funcionar do jeito que você deseja.</p>
+    <p xml:lang="ru">Медиапроигрыватель с открытым исходным кодом, который предлагает множество параметров, позволяющих настроить его под требования пользователя.</p>
+    <p xml:lang="sl">Odprtokodni predvajalnik medijev s številnimi možnostmi, da deluje tako, kot želite.</p>
+    <p xml:lang="sv">Mediaspelare med öppen källkod och många alternativ för att få den att fungera som du vill.</p>
+    <p xml:lang="tr">İsteğinize göre yapılandırmanıza olanak tanıyan açık kaynaklı ortam oynatıcısı</p>
+    <p xml:lang="uk">Мультимедійний програвач із відкритим кодом, який має багато параметрів роботи, щоб працювати так, як ви цього хочете.</p>
+    <p xml:lang="zh-CN">一款自由开源媒体播放器，提供丰富选项，可按您的需求进行设置。</p>
+    <p xml:lang="zh-TW">提供許多選項供自訂的開源媒體播放器。</p>
+    <p>Features</p>
+    <p xml:lang="ar">الميزات</p>
+    <p xml:lang="ast">Funciones</p>
+    <p xml:lang="ca">Característiques</p>
+    <p xml:lang="ca-valencia">Característiques</p>
+    <p xml:lang="cs">Vlastnosti</p>
+    <p xml:lang="de">Funktionen</p>
+    <p xml:lang="en-GB">Features</p>
+    <p xml:lang="eo">Trajtoj</p>
+    <p xml:lang="es">Funcionalidades</p>
+    <p xml:lang="eu">Ezaugarriak</p>
+    <p xml:lang="fi">Ominaisuudet</p>
+    <p xml:lang="fr">Fonctionnalités</p>
+    <p xml:lang="gl">Funcionalidades:</p>
+    <p xml:lang="he">יכולות</p>
+    <p xml:lang="hi">विशेषताएँ</p>
+    <p xml:lang="ia">Characteristicas</p>
+    <p xml:lang="id">Fitur</p>
+    <p xml:lang="it">Caratteristiche</p>
+    <p xml:lang="ka">თვისებები</p>
+    <p xml:lang="ko">기능</p>
+    <p xml:lang="lt">Ypatybės</p>
+    <p xml:lang="lv">Iespējas</p>
+    <p xml:lang="nl">Mogelijkheden</p>
+    <p xml:lang="pl">Możliwości</p>
+    <p xml:lang="pt">Características</p>
+    <p xml:lang="pt-BR">Recursos</p>
+    <p xml:lang="ro">Caracteristici</p>
+    <p xml:lang="ru">Особенности</p>
+    <p xml:lang="sa">गुणाः</p>
+    <p xml:lang="sk">Funkcie</p>
+    <p xml:lang="sl">Zmožnosti</p>
+    <p xml:lang="sv">Funktioner</p>
+    <p xml:lang="ta">அம்சங்கள்</p>
+    <p xml:lang="tr">Özellikler</p>
+    <p xml:lang="uk">Можливості</p>
+    <p xml:lang="zh-CN">功能介绍</p>
+    <p xml:lang="zh-TW">功能</p>
+    <ul>
+      <li>play online videos, through youtube-dl</li>
+      <li xml:lang="ar">يشغل فيدويات على الشابكة بواسطة youtube-dl</li>
+      <li xml:lang="ca">Reprodueix vídeos en línia a través de youtube-dl</li>
+      <li xml:lang="ca-valencia">Reproduïx vídeos en línia a través de youtube-dl</li>
+      <li xml:lang="cs">přehrávání videí online pomocí youtube-dl</li>
+      <li xml:lang="de">Internetvideos mittels youtube-dl abspielen</li>
+      <li xml:lang="en-GB">play online videos, through youtube-dl</li>
+      <li xml:lang="eo">ludi interretajn filmetojn, per youtube-dl</li>
+      <li xml:lang="es">reproducción de vídeos en línea, usando youtube-dl</li>
+      <li xml:lang="eu">youtube-dl bidez lerroko bideoak jotzea</li>
+      <li xml:lang="fi">verkkovideotoisto youtube-dl:llä</li>
+      <li xml:lang="fr">Lecture en ligne de vidéos, grâce à youtube-dl</li>
+      <li xml:lang="gl">Reproducir vídeos por Internet mediante youtube-dl.</li>
+      <li xml:lang="he">ניגון סרטונים מקוונים, באמצעות youtube-dl</li>
+      <li xml:lang="hi">यूट्यूब-डीएल के माध्यम से ऑनलाइन वीडियो चलाएं </li>
+      <li xml:lang="id">putar video online, melalui youtube-dl</li>
+      <li xml:lang="it">riproduce video in linea tramite youtube-dl</li>
+      <li xml:lang="ka">დაუკარით ონლაინ ვიდეოები, YouTube-dl-ის საშუალებით</li>
+      <li xml:lang="ko">youtube-dl을 사용하여 온라인 동영상 재생</li>
+      <li xml:lang="lt">atkuria internetinius vaizdo įrašus, per youtube-dl</li>
+      <li xml:lang="lv">atskaņo tiešsaistes video, izmantojot „youtube-dl“</li>
+      <li xml:lang="nl">online video' afspelen, via youtube-dl</li>
+      <li xml:lang="pl">odtwarzanie filmów z sieci, poprzez youtube-dl</li>
+      <li xml:lang="pt">reproduzir vídeos 'online' através do 'youtube-dl'</li>
+      <li xml:lang="pt-BR">reproduza vídeos online, através do youtube-dl</li>
+      <li xml:lang="ro">redă videoclipuri online, prin youtube-dl</li>
+      <li xml:lang="ru">проигрывание видео из Интернета с помощью youtube-dl</li>
+      <li xml:lang="sa">ऑनलाइन विडियो प्ले कुर्वन्तु, youtube-dl मार्गेण</li>
+      <li xml:lang="sl">predvaja spletne videoposnetke prek youtube-dl</li>
+      <li xml:lang="sv">spela nätvideor via youtube-dl</li>
+      <li xml:lang="tr">çevrimiçi videoları youtube-dl aracılığıyla oynat</li>
+      <li xml:lang="uk">відтворення інтернет-відео за допомогою youtube-dl</li>
+      <li xml:lang="zh-CN">通过 youtube-dl 程序播放在线视频</li>
+      <li xml:lang="zh-TW">透過 youtube-dl 播放線上影片</li>
+      <li>supports youtube playlists</li>
+      <li xml:lang="ar">يدعم قوائم تشغيل يوتيوب</li>
+      <li xml:lang="ca">Admet les llistes de reproducció de YouTube</li>
+      <li xml:lang="ca-valencia">Admet les llistes de reproducció de YouTube</li>
+      <li xml:lang="cs">Podporuje seznamy skladeb YouTube</li>
+      <li xml:lang="de">Unterstützung von Youtube-Wiedergabelisten</li>
+      <li xml:lang="en-GB">supports YouTube playlists</li>
+      <li xml:lang="eo">subtenas jutubajn ludlistojn</li>
+      <li xml:lang="es">permite listas de reproducción de YouTube</li>
+      <li xml:lang="eu">youtube-ko jotze-zerrendekin bateragarria</li>
+      <li xml:lang="fi">YouTuben soittolistojen tuki</li>
+      <li xml:lang="fr">Prend en charge les liste de lecture youtube</li>
+      <li xml:lang="gl">Compatíbel con listas de reprodución de YouTube.</li>
+      <li xml:lang="he">תמיכה ברשימות נגינה של YouTube</li>
+      <li xml:lang="hi">यूट्यूब प्लेलिस्ट का समर्थन करता है</li>
+      <li xml:lang="id">mendukung playlist youtube</li>
+      <li xml:lang="it">supporta scalette youtube</li>
+      <li xml:lang="ka">youTube-ის დასაკრავი სიების მხარდაჭერა</li>
+      <li xml:lang="ko">YouTube 재생 목록 지원</li>
+      <li xml:lang="lt">palaiko „YouTube“ grojaraščius</li>
+      <li xml:lang="lv">atbalsta „YouTube“ repertuārus</li>
+      <li xml:lang="nl">ondersteunt youtube afspeellijsten</li>
+      <li xml:lang="pl">obsługa list odtwarzania youtube</li>
+      <li xml:lang="pt">suporta as listas de reprodução do YouTube</li>
+      <li xml:lang="pt-BR">suporta playlists do youtube</li>
+      <li xml:lang="ro">susține liste de redare Youtube</li>
+      <li xml:lang="ru">поддержка списков воспроизведения Youtube</li>
+      <li xml:lang="sa">youtube प्लेलिस्ट् समर्थयति</li>
+      <li xml:lang="sl">podpira youtube sezname predvajanj</li>
+      <li xml:lang="sv">stöder YouTube spellistor</li>
+      <li xml:lang="tr">youtube oynatma listelerini destekler</li>
+      <li xml:lang="uk">підтримка списків відтворення youtube</li>
+      <li xml:lang="zh-CN">支持 YouTube 播放列表</li>
+      <li xml:lang="zh-TW">支援 youtube 播放清單</li>
+      <li>toggle playlist with mouse-over, playlist overlays the video</li>
+      <li xml:lang="ar">يظهر قائمة التشغيل إذا مُررت الفأرة، بحيث قائمة التشغيل فوق الفيديو</li>
+      <li xml:lang="ca">Alterna la llista de reproducció amb el ratolí, la llista de reproducció se superposa al vídeo</li>
+      <li xml:lang="ca-valencia">Alterna la llista de reproducció amb el ratolí, la llista de reproducció se superposa al vídeo</li>
+      <li xml:lang="de">Wiedergabeliste durch Überfahren mit der Maus einblenden, Darstellung der Liste über dem Videobild</li>
+      <li xml:lang="en-GB">toggle playlist with mouse-over, playlist overlays the video</li>
+      <li xml:lang="eo">baskulu ludliston per muso-super, ludlisto supermetas la videon</li>
+      <li xml:lang="es">conmutar la lista de reproducción al situar el ratón, que se superpone al vídeo</li>
+      <li xml:lang="eu">sagua gainetik igarotzean jotze-zerrenda txandakatzea, jotze-zerrenda bideoaren gainean jartzen du</li>
+      <li xml:lang="fi">soittolista näyttö videon päällä hiiren rullaa pyöräyttämällä</li>
+      <li xml:lang="fr">Basculer la liste de lecture avec un survol de souris. La liste d lecture se superpose au dessus de la vidéo.</li>
+      <li xml:lang="gl">Conmutar listas de reprodución ao cubrir co rato, para que apareza sobre o vídeo.</li>
+      <li xml:lang="he">החלפת מצב רשימות נגינה עם מעבר העכבר מעליהן, רשימת הנגינה חופפת לסרטון</li>
+      <li xml:lang="id">jungkit playlist dengan mouse, playlist melayang di atas video</li>
+      <li xml:lang="it">attiva e disattiva la scaletta al passaggio del mouse, la scaletta si sovrappone al video</li>
+      <li xml:lang="ka">დასაკრავი სიის გადართვა თაგუნას გადატარებით. სია ვიდეოს გადაფარავს</li>
+      <li xml:lang="ko">마우스 동작으로 재생 목록 전환, 동영상 위에 표시</li>
+      <li xml:lang="lt">galimybė perjungti grojaraščius užvedant pelę, grojaraštis padengia vaizdo įrašą</li>
+      <li xml:lang="lv">pārslēdz repertuāru ar peles kursora pārlikšanu, repertuārs pārklāj video</li>
+      <li xml:lang="nl">afspeellijst omschakelen met muis-er-boven, afspeellijst gaat over de video</li>
+      <li xml:lang="pl">przełączanie list odtwarzania po najechaniu na nie, lista odtwarzania nakłada się na film</li>
+      <li xml:lang="pt">comutação da lista de reprodução à passagem do rato, sobreposição da lista sobre o vídeo</li>
+      <li xml:lang="pt-BR">alternar a lista de reprodução com o mouse, a playlist sobrepõe o vídeo</li>
+      <li xml:lang="ro">comută lista de redare cu planarea mausului, lista se suprapune peste video</li>
+      <li xml:lang="ru">переключение списка воспроизведения с помощью мыши, список воспроизведения накладывается на видео</li>
+      <li xml:lang="sa">माउस-ओवर-सहितं प्लेलिस्ट् टॉग्ल् कुर्वन्तु, प्लेलिस्ट् विडियो आच्छादयति</li>
+      <li xml:lang="sl">preklaplja sezname predvajanj z miško nad njimi, seznam je nad video posnetkom</li>
+      <li xml:lang="sv">visa eller dölj spellistan genom att hålla musen över, spellistan visas ovanpå videon</li>
+      <li xml:lang="tr">oynatma listelerini fare imleci üzerine geldiğinde aç/kapat, liste videonun üzerine yerleşir</li>
+      <li xml:lang="uk">перемикання списків відтворення за допомогою наведення вказівника миші, накладання списку відтворення на відео</li>
+      <li xml:lang="zh-CN">鼠标悬停时自动在画面上叠加显示播放列表</li>
+      <li xml:lang="zh-TW">滑鼠懸停來切換播放清單，播放清單顯示於影片之上</li>
+      <li>auto skip chapter containing certain words</li>
+      <li xml:lang="ar">إمكانية تخطي آليّة لأي فصل يحوي كلمات معينة</li>
+      <li xml:lang="ca">Salt automàtic de capítols que contenen certes paraules</li>
+      <li xml:lang="ca-valencia">Salt automàtic de capítols que contenen certes paraules</li>
+      <li xml:lang="de">Automatisch Kapitel mit bestimmten Wörtern überspringen</li>
+      <li xml:lang="en-GB">auto skip chapter containing certain words</li>
+      <li xml:lang="eo">aŭtomata transsalti ĉapitron enhavantan certajn vortojn</li>
+      <li xml:lang="es">omitir automáticamente capítulos que contengan ciertas palabras</li>
+      <li xml:lang="eu">hitz jakin batzuk dituzten atalak saihestea</li>
+      <li xml:lang="fi">tiettyjä sanoja sisältävien lukujen automaattinen ohitus</li>
+      <li xml:lang="fr">Ignore automatiquement les chapitres contenant certains mots</li>
+      <li xml:lang="gl">Saltar automaticamente capítulos que conteñen certas palabras.</li>
+      <li xml:lang="he">דילוג על פרקים שמכילים מילים מסוימות</li>
+      <li xml:lang="id">auto lewati bab yang mengandung kata tertentu</li>
+      <li xml:lang="it">salto automatico dei capitoli contenenti determinate parole</li>
+      <li xml:lang="ka">გარკვეული სიტყვების შემცველი თავის ავტომატური გამოტოვება</li>
+      <li xml:lang="ko">특정한 단어가 포함된 챕터 건너뛰기</li>
+      <li xml:lang="lt">galimybė automatiškai praleisti skyrius, kuriuose yra tam tikri žodžiai</li>
+      <li xml:lang="lv">automātiski izlaist daļu, kas satur noteiktus vārdus</li>
+      <li xml:lang="nl">hoofdstuk met bepaalde woorden overslaan</li>
+      <li xml:lang="pl">pomijanie rozdziałów zawierających pewne słowa</li>
+      <li xml:lang="pt">saltar automaticamente capítulos com certas palavras</li>
+      <li xml:lang="pt-BR">pular automaticamente capítulo que contêm certas palavras</li>
+      <li xml:lang="ro">sare automat capitolul conținând anumite cuvinte</li>
+      <li xml:lang="ru">автоматический пропуск глав, содержащих указанные слова</li>
+      <li xml:lang="sa">auto skip अध्यायः यस्मिन् कतिपयशब्दाः सन्ति</li>
+      <li xml:lang="sl">samodejno preskoči poglavje, ki vsebuje določene besede</li>
+      <li xml:lang="sv">hoppa automatiskt över kapitel som innehåller vissa ord</li>
+      <li xml:lang="tr">kimi sözcükleri içeren fasılları kendiliğinden atla</li>
+      <li xml:lang="uk">автоматичне пропускання розділів, що містять певні слова</li>
+      <li xml:lang="zh-CN">自动跳过名称中包含某些单词的章节</li>
+      <li xml:lang="zh-TW">自動跳過包含某些單詞的章節</li>
+      <li>configurable shortcuts and mouse buttons</li>
+      <li xml:lang="ar">دعم لتخصيص الاختصارات وأزرار الفأرة</li>
+      <li xml:lang="ca">Dreceres i botons del ratolí configurables</li>
+      <li xml:lang="ca-valencia">Dreceres i botons del ratolí configurables</li>
+      <li xml:lang="de">Einstellbare Kurzbefehle und Maustasten</li>
+      <li xml:lang="en-GB">configurable shortcuts and mouse buttons</li>
+      <li xml:lang="eo">agordeblaj ŝparvojoj kaj musbutonoj</li>
+      <li xml:lang="es">atajos de teclado y botones del ratón configurables</li>
+      <li xml:lang="eu">lasterbide eta saguaren botoi konfiguragarriak</li>
+      <li xml:lang="fi">mukautettavat pikanäppäimet ja hiiripainikkeet</li>
+      <li xml:lang="fr">Raccourcis configurable et boutons de souris</li>
+      <li xml:lang="gl">Atallos e botóns de rato configurábeis.</li>
+      <li xml:lang="he">אפשר להגדיר קיצורי דרך וכפתורי עכבר</li>
+      <li xml:lang="hi">विन्यास योग्य शॉर्टकट और माउस बटन</li>
+      <li xml:lang="id">pintasan dan tombol mouse yang dapat dikonfigurasi</li>
+      <li xml:lang="it">scorciatoie e pulsanti del mouse configurabili</li>
+      <li xml:lang="ka">მორგებადი მალსახმობები და თაგუნას ღილაკები</li>
+      <li xml:lang="ko">단축키와 마우스 단추 설정 가능</li>
+      <li xml:lang="lt">konfigūruojami spartieji klavišai ir pelės mygtukai</li>
+      <li xml:lang="lv">konfigurējamas saīsnes un peles pogas</li>
+      <li xml:lang="nl">te configureren sneltoetsen en muisknoppen</li>
+      <li xml:lang="pl">dostosowywalne skróty i przyciski myszy</li>
+      <li xml:lang="pt">atalhos e botões de rato configuráveis</li>
+      <li xml:lang="pt-BR">configurar atalhos e botões do mouse</li>
+      <li xml:lang="ro">scurtături și butoane de maus configurabile</li>
+      <li xml:lang="ru">настраиваемые комбинации клавиш и кнопок мыши</li>
+      <li xml:lang="sa">विन्यासयोग्याः शॉर्टकट् तथा मूषकस्य बटन्</li>
+      <li xml:lang="sl">nastavljive bližnjice in gumbi na miški</li>
+      <li xml:lang="sv">anpassningsbara genvägar och musknappar</li>
+      <li xml:lang="tr">yapılandırılabilir kısayollar ve fare düğmeleri</li>
+      <li xml:lang="uk">придатні до налаштовування клавіатурні скорочення та прив'язка до кнопок миші</li>
+      <li xml:lang="zh-CN">可自定义快捷键和鼠标键功能</li>
+      <li xml:lang="zh-TW">可調整的快捷鍵和滑鼠按鈕</li>
+      <li>quick jump to next chapter by middle click on progress bar</li>
+      <li xml:lang="ar">قفزة سريعة إلى الفصل التالي عن طريق النقر الأوسط على شريط التقدم</li>
+      <li xml:lang="ca">Salt ràpid cap al capítol següent fent clic al mig sobre la barra de progrés</li>
+      <li xml:lang="ca-valencia">Salt ràpid cap al capítol següent clicant al mig damunt de la barra de progrés</li>
+      <li xml:lang="de">Schnelles Springen zum nächsten Kapitel per Mittelklick auf den Fortschrittsbalken</li>
+      <li xml:lang="en-GB">quick jump to next chapter by middle click on progress bar</li>
+      <li xml:lang="eo">rapida salto al la sekva ĉapitro per meza alklako sur progresbreto</li>
+      <li xml:lang="es">salto rápido al siguiente capítulo mediante clic central en la barra de avance</li>
+      <li xml:lang="eu">hurrengo kapitulura azkar joatea aurrerapen-barran erdiko klik eginda</li>
+      <li xml:lang="fi">hyppy luvusta toiseen napsauttamalla hiiren keskipainikkeella etenemispalkkia</li>
+      <li xml:lang="fr">Passage rapide au chapitre suivant par un clic sur le bouton de souris du milieu sur la barre de progression</li>
+      <li xml:lang="gl">Saltar rapidamente ao seguinte capítulo usando o clic central na barra de progreso.</li>
+      <li xml:lang="he">דילוג מהיר לפרק הבא בלחיצה אמצעית על פס ההתקדמות</li>
+      <li xml:lang="id">lompat cepat ke bab selanjutnya dengan klik tengah pada bilah progres</li>
+      <li xml:lang="it">salto rapido al capitolo successivo tramite clic col pulsante centrale sulla barra di avanzamento</li>
+      <li xml:lang="ka">მიმდინარეობის ზოლზე შუა წკაპით შემდეგ თავზე სწრაფი გადასვლა</li>
+      <li xml:lang="ko">진행 표시기에서 가운데 단추 클릭으로 다음 챕터로 이동</li>
+      <li xml:lang="lt">galimybė greitai peršokti prie kito skyriaus spustelėjant viduriniuoju pelės mygtuku ant eigos juostos</li>
+      <li xml:lang="lv">ātri pāriet uz nākamo daļu ar vidējo klikšķi progresa joslā</li>
+      <li xml:lang="nl">snelle sprong naar volgende hoofdstuk door middelste klik op voortgangsbalk</li>
+      <li xml:lang="pl">szybkie skoki do następnych rozdziałów na środkowy przycisk myszy na pasku postępu</li>
+      <li xml:lang="pt">salto rápido para o capítulo seguinte com o botão do meio do rato sobre a barra de progresso</li>
+      <li xml:lang="pt-BR">pular rapidamente para o próximo capítulo por um click no meio da barra de progresso</li>
+      <li xml:lang="ro">sare rapid la următorul capitol prin clic-mijloc pe bara de progres</li>
+      <li xml:lang="ru">быстрый переход на следующую главу по щелчку средней кнопкой мыши</li>
+      <li xml:lang="sa">quick jump to next chapter by middle प्रगतिपट्टिकायां क्लिक् कुर्वन्तु</li>
+      <li xml:lang="sl">hitri skon na naslednje poglavje s srednjim klikom na drsniku napredka</li>
+      <li xml:lang="sv">gå snabbt till nästa kapitel genom att mittenklicka på förloppsraden</li>
+      <li xml:lang="tr">ilerleme çubuğuna orta tıklayarak sonraki fasıla çabucak atla</li>
+      <li xml:lang="uk">швидкий перехід до наступного розділу клацанням середньою кнопкою миші на смужці поступу</li>
+      <li xml:lang="zh-CN">中键点击进度条，快速跳转到下一章节</li>
+      <li xml:lang="zh-TW">中鍵點擊進度欄來快速跳至下一章節</li>
+    </ul>
+  </description>
+  <releases>
+    <release version="1.7.1" date="2026-01-14">
+      <description>
+        <p>Bugfixes</p>
+        <ul>
+          <li>fixed searching playlist</li>
+          <li>fixed tooltip background being same color as its text</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.7.0" date="2025-12-21">
+      <description>
+        <p>Features</p>
+        <p>PlayList</p>
+        <ul>
+          <li>added advanced sorting and grouping</li>
+          <li>added context menu to open file in Hana (thumbnail generator, only if it's installed)</li>
+          <li>the last active playlist will be set as visible when starting the app</li>
+        </ul>
+        <p>Other</p>
+        <ul>
+          <li>added replay gain settings</li>
+          <li>mpris thumbnail is only set for audio files, this allows the os taskbar preview to show the actual live window</li>
+          <li>decreased the size of the play icon in the compact playlist</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>fixed database folder not being created</li>
+          <li>fixed seekbar tooltip not updating when file changes and the mouse is not moved</li>
+          <li>fixed deleting custom commands</li>
+          <li>fixed saving last opened url</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.6.0" date="2025-10-24">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added option to resize playlist</li>
+          <li>Moved the action to add a new playlist/tab to the tabbar</li>
+          <li>Moved the action to open a playlist in the "Add" menu</li>
+          <li>Added an icon for playback action in playlist header</li>
+          <li>Mouse settings: action asssigned to a mouse event can be changed</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>Fixed looping playlist with a single files</li>
+          <li>Fixed playlist tabs not being saved</li>
+          <li>Fixed renaming playlists right after adding them</li>
+          <li>Fixed next/previous buttons being disabled while adding items via dropping in "Add to Playlist" drop area</li>
+          <li>Fixed play previous action not wrapping from first item in playlist to the last item</li>
+          <li>Fixed not being able to add new playlist tab when yt-dlp is not installed</li>
+          <li>Added a workaround for file dialogs not receiving key events; escape and arrow key were not working</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.5.0" date="2025-09-30">
+      <description>
+        <p>Features</p>
+        <p>Settings</p>
+        <ul>
+          <li>General: added single instance setting to play new file when appending to the playlist</li>
+          <li>General: removed the <code>File dialog location setting</code></li>
+          <li>Playlist: added settings to control playback behavior</li>
+          <li>Mouse: refactored to allow modifier keys</li>
+          <li>Mouse: added support for Mouse Forward and Back buttons</li>
+          <li>Subtitles: if a relative folder name in the <code>Load subtitle from</code> list starts with an <em> (asterisk) then subtitles will be searched in all folders containing the folder name. Example: If the <code>Load subtitle from</code> list contains an entry `</em>sub<code>and you have the following folders next to the video file</code>subs<code>,</code>more subs<code>and</code>subtitles` all of these folders will be searched.</li>
+          <li>the settings window now has a minimum width and height</li>
+        </ul>
+        <p>PlayList</p>
+        <ul>
+          <li>added support for multiple playlists</li>
+          <li>items can be reordered manually through drag and dropdown</li>
+          <li>items can be selected, ctrl+click to select multiple items, shift+click to select a range</li>
+          <li>items can be filtered</li>
+          <li>added settings to control playback behavior when a file ends</li>
+          <li>when saving the playlist the file extension is set to m3u</li>
+          <li>can add files and folders through drag and drop</li>
+          <li>multiple files can be added through the option in the header</li>
+          <li>hide playlist when mouse leaves window while maximized, prevents opening the playlist when moving mouse to another monitor</li>
+        </ul>
+        <p>Playback</p>
+        <ul>
+          <li>if a file can't be played now an error is shown and playback stops instead of trying to play the next file (prevents a potential infinite loop when no file in the playlist can be played)</li>
+          <li>can play files starting with a dot (hidden files)</li>
+          <li>an error is shown when failing to get youtube playlist</li>
+        </ul>
+        <p>Other</p>
+        <ul>
+          <li>mpris: add support for Shuffle and LoopStatus</li>
+          <li>changed the action selection popup to use Kirigami.SearchDialog</li>
+          <li>replaced the spinning icon with a progress bar and label</li>
+          <li>the drop area of the video is split in 2 parts now</li>
+          <li>top part always appends to the default playlist</li>
+          <li>bottom part clears the default playlist and adds the dropped files and folders, when only one file is dropped it behaves as the open file action (clears the playlist and loads sibling files if enabled in settings)</li>
+          <li>recent files are now stored in a sqlite database</li>
+          <li>time positions used to restore videos are also stored in the database</li>
+          <li>sleep is blocked on Windows too</li>
+          <li>all strings should be translatable now</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>fixed the loop action, osd was not showing and progress bar was not highlighting the loop range</li>
+          <li>before loading check that the file exists </li>
+          <li>fixed loading wrong subtitles when using recursive subs </li>
+          <li>fixed the progress bar getting taller when the chapters menu becomes visible</li>
+          <li>fixed a bug where the video would pause after clicking the progress/seek bar</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.0" date="2025-04-15">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added setting to search subtitles recursively. Searches folders relative to the parent folder of the playing file and folders defined by the `Load subtitles from` setting</li>
+          <li>Added support for opening youtube playlists from urls containing a playlist id</li>
+          <li>Added actions to rotate video clockwise (ctrl + r) and counter clockwise (ctrl + e)</li>
+        </ul>
+        <p>Bugfixes</p>
+        <ul>
+          <li>Fix tracks menus showing tracks from previously opened files</li>
+          <li>Fix subtitles added by drag and drop not being added to the subtitles menu</li>
+          <li>While the progress/seek slider is pressed the video is paused, fixes continuously opening the next video when dragged and held all the why to the end</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.3" date="2025-02-24">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed app not getting focused when opening a file while single instance is enabled and player is open</li>
+          <li>Fixed overlapping the window title with the duration info in the footer</li>
+          <li>Implemented screen inhibition on Windows</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.2" date="2025-01-22">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed shortcuts not working with non english system language</li>
+          <li>Fixed restoring playback position</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.1" date="2025-01-21">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed screen inhibition not working</li>
+          <li>Fixed setting volume through mpris2</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.0" date="2025-01-15">
+      <description>
+        <p>There have been lots of code refactoring, so make sure to report any bugs you encounter. There's a "Report bug" menu entry under the "Help" menu or in settings in the about page.</p>
+        <p>Features:</p>
+        <ul>
+          <li>Changed the settings related to restoring the playback position, if you changed the defaults you might have to redo them</li>
+          <li>Playlist: added context menu entries for non local urls to be opened in the browser and to be removed (from the playlist)</li>
+          <li>Added setting (in General) to start app in fullscreen</li>
+          <li>Added setting (in Subtitles) to control subtitle auto selection</li>
+          <li>Changed left and right mouse button default actions: left click is now play/pause and right click opens the context menu. Actions can be changed in settings Mouse page</li>
+          <li>Dragging the seek/progress bar will update the main view as well as the seekbar preview</li>
+          <li>Decreased the minimum window size</li>
+          <li>Replaced hardware decoding checkbox with an option in the hardware decoding combobox/drop-down</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Improved scrolling performance of playlist, shortcuts and seekbar's chapters menu</li>
+          <li>Fixed issue with setting shortcuts with modifier keys (ctrl, alt etc.)</li>
+          <li>Fixed active audio and subtitle tracks not being correctly checked</li>
+          <li>Removed empty header toolbar from settings window</li>
+          <li>Fixed a bug where the app would freeze when loading a file with lots of tracks</li>
+          <li>Improved menubar animation</li>
+          <li>The floating footer now hides when the mouse leaves the app</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.1" date="2024-09-27">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed thumbnail preview popup not resizing after disabling the previews</li>
+          <li>Use the same volume component for both footer styles</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.0" date="2024-08-26">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added floating footer/bottom toolbar style</li>
+          <li>Removed the docbook and moved its content to tooltips</li>
+          <li>Middle clicking the playlist scrolls to the playing item</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.2" date="2024-06-03">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Disabled track selection menus and buttons when there are no tracks to be selected</li>
+          <li>Fixed custom command toggling</li>
+          <li>Re-added "Scroll to playing item" and "Trash file" options to playlist context menu, lost during Qt6 port</li>
+          <li>Fixed some mpv properties not being correctly set at startup</li>
+          <li>Fixed video rendering on Windows</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.1" date="2024-05-17">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Subtitles menu not including manually added subtitles</li>
+          <li>Duration in the playlist being 0</li>
+          <li>Preview popup being visible for audio files</li>
+          <li>AB loop not resetting</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.0" date="2024-04-19">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Setting to open playlist items with single click</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Video opening in a separate window when using mpv version 0.38.0</li>
+          <li>Mute resetting when opening a new file</li>
+          <li>Playing item in playlist is no longer bold, it made text hard to read under certain conditions</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.2" date="2024-03-25">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Hiding/showing Playlist toolbar setting</li>
+          <li>Track sub-menus in Audio and Subtitles global menus being empty</li>
+          <li>Freeze when opening HamburgerMenu</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.1" date="2024-03-14">
+      <description>
+        <p>Ported to Qt6.</p>
+        <p>Some hwdec options have been removed, if needed they can be set in the settings under "Custom commands" as `set hwdec decoding_method_name` and choose "Run at startup"</p>
+        <p>Features:</p>
+        <ul>
+          <li>Opening items from the playlist is faster</li>
+          <li>If "Maximum recent files" setting is set to zero the recent files are removed from the config file</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Opening file through "Open File" action was not playing the file</li>
+          <li>Opening playlist file from playlist header was not doing anything</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.12.3" date="2023-11-15">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed subtitle chooser dialog not opening in the folder the current playing file is in</li>
+          <li>Fixed playlist covering the footer/bottom toolbar and making it hard to close the playlist when toggling it with the mouse is turned off</li>
+          <li>Fixed clearing the playlist not working</li>
+          <li>Fixed url not being added to recent files when opened through the "Open Url" action</li>
+        </ul>
+        <p>Features:</p>
+        <ul>
+          <li>Added "Escape" shortcut to close the settings window</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.12.2" date="2023-11-02">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Don't show preview popup when no filee is loaded or when playing an online video</li>
+          <li>Fixed thumbnails not working in the playlist</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.12.1" date="2023-08-31">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed file being paused on startup in certain cases</li>
+          <li>Fixed text color of the progress bar tooltip</li>
+          <li>Fixed move video up/down and decrease subtitle font size actions</li>
+          <li>Fixed playlist opening on top of the video when the overlay setting is turned off</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.12.0" date="2023-08-25">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added preview thumbnail to the progress bar, can be configured in the general settings page</li>
+          <li>Added setting to allow only a single instance, can be configured in the general settings page</li>
+          <li>Added action selection popup where you can search all available actions and trigger them (open with Ctrl+` (backtick), similar to KCommandBar)</li>
+          <li>Added setting to auto resize window to the video resolution, on Wayland the maximum size is not constrained</li>
+          <li>Added setting  to hide playlist toolbar</li>
+          <li>Added menu item for each settings page under settings menu</li>
+          <li>The screenshot path is shown in the osd when using mpv 0.36.0 or later versions</li>
+          <li>Added a "Scroll to playing item" entry to the playlist context menu</li>
+          <li>Added a "Open url" entry to the playlist context menu for online url</li>
+          <li>Hiding/showing the menubar, top toolbar and bottom toolbar is now animated</li>
+          <li>Added track selection menu entries to the hamburger menu</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed not blocking inhibition (turning the display off, sleep etc.) during playback</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.11.3" date="2023-07-12">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed color picker buttons in subtitles settings not reflecting the current color</li>
+          <li>Fixed subtitles color changes not applying immediately</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.11.2" date="2023-07-08">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed osd not showing</li>
+          <li>Fixed adding items to the playlist</li>
+          <li>Fixed wrong values being shown in the osd</li>
+          <li>Fixed subtitle font size setting not being loaded from config</li>
+          <li>Fixed progress bar changing size when not using a monospaced/fixed-width font</li>
+          <li>Fixed footer/bottom toolbar not hiding when moving to the monitor below, while Haruna is in fullscreen</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.11.1" date="2023-05-28">
+      <description>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed quit action not working</li>
+          <li>Fixed osd not showing</li>
+          <li>Fixed playlist repeating when the repeat setting was turned off</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.11.0" date="2023-05-14">
+      <description>
+        <p>The mpv code has been refactored to improve performance, there might still be some bugs, do report any at bugs.kde.org</p>
+        <p>Features:</p>
+        <ul>
+          <li>When restoring from minimized state, playback state is set to what it was when the minimization happened (only applies if the "Pause on minimize" setting is turned on)</li>
+          <li>Added Debug settings page, shows the paths to config files and allows to open them</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Fixed not being able to open files whose path contained certain characters</li>
+          <li>Fixed not being able to open .ts and .rm files</li>
+          <li>Fixed some text fields not saving their value under certain circumstances</li>
+          <li>Fixed screenshot format setting not working</li>
+          <li>Fixed recent files menu not closing</li>
+          <li>Fixed playlist context menu not closing when playlist hides</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.10.3" date="2023-01-29">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Playlist: added options to open m3u files (without support for extended attributes), add files and urls (only the url path will be displayed, no title and no duration), sort, clear and save the playlist</li>
+          <li>Playlist: added context menu for the playlist items</li>
+          <li>Playlist: added setting to remember playlist state</li>
+          <li>Subtitles: added setting to render subtitle in black borders</li>
+          <li>Video: added setting to set a default cover for music files</li>
+          <li>Added command line option to override the ytdl format selection setting (this option is overwritten if the GUI setting is changed)</li>
+          <li>Added MPRIS thumbnail</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>Recent files: fixed ordering, showing duplicates, clearing and adding when list is full</li>
+          <li>Fixed OSD showing without text</li>
+          <li>Playlist: fixed "Increase font size when fullscreen" setting not working</li>
+          <li>Playlist: removed rowHeight setting</li>
+        </ul>
+        <p>Bugfixes 0.10.1:</p>
+        <ul>
+          <li>Fixed not auto playing next file in playlist, when current file ends</li>
+          <li>Fixed opened file not playing when "Auto load videos from same folder" setting is disabled</li>
+        </ul>
+        <p>Bugfixes 0.10.2:</p>
+        <ul>
+          <li>Fixed crash when "Maximum recent files" setting was set to zero.</li>
+        </ul>
+        <p>Bugfixes 0.10.3:</p>
+        <ul>
+          <li>Fixed last played file not being remembered sometimes.</li>
+          <li>Fixed durations longer than 24 hours not displaying correctly and messing up with chapter labels.</li>
+          <li>Chapters menu has been rewritten to be more responsive with lots of chapters.</li>
+          <li>Fixed opening relative paths from a playlist file.</li>
+          <li>Fixed opening files containing # characters.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.9.3" date="2022-10-06">
+      <description>
+        <p>Features 0.9.0:</p>
+        <ul>
+          <li>Refactored the shortcuts configuration, now it's available in the settings window with the other settings, instead of opening another window</li>
+          <li>Hamburger menu now only show a few actions, the rest are available in a submenu</li>
+          <li>When menubar is hidden the hamburger menu will be shown in the header/toolbar and when the header is hidden it's shown in the footer</li>
+          <li>Added a proper context menu for the video</li>
+          <li>Added setting to start playback when resuming playback of a file</li>
+          <li>Added setting to set maximum number of recent files</li>
+          <li>Added option to clear recent files</li>
+          <li>Added setting to restore window size and position</li>
+          <li>Added settings to customize the subtitle font family, size, style (bold, italic), color, shadow color, shadow offset, border color, border width</li>
+          <li>Moved seek settings to playback settings page</li>
+          <li>Moved volume step setting to audio settings page</li>
+          <li>Custom commands that run on startup can be turned off so they are not set on next run</li>
+          <li>In mouse settings the action text, which is translatable, is shown instead of it's internal name</li>
+        </ul>
+        <p>Features 0.9.2:</p>
+        <ul>
+          <li>Added action to load a subtitle from a file dialog</li>
+        </ul>
+        <p>Bugfixes 0.9.0:</p>
+        <ul>
+          <li>Toggling menubar and header/toolbar through actions remembers the state on next run</li>
+          <li>Restore time position for youtube videos</li>
+          <li>Improve mpv initialization to allow better hardware decoding support</li>
+          <li>Ytdl-format property can be overwritten by a custom command action</li>
+        </ul>
+        <p>Bugfixes 0.9.1:</p>
+        <ul>
+          <li>Fixed two broken actions in the global menu</li>
+          <li>Fixed translations</li>
+        </ul>
+        <p>Bugfixes 0.9.2:</p>
+        <ul>
+          <li>Improved right to left layout</li>
+          <li>The window now scales when changing the system font size</li>
+          <li>Fixed a crash when changing the maximum recent files setting to 0</li>
+          <li>Fixed subtitles folders setting (these folders are used to search for subtitles)</li>
+          <li>Improved duration info font size scaling in footer, now its size should be closer to that of other components in the footer</li>
+          <li>Fixed an issue with determining mime types, which caused .ts video files to be treated as text files</li>
+          <li>Fixed not being able to click the add custom command button when there are no custom commands</li>
+        </ul>
+        <p>Bugfixes 0.9.3:</p>
+        <ul>
+          <li>Fixed playlist not loading videos from the same folder as the opened file</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.8.0" date="2022-04-20">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Support for global menu</li>
+          <li>Setting to pause playback when minimized</li>
+          <li>Setting to set the "time-position" saving interval</li>
+          <li>Recent files menu inside the file menu</li>
+          <li>More actions to the menubar</li>
+          <li>Action to load last played file (Ctrl+Shift+L), useful when loading last played file on startup is disabled</li>
+          <li>Action to restart playback/seek to beginning (F5 key)</li>
+          <li>Action to seek to watch later position (Ctrl+Shift+P), useful when resume playback on startup is disabled</li>
+        </ul>
+        <p>Bugfixes:</p>
+        <ul>
+          <li>There were two "remember time position" settings, doing different things, renamed the startup one to "resume playback"</li>
+          <li>Fixed a case where the playlist could not be closed with mouse hover anymore</li>
+          <li>OSD: When file can't be played show filename if there's no title</li>
+          <li>Stuttering caused by slow disks</li>
+          <li>Playlist items collapsing into each other</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.0" date="2020-02-28">
+      <description>
+        <p>First release.</p>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Haruna main window</caption>
+      <caption xml:lang="ar">النافذة الرئيسة لهارونا</caption>
+      <caption xml:lang="ca">Finestra principal de l'Haruna</caption>
+      <caption xml:lang="ca-valencia">Finestra principal d'Haruna</caption>
+      <caption xml:lang="cs">Hlavní okno Haruna</caption>
+      <caption xml:lang="de">Haruna-Hauptfenster</caption>
+      <caption xml:lang="en-GB">Haruna main window</caption>
+      <caption xml:lang="eo">Haruna ĉefa fenestro</caption>
+      <caption xml:lang="es">Ventana principal de Haruna</caption>
+      <caption xml:lang="eu">Haruna, leiho nagusia</caption>
+      <caption xml:lang="fi">Harunan pääikkuna</caption>
+      <caption xml:lang="fr">Fenêtre principale de Haruna</caption>
+      <caption xml:lang="gl">Xanela principal de Haruna.</caption>
+      <caption xml:lang="he">החלון הראשי של Haruna</caption>
+      <caption xml:lang="hi">हारुना मुख्य विंडो</caption>
+      <caption xml:lang="ia">Fenestra principal de Haruna</caption>
+      <caption xml:lang="id">Jendela utama Haruna</caption>
+      <caption xml:lang="it">Finestra principale di Haruna</caption>
+      <caption xml:lang="ka">Haruna-ის მთავარი ფანჯარა</caption>
+      <caption xml:lang="ko">Haruna 주 창</caption>
+      <caption xml:lang="lt">Haruna pagrindinis langas</caption>
+      <caption xml:lang="lv">„Haruna“ galvenais logs</caption>
+      <caption xml:lang="nl">Hoofdvenster van Haruna</caption>
+      <caption xml:lang="pl">Główne okno Haruna</caption>
+      <caption xml:lang="pt">Janela principal do Haruna</caption>
+      <caption xml:lang="pt-BR">Janela principal do Haruna</caption>
+      <caption xml:lang="ro">Fereastra principală Haruna</caption>
+      <caption xml:lang="ru">Главное окно Haruna</caption>
+      <caption xml:lang="sa">हारुणा मुख्य खिडकी</caption>
+      <caption xml:lang="sl">Haruna glavno okno</caption>
+      <caption xml:lang="sv">Haruna huvudfönster</caption>
+      <caption xml:lang="ta">ஹருணாவின் பிரதான சாளரம்</caption>
+      <caption xml:lang="tr">Haruna ana penceresi</caption>
+      <caption xml:lang="uk">Головне вікно Haruna</caption>
+      <caption xml:lang="zh-CN">Haruna 主窗口</caption>
+      <caption xml:lang="zh-TW">Haruna 主視窗</caption>
+      <image>https://cdn.kde.org/screenshots/haruna/haruna-breeze-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Haruna main window, breeze dark color scheme</caption>
+      <caption xml:lang="ar">النافذة الرئيسة لهارونا بالسمة الغامقة</caption>
+      <caption xml:lang="ca">Finestra principal de l'Haruna amb l'esquema de color Brisa fosca</caption>
+      <caption xml:lang="ca-valencia">Finestra principal d'Haruna amb l'esquema de color Brisa fosca</caption>
+      <caption xml:lang="de">Haruna-Hauptfenster, Farbschema Breeze dunkel</caption>
+      <caption xml:lang="en-GB">Haruna main window, breeze dark colour scheme</caption>
+      <caption xml:lang="eo">Haruna ĉefa fenestro, brizo malhela kolorskemo</caption>
+      <caption xml:lang="es">Ventana principal de Haruna con el esquema de color Brisa oscuro</caption>
+      <caption xml:lang="eu">Harunaren leiho nagusia, breeze iluna kolore-antolaera</caption>
+      <caption xml:lang="fi">Harunan pääikkuna tummalla Breeze-väriteemalla</caption>
+      <caption xml:lang="fr">Fenêtre principale de Haruna, thème « Breeze » de couleur sombre</caption>
+      <caption xml:lang="gl">Xanela principal de Haruna, esquema de cores escuro de Brisa.</caption>
+      <caption xml:lang="he">החלון הראשי של Haruna, ערכת צבע כהה של בריזה</caption>
+      <caption xml:lang="id">Jendela utama Haruna, skema warna breeze gelap</caption>
+      <caption xml:lang="it">Finestra principale di Haruna, schema di colori Brezza scuro</caption>
+      <caption xml:lang="ka">Haruna-ის მთავარი ფანჯარა, მუქი ფერის სქემა Breeze</caption>
+      <caption xml:lang="ko">Haruna 주 창, 어두운 Breeze 색 구성표</caption>
+      <caption xml:lang="lt">Haruna pagrindinis langas, breeze tamsus spalvų rinkinys</caption>
+      <caption xml:lang="lv">„Haruna“ galvenais logs ar „Breeze“ tumšo motīvu</caption>
+      <caption xml:lang="nl">Hoofdvenster van Haruna, donker kleurenschema van breeze</caption>
+      <caption xml:lang="pl">Główne okno Haruna, zestaw barw czarnej bryzy</caption>
+      <caption xml:lang="pt">Janela principal do Haruna, esquema de cores Brisa Escuro</caption>
+      <caption xml:lang="pt-BR">Janela principal do Haruna, esquema de cor breeze dark</caption>
+      <caption xml:lang="ro">Fereastra principală Haruna, schema de culori Briză întunecat</caption>
+      <caption xml:lang="ru">Главное окно Haruna, цветовая схема breeze dark</caption>
+      <caption xml:lang="sa">हारुणा मुख्य खिडकी, वायु गहरे रंग योजना</caption>
+      <caption xml:lang="sl">Haruna glavno okno, barvna shema temne sapice</caption>
+      <caption xml:lang="sv">Haruna huvudfönster, breeze mörkt färgschema</caption>
+      <caption xml:lang="ta">ஹருணாவின் பிரதான சாளரம், கருமையான பிரீஸ் நிறத்திட்டத்தில்</caption>
+      <caption xml:lang="tr">Esinti Koyu renk şeması ile Haruna ana penceresi</caption>
+      <caption xml:lang="uk">Головне вікно Haruna, схема кольорів breeze dark</caption>
+      <caption xml:lang="zh-CN">Haruna 主窗口，使用 Breeze Dark 配色方案</caption>
+      <caption xml:lang="zh-TW">Haruna 主視窗，Breeze Dark 配色方案</caption>
+      <image>https://cdn.kde.org/screenshots/haruna/haruna-breeze-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Haruna without menubar and toolbar</caption>
+      <caption xml:lang="ar">هارونا بلا شريط أدوات أو قائمة تشغيل</caption>
+      <caption xml:lang="ca">L'Haruna sense la barra de menús i la barra d'eines</caption>
+      <caption xml:lang="ca-valencia">Haruna sense la barra de menús i la barra d'eines</caption>
+      <caption xml:lang="cs">Haruna bez nabídky a panelu nástrojů</caption>
+      <caption xml:lang="de">Haruna ohne Menü- und Werkzeugleiste</caption>
+      <caption xml:lang="en-GB">Haruna without menubar and toolbar</caption>
+      <caption xml:lang="eo">Haruna sen menubreto kaj ilobreto</caption>
+      <caption xml:lang="es">Haruna sin las barras de menú ni de herramientas</caption>
+      <caption xml:lang="eu">Haruna menu-barra eta tresna-barra gabe</caption>
+      <caption xml:lang="fi">Haruna valikko- ja työkaluriveittä</caption>
+      <caption xml:lang="fr">Haruna sans barre de menus et barre d'outils</caption>
+      <caption xml:lang="gl">Haruna sen a barra de menú e a barra de ferramentas.</caption>
+      <caption xml:lang="he">Haruna בלי סרגלי תפריטים וכלים</caption>
+      <caption xml:lang="hi">मेनूबार और औज़ार पट्टी के बिना हारुना</caption>
+      <caption xml:lang="id">Haruna tanpa bilah menu dan bilah alat</caption>
+      <caption xml:lang="it">Haruna senza barra dei menu e barra degli strumenti</caption>
+      <caption xml:lang="ka">Haruna მენიუსა და ხელსაწყოების ზოლის გარეშე</caption>
+      <caption xml:lang="ko">메뉴 표시줄과 도구 모음을 숨긴 Haruna</caption>
+      <caption xml:lang="lt">Haruna be meniu juostos ir įrankių juostos</caption>
+      <caption xml:lang="lv">„Haruna“ bez izvēļņu joslas un rīkjoslas</caption>
+      <caption xml:lang="nl">Haruna zonder menubalk en werkbalk</caption>
+      <caption xml:lang="pl">Haruna bez paska menu i narzędzi</caption>
+      <caption xml:lang="pt">O Haruna sem o menu e barra de ferramentas</caption>
+      <caption xml:lang="pt-BR">Haruna sem a barra de menu e de ferramentas</caption>
+      <caption xml:lang="ro">Haruna fără bare de meniu și de unelte</caption>
+      <caption xml:lang="ru">Окно Haruna без панели меню и панели инструментов</caption>
+      <caption xml:lang="sa">मेनूबारं टूलबारं च विना हारुना</caption>
+      <caption xml:lang="sl">Haruna brez menijske vrstice in orodne vrstice</caption>
+      <caption xml:lang="sv">Haruna utan menyrad och verktygsrad</caption>
+      <caption xml:lang="ta">கருவிப்பட்டையும் பட்டிப்பட்டையும் இல்லாமல் ஹருணா</caption>
+      <caption xml:lang="tr">menü çubuğu ve araç çubuğu olmadan Haruna</caption>
+      <caption xml:lang="uk">Haruna без смужки меню і панелі інструментів</caption>
+      <caption xml:lang="zh-CN">不显示菜单栏和工具栏状态的 Haruna</caption>
+      <caption xml:lang="zh-TW">隱藏選單列和工具列的 Haruna</caption>
+      <image>https://cdn.kde.org/screenshots/haruna/haruna-minimal.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Haruna settings window</caption>
+      <caption xml:lang="ar">نافذة إعدادات هارونا</caption>
+      <caption xml:lang="ca">Finestra de configuració de l'Haruna</caption>
+      <caption xml:lang="ca-valencia">Finestra de configuració d'Haruna</caption>
+      <caption xml:lang="cs">Okno nastavení Haruna</caption>
+      <caption xml:lang="de">Haruna-Einstellungsfenster</caption>
+      <caption xml:lang="en-GB">Haruna settings window</caption>
+      <caption xml:lang="eo">Fenestro de agordoj de Haruna</caption>
+      <caption xml:lang="es">Ventana de preferencias de Haruna</caption>
+      <caption xml:lang="eu">Haruna, ezarpenen leihoa</caption>
+      <caption xml:lang="fi">Harunan asetusikkuna</caption>
+      <caption xml:lang="fr">Fenêtre de configuration de Haruna</caption>
+      <caption xml:lang="gl">Xanela de configuración de Haruna.</caption>
+      <caption xml:lang="he">חלון ההגדרות של Haruna</caption>
+      <caption xml:lang="hi">हारुना विन्यास विंडो</caption>
+      <caption xml:lang="id">Jendela pengaturan Haruna</caption>
+      <caption xml:lang="it">Finestra delle impostazioni di Haruna</caption>
+      <caption xml:lang="ka">Haruna-ის მორგების ფანჯარა</caption>
+      <caption xml:lang="ko">Haruna 설정 창</caption>
+      <caption xml:lang="lt">Haruna nuostatų langas</caption>
+      <caption xml:lang="lv">Haruna iestatījumu logs</caption>
+      <caption xml:lang="nl">Instellingenvenster van Haruna</caption>
+      <caption xml:lang="pl">Okno ustawień Haruna</caption>
+      <caption xml:lang="pt">Janela de configuração do Haruna</caption>
+      <caption xml:lang="pt-BR">Janela de configurações do Haruna</caption>
+      <caption xml:lang="ro">Fereastra de configurare Haruna</caption>
+      <caption xml:lang="ru">Окно параметров Haruna</caption>
+      <caption xml:lang="sa">हारुणा सेटिंग्स् विण्डो</caption>
+      <caption xml:lang="sl">Haruna okno nastavitev</caption>
+      <caption xml:lang="sv">Haruna inställningsfönster</caption>
+      <caption xml:lang="ta">ஹருனாவின் அமைப்புச்சாளரம்</caption>
+      <caption xml:lang="tr">Haruna ayarlar penceresi</caption>
+      <caption xml:lang="uk">Вікно параметрів Haruna</caption>
+      <caption xml:lang="zh-CN">Haruna 设置窗口</caption>
+      <caption xml:lang="zh-TW">Haruna 設定視窗</caption>
+      <image>https://cdn.kde.org/screenshots/haruna/haruna-shortcuts-settings.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.0"/>
+</component>

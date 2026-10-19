@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kmahjongg</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>KMahjongg</name>
+  <name xml:lang="ar">ماهجونج ك</name>
+  <name xml:lang="ast">KMahjongg</name>
+  <name xml:lang="ca">KMahjongg</name>
+  <name xml:lang="ca-valencia">KMahjongg</name>
+  <name xml:lang="cs">KMahjongg</name>
+  <name xml:lang="da">KMahjongg</name>
+  <name xml:lang="de">KMahjongg</name>
+  <name xml:lang="el">KMahjongg</name>
+  <name xml:lang="en-GB">KMahjongg</name>
+  <name xml:lang="eo">KMahjongg</name>
+  <name xml:lang="es">KMahjongg</name>
+  <name xml:lang="et">KMahjongg</name>
+  <name xml:lang="eu">KMahjongg</name>
+  <name xml:lang="fi">KMahjongg</name>
+  <name xml:lang="fr">KMahjongg</name>
+  <name xml:lang="gl">KMahjongg</name>
+  <name xml:lang="he">KMahjongg</name>
+  <name xml:lang="hu">KMahjongg</name>
+  <name xml:lang="ia">KMahjongg</name>
+  <name xml:lang="id">KMahjongg</name>
+  <name xml:lang="it">KMahjongg</name>
+  <name xml:lang="ka">KMahjongg</name>
+  <name xml:lang="ko">KMahjongg</name>
+  <name xml:lang="lv">KMahjongg</name>
+  <name xml:lang="nl">KMahjongg</name>
+  <name xml:lang="nn">KMahjongg</name>
+  <name xml:lang="pl">KMahjongg</name>
+  <name xml:lang="pt">KMahjongg</name>
+  <name xml:lang="pt-BR">KMahjongg</name>
+  <name xml:lang="ro">KMahjongg</name>
+  <name xml:lang="ru">KMahjongg</name>
+  <name xml:lang="sa">महजोङ्ग्</name>
+  <name xml:lang="sk">KMahjongg</name>
+  <name xml:lang="sl">KMahjongg</name>
+  <name xml:lang="sr">К‑маџонг</name>
+  <name xml:lang="sr-Latn">K‑madžong</name>
+  <name xml:lang="sr-ijekavian">К‑маџонг</name>
+  <name xml:lang="sr-ijekavianlatin">K‑madžong</name>
+  <name xml:lang="sv">Mahjongg</name>
+  <name xml:lang="tr">K Mahjongg</name>
+  <name xml:lang="uk">KMahjongg</name>
+  <name xml:lang="zh-CN">KMahjongg</name>
+  <name xml:lang="zh-TW">KMahjongg</name>
+  <summary>Mahjong Solitaire</summary>
+  <summary xml:lang="ar">ماهجونج سوليتير</summary>
+  <summary xml:lang="ca">Solitari Mahjongg</summary>
+  <summary xml:lang="ca-valencia">Solitari Mahjongg</summary>
+  <summary xml:lang="cs">Mahjong solitér</summary>
+  <summary xml:lang="de">Mahjong-Spiel</summary>
+  <summary xml:lang="el">Mahjong Solitaire</summary>
+  <summary xml:lang="en-GB">Mahjong Solitaire</summary>
+  <summary xml:lang="eo">Mahjong Solitaire</summary>
+  <summary xml:lang="es">Solitario Mahjong</summary>
+  <summary xml:lang="et">Mahjongi mäng</summary>
+  <summary xml:lang="eu">Mahjong bakar-jokoa</summary>
+  <summary xml:lang="fi">Mahjongg-yksinpeli</summary>
+  <summary xml:lang="fr">Mahjongg Solitaire</summary>
+  <summary xml:lang="gl">Xogo de Mahjong</summary>
+  <summary xml:lang="he">משחק מהג׳ונג ליחיד</summary>
+  <summary xml:lang="hu">Majong kirakó</summary>
+  <summary xml:lang="id">Mahjong Solitaire</summary>
+  <summary xml:lang="it">Solitario Mahjong</summary>
+  <summary xml:lang="ka">Mahjong Solitaire</summary>
+  <summary xml:lang="ko">마작 카드 게임</summary>
+  <summary xml:lang="lv">Mahjong Solitaire</summary>
+  <summary xml:lang="nl">Mahjong Solitaire</summary>
+  <summary xml:lang="nn">Mahjongg-kabal</summary>
+  <summary xml:lang="pl">Pasjans Mahjong</summary>
+  <summary xml:lang="pt">Mahjong Solitário</summary>
+  <summary xml:lang="pt-BR">Mahjong Solitário</summary>
+  <summary xml:lang="ro">Pasențe Mahjong</summary>
+  <summary xml:lang="ru">Пасьянс маджонг</summary>
+  <summary xml:lang="sa">महजोंग एकांत</summary>
+  <summary xml:lang="sk">Mahjong Solitaire</summary>
+  <summary xml:lang="sl">Pasjansa Mahjongg</summary>
+  <summary xml:lang="sr">Маџонг пасијанс</summary>
+  <summary xml:lang="sr-Latn">Madžong pasijans</summary>
+  <summary xml:lang="sr-ijekavian">Маџонг пасијанс</summary>
+  <summary xml:lang="sr-ijekavianlatin">Madžong pasijans</summary>
+  <summary xml:lang="sv">Mahjongg-patiens</summary>
+  <summary xml:lang="tr">Mahjongg Solitaire</summary>
+  <summary xml:lang="uk">Пасьянс «Маджонґ»</summary>
+  <summary xml:lang="zh-CN">麻将棋牌</summary>
+  <summary xml:lang="zh-TW">麻將遊戲</summary>
+  <description>
+    <p>
+      KMahjongg is a fun board game created after the famous oriental game of Mahjong (from Chinese 麻將).
+    </p>
+    <p xml:lang="ar">ماهجونج ك هي لعبة لوحية ممتعة أنشئت على غرار لعبة ماهجونج الشرقية الشهيرة (من الصينية 麻將).</p>
+    <p xml:lang="ca">El KMahjongg és un joc de tauler divertit creat a partir del famós joc oriental Mahjong (del xinès 麻將).</p>
+    <p xml:lang="ca-valencia">KMahjongg és un joc de tauler divertit creat a partir del famós joc oriental Mahjong (del xinés 麻將).</p>
+    <p xml:lang="cs">KMahjongg je zábavná desková hra vytvořená podle proslulé orientální hry Mahjong (z čínského 麻將).</p>
+    <p xml:lang="de">KMahjongg ist ein Brettspiel, das an das berühmte orientalische Spiel Mahjong (Chinesisch: 麻將) angelehnt ist.</p>
+    <p xml:lang="el">Το KMahjongg είναι ένα ευχάριστο επιτραπέζιο παιχνίδι με βάση το περίφημο ασιατικό Mahjong (στα Κινεζικά 麻將).</p>
+    <p xml:lang="en-GB">KMahjongg is a fun board game created after the famous oriental game of Mahjong (from Chinese 麻將).</p>
+    <p xml:lang="eo">KMahjongg estas amuza tabulludo kreita laŭ la fama orienta ludo de Mahjong (el la ĉina 麻將).</p>
+    <p xml:lang="es">KMahjongg es un divertido juego de tablero derivado del famoso juego oriental mahjong (del chino 麻將).</p>
+    <p xml:lang="et">KMahjongg on lõbus lauamäng, mille eeskujuks on kuulus idamaine Mahjong (hiina keeles 麻將).</p>
+    <p xml:lang="eu">KMahjongg, sortaldeko Mahjong (txineraz 麻將) joko ezagunean oinarritutako taula-joko dibertigarri bat da.</p>
+    <p xml:lang="fi">KMahjongg on hauska lautapeli, joka perustuu tunnettuun itämaiseen Mahjong-peliin (kiinaksi 麻將).</p>
+    <p xml:lang="fr">KMahjongg est un jeu de plateau amusant créé à partir du célèbre jeu oriental, le Mahjong (du chinois 麻將).</p>
+    <p xml:lang="gl">KMahjongg é un xogo de taboleiro divertido que se creou a partir do famoso xogo oriental Mahjong (do chinés «麻將»).</p>
+    <p xml:lang="he">KMahjongg הוא משחק לוח מהנה שנוצר בהשראת המשחק מהמזרח הרחוק בשם מה־ג׳ונג (בסינית 麻將).</p>
+    <p xml:lang="hu">A KMahjongg egy, a híres keleti Mahjong (kínaiul: 麻將) játék alapján készült digitális táblajáték.</p>
+    <p xml:lang="id">KMahjongg adalah permainan papan yang menyenangkan yang diciptakan setelah permainan oriental Mahjong yang terkenal (dari China 麻將).</p>
+    <p xml:lang="it">KMahjongg è un divertente gioco da tavolo basato sul famoso gioco orientale Mahjong (dal cinese 麻將).</p>
+    <p xml:lang="ka">KMahjongg სახალისო სამაგიდო თამაშია, რომელიც ცნობილი თამაშის, Mahjong (ჩინური თამაშიდან 麻將) ბაზაზე შეიქმნა.</p>
+    <p xml:lang="ko">KMahjongg은 마작 게임을 구현한 보드 게임입니다.</p>
+    <p xml:lang="lv">„KMahjongg“ ir aizraujoša galda spēle, kurai pamatā ir pazīstamā austrumu mah-džonga spēle (no ķīniešu valodas vārda 麻將).</p>
+    <p xml:lang="nl">KMahjongg is een bordspel naar het voorbeeld van het bekende oosterse spel Mahjongg (van het Chinese 麻將)</p>
+    <p xml:lang="nn">KMahjongg er eit morosamt brettspel basert på det gamle kinesiske spelet mahjong (frå kinsesik «麻將»).</p>
+    <p xml:lang="pl">KMahjongg jest grą planszową stworzoną na wzór słynnej gry orientalnej Mahjong (z chińskiego 麻將).</p>
+    <p xml:lang="pt">O KMahjongg é um divertido jogo de tabuleiro, criado com base no antigo jogo oriental Mahjong (do Chinês 麻將).</p>
+    <p xml:lang="pt-BR">KMahjongg é um divertido jogo de tabuleiro criado com base no famoso jogo oriental que é o Mahjong (do chinês 麻將).</p>
+    <p xml:lang="ru">KMahjongg — увлекательная настольная игра по мотивам знаменитой восточной игры маджонг (от китайского названия  麻將).</p>
+    <p xml:lang="sa">KMahjongg इति एकः मजेदारः बोर्डक्रीडा महजोङ्गस्य प्रसिद्धस्य प्राच्यक्रीडायाः (चीनीभाषायाः 麻將 इत्यस्मात्) अनन्तरं निर्मितः अस्ति ।</p>
+    <p xml:lang="sk">KMahjongg je zábavná dosková hra vytvorená podľa známej orientálnej hry Mahjong (z čínštiny 麻將).</p>
+    <p xml:lang="sl">KMahjongg je zabavna namizna igra, ki je bila ustvarjena po vzoru slavne orientalske igre imenovane Mahjong (po kitajsko 麻將).</p>
+    <p xml:lang="sr">К‑маџонг је забавна игра на табли заснована на чувеној оријенталној игри маџонг (од кинеског 麻將).</p>
+    <p xml:lang="sr-Latn">K‑madžong je zabavna igra na tabli zasnovana na čuvenoj orijentalnoj igri madžong (od kineskog 麻將).</p>
+    <p xml:lang="sr-ijekavian">К‑маџонг је забавна игра на табли заснована на чувеној оријенталној игри маџонг (од кинеског 麻將).</p>
+    <p xml:lang="sr-ijekavianlatin">K‑madžong je zabavna igra na tabli zasnovana na čuvenoj orijentalnoj igri madžong (od kineskog 麻將).</p>
+    <p xml:lang="sv">Mahjongg är ett roligt brädspel som är skapat baserat på det berömda orientaliska spelet Mahjong (från kinesiskans 麻將).</p>
+    <p xml:lang="tr">K Mahjongg, Mahjong’un ünlü doğu oyunu (Çin’den 麻將) sonrasında oluşturulmuş eğlenceli bir masa oyunudur.</p>
+    <p xml:lang="uk">KMahjongg — це захоплива гра на дошці, створена на основі відомої східної гри у маджонґ (китайською 麻將).</p>
+    <p xml:lang="zh-CN">KMahjongg 是一个来源于东方游戏“麻将”的有趣棋牌游戏。</p>
+    <p xml:lang="zh-TW">KMahjongg 是中國麻將變化出來的一種遊戲。</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/kmahjongg</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kmahjongg</url>
+  <url type="help">https://docs.kde.org/?application=kmahjongg</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kmahjongg&amp;source=appdata</url>
+  <content_rating type="oars-1.1"/>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Playing KMahjongg</caption>
+      <caption xml:lang="ar">يلعب ماهجونج ك</caption>
+      <caption xml:lang="ca">Jugant al KMahjongg</caption>
+      <caption xml:lang="ca-valencia">Jugant a KMahjongg</caption>
+      <caption xml:lang="cs">Hraní KMahjongg</caption>
+      <caption xml:lang="de">KMahjongg spielen</caption>
+      <caption xml:lang="el">Παίζω KMahjongg</caption>
+      <caption xml:lang="en-GB">Playing KMahjongg</caption>
+      <caption xml:lang="eo">Ludante KMahjongg</caption>
+      <caption xml:lang="es">Jugando al KMahjongg</caption>
+      <caption xml:lang="et">KMahjonggi mängimine</caption>
+      <caption xml:lang="eu">KMahjongg-ean jokatzea</caption>
+      <caption xml:lang="fi">KMahjonggin pelaaminen</caption>
+      <caption xml:lang="fr">Partie de KMahjongg en cours</caption>
+      <caption xml:lang="gl">Xogando a KMahjongg</caption>
+      <caption xml:lang="he">איך משחקים במהג׳ונג</caption>
+      <caption xml:lang="hu">Játék a KMahjonggal</caption>
+      <caption xml:lang="id">Memainkan KMahjongg</caption>
+      <caption xml:lang="it">Giocare con KMahjongg</caption>
+      <caption xml:lang="ka">KMahjongg-ის თამაში</caption>
+      <caption xml:lang="ko">KMahjongg 플레이</caption>
+      <caption xml:lang="lv">KMahjongg partija</caption>
+      <caption xml:lang="nl">KMahjongg spelen</caption>
+      <caption xml:lang="nn">Spelar KMahjongg</caption>
+      <caption xml:lang="pl">Grane w KMahjongg</caption>
+      <caption xml:lang="pt">A jogar ao KMahjongg</caption>
+      <caption xml:lang="pt-BR">Jogando o KMahjongg</caption>
+      <caption xml:lang="ro">Joc KMahjongg</caption>
+      <caption xml:lang="ru">Игра в KMahjongg</caption>
+      <caption xml:lang="sa">KMahjongg खेलते हुए</caption>
+      <caption xml:lang="sk">Hranie KMahjongg</caption>
+      <caption xml:lang="sl">Igra KMahjongg</caption>
+      <caption xml:lang="sv">Spela Mahjongg</caption>
+      <caption xml:lang="tr">K Mahjongg oynarken</caption>
+      <caption xml:lang="uk">Гра KMahjongg</caption>
+      <caption xml:lang="zh-CN">正在进行麻将游戏</caption>
+      <caption xml:lang="zh-TW">KMahjongg 遊玩畫面</caption>
+      <image>https://cdn.kde.org/screenshots/kmahjongg/kmahjongg.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <launchable type="desktop-id">org.kde.kmahjongg.desktop</launchable>
+  <provides>
+    <binary>kmahjongg</binary>
+  </provides>
+  <releases>
+    <release version="0.9.25123" date="2026-03-05"/>
+    <release version="0.9.25122" date="2026-02-05"/>
+    <release version="0.9.25121" date="2026-01-08"/>
+    <release version="0.9.25120" date="2025-12-11"/>
+    <release version="0.9.25083" date="2025-11-06"/>
+    <release version="0.9.25082" date="2025-10-09"/>
+    <release version="0.9.25081" date="2025-09-11"/>
+    <release version="0.9.25080" date="2025-08-14"/>
+    <release version="0.9.25043" date="2025-07-03"/>
+    <release version="0.9.25042" date="2025-06-05"/>
+    <release version="0.9.25041" date="2025-05-08"/>
+    <release version="0.9.25040" date="2025-04-17"/>
+    <release version="0.9.24123" date="2025-03-06"/>
+    <release version="0.9.24122" date="2025-02-06"/>
+    <release version="0.9.24121" date="2025-01-09"/>
+    <release version="0.9.24120" date="2024-12-12"/>
+    <release version="0.9.24083" date="2024-11-07"/>
+    <release version="0.9.24082" date="2024-10-10"/>
+    <release version="0.9.24081" date="2024-09-12"/>
+    <release version="0.9.24080" date="2024-08-22"/>
+    <release version="0.9.24052" date="2024-07-04"/>
+    <release version="0.9.24051" date="2024-06-13"/>
+    <release version="0.9.24050" date="2024-05-23"/>
+    <release version="0.9.24022" date="2024-04-11"/>
+    <release version="0.9.24021" date="2024-03-21"/>
+    <release version="0.9.24020" date="2024-02-28"/>
+    <release version="0.9.23085" date="2024-02-15"/>
+  </releases>
+</component>

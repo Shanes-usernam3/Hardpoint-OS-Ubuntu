@@ -1,0 +1,108 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libkcompactdisc
+Upstream-Contact: kde-multimedia@kde.org
+Source: https://invent.kde.org/multimedia/libkcompactdisc
+
+Files: *
+Copyright: 2007, Alexander Kern <alex.kern@gmx.de>
+           2018, Free Software Foundation
+           2010, Rosetta Contributors and Canonical Ltd
+           2005, Shaheedur R. Haque <srhaque@iee.org>
+License: GPL-2+
+
+Files: po/ca/libkcompactdisc.po
+       po/ca@valencia/libkcompactdisc.po
+       po/uk/libkcompactdisc.po
+Copyright: 2007-2020, This_file_is_part_of_KDE
+License: LGPL-2.1+3+KDEeV-translations
+
+Files: src/phonon_interface.*
+Copyright: 2004-2007, Matthias Kretz <kretz@kde.org>
+           Alexander Kern <alex.kern@gmx.de>
+License: LGPL-2+
+
+Files: src/wmlib/*
+Copyright: 1991-1997, Steven Grimm
+           2004-2006, Alexander Kern <alex.kern@gmx.de>
+           Dirk Försterling <milliByte@DeathsDoor.com>
+License: LGPL-2+
+
+Files: src/wmlib/audio/*
+Copyright: 1991-1997, Steven Grimm <koreth@midwinter.com>
+           2004-2006, Alexander Kern <alex.kern@gmx.de>
+           Dirk Försterling <milliByte@DeathsDoor.com>
+License: LGPL-2
+
+Files: src/wmlib/cdtext.c
+       src/wmlib/include/workman_defs.h
+Copyright: 1991-1997, Steven Grimm <koreth@midwinter.com>
+           2001-2003, Alex Kern <alex.kern@gmx.de>
+           Dirk Försterling <milliByte@DeathsDoor.com>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2013, Pino Toscano <pino@debian.org>
+           2020, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ --
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License version 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ --
+ On Debian systems, the full text of the GNU Library General Public License
+ version 2 can be found in the file `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+ --
+ On Debian systems, the full text of the GNU Library General Public License
+ version 2 can be found in the file `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1+3+KDEeV-translations
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1’,
+ likewise, the complete text of the GNU Lesser General Public License version
+ 3 can be found in `/usr/share/common-licenses/LGPL-3’.

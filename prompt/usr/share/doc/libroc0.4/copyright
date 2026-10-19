@@ -1,0 +1,67 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: roc-toolkit
+Source: https://github.com/roc-streaming/roc-toolkit
+Files-Excluded: debian
+
+Files: *
+Copyright: 2015-2024 Roc Streaming authors
+License: MPL-2.0
+
+Files: 3rdparty/dr_wav/*
+Copyright: 2016-2023 David Reid <mackron@gmail.com> (https://github.com/mackron/dr_libs)
+License: MIT-0 or Unlicense
+
+Files: 3rdparty/hedley/*
+Copyright: 2016-2021 Evan Nemerson <evan@nemerson.com> (https://nemequ.github.io/hedley/)
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2023-2024 Collabora, Ltd.
+License: MPL-2.0
+
+License: MPL-2.0
+ On Debian systems, the full text of the Mozilla Public License v2.0
+ can be found in the file `/usr/share/common-licenses/MPL-2.0`.
+
+License: CC0-1.0
+ On Debian systems the full text of the CC0-1.0 license can be found in
+ `/usr/share/common-licenses/CC0-1.0`.
+
+License: MIT-0
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: Unlicense
+ This is free and unencumbered software released into the public domain.
+ .
+ Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+ software, either in source code form or as a compiled binary, for any purpose,
+ commercial or non-commercial, and by any means.
+ .
+ In jurisdictions that recognize copyright laws, the author or authors of this
+ software dedicate any and all copyright interest in the software to the public
+ domain. We make this dedication for the benefit of the public at large and to
+ the detriment of our heirs and successors. We intend this dedication to be an
+ overt act of relinquishment in perpetuity of all present and future rights to
+ this software under copyright law.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ For more information, please refer to <http://unlicense.org/>

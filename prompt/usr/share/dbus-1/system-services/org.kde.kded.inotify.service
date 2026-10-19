@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.kded.inotify
+Exec=/usr/lib/kf6/kauth/libexec/kded-inotify-helper
+User=root

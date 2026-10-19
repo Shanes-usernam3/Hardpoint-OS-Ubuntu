@@ -1,0 +1,2 @@
+# Library only uses glib/gio APIs resulting in no NEEDED on libc.
+kde-config-gtk-style: library-not-linked-against-libc [usr/lib/*/gtk-3.0/modules/libcolorreload-gtk-module.so]

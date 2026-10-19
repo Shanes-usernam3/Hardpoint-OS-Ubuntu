@@ -1,0 +1,5 @@
+# -*- mode: conf -*-
+
+# It doesn't needs hardened functions
+7zip: hardening-no-fortify-functions [usr/lib/7zip/7zCon.sfx]
+7zip: hardening-no-fortify-functions [usr/lib/7zip/7z]

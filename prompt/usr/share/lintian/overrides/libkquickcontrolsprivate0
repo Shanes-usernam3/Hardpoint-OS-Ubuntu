@@ -1,0 +1,1 @@
+libkquickcontrolsprivate0: lacks-unversioned-link-to-shared-library example: usr/lib/*/libkquickcontrolsprivate.so [usr/lib/*/libkquickcontrolsprivate.so.6.*]

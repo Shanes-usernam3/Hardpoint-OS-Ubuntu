@@ -1,0 +1,293 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ZXing-C++
+Source: https://github.com/zxing-cpp/zxing-cpp
+Files-Excluded:
+ wrappers/android/*
+ wrappers/dotnet/*
+ wrappers/kn/*
+ wrappers/winrt/*
+ wrappers/ios/*
+ wrappers/wasm/*
+ test/samples/*
+
+Files: *
+Copyright:
+ 2007-2017 ZXing authors
+ 2016-2021 Nu-book Inc.
+ 2021-2022 gitlost
+ 2017-2024 Axel Waggershauser
+ 2023-2023 Antoine Mérino
+License: Apache-2.0
+Comment:
+ Full list of authors list (previously as AUTHORS.ZXing file):
+ .
+ Agustín Delgado (Servinform S.A.)
+ Aitor Almeida (University of Deusto)
+ Alasdair Mackintosh (Google)
+ Alex Dupre
+ Alexander Martin (Haase & Martin GmbH)
+ Alexander Schmidt
+ Anders Borg
+ Andreas Pillath
+ Andrew Walbran (Google)
+ Andrey Sitnik
+ Androida.hu / http://www.androida.hu/
+ Antonio Manuel Benjumea (Servinform S.A.)
+ Asier Iturralde
+ Asmuri Anwar
+ atereshchuk
+ Betaminos
+ Brian Brown (Google)
+ Bruce Allen
+ Chang Hyun Park
+ Christian Brunschen (Google)
+ Christoph Schulz (creatale GmbH)
+ crowdin.net
+ Daisuke Makiuchi
+ Daniel Switkin (Google)
+ Dave MacLachlan (Google)
+ David Phillip Oster (Google)
+ David Albert (Bug Labs)
+ David Olivier
+ David Walker (Google)
+ Diego Pierotto
+ Dion Hardy
+ drejc83
+ Eduardo Castillejo (University of Deusto)
+ Emanuele Aina
+ Eric Kobrin (Velocitude)
+ evansepdx
+ Erik Barbara
+ Facundo Farias
+ fakhri626
+ fics.danmark
+ Francois B. (Google)
+ Frank Yellin
+ Fred Lin (Anobiit)
+ gcstang
+ Guenther Grau
+ Guillaume Cottenceau
+ Guillaume Le Biller
+ Hannes Erven
+ Hartmut Neubauer (Schweers Informationstechnologie GmbH)
+ hosigumayuugi
+ hypest (Barcorama project)
+ Ian W. Davis
+ Isaac Potoczny-Jones
+ Ivan Poliakov
+ Jacob Haynes (Google)
+ Jeff Breidenbach (Google)
+ jjYBdx4IL
+ Joan Montané (Softcatalà.cat)
+ John Connolly (Bug Labs)
+ Jonas Petersson (Prisjakt)
+ Joseph Wain (Google)
+ Juha Kuitunen
+ Juho Mikkonen
+ Jukka Nurmi
+ jwicks
+ Kamil Kaczmarczyk
+ Kazuki Nishiura
+ Kevin O'Sullivan (SITA)
+ Kevin Xue (NetDragon Websoft Inc., China)
+ Lachezar Dobrev
+ Loránt Gerencsér
+ Luiz Silva
+ Luka Finžgar
+ Łukasz Stefaniak
+ Malte Starostik
+ Manuel Kasten
+ Marcelo
+ Marcin Górny
+ Markus Helm
+ Mateusz Jędrasik
+ Matthew Schulkind (Google)
+ Matt York (LifeMarks)
+ MicheleMas
+ mike32767
+ mikej06 / micjahn
+ Mike Kicinski
+ Mohamad Fairol
+ Morgan Courbet
+ Nikolaos Ftylitakis
+ Nikolaus Huber
+ Olexandr Nesterenko
+ Olli
+ Pablo Orduña (University of Deusto)
+ Paul Hackenberger
+ perennialmind
+ Radu Silaghi
+ Ralf Kistner
+ Randy Shen (Acer)
+ Rasmus Schrøder Sørensen
+ Richard Hřivňák
+ Romain Pechayre
+ Roman Nurik (Google)
+ Rustam Abdullaev
+ Ryan Alford
+ Sanford Squires
+ Satoshi Kametaya
+ Shachar Shemesh
+ Sean Owen (Google)
+ Shiyuan Guo / 郭世元
+ ShumovichY
+ Simon Flannery (Ericsson)
+ slepmog
+ Stephen Furlani
+ Steven Parkes
+ stoty74
+ Suraj Supekar
+ Sven Klinkhamer
+ taku0
+ techinstantdx
+ tgibson11
+ Thanapon Namjittrong
+ Thomas Gerbet
+ Thomas Weißschuh
+ Tim Gernat
+ v.anestis
+ Vince Francis (LifeMarks)
+ Wolfgang Jung
+ Yahoe001
+ Yakov Okshtein (Google)
+ Yao Wei
+ Younes CHTIOUI
+ Yunhao Tian
+
+Files: debian/*
+Copyright: 2020-2022, Boyuan Yang <byang@debian.org>
+License: CC0-1.0 or Apache-2.0
+
+Files: core/*
+Copyright:
+ 2016 ZXing authors
+ 2016-2021 Nu-book Inc.
+ 2017-2023 Axel Waggershauser
+ 2016 Huy Cuong Nguyen
+ 2006 Jeremias Maerki
+License: Apache-2.0
+
+Files:
+ core/src/libzueci/*
+ debian/libzueci/tools/*.php
+Copyright:
+ 2022-2023 gitlost
+License: BSD-3-Clause
+
+Files:
+ debian/libzueci/tools/data/*
+Copyright:
+ 1991-2023 Unicode, Inc.
+License: Unicode-license-v3
+Comment:
+ All data files downloaded from https://www.unicode.org/Public/ .
+ They can be used to regenerate C headers under core/src/libzueci directory.
+ .
+ License from https://unicode.org/license.txt . License FAQ is documented at
+ https://www.unicode.org/faq/unicode_license.html .
+
+Files: example/*
+Copyright:
+ 2016 Nu-book Inc.
+ 2020-2023 Axel Waggershauser
+License: Apache-2.0
+
+Files:
+ test/blackbox/*
+Copyright:
+ 2016 Nu-book Inc.
+ 2019 Axel Waggershauser
+License: Apache-2.0
+
+Files:
+ test/unit/*
+Copyright:
+ 2016 Jeremias Maerki
+ 2017-2022 Axel Waggershauser
+ 2017 Huy Cuong Nguyen
+ 2008-2017 ZXing authors
+ 2021-2022 gitlost
+License: Apache-2.0
+
+Files:
+ wrappers/c/*
+Copyright:
+ 2023 Axel Waggershauser
+ 2023 siiky
+License: Apache-2.0
+
+License: CC0-1.0
+ On Debian systems, the complete text of the Creative Commons Zero v1.0
+ Universal License can be found in "/usr/share/common-licenses/CC0-1.0".
+
+License: Apache-2.0
+ On Debian systems, the complete text of the Apache License Version 2.0
+ can be found in "/usr/share/common-licenses/Apache-2.0".
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, and the entire permission notice in its entirety,
+    including the disclaimer of warranties.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote
+    products derived from this software without specific prior
+    written permission.
+ .
+ THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ALL OF
+ WHICH ARE HEREBY DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+ USE OF THIS SOFTWARE, EVEN IF NOT ADVISED OF THE POSSIBILITY OF SUCH
+ DAMAGE.
+
+License: Unicode-license-v3
+ UNICODE LICENSE V3
+ .
+ COPYRIGHT AND PERMISSION NOTICE
+ .
+ Copyright © 1991-2023 Unicode, Inc.
+ .
+ NOTICE TO USER: Carefully read the following legal agreement. BY
+ DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+ SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+ TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+ DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of data files and any associated documentation (the "Data Files") or
+ software and any associated documentation (the "Software") to deal in the
+ Data Files or Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, and/or sell
+ copies of the Data Files or Software, and to permit persons to whom the
+ Data Files or Software are furnished to do so, provided that either (a)
+ this copyright and permission notice appear with all copies of the Data
+ Files or Software, or (b) this copyright and permission notice appear in
+ associated Documentation.
+ .
+ THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+ KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+ THIRD PARTY RIGHTS.
+ .
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+ BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+ OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+ FILES OR SOFTWARE.
+ .
+ Except as contained in this notice, the name of a copyright holder shall
+ not be used in advertising or otherwise to promote the sale, use or other
+ dealings in these Data Files or Software without prior written
+ authorization of the copyright holder.

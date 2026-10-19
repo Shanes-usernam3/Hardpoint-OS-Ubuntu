@@ -1,0 +1,4 @@
+# this is ok for zsync as it heavily modifies zlib in ways that are not
+# appropriate for the real one
+zsync: embedded-library zlib [usr/bin/zsync]
+zsync: embedded-library zlib [usr/bin/zsyncmake]

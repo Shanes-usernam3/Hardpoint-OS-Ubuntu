@@ -1,0 +1,14 @@
+libmergedlo.so
+libi18nlangtag.so
+libvclplug_genlo.so
+libvclplug_gtk3lo.so
+libstocserviceslo.so
+libbootstraplo.so
+libreglo.so
+libreflectionlo.so
+libuno_cppuhelpergcc3.so.3
+libuno_cppu.so.3
+libuno_sal.so.3
+types.rdb
+services/services.rdb
+types/oovbaapi.rdb

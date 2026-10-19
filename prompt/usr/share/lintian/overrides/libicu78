@@ -1,0 +1,5 @@
+# libicu78 installs multiple shared libraries, none of which is
+# actually called libicu.so.78, but all of which are libicu*.so.78 .
+libicu78: package-name-doesnt-match-sonames libicudata78 libicui18n78 libicuio78 libicutest78 libicutu78 libicuuc78
+# contains data only
+libicu78: shared-library-lacks-prerequisites [usr/lib/*/libicudata.so.*.?]

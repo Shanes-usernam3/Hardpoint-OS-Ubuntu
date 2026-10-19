@@ -1,0 +1,65 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libimobiledevice-glue
+Upstream-Contact: https://github.com/libimobiledevice/libimobiledevice-glue/issues
+Source: https://github.com/libimobiledevice/libimobiledevice-glue
+
+Files: *
+Copyright:
+ 2009-2024 Nikias Bassen <nikias@gmx.li>
+ 2009 Hector Martin <hector@marcansoft.com>
+ 2012-2014 Martin Szulecki <m.szulecki@libimobiledevice.org>
+ 2013 Federico Mena Quintero
+License: LGPL-2.1-only
+
+Files: debian/*
+Copyright: 2023 Boyuan Yang <byang@debian.org>
+License: LGPL-2.1-or-later
+
+Files:
+ include/*
+ src/*
+Copyright:
+ 2009-2024 Nikias Bassen <nikias@gmx.li>
+ 2009 Hector Martin <hector@marcansoft.com>
+ 2012-2014 Martin Szulecki <m.szulecki@libimobiledevice.org>
+ 2013 Federico Mena Quintero
+License: LGPL-2.1-or-later
+
+Files:
+ include/libimobiledevice-glue/sha.h
+ src/sha1.c
+ src/sha256.c
+ src/sha512.c
+Copyright:
+  Tom St Denis, tomstdenis@gmail.com, http://libtomcrypt.com
+License: permissive-1
+ The library is free for all purposes without any express guarantee
+ it works.
+
+License: LGPL-2.1-only
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; version 2.1
+ of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: LGPL-2.1-or-later
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.

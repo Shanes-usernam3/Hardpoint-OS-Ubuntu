@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="kpatrc"/>
+    <group name="General Settings">
+        <entry name="AutoDropEnabled" key="Autodrop" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="SolverEnabled" key="Solver" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="PlaySounds" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="RememberStateOnExit" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="CardTheme" key="Cardname" type="String">
+            <default>svg-oxygen-air</default>
+        </entry>
+        <entry name="KlondikeIsDrawOne" key="KlondikeEasy" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="SpiderSuitCount" key="SpiderSuits" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="SpiderStackFaceup" key="SpiderStackFaceup" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="GolfSolverIterationsLimit" key="GolfSolverIterationsLimit" type="Int">
+            <default>1000000</default>
+        </entry>
+        <entry name="FreecellSolverIterationsLimit" key="FreecellSolverIterationsLimit" type="Int">
+            <default>200000</default>
+        </entry>
+        <entry name="FreecellEmptyStackFill" key="FreecellEmptyStackFill" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="FreecellSequenceBuiltBy" key="FreecellSequenceBuiltBy" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="FreecellReserves" key="FreecellReserves" type="Int">
+            <default>4</default>
+        </entry>
+        <entry name="FreecellStacks" key="FreecellStacks" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="FreecellDecks" key="FreecellDecks" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="SimpleSimonSolverIterationsLimit" key="SimpleSimonSolverIterationsLimit" type="Int">
+            <default>200000</default>
+        </entry>
+        <entry name="BakersDozenSolverIterationsLimit" key="BakersDozenSolverIterationsLimit" type="Int">
+            <default>200000</default>
+        </entry>
+        <entry name="BakersDozenEmptyStackFill" key="BakersDozenEmptyStackFill" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="BakersDozenStackFacedown" key="BakersDozenStackFacedown" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="BakersDozenSequenceBuiltBy" key="BakersDozenSequenceBuiltBy" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="CastleSolverIterationsLimit" key="CastleSolverIterationsLimit" type="Int">
+            <default>200000</default>
+        </entry>
+        <entry name="CastleEmptyStackFill" key="CastleEmptyStackFill" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="CastleSequenceBuiltBy" key="CastleSequenceBuiltBy" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="CastleReserves" key="CastleReserves" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="CastleStacks" key="CastleStacks" type="Int">
+            <default>8</default>
+        </entry>
+        <entry name="CastleStackFaceup" key="CastleStackFaceup" type="Int">
+            <default>1</default>
+        </entry>
+        <entry name="CastleFoundation" key="CastleFoundation" type="Int">
+            <default>1</default>
+        </entry>
+        <entry name="CastleLayout" key="CastleLayout" type="Int">
+            <default>0</default>
+        </entry>
+    </group>
+</kcfg>

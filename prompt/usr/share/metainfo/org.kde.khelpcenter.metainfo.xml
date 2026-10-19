@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.khelpcenter</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
+  <name>Help Center</name>
+  <name xml:lang="ar">مركز مساعدة</name>
+  <name xml:lang="ast">Centru d'ayuda</name>
+  <name xml:lang="be">Цэнтр даведак</name>
+  <name xml:lang="bg">Помощен център</name>
+  <name xml:lang="ca">Centre d'ajuda</name>
+  <name xml:lang="ca-valencia">Centre d'ajuda</name>
+  <name xml:lang="cs">Centrum nápovědy</name>
+  <name xml:lang="da">Hjælpecenter</name>
+  <name xml:lang="de">Hilfezentrum</name>
+  <name xml:lang="el">Κέντρο βοήθειας</name>
+  <name xml:lang="en-GB">Help Centre</name>
+  <name xml:lang="eo">Helpocentro</name>
+  <name xml:lang="es">Centro de ayuda</name>
+  <name xml:lang="et">Abikeskus</name>
+  <name xml:lang="eu">Laguntza-gunea</name>
+  <name xml:lang="fi">Ohjekeskus</name>
+  <name xml:lang="fr">Centre d'aide</name>
+  <name xml:lang="gl">Centro de axuda</name>
+  <name xml:lang="he">מרכז העזרה</name>
+  <name xml:lang="hi">मदद केंद्र</name>
+  <name xml:lang="hu">Súgóközpont</name>
+  <name xml:lang="ia">Centro de Adjuta </name>
+  <name xml:lang="id">Pusat Bantuan</name>
+  <name xml:lang="is">Hjálparmiðstöð</name>
+  <name xml:lang="it">Centro documentazione</name>
+  <name xml:lang="ka">დახმარების ცენტრი</name>
+  <name xml:lang="ko">도움말 센터</name>
+  <name xml:lang="lv">Palīdzības centrs</name>
+  <name xml:lang="nl">Hulpcentrum</name>
+  <name xml:lang="nn">Hjelpesenter</name>
+  <name xml:lang="pa">ਮਦਦ ਸੈਂਟਰ</name>
+  <name xml:lang="pl">Ośrodek Pomocy</name>
+  <name xml:lang="pt">Centro de Ajuda</name>
+  <name xml:lang="pt-BR">Centro de ajuda</name>
+  <name xml:lang="ro">Centrul de ajutor</name>
+  <name xml:lang="ru">Центр справки</name>
+  <name xml:lang="sa">सहायता केन्द्र</name>
+  <name xml:lang="sk">Pomocník KDE</name>
+  <name xml:lang="sl">Središče za pomoč</name>
+  <name xml:lang="sr">Центар помоћи</name>
+  <name xml:lang="sr-Latn">Centar pomoći</name>
+  <name xml:lang="sr-ijekavian">Центар помоћи</name>
+  <name xml:lang="sr-ijekavianlatin">Centar pomoći</name>
+  <name xml:lang="sv">Hjälpcentral</name>
+  <name xml:lang="ta">உதவி மையம்</name>
+  <name xml:lang="tr">Yardım Merkezi</name>
+  <name xml:lang="uk">Центр довідки</name>
+  <name xml:lang="vi">Trung tâm trợ giúp</name>
+  <name xml:lang="zh-CN">帮助中心</name>
+  <name xml:lang="zh-TW">輔助中心</name>
+  <summary>Browse and search documentation</summary>
+  <summary xml:lang="ar">تصفح وابحث في التوثيق</summary>
+  <summary xml:lang="bg">Преглед и търсене на документация</summary>
+  <summary xml:lang="ca">Explora i cerca documentació</summary>
+  <summary xml:lang="ca-valencia">Explora i busca documentació</summary>
+  <summary xml:lang="cs">Procházejte a prohledávejte dokumentaci</summary>
+  <summary xml:lang="de">Dokumentation lesen und durchsuchen</summary>
+  <summary xml:lang="es">Explorar y buscar documentación</summary>
+  <summary xml:lang="eu">Arakatu eta dokumentazioa bilatu</summary>
+  <summary xml:lang="fi">Selaa ja etsi ohjeita</summary>
+  <summary xml:lang="fr">Parcourir et rechercher de la documentation</summary>
+  <summary xml:lang="he">עיון וחיפוש בתיעוד</summary>
+  <summary xml:lang="hu">Dokumentációk böngészése és keresése</summary>
+  <summary xml:lang="ia">Naviga e cerca in le documentation</summary>
+  <summary xml:lang="is">Vafra um og leita að leiðbeiningum</summary>
+  <summary xml:lang="it">Sfoglia e cerca nella documentazione</summary>
+  <summary xml:lang="ka">დაათვალიერეთ და მოიძიეთ დოკუმენტაცია</summary>
+  <summary xml:lang="ko">문서 찾아보기 및 검색</summary>
+  <summary xml:lang="nl">Blader in en doorzoek documentatie</summary>
+  <summary xml:lang="nn">Søk og bla gjennom hjelpetekstar</summary>
+  <summary xml:lang="pl">Przeglądarka i wyszukiwarka dokumentacji</summary>
+  <summary xml:lang="pt-BR">Navegue e pesquise na documentação</summary>
+  <summary xml:lang="ro">Caută și răsfoiește documentația</summary>
+  <summary xml:lang="ru">Просмотр и поиск документации</summary>
+  <summary xml:lang="sl">Brskaj in išči po dukumentaciji</summary>
+  <summary xml:lang="sv">Bläddra och sök i dokumentation</summary>
+  <summary xml:lang="ta">கையேடுகளில் தேடி உலாவலாம்</summary>
+  <summary xml:lang="tr">Belgelendirmeye göz atın ve içinde arama yapın</summary>
+  <summary xml:lang="uk">Перегляд документації та пошук у ній</summary>
+  <summary xml:lang="zh-CN">浏览和搜索文档</summary>
+  <summary xml:lang="zh-TW">瀏覽並搜尋文件</summary>
+  <description>
+    <p>
+      An application to search and read the documentation for all your KDE applications and system utilities
+    </p>
+    <p xml:lang="ar">تطبيق للبحث عن الوثائق وقراءتها لجميع تطبيقات كِيدِي وأدوات النظام المساعدة</p>
+    <p xml:lang="ast">Una aplicación pa buscar y lleer la documentación de toles aplicaciones y utilidaes del sistema de KDE</p>
+    <p xml:lang="be">Праграма для пошуку і чытання дакументацыі для ўсіх вашых праграм і сістэмных утыліт KDE</p>
+    <p xml:lang="bg">Приложение за търсене и четене на документация за всички приложения и системни инструменти на KDE</p>
+    <p xml:lang="ca">Una aplicació per a cercar i llegir la documentació per a totes les aplicacions KDE i utilitats del sistema</p>
+    <p xml:lang="ca-valencia">Una aplicació per a buscar i llegir la documentació per a totes les aplicacions KDE i utilitats del sistema</p>
+    <p xml:lang="da">Et program til at søge efter og læse dokumentation til alle dine KDE-programmer og -systemværktøjer</p>
+    <p xml:lang="de">Eine Anwendung zum Suchen und Lesen der Dokumentation für alle Ihre KDE-Anwendungen und Systemprogramme</p>
+    <p xml:lang="el">Μια εφαρμογή αναζήτησης και ανάγνωσης της τεκμηρίωσης για όλες τις εφαρμογές και τα βοηθητικά προγράμματα συστήματος του KDE</p>
+    <p xml:lang="en-GB">An application to search and read the documentation for all your KDE applications and system utilities</p>
+    <p xml:lang="eo">Aplikaĵo por serĉi kaj legi la dokumentaron por ĉiuj viaj KDE-aplikoj kaj sistemaj utilaĵoj</p>
+    <p xml:lang="es">Aplicación para buscar y leer la documentación de todas las aplicaciones y utilidades del sistema de KDE</p>
+    <p xml:lang="et">Rakendus kõigi paigaldatud KDE rakenduste ja süsteemi tööriistade dokumentatsiooni otsimiseks ja lugemiseks</p>
+    <p xml:lang="eu">Zure KDE aplikazio eta sistema-baliagarritasun guztien dokumentazioa bilatu eta irakurtzeko aplikazio bat</p>
+    <p xml:lang="fi">Sovellus kaikkien KDE-sovellustesi ja järjestelmätyökalujen ohjeiden etsimiseksi ja lukemiseksi</p>
+    <p xml:lang="fr">Une application de recherche et de lecture de la documentation de toutes vos applications KDE et utilitaires système</p>
+    <p xml:lang="gl">Unha aplicación para buscar na documentación e lela para todas as súas aplicacións de KDE e utilidades do sistema</p>
+    <p xml:lang="he">יישום לחיפוש ולקריאת תיעוד על כל היישומים וכלי המערכת של KDE</p>
+    <p xml:lang="hu">Alkalmazás az összes KDE alkalmazás és rendszerprogram dokumentációjának kereséséhez és olvasásához</p>
+    <p xml:lang="ia">Un application pro cercar e leger le documentation pro omne tu applicationes de KDE e utilitates de systema</p>
+    <p xml:lang="id">Sebuah aplikasi untuk mencari dan membaca dokumentasi untuk semua aplikasi KDE dan utilitas sistem kamu</p>
+    <p xml:lang="is">Forrit til þess að leita í og lesa hjálparskjöl fyrir öll KDE-forrit og kerfistól</p>
+    <p xml:lang="it">Un'applicazione per cercare e consultare la documentazione per tutte le applicazione di KDE e le utilità di sistema</p>
+    <p xml:lang="ka">აპლიკაცია თქვენი ყველა KDE-ის აპლიკაციისა და სისტემური ხელსაწყოების დოკუმენტაციის მოსაძებნად და წასაკითხად</p>
+    <p xml:lang="ko">KDE 앱과 시스템 유틸리티의 도움말과 문서를 검색 및 열람하는 앱</p>
+    <p xml:lang="lv">Programma visu KDE programmu un sistēmas utilītprogrammu dokumentācijas lasīšanai un meklēšanai tajā</p>
+    <p xml:lang="nl">Een toepassing om de documentatie te zoeken en te lezen voor al uw KDE toepassingen en systeemhulpmiddelen</p>
+    <p xml:lang="nn">Eit program for å bla eller søkja gjennom alle brukarhandbøkene for KDE-programma og systemverktøya</p>
+    <p xml:lang="pl">Aplikacja do wyszukiwania i czytania dokumentacji dla wszystkich twoich aplikacji KDE i narzędzi systemowych</p>
+    <p xml:lang="pt">Uma aplicação para pesquisar e ler a documentação de todas as suas aplicações do KDE e utilitários do sistema</p>
+    <p xml:lang="pt-BR">Um aplicativo para pesquisar e ler a documentação de todos os aplicativos do KDE e utilitários do sistema</p>
+    <p xml:lang="ro">Aplicație pentru căutarea și citirea documentației pentru toate aplicațiile KDE și utilitarele de sistem</p>
+    <p xml:lang="ru">Приложение для поиска и чтения документации к приложениям KDE и программам системы</p>
+    <p xml:lang="sa">भवतः सर्वेषां KDE अनुप्रयोगानाम्, प्रणाली-उपयोगितानां च दस्तावेजान् अन्वेष्टुं पठितुं च एकः अनुप्रयोगः</p>
+    <p xml:lang="sk">Aplikácia na vyhľadávanie a čítanie dokumentácie pre všetky vaše KDE aplikácie a systémové nástroje</p>
+    <p xml:lang="sl">Aplikacija za iskanje in branje dokumentacije za vse aplikacije KDE in sistemska orodja</p>
+    <p xml:lang="sv">Ett program för att söka i och läsa dokumentationen om alla KDE-program och systemverktyg</p>
+    <p xml:lang="ta">கே.டீ.யீ. செயலிகளுக்கும் இயங்குதள நிரல்களுக்கும் உள்ள கையேடுகளை படிக்கவும் அவற்றுக்குள் தேடவும் உதவும் செயலி</p>
+    <p xml:lang="tr">Tüm KDE uygulamalarının ve sistem izlencelerinin belgelendirmesini okumak ve içinde arama yapmak için bir uygulama</p>
+    <p xml:lang="uk">Програма для пошуку і читання документації до усіх програм KDE та засобів системи</p>
+    <p xml:lang="vi">Một ứng dụng để tìm kiếm và đọc các tài liệu cho tất cả các ứng dụng và tiện ích hệ thống KDE của bạn</p>
+    <p xml:lang="zh-CN">用于搜索和阅读所有 KDE 应用程序和系统实用程序的文档的应用程序</p>
+    <p xml:lang="zh-TW">用來搜尋和閱讀所有 KDE 應用程式與系統工具文件的應用程式</p>
+    <p>Features:</p>
+    <p xml:lang="ar">الميزات:</p>
+    <p xml:lang="ast">Funciones:</p>
+    <p xml:lang="be">Магчымасці:</p>
+    <p xml:lang="bg">Функции:</p>
+    <p xml:lang="ca">Característiques:</p>
+    <p xml:lang="ca-valencia">Característiques:</p>
+    <p xml:lang="cs">Vlastnosti:</p>
+    <p xml:lang="da">Funktioner:</p>
+    <p xml:lang="de">Funktionen:</p>
+    <p xml:lang="el">Χαρακτηριστικά:</p>
+    <p xml:lang="en-GB">Features:</p>
+    <p xml:lang="eo">Trajtoj:</p>
+    <p xml:lang="es">Funciones:</p>
+    <p xml:lang="et">Omadused:</p>
+    <p xml:lang="eu">Eginbideak:</p>
+    <p xml:lang="fi">Ominaisuuksia:</p>
+    <p xml:lang="fr">Fonctionnalités :</p>
+    <p xml:lang="gl">Funcionalidades:</p>
+    <p xml:lang="he">יכולות:</p>
+    <p xml:lang="hi">विशेषताएँ:</p>
+    <p xml:lang="hu">Szolgáltatások:</p>
+    <p xml:lang="ia">Characteristicas:</p>
+    <p xml:lang="id">Fitur:</p>
+    <p xml:lang="is">Eiginleikar:</p>
+    <p xml:lang="it">Funzionalità:</p>
+    <p xml:lang="ka">თვისებები:</p>
+    <p xml:lang="ko">기능:</p>
+    <p xml:lang="lv">Iespējas:</p>
+    <p xml:lang="nl">Mogelijkheden:</p>
+    <p xml:lang="nn">Funksjonar:</p>
+    <p xml:lang="pa">ਫੀਚਰ:</p>
+    <p xml:lang="pl">Możliwości:</p>
+    <p xml:lang="pt">Funcionalidades:</p>
+    <p xml:lang="pt-BR">Recursos:</p>
+    <p xml:lang="ro">Caracteristici:</p>
+    <p xml:lang="ru">Возможности:</p>
+    <p xml:lang="sa">गुणाः:</p>
+    <p xml:lang="sk">Funkcie:</p>
+    <p xml:lang="sl">Zmožnosti:</p>
+    <p xml:lang="sr">Могућности:</p>
+    <p xml:lang="sr-Latn">Mogućnosti:</p>
+    <p xml:lang="sr-ijekavian">Могућности:</p>
+    <p xml:lang="sr-ijekavianlatin">Mogućnosti:</p>
+    <p xml:lang="sv">Funktioner:</p>
+    <p xml:lang="ta">அம்சங்கள்:</p>
+    <p xml:lang="tr">Özellikler:</p>
+    <p xml:lang="uk">Можливості:</p>
+    <p xml:lang="vi">Tính năng:</p>
+    <p xml:lang="zh-CN">功能：</p>
+    <p xml:lang="zh-TW">功能：</p>
+    <ul>
+      <li>Show documentation from various sources (applications from KDE community, man pages, etc)</li>
+      <li xml:lang="ar">عرض التّوثيقات من مختلف المصادر (التّطبيقات من مجتمع كِيدِي، صفحات man وغيرها)</li>
+      <li xml:lang="be">Паказ дакументацыі з розных крыніц (праграмы супольнасці KDE, старонкі дапаможнікаў і г. д.)</li>
+      <li xml:lang="bg">Показване на документация от различни източници (приложения от  KDE общност, man страници и др.)</li>
+      <li xml:lang="ca">Mostra la documentació de diverses fonts (aplicacions de la comunitat KDE, pàgines «man», etc.)</li>
+      <li xml:lang="ca-valencia">Mostra la documentació de diverses fonts (aplicacions de la comunitat KDE, pàgines «man», etc.)</li>
+      <li xml:lang="da">Vis dokumentation fra diverse kilder (programmer fra KDE-fællesskabet, man-sider, osv.)</li>
+      <li xml:lang="de">Dokumentation aus unterschiedlichen Quellen anzeigen (KDE-Anwendungen, Man-Pages usw.)</li>
+      <li xml:lang="el">Να εμφανίζεται τεκμηρίωση από διάφορες πηγές (εφαρμογές από την κοινότητα του KDE, σελίδες εγχειριδίου, κλπ)</li>
+      <li xml:lang="en-GB">Show documentation from various sources (applications from KDE community, man pages, etc)</li>
+      <li xml:lang="eo">Montri dokumentadon el diversaj fontoj (aplikaĵoj de KDE-komunumo, manpaĝoj, ktp)</li>
+      <li xml:lang="es">Mostrar documentación de diversas fuentes (aplicaciones de la comunidad KDE, páginas man, etc.)</li>
+      <li xml:lang="et">Paljudest allikatest pärit (KDE kogukonna rakendused, manuaalileheküljed jne.) dokumentatsiooni näitamine</li>
+      <li xml:lang="eu">Erakutsi hainbat jatorritako dokumentazioa (KDE elkarteko aplikazioetatik, man orrietatik, etab.)</li>
+      <li xml:lang="fi">Katsele ohjeita useista lähteistä (KDE-yhteisön sovelluksista, man-sivuista jne.)</li>
+      <li xml:lang="fr">Afficher la documentation depuis diverses sources (les applications de la communauté KDE, les pages de manuel, etc.)</li>
+      <li xml:lang="gl">Amosar documentación de varias fontes (aplicacións de KDE, páxinas «man», etc.)</li>
+      <li xml:lang="he">הצגת תיעוד ממגוון מקורות (יישומים מקהילת KDE, עמודי הדרכה ועוד)</li>
+      <li xml:lang="hi">विभिन्न स्रोतों से दस्तावेज दिखाएँ ( केडीई समूह के अनुप्रयोग, मेन पेज आदि )</li>
+      <li xml:lang="hu">Megjeleníti a különböző forrásokból származó dokumentációkat (a KDE közösség alkalmazásai, man oldalak, stb)</li>
+      <li xml:lang="ia">Monstra documentationes varie fontes (applicationes ex communutate de KDE, paginas man, etc)</li>
+      <li xml:lang="id">Menampilkan dokumentasi dari berbagai sumberdaya (aplikasi dari komunitas KDE, halaman manual, dll)</li>
+      <li xml:lang="is">Birta hjálparskjöl úr ýmsum áttum (forrit frá KDE-samfélaginu, man-síður, o.fl.)</li>
+      <li xml:lang="it">Mostra la documentazione da varie fonti (applicazioni dalla comunità KDE, pagine di manuale, ecc)</li>
+      <li xml:lang="ka">დოკუმენტაციის ჩვენება სხვადასხვა წყაროებიდან (პროგრამები KDE თემიდან, დახმარების გვერდებიდან და ა.შ.)</li>
+      <li xml:lang="ko">KDE 커뮤니티 앱, man 페이지 등 여러 곳의 문서 표시</li>
+      <li xml:lang="lv">Parāda dokumentāciju no dažādiem avotiem (KDE kopienas programmas, „man“ lapas u.c.)</li>
+      <li xml:lang="nl">Toon documentatie uit verschillende bronnen (toepassingen uit de KDE gemeenschap, manpagina's, etc)</li>
+      <li xml:lang="nn">Vis hjelpetekstar frå ulike kjelder (KDE-program, man-sider o.l.)</li>
+      <li xml:lang="pl">Wyświetlanie dokumentacji z różnych źródeł (aplikacje ze społeczności KDE, strony instrukcji, itp.)</li>
+      <li xml:lang="pt">Mostra a documentação de várias fontes (aplicações das comunidades do KDE, páginas de manual do 'man', etc.)</li>
+      <li xml:lang="pt-BR">Exibe a documentação de várias fontes (aplicativos da comunidade KDE, páginas de manual, etc)</li>
+      <li xml:lang="ro">Arată documentație din diferite surse (aplicații de la comunitatea KDE, pagini de manual, etc.)</li>
+      <li xml:lang="ru">Просмотр документации из разных источников: из поставки приложений от сообщества KDE, страниц руководств UNIX и других;</li>
+      <li xml:lang="sa">विभिन्नस्रोताभ्यां दस्तावेजीकरणं दर्शयतु (KDE समुदायतः अनुप्रयोगाः, man पृष्ठानि इत्यादयः)</li>
+      <li xml:lang="sk">Zobraziť dokumentáciu z rôznych zdrojov (aplikácie z KDE komunity, man stránky atď.)</li>
+      <li xml:lang="sl">Pokaže dokumentacijo iz različnih virov (programov skupnosti KDE, strani man, itd.)</li>
+      <li xml:lang="sr">приказ документације из различитих извора (програми заједнице КДЕ, упутне странице, итд.)</li>
+      <li xml:lang="sr-Latn">prikaz dokumentacije iz različitih izvora (programi zajednice KDE, uputne stranice, itd.)</li>
+      <li xml:lang="sr-ijekavian">приказ документације из различитих извора (програми заједнице КДЕ, упутне странице, итд.)</li>
+      <li xml:lang="sr-ijekavianlatin">prikaz dokumentacije iz različitih izvora (programi zajednice KDE, uputne stranice, itd.)</li>
+      <li xml:lang="sv">Visa dokumentation från olika källor (program från KDE-gemenskapen, manualsidor, etc.)</li>
+      <li xml:lang="ta">பல இடங்களிலிருந்தான கையேடுகளை காட்டும் (கே.டீ.யீ. செயலிகள், இயங்குதள கையேடுகள் இத்தியாதி)</li>
+      <li xml:lang="tr">Farklı kaynaklardan belgelendirmeleri göster (KDE topluluğu, kılavuz sayfaları, vs)</li>
+      <li xml:lang="uk">Показ документації з різних джерел (програми спільноти KDE, сторінки man тощо)</li>
+      <li xml:lang="vi">Hiện tài liệu từ nhiều nguồn khác nhau (các ứng dụng của cộng đồng KDE, các trang sổ tay, v.v.)</li>
+      <li xml:lang="zh-CN">显示来自从多种来源的文档（KDE 社区应用，man 页面，等）</li>
+      <li xml:lang="zh-TW">顯示不同來源的文件（自 KDE 社群而來的應用程式、man 手冊頁等）</li>
+      <li>Search through the available documentation</li>
+      <li xml:lang="ar">البحث داخل التّوثيقات المتوفّرة</li>
+      <li xml:lang="ast">Busca pente la documentación disponible</li>
+      <li xml:lang="be">Пошук у даступнай дакументацыі</li>
+      <li xml:lang="bg">Търсене в наличната документация</li>
+      <li xml:lang="ca">Cerca a la documentació disponible</li>
+      <li xml:lang="ca-valencia">Busca en la documentació disponible</li>
+      <li xml:lang="da">Søg i den tilgængelige dokumentation</li>
+      <li xml:lang="de">Die verfügbare Dokumentation durchsuchen</li>
+      <li xml:lang="el">Αναζήτηση στη διαθέσιμη τεκμηρίωση</li>
+      <li xml:lang="en-GB">Search through the available documentation</li>
+      <li xml:lang="eo">Serĉi tra la havebla dokumentado</li>
+      <li xml:lang="es">Buscar en la documentación disponible</li>
+      <li xml:lang="et">Võimalus otsida saadaolevas dokumentatsioonis</li>
+      <li xml:lang="eu">Bilatu erabilgarri dagoen dokumentazioan zehar</li>
+      <li xml:lang="fi">Etsi saatavilla olevista ohjeista</li>
+      <li xml:lang="fr">Rechercher dans la documentation disponible</li>
+      <li xml:lang="gl">Buscar na documentación dispoñíbel</li>
+      <li xml:lang="he">חיפוש בתיעוד הזמין</li>
+      <li xml:lang="hi">उपलब्ध दस्तावेजों में खोजें</li>
+      <li xml:lang="hu">Keresés az elérhető dokumentációkban</li>
+      <li xml:lang="ia">Cerca a transverso del documentation disponibile</li>
+      <li xml:lang="id">Pencarian melalui dokumentasi yang tersedia</li>
+      <li xml:lang="is">Leita í tiltækum leiðbeiningum</li>
+      <li xml:lang="it">Cerca nella documentazione disponibile</li>
+      <li xml:lang="ka">ხელმისაწვდომ დოკუმენტაციაში ძებნა</li>
+      <li xml:lang="ko">사용 가능한 문서 내에서 검색</li>
+      <li xml:lang="lv">Meklē pieejamajā dokumentācijā</li>
+      <li xml:lang="nl">Zoeken in de beschikbare documentatie</li>
+      <li xml:lang="nn">Søk gjennom tilgjengelege hjelpetekstar</li>
+      <li xml:lang="pa">ਮੌਜੂਦਾ ਦਸਤਾਵੇਜ਼ਾਂ ਰਾਹੀਂ ਖੋਜੋ</li>
+      <li xml:lang="pl">Wyszukiwanie w dostępnej dokumentacji</li>
+      <li xml:lang="pt">Pesquisa pela documentação disponível</li>
+      <li xml:lang="pt-BR">Pesquise na documentação disponível</li>
+      <li xml:lang="ro">Caută prin documentația disponibilă</li>
+      <li xml:lang="ru">Поиск по доступной документации.</li>
+      <li xml:lang="sa">उपलब्धदस्तावेजानां माध्यमेन अन्वेषणं कुर्वन्तु</li>
+      <li xml:lang="sk">Prehľadávať v dostupnej dokumentácii</li>
+      <li xml:lang="sl">Išči po razpoložljivi dokumentaciji</li>
+      <li xml:lang="sr">тражење кроз доступну документацију</li>
+      <li xml:lang="sr-Latn">traženje kroz dostupnu dokumentaciju</li>
+      <li xml:lang="sr-ijekavian">тражење кроз доступну документацију</li>
+      <li xml:lang="sr-ijekavianlatin">traženje kroz dostupnu dokumentaciju</li>
+      <li xml:lang="sv">Sök igenom tillgänglig dokumentation</li>
+      <li xml:lang="ta">கையேடுகளில் தேடுங்கள்</li>
+      <li xml:lang="tr">Mevcut belgelendirmede arama yapın</li>
+      <li xml:lang="uk">Пошук у доступній документації</li>
+      <li xml:lang="vi">Tìm kiếm các tài liệu hiện có</li>
+      <li xml:lang="zh-CN">在可用的文档中搜索</li>
+      <li xml:lang="zh-TW">在可用的文件中搜尋</li>
+    </ul>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>KHelpCenter main window</caption>
+      <caption xml:lang="ar">الشاشة الرئيسة لمركز مساعدتك</caption>
+      <caption xml:lang="ast">La ventana principal de KHelpCenter</caption>
+      <caption xml:lang="be">Галоўнае акно KHelpCenter</caption>
+      <caption xml:lang="bg">Основен прозорец на KHelpCenter</caption>
+      <caption xml:lang="ca">Finestra principal del KHelpCenter</caption>
+      <caption xml:lang="ca-valencia">Finestra principal de KHelpCenter</caption>
+      <caption xml:lang="cs">Hlavní okno KHelpCenter</caption>
+      <caption xml:lang="da">KHelpCenters hovedvindue</caption>
+      <caption xml:lang="de">Hauptfenster von KHelpCenter</caption>
+      <caption xml:lang="el">Κύριο παράθυρο του KHelpCenter</caption>
+      <caption xml:lang="en-GB">KHelpCenter main window</caption>
+      <caption xml:lang="eo">KHelpCenter ĉefa fenestro</caption>
+      <caption xml:lang="es">Ventana principal de KHelpCenter</caption>
+      <caption xml:lang="et">KDE abikeskuse peaaken</caption>
+      <caption xml:lang="eu">KHelpCenter leiho nagusia</caption>
+      <caption xml:lang="fi">KHelpCenterin pääikkuna</caption>
+      <caption xml:lang="fr">La fenêtre principale de KHelpCenter</caption>
+      <caption xml:lang="gl">Xanela principal de KHelpCenter</caption>
+      <caption xml:lang="he">החלון הראשי של KHelpCenter</caption>
+      <caption xml:lang="hu">A KHelpCenter főablaka</caption>
+      <caption xml:lang="ia">fenestra principal de KHelpCenter</caption>
+      <caption xml:lang="id">Jendela utama KHelpCenter</caption>
+      <caption xml:lang="is">Aðalgluggi KHelpCenter</caption>
+      <caption xml:lang="it">Finestra principale di KHelpCenter</caption>
+      <caption xml:lang="ka">KHelpCenter -ის მთავარი ფანჯარა</caption>
+      <caption xml:lang="ko">KHelpCenter 주 창</caption>
+      <caption xml:lang="lv">„KHelpCenter“ galvenais logs</caption>
+      <caption xml:lang="nl">Hoofdvenster van KHelpCenter</caption>
+      <caption xml:lang="nn">Hovudvindauge for hjelpesenteret</caption>
+      <caption xml:lang="pa">ਕੇ-ਮਦਦ ਸੈਂਟਰ ਮੁ਼ੱਖ ਵਿੰਡੋ</caption>
+      <caption xml:lang="pl">Główne okno KOśrodkaPomocy</caption>
+      <caption xml:lang="pt">Janela principal do KHelpCenter</caption>
+      <caption xml:lang="pt-BR">Janela principal do KHelpCenter</caption>
+      <caption xml:lang="ro">Fereastra principală KHelpCenter</caption>
+      <caption xml:lang="ru">Главное окно KHelpCenter</caption>
+      <caption xml:lang="sa">KHelpCenter मुख्यविण्डो</caption>
+      <caption xml:lang="sk">KHelpCenter hlavné okno</caption>
+      <caption xml:lang="sl">Glavno okno - KHelpCenter</caption>
+      <caption xml:lang="sv">Huvudfönstret i Hjälpcentralen</caption>
+      <caption xml:lang="ta">கேஹெல்புசெண்டரின் பிரதான சாளரம்</caption>
+      <caption xml:lang="tr">K Yardım Merkezi ana penceresi</caption>
+      <caption xml:lang="uk">Головне вікно KHelpCenter</caption>
+      <caption xml:lang="vi">Cửa sổ chính KHelpCenter</caption>
+      <caption xml:lang="zh-CN">KHelpCenter 主窗口</caption>
+      <caption xml:lang="zh-TW">KHelpCenter 主視窗</caption>
+      <image width="1920" height="1044">https://kde.org/images/screenshots/khelpcenter.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://apps.kde.org/khelpcenter</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=khelpcenter</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=khelpcenter&amp;source=appdata</url>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>khelpcenter</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.khelpcenter.desktop</launchable>
+  <releases>
+    <release version="6.0.25123" date="2026-03-05"/>
+    <release version="6.0.25122" date="2026-02-05"/>
+    <release version="6.0.25121" date="2026-01-08"/>
+    <release version="6.0.25120" date="2025-12-11"/>
+    <release version="6.0.25083" date="2025-11-06"/>
+    <release version="6.0.25082" date="2025-10-09"/>
+    <release version="6.0.25081" date="2025-09-11"/>
+    <release version="6.0.25080" date="2025-08-14"/>
+    <release version="6.0.25043" date="2025-07-03"/>
+    <release version="6.0.25042" date="2025-06-05"/>
+    <release version="6.0.25041" date="2025-05-08"/>
+    <release version="6.0.25040" date="2025-04-17"/>
+    <release version="6.0.24123" date="2025-03-06"/>
+    <release version="6.0.24122" date="2025-02-06"/>
+    <release version="6.0.24121" date="2025-01-09"/>
+    <release version="6.0.24120" date="2024-12-12"/>
+    <release version="6.0.24083" date="2024-11-07"/>
+    <release version="6.0.24082" date="2024-10-10"/>
+    <release version="6.0.24081" date="2024-09-12"/>
+    <release version="6.0.24080" date="2024-08-22"/>
+    <release version="6.0.24052" date="2024-07-04"/>
+    <release version="6.0.24051" date="2024-06-13"/>
+    <release version="6.0.24050" date="2024-05-23"/>
+    <release version="6.0.24022" date="2024-04-11"/>
+    <release version="6.0.24021" date="2024-03-21"/>
+    <release version="6.0.24020" date="2024-02-28"/>
+    <release version="5.8.23085" date="2024-02-15"/>
+  </releases>
+</component>

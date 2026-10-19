@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>signing</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<h1 id="signature-keys-and-user-identity-in-libolm">Signature keys and
+user identity in libolm</h1>
+<p>The use of any public-key based cryptography system such as Olm
+presents the need for our users Alice and Bob to verify that they are in
+fact communicating with each other, rather than a man-in-the-middle.
+Typically this requires an out-of-band process in which Alice and Bob
+verify that they have the correct public keys for each other. For
+example, this might be done via physical presence or via a voice
+call.</p>
+<p>In the basic <a
+href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md">Olm</a>
+protocol, it is sufficient to compare the public Curve25519 identity
+keys. As a naive example, Alice would meet Bob and ensure that the
+identity key she downloaded from the key server matched that shown by
+his device. This prevents the eavesdropper Eve from decrypting any
+messages sent from Alice to Bob, or from masquerading as Bob to send
+messages to Alice: she has neither Alice’s nor Bob’s private identity
+key, so cannot successfully complete the triple-DH calculation to
+compute the shared secret, <span class="math inline">S</span>, which in
+turn prevents her decrypting intercepted messages, or from creating new
+messages with valid MACs. Obviously, for protection to be complete, Bob
+must similarly verify Alice’s key.</p>
+<p>However, the use of the Curve25519 key as the “fingerprint” in this
+way makes it difficult to carry out signing operations. For instance, it
+may be useful to cross-sign identity keys for different devices, or, as
+discussed below, to sign one-time keys. Curve25519 keys are intended for
+use in DH calculations, and their use to calculate signatures is
+non-trivial.</p>
+<p>The solution adopted in this library is to generate a signing key for
+each user. This is an <a href="http://ed25519.cr.yp.to/">Ed25519</a>
+keypair, which is used to calculate a signature on an object including
+both the public Ed25519 signing key and the public Curve25519 identity
+key. It is then the <strong>public Ed25519 signing key</strong> which is
+used as the device fingerprint which Alice and Bob verify with each
+other.</p>
+<p>By verifying the signatures on the key object, Alice and Bob then get
+the same level of assurance about the ownership of the Curve25519
+identity keys as if they had compared those directly.</p>
+<h2 id="signing-one-time-keys">Signing one-time keys</h2>
+<p>The Olm protocol requires users to publish a set of one-time keys to
+a key server. To establish an Olm session, the originator downloads a
+key for the recipient from this server. The decision of whether to sign
+these one-time keys is left to the application. There are both
+advantages and disadvantages to doing so.</p>
+<p>Consider the scenario where one-time keys are unsigned. Alice wants
+to initiate an Olm session with Bob. Bob uploads his one-time keys,
+<span class="math inline">E_B</span>, but Eve replaces them with ones
+she controls, <span class="math inline">E_E</span>. Alice downloads one
+of the compromised keys, and sends a pre-key message using a shared
+secret <span class="math inline">S</span>, where:</p>
+<p><span class="math display">S =
+\operatorname{ECDH}\left(I_A,E_E\right)\;\parallel\;
+    \operatorname{ECDH}\left(E_A,I_B\right)\;\parallel\;
+    \operatorname{ECDH}\left(E_A,E_E\right)</span></p>
+<p>Eve cannot decrypt the message because she does not have the private
+parts of either <span class="math inline">E_A</span> nor <span
+class="math inline">I_B</span>, so cannot calculate <span
+class="math inline">ECDH\left(E_A,I_B\right)</span>. However, suppose
+she later compromises Bob’s identity key <span
+class="math inline">I_B</span>. This would give her the ability to
+decrypt any pre-key messages sent to Bob using the compromised one-time
+keys, and is thus a problematic loss of forward secrecy. If Bob signs
+his keys with his Ed25519 signing key (and Alice verifies the signature
+before using them), this problem is avoided.</p>
+<p>On the other hand, signing the one-time keys leads to a reduction in
+deniability. Recall that the shared secret is calculated as follows:</p>
+<p><span class="math display">S =
+\operatorname{ECDH}\left(I_A,E_B\right)\;\parallel\;
+    \operatorname{ECDH}\left(E_A,I_B\right)\;\parallel\;
+    \operatorname{ECDH}\left(E_A,E_B\right)</span></p>
+<p>If keys are unsigned, a forger can make up values of <span
+class="math inline">E_A</span> and <span class="math inline">E_B</span>,
+and construct a transcript of a conversation which looks like it was
+between Alice and Bob. Alice and Bob can therefore plausibly deny their
+participation in any conversation even if they are both forced to
+divulge their private identity keys, since it is impossible to prove
+that the transcript was a conversation between the two of them, rather
+than constructed by a forger.</p>
+<p>If <span class="math inline">E_B</span> is signed, it is no longer
+possible to construct arbitrary transcripts. Given a transcript and
+Alice and Bob’s identity keys, we can now show that at least one of
+Alice or Bob was involved in the conversation, because the ability to
+calculate <span
+class="math inline">\operatorname{ECDH}\left(I_A,E_B\right)</span>
+requires knowledge of the private parts of either <span
+class="math inline">I_A</span> (proving Alice’s involvement) or <span
+class="math inline">E_B</span> (proving Bob’s involvement, via the
+signature). Note that it remains impossible to show that <em>both</em>
+Alice and Bob were involved.</p>
+<p>In conclusion, applications should consider whether to sign one-time
+keys based on the trade-off between forward secrecy and deniability.</p>
+<h2 id="license">License</h2>
+<p>This document is licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.</p>
+<h2 id="feedback">Feedback</h2>
+<p>Questions and feedback can be sent to olm at matrix.org.</p>
+</body>
+</html>

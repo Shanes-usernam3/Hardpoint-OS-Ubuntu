@@ -1,0 +1,58 @@
+             **********
+             * WHENCE *
+             **********
+
+This file attempts to document the origin and licensing information,
+if known, for each piece of firmware distributed for use with the Linux
+kernel.
+
+--------------------------------------------------------------------------
+
+Driver: amd_pmf - AMD Platform Management Framework TA
+
+File: amdtee/773bd96f-b83f-4d52-b12dc529b13d8543.bin
+Link: amdtee/amd_pmf_v3.bin -> 773bd96f-b83f-4d52-b12dc529b13d8543.bin
+File: amdtee/f29bb3d9-bd66-5441-afb88acc2b2b60d6.bin
+Link: amdtee/amd_pmf_v3_1.bin -> f29bb3d9-bd66-5441-afb88acc2b2b60d6.bin
+
+Licence: Redistributable. See LICENSE.amd_pmf for details.
+
+--------------------------------------------------------------------------
+
+Driver: ccp - Platform Security Processor (PSP) device
+
+File: amd/amd_sev_fam17h_model0xh.sbin
+Version: 2022-2-25
+File: amd/amd_sev_fam17h_model3xh.sbin
+Version: 2024-8-20
+File: amd/amd_sev_fam19h_model0xh.sbin
+Version: 2025-2-20
+File: amd/amd_sev_fam19h_model1xh.sbin
+Version: 2025-2-20
+File: amd/amd_sev_fam19h_modelaxh.sbin
+Version: 2025-2-20
+File: amd/amd_sev_fam1ah_model0xh.sbin
+Version: 2025-2-20
+
+License: Redistributable. See LICENSE.amd-sev for details
+
+--------------------------------------------------------------------------
+
+Driver: microcode_amd - AMD CPU Microcode Update Driver for Linux
+
+RawFile: amd-ucode/microcode_amd.bin
+Version: 2013-07-10
+RawFile: amd-ucode/microcode_amd_fam15h.bin
+Version: 2018-05-24
+RawFile: amd-ucode/microcode_amd_fam16h.bin
+Version: 2014-10-28
+RawFile: amd-ucode/microcode_amd_fam17h.bin
+Version: 2024-11-21
+RawFile: amd-ucode/microcode_amd_fam19h.bin
+Version: 2025-10-27
+RawFile: amd-ucode/microcode_amd_fam1ah.bin
+Version: 2025-12-02
+File: amd-ucode/README
+
+License: Redistributable. See LICENSE.amd-ucode for details
+

@@ -1,0 +1,6 @@
+# This is a private library
+plasma-pa: no-symbols-control-file usr/lib/*/libplasma-volume.so.6.*
+plasma-pa: package-name-doesnt-match-sonames libplasma-volume6
+
+# systemsettings executable required for the KCM is provided by the systemsettings dependency
+plasma-pa: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_pulseaudio.desktop]

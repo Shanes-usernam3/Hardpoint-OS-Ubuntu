@@ -1,0 +1,28 @@
+# start IBus
+# vim: set sts=4 expandtab:
+
+# hands off to set up IM if listed in $DESKTOP_SETUP_IBUS (='GNOME')
+if find_match "$IM_CONFIG_CURRENT_DESKTOP" "$DESKTOP_SETUP_IBUS" ; then
+    logger_debug "  21_ibus.rc: do the same as 'none' for GNOME derivative DE: find_match IM_CONFIG_CURRENT_DESKTOP='$IM_CONFIG_CURRENT_DESKTOP' in DESKTOP_SETUP_IBUS='$DESKTOP_SETUP_IBUS'"
+    return
+fi
+
+if [ "$IM_CONFIG_PHASE" = 2 ]; then
+# start IBus daemon and IM panel
+IBUS_ENABLE_SYNC_MODE=0 /usr/bin/ibus-daemon --daemonize --xim
+fi
+
+if [ "$IM_CONFIG_PHASE" = 1 ]; then
+# set variables for the plain XIM
+XMODIFIERS=@im=ibus
+
+# Let's assume all required modules are installed
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+CLUTTER_IM_MODULE=ibus
+
+# See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1008481#40
+# why ibus skips SDL_IM_MODULE while fcitx5 list it
+
+fi
+

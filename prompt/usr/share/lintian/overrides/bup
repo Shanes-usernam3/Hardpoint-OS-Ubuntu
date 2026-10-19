@@ -1,0 +1,2 @@
+# The manpage is in the "bup-doc" package.
+bup: no-manual-page [usr/bin/bup]

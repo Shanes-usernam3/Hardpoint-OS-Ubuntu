@@ -1,0 +1,10 @@
+[Device]
+Name=Generic
+ModelName=generic
+DeviceMatch=generic
+IntegratedIn=Display;System;
+
+[Features]
+Reversible=false
+Stylus=true
+NumRings=0

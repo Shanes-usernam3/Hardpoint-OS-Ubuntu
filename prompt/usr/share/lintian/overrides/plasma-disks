@@ -1,0 +1,4 @@
+# Having dots in "S.M.A.R.T." doesn’t make it anymore of a sencence
+plasma-disks: synopsis-is-a-sentence "Monitor S.M.A.R.T. capable devices for imminent failure in Plasma"
+# kcmshell6 executable required for the KCM is provided by the libkf6kcmutils-bin dependency
+plasma-disks: desktop-command-not-in-package kcmshell6 [usr/share/applications/kcm_disks.desktop]

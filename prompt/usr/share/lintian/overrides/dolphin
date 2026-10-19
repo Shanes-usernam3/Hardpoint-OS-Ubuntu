@@ -1,0 +1,7 @@
+# private libraries
+package-name-doesnt-match-sonames libdolphinprivate6
+# private library
+dolphin: no-symbols-control-file
+# no command line arguments
+dolphin: no-manual-page [usr/bin/dolphin]
+dolphin: no-manual-page [usr/bin/servicemenuinstaller]

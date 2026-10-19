@@ -1,0 +1,4 @@
+This directory contains a collection of quirks files for various
+devices.
+
+See `man ipp-usb` for details

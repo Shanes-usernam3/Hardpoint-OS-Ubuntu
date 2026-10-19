@@ -1,0 +1,26 @@
+# Huion Kamvas 16 (2021) GS1562
+#
+# sysinfo.xTWFnBI1bM.tar.gz
+# https://github.com/linuxwacom/wacom-hid-descriptors/issues/543
+
+[Device]
+Name=KAMVAS 16 GS1562
+ModelName=KAMVAS 16 GS1562
+DeviceMatch=usb|256c|006d||HUION_M19s
+Width=14
+Height=8
+Layout=huion-kamvas-16-gs1562.svg
+Styli=@generic-no-eraser;
+IntegratedIn=Display
+
+[Features]
+NumStrips=0
+NumRings=0
+Reversible=false
+Stylus=true
+Touch=false
+TouchSwitch=false
+
+[Buttons]
+Left=A;B;C;D;E;F;G;H;I;J
+EvdevCodes=BTN_0;BTN_1;BTN_2;BTN_3;BTN_4;BTN_5;BTN_6;BTN_7;BTN_8;BTN_9

@@ -1,0 +1,27 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: oxygen-sounds
+Source: https://invent.kde.org/plasma/oxygen-sounds/
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2008, Nuno Filipe Povoa <npovoa@gmail.com>
+License: LGPL-3.0-or-later
+
+Files: debian/*
+Copyright: 2022, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: LGPL-3.0-or-later
+
+License: LGPL-3.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.

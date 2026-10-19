@@ -1,0 +1,217 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wacomtablet
+Source: https://invent.kde.org/plasma/wacomtablet/
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2015 Michael Abrahams <miabraha@gmail.com>,
+  2014 Dmitry Kazakov <dimula73@gmail.com>,
+  2015 Weng Xuetian <wengxt@gmail.com>,
+  Alexander Maret-Huskinson <alex@maret.de>
+  2017 Safa Alfulaij <safa1996alfulaij@gmail.com>,
+  2017 enolp <enolp@softastur.org>
+  2014 Svetoslav Stefanov <svetlisashkov@yahoo.com>
+  2015 Naida Čongo <ncongo1@etf.unsa.ba>
+  2015 Samir Ribic <samir.ribic@etf.unsa.ba>
+  2015 Rosetta Contributors and Canonical Ltd
+  2010-2018 Vít Pelčák <vit@pelcak.org>
+  2013 Tomáš Chvátal <tomas.chvatal@gmail.com>
+  2011-2016 Martin Schlander <mschlander@opensuse.org>
+  2011-2018 Burkhard Lück <lueck@hube-lueck.de>
+  2010 Jörg Ehrichs <Joerg.Ehrichs@gmx.de>
+  2010-2018 Frederik Schwarzer <schwarzer@kde.org>
+  2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+  2011 Rolf Eike Beer <kde@opensource.sf-tec.de>
+  2011-2016 Stelios <sstavra@gmail.com>
+  2014 Dimitris Kardarakos <dimkard@gmail.com>
+  2016 Petros Vidalis <pvidalis@gmail.com>
+  2014-2018 Steve Allewell <steve.allewell@gmail.com>
+  2010 Andrew Coles <andrew_coles@yahoo.co.uk>
+  2010 Axel Rousseau <axel@esperanto-jeunes.org>
+  2011-2018 Eloy Cuadra <ecuadra@eloihr.net>
+  2010,2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+  2010 Kira J. Fernandez <kirajfdez@gmail.com>
+  2013-2015 Rocio Gallego <traducciones@rociogallego.com>
+  2011-2014 Marek Laane <bald@smail.ee>
+  2013-2015 Lasse Liehu <lasse.liehu@gmail.com>
+  2018 Tommi Nieminen <translator@legisign.org>
+  Jorma Karvonen <karvonen.jorma@gmail.com>
+  2017 Vincent Pinon <vpinon@kde.org>
+  2018 Simon Depiets <sdepiets@gmail.com>
+  2010-2013 Joëlle Cornavin <jcorn@free.fr>
+  2010 Kevin Scannell <kscanne@gmail.com>
+  2013,2015 Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>
+  2017,2018 Adrián Chaves (Gallaecio) <adrian@chaves.io>
+  2013 Marce Villarino <mvillarino@kde-espana.es>
+  2012 Kristóf Kiszel <ulysses@kubuntu.org>
+  2012-2014 Balázs Úr <urbalazs@gmail.com>
+  2017 giovanni <g.sora@tiscali.it>
+  2018 Paolo Zamponi <zapaolo@email.it>
+  2015 Japanese KDE translation team <kde-jp@kde.org>
+  2014 Fumiaki Okushi <okushi@kde.gr.jp>
+  2012,2013 Sairan Kikkarin <sairan@computer.org>
+  2007,2008 Auk Piseth <piseth_dv@khmeros.info>
+  2007-2010 Khoem Sokhem <khoemsokhem@khmeros.info>
+  2009 Seng Sutha
+  2012 Sophea <sophea@khmeros.info>
+  2013-2018 Shinjo Park <peremen@gmail.com>
+  2010 Andrius Štikonas <andrius@stikonas.eu>
+  2011 Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>
+  2013 Liudas Alisauskas <liudas@akmc.lt>
+  2014 Liudas Ališauskas <liudas@aksioma.lt>
+  2015 Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>
+  2010 Rajesh Ranjan <rajesh672@gmail.com>
+  2013 Chetan Khona <chetan@kompkin.com>
+  2011-2013 Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
+  2014 Sönke Dibbern <s_dibbern@web.de>
+  2010,2011 Manfred Wiese <m.j.wiese@web.de>
+  2010-2018 Freek de Kruijf <freekdekruijf@kde.nl>
+  2018 Karl Ove Hufthammer <karl@huftis.org>
+  2011,2012 A S Alam <aalam@users.sf.net>
+  2011-2018 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+  2013 Marta Rybczyńska <kde-i18n@rybczynska.net>
+  2015-2018 José Nuno Coelho Pires <zepires@gmail.com>
+  2015 André Marcelo Alvarenga <alvarenga@kde.org>
+  2010,2018 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+  2010 Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>
+  2010-2015 André Marcelo Alvarenga <alvarenga@kde.org>
+  2011 Marcus Gama <marcus.gama@gmail.com>
+  2011 Sergiu Bivol <sergiu@ase.md>
+  2013 Alexander Lakhin <exclusion@gmail.com>
+  2014-2018 Alexander Potashev <aspotashev@gmail.com>
+  2013 Александр Прокудин <alexandre.prokoudine@gmail.com>
+  Александр Лахин <exclusion@gmail.com>
+  2012-2015 Roman Paholík <wizzardsk@gmail.com>
+  2010 Richard Fric <Richard.Fric@kdemail.net>
+  2012-2015 Andrej Mernik <andrejm@ubuntu.si>
+  2010-2018 Stefan Asserhäll <stefan.asserhall@bredband.net>
+  2011 Arve Eriksson <031299870@telia.com>
+  2017 Mete <metebilgin48@gmail.com>
+  2011 H. İbrahim Güngör <ibrahim@pardus.org.tr>
+  2017 Volkan Gezer <volkangezer@gmail.com>
+  2011 Sahran <sahran.ug@gmail.com>
+  2018 Yuri Chornoivan <yurchor@ukr.net>
+  2015 Weng Xuetian <wengxt@gmail.com>
+  2012 FengChao <rainofchaos@gmail.com>
+  2012,2016 Chao Feng <chaofeng111@gmail.com>
+  Guo Yunhe,Henry Hu <kde-china@kde.org>
+  Tyson Tan <tysontan@mail.com>
+  2010-2013 Franklin Weng <franklin@goodhorse.idv.tw>
+  2018 pan93412 <pan93412@gmail.com>
+License: GPL-2+
+
+Files: src/applet/package/contents/ui/FullRepresentation.qml
+          src/applet/package/contents/ui/RotationButton.qml
+          src/applet/package/contents/ui/main.qml
+Copyright: 2015 Weng Xuetian <wengxt@gmail.com>
+License: LGPL-2+
+
+Files: po/ca/wacomtablet.po
+          po/ca/plasma_applet_org.kde.plasma.wacomtablet.po
+          po/ca@valencia/*
+          po/uk/wacomtablet.po
+Copyright: 2013-2018 Antoni Bella Pérez <antonibella5@yahoo.com>
+                   2013-2018 Josep Ma. Ferrer <txemaq@gmail.com>
+                   Yuri Chornoivan <yurchor@ukr.net> 2010-2018
+License: LGPL-2.1 or LGPL-3 or KDEeV
+
+Files: po/ca/docs/*
+          po/de/docs/*
+          po/es/docs/*
+          po/it/docs/*
+          po/nl/docs/*
+          po/pt/docs/*
+          po/pt_BR/docs/*
+          po/sv/docs/*
+          po/uk/docs/*
+Copyright: 2009 - 2013 Jörg Ehrichs <joerg.ehrichs@gmx.de>
+            2013-2018 Antoni Bella Pérez <antonibella5@yahoo.com>
+            2013  Burkhard Lück <lueck@hube-lueck.de>
+            2013 Rocío Gallego <traducciones@rociogallego.com>
+            2013 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+            2013 Paolo Zamponi <zapaolo@email.it>
+            2013 Freek de Kruijf <freekdekruijf@kde.nl>
+            2013 Ronald Stroethoff
+            2013 José Nuno Pires <zepires@gmail.com>
+            2013 Marcus Gama <marcus.gama@gmail.com>
+            2013 André Marcelo Alvarenga <alvarenga@kde.org>
+            2013 Stefan Asserhäll <stefan.asserhall@bredband.net>
+            2013 Юрій Чорноіван <yurchor@ukr.net>
+License: GFDL-1.2+
+ Permission is granted to copy, distribute and/or modify this document
+ under the terms of the GNU Free Documentation License, Version 1.2
+ or any later version published by the Free Software Foundation;
+ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ A copy of the license is included in the section entitled "GNU
+ Free Documentation License".
+ .
+ On Debian systems, the complete text of the GNU Free Documentation
+ License version 1.2 can be found in "/usr/share/common-licenses/GFDL-1.2".
+
+Files: src/kcmodule/org.kde.wacomtablet.metainfo.xml
+Copyright: Jörg Ehrichs <joerg.ehrichs@gmx.de>
+                  Alexander Maret-Huskinson <alex@maret.de>
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved. This file is offered as-is, without
+ any warranty.
+
+Files: debian/*
+Copyright: Scarlett Moore <sgmoore@kde.org>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation;
+ version 2.1.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: LGPL-3
+ This package is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 3 of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-3'.
+
+License: KDEeV
+ Copyright (C) 2013-2016 This_file_is_part_of_KDE
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.

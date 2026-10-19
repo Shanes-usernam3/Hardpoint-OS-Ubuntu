@@ -1,0 +1,212 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kdeclarative
+Source: https://invent.kde.org/frameworks/kdeclarative
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2009, Alan Alpert <alan.alpert@nokia.com>
+           2012-2014, Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+           2021, Arjen Hiemstra <ahiemstra@heimr.nl>
+           2020, Cyril Rossi <cyril.rossi@enioka.com>
+           2009, Dario Freddi <drf@kde.org>
+           2014-2020, David Edmundson <davidedmundson@kde.org>
+           2021, David Redondo <kde@david-redondo.de>
+           2020, David Redondo <kde@david.redondo.de>
+           2015, Eike Hein <hein@kde.org>
+           2004, Frans Englich <frans.englich@telia.com>
+           2014, Fredrik Höglund <fredrik@kde.org>
+           2015, Kai Uwe Broulik <kde@privat.broulik.de>
+           2019-2020, Kevin Ottens <kevin.ottens@enioka.com>
+           2015, Luca Beltrame <lbeltrame@kde.org>
+           2011, Marco Martin <mart@gmail.com>
+           2010-2020, Marco Martin <mart@kde.org>
+           2010-2015, Marco Martin <notmart@gmail.com>
+           2015, Martin Klapetek <mklapetek@kde.org>
+           1999, Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+           2001, Michael Goffioul <kdeprint@swing.be>
+           2023 Mike Noe <noeerover@gmail.com>
+           2010, Ménard Alexis <menard@kde.org>
+           2020, Piotr Henryk Dabrowski <phd@phd.re>
+           2013, Sebastian Kügler <sebas@kde.org>
+License: LGPL-2.0-or-later
+
+Files: src/qmlcontrols/kquickcontrols/ColorButton.qml
+Copyright: 2014, Bhushan Shah <bhush94@gmail.com>
+           2014-2015, David Edmundson <davidedmundson@kde.org>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: src/qmlcontrols/kquickcontrols/private/keysequencehelper.cpp
+       src/qmlcontrols/kquickcontrols/private/keysequencehelper.h
+       src/qmlcontrols/kquickcontrols/private/translationcontext.cpp
+       src/qmlcontrols/kquickcontrols/private/translationcontext.h
+Copyright: 2012, Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+           2012, Aleix Pol Gonzalez <aleixpol@kde.org>
+           2007, Andreas Hartmetz <ahartmetz@gmail.com>
+           2014, Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+           2014, David Edmundson <davidedmundson@kde.org>
+           2020, David Redondo <davidedmundson@kde.org>
+           2020, David Redondo <kde@david-redondo.de>
+           2001, Ellis Whitehead <ellis@kde.org>
+           2015-2016, Kai Uwe Broulik <kde@privat.broulik.de>
+           2014, Kevin Ottens <ervin@kde.org>
+           1998, Mark Donohoe <donohoe@kde.org>
+License: LGPL-2.1-or-later
+
+Files: src/qmlcontrols/draganddrop/DeclarativeDragArea.cpp
+       src/qmlcontrols/draganddrop/DeclarativeDragArea.h
+       src/qmlcontrols/draganddrop/DeclarativeDragDropEvent.cpp
+       src/qmlcontrols/draganddrop/DeclarativeDragDropEvent.h
+       src/qmlcontrols/draganddrop/DeclarativeDropArea.cpp
+       src/qmlcontrols/draganddrop/DeclarativeDropArea.h
+       src/qmlcontrols/draganddrop/DeclarativeMimeData.cpp
+       src/qmlcontrols/draganddrop/DeclarativeMimeData.h
+       src/qmlcontrols/draganddrop/draganddropplugin.cpp
+       src/qmlcontrols/draganddrop/draganddropplugin.h
+       src/qmlcontrols/draganddrop/MimeDataWrapper.cpp
+       src/qmlcontrols/draganddrop/MimeDataWrapper.h
+Copyright: 2015, Aleix Pol Gonzalez <aleixpol@kde.org>
+           2010, BetterInbox <contact@betterinbox.com>
+           2011-2017, Marco Martin <mart@kde.org>
+           2013, Sebastian Kügler <sebas@kde.org>
+License: MIT
+
+Files: .gitlab-ci.yml
+Copyright: 2020 Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2024 Patrick Franz <deltaone@debian.org>
+           2014, Scarlett Clark <scarlett@scarlettgatelyclark.com>
+License: LGPL-2.1-or-later
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-3.0-only
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GPL License as published by the Free
+ Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version that is accepted by the membership
+ of KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy as defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".

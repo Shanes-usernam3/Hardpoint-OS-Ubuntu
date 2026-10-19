@@ -1,0 +1,7 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = rtupdate ]; then
+	py3clean -p khelpcenter /usr/lib
+	py3compile -p khelpcenter  /usr/lib
+fi

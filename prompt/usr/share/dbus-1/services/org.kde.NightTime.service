@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.NightTime
+Exec=/usr/lib/x86_64-linux-gnu/libexec/knighttimed
+SystemdService=plasma-knighttimed.service

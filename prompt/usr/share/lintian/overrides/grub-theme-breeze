@@ -1,0 +1,2 @@
+#This file is not documentation, but an exampe config file for the theme.
+grub-theme-breeze: package-contains-documentation-outside-usr-share-doc [usr/share/grub/themes/breeze/theme.txt]

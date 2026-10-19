@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.powerdevil.discretegpuhelper
+Exec=/usr/lib/kf6/kauth/libexec/discretegpuhelper
+User=root

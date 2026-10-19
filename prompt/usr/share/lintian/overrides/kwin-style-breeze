@@ -1,0 +1,2 @@
+# kcmshell6 executable required for the KCM is provided by the Recommends: libkf6kcmutils-bin dependency
+kwin-style-breeze: desktop-command-not-in-package kcmshell6 [usr/share/applications/kcm_breezedecoration.desktop]

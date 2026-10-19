@@ -1,0 +1,2 @@
+# Generally uses GLib instead of calling into glibc directly
+hardening-no-fortify-functions [usr/bin/gtk4-update-icon-cache]

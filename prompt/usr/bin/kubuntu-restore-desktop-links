@@ -1,0 +1,56 @@
+#!/bin/bash
+
+set -u;
+
+_skelDesktopDir='/etc/skel/Desktop';
+_targetFileList=(
+  "org.kfocus.web.howtos.desktop"
+  "org.kubuntu.web.home.desktop"
+);
+_winTitle='Kubuntu Restore Desktop Links';
+
+main() {
+  declare _target_file _home_dir _desktop_dir _did_copy _hit_error;
+
+  for _target_file in "${_targetFileList[@]}"; do
+    if ! [ -f "${_skelDesktopDir}/${_target_file}" ] \
+      || ! [ -L "${_skelDesktopDir}/${_target_file}" ]; then
+      echo "|${_skelDesktopDir}/${_target_file}| is not a symlink to a normal file!";
+      exit 1;
+    fi
+  done
+
+  _home_dir="$(getent passwd "$(id -u)" | cut -d':' -f6)"
+  _desktop_dir="${_home_dir}/Desktop";
+  mkdir -p "${_desktop_dir}" || {
+    echo "Cannot ensure the existence of the |${_desktop_dir}| directory!";
+    exit 1;
+  }
+
+  _did_copy='n';
+  _hit_error='n';
+  for _target_file in "${_targetFileList[@]}"; do
+    if ! [ -e "${_desktop_dir}/${_target_file}" ]; then
+      cp -a "${_skelDesktopDir}/${_target_file}" \
+        "${_desktop_dir}/${_target_file}" || {
+        echo "warn: Could not copy |${_skelDesktopDir}/${_target_file}| to |${_desktop_dir}/${_target_file}|";
+        _hit_error='y';
+        continue;
+      }
+      _did_copy='y';
+    fi
+  done
+
+  if [ "${_hit_error}" = 'y' ]; then
+    kdialog --title "${_winTitle}" \
+      --msgbox 'Could not create one or more links!';
+  elif [ "${_did_copy}" = 'y' ]; then
+    kdialog --title "${_winTitle}" \
+      --msgbox 'Kubuntu desktop links restored.';
+  else
+    kdialog --title "${_winTitle}" \
+      --msgbox 'Kubuntu desktop links are already in place.';
+  fi
+}
+
+main; # "$@"

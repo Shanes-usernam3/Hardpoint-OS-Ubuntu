@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<h1 id="olm">Olm</h1>
+<p>An implementation of the Double Ratchet cryptographic ratchet
+described by
+https://whispersystems.org/docs/specifications/doubleratchet/, written
+in C and C++11 and exposed as a C API.</p>
+<p>The specification of the Olm ratchet can be found in <a
+href="docs/olm.md">docs/olm.md</a>.</p>
+<p>This library also includes an implementation of the Megolm
+cryptographic ratchet, as specified in <a
+href="docs/megolm.md">docs/megolm.md</a>.</p>
+<h2 id="installing">Installing</h2>
+<h3 id="linux-and-other-unix-like-systems">Linux and other Unix-like
+systems</h3>
+<p>Your distribution may have pre-compiled packages available. If not,
+or if you need a newer version, you will need to compile from source.
+See the “Building” section below for more details.</p>
+<h3 id="macos">macOS</h3>
+<p>The easiest way to install on macOS is via Homebrew. If you do not
+have Homebrew installed, follow the instructions at https://brew.sh/ to
+install it.</p>
+<p>You can then install libolm by running</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install libolm</span></code></pre></div>
+<p>If you also need the Python packages, you can run</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install python-olm <span class="at">--global-option</span><span class="op">=</span><span class="st">&quot;build_ext&quot;</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">&quot;--include-dirs=&quot;</span><span class="kw">`</span><span class="ex">brew</span> <span class="at">--prefix</span> libolm<span class="kw">`</span><span class="st">&quot;/include&quot;</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">&quot;--library-dirs=&quot;</span><span class="kw">`</span><span class="ex">brew</span> <span class="at">--prefix</span> libolm<span class="kw">`</span><span class="st">&quot;/lib&quot;</span></span></code></pre></div>
+<p>Note that this will install an older version of the Python bindings,
+which may be missing some functions. If you need the latest version, you
+will need to build from source.</p>
+<h3 id="windows">Windows</h3>
+<p>You will need to build from source. See the “Building” section below
+for more details.</p>
+<h3 id="bindings">Bindings</h3>
+<h4 id="javascript">JavaScript</h4>
+<p>You can use pre-built npm packages, available at <a
+href="https://gitlab.matrix.org/matrix-org/olm/-/packages?type=npm"
+class="uri">https://gitlab.matrix.org/matrix-org/olm/-/packages?type=npm</a>.</p>
+<h4 id="python">Python</h4>
+<p>A Python source package and pre-built packages for certain
+architectures from <a href="https://pypi.org/project/python-olm/"
+class="uri">https://pypi.org/project/python-olm/</a>. If a pre-built
+package is not available for your architecture, you will need:</p>
+<ul>
+<li>cmake (recommended) or GNU make</li>
+<li>a C/C++ compiler</li>
+</ul>
+<p>to build the source package.</p>
+<p>You can then run <code>pip install python-olm</code>.</p>
+<p>Currently, we try to provide packages for all supported versions of
+Python on x86-64, i686, and aarch64, but we cannot guarantee that
+packages for all versions will be available on all architectures.</p>
+<h4 id="android">Android</h4>
+<p>Pre-built Android bindings are available at <a
+href="https://gitlab.matrix.org/matrix-org/olm/-/packages?type=Maven"
+class="uri">https://gitlab.matrix.org/matrix-org/olm/-/packages?type=Maven</a>.</p>
+<h2 id="building">Building</h2>
+<p>To build olm as a shared library run:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> . <span class="at">-Bbuild</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> <span class="at">--build</span> build</span></code></pre></div>
+<p>To run the tests, run:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build/tests</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ctest</span> .</span></code></pre></div>
+<p>To build olm as a static library (which still needs libstdc++
+dynamically) run:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> . <span class="at">-Bbuild</span> <span class="at">-DBUILD_SHARED_LIBS</span><span class="op">=</span>NO</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> <span class="at">--build</span> build</span></code></pre></div>
+<p>The library can also be used as a dependency with CMake using:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode cmake"><code class="sourceCode cmake"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">find_package</span>(<span class="bn">Olm::Olm</span> <span class="ot">REQUIRED</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">target_link_libraries</span>(<span class="bn">my_exe</span> <span class="bn">Olm::Olm</span>)</span></code></pre></div>
+<h3 id="bindings-1">Bindings</h3>
+<h4 id="javascript-1">JavaScript</h4>
+<p>The recommended way to build the JavaScript bindings is using <a
+href="https://nixos.org/">Nix</a>. With Nix, you can run</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nix</span> build .<span class="dt">\#</span>javascript</span></code></pre></div>
+<p>to build the bindings.</p>
+<p>If you do not have Nix you can, install emscripten from
+https://emscripten.org/ and then run:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> js</span></code></pre></div>
+<p>Emscripten can also be run via Docker, in which case, you need to
+pass through the EMCC_CLOSURE_ARGS environment variable.</p>
+<h4 id="android-1">Android</h4>
+<p>To build the android project for Android bindings, run:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> android</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./gradlew</span> clean build</span></code></pre></div>
+<h4 id="objective-c">Objective-C</h4>
+<p>To build the Xcode workspace for Objective-C bindings, run:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> xcode</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pod</span> install</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> OLMKit.xcworkspace</span></code></pre></div>
+<h4 id="python-1">Python</h4>
+<p>To build the Python 3 bindings, first build olm as a library as
+above, and then run:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> python</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div>
+<h3 id="using-make-instead-of-cmake">Using make instead of cmake</h3>
+<p><strong>WARNING:</strong> Using cmake is the preferred method for
+building the olm library; the Makefile may be removed in the future or
+have functionality removed. In addition, the Makefile may make certain
+assumptions about your system and is not as well tested.</p>
+<p>To build olm as a dynamic library, run:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div>
+<p>To run the tests, run:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> test</span></code></pre></div>
+<p>To build olm as a static library, run:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> static</span></code></pre></div>
+<h2 id="bindings-2">Bindings</h2>
+<p>libolm can be used in different environments using bindings. In
+addition to the JavaScript, Python, Java (Android), and Objective-C
+bindings included in this repository, some bindings are (in alphabetical
+order):</p>
+<ul>
+<li><a href="https://github.com/K1D77A/cl-megolm">cl-megolm</a> (MIT)
+Common Lisp bindings</li>
+<li><a
+href="https://gitlab.com/famedly/company/frontend/libraries/dart-olm">dart-olm</a>
+(AGPLv3) Dart bindings</li>
+<li><a href="https://github.com/Dhole/go-olm">Dhole/go-olm</a>
+(Apache-2.0) Go bindings</li>
+<li><a href="https://github.com/brevilo/jolm">jOlm</a> (Apache-2.0) Java
+bindings</li>
+<li><a href="https://gitlab.com/b0/libqtolm/">libQtOlm</a> (GPLv3) Qt
+bindings</li>
+<li><a href="https://github.com/Dominaezzz/matrix-kt">matrix-kt</a>
+(Apache-2.0) Kotlin library for Matrix, including Olm methods</li>
+<li><a
+href="https://github.com/tulir/mautrix-go/tree/master/crypto/olm">maunium.net/go/mautrix/crypto/olm</a>
+(Apache-2.0) fork of Dhole/go-olm</li>
+<li><a href="https://codeberg.org/BarrOff/nim-olm">nim-olm</a> (MIT) Nim
+bindings</li>
+<li><a href="https://gitlab.gnome.org/BrainBlasted/olm-sys">olm-sys</a>
+(Apache-2.0) Rust bindings</li>
+<li><a href="https://gitlab.com/trixnity/trixnity">Trixnity</a>
+(Apache-2.0) Kotlin SDK for Matrix, including Olm bindings</li>
+</ul>
+<p>Note that bindings may have a different license from libolm, and are
+<em>not</em> endorsed by the Matrix.org Foundation C.I.C.</p>
+<h2 id="release-process">Release process</h2>
+<p>First: bump version numbers in <code>common.mk</code>,
+<code>CMakeLists.txt</code>, <code>javascript/package.json</code>,
+<code>python/pyproject.toml</code>, <code>OLMKit.podspec</code>,
+<code>Package.swift</code>, and
+<code>android/gradle.properties</code>.</p>
+<p>Also, ensure the changelog is up to date, and that everything is
+committed to git.</p>
+<p>It’s probably sensible to do the above on a release branch
+(<code>release-vx.y.z</code> by convention), and merge back to master
+once the release is complete.</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> clean</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># build and test C library</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> test</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># build and test JS wrapper</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> js</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="bu">cd</span> javascript <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>     <span class="ex">npm</span> run test <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>     <span class="fu">sha256sum</span> olm.js olm_legacy.js olm.wasm <span class="op">&gt;</span> checksums.txt <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>     <span class="ex">gpg</span> <span class="at">-b</span> <span class="at">-a</span> <span class="at">-u</span> F75FDC22C1DE8453 checksums.txt <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>     <span class="ex">npm</span> publish<span class="kw">)</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="va">VERSION</span><span class="op">=</span>x.y.z</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="va">$VERSION</span> <span class="at">-s</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--tags</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># OLMKit CocoaPod release</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure the version OLMKit.podspec is the same as the git tag</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co"># (this must be checked before git tagging)</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="ex">pod</span> spec lint OLMKit.podspec <span class="at">--use-libraries</span> <span class="at">--allow-warnings</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="ex">pod</span> trunk push OLMKit.podspec <span class="at">--use-libraries</span> <span class="at">--allow-warnings</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the pod has been successully published with:</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="ex">pod</span> search OLMKit</span></code></pre></div>
+<p>Python and JavaScript packages are published to the registry at <a
+href="https://gitlab.matrix.org/matrix-org/olm/-/packages"
+class="uri">https://gitlab.matrix.org/matrix-org/olm/-/packages</a>. The
+GitLab documentation contains instructions on how to set up twine
+(Python) and npm (JavaScript) to upload to the registry.</p>
+<p>To publish the Android library to MavenCentral (you will need some
+secrets), in the /android folder: - Run the command
+<code>./gradlew clean build publish --no-daemon --no-parallel --stacktrace</code>.
+The generated AAR must be approx 500 kb. - Connect to
+https://s01.oss.sonatype.org - Click on Staging Repositories and check
+the the files have been uploaded - Click on close - Wait (check Activity
+tab until step “Repository closed” is displayed) - Click on release. The
+staging repository will disappear - Check that the release is available
+in https://repo1.maven.org/maven2/org/matrix/android/olm-sdk/ (it can
+take a few minutes)</p>
+<h2 id="design">Design</h2>
+<p>Olm is designed to be easy port to different platforms and to be easy
+to write bindings for.</p>
+<p>It was originally implemented in C++, with a plain-C layer providing
+the public API. As development has progressed, it has become clear that
+C++ gives little advantage, and new functionality is being added in C,
+with C++ parts being rewritten as the need ariases.</p>
+<h3 id="error-handling">Error Handling</h3>
+<p>All C functions in the API for olm return <code>olm_error()</code> on
+error. This makes it easy to check for error conditions within the
+language bindings.</p>
+<h3 id="random-numbers">Random Numbers</h3>
+<p>Olm doesn’t generate random numbers itself. Instead the caller must
+provide the random data. This makes it easier to port the library to
+different platforms since the caller can use whatever cryptographic
+random number generator their platform provides.</p>
+<h3 id="memory">Memory</h3>
+<p>Olm avoids calling malloc or allocating memory on the heap itself.
+Instead the library calculates how much memory will be needed to hold
+the output and the caller supplies a buffer of the appropriate size.</p>
+<h3 id="output-encoding">Output Encoding</h3>
+<p>Binary output is encoded as base64 so that languages that prefer
+unicode strings will find it easier to handle the output.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>Olm uses pure C implementations of the cryptographic primitives used
+by the ratchet. While this decreases the performance it makes it much
+easier to compile the library for different architectures.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> when making
+contributions to the library.</p>
+<h2 id="security-assessment">Security assessment</h2>
+<p>Olm 1.3.0 was independently assessed by NCC Group’s Cryptography
+Services Practive in September 2016 to check for security issues: you
+can read all about it at
+https://www.nccgroup.com/globalassets/our-research/us/public-reports/2016/november/ncc_group_olm_cryptogrpahic_review_2016_11_01.pdf
+and
+https://matrix.org/blog/2016/11/21/matrixs-olm-end-to-end-encryption-security-assessment-released-and-implemented-cross-platform-on-riot-at-last/</p>
+<h2 id="security-issues">Security issues</h2>
+<p>If you think you found a security issue in libolm, any of its
+bindings or the Olm/Megolm protocols, please follow our <a
+href="https://matrix.org/security-disclosure-policy/">Security
+Disclosure Policy</a> to report.</p>
+<h2 id="bug-reports">Bug reports</h2>
+<p>For non-sensitive bugs, please file bug reports at
+https://github.com/matrix-org/olm/issues.</p>
+<h2 id="whats-an-olm">What’s an olm?</h2>
+<p>It’s a really cool species of European troglodytic salamander.
+http://www.postojnska-jama.eu/en/come-and-visit-us/vivarium-proteus/</p>
+<h2 id="legal-notice">Legal Notice</h2>
+<p>The software may be subject to the U.S. export control laws and
+regulations and by downloading the software the user certifies that
+he/she/it is authorized to do so in accordance with those export control
+laws and regulations.</p>
+</body>
+</html>

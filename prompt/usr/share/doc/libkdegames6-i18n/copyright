@@ -1,0 +1,286 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libkdegames
+Upstream-Contact: Pino Toscano <toscano.pino@tiscali.it>
+                  Albert Astals Cid <aacid@kde.org>
+                  Wolfgang Rohdewald <wolfgang@rohdewald.de>
+Source: Source: https://invent.kde.org/libraries/libkdegames
+
+Files: *
+Copyright: 2007-2024, A S Alam <aalam@users.sf.net>
+           2024, Adrián Chaves (Gallaecio)
+           2019, Alexander Potashev <aspotashev@gmail.com>
+           2001-2003, Andreas Beckermann <b_mann@gmx.de>
+           2001, Burkhard Lehner <Burkhard.Lehner@gmx.de>
+           2009-2024, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2023, Enol P <enolp@softastur.org>
+           2009-2024, Freek de Kruijf <freekdekruijf@kde.nl>
+           2007, Gael de Chalendar (aka Kleag) <kleag@free.fr>
+           2009-2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2003-2006, KDE Foundation
+           2005, KDE Russian translation team
+           2001-2002, KDE e.v
+           2024, KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2024, Kishore G <kishore96@gmail.com>
+           2024, Kristof Kiszel <ulysses@fsf.hu>
+           2007, Mark A. Taff <kde@marktaff.com>
+           2001-2003, Martin Heni <kde@heni-online.de>
+           2007, Mauricio Piacentini <mauricio@tabuleiro.com>
+           2000-2002, Meni Livne <livne@kde.org>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2001-2004, Nicolas Hadacek <hadacek@kde.org>
+           2007, Nicolas Roffet <nicolas-kde@roffet.com>
+           2007, Pino Toscano <toscano.pino@tiscali.it>
+           2009-2010, Rosetta Contributors and Canonical Ltd
+           2006-2024, Shinjo Park <kde@peremen.name>
+           2007, Simon Hürlimann <simon.huerlimann@huerlisi.ch>
+           2004-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2009-2012, Stefan Majewsky <majewsky@gmx.net>
+           2014-2024, Steve Allewell <steve.allewell@gmail.com>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2012-2024, Valter Mura <valtermura@gmail.com>
+           2012, Viranch Mehta <viranch.mehta@gmail.com>
+           2024, Vit Pelcak <vit@pelcak.org>
+           2013-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2023-2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2021-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2023, giovanni <g.sora@tiscali.it>
+           2001, translate.org.za
+           2011-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: LGPL-2.0-only
+
+Files: CMakePresets.json
+       cmake/*
+       src/carddecks/CMakeLists.txt
+       src/carddecks/tools/*
+Copyright: 2021-2023, Friedrich W. H. Kossebau <kossebau@kde.org>
+           2009, Guillaume Martres
+           2021, Laurent Montel <montel@kde.org>
+           NO_CLEANING
+           2006, Wengo
+License: BSD-3-Clause
+
+Files: src/carddecks/svg-tigullio-international/*
+Copyright: 2004-2009, Luciano Montanaro <mikelima@cirulla.net>
+License: LGPL-2.0-or-later
+
+Files: src/highscore/kgamehighscoredialog.cpp
+       src/highscore/kgamehighscoredialog.h
+Copyright: 2007, Matt Williams <matt@milliams.com>
+           1998, Sandro Sigala <ssigala@globalnet.it>
+           2001, Waldo Bastian <bastian@kde.org>
+License: ICS
+
+Files: src/carddecks/svg-penguins/*
+Copyright: 1998, DJ Delorie <dj@delorie.com>
+           1998, Markus F.X.J. Oberhumer <markus.oberhumer@jk.uni-linz.ac.at>
+           2009, Matthew Woehlke <mw_triad@users.sourceforge.net>
+License: GPL-3-or-later
+Comment: In accordance with section 7(b) of GPL3, the following notice must
+ accompany any works which include the Tux graphic:
+ Original Tux artwork created by Larry Ewing, Simon Budig and Anja Gerwinski.
+
+Files: src/carddecks/svg-konqi-modern/*
+Copyright: Agnieszka Czajkowska <agnieszka@imagegalaxy.de>
+           2000, Laura Layland <l_layland@hotmail.com>
+           2009, Parker Coates <parker.coates@kdemail.net>
+           1999, Stefan Spatz <s-p-a@gmx.net>
+License: Expat-like-Carddecks
+
+Files: src/carddecks/svg-standard/*
+       src/carddecks/svg-xskat-french/*
+       src/carddecks/svg-xskat-german/*
+       src/kgamepopupitem.cpp
+       src/kgamepopupitem.h
+       src/qml/qml/*
+Copyright: 2007, Dmitry Suzdalev <dimsuz@gmail.com>
+           2004, Gunter Gerhardt (http://www.xskat.de)
+           2009, Luciano Montanaro <mikelima@cirulla.net>
+           2012, Viranch Mehta <viranch.mehta@gmail.com>
+License: GPL-2-or-later
+
+Files: po/ca/*
+       po/ca@valencia/*
+       po/uk/*
+Copyright: 2003-2009, Albert Astals Cid <aacid@kde.org>
+           2002-2006, Andriy Rysin <rysin@kde.org>
+           2016-2020, Antoni Bella PÃ©rez <antonibella5@yahoo.com>
+           2003, Eugene Onischenko <oneugene@ukr.net>
+           2006-2007, Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>
+           2002-2021, Josep M. Ferrer <txemaq@gmail.com>
+           2002-2024, This_file_is_part_of_KDE
+           2008-2015, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1+3+KDEeV
+
+Files: .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2007-2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: GPL-2-or-later
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: Expat-like-Carddecks
+ Copyright 1999 Stefan Spatz <s-p-a@gmx.net>
+ .
+ Permission is hereby granted, free of charge, to any member of the KDE
+ project (the "K Desktop Environment" http://www.kde.org) obtaining a copy of
+ this "Konqi SDK" package and associated documentation files (the "Package"),
+ to deal in the Package without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Package, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Package.
+ .
+ THE PACKAGE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE PACKAGE OR THE USE OR OTHER DEALINGS IN THE PACKAGE.
+
+License: GPL-2-or-later
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program.  If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GPL-3-or-later
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program.  If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: ICS
+ ISC License Copyright (c) 2004-2010 by Internet Systems Consortium, Inc. ("ISC")
+ .
+ Copyright (c) 1995-2003 by Internet Software Consortium
+ .
+ Permission to use, copy, modify, and /or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES WITH REGARD
+ TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+ IN NO EVENT SHALL ISC BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+ DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+ OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: LGPL-2.0-only
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License version 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2.1+3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1’,
+ likewise, the complete text of the GNU Lesser General Public License version
+ 3 can be found in `/usr/share/common-licenses/LGPL-3’.

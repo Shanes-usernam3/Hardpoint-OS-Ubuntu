@@ -1,0 +1,4 @@
+kpat: package-name-doesnt-match-sonames libkcardgame
+kpat: shared-library-lacks-version usr/lib/*/libkcardgame.so libkcardgame.so
+kpat: lacks-ldconfig-trigger usr/lib/*/libkcardgame.so
+kpat: no-symbols-control-file usr/lib/*/libkcardgame.so

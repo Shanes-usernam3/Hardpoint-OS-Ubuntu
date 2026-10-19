@@ -1,0 +1,162 @@
+im-config for Debian                     Osamu Aoki <osamu@debian.org>
+                                                          (2026-03-18)
+
+This is updated note on the im-config package. The im-config package
+only configures desktop environments (DEs) running on the X11 server.
+
+== Quick introduction ==
+
+If you want to disable im-config and manually set up IM without
+any interference from im-config, set im-config command to "none". 
+
+If you are on Wayland (with or without xwayland) based DEs, this does
+nothing and can be safely removed ignoring recommendation of Debian
+package dependency system.
+
+If you are on recent GNOME derivative DEs used with its default IM, this
+does nothing and can be safely removed ignoring recommendation of Debian
+package dependency system.
+
+The target of this im-config package is people who need to type
+non-latin1 characters (Indic, Chinese, Arabic, Japanese, Korean,
+Vetonamese, Thai, ...) using the input method.
+
+Please note that the installation of input method (IM) framework
+packages and input method engine (IME) packages only offers mechanism to
+convert keyboard inputs to the desired character code.
+
+There are a few popular general purpose IMs and IMEs:
+
+* iBus -- Default IM for GNOME Desktop (Yes, I use this and recommended)
+  * Japanese IME: ibus-mozc
+  * Korean IME:   ibus-hangul 
+  * Thai IME:     ibus-libthai
+  * Chinese IME:  ibus-chewing, ibus-libpinyin, ibus-pinyin, ...
+  * Others IME:   ibus-m17n               (indic, arabic,...)
+  * See https://wiki.debian.org/I18n/ibus
+* Fcitx5 -- Good IM alternative (popular with Chinese users)
+  * Chinese IME:  fcitx5-chinese-addons ...
+  * See https://wiki.debian.org/I18n/Fcitx5
+
+Installing any IME packages sets up a functional IM system using Debian
+paclkage dependency system. 
+
+IMEs need to be enabled by using configuration tool:
+
+* `ibus-setup` (from a command line or GUI menu.)
+* GNOME Settings (from "Add Input Source")
+
+You should consult the im-config(8) manpage for the details of this
+command behavior.
+
+Please also read
+
+* https://wiki.debian.org/Keyboard
+* https://www.debian.org/doc/manuals/debian-reference/ch08.en.html#_the_keyboard_input
+
+== DE identification ==
+
+Due to some historical complications and backward compatibility support
+needs, this im-config uses IM_CONFIG_CURRENT_DESKTOP generated mainly
+from XDG_CURRENT_DESKTOP in /usr/share/im-config/initializer to detect
+DE. XDG_CURRENT_DESKTOP defined in the "Desktop Entry Specification"
+since its version 1.2. XDG_SESSION_DESKTOP is not used since it is
+non-standard and DESKTOP_SESSION is used for backward-compatibility.
+See
+https://specifications.freedesktop.org/menu/latest/onlyshowin-registry.html
+
+I see following XDG_CURRENT_DESKTOP values in the source code of session
+packages but actual DE identification should use verbose logging
+outputs.
+
+    * budgie-session       GNOME
+    * cinnamon-session              (cinnamon or X-Cinnamon)
+    * gnome-flashback      GNOME-Flashback:GNOME
+    * gnome-session        GNOME
+    * lxqt-session         LXQt
+    * lxsession            LXDE     (this code mentions Lubuntu migration, and has example with qt/platform=lxqt)
+    * mate-session-manager MATE
+    * plasma-workspace     KDE
+    * xfce4-session        XFCE
+
+== Verbose execution ==
+
+Verbose logging to systemd is possible by uncommenting as
+`IM_CONFIG_VERBOSE="true"` in /etc/default/im-config.
+
+See "journalctl -b --user -t im-config"    (reportbug runs this)
+
+Please use verbose log for reporting bug.
+
+=============================================================================
+
+== Note on DEs on Wayland with integration of IM ==
+
+For modern DEs such as GNOME (Wayland) or Plasma/KDE (Wayland), they
+integrate input method configuration.  So, im-config can be safely
+removed and let the DE configure input method.
+
+* GNOME 50 on (Wayland) -- integrated without xwayland.
+  * Install one of the followings:
+    * ibus framework: ibus-<your_input_method_engine_name> package
+
+* KDE Plasma DE (Wayland) -- integrated without xwayland
+  * Install one of the followings:
+    * ibus framework: ibus-<your_input_method_engin_name> package
+    * fcitx5 framework: fcitx5-<your_input_method_engin_name> package
+  * Select an input method framework as the virtual keyboard
+
+== Note on DEs on Wayland without integration of IM ==
+
+If your DE uses Wayland (possibly with xwayland) without integration of
+input method, this package does nothing and you need to manually setup
+input method.  For ibus and fcitx5, see upstream resources:
+
+* https://github.com/ibus/ibus/wiki/WaylandDesktop for ibus
+* https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland for fcitx5
+
+Please note both ibus and fcitx5 Debian packages install autostart
+script under /etc/xdg/Xwayland-session.d to support keyboard input for
+classic X and xwayland applications.
+
+Since Wayland DEs are run as a user process, both of these methods use
+environment configuration files under the user's home directory
+
+== NOTE: History of native input method support for Wayland ==
+
+Native input method support for Wayland is the moving target and
+still evolving.  See:
+
+* Wayland and input methods
+    https://dorotac.eu/posts/input_method/ (2020)
+* State of input method
+    https://dorotac.eu/posts/input_broken/ (2024)
+* Wayland input method project post-mortem
+    https://dorotac.eu/posts/im-finished/ (2026)
+
+== Why im-config doesn't configure IM on Wayland from im-config ==
+
+The configuration of IM involves 2 phases.  For ibus, this involves
+something like:
+
+* Phase 1: Set up IM environment variables.
+  * `GTK_IM_MODULE=ibus`
+  * `QT_IM_MODULE=ibus`
+  * `QT_IM_MODULES=wayland,ibus`
+  * `XMODIFIES=@im=ibus`
+* Phase 2: Start the needed daemon processes andpanel programs
+  * `ibus start --type wayland`
+
+For the 1st phase, unfortunately, conditionally setting system-wide
+environment variable is non-trivial.  Files in /etc/environment.d/ can
+set system-wide environment variable but they can't use conditional
+script.  Not-all DEs (including KDE) parse files in /etc/profile.d/* to
+set system-wide environment variable.  So this is non-trivial task.
+
+For the 2nd phase, both ibus and fcitx5 packages already provide this
+functionality as desktop file for autostart.  So im-config shouldn't do
+anything for this phase. 
+
+
+ -- Osamu Aoki <osamu@debian.org>,  Sat, 14 Mar 2026 13:04:47 +0000
+# vim: set tw=72 sts=4 sw=4 ai si et:

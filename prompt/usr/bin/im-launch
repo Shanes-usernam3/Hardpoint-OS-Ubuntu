@@ -1,0 +1,105 @@
+#!/bin/sh -e
+# vim: set sts=4 expandtab:
+# Copyright (C) 2026 Osamu Aoki <osamu@debian.org>
+# Copyright (C) 2012 Aron Xu <aron@debian.org>
+# GNU General Public License version 2 or later.
+#
+# Launch input method configuration script for X, GNOME, KDE, ...
+# see im-launch(1).
+
+if [ -z "$IM_CONFIG_ENTRY" ]; then
+    # invoked fresh
+    IM_CONFIG_ENTRY='none-im-launch'
+else
+    IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-im-launch"
+fi
+export IM_CONFIG_ENTRY
+. /usr/share/im-config/initializer
+if [ "$IM_CONFIG_ENTRY" = "xsession-im-launch" ] && [ "$XDG_SESSION_TYPE" != 'wayland' ]; then
+    # start daemon for xsession and X11
+    # subshell under a new environment is used to get im-config setting for environments
+    # compared to the current ones
+    logger_debug "  BEGIN for $IM_CONFIG_ENTRY * $XDG_SESSION_TYPE (/etc/X11/Xsession.d/99x11-common_start)"
+    if env -i \
+        HOME="$HOME" \
+        XDG_SESSION_TYPE="$XDG_SESSION_TYPE" \
+        XDG_SESSION_DESKTOP="$XDG_SESSION_DESKTOP" \
+        XDG_CURRENT_DESKTOP="$XDG_CURRENT_DESKTOP" \
+        DESKTOP_SESSION="$DESKTOP_SESSION" \
+        IM_CONFIG_SET_XMODIFIERS="$XMODIFIERS" \
+        IM_CONFIG_SET_GTK_IM_MODULE="$GTK_IM_MODULE" \
+        IM_CONFIG_SET_QT_IM_MODULE="$QT_IM_MODULE" \
+        IM_CONFIG_SET_CLUTTER_IM_MODULE="$CLUTTER_IM_MODULE" \
+        IM_CONFIG_SET_SDL_IM_MODULE="$SDL_IM_MODULE" \
+        sh -e -c '\
+        IM_CONFIG_ENTRY="subshell" \
+        IM_CONFIG_PHASE="1" \
+        . /usr/share/im-config/initializer ; \
+        . /usr/share/im-config/im-config_setting ; \
+        [ "$IM_CONFIG_SET_XMODIFIERS" = "$XMODIFIERS" ] && \
+        [ "$IM_CONFIG_SET_GTK_IM_MODULE" = "$GTK_IM_MODULE" ] && \
+        [ "$IM_CONFIG_SET_QT_IM_MODULE" = "$QT_IM_MODULE" ] && \
+        [ "$IM_CONFIG_SET_CLUTTER_IM_MODULE" = "$CLUTTER_IM_MODULE" ] && \
+        [ "$IM_CONFIG_SET_SDL_IM_MODULE" = "$SDL_IM_MODULE" ]'; then
+        # not tweaked from im-selected values
+        logger_info "  Start daemon from /etc/X11/Xsession.d/99x11-common_start (variables untouched from /etc/X11/Xsession.d/70im-config_launch)"
+        IM_CONFIG_PHASE=2
+        . /usr/share/im-config/im-config_setting
+        IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-success"
+    else
+        logger_info "  Don't start daemon from /etc/X11/Xsession.d/99x11-common_start (variables changed from /etc/X11/Xsession.d/70im-config_launch)"
+        IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-fail"
+    fi
+    logger_debug "  EXIT  for $IM_CONFIG_ENTRY * $XDG_SESSION_TYPE (/etc/X11/Xsession.d/99x11-common_start)"
+# elif false && [ "$IM_CONFIG_ENTRY" = "profile-im-launch" ] && [ "$XDG_SESSION_TYPE" = 'wayland' ]; then
+#     # start daemon for profile and wayland
+#     # subshell under a new environment is used to get should be values
+#     #   env -i .... executes following command in an empty environment
+#     #   sh -c ..... executes following command in a new shell
+#     #               the new shell returns return result of the last command (test by [...])
+#     #               quote choices are correct to delay shell expansion to be done within the new shell
+#     logger_debug "  BEGIN for $IM_CONFIG_ENTRY * $XDG_SESSION_TYPE (xdg_autostart)"
+#     if env -i \
+#         HOME="$HOME" \
+#         XDG_SESSION_TYPE="$XDG_SESSION_TYPE" \
+#         XDG_SESSION_DESKTOP="$XDG_SESSION_DESKTOP" \
+#         XDG_CURRENT_DESKTOP="$XDG_CURRENT_DESKTOP" \
+#         DESKTOP_SESSION="$DESKTOP_SESSION" \
+#         IM_CONFIG_SET_XMODIFIERS="$XMODIFIERS" \
+#         IM_CONFIG_SET_GTK_IM_MODULE="$GTK_IM_MODULE" \
+#         IM_CONFIG_SET_QT_IM_MODULE="$QT_IM_MODULE" \
+#         IM_CONFIG_SET_CLUTTER_IM_MODULE="$CLUTTER_IM_MODULE" \
+#         IM_CONFIG_SET_SDL_IM_MODULE="$SDL_IM_MODULE" \
+#         sh -e -c '\
+#         IM_CONFIG_ENTRY="im-launch-subshell" \
+#         IM_CONFIG_PHASE="1" \
+#         . /usr/share/im-config/initializer ; \
+#         . /usr/share/im-config/im-config_setting ; \
+#         [ "$IM_CONFIG_SET_XMODIFIERS" = "$XMODIFIERS" ] && \
+#         [ "$IM_CONFIG_SET_GTK_IM_MODULE" = "$GTK_IM_MODULE" ] && \
+#         [ "$IM_CONFIG_SET_QT_IM_MODULE" = "$QT_IM_MODULE" ] && \
+#         [ "$IM_CONFIG_SET_CLUTTER_IM_MODULE" = "$CLUTTER_IM_MODULE" ] && \
+#         [ "$IM_CONFIG_SET_SDL_IM_MODULE" = "$SDL_IM_MODULE" ]'; then
+#         # not tweaked from im-selected values
+#         logger_info "  Start daemon from /etc/xdg/autostart/im-launch.desktop (no interfarence seen)"
+#         IM_CONFIG_PHASE=2
+#         . /usr/share/im-config/im-config_setting
+#         IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-success"
+#     else
+#         logger_info "  Don't start daemon from /etc/xdg/autostart/im-launch.desktop (interfarence seen)"
+#         IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-fail"
+#     fi
+#     logger_debug "  EXIT  for $IM_CONFIG_ENTRY * $XDG_SESSION_TYPE (xdg_autostart)"
+else
+    logger_info "  EXIT  for $IM_CONFIG_ENTRY * $XDG_SESSION_TYPE (disabled for this combination)"
+    IM_CONFIG_ENTRY="${IM_CONFIG_ENTRY}-disabled"
+    exit 0
+fi
+unset IM_CONFIG_PHASE
+
+if [ -n "$1" ]; then
+    exec "$@"
+else
+    exec true
+fi
+logger_info "  EXIT @im-launch IM_CONFIG_ENTRY='$IM_CONFIG_ENTRY' (This is unreachable)"

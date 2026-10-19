@@ -1,0 +1,4 @@
+konsole: package-name-doesnt-match-sonames libkonsoleapp*
+konsole: no-symbols-control-file usr/lib/*/libkonsoleapp.so.*
+konsole: no-manual-page [usr/bin/konsole]
+konsole: no-manual-page [usr/bin/konsoleprofile]

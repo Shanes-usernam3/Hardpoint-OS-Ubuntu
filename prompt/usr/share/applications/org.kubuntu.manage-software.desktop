@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Manage Software
+Comment=Open a software management application
+Keywords=System;Maintenance;Software;Manage;Install
+Exec=kubuntu-manage-software
+Terminal=false
+Type=Application
+Categories=System;
+Icon=kubuntu-manage-software
+

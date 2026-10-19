@@ -1,0 +1,14 @@
+# This file is a copy of
+#  /etc/xdg/kcm-about-distorc.
+#  Some apps may use that file instead. That file also takes precidence
+#  over any settings here.
+
+[General]
+LogoPath=/usr/share/plasma/avatars/kubuntu-bug.png
+Name=Kubuntu
+UseOSReleaseVersion=false
+Version=26.04 LTS
+Website=https://www.kubuntu.org
+
+# Variant=Long Term Support # Redundant
+

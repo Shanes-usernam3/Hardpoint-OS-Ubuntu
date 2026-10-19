@@ -1,0 +1,2 @@
+# The "bup-doc" package contains manpages for commands shipped in the "bup" package.
+bup-doc: spare-manual-page

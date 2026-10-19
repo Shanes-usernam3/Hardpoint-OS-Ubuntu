@@ -1,0 +1,14 @@
+html5lib>=0.999999999
+
+[binarytest]
+html5-parser
+lxml
+
+[fast]
+html5-parser>=0.4.4
+
+[test]
+html5lib
+service_identity
+six
+twisted

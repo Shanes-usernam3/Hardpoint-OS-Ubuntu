@@ -1,0 +1,2 @@
+# It is intended to add dependency to libkf5wallet-bin
+libkf5wallet5: symbols-declares-dependency-on-other-package libkf5wallet-bin (libKF5Wallet.so.5) [symbols]

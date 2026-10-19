@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="377mm"
+   height="252mm"
+   viewBox="0 0 377 252"
+   version="1.1"
+   id="intuos-pro-l-ptk870"
+   style="fill:none;stroke:#7f7f7f;stroke-width:0.25;font-size:6;font-family:monospace"
+   sodipodi:docname="wacom-intuos-pro-3-l.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     showguides="true"
+     inkscape:zoom="4.3000698"
+     inkscape:cx="712.31402"
+     inkscape:cy="69.76631"
+     inkscape:window-width="3072"
+     inkscape:window-height="1659"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="intuos-pro-l-ptk870">
+    <sodipodi:guide
+       position="129.09573,204.21859"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="131.97659,203.77923"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="247.87624,200.19217"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="244.86465,191.78454"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="135.34671,208.46448"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="135.13871,200.89516"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="135.29252,193.2438"
+       orientation="0,-1"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="133.8077,185.75651"
+       orientation="0,-1"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="104.94332,177.96261"
+       orientation="0,-1"
+       id="guide10"
+       inkscape:locked="false" />
+    <inkscape:grid
+       id="grid19"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <title
+     id="title">Wacom Intuos Pro L (PTK870)</title>
+  <path
+     id="ButtonA"
+     class="Button A"
+     d="m 123.918,6.4004 c -5.01,-4.63096 -12.738,-4.63227 -17.75,-0.003 l 4.373,4.3725 c 2.59,-2.22388 6.416,-2.2226 9.005,0.003 z" />
+  <path
+     id="LeaderA"
+     class="Leader A"
+     d="m 129.09573,74.037396 -29.816137,0 L 99.157273,6.9437631 109.952,6.89279"
+     sodipodi:nodetypes="cccc" />
+  <text
+     id="LabelA"
+     class="Label A"
+     x="135.6055"
+     y="73.68782"
+     style="text-anchor:end">A</text>
+  <path
+     id="ButtonB"
+     class="Button B"
+     d="m 120.243,20.4721 4.386,4.3866 c 4.647,-5.0144 4.648,-12.762 10e-4,-17.77699 l -4.388,4.38789 c 2.224,2.5891 2.224,6.4135 0,9.0025 z" />
+  <path
+     id="LeaderB"
+     class="Leader B"
+     d="m 129.02333,43.56015 -3.11433,0 L 125.835,19.5"
+     sodipodi:nodetypes="ccc" />
+  <text
+     id="LabelB"
+     class="Label B"
+     x="135.50296"
+     y="43.41053"
+     style="text-anchor:end">B</text>
+  <path
+     id="ButtonC"
+     class="Button C"
+     d="m 110.519,21.1934 -4.365,4.3647 c 5.016,4.6468 12.764,4.6454 17.778,-0.003 l -4.364,-4.3647 c -2.596,2.2505 -6.452,2.2513 -9.049,0.002 z" />
+  <path
+     id="LeaderC"
+     class="Leader C"
+     d="M 129.09573,58.756206 H 110.04824 L 109.95204,25.22647"
+     sodipodi:nodetypes="ccc" />
+  <text
+     id="LabelC"
+     class="Label C"
+     x="135.63626"
+     y="58.546246"
+     style="text-anchor:end">C</text>
+  <path
+     id="ButtonD"
+     class="Button D"
+     d="m 109.844,11.4671 -4.372,-4.37249 c -4.631,5.01129 -4.631,12.74049 0,17.75129 l 4.372,-4.3712 c -2.226,-2.5899 -2.226,-6.4177 0,-9.0076 z" />
+  <path
+     id="LeaderD"
+     class="Leader D"
+     d="M 129.09573,66.243496 H 104.2863 L 104.335,16.05963"
+     sodipodi:nodetypes="ccc" />
+  <text
+     id="LabelD"
+     class="Label D"
+     x="135.59085"
+     y="66.1185"
+     style="text-anchor:end">D</text>
+  <path
+     id="ButtonI"
+     class="Button I ModeSwitch"
+     d="m 115.039,10.6101 c -2.171,0 -4.128,1.3077 -4.959,3.3134 -0.83,2.0057 -0.371,4.3143 1.164,5.8494 1.535,1.5351 3.844,1.9943 5.849,1.1635 2.006,-0.8307 3.314,-2.7879 3.314,-4.9588 0,-1.4236 -0.566,-2.7888 -1.572,-3.7954 -1.007,-1.0066 -2.372,-1.5721 -3.796,-1.5721 z" />
+  <path
+     id="LeaderI"
+     class="Leader I ModeSwitch"
+     d="M 129.09573,51.104847 H 115.113 L 115.039,19.5003"
+     sodipodi:nodetypes="ccc" />
+  <text
+     id="LabelI"
+     class="Label I ModeSwitch"
+     x="135.60843"
+     y="50.979851"
+     style="text-anchor:end">I</text>
+  <g
+     id="g19">
+    <path
+       id="Dial"
+       class="Dial TouchDial"
+       d="m 146.854,3.00752 c -5.247,0 -9.976,3.16004 -11.984,8.00658 -2.007,4.8466 -0.898,10.4252 2.812,14.1346 3.709,3.7094 9.288,4.819 14.135,2.8115 4.847,-2.0075 8.007,-6.7368 8.007,-11.9827 0,-7.16311 -5.807,-12.96998 -12.97,-12.96998 z" />
+    <path
+       id="DialCCW"
+       class="DialCCW Button"
+       d="m 143.885,5.88344 2.247,-1.10048 v 0.73366 c 1.343,-0.08427 2.672,0.30622 3.745,1.10046 C 148.73,6.00801 147.38,5.87584 146.132,6.25026 V 6.9839 Z" />
+    <path
+       id="LeaderDialCCW"
+       class="DialCCW Dial Leader"
+       d="m 151.99999,6.9999998 h 14"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="LabelDialCCW"
+       class="DialCCW Dial Label"
+       x="170.71777"
+       y="7.578125"
+       style="text-anchor:start">CCW</text>
+    <path
+       id="DialCW"
+       class="DialCW Button"
+       d="m 143.883,26.4255 2.247,-1.1004 v 0.7336 c 1.298,0.1914 2.623,-0.0682 3.745,-0.7336 -0.973,0.9964 -2.338,1.5315 -3.745,1.4672 v 0.7337 z" />
+    <path
+       id="LeaderDialCW"
+       class="DialCW Dial Leader"
+       d="m 151.99999,24.999999 h 10 V 16 h 4"
+       sodipodi:nodetypes="cccc" />
+    <text
+       id="LabelDialCW"
+       class="DialCW Dial Label"
+       x="170.71777"
+       y="16.578125"
+       style="text-anchor:start">CW</text>
+  </g>
+  <path
+     id="ButtonE"
+     class="Button E"
+     d="m 270.744,6.44612 c -5.01,-4.63096 -12.738,-4.63227 -17.75,-0.003 l 4.373,4.37248 c 2.59,-2.22386 6.416,-2.22258 9.005,0.003 z" />
+  <path
+     id="LeaderE"
+     class="Leader E"
+     d="m 247.87623,74.037396 30.67943,0 0.1153,-67.1859026 L 266.952,6.93851"
+     sodipodi:nodetypes="cccc" />
+  <path
+     id="ButtonF"
+     class="Button F"
+     d="m 267.068,20.5178 4.387,4.3866 c 4.647,-5.0144 4.648,-12.762 0.001,-17.77697 l -4.388,4.38787 c 2.223,2.5891 2.223,6.4135 0,9.0025 z" />
+  <path
+     id="LeaderF"
+     class="Leader F"
+     d="m 247.87623,66.243496 24.69926,0 -0.006,-50.183866"
+     sodipodi:nodetypes="ccc" />
+  <path
+     id="ButtonG"
+     class="Button G"
+     d="m 257.345,21.2391 -4.365,4.3647 c 5.016,4.6468 12.764,4.6454 17.778,-0.003 l -4.364,-4.3647 c -2.597,2.2505 -6.452,2.2513 -9.049,0.002 z" />
+  <path
+     id="LeaderG"
+     class="Leader G"
+     d="m 247.87623,58.756206 19.02269,0 0.0531,-33.529736"
+     sodipodi:nodetypes="ccc" />
+  <path
+     id="ButtonH"
+     class="Button H"
+     d="m 256.67,11.5128 -4.373,-4.37247 c -4.63,5.01127 -4.63,12.74047 0.001,17.75127 l 4.372,-4.3712 c -2.227,-2.5899 -2.227,-6.4177 0,-9.0076 z" />
+  <path
+     id="LeaderH"
+     class="Leader H"
+     d="M 247.87623,43.535527 251.143,43.56015 251.069,19.5457"
+     sodipodi:nodetypes="ccc" />
+  <path
+     id="ButtonJ"
+     class="Button J ModeSwitch"
+     d="m 261.865,10.6558 c -2.171,0 -4.128,1.3077 -4.959,3.3134 -0.831,2.0057 -0.371,4.3143 1.164,5.8494 1.535,1.5351 3.844,1.9943 5.849,1.1635 2.006,-0.8307 3.314,-2.7879 3.314,-4.9588 0,-1.4236 -0.566,-2.7888 -1.572,-3.7954 -1.007,-1.0066 -2.372,-1.5721 -3.796,-1.5721 z" />
+  <path
+     id="LeaderJ"
+     class="Leader J ModeSwitch"
+     d="m 247.87623,51.104847 14.06277,0 L 261.865,19.546"
+     sodipodi:nodetypes="ccc" />
+  <text
+     id="LabelE"
+     class="Label E"
+     x="241.36903"
+     y="73.912399"
+     style="text-anchor:start">E</text>
+  <text
+     id="LabelF"
+     class="Label F"
+     x="241.30165"
+     y="66.1185"
+     style="text-anchor:start">F</text>
+  <text
+     id="LabelG"
+     class="Label G"
+     x="241.50526"
+     y="58.546246"
+     style="text-anchor:start">G</text>
+  <text
+     id="LabelH"
+     class="Label H"
+     x="241.46571"
+     y="43.410526"
+     style="text-anchor:start">H</text>
+  <text
+     id="LabelJ"
+     class="Label J ModeSwitch"
+     x="241.71181"
+     y="50.894886"
+     style="text-anchor:start">J</text>
+  <g
+     id="g20">
+    <path
+       id="Dial2"
+       class="Dial2 TouchDial"
+       d="m 230.279,3.05324 c -5.246,0 -9.975,3.16004 -11.983,8.00656 -2.007,4.8466 -0.898,10.4252 2.812,14.1346 3.709,3.7094 9.288,4.819 14.134,2.8115 4.847,-2.0075 8.007,-6.7368 8.007,-11.9827 0,-7.16309 -5.807,-12.96996 -12.97,-12.96996 z" />
+    <path
+       id="Dial2CCW"
+       class="Dial2CCW Dial2 Button"
+       d="m 227.31,5.92916 2.247,-1.10048 v 0.73366 c 1.343,-0.08427 2.672,0.30622 3.745,1.10046 -1.147,-0.60907 -2.497,-0.74124 -3.745,-0.36682 v 0.73364 z" />
+    <text
+       id="LabelDial2CCW"
+       class="Dial2CCW Dial2 Label"
+       x="205.55469"
+       y="25.578125"
+       style="text-anchor:end">CCW</text>
+    <path
+       id="Dial2CW"
+       class="Dial2CW Button"
+       d="m 227.308,26.4712 2.247,-1.1004 v 0.7336 c 1.298,0.1914 2.623,-0.0682 3.745,-0.7336 -0.973,0.9964 -2.338,1.5315 -3.745,1.4672 v 0.7337 z" />
+    <text
+       id="LabelDial2CW"
+       class="Dial2CW Dial2 Label"
+       x="201.94238"
+       y="34.578125"
+       style="text-anchor:end">CW</text>
+    <path
+       id="LeaderDial2CCW"
+       class="Dial2CCW Dial2 Leader"
+       d="m 224.99999,6.9999998 h -12 l 0,17.9999992 h -2"
+       style="font-size:6px;font-family:monospace;fill:none;stroke:#7f7f7f;stroke-width:0.25"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="LeaderDial2CW"
+       class="Dial2CW Dial2 Leader"
+       d="m 224.99999,25.093398 -8,-0.03262 v 8.939222 h -6"
+       style="font-size:6px;font-family:monospace;fill:none;stroke:#7f7f7f;stroke-width:0.25"
+       sodipodi:nodetypes="cccc" />
+  </g>
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Wacom Intuos Pro L (PTK870)</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

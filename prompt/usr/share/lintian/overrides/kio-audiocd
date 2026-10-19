@@ -1,0 +1,4 @@
+kio-audiocd: package-name-doesnt-match-sonames libaudiocdplugins5
+
+# systemsettings executable required for the KCMs is provided by the Recommends: systemsettings dependency
+kio-audiocd: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_audiocd.desktop]

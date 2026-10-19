@@ -1,0 +1,4 @@
+# libkf6texteditor-bin already depends on libkf6texteditor6, but we want libkf6texteditor-bin to be installed
+# along libkf6texteditor6. Adding a Depends: would create a circular dependency, hence the "trick" with
+# the symbols file.
+libkf6texteditor6: symbols-declares-dependency-on-other-package libkf6texteditor-bin (libKF6TextEditor.so.6) [symbols]

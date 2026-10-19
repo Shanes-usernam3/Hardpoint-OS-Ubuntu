@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>olm</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<h1 id="olm-a-cryptographic-ratchet">Olm: A Cryptographic Ratchet</h1>
+<p>An implementation of the double cryptographic ratchet described by
+https://whispersystems.org/docs/specifications/doubleratchet/.</p>
+<h2 id="notation">Notation</h2>
+<p>This document uses <span class="math inline">\parallel</span> to
+represent string concatenation. When <span
+class="math inline">\parallel</span> appears on the right hand side of
+an <span class="math inline">=</span> it means that the inputs are
+concatenated. When <span class="math inline">\parallel</span> appears on
+the left hand side of an <span class="math inline">=</span> it means
+that the output is split.</p>
+<p>When this document uses <span
+class="math inline">\operatorname{ECDH}\left(K_A,K_B\right)</span> it
+means that each party computes a Diffie-Hellman agreement using their
+private key and the remote party’s public key. So party <span
+class="math inline">A</span> computes <span
+class="math inline">\operatorname{ECDH}\left(K_B^{public},K_A^{private}\right)</span>
+and party <span class="math inline">B</span> computes <span
+class="math inline">\operatorname{ECDH}\left(K_A^{public},K_B^{private}\right)</span>.</p>
+<p>Where this document uses <span
+class="math inline">\operatorname{HKDF}\left(salt,IKM,info,L\right)</span>
+it refers to the <a
+href="https://tools.ietf.org/html/rfc5869">HMAC-based key derivation
+function</a> with a salt value of <span class="math inline">salt</span>,
+input key material of <span class="math inline">IKM</span>, context
+string <span class="math inline">info</span>, and output keying material
+length of <span class="math inline">L</span> bytes.</p>
+<h2 id="the-olm-algorithm">The Olm Algorithm</h2>
+<h3 id="initial-setup">Initial setup</h3>
+<p>The setup takes four <a
+href="http://cr.yp.to/ecdh.html">Curve25519</a> inputs: Identity keys
+for Alice and Bob, <span class="math inline">I_A</span> and <span
+class="math inline">I_B</span>, and one-time keys for Alice and Bob,
+<span class="math inline">E_A</span> and <span
+class="math inline">E_B</span>. A shared secret, <span
+class="math inline">S</span>, is generated using <a
+href="https://whispersystems.org/blog/simplifying-otr-deniability/">Triple
+Diffie-Hellman</a>. The initial 256 bit root key, <span
+class="math inline">R_0</span>, and 256 bit chain key, <span
+class="math inline">C_{0,0}</span>, are derived from the shared secret
+using an HMAC-based Key Derivation Function using <a
+href="https://tools.ietf.org/html/rfc6234">SHA-256</a> as the hash
+function (<a
+href="https://tools.ietf.org/html/rfc5869">HKDF-SHA-256</a>) with
+default salt and <code>"OLM_ROOT"</code> as the info.</p>
+<p><span class="math display">\begin{aligned}
+    S&amp;=\operatorname{ECDH}\left(I_A,E_B\right)\;\parallel\;
+       \operatorname{ECDH}\left(E_A,I_B\right)\;\parallel\;
+       \operatorname{ECDH}\left(E_A,E_B\right)\\
+
+    R_0\;\parallel\;C_{0,0}&amp;=
+        \operatorname{HKDF}\left(0,S,\text{``OLM\_ROOT&quot;},64\right)
+\end{aligned}</span></p>
+<h3 id="advancing-the-root-key">Advancing the root key</h3>
+<p>Advancing a root key takes the previous root key, <span
+class="math inline">R_{i-1}</span>, and two Curve25519 inputs: the
+previous ratchet key, <span class="math inline">T_{i-1}</span>, and the
+current ratchet key <span class="math inline">T_i</span>. The even
+ratchet keys are generated by Alice. The odd ratchet keys are generated
+by Bob. A shared secret is generated using Diffie-Hellman on the ratchet
+keys. The next root key, <span class="math inline">R_i</span>, and chain
+key, <span class="math inline">C_{i,0}</span>, are derived from the
+shared secret using <a
+href="https://tools.ietf.org/html/rfc5869">HKDF-SHA-256</a> using <span
+class="math inline">R_{i-1}</span> as the salt and
+<code>"OLM_RATCHET"</code> as the info.</p>
+<p><span class="math display">\begin{aligned}
+    R_i\;\parallel\;C_{i,0}&amp;=
+        \operatorname{HKDF}\left(
+            R_{i-1},
+            \operatorname{ECDH}\left(T_{i-1},T_i\right),
+            \text{``OLM\_RATCHET&quot;},
+            64
+        \right)
+\end{aligned}</span></p>
+<h3 id="advancing-the-chain-key">Advancing the chain key</h3>
+<p>Advancing a chain key takes the previous chain key, <span
+class="math inline">C_{i,j-1}</span>. The next chain key, <span
+class="math inline">C_{i,j}</span>, is the <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a> of
+<code>"\x02"</code> using the previous chain key as the key.</p>
+<p><span class="math display">\begin{aligned}
+    C_{i,j}&amp;=\operatorname{HMAC}\left(C_{i,j-1},\text{``\char`\\x02&quot;}\right)
+\end{aligned}</span></p>
+<h3 id="creating-a-message-key">Creating a message key</h3>
+<p>Creating a message key takes the current chain key, <span
+class="math inline">C_{i,j}</span>. The message key, <span
+class="math inline">M_{i,j}</span>, is the <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a> of
+<code>"\x01"</code> using the current chain key as the key. The message
+keys where <span class="math inline">i</span> is even are used by Alice
+to encrypt messages. The message keys where <span
+class="math inline">i</span> is odd are used by Bob to encrypt
+messages.</p>
+<p><span class="math display">\begin{aligned}
+    M_{i,j}&amp;=\operatorname{HMAC}\left(C_{i,j},\text{``\char`\\x01&quot;}\right)
+\end{aligned}</span></p>
+<h2 id="the-olm-protocol">The Olm Protocol</h2>
+<h3 id="creating-an-outbound-session">Creating an outbound session</h3>
+<p>Bob publishes the public parts of his identity key, <span
+class="math inline">I_B</span>, and some single-use one-time keys <span
+class="math inline">E_B</span>.</p>
+<p>Alice downloads Bob’s identity key, <span
+class="math inline">I_B</span>, and a one-time key, <span
+class="math inline">E_B</span>. She generates a new single-use key,
+<span class="math inline">E_A</span>, and computes a root key, <span
+class="math inline">R_0</span>, and a chain key <span
+class="math inline">C_{0,0}</span>. She also generates a new ratchet key
+<span class="math inline">T_0</span>.</p>
+<h3 id="sending-the-first-pre-key-messages">Sending the first pre-key
+messages</h3>
+<p>Alice computes a message key, <span
+class="math inline">M_{0,j}</span>, and a new chain key, <span
+class="math inline">C_{0,j+1}</span>, using the current chain key. She
+replaces the current chain key with the new one.</p>
+<p>Alice encrypts her plain-text with the message key, <span
+class="math inline">M_{0,j}</span>, using an authenticated encryption
+scheme (see below) to get a cipher-text, <span
+class="math inline">X_{0,j}</span>.</p>
+<p>She then sends the following to Bob: * The public part of her
+identity key, <span class="math inline">I_A</span> * The public part of
+her single-use key, <span class="math inline">E_A</span> * The public
+part of Bob’s single-use key, <span class="math inline">E_B</span> * The
+current chain index, <span class="math inline">j</span> * The public
+part of her ratchet key, <span class="math inline">T_0</span> * The
+cipher-text, <span class="math inline">X_{0,j}</span></p>
+<p>Alice will continue to send pre-key messages until she receives a
+message from Bob.</p>
+<h3 id="creating-an-inbound-session-from-a-pre-key-message">Creating an
+inbound session from a pre-key message</h3>
+<p>Bob receives a pre-key message as above.</p>
+<p>Bob looks up the private part of his single-use key, <span
+class="math inline">E_B</span>. He can now compute the root key, <span
+class="math inline">R_0</span>, and the chain key, <span
+class="math inline">C_{0,0}</span>, from <span
+class="math inline">I_A</span>, <span class="math inline">E_A</span>,
+<span class="math inline">I_B</span>, and <span
+class="math inline">E_B</span>.</p>
+<p>Bob then advances the chain key <span class="math inline">j</span>
+times, to compute the chain key used by the message, <span
+class="math inline">C_{0,j}</span>. He now creates the message key,
+<span class="math inline">M_{0,j}</span>, and attempts to decrypt the
+cipher-text, <span class="math inline">X_{0,j}</span>. If the
+cipher-text’s authentication is correct then Bob can discard the private
+part of his single-use one-time key, <span
+class="math inline">E_B</span>.</p>
+<p>Bob stores Alice’s initial ratchet key, <span
+class="math inline">T_0</span>, until he wants to send a message.</p>
+<h3 id="sending-normal-messages">Sending normal messages</h3>
+<p>Once a message has been received from the other side, a session is
+considered established, and a more compact form is used.</p>
+<p>To send a message, the user checks if they have a sender chain key,
+<span class="math inline">C_{i,j}</span>. Alice uses chain keys where
+<span class="math inline">i</span> is even. Bob uses chain keys where
+<span class="math inline">i</span> is odd. If the chain key doesn’t
+exist then a new ratchet key <span class="math inline">T_i</span> is
+generated and a new root key <span class="math inline">R_i</span> and
+chain key <span class="math inline">C_{i,0}</span> are computed using
+<span class="math inline">R_{i-1}</span>, <span
+class="math inline">T_{i-1}</span> and <span
+class="math inline">T_i</span>.</p>
+<p>A message key, <span class="math inline">M_{i,j}</span> is computed
+from the current chain key, <span class="math inline">C_{i,j}</span>,
+and the chain key is replaced with the next chain key, <span
+class="math inline">C_{i,j+1}</span>. The plain-text is encrypted with
+<span class="math inline">M_{i,j}</span>, using an authenticated
+encryption scheme (see below) to get a cipher-text, <span
+class="math inline">X_{i,j}</span>.</p>
+<p>The user then sends the following to the recipient: * The current
+chain index, <span class="math inline">j</span> * The public part of the
+current ratchet key, <span class="math inline">T_i</span> * The
+cipher-text, <span class="math inline">X_{i,j}</span></p>
+<h3 id="receiving-messages">Receiving messages</h3>
+<p>The user receives a message as above with the sender’s current chain
+index, <span class="math inline">j</span>, the sender’s ratchet key,
+<span class="math inline">T_i</span>, and the cipher-text, <span
+class="math inline">X_{i,j}</span>.</p>
+<p>The user checks if they have a receiver chain with the correct <span
+class="math inline">i</span> by comparing the ratchet key, <span
+class="math inline">T_i</span>. If the chain doesn’t exist then they
+compute a new root key, <span class="math inline">R_i</span>, and a new
+receiver chain, with chain key <span class="math inline">C_{i,0}</span>,
+using <span class="math inline">R_{i-1}</span>, <span
+class="math inline">T_{i-1}</span> and <span
+class="math inline">T_i</span>.</p>
+<p>If the <span class="math inline">j</span> of the message is less than
+the current chain index on the receiver then the message may only be
+decrypted if the receiver has stored a copy of the message key <span
+class="math inline">M_{i,j}</span>. Otherwise the receiver computes the
+chain key, <span class="math inline">C_{i,j}</span>. The receiver
+computes the message key, <span class="math inline">M_{i,j}</span>, from
+the chain key and attempts to decrypt the cipher-text, <span
+class="math inline">X_{i,j}</span>.</p>
+<p>If the decryption succeeds the receiver updates the chain key for
+<span class="math inline">T_i</span> with <span
+class="math inline">C_{i,j+1}</span> and stores the message keys that
+were skipped in the process so that they can decode out of order
+messages. If the receiver created a new receiver chain then they discard
+their current sender chain so that they will create a new chain when
+they next send a message.</p>
+<h2 id="the-olm-message-format">The Olm Message Format</h2>
+<p>Olm uses two types of messages. The underlying transport protocol
+must provide a means for recipients to distinguish between them.</p>
+<h3 id="normal-messages">Normal Messages</h3>
+<p>Olm messages start with a one byte version followed by a variable
+length payload followed by a fixed length message authentication
+code.</p>
+<pre><code> +--------------+------------------------------------+-----------+
+ | Version Byte | Payload Bytes                      | MAC Bytes |
+ +--------------+------------------------------------+-----------+</code></pre>
+<p>The version byte is <code>"\x03"</code>.</p>
+<p>The payload consists of key-value pairs where the keys are integers
+and the values are integers and strings. The keys are encoded as a
+variable length integer tag where the 3 lowest bits indicates the type
+of the value: 0 for integers, 2 for strings. If the value is an integer
+then the tag is followed by the value encoded as a variable length
+integer. If the value is a string then the tag is followed by the length
+of the string encoded as a variable length integer followed by the
+string itself.</p>
+<p>Olm uses a variable length encoding for integers. Each integer is
+encoded as a sequence of bytes with the high bit set followed by a byte
+with the high bit clear. The seven low bits of each byte store the bits
+of the integer. The least significant bits are stored in the first
+byte.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Tag</strong></th>
+<th style="text-align: center;"><strong>Type</strong></th>
+<th style="text-align: center;"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Ratchet-Key</td>
+<td style="text-align: center;">0x0A</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The public part of the ratchet key, Ti,
+of the message</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Chain-Index</td>
+<td style="text-align: center;">0x10</td>
+<td style="text-align: center;">Integer</td>
+<td style="text-align: center;">The chain index, j, of the message</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Cipher-Text</td>
+<td style="text-align: center;">0x22</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The cipher-text, Xi, j, of the
+message</td>
+</tr>
+</tbody>
+</table>
+<p>The length of the MAC is determined by the authenticated encryption
+algorithm being used. (Olm version 1 uses <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a>, truncated
+to 8 bytes). The MAC protects all of the bytes preceding the MAC.</p>
+<h3 id="pre-key-messages">Pre-Key Messages</h3>
+<p>Olm pre-key messages start with a one byte version followed by a
+variable length payload.</p>
+<pre><code> +--------------+------------------------------------+
+ | Version Byte | Payload Bytes                      |
+ +--------------+------------------------------------+</code></pre>
+<p>The version byte is <code>"\x03"</code>.</p>
+<p>The payload uses the same key-value format as for normal
+messages.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Tag</strong></th>
+<th style="text-align: center;"><strong>Type</strong></th>
+<th style="text-align: center;"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">One-Time-Key</td>
+<td style="text-align: center;">0x0A</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The public part of Bob’s single-use key,
+Eb.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Base-Key</td>
+<td style="text-align: center;">0x12</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The public part of Alice’s single-use
+key, Ea.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Identity-Key</td>
+<td style="text-align: center;">0x1A</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">The public part of Alice’s identity key,
+Ia.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Message</td>
+<td style="text-align: center;">0x22</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">An embedded Olm message with its own
+version and MAC.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="olm-authenticated-encryption">Olm Authenticated Encryption</h2>
+<h3 id="version-1">Version 1</h3>
+<p>Version 1 of Olm uses <a
+href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">AES-256</a>
+in <a
+href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">CBC</a>
+mode with <a href="https://tools.ietf.org/html/rfc2315">PKCS#7</a>
+padding for encryption and <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a> (truncated
+to 64 bits) for authentication. The 256 bit AES key, 256 bit HMAC key,
+and 128 bit AES IV are derived from the message key using <a
+href="https://tools.ietf.org/html/rfc5869">HKDF-SHA-256</a> using the
+default salt and an info of <code>"OLM_KEYS"</code>.</p>
+<p><span class="math display">\begin{aligned}
+    AES\_KEY_{i,j}\;\parallel\;HMAC\_KEY_{i,j}\;\parallel\;AES\_IV_{i,j}
+    &amp;=
+\operatorname{HKDF}\left(0,M_{i,j},\text{``OLM\_KEYS&quot;},80\right)
+\end{aligned}</span></p>
+<p>The plain-text is encrypted with AES-256, using the key <span
+class="math inline">AES\_KEY_{i,j}</span> and the IV <span
+class="math inline">AES\_IV_{i,j}</span> to give the cipher-text, <span
+class="math inline">X_{i,j}</span>.</p>
+<p>Then the entire message (including the Version Byte and all Payload
+Bytes) are passed through <a
+href="https://tools.ietf.org/html/rfc2104">HMAC-SHA-256</a>. The first 8
+bytes of the MAC are appended to the message.</p>
+<h2 id="message-authentication-concerns">Message authentication
+concerns</h2>
+<p>To avoid unknown key-share attacks, the application must include
+identifying data for the sending and receiving user in the plain-text of
+(at least) the pre-key messages. Such data could be a user ID, a
+telephone number; alternatively it could be the public part of a keypair
+which the relevant user has proven ownership of.</p>
+<h3 id="example-attacks">Example attacks</h3>
+<ol type="1">
+<li><p>Alice publishes her public <a
+href="http://cr.yp.to/ecdh.html">Curve25519</a> identity key, <span
+class="math inline">I_A</span>. Eve publishes the same identity key,
+claiming it as her own. Bob downloads Eve’s keys, and associates <span
+class="math inline">I_A</span> with Eve. Alice sends a message to Bob;
+Eve intercepts it before forwarding it to Bob. Bob believes the message
+came from Eve rather than Alice.</p>
+<p>This is prevented if Alice includes her user ID in the plain-text of
+the pre-key message, so that Bob can see that the message was sent by
+Alice originally.</p></li>
+<li><p>Bob publishes his public <a
+href="http://cr.yp.to/ecdh.html">Curve25519</a> identity key, <span
+class="math inline">I_B</span>. Eve publishes the same identity key,
+claiming it as her own. Alice downloads Eve’s keys, and associates <span
+class="math inline">I_B</span> with Eve. Alice sends a message to Eve;
+Eve cannot decrypt it, but forwards it to Bob. Bob believes the Alice
+sent the message to him, wheras Alice intended it to go to Eve.</p>
+<p>This is prevented by Alice including the user ID of the intended
+recpient (Eve) in the plain-text of the pre-key message. Bob can now
+tell that the message was meant for Eve rather than him.</p></li>
+</ol>
+<h2 id="ipr">IPR</h2>
+<p>The Olm specification (this document) is hereby placed in the public
+domain.</p>
+<h2 id="feedback">Feedback</h2>
+<p>Can be sent to olm at matrix.org.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The ratchet that Olm implements was designed by Trevor Perrin and
+Moxie Marlinspike - details at
+https://whispersystems.org/docs/specifications/doubleratchet/. Olm is an
+entirely new implementation written by the Matrix.org team.</p>
+</body>
+</html>

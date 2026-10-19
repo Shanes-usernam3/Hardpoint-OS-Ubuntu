@@ -1,0 +1,16 @@
+kinfocenter: no-manual-page [usr/bin/kinfocenter]
+# Internal library
+kinfocenter: lacks-ldconfig-trigger usr/lib/*/libKInfoCenterInternal.so
+# Internal library
+kinfocenter: package-name-doesnt-match-sonames libKInfoCenterInternal
+# Internal library
+kinfocenter: shared-library-lacks-version usr/lib/*/libKInfoCenterInternal.so libKInfoCenterInternal.so
+# Internal library
+kinfocenter: no-symbols-control-file usr/lib/*/libKInfoCenterInternal.so
+# Script is called from c++ code as an argument to /bin/sh
+kinfocenter: script-not-executable [usr/share/kinfocenter/firmware_security/fwupdmgr.sh]
+# systemsettings executable is provided by the systemsettings dependency
+kinfocenter: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_about-distro.desktop]
+# kcmshell6 executable required for the KCM is provided by the libkf6kcmutils-bin dependency
+kinfocenter: desktop-command-not-in-package kcmshell6 [usr/share/applications/kcm_energyinfo.desktop]
+

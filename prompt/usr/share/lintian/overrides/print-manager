@@ -1,0 +1,9 @@
+print-manager: no-manual-page [usr/bin/configure-printer]
+print-manager: no-manual-page [usr/bin/kde-add-printer]
+print-manager: no-manual-page [usr/bin/kde-print-queue]
+# Private library
+print-manager: package-name-doesnt-match-sonames libkcupslib6.*
+# Private library
+print-manager: no-symbols-control-file usr/lib/*/libkcupslib.so.6.*
+# systemsettings executable required for the KCM is provided by the systemsettings dependency
+print-manager: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_printer_manager.desktop]

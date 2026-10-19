@@ -1,0 +1,9 @@
+# webserver belongs to web (#665854)
+python3-tornado binary: wrong-section-according-to-package-name
+# test sample, so duplication shouldn't be a problem
+python3-tornado: compressed-duplicate usr/lib/python3/dist-packages/tornado/test/static/sample.xml.bz2
+python3-tornado: compressed-duplicate usr/lib/python3/dist-packages/tornado/test/static/sample.xml.gz
+# it's not documentation just because it has a .html/.txt suffix!
+python3-tornado: package-contains-documentation-outside-usr-share-doc usr/lib/python3/dist-packages/tornado/test/static/dir/index.html
+python3-tornado: package-contains-documentation-outside-usr-share-doc usr/lib/python3/dist-packages/tornado/test/static/robots.txt
+python3-tornado: package-contains-documentation-outside-usr-share-doc usr/lib/python3/dist-packages/tornado/test/static_foo.txt

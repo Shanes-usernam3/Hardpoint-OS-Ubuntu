@@ -1,0 +1,4 @@
+# private library
+ark: package-name-doesnt-match-sonames libkerfuffle*
+# private library
+ark: no-symbols-control-file

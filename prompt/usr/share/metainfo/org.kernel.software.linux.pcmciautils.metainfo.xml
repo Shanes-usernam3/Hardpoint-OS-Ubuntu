@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <id>org.kernel.software.linux.pcmciautils</id>
+  <metadata_license>MIT</metadata_license>
+  <name>pcmciautils</name>
+  <summary>PCMCIA utilities for Linux 2.6</summary>
+  <description>
+    <p>This package provides PCMCIA initialisation tools for Linux
+    2.6.13-rc1 or later, replacing the old pcmcia-cs tools used with
+    earlier kernel versions.  PCMCIA cards are commonly used in
+    laptops to provide expanded capabilities such as network
+    connections, modems, increased memory, etc.</p>
+
+    <p>To use PCMCIA you need to have kernel modules available to
+    support it. These are included in the stock Debian 2.6 kernel
+    packages. You will most likely also need udev, although it isn't
+    always required.</p>
+
+    <p>The wireless-tools package is required by many wireless network
+    adapters.</p>
+  </description>
+  <url type="homepage">https://www.kernel.org/pub/linux/utils/kernel/pcmcia/</url>
+  <provides>
+    <modalias>pci:v*d*sv*sd*bc06sc07i*</modalias>
+  </provides>
+</component>

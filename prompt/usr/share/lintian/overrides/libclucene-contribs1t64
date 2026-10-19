@@ -1,0 +1,2 @@
+package-name-doesnt-match-sonames libclucene-contribs-lib1
+libclucene-contribs1t64: package-name-doesnt-match-sonames libclucene-contribs1v5

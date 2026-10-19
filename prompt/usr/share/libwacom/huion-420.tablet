@@ -1,0 +1,16 @@
+# HUION
+# H420
+#
+
+[Device]
+Name=Huion 420
+ModelName=
+DeviceMatch=usb|256c|006e|HUION 420 Pen;usb|256c|006e|HUION 420 Pad;
+Width=4
+Height=2
+IntegratedIn=
+Styli=@generic-no-eraser;
+
+[Features]
+Stylus=true
+Reversible=true

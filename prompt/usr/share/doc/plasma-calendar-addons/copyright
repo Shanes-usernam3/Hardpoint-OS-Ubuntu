@@ -1,0 +1,746 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kdeplasma-addons
+Source: https://invent.kde.org/plasma/kdeplasma-addons
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2018, Aleix Pol Gonzalez <aleixpol@kde.org>
+           2020-2022, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2008, Anne-Marie Mahfouf <annma@kde.org>
+           2015-2017, Bernhard Friedreich <friesoft@gmail.com>
+           2015, Bernhard Friedrich <friesoft@gmail.com>
+           2023, Bharadwaj Raju <bharadwaj.raju777@protonmail.com>
+           2013, Bhushan Shah <bhush94@gmail.com>
+           2025, Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
+           2025, Christoph Wolk <cwo.kde@posteo.net>
+           2012-2016, David Edmundson <davidedmundson@kde.org>
+           2017, David Faure <faure@kde.org>
+           2007-2014, Davide Bettio <davide.bettio@kdemail.net>
+           2021, Emily Ehlert
+           2016-2018, Friedrich W. H. Kossebau <kossebau@kde.org>
+           2022-2023, Fushan Wen <qydwhotmail@gmail.com>
+           2021, Gary Wang <wzc782970009@gmail.com>
+           2008, Georges Toth <gtoth@trypill.org>
+           2021, Guo Yunhe <i@guoyunhe.me>
+           2013, Heena Mahour <heena393@gmail.com>
+           2007, Henry Stanaland <stanaland@gmail.com>
+           2020-2024, Ismael Asensio <isma.af@gmail.com>
+           2022, ivan (@ratijas) tkachenko <me@ratijas.tk>
+           2022-2024, ivan tkachenko <me@ratijas.tk>
+           2010-2012, Jason A. Donenfeld <Jason@zx2c4.com>
+           2014, Jeremy Whiting <jpwhiting@kde.org>
+           2014, Joseph Wenninger <jowenn@kde.org>
+           2013-2018, Kai Uwe Broulik <kde@privat.broulik.de>
+           2015, Lars Pontoppidan <dev.larpon@gmail.com>
+           2008, Laurent Montel <montel@kde.org>
+           2012, Luiz Romário Santana Rios <luizromario@gmail.com>
+           2013-2015, Marco Martin <mart@kde.org>
+           2008, Marco Martin <notmart@gmail.com>
+           2011-2014, Martin Gräßlin <mgraesslin@kde.org>
+           2013, Martin Klapetek <mklapetek@kde.org>
+           2014, Martin Yrjölä <martin.yrjola@gmail.com>
+           2008-2012, Matthias Fuchs <mat69@gmx.net>
+           2014-2016, Mikhail Ivchenko <ematirov@gmail.com>
+           2007-2009, Petri Damstén <damu@iki.fi>
+           2018, Piotr Kąkol <piotrkakol@protonmail.com>
+           2012, Reza Fatahilah Shah <rshah0385@kireihana.com>
+           2007, Riccardo Iaconelli <riccardo@kde.org>
+           2008, Ryan P. Bitanga <ryan.bitanga@gmail.com>
+           2013-2014, Sebastian Kügler <sebas@kde.org>
+           2011-2012, Shaun Reich <shaun.reich@kdemail.net>
+           2007-2019, Shawn Starr <shawn.starr@rogers.com>
+           2020, Sora Steenvoort <sora@dillbox.me>
+           2009, Thilo-Alexander Ginkel <thilo@ginkel.com>
+           2007, Tobias Koenig <tokoe@kde.org>
+           2016-2017, Weng Xuetian <wengxt@gmail.com>
+           2020, Łukasz Korbel <corebell.it@gmail.com>
+License: GPL-2.0-or-later
+
+Files: po/*
+Copyright: 2007-2025, A S Alam <aalam@users.sf.net>
+           2018-2024, A S Alam <alam.yellow@gmail.com>
+           2018-2024, Adrian Chaves <adrian@chaves.io>
+           2023-2025, Adrián Chaves (Gallaecio)
+           2024, Agron Selimaj <as9902613@gmail.com>
+           2018-2025, Alexander Yavorsky <kekcuha@gmail.com>
+           2022-2025, Alois Spitzbart <spitz234@hotmail.com>
+           2009-2021, Burkhard Lück <lueck@hube-lueck.de>
+           2008-2025, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2025, Emir SARI <emir_sari@icloud.com>
+           2022-2024, Enol P. <enolp@softastur.org>
+           2007-2012, Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+           2007-2011, Enrique Matias Sanchez (Quique) <cronopios@gmail.com>
+           2008, Enrique Matias Sanchez <cronopios@gmail.com>
+           2024, Flori G <Renner03@protonmail.com>
+           2008-2023, Frederik Schwarzer <schwarzer@kde.org>
+           2009-2025, Freek de Kruijf <f.de.kruijf@hetnet.nl>
+           2009-2025, Freek de Kruijf <freekdekruijf@kde.nl>
+           2023, George Stefanakis <george.stefanakis@gmail.com>
+           2024-2025, Geraldo Simiao <geraldosimiao@fedoraproject.org>
+           2017-2025, giovanni <g.sora@tiscali.it>
+           2019-2025, Giovanni Sora <g.sora@tiscali.it>
+           2025, Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+           2023-2024, Guðmundur Erlingsson <gudmundure@gmail.com>
+           2008, Ignacio A. Poggi <ignaciop.3@gmail.com>
+           2008, Ignacio Poggi <ignaciop.3@gmail.com>
+           2023-2025, Iñigo Salvador Azurmendi <xalba@ni.eus>
+           2007-2009, Jaime Robles <jaime@kde.org>
+           2023, Jannick Kuhr <opensource@kuhr.org>
+           2012-2014, Javier Vinal <fjvinal@gmail.com>
+           2012-2014, Javier Viñal <fjvinal@gmail.com>
+           2010-2025, Johannes Obermayr <johannesobermayr@gmx.de>
+           2008-2025, Josep M. Ferrer <txemaq@gmail.com>
+           2024-2025, kali <skkalwar999@gmail.com>
+           2023-2025, KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+           2024-2025, KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2024, KDE euskatzeko proiektuko arduraduna <xalba@ni.eus>
+           2024, kde-el <b3lievem@yandex.com>
+           2022-2025, Kheyyam <xxmn77@gmail.com>
+           2020-2025, Kheyyam Gojayev <xxmn77@gmail.com>
+           2010, Kira J. Fernandez <kirajfdez@gmail.com>
+           2023-2025, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2021-2025, Kishore G <kishore96@gmail.com>
+           2024-2025, Kristof Kiszel <ulysses@fsf.hu>
+           2010-2024, Lasse Liehu <lasse.liehu@gmail.com>
+           2025, linux <xxmn77@gmail.com>
+           2025, Marcus Gama <marcus.gama@gmail.com>
+           2008, Mario Young <mayeco@kdemail.net>
+           2023-2025, Matjaž Jeran <matjaz.jeran@amis.net>
+           2022-2025, Mincho Kondarev <mkondarev@yahoo.de>
+           2025, Olesya Gerasimenko <goa@altlinux.ru>
+           2024, Olesya Gerasimenko <translation-team@basealt.ru>
+           2009-2011, Panagiotis Papadopoulos <pano_90@gmx.net>
+           2018-2025, Paolo Zamponi <feus73@gmail.com>
+           2024, rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+           2012, Rocio Gallego <traducciones@rociogallego.com>
+           2017-2023, Roman Paholik <wizzardsk@gmail.com>
+           2023, Roman Paholík <wizzardsk@gmail.com>
+           2022-2025, Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+           2008, Santi <santi@kde-es.org>
+           2007-2008, Santiago Fernández Sancho <santi@kde-es.org>
+           2008-2025, Sergiu Bivol <sergiu@cip.md>
+           2015-2025, Shinjo Park <kde@peremen.name>
+           2015-2025, Shinjo Park <peremen@gmail.com>
+           2007-2025, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2015-2024, Steve Allewell <steve.allewell@gmail.com>
+           2025, Sveinn í Felli <sv1@fellsnet.is>
+           2009-2025, Sveinn í Felli <sveinki@nett.is>
+           2007-2010, Thomas Reitelbach <tr@erdfunkstelle.de>
+           2010-2025, Tommi Nieminen <translator@legisign.org>
+           2024-2025, Toms Trasuns <toms.trasuns@posteo.net>
+           2024-2025, Toms Trasūns <toms.trasuns@posteo.net>
+           2011, Torbjörn Klatt <torbjoern.k@googlemail.com>
+           2025, tunahan <tunahanyrd@gmail.com>
+           2008-2025, Vincenzo Reale <smart2128vr@gmail.com>
+           2018-2024, Vit Pelcak <vit@pelcak.org>
+           2011-2024, Vít Pelčák <vit@pelcak.org>
+           2018-2024, Wantoyo <wantoyek@gmail.com>
+           2013-2025, Xavier Besnard <xavier.besnard@kde.org>
+           2023-2025, Yaron Shahrabani <sh.yaron@gmail.com>
+           2008-2025, zayed <zayed.alsaidi@gmail.com>
+           2021-2025, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2012-2025, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: GPL-2.0-or-later
+
+Files: applets/binary-clock/CMakeLists.txt
+       applets/keyboardindicator/CMakeLists.txt
+Copyright: 2025, Tobias Fella <tobias.fella@kde.org>
+License: BSD-2-Clause
+
+Files: appiumtests/calendarplugins/CMakeLists.txt
+       appiumtests/CMakeLists.txt
+       applets/comic/engine/CMakeLists.txt
+       applets/notes/documenthandler.cpp
+       applets/notes/documenthandler.h
+       applets/weather/CMakeLists.txt
+       applets/weather/ions/bbcukmet/CMakeLists.txt
+       applets/weather/ions/CMakeLists.txt
+       applets/weather/ions/dwd/CMakeLists.txt
+       applets/weather/ions/envcan/CMakeLists.txt
+       applets/weather/ions/noaa/CMakeLists.txt
+       applets/weather/ions/wetter.com/CMakeLists.txt
+       applets/weather/weatherdata/CMakeLists.txt
+       kwin/CMakeLists.txt
+       kwin/effects/CMakeLists.txt
+       kwin/effects/cube/CMakeLists.txt
+       kwin/effects/cube/kcm/CMakeLists.txt
+       plasmacalendarplugins/alternatecalendar/config/plugin/CMakeLists.txt
+       runners/colors/autotests/CMakeLists.txt
+       runners/colors/CMakeLists.txt
+       runners/spellchecker/autotests/CMakeLists.txt
+Copyright: 2022, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2025, Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
+           2013, Digia Plc and /or its subsidiary(-ies) <http://www.qt-project.org/legal>
+           2022-2024, Fushan Wen <qydwhotmail@gmail.com>
+           2022, Harald Sitter <sitter@kde.org>
+           2024, ivan tkachenko <me@ratijas.tk>
+           2025, Kai Uwe Broulik <kde@broulik.de>
+           2022-2023, Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+License: BSD-3-Clause
+
+Files: .git-blame-ignore-revs
+       .gitignore
+       .gitlab-ci.yml
+       .kde-ci.yml
+       kwin/effects/cube/kcm/cubeeffectkcm.ui
+       kwin/effects/cube/kcm/resources.qrc
+Copyright: None
+License: CC0-1.0
+
+Files: applets/colorpicker/package/contents/config/config.qml
+       applets/colorpicker/package/contents/ui/configGeneral.qml
+       applets/colorpicker/plugin/colorpickerplugin.cpp
+       applets/colorpicker/plugin/grabwidget.cpp
+       applets/colorpicker/plugin/grabwidget.h
+       applets/fifteenPuzzle/package/contents/config/config.qml
+       applets/fifteenPuzzle/package/contents/ui/configAppearance.qml
+       applets/fifteenPuzzle/plugin/fifteenimageprovider.cpp
+       applets/fifteenPuzzle/plugin/fifteenimageprovider.h
+       applets/fifteenPuzzle/plugin/fifteenpuzzleplugin.cpp
+       applets/fuzzy-clock/package/contents/config/config.qml
+       applets/fuzzy-clock/package/contents/ui/configAppearance.qml
+       applets/notes/package/contents/config/config.qml
+       applets/notes/package/contents/ui/configAppearance.qml
+       applets/quicklaunch/ConfigGeneral.qml
+       applets/quicklaunch/config.qml
+       applets/quicklaunch/IconItem.qml
+       applets/quicklaunch/layout.js
+       applets/quicklaunch/main.qml
+       applets/quicklaunch/Popup.qml
+       applets/quicklaunch/quicklaunch_p.cpp
+       applets/quicklaunch/quicklaunch_p.h
+       applets/quicklaunch/UrlModel.qml
+       applets/userswitcher/package/contents/config/config.qml
+       applets/userswitcher/package/contents/ui/configGeneral.qml
+       applets/webbrowser/package/contents/config/config.qml
+       kwin/effects/cube/kcm/cubeeffectkcm.cpp
+       kwin/effects/cube/kcm/cubeeffectkcm.h
+       kwin/effects/cube/package/contents/ui/constants.js
+       kwin/effects/cube/package/contents/ui/CubeCameraController.qml
+       kwin/effects/cube/package/contents/ui/CubeFace.qml
+       kwin/effects/cube/package/contents/ui/Cube.qml
+       kwin/effects/cube/package/contents/ui/DesktopView.qml
+       kwin/effects/cube/package/contents/ui/main.qml
+       kwin/effects/cube/package/contents/ui/PlaceholderView.qml
+       kwin/effects/cube/package/contents/ui/ScreenView.qml
+       runners/colors/autotests/colorrunnertest.cpp
+       runners/colors/colorsrunner.cpp
+       runners/colors/colorsrunner.h
+Copyright: 2013, Bhushan Shah <bhush94@gmail.com>
+           2015, David Rosca <nowrep@gmail.com>
+           2010-2011, Ingomar Wesp <ingomar@wesp.name>
+           2014, Jeremy Whiting <jpwhiting@kde.org>
+           2025, Kai Uwe Broulik <kde@broulik.de>
+           2014-2015, Kai Uwe Broulik <kde@privat.broulik.de>
+           2008-2009, Lukas Appelhans <l.appelhans@gmx.de>
+           2013, Sebastian Kügler <sebas@kde.org>
+           2020, Sora Steenvoort <sora@dillbox.me>
+           2022-2024, Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: applets/timer/CompactRepresentation.qml
+       applets/timer/main.qml
+Copyright: 2022, Fushan Wen <qydwhotmail@gmail.com>
+           2016, Michael Abrahams <miabraha@gmail.com>
+License: GPL-3.0-or-later
+
+Files: applets/comic/engine/cachedprovider.cpp
+       applets/comic/engine/cachedprovider.h
+       applets/comic/engine/comic.cpp
+       applets/comic/engine/comic.h
+       applets/comic/engine/comic_package.cpp
+       applets/comic/engine/comicprovider.cpp
+       applets/comic/engine/comicprovider.h
+       applets/comic/engine/comicproviderkross.cpp
+       applets/comic/engine/comicproviderkross.h
+       applets/comic/engine/comicproviderwrapper.cpp
+       applets/comic/engine/comicproviderwrapper.h
+       dict/dictengine.cpp
+       dict/dictengine.h
+       runners/datetime/autotests/datetimerunnertest.cpp
+       runners/datetime/datetimerunner.cpp
+       runners/datetime/datetimerunner.h
+       runners/spellchecker/spellcheck.cpp
+       runners/spellchecker/spellcheck.h
+Copyright: 2006-2010, Aaron Seigo <aseigo@kde.org>
+           2023, Alexander Lohnau <alexander.lohnau@gmx.de<
+           2022, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2007, Jeff Cooper <weirdsox11@gmail.com>
+           2010, Marco Martin <notmart@gmail.com>
+           2010, Matthias Fuchs <mat69@gmx.net>
+           2022-2023, Natalie Clarius <natalie_clarius@yahoo.de>
+           2008, Petri Damstén <damu@iki.fi>
+           2007, Ryan Bitanga <ephebiphobic@gmail.com>
+           2007, Ryan P. Bitanga <ephebiphobic@gmail.com>
+           2007, Thomas Georgiou <TAGeorgiou@gmail.com>
+           2007, Tobias Koenig <tokoe@kde.org>
+           2015, Vishesh Handa <vhanda@kde.org>
+License: LGPL-2.0-only
+
+Files: applets/comic/engine/types.h
+       applets/grouping/package/contents/ui/items/AbstractItem.qml
+       applets/grouping/package/contents/ui/items/PlasmoidItem.qml
+       applets/grouping/package/contents/ui/main.qml
+       applets/notes/package/contents/ui/ShortcutMenuItem.qml
+       applets/weather/ions/ion.cpp
+       applets/weather/ions/ion.h
+       applets/weather/types.h
+       runners/katesessions/katesessions.cpp
+       runners/katesessions/katesessions.h
+       runners/konsoleprofiles/konsoleprofiles.cpp
+       runners/konsoleprofiles/konsoleprofiles.h
+       wallpapers/haenau/contents/ui/BackgroundElement.qml
+       wallpapers/haenau/contents/ui/BottomBackgroundElement.qml
+       wallpapers/haenau/contents/ui/main.qml
+       wallpapers/haenau/contents/ui/RightBackgroundElement.qml
+       wallpapers/hunyango/contents/ui/ColorProvider.qml
+       wallpapers/hunyango/contents/ui/main.qml
+       wallpapers/hunyango/contents/ui/qmldir
+       wallpapers/potd/package/contents/ui/ActionContextMenu.qml
+       wallpapers/potd/package/contents/ui/config.qml
+       wallpapers/potd/package/contents/ui/main.qml
+Copyright: 2020-2022, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2016, David Edmundson <davidedmundson@kde.org>
+           2022, Fushan Wen <qydwhotmail@gmail.com>
+           2017, Kai Uwe Broulik <kde@privat.broulik.de>
+           2019, Luca Carlon <carlon.luca@gmail.com>
+           2011-2016, Marco Martin <mart@kde.org>
+           2008, Montel Laurent <montel@kde.org>
+           2023, Oliver Beard <olib141@outlook.com>
+           2008, Sebastian Kügler <sebas@kde.org>
+           2007-2009, Shawn Starr <shawn.starr@rogers.com>
+           2025, Tobias Fella <tobias.fella@kde.org>
+           2016, Weng Xuetian <wengxt@gmail.com>
+License: LGPL-2.0-or-later
+
+Files: po/ca/plasma_applet_org.kde.plasma.binaryclock.po
+       po/ca/plasma_applet_org.kde.plasma.comic.po
+       po/ca/plasma_applet_org.kde.plasma.fifteenpuzzle.po
+       po/ca/plasma_applet_org.kde.plasma.fuzzyclock.po
+       po/ca/plasma_applet_org.kde.plasma.notes.po
+       po/ca/plasma_applet_org.kde.plasma.timer.po
+       po/ca/plasma_runner_converterrunner.po
+       po/ca/plasma_runner_katesessions.po
+       po/ca/plasma_runner_spellcheckrunner.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.binaryclock.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.comic.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.fifteenpuzzle.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.fuzzyclock.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.notes.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.timer.po
+       po/ca@valencia/plasma_runner_converterrunner.po
+       po/ca@valencia/plasma_runner_katesessions.po
+       po/ca@valencia/plasma_runner_spellcheckrunner.po
+Copyright: 2012-2022, Antoni Bella Pérez <antonibella5@yahoo.com>
+           2009, Joan Maspons <joanmaspons@gmail.com>
+           2008-2023, Josep M. Ferrer <txemaq@gmail.com>
+License: LGPL-2.0-or-later
+
+Files: applets/notes/noteiconengine.cpp
+       applets/notes/noteiconengine.h
+       kdeds/CMakeLists.txt
+       kdeds/kameleon/CMakeLists.txt
+       kdeds/kameleon/kameleon.cpp
+       kdeds/kameleon/kameleon.h
+       kdeds/kameleon/kameleonhelper.actions
+       kdeds/kameleon/kameleonhelper.cpp
+       kdeds/kameleon/kameleonhelper.h
+       kdeds/kameleon/kameleon.json
+       runners/characters/charrunner_config.cpp
+       runners/characters/charrunner_config.h
+       runners/characters/charrunner.cpp
+       runners/characters/charrunner.h
+       runners/characters/config_keys.h
+       runners/colors/colorcircleiconengine.cpp
+       runners/colors/colorcircleiconengine.h
+       runners/converter/autotests/converterrunnertest.cpp
+       runners/datetime/autotests/CMakeLists.txt
+       runners/spellchecker/autotests/spellcheckrunnertest.cpp
+Copyright: 2020, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2010, Anton Kreuzkamp <akreuzkamp@web.de>
+           2022, Fushan Wen <qydwhotmail@gmail.com>
+           2025, Kai Uwe Broulik <kde@broulik.de>
+           2024, Natalie Clarius <natalie.clarius@kde.org>
+           2023, Natalie Clarius <natalie_clarius@yahoo.de>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: po/ca/kwin_effect_cube.po
+       po/ca/plasma_addons_engine_dict.po
+       po/ca/plasma_addons_profiles_utility.po
+       po/ca/plasma_applet_org.kde.plasma.addons.katesessions.po
+       po/ca/plasma_applet_org.kde.plasma_applet_dict.po
+       po/ca/plasma_applet_org.kde.plasma.calculator.po
+       po/ca/plasma_applet_org.kde.plasma.colorpicker.po
+       po/ca/plasma_applet_org.kde.plasma.diskquota.po
+       po/ca/plasma_applet_org.kde.plasma.keyboardindicator.po
+       po/ca/plasma_applet_org.kde.plasma.konsoleprofiles.po
+       po/ca/plasma_applet_org.kde.plasma.mediaframe.po
+       po/ca/plasma_applet_org.kde.plasma.private.grouping.po
+       po/ca/plasma_applet_org.kde.plasma.quicklaunch.po
+       po/ca/plasma_applet_org.kde.plasma.userswitcher.po
+       po/ca/plasma_applet_org.kde.plasma.weather.po
+       po/ca/plasma_applet_org.kde.plasma.webbrowser.po
+       po/ca/plasma_calendar_alternatecalendar.po
+       po/ca/plasma_calendar_astronomicalevents.po
+       po/ca/plasma_runner_CharacterRunner.po
+       po/ca/plasma_runner_datetime.po
+       po/ca/plasma_runner_konsoleprofiles.po
+       po/ca/plasma_runner_krunner_dictionary.po
+       po/ca/plasma_wallpaper_org.kde.potd.po
+       po/ca@valencia/kwin_effect_cube.po
+       po/ca@valencia/plasma_addons_engine_dict.po
+       po/ca@valencia/plasma_addons_profiles_utility.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.addons.katesessions.po
+       po/ca@valencia/plasma_applet_org.kde.plasma_applet_dict.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.calculator.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.colorpicker.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.diskquota.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.keyboardindicator.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.konsoleprofiles.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.mediaframe.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.private.grouping.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.quicklaunch.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.userswitcher.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.weather.po
+       po/ca@valencia/plasma_applet_org.kde.plasma.webbrowser.po
+       po/ca@valencia/plasma_calendar_alternatecalendar.po
+       po/ca@valencia/plasma_calendar_astronomicalevents.po
+       po/ca@valencia/plasma_runner_CharacterRunner.po
+       po/ca@valencia/plasma_runner_datetime.po
+       po/ca@valencia/plasma_runner_konsoleprofiles.po
+       po/ca@valencia/plasma_runner_krunner_dictionary.po
+       po/ca@valencia/plasma_wallpaper_org.kde.potd.po
+       po/uk/*
+Copyright: 2015-2021, Antoni Bella Pérez <antonibella5@yahoo.com>
+           2008, Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>
+           2008-2024, Josep M. Ferrer <txemaq@gmail.com>
+           2010, Manuel Tortosa <manutortosa@chakra-project.org>
+           2014-2024, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+Comment: Manually collected
+
+Files: applets/dict/plugin/dictionariesmodel.cpp
+       applets/dict/plugin/dictionariesmodel.h
+       applets/dict/plugin/dict_object.cpp
+       applets/dict/plugin/dict_object.h
+       applets/dict/plugin/dict_plugin.cpp
+       applets/diskquota/DiskQuota.cpp
+       applets/diskquota/DiskQuota.h
+       applets/diskquota/package/contents/ui/ListDelegateItem.qml
+       applets/diskquota/package/contents/ui/main.qml
+       applets/diskquota/QuotaItem.cpp
+       applets/diskquota/QuotaItem.h
+       applets/diskquota/QuotaListModel.cpp
+       applets/diskquota/QuotaListModel.h
+       applets/notes/abstractnoteloader.cpp
+       applets/notes/abstractnoteloader.h
+       applets/notes/filesystemnoteloader.cpp
+       applets/notes/filesystemnoteloader.h
+       applets/notes/note.cpp
+       applets/notes/note.h
+       applets/notes/notemanager.cpp
+       applets/notes/notemanager.h
+Copyright: 2014, David Edmundson <david@davidedmundson.co.uk>
+           2017, David Faure <faure@kde.org>
+           2015, Dominik Haumann <dhaumann@kde.org>
+License: LGPL-2.1-or-later
+
+Files: plasmacalendarplugins/alternatecalendar/provider/solarutils.h
+Copyright: 2019-2022, UnionTech Software Technology Co., Ltd.
+License: LGPL-3.0-or-later
+
+Files: wallpapers/potd/plugins/providers/simonstalenhagprovider.cpp
+       wallpapers/potd/plugins/providers/simonstalenhagprovider.h
+Copyright: 2021, Alexey Andreyev <aa13q@ya.ru>
+License: LicenseRef-KDE-Accepted-GPL
+
+Files: appiumtests/calculatortest.py
+       appiumtests/calendarplugins/alternatecalendartest.py
+       appiumtests/keyboardindicatortest.py
+Copyright: 2024, Fushan Wen <qydwhotmail@gmail.com>
+           2021-2022, Harald Sitter <sitter@kde.org>
+           2016, Microsoft Corporation. All rights reserved.
+License: MIT
+
+Files: debian/*
+Copyright: 2007-2025, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2022, Patrick Franz <deltaone@debian.org>
+License: GPL-2.0-or-later
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-3.0-only
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GPL License as published by the Free
+ Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: GPL-3.0-or-later
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License version
+ 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LGPL-3.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library. If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version that is accepted by the membership
+ of KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy as defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

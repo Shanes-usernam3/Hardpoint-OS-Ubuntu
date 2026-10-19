@@ -1,0 +1,28 @@
+# That's on purpose, getweb can go fetch these from the web
+package-contains-empty-directory usr/lib/firmware/hp/
+
+# Manpages are shipped in printer-driver-foo2zjs-common
+no-manual-page usr/bin/arm2hpdl
+no-manual-page usr/bin/ddstdecode
+no-manual-page usr/bin/foo2ddst
+no-manual-page usr/bin/foo2hbpl2
+no-manual-page usr/bin/foo2hiperc
+no-manual-page usr/bin/foo2hp
+no-manual-page usr/bin/foo2lava
+no-manual-page usr/bin/foo2oak
+no-manual-page usr/bin/foo2qpdl
+no-manual-page usr/bin/foo2slx
+no-manual-page usr/bin/foo2xqx
+no-manual-page usr/bin/foo2zjs
+no-manual-page usr/bin/foo2zjs-icc2ps
+no-manual-page usr/bin/gipddecode
+no-manual-page usr/bin/hbpldecode
+no-manual-page usr/bin/hipercdecode
+no-manual-page usr/bin/lavadecode
+no-manual-page usr/bin/oakdecode
+no-manual-page usr/bin/opldecode
+no-manual-page usr/bin/qpdldecode
+no-manual-page usr/bin/slxdecode
+no-manual-page usr/bin/usb_printerid
+no-manual-page usr/bin/xqxdecode
+no-manual-page usr/bin/zjsdecode

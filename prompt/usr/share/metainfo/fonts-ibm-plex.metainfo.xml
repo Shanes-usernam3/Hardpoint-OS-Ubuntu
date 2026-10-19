@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="font">
+  <id>fonts-ibm-plex</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>OFL-1.1</project_license>
+  <name>IBM Plex</name>
+  <summary>extensive typeface family designed by IBM</summary>
+  <description>
+    <p>
+ IBM Plex is an extensive font family developed by IBM. It comes in four
+ subfamilies (Sans, Sans Condensed, Mono and Serif) and 8 weights (Thin,
+ Extralight, Light, Regular, Text, Medium, Semibold, Bold), with true italics
+ to complement them. A variable-weight counterpart of IBM Plex Sans is also
+ available.
+ .
+ The four basic subfamilies support most of the languages using the Latin
+ alphabet (including Vietnamese), the Cyrillic writing system and monotonic
+ Greek. Hebrew (including cantillation marks), Thai (both looped and loopless),
+ Devanagari and Arabic are supported as separate typefaces.
+ .
+ There is also support for common mathematical and currency symbols as well as
+ ligatures and stylistic alternates.
+ .
+ This package contains the TrueType (CFF) flavored OpenType fonts and
+ the WOFF/WOFF2 web fonts.
+    </p>
+  </description>
+  <url type="homepage">https://www.ibm.com/plex/</url>
+  <update_contact>debian-fonts@lists.debian.org</update_contact>
+</component>

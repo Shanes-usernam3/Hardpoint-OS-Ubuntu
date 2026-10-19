@@ -1,0 +1,2 @@
+# Intentional rename https://bugs.debian.org/1122338
+libgusb2a: package-name-doesnt-match-sonames libgusb2

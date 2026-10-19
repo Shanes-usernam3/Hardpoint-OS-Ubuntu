@@ -1,0 +1,68 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma5support
+Source: https://invent.kde.org/plasma/plasma5support/
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2005-2012, Aaron Seigo <aseigo@kde.org>
+           2009, Alan Alpert <alan.alpert@nokia.com>
+           2010, Brian Pritchett <batenkaitos@gmail.com>
+           2023, Harald Sitter <sitter@kde.org>
+           2010, Marco MArtin <mart@kde.org>
+           2010-2013, Marco Martin <mart@kde.org>
+           2008, Ménard Alexis <darktears31@gmail.com>
+           2010, Ménard Alexis <menard@kde.org>
+           2007, Riccardo Iaconelli <riccardo@kde.org>
+           2009, Rob Scheepmaker <r.scheepmaker@student.utwente.nl>
+           2010, Ryan Rix <ry@n.rix.si>
+           2013, Sebastian Kügler <sebas@kde.org>
+License: LGPL-2.0-or-later
+
+Files: src/declarativeimports/serviceoperationstatus.h
+Copyright: 2013, Marco Martin <mart@kde.org>
+License: GPL-2.0-or-later
+
+Files: debian/*
+Copyright: 2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: LGPL-2.0-or-later
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY QT_STYLE_OVERRIDE=Breeze software-properties-qt --open-tab=4

@@ -1,0 +1,12 @@
+Group "Braille/Additional Braille transcription (3)"
+Option "LibLouis3/Additional Braille transcription (3)" PickOne AnySetup 10
+  *Choice "None/None" ""
+  Choice "Locale/Default for language" ""
+  Choice "Locale-g0/Default for language grade 0" ""
+  Choice "Locale-g1/Default for language grade 1" ""
+  Choice "Locale-g2/Default for language grade 2" ""
+  Choice "Locale-g3/Default for language grade 3" ""
+  Choice "HyphLocale/Default hyphenation rules for language" ""
+  Choice "*.ctb/* contracted (*.ctb)" ""
+  Choice "*.utb/* computer (*.utb)" ""
+  Choice "hyph_*.dic/* hyphenation rules (hyph_*.dic)" ""

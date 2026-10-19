@@ -1,0 +1,3 @@
+# libQt6WebViewQuick6 is a private library installed in a public path
+qml6-module-qtwebview: package-name-doesnt-match-sonames libQt6WebViewQuick6
+qml6-module-qtwebview: no-symbols-control-file usr/lib/*/libQt6WebViewQuick.so.6.*

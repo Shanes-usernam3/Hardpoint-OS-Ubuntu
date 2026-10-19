@@ -1,0 +1,14 @@
+# Docs: https://develop.kde.org/docs/plasma/theme/theme-details
+[Wallpaper]
+defaultWallpaperTheme=Kubuntu
+defaultFileSuffix=.svg
+defaultWidth=1920
+defaultHeight=1080
+
+[ContrastEffect]
+enabled=true
+contrast=1.0
+saturation=1.5
+
+[AdaptiveTransparency]
+enabled=true

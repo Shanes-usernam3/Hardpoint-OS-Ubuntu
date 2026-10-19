@@ -1,0 +1,21 @@
+This package ensures that the machine has required CPU facilities; users who
+attempt installation on an inadequate processor will receive an error message
+in preinst.  This is useful if there's no way to make your package support
+the base ISA for the architecture.
+
+While in general packages are required to at least try, there are situations
+when baseline support is infeasible or a pure waste of time.  No one is
+going to run scientific number-crunching software on a pre-SSE2/SSE3
+machine.  Or upstream code may use such extensions unconditionally, and
+you don't have the resources to fix that yourself.
+
+You should also consider how likely other software is to use your package. 
+A fast strong hash is something with many uses, big and small, so it's a
+priority to port libraries like libhighwayhash to all CPUs.  On the other
+hand, a niche piece of software is unlikely to be repurposed for other uses.
+
+
+The check is skipped in two cases:
+* when the target architecture is not executable at all (an ARM SoC mounted
+  into an amd64 machine, etc)
+* when ISA_IGNORE environment variable has a non-empty value

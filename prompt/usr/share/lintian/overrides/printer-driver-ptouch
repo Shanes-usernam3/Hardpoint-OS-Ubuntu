@@ -1,0 +1,4 @@
+# That's how CUPS does it
+printer-driver-ptouch: executable-in-usr-lib usr/lib/cups/driver/ptouch
+# That's how CUPS does it
+printer-driver-ptouch: executable-in-usr-lib usr/lib/cups/filter/rastertoptch

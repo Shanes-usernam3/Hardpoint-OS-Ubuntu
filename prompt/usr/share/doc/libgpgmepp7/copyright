@@ -1,0 +1,243 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://dev.gnupg.org/source/gpgmepp.git
+Upstream-Name: GnuPG Made Easy (GPGME)
+Upstream-Contact: GnuPG development mailing list <gnupg-devel@gnupg.org>
+
+Files: *
+Copyright: 2003-2005, 2007-2010, Klarälvdalens Datakonsult AB <info@kdab.com>
+License: LGPL-2+
+
+Files: AUTHORS
+Copyright: 2016, 2018, Intevation GmbH
+ 2016, 2017, Bundesamt für Sicherheit in der Informationstechnik
+ 2004-2016, several members of the KDE community
+ 2003-2005, 2007-2010, Klarälvdalens Datakonsult AB <info@kdab.com>
+ 2001-2024, g10 Code GmbH
+ 2000, Werner Koch
+ 1992-2022, Free Software Foundation, Inc.
+License: FSFULLRWD
+
+Files: CMakeLists.txt
+Copyright: 2025, g10 Code GmbH
+License: LGPL-2.1+
+
+Files: INSTALL.md
+ NEWS
+Copyright: 2024, 2025, g10 Code GmbH
+License: FSFULLRWD
+
+Files: cmake/*
+Copyright: 2022, 2025, g10 Code GmbH
+License: BSD-2-clause
+
+Files: cmake/modules/ECMSetupVersion.cmake
+Copyright: 2014, Alex Merry <alex.merry@kde.org>
+ 2012, Alexander Neundorf <neundorf@kde.org>
+License: BSD-3-clause
+
+Files: cmake/modules/ECMUninstallTarget.cmake
+ cmake/modules/ecm_uninstall.cmake.in
+Copyright: 2015, Alex Merry <alex.merry@kde.org>
+License: BSD-3-clause
+
+Files: cmake/modules/G10CMakeSettings.cmake
+Copyright: 2025, g10 Code GmbH
+ 2014, Alex Merry <alex.merry@kde.org>
+ 2013, Aleix Pol <aleixpol@kde.org>
+ 2012, 2013, Stephen Kelly <steveire@gmail.com>
+ 2007, Matthias Kretz <kretz@kde.org>
+ 2006-2013, Alex Neundorf <neundorf@kde.org>
+ 2006, 2007, Laurent Montel <montel@kde.org>
+License: BSD-3-clause
+
+Files: cmake/modules/G10CompilerSettings.cmake
+Copyright: 2025, g10 Code GmbH
+ 2021, Friedrich W. H. Kossebau <kossebau@kde.org>
+ 2014, Alex Merry <alex.merry@kde.org>
+ 2013, Stephen Kelly <steveire@gmail.com>
+ 2012, 2013, Raphael Kubo da Costa <rakuco@FreeBSD.org>
+ 2007, Matthias Kretz <kretz@kde.org>
+ 2006-2013, Alex Neundorf <neundorf@kde.org>
+ 2006, 2007, Laurent Montel <montel@kde.org>
+License: BSD-3-clause
+
+Files: cmake/modules/G10GitHooks.cmake
+Copyright: 2025, g10 Code GmbH
+ 2023, Johannes Zarl-Zierl <johannes@zarl-zierl.at>
+ 2022, Ahmad Samir <a.samirh78@gmail.com>
+ 2020-2023, Alexander Lohnau <alexander.lohnau@gmx.de>
+License: BSD-3-clause
+
+Files: cmake/modules/g10_dist.sh.in
+ cmake/modules/g10_distcheck.sh.in
+ cmake/modules/g10_generate_swdb.sh.in
+ cmake/modules/g10_release.sh.in
+ cmake/modules/g10_sign-release.sh.in
+Copyright: 2025, g10 Code GmbH
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2022-2025, Andreas Metzler
+ 2019, Roger Shimizu
+ 2014-2024, Daniel Kahn Gillmor
+ 2004-2025, Debian GnuPG maintainers
+ 2001-2009, Jose Carlos Garcia Sogo
+License: LGPL-2.1+
+
+Files: src/CMakeLists.txt
+Copyright: 2025, g10 Code GmbH
+ 2021, Daniel Vrátil <dvratil@kde.org>
+License: LGPL-2.1+
+
+Files: src/GpgmeppConfig.cmake.in
+Copyright: 2025, g10 Code GmbH
+License: LGPL-2.1+
+
+Files: src/gpgaddexistingsubkeyeditinteractor.cpp
+ src/gpgaddexistingsubkeyeditinteractor.h
+ src/gpgrevokekeyeditinteractor.cpp
+ src/gpgrevokekeyeditinteractor.h
+ src/randomresults.h
+ src/statusconsumerassuantransaction.cpp
+ src/statusconsumerassuantransaction.h
+ src/util.cpp
+Copyright: 2020-2022, 2025, g10 Code GmbH
+License: LGPL-2+
+
+Files: src/gpggencardkeyinteractor.cpp
+ src/gpggencardkeyinteractor.h
+ src/swdbresult.cpp
+ src/swdbresult.h
+ src/tofuinfo.cpp
+ src/tofuinfo.h
+Copyright: 2016, 2017, Bundesamt für Sicherheit in der Informationstechnik
+License: LGPL-2+
+
+Files: src/gpgmepp.pc.in
+Copyright: 2025, g10 Code GmbH
+License: GPL-2+
+
+Files: src/interfaces/statusconsumer.h
+Copyright: 2020-2022, 2025, g10 Code GmbH
+License: LGPL-2+
+
+Files: src/util.h
+Copyright: 2022, g10 Code GmbH
+ 2004, Klarälvdalens Datakonsult AB <info@kdab.com>
+License: LGPL-2+
+
+Files: tests/*
+Copyright: 2018, Intevation GmbH
+License: GPL-2
+
+Files: tests/CMakeLists.txt
+Copyright: 2025, g10 Code GmbH
+License: LGPL-2.1+
+
+Files: tests/run-createkey.cpp
+ tests/run-genrandom.cpp
+ tests/run-wkdlookup.cpp
+Copyright: 2020-2022, 2025, g10 Code GmbH
+License: LGPL-2+
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: FSFULLRWD
+ This file is free software; as a special exception the author gives
+ unlimited permission to copy and/or distribute it, with or without
+ modifications, as long as this notice is preserved.
+ .
+ This file is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991.
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: GPL-2+
+ You can redistribute and/or modify this software under the terms of
+ the GNU General Public License as published by the Free
+ Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2.
+
+License: GPL-3+
+ You can redistribute and/or modify this software under the terms of
+ the GNU General Public License as published by the Free
+ Software Foundation; either version 3 of the License, or (at your
+ option) any later version.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3.
+
+License: LGPL-2+
+ You can redistribute and/or modify this software under the terms of
+ the GNU Library General Public License as published by the Free
+ Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2.
+
+License: LGPL-2.1+
+ You can redistribute and/or modify this software under the terms of
+ the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 2.1 of the License, or (at your
+ option) any later version.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1'.

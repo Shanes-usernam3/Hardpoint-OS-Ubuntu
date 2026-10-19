@@ -1,0 +1,12 @@
+[VPN Connection]
+name=openconnect
+service=org.freedesktop.NetworkManager.openconnect
+program=/usr/libexec/nm-openconnect-service
+supports-multiple-connections=true
+
+[libnm]
+plugin=libnm-vpn-plugin-openconnect.so
+
+[GNOME]
+auth-dialog=/usr/libexec/nm-openconnect-auth-dialog
+properties=libnm-openconnect-properties

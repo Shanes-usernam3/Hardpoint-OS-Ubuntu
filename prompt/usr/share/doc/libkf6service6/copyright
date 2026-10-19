@@ -1,0 +1,175 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kservice
+Source: https://invent.kde.org/frameworks/kservice
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2006, Aaron Seigo <aseigo@kde.org>
+           2009, Adriaan de Groot, Mustapha Abubakar, Ibrahim Dasuna
+           2014, Alex Richardson <arichardson.kde@gmail.com>
+           2006, Canonical Ltd, and Rosetta Contributors 2006
+           1999-2013, David Faure <faure@kde.org>
+           1998, Erez Nir <erez-n@actcom.co.il>
+           1997-2009, Free Software Foundation, Inc
+           2008, Hamish Rodda <rodda@kde.org>
+           2004-2008, Jarosław Staniek <staniek@kde.org>
+           2008-2009, K Desktop Environment
+           2005, KDE Armenian translation team
+           1999-2002, KDE Developers
+           2005, KDE Russian translation team
+           2000-2003, KDE e.v
+           2007, KDE i18n Project for Vietnamese
+           2003-2007, Matthias Kretz <kretz@kde.org>
+           1999-2003, Meni Livne <livne@kde.org>
+           2006, Ralf Habacker <ralf.habacker@freenet.de>
+           2013, Sebastian Kügler <sebas@kde.org>
+           2008, This_file_is_part_of_KDE
+           1999-2000, Torben Weis <weis@kde.org>
+           1999-2003, Waldo Bastian <bastian@kde.org>
+           2001, translate.org.za
+           1999-2002, กลุ่มผู้พัฒนา KDE
+           2020 Harald Sitter <sitter@kde.org>
+License: LGPL-2
+
+Files: autotests/kapplicationtradertest.cpp
+       autotests/ksycocatest.cpp
+       autotests/ksycoca_xdgdirstest.cpp
+       src/services/kapplicationtrader.cpp
+       src/services/kapplicationtrader.h
+       src/services/kmimetypefactory.cpp
+       src/services/kmimetypefactory_p.h
+       src/services/kserviceaction.cpp
+       src/services/kserviceaction.h
+       src/services/kserviceconversioncheck_p.h
+       src/services/kservicefactory_p.h
+       src/services/kservicegroupfactory.cpp
+       src/services/kservicegroupfactory_p.h
+       src/services/kservice.h
+       src/services/kserviceoffer.cpp
+       src/services/kserviceoffer.h
+       src/services/kservice_p.h
+       src/services/kserviceutil_p.h
+       src/sycoca/kbuildmimetypefactory.cpp
+       src/sycoca/kbuildmimetypefactory_p.h
+       src/sycoca/kbuildservicefactory_p.h
+       src/sycoca/kmemfile.cpp
+       src/sycoca/kmemfile_p.h
+       src/sycoca/ksycocatype.h
+Copyright: 2006-2008, Aaron Seigo <aseigo@kde.org>
+           2005, Brad Hards <bradh@frogmouth.net>
+           2008, Christian Ehrlicher <ch.ehrlicher@gmx.de>
+           1999-2020, David Faure <faure@kde.org>
+           1999, Espen Sand <espen@kde.org>
+           2000-2004, Frerich Raabe <raabe@kde.org>
+           2015 Gregor Mi <codestruct@posteo.org>
+           2022 Harald Sitter <sitter@kde.org>
+           2001-2005, Lubos Lunak <l.lunak@kde.org>
+           1997-2000, Matthias Ettrich <ettrich@troll.no>
+           1997-1999, Matthias Kalle Dalheimer <kalle@kde.org>
+           2003-2004, Oswald Buddenhagen <ossi@kde.org>
+           2012-2013, Sebastian Kügler <sebas@kde.org>
+           1998-2005, Stephan Kulow <coolo@kde.org>
+           2006, Thiago Macieira <thiago@kde.org>
+           1998-1999, Torben Weis <weis@kde.org>
+           1999-2004, Waldo Bastian <bastian@kde.org>
+License: LGPL-2+
+
+Files: autotests/kmimeassociationstest.cpp
+       autotests/ksycocathreadtest.cpp
+       autotests/setupxdgdirs.h
+       po/ca/kservice6.po
+       po/ca@valencia/*
+       po/uk/kservice6.po
+       src/services/kservicefactory.cpp
+       src/sycoca/kbuildsycocainterface_p.h
+       src/sycoca/kmimeassociations.cpp
+       src/sycoca/kmimeassociations_p.h
+       src/sycoca/ksycocadevices.cpp
+       src/sycoca/ksycocadevices_p.h
+       tests/findservice.cpp
+Copyright: 2008-2009, David Faure <faure@kde.org>
+           2014, Alex Merry <alex.merry@kde.org>
+           1998-2014, This_file_is_part_of_KDE
+License: LGPL-3+KDEeV
+
+Files: .gitlab-ci.yml
+Copyright: 2020 Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2014, Scarlett Clark <scarlett@scarlettgatelyclark.com>
+           2024 Patrick Franz <deltaone@debian.org>
+License: LGPL-2+
+
+License: LGPL-3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: LGPL-2
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License version 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".

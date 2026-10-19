@@ -1,0 +1,276 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cfitsio
+Source: https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
+
+Files: *
+Copyright:
+ Copyright (Unpublished--all rights reserved under the copyright laws of
+ the United States), U.S. Government as represented by the Administrator
+ of the National Aeronautics and Space Administration.  No copyright is
+ claimed in the United States under Title 17, U.S. Code.
+ .
+ Copyright (c) 1993 Association of Universities for Research
+ in Astronomy. All rights reserved. Produced under National
+ Aeronautics and Space Administration Contract No. NAS5-26555.
+License: NOSA
+
+Files:
+ aclocal.m4
+ m4/ltoptions.m4
+ m4/ltsugar.m4
+ m4/ltversion.m4
+ m4/lt~obsolete.m4
+Copyright:
+ 2004-2005, 2007-2008, 2011-2019, 2021-2022 Free Software Foundation, Inc.
+License: FSFULLR
+
+Files:
+ cfortran.h
+ docs/cfortran.doc
+Comment:
+ The cfitsio Debian package is patched to use the system cfortran package
+ instead of the above file.
+ .
+ The author of cfortran has subsequently stated that cfortran.h may optionally
+ be used and distributed under the GNU Library General Public License (LGPL).
+ This statement was made in an email to Kevin McCarty, which is reproduced
+ below:
+ .
+ ----------------------------------------
+ Date: Tue, 22 Oct 2002 12:48:00 -0400
+ From: Burkhard D Steinmacher-burow <steinmac@us.ibm.com>
+ To: Kevin B. McCarty <kmccarty@Princeton.EDU>
+ Subject: Re: CFortran licensing question
+ .
+ Kevin,
+ .
+ [Just noticed that I didn't send this yesterady.]
+ .
+ I have no time right now to read through licenses.
+ IIRC, library GPL is fairly unrestrictive, so I'll choose that. So.....
+ .
+ You may consider this e-mail as a notice that as an alternative to any
+ other cfortran licenses,
+ I hereby relase all versions and all parts of cfortran under the
+ the Library GPL license.
+ From among these licenses, the user is free to choose
+ the license or licenses under which cfortran is used.
+ .
+ Contact me if you'd like to be able to choose another license.
+ .
+ Burkhard
+ .
+ steinmac@us.ibm.com, (914)945-3756, Fax 3684, Tieline 862
+ ------------------------------------------
+Copyright:
+ 1990-2003, Burkhard D Steinmacher-burow
+License: LGPL-2+ or cfortran
+
+Files:
+ config/install-sh
+Copyright:
+ 1994 X Consortium
+License: X11
+
+Files:
+ config/ltmain.sh
+Copyright:
+ 1996-2019, 2021-2022, 2024 Free Software Foundation, Inc.
+License: GPL-2+ with Libtool exception
+
+Files:
+ configure
+Copyright:
+ 1992-1996, 1998-2017, 2020-2023 Free Software Foundation, Inc.
+License: FSFUL
+
+Files:
+ eval_tab.h
+ eval_y.c
+Copyright:
+ 1984, 1989-1990, 2000-2015, 2018-2021 Free Software Foundation, Inc.
+License: GPL-3+ with Bison-2.2 exception
+
+Files:
+ INSTALL
+Copyright:
+ 1994-1996, 1999-2002, 2004-2017, 2020-2021 Free Software Foundation, Inc.
+License: FSFAP
+
+Files:
+ m4/libtool.m4
+Copyright:
+ 1996-2001, 2003-2019, 2021-2022 Free Software Inc
+License: FSFULLR and GPL-2+ with Libtool exception
+
+Files:
+ iraffits.c
+Copyright:
+ 2000 Smithsonian Astrophysical Observatory
+License: SAO
+
+License: cfortran
+ THIS SOFTWARE IS PROPERTY OF BURKHARD BUROW. IF YOU ARE USING THIS FILE YOU
+ SHOULD ALSO HAVE ACCESS TO CFORTRAN.DOC WHICH PROVIDES TERMS FOR USING,
+ MODIFYING, COPYING AND DISTRIBUTING THE CFORTRAN.H PACKAGE.
+ .
+ THIS PACKAGE, I.E. CFORTRAN.H, THIS DOCUMENT, AND THE CFORTRAN.H EXAMPLE
+ PROGRAMS ARE PROPERTY OF THE AUTHOR WHO RESERVES ALL RIGHTS. THIS PACKAGE AND
+ THE CODE IT PRODUCES MAY BE FREELY DISTRIBUTED WITHOUT FEES, SUBJECT
+ (AT YOUR CHOICE) EITHER TO THE GNU LIBRARY GENERAL PUBLIC LICENSE
+ AT http://www.gnu.org/licenses/lgpl.html OR TO THE FOLLOWING RESTRICTIONS:
+ - YOU MUST ACCOMPANY ANY COPIES OR DISTRIBUTION WITH THIS (UNALTERED) NOTICE.
+ - YOU MAY NOT RECEIVE MONEY FOR THE DISTRIBUTION OR FOR ITS MEDIA
+   (E.G. TAPE, DISK, COMPUTER, PAPER.)
+ - YOU MAY NOT PREVENT OTHERS FROM COPYING IT FREELY.
+ - YOU MAY NOT DISTRIBUTE MODIFIED VERSIONS WITHOUT CLEARLY DOCUMENTING YOUR
+   CHANGES AND NOTIFYING THE AUTHOR.
+ - YOU MAY NOT MISREPRESENTED THE ORIGIN OF THIS SOFTWARE, EITHER BY EXPLICIT
+   CLAIM OR BY OMISSION.
+ .
+ THE INTENT OF THE ABOVE TERMS IS TO ENSURE THAT THE CFORTRAN.H PACKAGE NOT BE
+ USED FOR PROFIT MAKING ACTIVITIES UNLESS SOME ROYALTY ARRANGEMENT IS ENTERED
+ INTO WITH ITS AUTHOR.
+ .
+ THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+ EXPRESSED OR IMPLIED. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+ SOFTWARE IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST
+ OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION. THE AUTHOR IS NOT RESPONSIBLE
+ FOR ANY SUPPORT OR SERVICE OF THE CFORTRAN.H PACKAGE.
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.  This file is offered as-is,
+ without warranty of any kind.
+
+License: FSFUL
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
+
+License: FSFULLR
+ This file is free software; the Free Software Foundation gives
+ unlimited permission to copy and/or distribute it, with or without
+ modifications, as long as this notice is preserved.
+
+License: GPL-2+ with Libtool exception
+ GNU Libtool is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ As a special exception to the GNU General Public License,
+ if you distribute this file as part of a program or library that
+ is built using GNU Libtool, you may include this file under the
+ same distribution terms that you use for the rest of that program.
+ .
+ GNU Libtool is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3+ with Bison-2.2 exception
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ .
+ As a special exception, you may create a larger work that contains
+ part or all of the Bison parser skeleton and distribute that work
+ under terms of your choice, so long as that work isn't itself a
+ parser generator using the skeleton or a modified version thereof
+ as a parser skeleton.  Alternatively, if you modify or redistribute
+ the parser skeleton itself, you may (at your option) remove this
+ special exception, which will cause the skeleton and the resulting
+ Bison output files to be licensed under the GNU General Public
+ License without this special exception.
+ .
+ This special exception was added by the Free Software Foundation in
+ version 2.2 of Bison.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 3 can be found in '/usr/share/common-licenses/GPL-3'.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, see
+ <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: NOSA
+ Permission to freely use, copy, modify, and distribute this software
+ and its documentation without fee is hereby granted, provided that this
+ copyright notice and disclaimer of warranty appears in all copies.
+ .
+ DISCLAIMER:
+ .
+ THE SOFTWARE IS PROVIDED 'AS IS' WITHOUT ANY WARRANTY OF ANY KIND,
+ EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO,
+ ANY WARRANTY THAT THE SOFTWARE WILL CONFORM TO SPECIFICATIONS, ANY
+ IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE, AND FREEDOM FROM INFRINGEMENT, AND ANY WARRANTY THAT THE
+ DOCUMENTATION WILL CONFORM TO THE SOFTWARE, OR ANY WARRANTY THAT THE
+ SOFTWARE WILL BE ERROR FREE.  IN NO EVENT SHALL NASA BE LIABLE FOR ANY
+ DAMAGES, INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR
+ CONSEQUENTIAL DAMAGES, ARISING OUT OF, RESULTING FROM, OR IN ANY WAY
+ CONNECTED WITH THIS SOFTWARE, WHETHER OR NOT BASED UPON WARRANTY,
+ CONTRACT, TORT , OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY
+ PERSONS OR PROPERTY OR OTHERWISE, AND WHETHER OR NOT LOSS WAS SUSTAINED
+ FROM, OR AROSE OUT OF THE RESULTS OF, OR USE OF, THE SOFTWARE OR
+ SERVICES PROVIDED HEREUNDER.
+
+License: SAO
+ You may do anything you like with this file except remove
+ this copyright.  The Smithsonian Astrophysical Observatory
+ makes no representations about the suitability of this
+ software for any purpose.  It is provided "as is" without
+ express or implied warranty.
+
+License: X11
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC-
+ TION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall not
+ be used in advertising or otherwise to promote the sale, use or other deal-
+ ings in this Software without prior written authorization from the X Consor-
+ tium.

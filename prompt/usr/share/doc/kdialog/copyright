@@ -1,0 +1,344 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kdialog
+Source: https://invent.kde.org/utilities/kdialog
+Upstream-Contact: kde-devel@kde.org
+
+Files: *
+Copyright: 2005, Brad Hards <bradh@frogmouth.net>
+           2002-2017, David Faure <faure@kde.org>
+           2008, Dmitry Suzdalev <dimsuz@gmail.com>
+           2011, Kai Uwe Broulik <kde@privat.broulik.de>
+           2003, KDE Team
+           1998-2005, Matthias Hoelzer <hoelzer@kde.org>
+           2002, Meni Livne <livne@kde.org>
+           2000, Nick Thompson
+           2004-2005, Stephan Binner <binner@kde.org>
+           2002-2020, This_file_is_part_of_KDE
+           2005, Thomas E. Dickey
+           2020, Tristan Miller <psychonaut@nothingisreal.com>
+           2005 Juanita Franz <juanita.franz@vr-web.de>
+           2002 Isam Bayazidi <bayazidi@arabeyes.org>
+           2004 Munzir Taha <munzir@kacst.edu.sa>
+           2006 ÙØ­ÙØ¯ Ø³Ø¹Ø¯  Mohamed SAAD <metehyi@free.fr>
+           2007 AbdulAziz AlSharif <a.a-a.s@hotmail.com>
+           2007 Youssef Chahibi <chahibi@gmail.com>
+           2008-2024 zayed <zayed.alsaidi@gmail.com>
+           2014 Safa Alfulaij <safa1996alfulaij@gmail.com>
+           2023 Enol P. <enolp@softastur.org>
+           2023 Kheyyam <xxmn77@gmail.com>
+           2008 Ihar Hrachyshka <ihar.hrachyshka@gmail.com>
+           2006-2008 Zlatko Popov <zlatkopopov@fsa-bg.org>
+           2009, 2011 Yasen Pramatarov <yasen@lindeas.com>
+           2022-2024 Mincho Kondarev <mkondarev@yahoo.de>
+           2009 Runa Bhattacharjee <runab@redhat.com>
+           2006 Deepayan Sarkar <deepayan@bengalinux.org>
+           2004-2005 hierry Vignaud <tvignaud@mandriva.com>
+           2002-2005 Vedran Ljubovic <vljubovic@smartnet.ba>
+           2011 KDE 4 <megaribi@epn.ba>
+           2016-2020 Antoni Bella PÃ©rez <antonibella5@yahoo.com>
+           2002-2005 SebastiÃ  Pla i Sanz <sps@sastia.com>
+           2007-2024 Josep M. Ferrer <txemaq@gmail.com>
+           2016-2020 Antoni Bella PÃ©rez <antonibella5@yahoo.com>
+           2006-2009 MichÃŽÅ Ãstrowsczi <michol@linuxcsb.org>
+           2008, 2009 Mark KwidziÅÅczi <mark@linuxcsb.org>
+           2011-2023 VÃ­t PelÄÃ¡k <vit@pelcak.org>
+           2024 Vit Pelcak <vpelcak@suse.cz>
+           2003 KGyfieithu <kyfieithu@dotmon.com>
+           2003 KD at KGyfieithu <kyfieithu@dotmon.com>
+           2002-2005 Erik KjÃŠr Pedersen <erik@binghamton.edu>
+           2008-2017 Martin Schlander <mschlander@opensuse.org>
+           2017 scootergrisen
+           2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+           2002-2004 Thomas Diehl <thd@kde.org>
+           2005 Stephan Johach <hunsum@gmx.de>
+           2009-2020 Burkhard LÃŒck <lueck@hube-lueck.de>
+           2010-2023 Frederik Schwarzer <schwarzer@kde.org>
+           2002-2003 Stergios Dramis <sdramis@egnatia.ee.auth.gr>
+           2005-2007 Spiros Georgaras <sngeorgaras@otenet.gr>
+           2005-2009 Toussis Manolis <manolis@koppermind.homelinux.org>
+           2007, 2008 Spiros Georgaras <sng@hellug.gr>
+           2011 Antonis Geralis <capoiosct@gmail.com>
+           2012, 2013 Dimitrios Glentadakis <dglent@gmail.com>
+           2017-2020 Stelios <sstavra@gmail.com>
+           2023 George Stefanakis <george.stefanakis@gmail.com>
+           2014-2024 Steve Allewell <steve.allewell@gmail.com>
+           2003, 2004, 2008 Malcolm Hunter <malcolm.hunter@gmx.co.uk>
+           2004, 2005, 2009, 2010 Andrew Coles <andrew_coles@yahoo.co.uk>
+           2007 Cindy McKee <cfmckee@gmail.com>
+           2023 Oliver Kellogg <olivermkellogg@gmail.com>
+           2010 Cristina Yenyxe GonzÃ¡lez GarcÃ­a <the.blue.valkyrie@gmail.com>
+           2010-2024 Eloy Cuadra <ecuadra@eloihr.net>
+           2001-2002 Pablo de Vicente <vicente@oan.es>
+           2003-2008 Jaime Robles <jaime@kde.org>
+           2003, 2004 Miguel Revilla RodrÃ­guez <yo@miguelrevilla.com>
+           2004 Pablo de Vicente <p.devicente@wanadoo.es>
+           2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+           2002 Hasso Tepper <hasso@estpak.ee>
+           2003-2009 Marek Laane <bald@starman.ee>
+           2010-2019 Marek Laane <bald@smail.ee>
+           2020 Mihkel TÃµnnov <mihhkel@gmail.com>
+           2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2003-2008 Marcos  <marcos@euskalgnu.org>
+           2011-2024 IÃ±igo Salvador Azurmendi <xalba@ni.eus>
+           2011 IÃ±aki LarraÃ±aga Murgoitio <dooteo@euskalgnu.org>
+           2006, 2007 Nazanin Kazemi <kazemi@itland.ir>
+           2006 MaryamSadat Razavi <razavi@itland.ir>
+           2006 Tahereh Dadkhahfar <dadkhahfar@itland.ir>
+           2006 Nasim Daniarzadeh <daniarzadeh@itland.ir>
+           2002 Kim Enkovaara <kim.enkovaara@iki.fi>
+           2003, 2008 Teemu Rytilahti <teemu.rytilahti@kde-fi.org>
+           2004 Tapio Kautto <eleknader@phnet.fi>
+           2005 Ilpo Kantonen <ilpo@iki.fi>
+           2007 Mikko Piippo <piippo@cc.helsinki.fi>
+           2008 Teemu Rytilahti <teemu.rytilahti@d5k.net>
+           2010 Jorma Karvonen <karvonen.jorma@gmail.com>
+           2011-2024 Tommi Nieminen <translator@legisign.org>
+           2011-2016 Lasse Liehu <lasse.liehu@gmail.com>
+           2002,2003, 2004 Matthieu Robin <kde@macolu.org>
+           2003 Gilles CAULIER <caulier.gilles@free.fr>
+           2004 Delafond <gerard@delafond.org>
+           2004, 2005 Matthieu Robin <kde@macolu.org>
+           2007, 2008 SÃ©bastien Renard <Sebastien.Renard@digitalfox.org>
+           2009 Sebastien Renard <Sebastien.Renard@Solucom.fr>
+           2011, 2013 SÃ©bastien Renard <renard@kde.org>
+           2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+           2017 Vincent Pinon <vpinon@kde.org>
+           2018, 2019 Simon Depiets <sdepiets@gmail.com>
+           2020-2023 Xavier Besnard <xavier.besnard@kde.org>
+           2005-2009 Rinse de Vries <rinsedevries@kde.nl>
+           2006 Rinse de Vries <RinseDeVries@home.nl>
+           2009 Kevin Scannell <kscanne@gmail.com>
+           2017-2024 AdriÃ¡n Chaves <adrian@chaves.io>
+           2004 Javier JardÃ³n <javierjc@mundo-r.com>
+           2006 Xabi G. Feal <xabigf@gmx.net>
+           2007-2013 Marce Villarino <mvillarino@kde-espana.es>
+           2008 Sweta Kothari <swkothar@redhat.com>
+           2002 Meni Livne <livne@kde.org>
+           2005, 2008 Diego Iastrubni <elcuco@kde.org>
+           2005 galion <galion.lum@gmail.com>
+           2011 Liel Fridman <lielft@gmail.com>
+           2017 Elkana Bardugo <ttv200@gmail.com>
+           2007 Ravishankar Shrivastava <raviratlami@yahoo.com>
+           2017 G Karunakar <karunakar@indlinux.org>
+           2021 Raghavendra Kamath <raghu@raghukamath.com>
+           2007 Ravishankar Shrivastava <raviratlami@yahoo.com>
+           2009 Ravishankar Shrivastava <raviratlami@aol.in>
+           2011 Danko Butorac <danko@ipsis.hr>
+           Denis Lackovic <delacko@fly.srk.fer.hr>
+           Goran Åœugelj <gzugelj@vuka.hr>
+           Robert Sedak <robert.sedak@sk.tel.hr>
+           sime essert <sime2@nofrx.org>
+           Vedran Vyroubal <vedran.vyroubal@inet.hr>
+           Vlatko Kosturjak <kost@linux.hr>,
+           2009 Zarko Pintar <zarko.pintar@gmail.com>
+           2011 Marko Dimjasevic <marko@dimjasevic.net>
+           2005 Bianka Å wejdÅºic <hertn@gmx.de>
+           2021, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
+           2002 Tamas Szanto <tszanto@interware.hu>
+           2011 KristÃ³f Kiszel <ulysses@kubuntu.org>
+           2013 BalÃ¡zs Ãr <urbalazs@gmail.com>
+           2010-2024 g.sora <g.sora@tiscali.it>
+           2010-2014 Andhika Padmawan <andhika.padmawan@gmail.com>
+           2017, 2018, 2019 Wantoyo <wantoyek@gmail.com>
+           2024 GuÃ°mundur Erlingsson <gudmundure@gmail.com>
+           2003 Pjetur G. Hjaltason <pjetur@pjetur.net>
+           2003 Arnar LeÃ³sson <leosson@frisurf.no>
+           2004 Svanur Palsson <svanur@tern.is>
+           2005 Arnar Leosson <leosson@frisurf.no>
+           2007-2024 Sveinn Ã­ Felli <sveinki@nett.is>
+           2013-2024 Vincenzo Reale <smart2128vr@gmail.com>
+           2003-2007 Andrea Rizzi <rizzi@kde.org>
+           2004 Andrea RIZZI <arizzi@pi.infn.it>
+           2008 Dario Panico <Dareus_Persarumrex@fastwebnet.it>
+           2011 Pino Toscano <toscano.pino@tiscali.it>
+           2002 Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>
+           2004 Yoichiro Takehora <takehora@kde.gr.jp>
+           2004 Taiki Komoda <kom@kde.gr.jp>
+           2005 Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>
+           2008 Yukiko Bando <ybando@k6.dion.ne.jp>
+           2005, 2014 Fumiaki Okushi <okushi@kde.gr.jp>
+           2024 Temuri Doghonadze <temuri.doghonadze@gmail.com>
+           2005-2013 Sairan Kikkarin <sairan@computer.org>
+           2005-2010 Khoem Sokhem <khoemsokhem@khmeros.info>
+           2006, 2008 Auk Piseth <piseth_dv@khmeros.info>
+           2007 Eng Vannak <evannak@khmeros.info>
+           2009, 2010 Shankar Prasad <svenkate@redhat.com>
+           2010 Shinjo Park <kde@peremen.name>
+           2007-2023 Vasudev Kamath <kamathvasudev@gmail.com>
+           2007, 2009 Erdal Ronahi <erdal.ronahi@nospam.gmail.com>
+           2005-2009 Donatas Glodenis <dgvirtual@akl.lt>
+           2011 Tomas Straupis <tomasstraupis@gmail.com>
+           2017 Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>
+           2024 Toms TrasÅ«ns <toms.trasuns@posteo.net>
+           2007, 2008 Maris Nartiss <maris.kde@gmail.com>
+           2008-2009 Viesturs ZariÅÅ¡ <viesturs.zarins@mii.lu.lv>
+           2011 RÅ«dofls Mazurs <rudolfs.mazurs@gmail.com>
+           2009 Sangeeta Kumari <sangeeta09@gmail.com>
+           2010 Rajesh Ranjan <rajesh672@gmail.com>
+           2003 Novica Nakov <novica@bagra.net.mk>
+           2004 Zaklina Gjalevska <gjalevska@yahoo.com>
+           2004-2009 Bozidar Proevski <bobibobi@freemail.com.mk>
+           2008 HARI VISHNU <harivishnu@gmail.com>
+           2008 Praveen Arimbrathodiyil <pravi.a@gmail.com>
+           2009 Sandeep Shedmake <sandeep.shedmake@gmail.com>
+           2013 Chetan Khona <chetan@kompkin.com>
+           2003 Muhammad Najmi Ahmad Zabidi <md_najmi@yahoo.com>
+           2008, 2009 Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>
+           2011 Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>
+           2003 Knut Erik Hollund <khollund@responze.net>
+           2004 Gaute Hvoslef Kvalnes <gaute@verdsveven.com>
+           2005 Knut Yrvin <knut.yrvin@gmail.com>
+           2005 Eskild Hustvedt <zerodogg@skolelinux.no>
+           2008-2013 BjÃžrn Steensrud <bjornst@skogkatt.homelinux.org>
+           2004 Heiko Evermann <heiko@evermann.de>
+           2004 Volker Jockheck <volkae@gmx.net>
+           2005-2014 SÃ¶nke Dibbern <s_dibbern@web.de>
+           2010, 2011 Manfred Wiese <m.j.wiese@web.de>
+           2006, 2007 Nabin Gautam <nabin@mpp.org.np>
+           2006 shyam krishna ball <shyam@mpp.org.np>
+           2007 Mahesh Subedi <submanesh@gmail.com>
+           2007 shyam krishna bal <shyamkrishna_bal@yahoo.com>
+           2009-2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+           2003, 2004 Rinse de Vries <rinse@kde.nl>
+           2003 Wilbert Berendsen <wbsoft@xs4all.nl>
+           2004-2008 Rinse de Vries <rinsedevries@kde.nl>
+           2002-2005 Gaute Hvoslef Kvalnes <gaute@verdsveven.com>
+           2004-2023 Karl Ove Hufthammer <karl@huftis.org>
+           2008, 2009 Eirik U. Birkeland <eirbir@gmail.com>
+           2015 Olav Selseng Vestreim <o.vest@operamail.com>
+           2006-2008 Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>
+           2009 Manoj Kumar Giri <mgiri@redhat.com>
+           2004, 2005 Amanpreet Singh Alam <aalam@redhat.com>
+           2005 Amanpreet Singh Brar <amanpreetalam@yahoo.com>
+           2007-2022 A S Alam <aalam@users.sf.net>
+           2007 ASB <aalam@users.sf.net>
+           2011-2024 Åukasz WojniÅowicz <lukasz.wojnilowicz@gmail.com>
+           2002 Wojciech Milewski <Wojciech.Milewski@wp.pl>
+           2004-2009 Michal Rudolf <mrudolf@kdewebdev.org>
+           2003 Lisiane Sztoltz <lisiane@conectiva.com.br>
+           2003 Henrique Pinto <stampede@coltec.ufmg.br>
+           2004 Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>
+           2004 Marcus Gama <marcus_gama@uol.com.br>
+           2005 Lisiane Sztoltz Teixeira <lisiane@kdemail.net>
+           2007, 2008 Diniz Bortolotto <diniz.bortolotto@gmail.com>
+           2008-2019 AndrÃ© Marcelo Alvarenga <alvarenga@kde.org>
+           2016-2023 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2017 Aracele Torres <aracele@kde.org>
+           2017 Camila Moura <camila.moura@kde.org>
+           2023 JosÃ© Nuno Pires <zepires@gmail.com>
+           2003-2005 Claudiu Costin <claudiuc@kde.org>
+           2008-2024 Sergiu Bivol <sergiu@cip.md>
+           2011 Cristian OneÈ <onet.cristian@gmail.com>
+           2018-2024 Alexander Yavorsky <kekcuha@gmail.com>
+           2003 Anton Gorbachev <justoff@hotmail.ru>
+           2004, 2005 Leonid Kanter <leon@asplinux.ru>
+           2009 Andrey Cherepanov <skull@kde.ru>
+           2010, 2011 Alexander Potashev <aspotashev@gmail.com>
+           2010 Yuri Efremov <yur.arh@gmail.com>
+           2013, 2014 Alexander Lakhin <exclusion@gmail.com>
+           2003-2005 Alexander Yavorsky <kekcuha@gmail.com>
+           2024 BÃžrre Gaup <boerre@skolelinux.no>
+           2010-2011 Danishka Navin <danishka@gmail.com>
+           2019-2024 Matej Mrenica <matejm98mthw@gmail.com>
+           2020 DuÅ¡an Kazik <prescott66@gmail.com>
+           2002 Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>
+           2003, 2004 Stanislav Visnovsky <visnovsky@kde.org>
+           2006, 2010 Richard Fric <Richard.Fric@kdemail.net>
+           2009, 2011 Michal Sulek <misurel@gmail.com>
+           2013-2017 Roman PaholÃ­k <wizzardsk@gmail.com>
+           2019 Mthw <jari_45@hotmail.com>
+           2002 Gregor Rakar <gregor.rakar@kiss.uni-lj.si>
+           2003-2005 Gregor Rakar <gregor.rakar@kiss.si>
+           2007-2011 Jure Repinc <jlp@holodeck1.com>
+           2013-2018 Andrej Mernik <andrejm@ubuntu.si>
+           2019-2023 MatjaÅŸ Jeran <matjaz.jeran@amis.net>
+           2009 Vilson Gjeci <vilsongjeci@gmail.com>
+           2003, 2004 Toplica Tanaskovic <toptan@kde.org.yu>
+           2005-2017 Chusslove Illich <caslav.ilic@gmx.net>
+           2009 Dalibor Djuric <daliborddjuric@gmail.com>
+           2004-2024 Stefan AsserhÃ€ll <stefan.asserhall@gmail.com>
+           2011 Arve Eriksson <031299870@telia.com>
+           2021-2024 Kishore G <kishore96@gmail.com>
+           2002 Thuraiappah Vaseeharan <vasee@ieee.org>
+           2008 à®žà¯à®°à¯à®°à®Ÿà®®à®€à®Ÿà®žà¯ <shriramadhas@gmail.com>
+           2009 Krishna Babu K <kkrothap@redhat.com>
+           2004, infoDev, a World Bank organization
+           2004, Khujand Computer Technologies, Inc.
+           2004, Youth Opportunities, NGO
+           2005, 2019 Victor Ibragimov <youth_opportunities@tajikngo.org>
+           2003, 2005 Thanomsub Noppaburana <donga_n@yahoo.com>
+           2005-2010 Thanomsub Noppaburana <donga.nb@gmail.com>
+           2007 Sahachart Anukulkitch <drrider@gmail.com>
+           2022-2024 Emir SARI <emir_sari@icloud.com>
+           2002 GÃ¶rkem Ãetin <gorkem@kde.org>
+           2008-2012 obsoleteman <tulliana@gmail.com>
+           2013 Volkan Gezer <volkangezer@gmail.com>
+           2003 YÄ±ldÄ±z KardeÅler <turkishprogram@xposta.com>
+           2011 Sahran <sahran.ug@gmail.com>
+           2003-2005 Mashrab Kuvatov <kmashrab@uni-bremen.de>
+           2006 Phan VÄ©nh Thá»nh <teppi82@gmail.com>
+           2008 HoÃ ng Äá»©c Hiáº¿u <hieu.d.hoang@gmail.com>
+           2021, 2022 Phu Hung Nguyen <phu.nguyen@kdemail.net>
+           2008-2011 Jean Cayron <jean.cayron@gmail.com>
+           2002 Lwandle Mgidlana <lwandle@translate.org.za>
+           2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2002 Chen Yang <chenyang@elsewhere.idv.tw>
+           2007-2017 Franklin Weng <franklin@goodhorse.idv.tw>
+           2016, 2017 Jeff Huang <s8321414@gmail.com>
+           2018, 2019 pan93412 <pan93412@gmail.com>
+License: GPL-2.0-or-later
+
+Files: org.kde.kdialog.metainfo.xml
+Copyright: 2019, Jonathan Riddell <jr@jriddell.org>
+License: CC0-1.0
+
+Files: po/uk/kdialog.po
+Copyright: 2002-2005, Eugene Onischenko <oneugene@ukr.net>
+           2003-2004, 2006 Andriy Rysin <rysin@kde.org>
+           2005-2008, Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>
+           2008-2024 Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1+3+KDEeV-translations
+
+Files: debian/*
+Copyright: 2016, Raymond Wooninck <tittiatcoke@gmail.com>
+           2017, Pino Toscano <pino@debian.org>
+           2024 Scarlett Moore <sgmoore@debian.org>
+License: GPL-2.0-or-later
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all copyright
+ and related and neighboring rights to this software to the public domain
+ worldwide. This software is distributed without any warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication along
+ with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>. 
+ --
+ On Debian systems, the complete text of the CC0 Public Domain Dedication
+ can be found in `/usr/share/common-licenses/CC0-1.0’.          
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ --
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the file `/usr/share/common-licenses/GPL-2’.
+
+License: LGPL-2.1+3+KDEeV-translations
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.
+ --
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1’,
+ likewise, the complete text of the GNU Lesser General Public License version
+ 3 can be found in `/usr/share/common-licenses/LGPL-3’.

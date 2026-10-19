@@ -1,0 +1,112 @@
+#!/bin/sh
+#
+# Returns 0 (true) if on AC power
+#         1 (false) if not on AC power
+#         255 (false) if can't tell
+#
+# Example shell script:
+#     if on_ac_power; then
+#       echo We're on AC power
+#     else
+#       echo Can't say we're on AC power
+#     fi
+
+set -e
+
+# sysfs
+#
+# This algorithm is complicated by the possibility of multiple AC
+# adapters.  We scan the ac_adapter/power_supply directory looking for adapters
+# that have known states.  If any adapter is on-line, we return 0.  If
+# no adapters are on-line but one or more are off-line, we return 1.
+#
+OFF_LINE_P=no
+POWER_TYPE="Mains"
+HAS_BATTERY=no
+
+# USB-C sysfs documentation:
+# https://www.kernel.org/doc/Documentation/ABI/testing/sysfs-class-typec
+#
+# We verify first if the USB-C port is is in sink or source mode before
+# checking it's connection status. Many typec devices might be linked to
+# one ucsi. If no source is found, treat it like a sink.
+check_usb_power_role() {
+	usb_is_sink=no
+	usb_is_source=no
+	powersupply_path=$1
+	POWER_TYPE="Mains"
+	if [ -d "${powersupply_path}/device/typec" ]; then
+		for FN in $(find "${powersupply_path}/device/typec/" -mindepth 1 -maxdepth 1 -type d); do
+			if test -d "${FN}" && test -r "${FN}/power_role"; then
+				power_role="$(cat "${FN}/power_role")"
+				if echo "$power_role" | grep -q '\[source\]'; then
+					usb_is_source=yes
+				elif echo "$power_role" | grep -q '\[sink\]'; then
+					usb_is_sink=yes
+				fi
+			fi
+		done
+		# Add USB* power type if any USB ports are sink or no source is found
+		if [ "${usb_is_sink}" = "yes" ] || [ "${usb_is_source}" = "no" ]; then
+			POWER_TYPE="USB*"
+		fi
+	fi
+}
+
+if [ -d /sys/class/power_supply/ ]; then
+    for FN in /sys/class/power_supply/*; do
+	if test -d "${FN}" && test -r "${FN}/type"; then
+	    type="$(cat "${FN}/type")"
+	    # check if the device has a battery
+	    if echo "$FN" | grep -qE '/BAT[0-9]+$' && [ "$type" = "Battery" ]; then
+		HAS_BATTERY=yes
+	    fi
+	    # check if it's a typec and it's power role if it is.
+	    # Also set $POWER_TYPE accordingly and reset variables after last run
+	    check_usb_power_role "$FN"
+	    case "${type}" in
+	    Mains|$POWER_TYPE|BrickID|Wireless)
+		if [ -r "${FN}/online" ]; then
+		    online="$(cat "${FN}/online")"
+		    [ "$online" = 1 ] && exit 0
+		    [ "$online" = 0 ] && OFF_LINE_P=yes
+		fi;;
+	    esac
+	fi
+    done
+    # Make sure a battery is present if we are to be offline
+    [ "${OFF_LINE_P}" = "yes" ] && [ "${HAS_BATTERY}" = "yes" ] && exit 1
+fi
+
+# PMU
+if [ -r /proc/pmu/info ]; then
+    exec awk </proc/pmu/info '
+	BEGIN { FS=":"; ret = 255 }
+	/^AC Power.*1$/ { ret = 0; exit }
+	/^AC Power.*0$/ { ac = 1 }
+        /^Battery.*/ {
+                if ($2 ~/0/ && ac == 1)
+                        ret = 0
+                else
+                        ret = 1
+                exit }
+	END { exit ret }
+    '
+fi
+
+# APM
+if [ -r /proc/apm ]; then
+    exec awk </proc/apm '
+	BEGIN { ret = 255 }
+	/^[0-9.a-zA-Z]* [0-9.]* 0x.. 0x../ {
+		if ($4 == "0x01") { ret = 0; exit }
+		else if ($4 == "0x00") { ret = 1; exit }
+	}
+	END { exit ret }
+    '
+fi
+
+# if no battery is present and all other checks failed then we are online.
+[ "${HAS_BATTERY}" = "no" ] && exit 0
+# nothing is available
+exit 255

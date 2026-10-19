@@ -1,0 +1,54 @@
+smartmontools for Debian
+------------------------
+
+Disabling the service
+---------------------
+
+By default smartmontools service is starting automatically.
+
+To disable the service
+
+  on Systemd:
+
+    sudo systemctl disable smartmontools.service
+
+  on SysV:
+
+    sudo update-rc.d smartmontools disable
+
+
+update-smart-drivedb
+--------------------
+
+There were number of tickets discussing removal of "update-smart-drivedb"
+utility (#894534, #824795, #804299, #85404). Maintainer's position is to
+provide this utility. If admin (i.e. root) decides to service they system
+then they can download drivedb manually using browser or a download
+utility. Upstream provides "update-smart-drivedb" as a _glove_ to protect
+admin from mistakes and since 7.0 script uses GPG to ensure integrity of
+the downloaded database. Maintainer assumes that admins understand risks of
+using "update-smart-drivedb" utility and that updating drivedb is better to
+be done with this utility rather than without it.
+
+Maintainer advises to update drivedb _only when necessary_.
+
+
+Notes
+-----
+
+Don't use enable_smart for any disk monitored by smartd, this is likely to
+cause problems, especially for SATA (see e.g.
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=365027).
+
+Package Maintainers and system administrators can put scripts to be run
+when smartd detects an error into /etc/smartmontools/run.d. These
+scripts will be run by smartd-runner using run-parts(8). The script will
+receive the filename of the file containing the errormessage as first
+parameter. See /etc/smartmontools/run.d/10mail for an example.
+
+Upstream recommends running short self tests every day and long self tests once
+per week.
+
+Please read http://www.smartmontools.org/wiki/Warnings
+
+ -- Guido Guenther <agx@sigxcpu.org>, Wen, 03 May 2006 21:47:00 +0000

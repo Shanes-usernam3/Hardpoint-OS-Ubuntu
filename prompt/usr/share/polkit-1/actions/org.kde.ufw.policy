@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+<vendor>Uncomplicated Firewall</vendor>
+<icon_name>preferences-security-firewall</icon_name>
+   <action id="org.kde.ufw.modify" >
+      <description xml:lang="ar">عدل الجدار الناري</description>
+      <description xml:lang="az">Təhlükəsizlik divarı parametrləri</description>
+      <description xml:lang="bg">Конфигуриране на защитната стена</description>
+      <description xml:lang="ca">Modifica el tallafoc</description>
+      <description xml:lang="cs">Upravit firewall</description>
+      <description xml:lang="da">Rediger firewall</description>
+      <description xml:lang="de">Firewall bearbeiten</description>
+      <description>Modify Firewall</description>
+      <description xml:lang="en_GB">Modify Firewall</description>
+      <description xml:lang="eo">Modifi fajroŝirmilon</description>
+      <description xml:lang="es">Modificar el cortafuegos</description>
+      <description xml:lang="et">Tulemüüri muutmine</description>
+      <description xml:lang="eu">Aldatu suhesia</description>
+      <description xml:lang="fi">Muokkaa palomuuria</description>
+      <description xml:lang="fr">Modifier le pare-feu</description>
+      <description xml:lang="gl">Modificar a devasa</description>
+      <description xml:lang="he">שינוי חומת האש</description>
+      <description xml:lang="hi">फ़ायरवॉल संशोधित करें</description>
+      <description xml:lang="hu">Tűzfalbeállítás</description>
+      <description xml:lang="ia">Modifica Firewall (Taliafoco)</description>
+      <description xml:lang="id">Modifikasi Firewall</description>
+      <description xml:lang="is">Breyta eldvegg</description>
+      <description xml:lang="it">Modifica il firewall</description>
+      <description xml:lang="ka">ბრანდმაუერის შეცვლა</description>
+      <description xml:lang="ko">방화벽 수정</description>
+      <description xml:lang="lt">Modifikuoti užkardą</description>
+      <description xml:lang="lv">Rediģēt ugunsmūri</description>
+      <description xml:lang="nl">Firewall wijzigen</description>
+      <description xml:lang="nn">Endra brannmur</description>
+      <description xml:lang="pa">ਫ਼ਾਇਰਵਾਲ ਨੂੰ ਸੋਧੋ</description>
+      <description xml:lang="pl">Zmień zaporę ogniową</description>
+      <description xml:lang="pt">Modificar a 'Firewall'</description>
+      <description xml:lang="pt_BR">Modificar o firewall</description>
+      <description xml:lang="ro">Modifică firewall</description>
+      <description xml:lang="ru">Настройка брандмауэра</description>
+      <description xml:lang="sa">अग्निप्रावरणं परिवर्तयतु</description>
+      <description xml:lang="sk">Upraviť bránu firewall</description>
+      <description xml:lang="sl">Spremeni vdorobran</description>
+      <description xml:lang="sv">Ändra brandvägg</description>
+      <description xml:lang="tr">Güvenlik Duvarında Değişiklik Yap</description>
+      <description xml:lang="uk">Зміна параметрів брандмауера</description>
+      <description xml:lang="zh_CN">修改防火墙</description>
+      <description xml:lang="zh_TW">修改防火牆</description>
+      <message xml:lang="ar">عدل إعدادات الجدار الناري</message>
+      <message xml:lang="az">Təhlükəsizlik divarı parametrləri ayarları</message>
+      <message xml:lang="bg">Конфигуриране на настройките защитната стена</message>
+      <message xml:lang="ca">Modifica la configuració del tallafoc</message>
+      <message xml:lang="cs">Upravit nastavení firewallu</message>
+      <message xml:lang="da">Rediger firewallindstillinger</message>
+      <message xml:lang="de">Firewall-Einstellungen bearbeiten</message>
+      <message>Modify firewall settings</message>
+      <message xml:lang="en_GB">Modify firewall settings</message>
+      <message xml:lang="eo">Modifi la agordojn de fajroŝirmilo</message>
+      <message xml:lang="es">Modificar las preferencias del cortafuegos</message>
+      <message xml:lang="et">Tulemüüri seadistuse muutmine</message>
+      <message xml:lang="eu">Aldatu suhesiko ezarpenak</message>
+      <message xml:lang="fi">Muuta palomuurin asetuksia</message>
+      <message xml:lang="fr">Modifier les paramètres du pare-feu</message>
+      <message xml:lang="gl">Modificar a configuración da devasa.</message>
+      <message xml:lang="he">שינוי הגדרות חומת האש</message>
+      <message xml:lang="hi">फ़ायरवॉल सेटिंग्स संशोधित करें</message>
+      <message xml:lang="hu">A tűzfal beállításainak módosítása</message>
+      <message xml:lang="ia">Modifica preferentias de Firewall (Taliafoco)</message>
+      <message xml:lang="id">Pengaturan modifikasi firewall</message>
+      <message xml:lang="is">Breyta eldveggsstillingum</message>
+      <message xml:lang="it">Modifica le impostazioni del firewall</message>
+      <message xml:lang="ka">ბრანდმაუერის მორგება</message>
+      <message xml:lang="ko">방화벽 설정 수정</message>
+      <message xml:lang="lt">Modifikuoti užkardos nuostatas</message>
+      <message xml:lang="lv">Rediģēt ugunsmūra iestaījumus</message>
+      <message xml:lang="nl">Firewall-instellingen wijzigen</message>
+      <message xml:lang="nn">Endra brannmur-innstillingar</message>
+      <message xml:lang="pa">ਫ਼ਾਇਰਵਾਲ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸੋਧੋ</message>
+      <message xml:lang="pl">Zmień ustawienia zapory ogniowej</message>
+      <message xml:lang="pt">Modificar a configuração da 'firewall'</message>
+      <message xml:lang="pt_BR">Modificar as configurações do firewall</message>
+      <message xml:lang="ro">Modifică configurările firewall-ului</message>
+      <message xml:lang="ru">Настройка параметров брандмауэра</message>
+      <message xml:lang="sa">अग्निप्रावरणसेटिंग्स् परिवर्तयन्तु</message>
+      <message xml:lang="sk">Upraviť nastavenia brány firewall</message>
+      <message xml:lang="sl">Spremeni nastavitve vdorobrana</message>
+      <message xml:lang="sv">Ändra brandväggsinställningar</message>
+      <message xml:lang="tr">Güvenlik duvarı ayarlarını değiştirin</message>
+      <message xml:lang="uk">Зміна параметрів роботи брандмауера</message>
+      <message xml:lang="zh_CN">修改防火墙设置</message>
+      <message xml:lang="zh_TW">修改防火牆設定</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.ufw.query" >
+      <description xml:lang="ar">استعلم عن الجدار الناري</description>
+      <description xml:lang="az">Təhlükəsizlik Divarı sorğusu</description>
+      <description xml:lang="bg">Запитване към защитната стена</description>
+      <description xml:lang="ca">Consulta el tallafoc</description>
+      <description xml:lang="cs">Dotázat se firewallu</description>
+      <description xml:lang="da">Forespørg firewall</description>
+      <description xml:lang="de">Firewall abfragen</description>
+      <description>Query Firewall</description>
+      <description xml:lang="en_GB">Query Firewall</description>
+      <description xml:lang="eo">Pridemandi Fajromuron</description>
+      <description xml:lang="es">Consultar el cortafuegos</description>
+      <description xml:lang="et">Tulemüüripäring</description>
+      <description xml:lang="eu">Itaundu suhesia</description>
+      <description xml:lang="fi">Kysele palomuuria</description>
+      <description xml:lang="fr">Interroger le pare-feu</description>
+      <description xml:lang="gl">Consultar a devasa</description>
+      <description xml:lang="he">תשאול חומת אש</description>
+      <description xml:lang="hi">क्वेरी फ़ायरवॉल</description>
+      <description xml:lang="hu">Tűzfal lekérdezése</description>
+      <description xml:lang="ia">Demanda Firewall (Taliafoco)</description>
+      <description xml:lang="id">Kueri Firewall</description>
+      <description xml:lang="is">Spyrja um eldvegg</description>
+      <description xml:lang="it">Interroga il firewall</description>
+      <description xml:lang="ka">ბრანდმაუერიდან ინფორმაციის მოთხოვნა</description>
+      <description xml:lang="ko">방화벽 조회</description>
+      <description xml:lang="lt">Užklausti užkardą</description>
+      <description xml:lang="lv">Vaicāt ugunsmūrim</description>
+      <description xml:lang="nl">Firewall afvragen</description>
+      <description xml:lang="nn">Spør brannmur</description>
+      <description xml:lang="pa">ਫ਼ਾਇਰਵਾਲ ਲਈ ਕਿਊਰੀ</description>
+      <description xml:lang="pl">Odpytaj zaporę ogniową</description>
+      <description xml:lang="pt">Consultar a 'Firewall'</description>
+      <description xml:lang="pt_BR">Consulta ao firewall</description>
+      <description xml:lang="ro">Interoghează firewall-ul</description>
+      <description xml:lang="ru">Опрос брандмауэра</description>
+      <description xml:lang="sa">क्वेरी फायरवाल</description>
+      <description xml:lang="sk">Dotaz na firewall</description>
+      <description xml:lang="sl">Povprašaj vdorobran</description>
+      <description xml:lang="sv">Fråga brandvägg</description>
+      <description xml:lang="tr">Güvenlik Duvarını Sorgula</description>
+      <description xml:lang="uk">Опитати Firewall</description>
+      <description xml:lang="zh_CN">查询防火墙</description>
+      <description xml:lang="zh_TW">查詢防火牆</description>
+      <message xml:lang="ar">استعلم عن حالة الجدار الناري</message>
+      <message xml:lang="az">Təhlükəsizlik divarı vəziyəti sorğusu</message>
+      <message xml:lang="bg">Запитване за статуса на защитната стена</message>
+      <message xml:lang="ca">Consulta l'estat del tallafoc</message>
+      <message xml:lang="cs">Dotázat se na stav firewallu</message>
+      <message xml:lang="da">Forespørg firewallstatus</message>
+      <message xml:lang="de">Firewall-Status abfragen</message>
+      <message>Query firewall status</message>
+      <message xml:lang="en_GB">Query firewall status</message>
+      <message xml:lang="eo">Pridemandi la staton de fajroŝirmilo</message>
+      <message xml:lang="es">Consultar el estado del cortafuegos</message>
+      <message xml:lang="et">Tulemüüri oleku päring</message>
+      <message xml:lang="eu">Itaundu suhesiaren egoera</message>
+      <message xml:lang="fi">Kysele palomuurin tilaa</message>
+      <message xml:lang="fr">Interroger l'état du pare-feu</message>
+      <message xml:lang="gl">Consultar o estado da devasa.</message>
+      <message xml:lang="he">תשאול מצב חומת אש</message>
+      <message xml:lang="hi">फ़ायरवॉल स्थिति की क्वेरी करें</message>
+      <message xml:lang="hu">A tűzfal állapotának lekérdezése</message>
+      <message xml:lang="ia">Demanda stato de Talia Foco (Firewall)</message>
+      <message xml:lang="id">Status kueri firewall</message>
+      <message xml:lang="is">Senda fyrirspurn um stöðu eldveggs</message>
+      <message xml:lang="it">Interroga lo stato del firewall</message>
+      <message xml:lang="ka">ბრანდმაუერის სტატუსის მოთხოვნა</message>
+      <message xml:lang="ko">방화벽 상태 조회</message>
+      <message xml:lang="lt">Užklausti užkardos būseną</message>
+      <message xml:lang="lv">Vaicāt ugunsmūrim par statusu</message>
+      <message xml:lang="nl">Status van firewall afvragen</message>
+      <message xml:lang="nn">Spør om brannmur-status</message>
+      <message xml:lang="pa">ਫਾਇਰਵਾਲ ਸਥਿਤੀ ਦਾ ਪਤਾ ਕਰੋ</message>
+      <message xml:lang="pl">Odpytaj zaporę ogniową o jej stan</message>
+      <message xml:lang="pt">Consultar o Estado da 'Firewall'</message>
+      <message xml:lang="pt_BR">Consulta ao status do firewall</message>
+      <message xml:lang="ro">Interoghează starea firewall-ului</message>
+      <message xml:lang="ru">Опрос состояния брандмауэра</message>
+      <message xml:lang="sa">अग्निप्रावरणस्य स्थितिं पृच्छतु</message>
+      <message xml:lang="sk">Získať stav firewallu</message>
+      <message xml:lang="sl">Povprašaj po stanju vdorobrana</message>
+      <message xml:lang="sv">Fråga om brandväggsstatus</message>
+      <message xml:lang="tr">Güvenlik duvarı durumunu sorgulayın</message>
+      <message xml:lang="uk">Опитування брандмауера щодо стану</message>
+      <message xml:lang="zh_CN">查询防火墙状态</message>
+      <message xml:lang="zh_TW">查詢防火牆狀態</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>yes</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.ufw.queryapps" >
+      <description xml:lang="ar">استعلم عن التطبيقات</description>
+      <description xml:lang="az">Sorğu tətbiqləri</description>
+      <description xml:lang="bg">Запитване за приложения</description>
+      <description xml:lang="ca">Consulta d'aplicacions</description>
+      <description xml:lang="cs">Dotaz na aplikace</description>
+      <description xml:lang="de">Anwendungen abfragen</description>
+      <description>Query Applications</description>
+      <description xml:lang="en_GB">Query Applications</description>
+      <description xml:lang="eo">Pridemandi Aplikojn</description>
+      <description xml:lang="es">Consultar aplicaciones</description>
+      <description xml:lang="eu">Itaundu aplikazioak</description>
+      <description xml:lang="fi">Kysele sovelluksia</description>
+      <description xml:lang="fr">Applications de recherche</description>
+      <description xml:lang="gl">Consultar as aplicacións</description>
+      <description xml:lang="he">תשאול יישומים</description>
+      <description xml:lang="hi">क्वेरी अनुप्रयोग</description>
+      <description xml:lang="hu">Alkalmazások lekérdezése</description>
+      <description xml:lang="ia">Demanda applicationes</description>
+      <description xml:lang="id">Kueri Aplikasi</description>
+      <description xml:lang="is">Spyrja um forrit</description>
+      <description xml:lang="it">Interroga applicazioni</description>
+      <description xml:lang="ka">აპლიკაციის მოთხოვნა</description>
+      <description xml:lang="ko">앱 조회</description>
+      <description xml:lang="lt">Užklausti programas</description>
+      <description xml:lang="lv">Vaicāt par programmām</description>
+      <description xml:lang="nl">Toepassingen afvragen</description>
+      <description xml:lang="nn">Spør program</description>
+      <description xml:lang="pa">ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਪੁੱਛੋ</description>
+      <description xml:lang="pl">Odpytaj aplikacje</description>
+      <description xml:lang="pt">Pesquisar as Aplicações</description>
+      <description xml:lang="pt_BR">Consultar aplicativos</description>
+      <description xml:lang="ro">Interoghează aplicațiile</description>
+      <description xml:lang="ru">Опрос приложений</description>
+      <description xml:lang="sa">प्रश्नानुप्रयोगाः</description>
+      <description xml:lang="sk">Dotazovať aplikácie</description>
+      <description xml:lang="sl">Aplikacije poizvedbe</description>
+      <description xml:lang="sv">Fråga efter program</description>
+      <description xml:lang="tr">Uygulamaları Sorgula</description>
+      <description xml:lang="uk">Опитування програм</description>
+      <description xml:lang="zh_CN">查询应用程序</description>
+      <description xml:lang="zh_TW">查詢應用程式</description>
+      <message xml:lang="ar">يستعلم عن قائمة التطبيقات الممنوعة</message>
+      <message xml:lang="az">Avtomatik tətbiq əngəlləmə siyahısı sorğusu</message>
+      <message xml:lang="bg">Запитване на списъка за автоматично блокиране на приложения</message>
+      <message xml:lang="ca">Consulta la llista automàtica de bloqueig d'aplicacions</message>
+      <message xml:lang="cs">Dotaz na seznam automaticky blokovaných aplikací</message>
+      <message xml:lang="de">Die automatische Anwendungs-Blockierliste abfragen</message>
+      <message>Query the automatic application block list</message>
+      <message xml:lang="en_GB">Query the automatic application block list</message>
+      <message xml:lang="eo">Pridemandi la aŭtomatan aplikaĵan blokliston</message>
+      <message xml:lang="es">Consultar la lista de bloqueo automático de aplicaciones</message>
+      <message xml:lang="eu">Itaundu blokeatutako aplikazioen zerrenda automatikoa</message>
+      <message xml:lang="fi">Kysele automaattinen sovellusten estoluettelo</message>
+      <message xml:lang="fr">Rechercher la liste de blocage automatique des applications</message>
+      <message xml:lang="gl">Consultar a lista automática de bloques de aplicacións.</message>
+      <message xml:lang="he">תשאול רשימת חסימת היישומים האוטומטית</message>
+      <message xml:lang="hi">स्वचालित अनुप्रयोग ब्लॉक सूची की क्वेरी करें</message>
+      <message xml:lang="hu">Az automatikusan blokkolt alkalmazások listájának lekérdezése</message>
+      <message xml:lang="ia">Demanda le lista de bloco de application automatic.</message>
+      <message xml:lang="id">Mengkueri daftar blokir aplikasi otomatis</message>
+      <message xml:lang="is">Senda fyrirspurn á sjálfvirkan bannlista forrita</message>
+      <message xml:lang="it">Interroga la lista di blocco automatico delle applicazioni</message>
+      <message xml:lang="ka">აპლიკაციების ავტომატური ბლოკლისტის ნახვა</message>
+      <message xml:lang="ko">자동 앱 차단 목록 조회</message>
+      <message xml:lang="lt">Užklausti automatinį programų blokavimo sąrašą</message>
+      <message xml:lang="lv">Vaicāt par automātisku programmu bloķēšanas sarakstu</message>
+      <message xml:lang="nl">De automatische blokkeringslijst van toepassing afvragen</message>
+      <message xml:lang="nn">Spør den automatiske programblokkeringslista</message>
+      <message xml:lang="pl">Odpytaj o listę blokowania aplikacji</message>
+      <message xml:lang="pt">Pesquisar a lista de bloqueios automáticos de aplicações</message>
+      <message xml:lang="pt_BR">Consultar a lista de bloqueio automático de aplicativos</message>
+      <message xml:lang="ro">Interoghează lista automată de blocare a aplicațiilor</message>
+      <message xml:lang="ru">Опрос списка автоматически заблокированных приложений</message>
+      <message xml:lang="sa">स्वचालितं अनुप्रयोगखण्डसूचीं पृच्छन्तु</message>
+      <message xml:lang="sk">Dotazovať automaticky zoznam blokovania aplikácií</message>
+      <message xml:lang="sl">Poizvedba v samodejni seznam blokiranih aplikacij</message>
+      <message xml:lang="sv">Fråga den automatiska blockeringslistan efter program</message>
+      <message xml:lang="tr">Otomatik uygulama engelleme listesini sorgulayın</message>
+      <message xml:lang="uk">Отримати список автоматичного блокування програм</message>
+      <message xml:lang="zh_CN">查询自动阻止应用程序列表</message>
+      <message xml:lang="zh_TW">查詢自動應用程式黑名單</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.ufw.viewlog" >
+      <description xml:lang="ar">اعرض سجل الجدار الناري</description>
+      <description xml:lang="az">Təhlükəsizlik divarı gündəliyinə baxış</description>
+      <description xml:lang="bg">Преглед на дневниците на защитната стена</description>
+      <description xml:lang="ca">Visualitza els registres del tallafoc</description>
+      <description xml:lang="cs">Zobrazit záznamy firewallu</description>
+      <description xml:lang="da">Vis firewalllogge</description>
+      <description xml:lang="de">Firewall-Protokolle anzeigen</description>
+      <description>View Firewall Logs</description>
+      <description xml:lang="en_GB">View Firewall Logs</description>
+      <description xml:lang="eo">Rigardi Fajromurajn Protokolojn</description>
+      <description xml:lang="es">Ver los registros del cortafuegos</description>
+      <description xml:lang="et">Tulemüüri logide vaatamine</description>
+      <description xml:lang="eu">Ikusi suhesiko egunkari-sarrerak</description>
+      <description xml:lang="fi">Katso palomuurin lokia</description>
+      <description xml:lang="fr">Afficher les journaux du pare-feu</description>
+      <description xml:lang="gl">Ver os rexistros da devasa</description>
+      <description xml:lang="he">הצגת יומני חומת האש</description>
+      <description xml:lang="hi">फ़ायरवॉल लॉग देखें</description>
+      <description xml:lang="hu">Tűzfalnapló megtekintése</description>
+      <description xml:lang="ia">Vide Registros de Talia Foco</description>
+      <description xml:lang="id">Tampilan Catatan Firewall</description>
+      <description xml:lang="is">Skoða eldveggsannála</description>
+      <description xml:lang="it">Visualizza i registri del firewall</description>
+      <description xml:lang="ka">ბრანდმაუერის ჟურნალის ნახვა</description>
+      <description xml:lang="ko">방화벽 로그 표시</description>
+      <description xml:lang="lt">Rodyti užkardos žurnalus</description>
+      <description xml:lang="lv">Skatīt ugunsmūra žurnālus</description>
+      <description xml:lang="nl">Firewall-logs bekijken</description>
+      <description xml:lang="nn">Vis brannmur-loggar</description>
+      <description xml:lang="pa">ਫ਼ਾਇਰਵਾਲ ਲਾਗ ਵੇਖੋ</description>
+      <description xml:lang="pl">Obejrzyj dzienniki zapory ogniowej</description>
+      <description xml:lang="pt">Ver os Registos da 'Firewall'</description>
+      <description xml:lang="pt_BR">Visualizar os registros do firewall</description>
+      <description xml:lang="ro">Vezi jurnale de firewall</description>
+      <description xml:lang="ru">Просмотр журналов брандмауэра</description>
+      <description xml:lang="sa">Firewall Logs पश्यन्तु</description>
+      <description xml:lang="sk">Zobraziť protokoly brány firewall</description>
+      <description xml:lang="sl">Pregled dnevnikov vdorobrana</description>
+      <description xml:lang="sv">Visa brandväggsloggar</description>
+      <description xml:lang="tr">Güvenlik Duvarı Günlüklerini Görüntüle</description>
+      <description xml:lang="uk">Перегляд журналів брандмауера</description>
+      <description xml:lang="zh_CN">查看防火墙日志</description>
+      <description xml:lang="zh_TW">檢視防火牆紀錄</description>
+      <message xml:lang="ar">يعرض سجل الجدار الناري</message>
+      <message xml:lang="az">Təhlükəsizlik divarı gündəliklərinə baxış</message>
+      <message xml:lang="bg">Преглед на дневниците на защитната стена</message>
+      <message xml:lang="ca">Visualitza els registres del tallafoc</message>
+      <message xml:lang="cs">Zobrazit záznamy firewallu</message>
+      <message xml:lang="da">Vis firewalllogge</message>
+      <message xml:lang="de">Firewall-Protokolle anzeigen</message>
+      <message>View firewall logs</message>
+      <message xml:lang="en_GB">View firewall logs</message>
+      <message xml:lang="eo">Rigardi fajroŝirmilojn</message>
+      <message xml:lang="es">Ver los registros del cortafuegos</message>
+      <message xml:lang="et">Tulemüüri logide vaatamine</message>
+      <message xml:lang="eu">Ikusi suhesiko egunkari-sarrerak</message>
+      <message xml:lang="fi">Katso palomuurin lokeja</message>
+      <message xml:lang="fr">Afficher les journaux du pare-feu</message>
+      <message xml:lang="gl">Ver os rexistros da devasa.</message>
+      <message xml:lang="he">הצגת יומני חומת האש</message>
+      <message xml:lang="hi">फ़ायरवॉल लॉग देखें</message>
+      <message xml:lang="hu">A tűzfal naplófájljainak megtekintése</message>
+      <message xml:lang="ia">Vide Registros de Talia Foco</message>
+      <message xml:lang="id">Tampilan catatan firewall</message>
+      <message xml:lang="is">Skoða eldveggsannála</message>
+      <message xml:lang="it">Visualizza i registri del firewall</message>
+      <message xml:lang="ka">ბრანდმაუერის ჟურნალის ნახვა</message>
+      <message xml:lang="ko">방화벽 로그 표시</message>
+      <message xml:lang="lt">Rodyti užkardos žurnalus</message>
+      <message xml:lang="lv">Skatīt ugunsmūra žurnālus</message>
+      <message xml:lang="nl">Firewall-logs bekijken</message>
+      <message xml:lang="nn">Vis brannmur-loggar</message>
+      <message xml:lang="pa">ਫ਼ਾਇਰਵਾਲ ਲਾਗ ਵੇਖੋ</message>
+      <message xml:lang="pl">Obejrzyj dzienniki zapory ogniowej</message>
+      <message xml:lang="pt">Ver os registos da 'firewall'</message>
+      <message xml:lang="pt_BR">Visualizar os registros do firewall</message>
+      <message xml:lang="ro">Vezi jurnalele firewall-ului</message>
+      <message xml:lang="ru">Просмотр журналов брандмауэра</message>
+      <message xml:lang="sa">अग्निप्रावरणस्य लॉग्स् पश्यन्तु</message>
+      <message xml:lang="sk">Zobraziť protokoly brány firewall</message>
+      <message xml:lang="sl">Pregled dnevnikov vdorobrana</message>
+      <message xml:lang="sv">Visa brandväggsloggar</message>
+      <message xml:lang="tr">Güvenlik duvarı günlüklerini görüntüleyin</message>
+      <message xml:lang="uk">Перегляд журналів брандмауера</message>
+      <message xml:lang="zh_CN">查看防火墙日志</message>
+      <message xml:lang="zh_TW">檢視防火牆紀錄</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>yes</allow_active>
+      </defaults>
+   </action>
+</policyconfig>

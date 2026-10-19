@@ -1,0 +1,57 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: aurorae
+Source: https://invent.kde.org/plasma/arorae
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2019, David Edmundson <davidedmundson@kde.org>
+           2009-2012, Martin Gräßlin <mgraesslin@kde.org>
+           2001, Rik Hemsley (rikkus) <rik@kde.org>
+           2003-2005, Sandro Giessl <sandro@giessl.com>
+License: GPL-2.0-or-later
+
+Files: po/*
+Copyright: 2025, Adrián Chaves (Gallaecio)
+           2025, Eloy Cuadra <ecuadra@eloihr.net>
+           2025, Emir SARI <emir_sari@icloud.com>
+           2025, Freek de Kruijf <freekdekruijf@kde.nl>
+           2025, giovanni <g.sora@tiscali.it>
+           2025, KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+           2025, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2025, Kristof Kiszel <ulysses@fsf.hu>
+           2025, Marcus Gama <marcus.gama@gmail.com>
+           2025, Matjaž Jeran <matjaz.jeran@amis.net>
+           2025, Olesya Gerasimenko <translation-team@basealt.ru>
+           2025, Shinjo Park <kde@peremen.name>
+           2025, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2025, Tommi Nieminen <translator@legisign.org>
+           2025, Toms Trasuns <toms.trasuns@posteo.net>
+           2025, Vincenzo Reale <smart2128vr@gmail.com>
+           2025, Xavier Besnard <xavier.besnard@kde.org>
+           2025, Yaron Shahrabani <sh.yaron@gmail.com>
+           2025, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2025, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: GPL-2.0-or-later
+
+Files: debian/*
+Copyright: 2024, Aaron Rainbolt <arraybolt3@ubuntu.com>
+           2021-2025, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2022-2024, Patrick Franz <deltaone@debian.org>
+           2025, Rik Mills <rikmills@kde.org>
+           2014, Scarlett Clark <scarlett@scarlettgatelyclark.com>
+License: GPL-2.0-or-later
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.

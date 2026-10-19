@@ -1,0 +1,4 @@
+# Add override for false-positive of libcanberra embedding ltdl. It only
+# embeds the error strings for some of its own utility functions, not the
+# library itself.
+libcanberra0: embedded-library ltdl [usr/lib/*/libcanberra.so.*]

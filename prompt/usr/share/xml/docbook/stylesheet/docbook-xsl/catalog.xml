@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <!-- XML Catalog file for DocBook XSL-NONS v1.79.2 -->
+  <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl-nons/current/" rewritePrefix="./"/>
+  <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl-nons/current/" rewritePrefix="./"/>
+  <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl-nons/1.79.2/" rewritePrefix="./"/>
+  <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl-nons/1.79.2/" rewritePrefix="./"/>
+  <!-- Debian-specific patch: Also support old URI of v1.79.1 or earlier -->
+  <rewriteURI uriStartString="http://docbook.sourceforge.net/release/xsl/current/" rewritePrefix="./"/>
+  <rewriteSystem systemIdStartString="http://docbook.sourceforge.net/release/xsl/current/" rewritePrefix="./"/>
+</catalog>

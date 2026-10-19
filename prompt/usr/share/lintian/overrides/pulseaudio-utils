@@ -1,0 +1,1 @@
+pulseaudio-utils: bash-completion-with-hashbang /bin/bash [usr/share/bash-completion/completions/*]

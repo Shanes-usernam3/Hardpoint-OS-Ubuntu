@@ -1,0 +1,2 @@
+# systemsettings executable required for the KCM is provided by the systemsettings dependency
+kup-backup: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_kup.desktop]

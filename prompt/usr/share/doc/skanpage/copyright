@@ -1,0 +1,336 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: skanpage
+Upstream-Contact: Alexander Stippich <a.stippich@gmx.net>
+Source: https://invent.kde.org/utilities/skanpage
+
+Files: *
+Copyright: 2020-2022, Alexander Stippich <a.stippich@gmx.net>
+           2023, John Doe <kde.sp90x@simplelogin.com>
+           2015, Kåre Särs <kare.sars@iki .fi>
+           2021, Yuri Chornoivan <yurchor@ukr.net>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: po/*
+Copyright: 2021-2022 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2022 Mincho Kondarev <mkondarev@yahoo.de>
+           2021-2022 Vit Pelcak <vpelcak@suse.cz>
+           2021 Burkhard Lück <lueck@hube-lueck.de>
+           2022 Frederik Schwarzer <schwarzer@kde.org>
+           2022 Alois Spitzbart <spitz234@hotmail.com>
+           2021 Stelios <sstavra@gmail.com>
+           2021-2022 Steve Allewell <steve.allewell@gmail.com>
+           2021-2022 Eloy Cuadra <ecuadra@eloihr.net>
+           2022 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2021-2022 Tommi Nieminen <translator@legisign.org>
+           2021-2022 Xavier Besnard <xavier.besnard@neuf.fr>
+           2021-2022 giovanni <g.sora@tiscali.it>
+           2022 Wantoyèk <wantoyek@gmail.com>
+           2022 Sveinn í Felli <sv1@fellsnet.is>
+           2021-2022 Paolo Zamponi <zapaolo@email.it>
+           2021-2022 Japanese KDE translation team <kde-jp@kde.org>
+           2022 Temuri Doghonadze <temuri.doghonadze@gmail.com>
+           2021-2022 Shinjo Park <kde@peremen.name>
+           2021-2022 Freek de Kruijf <freekdekruijf@kde.nl>
+           2021-2022 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2022 José Nuno Coelho Pires <zepires@gmail.com>
+           2021-2022 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2021 Bruno Cesar Robalinho <robalo_net@yahoo.com.br>
+           2022 Alexander Yavorsky <kekcuha@gmail.com>
+           2022 Olesya Gerasimenko <translation-team@basealt.ru>
+           2021-2022 Roman Paholík <wizzardsk@gmail.com>
+           2021 Matej Mrenica <matejm98mthw@gmail.com>
+           2021-2022 Matjaž Jeran <matjaz.jeran@amis.net>
+           2021-2022 Stefan Asserhäll <stefan.asserhall@bredband.net>
+           2021 Volkan Gezer <volkangezer@gmail.com>
+           2022 Emir SARI <emir_sari@icloud.com>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+Comment: Manually extracted
+
+Files: po/ar/skanpage.po
+       po/ast/skanpage.po
+       po/bg/skanpage.po
+       po/cs/skanpage.po
+       po/de/skanpage.po
+       po/en_GB/skanpage.po
+       po/es/skanpage.po
+       po/eu/skanpage.po
+       po/fr/skanpage.po
+       po/gl/skanpage.po
+       po/he/skanpage.po
+       po/hu/skanpage.po
+       po/ia/skanpage.po
+       po/is/skanpage.po
+       po/it/skanpage.po
+       po/ja/skanpage.po
+       po/ko/skanpage.po
+       po/lv/skanpage.po
+       po/nl/skanpage.po
+       po/pa/skanpage.po
+       po/pl/skanpage.po
+       po/pt_BR/skanpage.po
+       po/sv/skanpage.po
+       po/tr/skanpage.po
+       po/zh_TW/skanpage.po
+Copyright: 2023, A S Alam <aalam@punlinux.org>
+           2024, Adrián Chaves (Gallaecio)
+           2021-2024, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2024, Emir SARI <emir_sari@icloud.com>
+           2024, Enol P. <enolp@softastur.org>
+           2021-2024, Freek de Kruijf <freekdekruijf@kde.nl>
+           2024, Geraldo Simiao <geraldosimiao@fedoraproject.org>
+           2021-2024, giovanni <g.sora@tiscali.it>
+           2024, Guðmundur Erlingsson <gudmundure@gmail.com>
+           2024, Johannes Obermayr <johannesobermayr@gmx.de>
+           2023-2024, KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+           2023-2024, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2023-2024, Kristof Kiszel <kiszel.kristof@gmail.com>
+           2022-2024, Mincho Kondarev <mkondarev@yahoo.de>
+           2021-2024, Paolo Zamponi <feus73@gmail.com>
+           2021-2024, Shinjo Park <kde@peremen.name>
+           2021-2024, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2021-2024, Steve Allewell <steve.allewell@gmail.com>
+           2024, Tarot Osuji <tarot@sdf.org>
+           2024, Toms Trasuns <toms.trasuns@posteo.net>
+           2021-2024, Vit Pelcak <vit@pelcak.org>
+           2021-2024, Xavier Besnard <xavier.besnard@kde.org>
+           2024, Yaron Shahrabani <sh.yaron@gmail.com>
+           2021-2024, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2021-2024, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+Comment: Automatically extracted
+
+Files: autotests/CMakeLists.txt
+       cmake/FindLeptonica.cmake
+       cmake/FindTesseract.cmake
+       CMakeLists.txt
+       config-skanpage.h.in
+       icons/CMakeLists.txt
+       src/CMakeLists.txt
+Copyright: 2020-2022, Alexander Stippich <a.stippich@gmx.net>
+           2015, Kåre Särs <kare.sars@iki .fi>
+License: BSD-2-Clause
+
+Files: CMakePresets.json
+Copyright: 2021-2022, Laurent Montel <montel@kde.org>
+License: BSD-3-Clause
+
+Files: .flatpak-manifest.json
+       .gitignore
+       .gitlab-ci.yml
+       .kde-ci.yml
+       org.kde.skanpage.appdata.xml
+       org.kde.skanpage.desktop
+       src/skanpage_config.kcfg
+       src/skanpage_config.kcfgc
+       src/skanpage_state.kcfg
+       src/skanpage_state.kcfgc
+Copyright: 2020-2022, Alexander Stippich <a.stippich@gmx.net>
+           None
+           none
+License: CC0-1.0
+
+Files: po/ca/*
+       po/ca@valencia/*
+       po/uk/*
+Copyright: 2021-2024, Josep M. Ferrer <txemaq@gmail.com>
+           2021-2024, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: debian/*
+Copyright: 2024, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2023, Scarlett Moore <sgmoore@debian.org>
+License: GPL-2.0-or-later
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: GPL-2.0-only
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-3.0-only
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GPL License as published by the Free
+ Software Foundation, version 3.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-GPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the license or (at
+ your option) at any later version that is accepted by the membership
+ of KDE e.V. (or its successor approved by the membership of KDE
+ e.V.), which shall act as a proxy as defined in Section 14 of
+ version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+

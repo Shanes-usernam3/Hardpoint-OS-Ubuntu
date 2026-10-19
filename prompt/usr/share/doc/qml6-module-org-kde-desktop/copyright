@@ -1,0 +1,307 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qqc2-desktop-style
+Source: https://invent.kde.org/frameworks/qqc2-desktop-style
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2019, Alexander Stippich <a.stippich@gmx.net>
+           2021, Carl Schwan <carlschwan@kde.org>
+           2021, Carson Black <uhhadd@gmail.com>
+           2022, Fushan Wen <qydwhotmail@gmail.com>
+           2023 ivan tkachenko <me@ratijas.tk>
+           2018, Kai Uwe Broulik <kde@privat.broulik.de>
+           2017-2023, Marco Martin <mart@kde.org>
+           2020-2021, Noah Davis <noahadvs@gmail.com>
+           2018, Oleg Chernovskiy <adonai@xaker.ru>
+           2017-2018, The Qt Company Ltd.
+License: LGPL-3.0-only OR GPL-2.0-or-later
+
+Files: kirigami-plasmadesktop-integration/kirigamiplasmafactory.cpp
+       kirigami-plasmadesktop-integration/kirigamiplasmafactory.h
+       kirigami-plasmadesktop-integration/plasmadesktoptheme.cpp
+       kirigami-plasmadesktop-integration/plasmadesktoptheme.h
+       kirigami-plasmadesktop-integration/plasmadesktopunits.cpp
+       kirigami-plasmadesktop-integration/plasmadesktopunits.h
+       Mainpage.dox
+       org.kde.desktop/Pane.qml
+       org.kde.desktop/private/MobileCursor.qml
+       org.kde.desktop/private/TextFieldContextMenu.qml
+       tests/LineEditWithClearButton.qml
+       tests/ContextMenuStacking.qml
+       tests/SpinBox.qml
+       tests/testBars.qml
+Copyright: 2021, Carl Schwan <carl@carlschwan.eu>
+           2021, Carl Schwan <carlschwan@kde.org>
+           2019, Cyril Rossi <cyril.rossi@enioka.com>
+           2017, David Edmundson <davidedmundson@kde.org>
+           2014, David Edmundson <davidedmunsdon@kde.org>
+           2020, Devin Lin <espidev@gmail.com>
+           2023 ivan (@ratijas) tkachenko <me@ratijas.tk>
+           2021, Jonah Brüchert <jbb@kaidan.im>
+           2013-2018, Marco Martin <mart@kde.org>
+           2019, Montel Laurent <montel@kde.org>
+           2021, Méven Car <meven.car@enioka.com>
+           2014, Sebastian Kügler <sebas@kde.org>
+License: LGPL-2.0-or-later
+
+Files: kirigami-plasmadesktop-integration/animationspeedprovider.cpp
+       kirigami-plasmadesktop-integration/autotests/animationspeedmodifiertest.cpp
+       kirigami-plasmadesktop-integration/autotests/animationspeedmodifiertest.qml
+       kirigami-plasmadesktop-integration/CMakeLists.txt
+       org.kde.desktop/private/MobileTextActionsToolBar.qml
+Copyright: 2023 Fushan Wen <qydwhotmail@gmail.com>
+License: LGPL-2.1+
+
+Files: plugin/kquickpadding_p.h
+       plugin/kquickstyleitem.cpp
+       plugin/kquickstyleitem_p.h
+Copyright: 2017, David Edmundson <davidedmundson@kde.org>
+           2017, Marco Martin <mart@kde.org>
+           2016, The Qt Company Ltd. <https://www.qt.io/licensing/>
+License: LGPL-3.0-only OR GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL OR LicenseRef-Qt-Commercial
+
+Files: org.kde.desktop/BusyIndicator.qml
+       org.kde.desktop/Button.qml
+       org.kde.desktop/CheckBox.qml
+       org.kde.desktop/CheckDelegate.qml
+       org.kde.desktop/ComboBox.qml
+       org.kde.desktop/Container.qml
+       org.kde.desktop/Control.qml
+       org.kde.desktop/DelayButton.qml
+       org.kde.desktop/DialogButtonBox.qml
+       org.kde.desktop/Dialog.qml
+       org.kde.desktop/Dial.qml
+       org.kde.desktop/Drawer.qml
+       org.kde.desktop/Frame.qml
+       org.kde.desktop/GroupBox.qml
+       org.kde.desktop/ItemDelegate.qml
+       org.kde.desktop/Label.qml
+       org.kde.desktop/MenuBarItem.qml
+       org.kde.desktop/MenuBar.qml
+       org.kde.desktop/MenuItem.qml
+       org.kde.desktop/Menu.qml
+       org.kde.desktop/MenuSeparator.qml
+       org.kde.desktop/Page.qml
+       org.kde.desktop/Popup.qml
+       org.kde.desktop/private/DefaultListItemBackground.qml
+       org.kde.desktop/private/FocusRect.qml
+       org.kde.desktop/ProgressBar.qml
+       org.kde.desktop/RadioButton.qml
+       org.kde.desktop/RadioDelegate.qml
+       org.kde.desktop/RangeSlider.qml
+       org.kde.desktop/RoundButton.qml
+       org.kde.desktop/ScrollBar.qml
+       org.kde.desktop/ScrollView.qml
+       org.kde.desktop/Slider.qml
+       org.kde.desktop/SpinBox.qml
+       org.kde.desktop/StackView.qml
+       org.kde.desktop/SwitchDelegate.qml
+       org.kde.desktop/Switch.qml
+       org.kde.desktop/TabBar.qml
+       org.kde.desktop/TabButton.qml
+       org.kde.desktop/TextArea.qml
+       org.kde.desktop/TextField.qml
+       org.kde.desktop/ToolBar.qml
+       org.kde.desktop/ToolButton.qml
+       org.kde.desktop/ToolSeparator.qml
+       org.kde.desktop/ToolTip.qml
+       tests/buttonIcons.qml
+Copyright: 2019, Alexander Stippich <a.stippich@gmx.net>
+           2021, Carl Schwan <carlschwan@kde.org>
+           2021, Carson Black <uhhadd@gmail.com>
+           2022, Fushan Wen <qydwhotmail@gmail.com>
+           2018, Kai Uwe Broulik <kde@privat.broulik.de>
+           2017-2020, Marco Martin <mart@kde.org>
+           2020-2021, Noah Davis <noahadvs@gmail.com>
+           2018, Oleg Chernovskiy <adonai@xaker.ru>
+           2017-2018, The Qt Company Ltd.
+License: LGPL-3.0-only OR GPL-2.0-or-later
+
+Files: plugin/itembranchindicators.h
+Copyright: 2023 David Redondo <kde@david-redondo.de>
+License: LGPL-3+KDEeV
+
+Files: kirigami-plasmadesktop-integration/autotests/CMakeLists.txt
+Copyright: 2023 Fushan Wen <qydwhotmail@gmail.com>
+License: BSD-3-clause
+
+Files: .gitlab-ci.yml
+Copyright: 2020 Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2024 Patrick Franz <deltaone@debian.org>
+License: LGPL-2.0-or-later
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA. Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’.
+
+License: GPL-2.0-only_OR_GPL-3.0-only_OR_LicenseRef-KFQF-Accepted-GPL
+ Alternatively, this file may be used under the terms of the GNU
+ General Public License version 2.0 or (at your option) the GNU
+ General Public license version 3 or any later version approved by
+ the KDE Free Qt Foundation. The licenses are as published by the
+ Free Software Foundation and appearing in the file LICENSE.GPL2 and
+ LICENSE.GPL3 included in the packaging of this file. Please review
+ the following information to ensure the GNU General Public License
+ requirements will be met: https://www.gnu.org/licenses/gpl-2.0.html
+ and https://www.gnu.org/licenses/gpl-3.0.html.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2’, likewise, the complete text of
+ the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-Qt-Commercial
+ Commercial License Usage
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained
+ in a written agreement between you and The Qt Company. For licensing
+ terms and conditions see https://www.qt.io/terms-conditions. For
+ further information use the contact form at
+ https://www.qt.io/contact-us.
+
+License: LGPL-3+KDEeV
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: BSD-3-clause
+ You may use this file under the terms of the BSD license as follows:
+ .
+ "Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.
+   * Neither the name of The Qt Company Ltd nor the names of its
+     contributors may be used to endorse or promote products derived
+     from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".

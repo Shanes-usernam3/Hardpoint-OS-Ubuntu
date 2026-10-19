@@ -1,0 +1,63 @@
+Gutenprint Configuration Summary:
+---------- ------------- --------
+
+If you have any problems, please report the information below to
+gimp-print-devel@lists.sourceforge.net
+
+================================================================
+  Release: gutenprint 5.3.4 generated on 24 Jun 2022
+  Generated at REDACTED
+
+  Features:
+    Build CUPS:                                 yes, installing in /usr
+        Build CUPS 1.2 enhancements:            yes
+        Build CUPS PPD files:                   no
+        Generate PS level 3 CUPS PPD files:     yes
+        Build genppd statically:                no
+            ***WARNING: Use of --disable-static-genppd or --disable-static
+                        when building CUPS is very dangerous.  The build may
+                        fail when building the PPD files, or may *SILENTLY*
+                        build incorrect PPD files or cause other problems.
+                        Please review the README and release notes carefully!
+        Build CUPS dyesub USB backend:          yes
+    Build EPSON inkjet utility:                 yes
+    Build enhanced Print plugin for GIMP:       no
+    Build test programs:                        yes
+    Build testpattern generator:                no
+
+  Installation summary:
+    Installation prefix:                        /usr
+    Exec prefix:                                /usr (${prefix})
+    Data directory:                             /usr/share/gutenprint
+    Library directory:                          /usr/lib/x86_64-linux-gnu/gutenprint (/usr/lib/x86_64-linux-gnu/gutenprint)
+    Executable directory:                       /usr/bin (/usr/bin)
+    XML data directory:                         /usr/share/gutenprint/5.3/xml
+    Module directory:                           /usr/lib/x86_64-linux-gnu/gutenprint/5.3/modules (/usr/lib/x86_64-linux-gnu/gutenprint/5.3/modules)
+    Install sample images:                      yes
+
+  General configuration:
+    Configure arguments:                        --build=x86_64-linux-gnu --prefix=/usr --includedir=${prefix}/include --mandir=${prefix}/share/man --infodir=${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir=${prefix}/lib/x86_64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking --libdir=/usr/lib/x86_64-linux-gnu --disable-static --enable-shared --disable-rpath --disable-static-genppd --with-modules=dlopen --disable-libgutenprintui2 --disable-gimp2 --with-cups --enable-cups-level3-ppds --enable-globalized-cups-ppds --enable-cups-1_2-enhancements --disable-cups-ppds --enable-test --disable-testpattern --enable-maintainer-mode --enable-nls
+    Compiler:                                   gcc
+    Compiler Version:                           gcc version 15.2.0 (Ubuntu 15.2.0-11ubuntu1) 
+    Compiler options:                           -Disfinite=finite -g -O2 -Werror=implicit-function-declaration -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDPATH=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDPATH=/usr/src/gutenprint-5.3.4.20220624T01008808d602-4ubuntu2 -O3  -Wall -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Wwrite-strings -Werror-implicit-function-declaration -Winline -Wformat=2 -finline-limit=131072 -Wformat -Werror=format-security -D_POSIX_C_SOURCE=200809L -std=c99 -pedantic -Waggregate-return -Wcast-qual -Wshadow -Wredundant-decls
+    Build static libraries:                     no
+    Build shared libraries:                     yes
+    Maintainer mode:                            yes
+    Use i18n:                                   yes
+    Generate profiling information:             no
+    Generate debugging symbols:                 no
+    Use modules:                                dlopen
+    Use readline libraries:                     yes, extra arguments: -lncurses
+    uname -a output: REDACTED
+================================================================
+
+VERY IMPORTANT:
+If you expect to build the CUPS driver or the enhanced Print plugin for
+GIMP, but the output above indicates that that component will not be built,
+it almost certainly indicates that development packages required to build
+that component are not installed on your system.  Please read the README
+file and install the necessary development packages before reporting any
+error to the development team.  Depending upon your operating system version,
+you may have to install packages from the installation medium or over
+the network.
+

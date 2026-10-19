@@ -1,0 +1,9 @@
+# libkuriikwsfiltereng_private.so is a private library installed in a public path
+kio6: lacks-ldconfig-trigger usr/lib/*/libkuriikwsfiltereng_private.so
+kio6: package-name-doesnt-match-sonames libkuriikwsfiltereng-private
+kio6: shared-library-lacks-version usr/lib/*/libkuriikwsfiltereng_private.so libkuriikwsfiltereng_private.so
+kio6: no-symbols-control-file usr/lib/*/libkuriikwsfiltereng_private.so
+
+kio6: no-manual-page [usr/bin/ktelnetservice6]
+kio6: no-manual-page [usr/bin/ktrash6]
+

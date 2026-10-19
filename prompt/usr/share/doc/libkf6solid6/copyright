@@ -1,0 +1,144 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: solid
+Source: https://invent.kde.org/frameworks/solid
+Upstream-Contact: kde-frameworks-devel@kde.org
+
+Files: *
+Copyright: 2014, Alejandro Fiestas Olivares <afiestas@kde.org>
+           2010, Alex Merry <alex.merry@kdemail.net>
+           2021, Alexey Minnekhanov <alexeymin@postmarketos.org>
+           2009, Benjamin K. Stuhl <bks24@cornell.edu>
+           2012, Dan Vrátil <dvratil@redhat.com>
+           2006, Davide Bettio <davide.bettio@kdemail.net>
+           2009, Harald Fernengel <harry@kdevelop.org>
+           2023 Harald Sitter <sitter@kde.org>
+           2007, Jeff Mitchell <kde-dev@emailgoeshere.com>
+           2014, Kai Uwe Broulik <kde@privat.broulik.de>
+           2016, Kevin Funk <kfunk@kde.org>
+           2005-2010, Kevin Ottens <ervin@kde.org>
+           2009-2015, Lukáš Tinkl <ltinkl@redhat.com>
+           2010-2011, Mario Bensi <mbensi@ipsquad.net>
+           2011, Matej Laitl <matej@laitl.cz>
+           2020, MBition GmbH
+           2010, Michael Zanetti <mzanetti@kde.org>
+           2006, Michaël Larouche <michael.larouche@kdemail.net>
+           2013, Patrick Spendrin <ps_ml@gmx.de>
+           2013-2014, Patrick von Reth <vonreth@kde.org>
+           2010, Paulo Romulo Alves Barros <paulo.romulo@kdemail.net>
+           2009-2010, Pino Toscano <pino@kde.org>
+           2010, Rafael Fernández López <ereslibre@kde.org>
+           2017-2018, René J.V. Bertin <rjvbertin@gmail.com>
+           2023 Stefan Brüns <stefan.bruens@rwth-aachen.de>
+License: LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL
+
+Files: cmake/FindIMobileDevice.cmake
+       cmake/FindIOKit.cmake
+       cmake/FindPList.cmake
+       cmake/SolidBackendsMacros.cmake
+Copyright: 2009, Harald Fernengel <harry@kdevelop.org>
+           2020, MBition GmbH
+           2019, Pino Toscano <pino@kde.org>
+License: BSD-3-Clause
+
+Files: src/tools/solid-hardware/solid-hardware.cpp
+       src/tools/solid-hardware/solid-hardware.h
+Copyright: 2014, Alejandro Fiestas Olivares <afiestas@kde.org>
+           2013, Ivan Cukic <ivan.cukic(at)kde.org>
+           2006, Kevin Ottens <ervin@kde.org>
+License: LGPL-2.1-or-later
+
+Files: .gitlab-ci.yml
+Copyright: 2020 Volker Krause <vkrause@kde.org>
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2024 Patrick Franz <deltaone@debian.org>
+           2014, Jonathan Riddell <jriddell@ubuntu.com>
+License: LGPL-2.1-or-later
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: LGPL-2.1-only_OR_LGPL-3.0-only_OR_LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the license or (at your option) any later version
+ that is accepted by the membership of KDE e.V. (or its successor
+ approved by the membership of KDE e.V.), which shall act as a
+ proxy as defined in Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 3 can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: LGPL-2.1-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of the
+ License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA Also add information on how to contact you by
+ electronic and paper mail.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".

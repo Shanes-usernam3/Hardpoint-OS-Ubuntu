@@ -1,0 +1,23 @@
+Chromium, Firefox and Google Chrome integration
+===============================================
+
+Currently, to get plasma browser integration fully working, you need to also
+install the browser extension from the corresponding Web Store.
+
+Chromium
+--------
+
+The extension can be found in the webstore here:
+ https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai
+
+Firefox
+-------
+
+The addon can be found in the firefox here:
+ https://addons.mozilla.org/en-US/firefox/addon/plasma-integration/
+
+Google Chrome
+-------------
+
+The extension can be found in the webstore here:
+ https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai

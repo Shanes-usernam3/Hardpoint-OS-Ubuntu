@@ -1,0 +1,23 @@
+# Upstream choices; they need to be run as root
+cups-filters: non-standard-executable-perm usr/lib/cups/backend/serial 0744 != 0755
+# That's how CUPS does it
+cups-filters: executable-in-usr-lib usr/lib/cups/backend/beh
+cups-filters: executable-in-usr-lib usr/lib/cups/backend/parallel
+cups-filters: executable-in-usr-lib usr/lib/cups/backend/serial
+cups-filters: executable-in-usr-lib usr/lib/cups/driver/driverless-fax
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/bannertopdf
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/commandtoescpx
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/commandtopclx
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/foomatic-rip
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/gstopdf
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/gstopxl
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/gstoraster
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/imagetops
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/imagetoraster
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/mupdftopwg
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/pclmtoraster
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/pwgtoraster
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/rastertoescpx
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/texttopdf
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/texttops
+cups-filters: executable-in-usr-lib usr/lib/cups/filter/texttotext

@@ -1,0 +1,16 @@
+Configuration
+-------------
+
+vpnc-script configures network routes and DNS for the VPN connection. The
+configuration can be customized at various stages by installing scripts into
+the following directories:
+
+    /etc/vpnc/pre-init.d
+    /etc/vpnc/connect.d
+    /etc/vpnc/post-connect.d
+    /etc/vpnc/disconnect.d
+    /etc/vpnc/post-disconnect.d
+    /etc/vpnc/reconnect.d
+
+See /usr/share/vpnc-scripts/vpnc-script for the definitions of environment
+variables.

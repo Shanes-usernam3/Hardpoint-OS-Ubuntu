@@ -1,0 +1,1 @@
+libkf5globalaccelprivate5: lacks-unversioned-link-to-shared-library example: usr/lib/*/libKF5GlobalAccelPrivate.so [usr/lib/*/libKF5GlobalAccelPrivate.so.*]

@@ -1,0 +1,15 @@
+[General]
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
+BrowserApplication=firefox_firefox.desktop
+
+[KDE]
+LookAndFeelPackage=org.kubuntu.desktop
+SingleClick=false
+AutomaticLookAndFeel=false
+DefaultLightLookAndFeel=org.kubuntulight.desktop
+DefaultDarkLookAndFeel=org.kubuntudark.desktop
+contrast=4
+frameContrast=0.2
+

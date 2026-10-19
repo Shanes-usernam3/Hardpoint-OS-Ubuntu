@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=Kubuntu
+Description=Kubuntu Breeze SDDM
+Author=KDE VDG, Kubuntu Focus Design
+Copyright=KDE VDG, Kubuntu Focus Design
+License=CC-BY-SA
+Type=sddm-theme
+Version=26.04.1
+Website=https://kubuntu.org
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+Email=kubuntu-devel@lists.ubuntu.com
+Theme-Id=kubuntu
+Theme-API=2.0
+QtVersion=6

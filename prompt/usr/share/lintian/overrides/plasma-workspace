@@ -1,0 +1,31 @@
+plasma-workspace: package-name-doesnt-match-sonames libkrdb
+plasma-workspace: no-manual-page [usr/bin/gmenudbusmenuproxy]
+plasma-workspace: no-manual-page [usr/bin/kcminit]
+plasma-workspace: no-manual-page [usr/bin/kcminit_startup]
+plasma-workspace: no-manual-page [usr/bin/krunner]
+plasma-workspace: no-manual-page [usr/bin/ksmserver]
+plasma-workspace: no-manual-page [usr/bin/ksplashqml]
+plasma-workspace: no-manual-page [usr/bin/plasmashell]
+plasma-workspace: no-manual-page [usr/bin/plasmawindowed]
+plasma-workspace: no-manual-page [usr/bin/plasma-shutdown]
+plasma-workspace: no-manual-page [usr/bin/plasma-apply-colorscheme]
+plasma-workspace: no-manual-page [usr/bin/plasma-apply-cursortheme]
+plasma-workspace: no-manual-page [usr/bin/plasma-apply-desktoptheme]
+plasma-workspace: no-manual-page [usr/bin/plasma-apply-lookandfeel]
+plasma-workspace: no-manual-page [usr/bin/plasma-apply-wallpaperimage]
+plasma-workspace: no-manual-page [usr/bin/plasma-interactiveconsole]
+plasma-workspace: no-manual-page [usr/bin/plasma_session]
+plasma-workspace: no-manual-page [usr/bin/plasma_waitforname]
+plasma-workspace: no-manual-page [usr/bin/startplasma-wayland]
+plasma-workspace: no-manual-page [usr/bin/startplasma-x11]
+plasma-workspace: no-manual-page [usr/bin/xembedsniproxy]
+plasma-workspace: no-manual-page [usr/bin/kcolorschemeeditor]
+plasma-workspace: no-manual-page [usr/bin/kfontinst]
+plasma-workspace: no-manual-page [usr/bin/kfontview]
+plasma-workspace: no-manual-page [usr/bin/lookandfeeltool]
+plasma-workspace: shared-library-lacks-version usr/lib/*/libkrdb.so libkrdb.so
+plasma-workspace: lacks-ldconfig-trigger usr/lib/*/libkrdb.so
+plasma-workspace: desktop-entry-unknown-type XSession [usr/share/xsessions/plasmax11.desktop]
+# systemsettings executable required for the KCMs is provided by the Recommends: systemsettings dependency
+plasma-workspace: desktop-command-not-in-package systemsettings [usr/share/applications/kcm_*]
+plasma-workspace: field-too-long Depends (5024 chars > 5000)
