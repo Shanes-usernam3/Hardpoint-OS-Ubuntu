@@ -1,4 +1,4 @@
-# HardPoint OS (Zorin Edition) — apt packages added on top of Zorin OS Core.
+# HardPoint OS — apt packages added on top of the base system.
 # One per line. Missing packages are skipped with a warning (see the build log).
 
 # --- HardPoint apps (Setup / Updates / Accounts / Security) ---

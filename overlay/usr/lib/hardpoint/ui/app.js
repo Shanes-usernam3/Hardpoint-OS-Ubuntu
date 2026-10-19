@@ -25,7 +25,7 @@ const HP = {
 // Preview data when the page is opened in a normal browser (design work, screenshots).
 const Mock = {
   state: {
-    user: "shane", realName: "Shane", host: "hardpoint-desktop", os: "HardPoint OS 24.04 (Zorin Edition)", live: false,
+    user: "shane", realName: "Shane", host: "hardpoint-desktop", os: "HardPoint OS 18", live: false,
     setupDone: false, updateTimer: true, colorScheme: "prefer-dark", installedApps: ["com.github.tchx84.Flatseal"],
     entra: { available: true, enabled: false, domain: "", active: false, companyPortal: true },
     security: { lockdown: false, firewall: true, apparmor: true, secureBoot: "off", kernelLockdown: "none", encrypted: true, usbguard: false },
@@ -50,7 +50,7 @@ const Mock = {
     if (m.cmd === "sysinfo") return reply(true, {
       vendor: "Lenovo", model: "ThinkBook 15 G4 IAP", machineType: "21DJ", serial: "PF3XXXXX", bios: "J6CN45WW (08/14/2025)",
       cpu: "12th Gen Intel(R) Core(TM) i5-1235U", ramGB: 16, gpu: "Intel Corporation Alder Lake-UP3 GT2 [Iris Xe Graphics]",
-      os: "HardPoint OS 18 (Zorin Edition)", kernel: "6.14.0-33-generic", uptimeH: 3.4,
+      os: "HardPoint OS 18", kernel: "6.14.0-33-generic", uptimeH: 3.4,
       disks: [{ name: "nvme0n1", model: "SAMSUNG MZVL2512HCJQ", sizeGB: 512, tran: "nvme" }, { name: "nvme1n1", model: "WD Blue SN580 1TB", sizeGB: 1000, tran: "nvme" }],
       battery: { present: true, percent: 78, status: "Charging", health: 91, cycles: 143, model: "L20M3PF0", manufacturer: "SMP" },
       chargeLimit: { supported: true, on: false, method: "conservation" }, windowsDrive: false, focus: false,

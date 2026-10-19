@@ -14,8 +14,8 @@ warn() { printf '  WARN: %s\n' "$*" >&2; }
 log "Setting desktop defaults (Byte look)"
 pick_theme() { for t in "$@"; do [[ -d /usr/share/themes/$t ]] && { echo "$t"; return; }; done; }
 pick_icons() { for t in "$@"; do [[ -d /usr/share/icons/$t ]] && { echo "$t"; return; }; done; }
-# HardPoint Dark / Light: Zorin's own themes recoloured to the Byte palette (rebuilt on
-# every HardPoint update and whenever Zorin updates its themes)
+# HardPoint Dark / Light: the base system's themes recoloured to the Byte palette (rebuilt on
+# every HardPoint update and whenever the base themes are updated)
 for v in Dark Light; do
     if [[ -d /usr/share/themes/ZorinBlue-$v ]]; then
         python3 "$D/make-theme.py" "/usr/share/themes/ZorinBlue-$v" "/usr/share/themes/HardPoint-$v" "${v,,}" ||
@@ -23,7 +23,7 @@ for v in Dark Light; do
     fi
 done
 # HardPoint icon themes: modern Papirus icons, plus the HardPoint logo icons (menu button
-# etc.) linked from Zorin's icon themes, where rebrand/apply-logos put our logo
+# etc.) linked from the base icon themes, where rebrand/apply-logos put our logo
 for v in Dark Light; do
     src=/usr/share/icons/ZorinBlue-$v dst=/usr/share/icons/HardPoint-$v
     pap=Papirus-Dark; [[ $v == Light ]] && pap=Papirus
@@ -108,7 +108,7 @@ fi
 install -m 644 "$D/win11.dconf" /etc/dconf/db/local.d/10-hardpoint-win11
 dconf update
 
-# Zorin's own GSettings overrides win over dconf for some keys — add ours last
+# The base system's GSettings overrides win over dconf for some keys — add ours last
 mkdir -p /usr/share/glib-2.0/schemas
 cat > /usr/share/glib-2.0/schemas/99_hardpoint.gschema.override <<EOF
 [org.gnome.desktop.background]
@@ -188,7 +188,7 @@ if [[ -d /usr/share/plymouth/themes/hardpoint ]]; then
     update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth \
         /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth 300
     update-alternatives --set default.plymouth /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth
-    # Zorin also names its theme in plymouthd.conf, which wins over the alternative
+    # The base system also names its theme in plymouthd.conf, which wins over the alternative
     mkdir -p /etc/plymouth
     printf '[Daemon]\nTheme=hardpoint\nShowDelay=0\n' > /etc/plymouth/plymouthd.conf
     if command -v plymouth-set-default-theme >/dev/null; then plymouth-set-default-theme hardpoint || true; fi
@@ -205,7 +205,7 @@ for i in /boot/initrd.img-*; do
     log "$(basename "$i"): $(lsinitramfs "$i" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+' | sort -u | tr '\n' ' ')" | tee -a "$S/build-report.txt"
 done
 
-# Zorin's own welcome tour also opens at first sign-in; HardPoint Setup replaces it
+# The base system's welcome tour also opens at first sign-in; HardPoint Setup replaces it
 for f in /etc/xdg/autostart/*.desktop; do
     [[ -f $f ]] || continue
     case "$(basename "$f")" in hardpoint-*) continue ;; esac
@@ -216,11 +216,11 @@ for f in /etc/xdg/autostart/*.desktop; do
             cp "$f.zorin" "$f"
         fi
         grep -q '^Hidden=true' "$f" || printf 'Hidden=true\n' >> "$f"
-        log "Turned off Zorin's welcome tour ($(basename "$f"))"
+        log "Turned off the upstream welcome tour ($(basename "$f"))"
     fi
 done
 
-# One updater: HardPoint Updates. Hide Zorin/Ubuntu's Software Updater and its
+# One updater: HardPoint Updates. Hide the upstream Software Updater and its
 # pop-up notifier (HardPoint Updates covers system, app and firmware updates).
 hide_desktop() {  # hide_desktop <file> <key>: NoDisplay for menus, Hidden for autostart
     local f="$1" key="$2"

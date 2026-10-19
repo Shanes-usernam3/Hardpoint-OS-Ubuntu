@@ -1,5 +1,5 @@
 #!/bin/sh
-# Connect an existing HardPoint OS (Zorin Edition) install to HardPoint updates.
+# Connect an existing HardPoint OS install to HardPoint updates.
 #   curl -fsSL https://shanes-usernam3.github.io/Hardpoint-OS-Ubuntu/apt/install.sh | sudo sh
 set -e
 [ "$(id -u)" = 0 ] || { echo "Run with sudo."; exit 1; }

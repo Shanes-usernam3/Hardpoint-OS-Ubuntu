@@ -1,4 +1,4 @@
-name: Build HardPoint OS (Zorin Edition) ISO
+name: Build HardPoint OS ISO
 
 # Every push: build + publish the hardpoint-os update (a few minutes).
 # Full ISO + VM test (about 2 hours): "Run workflow" button, a v* tag, or "[iso]" in the commit message.
@@ -107,11 +107,11 @@ jobs:
           sudo mkdir -p /mnt/hp && sudo chown "$USER" /mnt/hp
           df -h / /mnt
 
-      - name: Reuse the downloaded Zorin OS Core ISO
+      - name: Reuse the downloaded base ISO
         uses: actions/cache@v4
         with:
           path: /mnt/hp/cache
-          key: zorin-${{ hashFiles('config/base.env') }}
+          key: base-iso-${{ hashFiles('config/base.env') }}
 
       - name: Get the Entra sign-in packages
         uses: actions/download-artifact@v4
@@ -127,7 +127,7 @@ jobs:
 
       - name: Build the ISO
         run: |
-          # A version tag (v1.0.0) names the ISO hardpoint-os-zorin-1.0.0-amd64.iso
+          # A version tag (v1.0.0) names the ISO hardpoint-os-1.0.0-amd64.iso
           if [[ $GITHUB_REF == refs/tags/v* ]]; then export HP_VERSION="${GITHUB_REF_NAME#v}"; fi
           if [[ -n "${{ inputs.version }}" ]]; then export HP_VERSION="${{ inputs.version }}"; fi
           sudo env CACHE=/mnt/hp/cache WORK=/mnt/hp/work OUT="$PWD/out" HP_VERSION="${HP_VERSION:-}" bash ./build.sh
@@ -149,7 +149,7 @@ jobs:
       - name: Upload ISO (download from this run's page)
         uses: actions/upload-artifact@v4
         with:
-          name: hardpoint-os-zorin-iso
+          name: hardpoint-os-iso
           path: |
             out/*.iso
             out/SHA256SUMS
@@ -174,7 +174,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: hardpoint-os-zorin-iso
+          name: hardpoint-os-iso
           path: iso
 
       - name: Boot live, install, boot the installed system
@@ -206,7 +206,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: hardpoint-os-zorin-iso
+          name: hardpoint-os-iso
           path: iso
 
       - name: Split the ISO and write the notes
@@ -220,6 +220,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete "$TAG" --yes 2>/dev/null || true
-          gh release create "$TAG" --target "$GITHUB_SHA" --title "HardPoint OS ${TAG#v} (Zorin Edition)" \
+          gh release create "$TAG" --target "$GITHUB_SHA" --title "HardPoint OS ${TAG#v}" \
             --notes-file rel/notes.md --latest \
             rel/get-hardpoint-iso.sh rel/SHA256SUMS.txt rel/SHA256SUMS-parts.txt rel/*.part*

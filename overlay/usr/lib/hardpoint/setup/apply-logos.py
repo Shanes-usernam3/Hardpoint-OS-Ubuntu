@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Overwrite each Zorin logo image listed by rebrand.sh with the HardPoint logo,
+"""Overwrite each upstream logo image listed by rebrand.sh with the HardPoint logo,
 rendered at the same pixel size (PNG) or as SVG.
 
     apply-logos.py <root> <targets.txt> <branding-dir>

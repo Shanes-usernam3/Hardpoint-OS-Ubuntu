@@ -1,16 +1,16 @@
-# HardPoint OS — Zorin Edition
+# HardPoint OS
 
-HardPoint OS built on **Zorin OS 18.1 Core** (Ubuntu 24.04 LTS), with HardPoint
+HardPoint OS is a desktop operating system based on Ubuntu 24.04 LTS, with HardPoint
 branding, a Byte-style setup and login experience, dev/IT/gaming software and
 Microsoft Entra ID / Intune support. Built by HardPoint Networks.
 
-Sister project of the Arch-based [HardPoint OS](https://github.com/Shanes-usernam3/Hardpoint-os).
+An earlier Arch-based version lives in [Hardpoint-os](https://github.com/Shanes-usernam3/Hardpoint-os) (suspended).
 
 ## What you get
 
 | Area | Included |
 |---|---|
-| Look | Byte design language everywhere: navy glass, neon cyan → violet → pink. **HardPoint Dark / Light** desktop themes (Zorin's GPL themes recoloured by `setup/make-theme.py`) with Papirus icons. HardPoint boot splash, login screen, wallpapers, logos and installer slideshow. **Windows 11 layout**: centred taskbar and Start, quick settings (Win+A), notifications + calendar (Win+N), Windows shortcuts (Win+E/I/D/S, Win+Shift+S, Ctrl+Shift+Esc). |
+| Look | Byte design language everywhere: navy glass, neon cyan → violet → pink. **HardPoint Dark / Light** desktop themes (built on each PC by `setup/make-theme.py`) with Papirus icons. HardPoint boot splash, login screen, wallpapers, logos and installer slideshow. **Windows 11 layout**: centred taskbar and Start, quick settings (Win+A), notifications + calendar (Win+N), Windows shortcuts (Win+E/I/D/S, Win+Shift+S, Ctrl+Shift+Esc). |
 | HardPoint apps | **Setup** (runs on first sign-in: hardware check, look, account type, apps, extras, security), **Updates**, **Accounts**, **Security**, **System** (PC info, serial + Lenovo warranty, battery and disk health, hardware check, **Fix my PC**) — one smooth WebKit UI, admin actions through polkit |
 | Quality of life | Battery charge limit (~80%), Windows SSD shown read-only in Files, Focus Mode (no pop-ups + Night Light), **Alt+Space** quick search, **Super+V** clipboard history (optional GPaste) |
 | Optional apps | Picked in Setup: LibreOffice, Teams/Outlook web apps, Bitwarden, KeePassXC, Backups (Déjà Dup), Flameshot, Lutris, ProtonUp-Qt, Discord, Sunshine/Moonlight, GitHub Desktop, DBeaver, Insomnia, Distrobox, Netlify CLI, Ventoy, Impression, Bottles, Angry IP Scanner, Kdenlive, Audacity, GIMP and more (`config/flatpaks.list`) |
@@ -22,24 +22,21 @@ Sister project of the Arch-based [HardPoint OS](https://github.com/Shanes-userna
 | Dev | VS Code, Git + LFS, build tools, CMake/Ninja, Node.js, Python + pipx, OpenJDK 21, adb/fastboot, Docker + Compose, Podman, QEMU/KVM + virt-manager, ShellCheck. Android Studio in Setup. |
 | IT tools | nmap, Wireshark, tcpdump, iperf3, mtr, dig, Remmina (RDP/VNC), FreeRDP, WireGuard/OpenVPN, SMART/NVMe tools, GParted, TestDisk, ddrescue, stress-ng, memtester, fio, hwinfo, inxi. RustDesk in Setup. |
 | Gaming | Steam, GameMode, MangoHud, Vulkan (32 + 64-bit), **Xbox Cloud Gaming** launcher (Edge) — plus Greenlight, RetroArch, Dolphin, PCSX2, PPSSPP, mGBA, melonDS, Cemu, DuckStation, Heroic offered in Setup |
-| Browser | Microsoft Edge (needed for Intune sign-in and Xbox Cloud Gaming) and Zorin's Firefox |
+| Browser | Microsoft Edge (needed for Intune sign-in and Xbox Cloud Gaming) and Brave |
 
 ## Licensing
 
-Only the **free Zorin OS Core** edition is used — Zorin OS Pro may not be redistributed.
-Zorin's [trademark policy](https://zorin.com/legal/trademark-copyright-and-licensing-policy/) says a derivative
-must not use their name or logos or suggest affiliation, so `tools/rebrand.sh` replaces the OS
-name, launcher names, logos, boot splash, login theme and installer slideshow. Replaced files are
-kept next to ours as `*.zorin` (via `dpkg-divert`), so Zorin updates never bring their branding back.
-Package names and some internal file names still contain "zorin"; that is normal for a derivative.
-HardPoint OS is not affiliated with or endorsed by Zorin Group.
+Open-source components are used under their own licences; credits and licence notes are in
+[NOTICE.md](NOTICE.md). HardPoint branding replaces the base system's names, logos, boot splash,
+login theme and installer slideshow (`overlay/usr/lib/hardpoint/setup/rebrand.sh`); replaced files are
+kept beside ours with `dpkg-divert`, so upstream updates never bring the old branding back.
 
 ## 1. Build the ISO (no commands needed)
 
 Every push to `main` builds a new ISO with GitHub Actions (about 60–90 minutes).
 
-1. Open **Actions → Build HardPoint OS (Zorin Edition) ISO** (or click **Run workflow**).
-2. When the run is green, download **hardpoint-os-zorin-iso** (a zip with the `.iso` and `SHA256SUMS`).
+1. Open **Actions → Build HardPoint OS ISO** (or click **Run workflow**).
+2. When the run is green, download **hardpoint-os-iso** (a zip with the `.iso` and `SHA256SUMS`).
 3. The **Test in a VM** job then boots the ISO, opens the HardPoint apps, does an automatic
    install and boots it. Screenshots and `summary.md` go to the `test-results` branch.
 
@@ -48,7 +45,7 @@ Without Himmelblau packages in `extra-pkgs/` the ISO still builds, just without 
 
 ## Official releases
 
-**Actions → Build HardPoint OS (Zorin Edition) ISO → Run workflow**, type a version
+**Actions → Build HardPoint OS ISO → Run workflow**, type a version
 (e.g. `1.1.0`) and run. GitHub builds the ISO, tests it in a VM and, if the test passes,
 publishes it on the **Releases** page as `v1.1.0`. (Pushing a `v1.1.0` git tag does the same.)
 
@@ -58,7 +55,7 @@ The ISO is over GitHub's 2 GB file limit, so the release holds it in parts plus
 
 ## 2. Make the USB with Rufus
 
-1. Pick the USB stick and the `hardpoint-os-zorin-*.iso`.
+1. Pick the USB stick and the `hardpoint-os-*.iso`.
 2. Partition scheme **GPT**, target **UEFI (non CSM)**.
 3. When Rufus asks, **ISO Image mode** is fine for this edition (DD mode also works).
 
@@ -106,7 +103,7 @@ New apps added to `config/packages.install` are installed by the update too.
 
 | Path | What |
 |---|---|
-| `build.sh` | Downloads + verifies Zorin Core, unpacks, customises, repacks the ISO |
+| `build.sh` | Downloads + verifies the base ISO, unpacks, customises, repacks the ISO |
 | `config/base.env` | Base ISO name, checksum and mirrors |
 | `config/packages.install` | apt packages added (missing ones are skipped and logged) |
 | `config/flatpaks.list` | Apps offered in HardPoint Setup |
@@ -118,6 +115,6 @@ New apps added to `config/packages.install` are installed by the update too.
 | `overlay/usr/lib/hardpoint/ui/` | The HardPoint apps UI (open `index.html` in a browser to preview with sample data) |
 | `tools/vm-test.py` | CI VM test |
 
-## Updating to a newer Zorin release
+## Updating the base system
 
-Change `ZORIN_ISO` and `ZORIN_SHA256` in `config/base.env` (checksums are on Zorin's mirrors in `SHA256SUMS.txt`) and push.
+Change `BASE_ISO` and `BASE_SHA256` in `config/base.env` (checksums are on the mirrors in `SHA256SUMS.txt`) and push.

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# HardPoint OS (Zorin Edition) — ISO build script
+# HardPoint OS — ISO build script
 #
-# Takes the official Zorin OS Core ISO, verifies it, unpacks the live system,
+# Takes the base ISO (config/base.env), verifies it, unpacks the live system,
 # adds HardPoint OS (branding, apps, security, dev/IT/gaming software) and packs
 # a new bootable ISO. Runs on Ubuntu 24.04 (or the GitHub Actions runner) as root.
 #
 #   sudo ./build.sh            ISO lands in out/
-#   CACHE=/path sudo ./build.sh   reuse a downloaded Zorin ISO
+#   CACHE=/path sudo ./build.sh   reuse a downloaded base ISO
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -14,9 +14,9 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$HERE/config/base.env"
 OUT="${OUT:-$HERE/out}"
 CACHE="${CACHE:-$HERE/cache}"
-WORK="${WORK:-/var/tmp/hp-zorin-work}"
+WORK="${WORK:-/var/tmp/hp-work}"
 VERSION="${HP_VERSION:-$HP_BASE_VERSION.$(date +%Y%m%d)}"
-ISO_NAME="hardpoint-os-zorin-${VERSION}-amd64.iso"
+ISO_NAME="hardpoint-os-${VERSION}-amd64.iso"
 
 log() { printf '\e[1;35m==>\e[0m %s\n' "$*"; }
 warn() { printf '\e[1;33mWARN:\e[0m %s\n' "$*" >&2; }
@@ -33,27 +33,27 @@ apt-get install -y -qq squashfs-tools xorriso rsync wget ca-certificates \
 
 # ---------------------------------------------------------------- 1. base ISO
 mkdir -p "$CACHE" "$OUT"
-BASE="$CACHE/$ZORIN_ISO"
-verify() { echo "$ZORIN_SHA256  $BASE" | sha256sum -c --status; }
+BASE="$CACHE/$BASE_ISO"
+verify() { echo "$BASE_SHA256  $BASE" | sha256sum -c --status; }
 if [[ -f $BASE ]] && verify; then
-    log "Using cached $ZORIN_ISO"
+    log "Using cached $BASE_ISO"
 else
     rm -f "$BASE"
-    for m in $ZORIN_MIRRORS; do
-        log "Downloading $ZORIN_ISO from $m"
-        if wget -q --show-progress --progress=dot:giga -O "$BASE.part" "$m/$ZORIN_ISO"; then
+    for m in $BASE_MIRRORS; do
+        log "Downloading $BASE_ISO from $m"
+        if wget -q --show-progress --progress=dot:giga -O "$BASE.part" "$m/$BASE_ISO"; then
             mv "$BASE.part" "$BASE"
             if verify; then break; fi
             # Show what the mirror itself publishes, to tell a bad mirror from a stale pin
-            wget -qO- "$m/SHA256SUMS.txt" 2>/dev/null | grep -F "$ZORIN_ISO" || true
+            wget -qO- "$m/SHA256SUMS.txt" 2>/dev/null | grep -F "$BASE_ISO" || true
             warn "Checksum mismatch from $m (got $(sha256sum "$BASE" | cut -d' ' -f1))"
             rm -f "$BASE"
         fi
         rm -f "$BASE.part"
     done
-    [[ -f $BASE ]] || die "Could not download a verified $ZORIN_ISO from any mirror."
+    [[ -f $BASE ]] || die "Could not download a verified $BASE_ISO from any mirror."
 fi
-log "Zorin ISO verified (sha256 $ZORIN_SHA256)"
+log "Base ISO verified (sha256 $BASE_SHA256)"
 
 # ---------------------------------------------------------------- 2. unpack
 cleanup() {
@@ -70,7 +70,7 @@ mount -o loop,ro "$BASE" "$WORK/mnt"
 
 mapfile -t SQUASH < <(cd "$WORK/mnt" && find casper -maxdepth 1 -name '*.squashfs' | sort)
 log "Live image layers: ${SQUASH[*]:-none}"
-[[ -f $WORK/mnt/casper/filesystem.squashfs ]] || die "casper/filesystem.squashfs not found (layout: ${SQUASH[*]}). The Zorin ISO layout changed — update build.sh."
+[[ -f $WORK/mnt/casper/filesystem.squashfs ]] || die "casper/filesystem.squashfs not found (layout: ${SQUASH[*]}). The base ISO layout changed — update build.sh."
 ((${#SQUASH[@]} == 1)) || warn "Extra squashfs layers present; only filesystem.squashfs is customised."
 
 log "Copying ISO boot files"
@@ -140,13 +140,13 @@ for f in initrd initrd.lz initrd.gz initrd.img; do [[ -f $C/$f ]] && cp "$initrd
 
 chroot "$R" dpkg-query -W --showformat='${Package} ${Version}\n' > "$C/filesystem.manifest" 2>/dev/null || true
 du -sx --block-size=1 "$R" | cut -f1 > "$C/filesystem.size"
-# Keep Zorin's list of live-only packages (removed from the installed system by the installer)
+# Keep the base image's list of live-only packages (removed from the installed system by the installer)
 
 # Boot menu + disk info
 find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null | while read -r cfg; do
     sed -i -e "s/Zorin OS [0-9.]* *\(Core\)\?/$HP_NAME/g" -e "s/Zorin OS/$HP_NAME/g" -e "s/Zorin/HardPoint/g" "$cfg"
 done
-echo "$HP_NAME $HP_BASE_VERSION ($HP_EDITION) $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
+echo "$HP_NAME $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
 if [[ -d $WORK/iso/boot/grub ]]; then
     cp "$R/usr/share/hardpoint/branding/grub.png" "$WORK/iso/boot/grub/hardpoint.png"
     grep -q hardpoint.png "$WORK/iso/boot/grub/grub.cfg" || sed -i '1i set color_normal=light-gray/black\nset menu_color_highlight=white/magenta\nif loadfont unicode ; then insmod png ; background_image /boot/grub/hardpoint.png ; fi' "$WORK/iso/boot/grub/grub.cfg"
@@ -161,9 +161,9 @@ log "System image: $(du -h "$C/filesystem.squashfs" | cut -f1)"
     ! -path './isolinux/*' -print0 | xargs -0 md5sum > md5sum.txt)
 
 rm -f "$WORK/iso/boot.catalog"
-log "Building the ISO with the same boot setup as Zorin's"
+log "Building the ISO with the same boot setup as the base image"
 mapfile -t BOOTOPTS < <(xorriso -indev "$BASE" -report_el_torito as_mkisofs 2>/dev/null | grep -v '^-V ' | xargs -n1 printf '%s\n' 2>/dev/null)
-((${#BOOTOPTS[@]} > 0)) || die "Could not read the boot layout of the Zorin ISO."
+((${#BOOTOPTS[@]} > 0)) || die "Could not read the boot layout of the base ISO."
 xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
 
 (cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
