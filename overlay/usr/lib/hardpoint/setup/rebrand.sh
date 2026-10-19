@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Run by the hardpoint-os package (and the image build). Replaces Zorin OS names and logos with HardPoint OS,
-# as Zorin's trademark policy requires for a derivative.
+# Run by the hardpoint-os package (and the image build). Replaces the base system's names and
+# logos with HardPoint OS (the upstream trademark policy requires this for a derivative).
 #
-# Every file we replace is "diverted" with dpkg-divert first, so later Zorin
+# Every file we replace is "diverted" with dpkg-divert first, so later upstream
 # package updates write their version next to ours (*.zorin) instead of
 # overwriting the HardPoint branding.
 #
@@ -33,10 +33,10 @@ OSREL=/usr/lib/os-release
 [[ -L /etc/os-release ]] || OSREL=/etc/os-release
 divert "$OSREL"
 cat > "$OSREL" <<EOF
-PRETTY_NAME="$HP_NAME $UBUNTU_VER ($HP_EDITION)"
+PRETTY_NAME="$HP_NAME $UBUNTU_VER${HP_EDITION:+ ($HP_EDITION)}"
 NAME="$HP_NAME"
 VERSION_ID="$UBUNTU_VER"
-VERSION="$UBUNTU_VER ($HP_EDITION)"
+VERSION="$UBUNTU_VER${HP_EDITION:+ ($HP_EDITION)}"
 VERSION_CODENAME=$CODENAME
 ID=hardpoint
 ID_LIKE="ubuntu debian"
@@ -76,7 +76,7 @@ if [[ -f /etc/casper.conf ]]; then
 fi
 
 # ------------------------------------------------------------ app names
-log "Renaming Zorin-branded launchers"
+log "Renaming upstream-branded launchers"
 n=0
 while IFS= read -r -d '' f; do
     grep -qE '^(Name|GenericName|Comment|X-GNOME-FullName|Keywords)(\[[^]]*\])?=.*Zorin' "$f" || continue
@@ -101,13 +101,13 @@ if [[ -d /usr/share/ubiquity-slideshow ]]; then
     cp /usr/share/hardpoint/branding/logo-glow-256.png /usr/share/ubiquity-slideshow/slides/logo.png
 fi
 
-# ------------------------------------------------------------ names inside Zorin's apps
+# ------------------------------------------------------------ names inside the base system's apps
 # Window titles, labels, extension names and descriptions live in the apps' own
 # files. Replace the visible names only:
 #  - comment lines (license and credit headers) are never changed
 #  - in .py/.js code only lines with visible text (_(), label, title, name) change
 #  - code identifiers (zorin_appearance, com.zorin.*, "Zorin"+colour theme ids) stay
-log "Renaming Zorin product names inside Zorin's apps"
+log "Renaming upstream product names inside the base system's apps"
 PRODUCTS='Appearance|Connect|Menu|Taskbar|Welcome|AppIndicators|Desktop Cube|Desktop Icons|Magic Lamp Effect|Printers|Screen Keyboard Panel Button|Spatial Window Switcher|Tiling Shell|Window Move Effect|Auto Theme|Tour|Upgrader'
 SUBST="s/Zorin OS/HardPoint OS/g
 s/Zorin ($PRODUCTS)/HardPoint \1/g
@@ -182,8 +182,30 @@ log "Renamed product names in $n files and $g resource bundles" | tee -a "$S/bui
 # Schemas may contain renamed descriptions
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null || true
 
+# ------------------------------------------------------------ last visible upstream text
+log "Renaming the remaining visible upstream text"
+# Password prompt of the (hidden) upstream upgrader
+for f in /usr/share/polkit-1/actions/com.zorin.*.policy; do
+    [[ -f $f && ! $f == *.zorin ]] || continue
+    divert "$f"
+    sed -E 's/<vendor>Zorin<\/vendor>/<vendor>HardPoint<\/vendor>/; s/Zorin OS/HardPoint OS/g; s/Zorin/HardPoint/g' "$f.zorin" > "$f"
+done
+# Icon set names shown in Appearance
+for f in /usr/share/icons/Zorin*/index.theme; do
+    [[ -f $f ]] || continue
+    grep -qE '^Name=Zorin' "$f" || { dpkg-divert --list "$f" | grep -q . || continue; }
+    divert "$f"
+    sed -E 's/^Name=Zorin ?/Name=Classic /; s/^Name=Classic $/Name=Classic/; s/^Comment=.*Zorin.*/Comment=Classic icon set/' "$f.zorin" > "$f"
+done
+# Installer: the census is removed, so its explanation goes too
+UI=/usr/share/ubiquity/gtk/stepPrepare.ui
+if [[ -f $UI ]] && grep -q 'Zorin OS developers' "$UI"; then
+    divert "$UI"
+    sed 's/The census lets the Zorin OS developers count the number of users anonymously\./HardPoint OS does not send any usage data./' "$UI.zorin" > "$UI"
+fi
+
 # ------------------------------------------------------------ logos
-log "Finding Zorin logos to replace"
+log "Finding upstream logos to replace"
 : > "$S/logo-targets.txt"
 while IFS= read -r -d '' f; do
     case "$f" in */hardpoint/*|*/slides.zorin/*|*.zorin) continue ;; esac
@@ -195,7 +217,7 @@ done < <(find /usr/share/pixmaps /usr/share/icons /usr/share/zorin* /usr/share/g
     -type f \( -iname '*zorin*logo*' -o -iname '*logo*zorin*' -o -iname 'distributor-logo*' -o -iname 'start-here*' \
     -o -iname 'zorin-menu*' -o -ipath '/usr/share/plymouth/themes/*/watermark*' -o -ipath '/usr/share/plymouth/themes/zorin*/*logo*' -o -iname 'zorin-os*' -o -iname 'zorin.*' -o -iname 'zorin-symbolic*' -o -iname 'ubuntu-logo*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0)
-# Any other icon whose name says "zorin" is a Zorin logo (menu button, about page, etc.)
+# Any other icon whose name says "zorin" is an upstream logo (menu button, about page, etc.)
 while IFS= read -r -d '' f; do
     case "$f" in */hardpoint/*|*.zorin) continue ;; esac
     grep -qxF "$f" "$S/logo-targets.txt" && continue
@@ -203,7 +225,7 @@ while IFS= read -r -d '' f; do
 done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensions -type f \
     \( -iname '*zorin*' -o -ipath '*zorin*menu*/*logo*' -o -ipath '*zorin*menu*/*icon*' \) \
     \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
-# Zorin Connect (phone link) and Zorin Appearance keep working; they get HardPoint icons
+# The phone link and Appearance apps keep working; they get HardPoint icons
 while IFS= read -r -d '' f; do
     case "$f" in *.zorin) continue ;; esac
     grep -qxF "$f" "$S/logo-targets.txt" && continue
@@ -212,7 +234,7 @@ done < <(find /usr/share/icons /usr/share/pixmaps /usr/share/gnome-shell/extensi
     \( -iname '*zorin-connect*' -o -iname '*ZorinConnect*' -o -iname 'zorin-appearance*' \) \( -iname '*.png' -o -iname '*.svg' \) -print0 2>/dev/null)
 log "$(wc -l < "$S/logo-targets.txt") logo images will be replaced"
 
-# Build report: what is still named Zorin, for checking the next build
+# Build report: upstream names still present, for checking the next build
 set +e
 {
     echo "== Installer: $INSTALLER"
@@ -223,13 +245,13 @@ set +e
     echo "== Files still showing 'Zorin Appearance' (binary or not handled)"
     grep -rlI --exclude='*.zorin' 'Zorin Appearance' /usr/share /usr/lib/python3/dist-packages /usr/bin 2>/dev/null | head -20
     grep -rl --exclude='*.zorin' 'Zorin Appearance' /usr/share /usr/lib/python3/dist-packages 2>/dev/null | grep -v '\.mo$' | head -20
-    echo "== Zorin GNOME Shell extensions"; ls -d /usr/share/gnome-shell/extensions/*zorin* 2>/dev/null
+    echo "== Upstream GNOME Shell extensions"; ls -d /usr/share/gnome-shell/extensions/*zorin* 2>/dev/null
     echo "== Menu-related settings keys"
     grep -l 'zorin' /usr/share/glib-2.0/schemas/*.xml 2>/dev/null | xargs -r grep -hoE 'name="[a-z-]*(icon|logo|button)[a-z-]*"' | sort -u
 } >> "$S/build-report.txt"
 set -e
 
-# Hide Zorin's own boot splash so ours is the only choice
+# Hide the upstream boot splash so ours is the only choice
 for t in /usr/share/plymouth/themes/zorin*; do
     [[ -d $t ]] && log "Keeping $(basename "$t") installed but not default"
 done

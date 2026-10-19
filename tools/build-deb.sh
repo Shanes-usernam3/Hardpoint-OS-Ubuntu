@@ -102,7 +102,7 @@ esac
 exit 0
 SH
 chmod 755 "$P/DEBIAN/postinst"
-# Rebuild the HardPoint themes when Zorin updates its themes
+# Rebuild the HardPoint themes when the base themes they are made from are updated
 printf 'interest-noawait /usr/share/themes/ZorinBlue-Dark\ninterest-noawait /usr/share/themes/ZorinBlue-Light\n' > "$P/DEBIAN/triggers"
 
 # Permissions: root-owned, scripts executable

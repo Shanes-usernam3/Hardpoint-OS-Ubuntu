@@ -39,7 +39,7 @@ chmod 755 "$OUT/get-hardpoint-iso.sh"
 
 VER="${TAG#v}"
 cat > "$OUT/notes.md" <<EOF
-**HardPoint OS $VER — Zorin Edition** (based on Zorin OS 18 Core / Ubuntu 24.04 LTS). Built by HardPoint Networks.
+**HardPoint OS $VER** (based on Ubuntu 24.04 LTS). Built by HardPoint Networks.
 
 Byte-style HardPoint Dark theme, HardPoint apps (Setup, Updates, Accounts, Security, System), Microsoft Entra ID sign-in + Intune Company Portal, dev / IT / gaming tools, Steam, automatic snapshot before every update, and updates delivered without reinstalling.
 

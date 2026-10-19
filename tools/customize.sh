@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Runs INSIDE the unpacked Zorin live system (chroot) during the build.
+# Runs INSIDE the unpacked live system (chroot) during the build.
 # Adds software, HardPoint apps, security defaults and branding.
 set -euo pipefail
 S=/tmp/hp
@@ -138,12 +138,12 @@ dpkg -s hardpoint-os >/dev/null 2>&1 || { warn "hardpoint-os did not install"; e
 # Flathub for the apps HardPoint Setup offers
 flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || warn "Flathub remote not added"
 
-# Zorin's anonymous install census pings Zorin's servers; not wanted in a derivative
+# The base system's anonymous install census pings upstream servers; not wanted here
 for p in zorin-os-census zorin-census; do
     if dpkg -s "$p" >/dev/null 2>&1; then apt-get purge -y -q "$p" >/dev/null && log "Removed $p"; fi
 done
 
-# Where can "Zorin" still be seen? (goes into the build report)
+# Where can upstream branding still be seen? (goes into the build report)
 bash /usr/lib/hardpoint/setup/audit-branding.sh >> "$S/build-report.txt" 2>&1 || true
 
 # ------------------------------------------------------------ clean up

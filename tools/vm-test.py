@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HardPoint OS (Zorin Edition) VM test — runs in GitHub Actions after each build.
+"""HardPoint OS VM test — runs in GitHub Actions after each build.
 
 Phase 1  Live session: boot the ISO, screenshot the desktop, open HardPoint
          Setup and Updates, sign out to show the themed login screen.
@@ -275,6 +275,6 @@ if installed:
         vm.kill()
 
 httpd.shutdown()
-(OUT / "summary.md").write_text("# HardPoint OS (Zorin Edition) VM test\n\n" + "\n".join(summary) + "\n\n"
+(OUT / "summary.md").write_text("# HardPoint OS VM test\n\n" + "\n".join(summary) + "\n\n"
                                 + "Screenshots: " + ", ".join(sorted(p.name for p in OUT.glob("*.png"))) + "\n")
 print((OUT / "summary.md").read_text())

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build the HardPoint desktop themes from Zorin's (GPL-2) themes, recoloured to Byte.
+"""Build the HardPoint desktop themes from the base system's (GPL-2) themes, recoloured to Byte.
 
-    make-theme.py <zorin-theme-dir> <out-dir> dark|light
+    make-theme.py <base-theme-dir> <out-dir> dark|light
 
-HardPoint-Dark  (from ZorinBlue-Dark):  navy glass, Byte cyan highlights, soft white text,
+HardPoint-Dark  (from the dark blue base theme):  navy glass, Byte cyan highlights, soft white text,
                                        pink for errors.
-HardPoint-Light (from ZorinBlue-Light): clean light greys, Byte violet highlights, navy text.
+HardPoint-Light (from the light blue base theme): clean light greys, Byte violet highlights, navy text.
 
 Every colour in the CSS / SVG / gtkrc / XPM files and every PNG asset is remapped,
 so the GTK apps, the menu, panel, pop-ups and the login/lock UI all match.
@@ -45,7 +45,7 @@ def rgb(h, l, s):
 
 
 def remap(c, fg=False):
-    """Map one Zorin colour (r,g,b) to its HardPoint colour."""
+    """Map one base-theme colour (r,g,b) to its HardPoint colour."""
     key = "%02x%02x%02x" % c
     table = EXACT_FG if fg else EXACT_BG
     if key in table:
@@ -58,12 +58,12 @@ def remap(c, fg=False):
         return c
     if deg < 15 or deg > 345:          # reds -> Byte pink
         return rgb(335 / 360, l, s)
-    if 135 <= deg < 180 and s > 0.4:   # Zorin's green (checkboxes, success) -> Byte cyan / violet
+    if 135 <= deg < 180 and s > 0.4:   # base green (checkboxes, success) -> Byte cyan / violet
         return rgb(172 / 360, l, s) if MODE == "dark" else rgb(242 / 360, min(0.68, l), min(1, s))
     if not 180 <= deg <= 222:          # oranges, yellows: unchanged
         return c
     if MODE == "dark":
-        if l > 0.55 and s > 0.45:      # Zorin's pale blue accent family
+        if l > 0.55 and s > 0.45:      # base pale blue accent family
             return rgb(235 / 360, l, 0.6) if fg else rgb(172 / 360, l, min(1, s * 0.95))
         if l < 0.35:                   # blue-grey backgrounds -> navy
             return rgb(233 / 360, l * 0.92, min(0.45, 0.12 + s * 1.5))
@@ -180,7 +180,7 @@ def main():
     if idx.exists():
         t = idx.read_text()
         t = re.sub(r"^Name=.*$", f"Name={NAME}", t, flags=re.M)
-        t = re.sub(r"^Comment=.*$", f"Comment=HardPoint OS {MODE} theme (Byte style), based on Zorin OS themes (GPL-2)", t, flags=re.M)
+        t = re.sub(r"^Comment=.*$", f"Comment=HardPoint OS {MODE} theme (Byte style)", t, flags=re.M)
         t = t.replace(f"GtkTheme={OLD}", f"GtkTheme={NAME}").replace(f"MetacityTheme={OLD}", f"MetacityTheme={NAME}")
         t = re.sub(r"^IconTheme=.*$", "IconTheme=" + ("Papirus-Dark" if MODE == "dark" else "Papirus"), t, flags=re.M)
         idx.write_text(t)

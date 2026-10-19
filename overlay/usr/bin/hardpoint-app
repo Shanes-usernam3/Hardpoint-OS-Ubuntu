@@ -367,7 +367,7 @@ class App(Gtk.Window):
                 sh("gsettings", "set", "org.gnome.desktop.interface", "color-scheme", scheme)
                 dark = args[0] == "dark"
                 want = "HardPoint-Dark" if dark else "HardPoint-Light"
-                if not Path("/usr/share/themes", want).is_dir():  # older system: keep Zorin's family
+                if not Path("/usr/share/themes", want).is_dir():  # older system: keep the current theme family
                     gtk = sh("gsettings", "get", "org.gnome.desktop.interface", "gtk-theme")[1].strip("'")
                     base = gtk[:-5] if gtk.endswith("-Dark") else (gtk[:-6] if gtk.endswith("-Light") else gtk)
                     want = base + ("-Dark" if dark else "-Light")

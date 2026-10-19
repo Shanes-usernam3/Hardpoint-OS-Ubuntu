@@ -142,6 +142,6 @@ else
     [[ "$(readlink -f "$T")" == "$SRC" ]] || T="$SRC"
     dpkg-divert --list "$T" | grep -q . || dpkg-divert --quiet --local --rename --divert "$T.zorin" --add "$T"
     cp "$OUTDIR/gdm-theme.gresource" "$T"
-    log "Login screen theme installed over $T (original kept as .zorin)"
+    log "Login screen theme installed over $T (original kept beside it)"
 fi
 

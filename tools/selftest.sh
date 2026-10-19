@@ -104,7 +104,7 @@ echo "      Flatpak apps: $(flatpak list --app --columns=name 2>/dev/null | tr '
 
 sec "Branding"
 z="$(grep -lE '^Name=.*Zorin' /usr/share/applications/*.desktop 2>/dev/null | xargs -r grep -LE '^(NoDisplay|Hidden)=true' | xargs -r -n1 basename | tr '\n' ' ')"
-[[ -z $z ]] && ok "No visible app named Zorin" || wn "Apps still named Zorin: $z"
+[[ -z $z ]] && ok "No leftover upstream app names" || wn "Apps with upstream names: $z"
 
 printf '\n%s passed, %s warnings, %s failed\n' "$pass" "$warn" "$fail" | tee -a "$OUT"
 echo "Report saved to $OUT"
