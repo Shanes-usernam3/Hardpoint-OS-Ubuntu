@@ -1,0 +1,47 @@
+name: Inspect base ISO (HardPoint OS 2)
+
+# Branch-only helper: pulls files out of the Kubuntu ISO so the build can target its exact layout.
+on:
+  push:
+    branches: [hardpoint-2]
+    paths: ['.github/workflows/inspect-base.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Get the ISO and pull out files
+        run: |
+          set +e
+          sudo apt-get install -y -qq squashfs-tools libarchive-tools >/dev/null
+          mkdir -p "$HOME/w/ref" && cd "$HOME/w"
+          ISO=kubuntu-26.04-desktop-amd64.iso
+          curl -fsSL -o "$ISO" "https://cdimage.ubuntu.com/kubuntu/releases/26.04.1/release/$ISO" || curl -fsSL -o "$ISO" "https://cdimage.ubuntu.com/kubuntu/releases/26.04/release/$ISO"
+          bsdtar -xf "$ISO" casper/filesystem.squashfs
+          SQ=casper/filesystem.squashfs
+          sudo unsquashfs -lls "$SQ" | awk '{print $1, $6, $7, $8}' | grep -E ' squashfs-root/[^/]+( |$)' > ref/top-level.txt
+          sudo unsquashfs -lls "$SQ" | grep -E 'squashfs-root/boot/' > ref/boot.txt
+          sudo unsquashfs -d x -f "$SQ" 'var/lib/dpkg/info' 'usr/share/initramfs-tools/scripts/casper-bottom' 'etc/sddm.conf.d' 'etc/sddm.conf' \
+            'usr/share/wayland-sessions' 'usr/share/xsessions' 'etc/os-release' 'usr/lib/os-release' 'etc/apt/sources.list.d' 'lib/systemd/system' 'usr/lib/systemd/system' 'usr/lib/systemd/user' >/dev/null
+          sudo chown -R "$USER" x
+          for l in x/var/lib/dpkg/info/*prompt*.list x/var/lib/dpkg/info/*kubuntu*.list x/var/lib/dpkg/info/casper.list; do
+            [ -f "$l" ] && cp "$l" ref/
+          done
+          PROMPT_FILES=$(cat x/var/lib/dpkg/info/*installer-prompt*.list 2>/dev/null | sed 's|^/||' | grep -v '/$')
+          for f in $PROMPT_FILES; do sudo unsquashfs -d p -f "$SQ" "$f" >/dev/null 2>&1; done
+          sudo chown -R "$USER" p 2>/dev/null
+          mkdir -p ref/prompt && cp -r p/. ref/prompt/ 2>/dev/null
+          find ref/prompt -type f -size +512k -delete
+          cp -r x/usr/share/initramfs-tools/scripts/casper-bottom ref/ 2>/dev/null
+          cp -r x/etc/sddm.conf.d x/usr/share/wayland-sessions x/etc/apt/sources.list.d ref/ 2>/dev/null
+          cp x/usr/lib/os-release ref/ 2>/dev/null
+          grep -l -i -r "prompt\|kubuntu" x/usr/lib/systemd x/lib/systemd 2>/dev/null > ref/systemd-hits.txt
+          ls x/var/lib/dpkg/info/*.list | sed 's|.*/||; s|\.list$||' > ref/packages.txt
+          find ref -xtype l -delete
+          cd ref && git init -q -b kubuntu-ref2 && git config user.name "HardPoint CI" && git config user.email "ci@hardpoint.invalid"
+          git add -A && git commit -qm ref && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kubuntu-ref2 || echo "::warning::push failed"
