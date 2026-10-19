@@ -1,0 +1,70 @@
+name: Inspect base ISO (HardPoint OS 2)
+
+# Branch-only helper: pulls the Kubuntu ISO apart so the build can target its exact layout.
+on:
+  push:
+    branches: [hardpoint-2]
+    paths: ['.github/workflows/inspect-base.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Download Kubuntu 26.04 ISO
+        run: |
+          set -x
+          sudo apt-get install -y -qq squashfs-tools libarchive-tools xorriso initramfs-tools-core >/dev/null
+          mkdir -p /mnt/w && sudo chown "$USER" /mnt/w && cd /mnt/w
+          for base in https://cdimage.ubuntu.com/kubuntu/releases/26.04.1/release https://cdimage.ubuntu.com/kubuntu/releases/26.04/release; do
+            curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS && { echo "$base" > base.txt; break; }
+          done
+          cat SHA256SUMS
+          ISO=$(grep -oE 'kubuntu-[0-9.]+-desktop-amd64\.iso' SHA256SUMS | head -1)
+          echo "$ISO" > iso.txt
+          curl -fL --retry 3 -o "$ISO" "$(cat base.txt)/$ISO"
+          grep " \*\?$ISO\$" SHA256SUMS | sed 's/ \*/  /' | sha256sum -c
+      - name: Extract layout and key files
+        run: |
+          cd /mnt/w
+          ISO=$(cat iso.txt)
+          mkdir -p ref
+          { echo "base: $(cat base.txt)"; echo "iso: $ISO"; grep "$ISO" SHA256SUMS; } > ref/iso-info.txt
+          bsdtar -tf "$ISO" > ref/iso-files.txt
+          xorriso -indev "$ISO" -report_el_torito as_mkisofs > ref/boot-options.txt 2>&1 || true
+          xorriso -indev "$ISO" -report_system_area plain > ref/system-area.txt 2>&1 || true
+          mkdir -p iso && bsdtar -xf "$ISO" -C iso boot casper/*.manifest* casper/*.size casper/*initrd* casper/*.yaml casper/install-sources.yaml 2>/dev/null || bsdtar -xf "$ISO" -C iso boot casper
+          find iso/boot -name '*.cfg' -exec sh -c 'echo "== $1"; cat "$1"' _ {} \; > ref/grub-cfg.txt
+          ls -la iso/casper > ref/casper-ls.txt 2>&1 || true
+          for f in iso/casper/*initrd*; do echo "== $f"; lsinitramfs "$f" 2>/dev/null | grep -E 'plymouth' | head -40; done > ref/initrd-plymouth.txt
+          cp iso/casper/*.manifest* ref/ 2>/dev/null || true
+          ls iso/casper/*.squashfs 2>/dev/null; bsdtar -tf "$ISO" | grep squashfs > ref/squashfs-list.txt
+          # main system layer
+          SQ=$(bsdtar -tf "$ISO" | grep -E 'casper/.*\.squashfs$' | grep -vE 'live|installer' | head -1)
+          [[ -z $SQ ]] && SQ=$(bsdtar -tf "$ISO" | grep -E 'casper/.*\.squashfs$' | head -1)
+          echo "main layer: $SQ" >> ref/iso-info.txt
+          bsdtar -xf "$ISO" -C iso "$SQ"
+          sudo unsquashfs -d root -f "iso/$SQ" \
+            'etc/os-release' 'usr/lib/os-release' 'etc/lsb-release' 'etc/sddm.conf' 'etc/sddm.conf.d' 'etc/plymouth' 'etc/xdg/kdeglobals' 'etc/xdg/plasmashellrc' \
+            'usr/share/plasma/look-and-feel' 'usr/share/plasma/layout-templates' 'usr/share/plasma/shells/org.kde.plasma.desktop/contents/layout.js' \
+            'usr/share/kubuntu-default-settings' 'etc/calamares' 'usr/share/calamares' 'usr/lib/calamares/modules' \
+            'usr/share/plymouth/themes' 'usr/share/sddm/themes' 'usr/share/wallpapers' 'usr/share/color-schemes' 'etc/xdg/autostart' \
+            'usr/share/applications' 'usr/share/desktop-directories' 'etc/skel' 'usr/share/kservices6' 'usr/lib/x86_64-linux-gnu/qt6/plugins/plasma/kcms' >/dev/null || true
+          sudo chown -R "$USER" root
+          # keep text only, drop big binaries
+          find root -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.webp' -o -name '*.so' -o -name '*.svgz' -o -name '*.ttf' \) -size +64k -delete
+          cp -r root ref/root
+          find root -name '*.desktop' -path '*applications*' | sed 's|root/||' > ref/applications.txt
+          ls ref/root/usr/share/plasma/look-and-feel ref/root/usr/share/sddm/themes ref/root/usr/share/plymouth/themes > ref/themes-ls.txt 2>&1
+          sudo unsquashfs -l "iso/$SQ" | grep -E 'calamares|ubiquity|subiquity|desktop-bootstrap|ubuntu-desktop-installer' | head -50 > ref/installer-paths.txt || true
+          du -sh ref
+      - name: Push to the kubuntu-ref branch
+        run: |
+          cd /mnt/w/ref && git init -q -b kubuntu-ref
+          git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
+          git add -A && git commit -qm "Kubuntu 26.04 reference"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kubuntu-ref
