@@ -136,6 +136,9 @@ C="$WORK/iso/casper"
 kern="$(ls -1 "$R"/boot/vmlinuz-* 2>/dev/null | sort -V | tail -1)"
 initrd="$(ls -1 "$R"/boot/initrd.img-* 2>/dev/null | sort -V | tail -1)"
 [[ -f $kern && -f $initrd ]] || die "No kernel/initrd found in the customised system."
+# The live boot image (boots into the live session by default) made by customize.sh
+[[ -f $WORK/stage/live-initrd ]] && initrd="$WORK/stage/live-initrd"
+log "Live boot image: $initrd"
 # Replace every kernel and initrd the boot menus point at (names differ between base images,
 # e.g. casper/vmlinuz + casper/initrd, or hwe-* variants). The initrd carries the boot splash,
 # so a missed one shows the upstream logo when booting from a USB stick.
