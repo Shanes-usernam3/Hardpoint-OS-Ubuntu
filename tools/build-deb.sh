@@ -56,6 +56,7 @@ cat > "$W/metadata.json" <<'JSON'
 JSON
 python3 "$HERE/tools/make-colors.py" "$P/usr/share/color-schemes" >/dev/null
 L="$P/usr/share/plasma/look-and-feel/com.hardpointnetworks.desktop/contents"
+mkdir -p "$L/splash/images"
 cp "$B/logo-256.png" "$L/splash/images/logo.png"
 mkdir -p "$L/previews"
 python3 - "$B" "$L/previews" <<'PY2'
