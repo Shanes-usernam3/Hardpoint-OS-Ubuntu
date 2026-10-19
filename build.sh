@@ -175,7 +175,7 @@ done
 # A rebuilt initrd carries a new uuid, so the ISO's copy must follow (else: USB boot ends in "(initramfs)").
 U="$WORK/uuid"; rm -rf "$U"; mkdir -p "$U"
 unmkinitramfs "$initrd" "$U" >/dev/null 2>&1 || true
-uuid="$(cat "$U"/conf/uuid.conf "$U"/main/conf/uuid.conf 2>/dev/null | head -1)"
+uuid="$(cat "$U"/conf/uuid.conf "$U"/main/conf/uuid.conf 2>/dev/null | head -1 || true)"
 if [[ -n $uuid ]]; then
     for d in "$WORK"/iso/.disk/casper-uuid-*; do
         [[ -e $d ]] || continue
