@@ -148,6 +148,29 @@ flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/
 # Where can upstream branding still be seen? (goes into the build report)
 bash /usr/lib/hardpoint/setup/audit-branding.sh >> "$S/build-report.txt" 2>&1 || true
 
+# ------------------------------------------------------------ check the result
+# Stop the build (instead of shipping the plain base system) if HardPoint isn't really applied
+{
+    echo "== Result check"
+    grep -h PRETTY_NAME /etc/os-release
+    echo "hardpoint-os: $(dpkg-query -W -f='${Version} ${Status}' hardpoint-os 2>&1)"
+    echo "diversions: $(dpkg-divert --list | grep -c upstream)"
+    grep -hs LookAndFeelPackage /usr/share/kubuntu-default-settings/kf5-settings/kdeglobals /etc/xdg/kdeglobals
+    grep -hs '^branding:' /etc/calamares/settings.conf
+    grep -hs '^Theme=' /etc/plymouth/plymouthd.conf
+} >> "$S/build-report.txt" 2>&1
+fail=()
+grep -q 'HardPoint' /etc/os-release || fail+=("os-release")
+grep -qs 'com.hardpointnetworks.desktop' /etc/xdg/kdeglobals || fail+=("desktop defaults")
+[[ ! -f /etc/calamares/settings.conf ]] || grep -q '^branding: hardpoint' /etc/calamares/settings.conf || fail+=("installer branding")
+grep -qs '^Theme=hardpoint' /etc/plymouth/plymouthd.conf || fail+=("boot splash")
+if ((${#fail[@]})); then
+    warn "HardPoint was not fully applied: ${fail[*]} — re-running the setup to show the error"
+    HP_SKIP_INITRAMFS=1 bash -x /usr/lib/hardpoint/setup/apply.sh 2>&1 | tail -80 | tee -a "$S/build-report.txt"
+    echo "BUILD STOPPED: not applied: ${fail[*]}" >> "$S/build-report.txt"
+    exit 1
+fi
+
 # ------------------------------------------------------------ boot image
 # The live boot uses the initrd built here (it carries the HardPoint boot splash)
 KVER="$(ls /lib/modules | sort -V | tail -1)"
