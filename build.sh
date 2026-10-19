@@ -154,6 +154,21 @@ for ref in "${BOOTREFS[@]}"; do
     esac
 done
 ((replaced >= 2)) || die "Could not find the live kernel/initrd to replace (boot menu refs: ${BOOTREFS[*]:-none})."
+# casper only accepts a boot medium whose .disk/casper-uuid-* matches the uuid inside the initrd.
+# A rebuilt initrd carries a new uuid, so the ISO's copy must follow (else: USB boot ends in "(initramfs)").
+U="$WORK/uuid"; rm -rf "$U"; mkdir -p "$U"
+unmkinitramfs "$initrd" "$U" >/dev/null 2>&1 || true
+uuid="$(cat "$U"/conf/uuid.conf "$U"/main/conf/uuid.conf 2>/dev/null | head -1)"
+if [[ -n $uuid ]]; then
+    for d in "$WORK"/iso/.disk/casper-uuid-*; do
+        [[ -e $d ]] || continue
+        log "Live medium id $(basename "$d"): $(cat "$d") -> $uuid"
+        echo "$uuid" > "$d"
+    done
+else
+    warn "No casper uuid in the new initrd; leaving .disk/casper-uuid-* as is"
+fi
+rm -rf "$U"
 
 chroot "$R" dpkg-query -W --showformat='${Package} ${Version}\n' > "$C/filesystem.manifest" 2>/dev/null || true
 du -sx --block-size=1 "$R" | cut -f1 > "$C/filesystem.size"
@@ -193,12 +208,14 @@ cp "$WORK/stage/build-report.txt" "$OUT/build-report.txt" 2>/dev/null || true
     fdisk -l "$OUT/$ISO_NAME" 2>/dev/null
     echo "== Boot options used"; printf '%s\n' "${BOOTOPTS[@]}"
     echo "== Live kernel/initrd replaced"; printf '%s\n' "${BOOTREFS[@]}"
+    echo "== Live medium id"; for d in "$WORK"/iso/.disk/casper-uuid-*; do [[ -e $d ]] && echo "$(basename "$d"): $(cat "$d") (initrd: ${uuid:-none})"; done
     echo "== Boot splash inside each live initrd"
     for f in "$WORK"/iso/casper/*initrd*; do
         [[ -f $f ]] || continue
         printf '%s: ' "$(basename "$f")"
         if command -v lsinitramfs >/dev/null; then
             lsinitramfs "$f" 2>/dev/null | grep -oE 'plymouth/themes/[^/]+/[^/]+\.plymouth$|etc/plymouth/plymouthd.conf' | sort -u | tr '\n' ' '
+            printf '| usb drivers: %s ' "$(lsinitramfs "$f" 2>/dev/null | grep -oE '(usb-storage|uas|xhci-pci|sd_mod|isofs)\.ko[^/]*$' | sort -u | tr '\n' ' ')"
         fi
         echo
     done
