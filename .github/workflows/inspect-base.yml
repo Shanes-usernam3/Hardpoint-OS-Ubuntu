@@ -4,7 +4,7 @@ name: Inspect base ISO (HardPoint OS 2)
 on:
   push:
     branches: [hardpoint-2]
-    paths: ['.github/workflows/inspect-base.yml']  # rerun: 5
+    paths: ['.github/workflows/inspect-base.yml']  # rerun: 6
   workflow_dispatch:
 
 permissions:
@@ -51,7 +51,7 @@ jobs:
           SQ=$(bsdtar -tf "$ISO" | grep -E 'casper/.*\.squashfs$' | grep -vE 'live|installer' | head -1)
           [[ -z $SQ ]] && SQ=$(bsdtar -tf "$ISO" | grep -E 'casper/.*\.squashfs$' | head -1)
           echo "main layer: $SQ" >> ref/iso-info.txt
-          bsdtar -xf "$ISO" -C iso "$SQ"
+          chmod -R u+w iso; bsdtar -xf "$ISO" -C iso "$SQ"
           sudo unsquashfs -d root -f "iso/$SQ" \
             'etc/os-release' 'usr/lib/os-release' 'etc/lsb-release' 'etc/sddm.conf' 'etc/sddm.conf.d' 'etc/plymouth' 'etc/xdg/kdeglobals' 'etc/xdg/plasmashellrc' \
             'usr/share/plasma/look-and-feel' 'usr/share/plasma/layout-templates' 'usr/share/plasma/shells/org.kde.plasma.desktop/contents/layout.js' \
