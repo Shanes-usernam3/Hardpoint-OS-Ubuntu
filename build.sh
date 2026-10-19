@@ -213,7 +213,8 @@ rm -f "$WORK/iso/boot.catalog"
 log "Building the ISO with the same boot setup as the base image"
 mapfile -t BOOTOPTS < <(xorriso -indev "$BASE" -report_el_torito as_mkisofs 2>/dev/null | grep -v '^-V ' | xargs -n1 printf '%s\n' 2>/dev/null)
 ((${#BOOTOPTS[@]} > 0)) || die "Could not read the boot layout of the base ISO."
-xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
+# -iso-level 3: the system image is over 4 GB (needs multi-extent files)
+xorriso -as mkisofs -iso-level 3 -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${BOOTOPTS[@]}" "$WORK/iso"
 
 (cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
 # How the ISO boots from a USB stick (Rufus DD mode / dd / Etcher): hybrid MBR + GPT + EFI partition
