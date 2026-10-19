@@ -1,0 +1,5 @@
+total 109764
+dr-xr-xr-x 2 runner runner     4096 Apr 23 01:04 .
+drwxr-xr-x 4 runner runner     4096 Oct 19 04:53 ..
+-r--r--r-- 1 runner runner 95111628 Apr 23 01:04 initrd
+-r--r--r-- 1 runner runner 17275272 Apr 23 01:04 vmlinuz

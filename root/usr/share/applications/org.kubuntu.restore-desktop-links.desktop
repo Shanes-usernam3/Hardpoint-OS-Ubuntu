@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Restore desktop links
+Comment=Re-create Kubuntu's default desktop links
+Keywords=System;Web;Link;Links;
+Exec=kubuntu-restore-desktop-links
+Terminal=false
+Type=Application
+Categories=System;
+Icon=internet-web-browser-symbolic

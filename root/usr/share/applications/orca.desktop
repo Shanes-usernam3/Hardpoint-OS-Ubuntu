@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Orca
+Exec=orca
+Icon=orca
+NoDisplay=true
+X-Ubuntu-Gettext-Domain=orca

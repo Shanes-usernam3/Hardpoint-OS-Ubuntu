@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Additional Drivers
+GenericName=Additional Drivers
+Comment=Configure third-party and proprietary drivers
+Exec=lxqt-sudo /usr/bin/software-properties-qt --open-tab=4
+Icon=jockey
+OnlyShowIn=LXQt;
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;System;
+Keywords=Drivers;
+X-Ubuntu-Gettext-Domain=software-properties

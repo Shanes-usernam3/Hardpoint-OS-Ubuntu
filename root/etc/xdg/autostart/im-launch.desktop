@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=im-launch
+Exec=/usr/bin/true
+#TryExec=im-launch
+Type=Application
+NoDisplay=true
+X-Ubuntu-Gettext-Domain=im-config

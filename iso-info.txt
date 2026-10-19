@@ -1,0 +1,4 @@
+base: https://cdimage.ubuntu.com/kubuntu/releases/26.04.1/release
+iso: kubuntu-26.04-desktop-amd64.iso
+95ce9cf68f13015b9a88bd1ef86fcf7eda77c99979fda48c69e28aa0a84f88ac *kubuntu-26.04-desktop-amd64.iso
+main layer: casper/filesystem.squashfs

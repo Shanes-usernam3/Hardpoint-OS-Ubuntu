@@ -1,0 +1,13 @@
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Enabled
+State=AAAA/wAAAAD9AAAAAAAAA1gAAAHCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAAAP////8AAAAAAAAAAA==
+
+[Desktop Entry]
+DefaultProfile=kubuntu.profile
+
+[Favorite Profiles]
+Favorites=kubuntu.profile;kubuntu-black.profile
+

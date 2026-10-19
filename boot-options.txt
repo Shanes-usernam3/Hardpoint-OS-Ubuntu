@@ -1,0 +1,33 @@
+xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+
+xorriso : NOTE : Loading ISO image tree from LBA 0
+xorriso : UPDATE :     757 nodes read in 1 seconds
+libisofs: NOTE : Found hidden El-Torito image for EFI.
+libisofs: NOTE : EFI image start and size: 2472283 * 2048 , 10296 * 512
+xorriso : NOTE : Detected El-Torito boot information which currently is set to be discarded
+Drive current: -indev 'kubuntu-26.04-desktop-amd64.iso'
+Media current: stdio file, overwriteable
+Media status : is written , is appendable
+Boot record  : El Torito , MBR protective-msdos-label grub2-mbr cyl-align-off GPT
+Media summary: 1 session, 2475023 data blocks, 4834m data, 81.0g free
+Volume id    : 'Kubuntu 26.04 amd64'
+-V 'Kubuntu 26.04 amd64'
+--modification-date='2026042301043800'
+--grub2-mbr --interval:local_fs:0s-15s:zero_mbrpt,zero_gpt:'kubuntu-26.04-desktop-amd64.iso'
+--protective-msdos-label
+-partition_cyl_align off
+-partition_offset 16
+--mbr-force-bootable
+-append_partition 2 28732ac11ff8d211ba4b00a0c93ec93b --interval:local_fs:9889132d-9899427d::'kubuntu-26.04-desktop-amd64.iso'
+-appended_part_as_gpt
+-iso_mbr_part_type a2a0d0ebe5b9334487c068b6b72699c7
+-c '/boot.catalog'
+-b '/boot/grub/i386-pc/eltorito.img'
+-no-emul-boot
+-boot-load-size 4
+-boot-info-table
+--grub2-boot-info
+-eltorito-alt-boot
+-e '--interval:appended_partition_2_start_2472283s_size_10296d:all::'
+-no-emul-boot
+-boot-load-size 10296

@@ -1,0 +1,46 @@
+++ cat iso.txt
++ ISO=kubuntu-26.04-desktop-amd64.iso
++ mkdir -p ref
+++ cat base.txt
++ echo 'base: https://cdimage.ubuntu.com/kubuntu/releases/26.04.1/release'
++ echo 'iso: kubuntu-26.04-desktop-amd64.iso'
++ grep kubuntu-26.04-desktop-amd64.iso SHA256SUMS
++ bsdtar -tf kubuntu-26.04-desktop-amd64.iso
++ xorriso -indev kubuntu-26.04-desktop-amd64.iso -report_el_torito as_mkisofs
++ xorriso -indev kubuntu-26.04-desktop-amd64.iso -report_system_area plain
++ mkdir -p iso
++ bsdtar -xf kubuntu-26.04-desktop-amd64.iso -C iso --exclude '*.squashfs' boot casper
++ find iso/boot -name '*.cfg' -exec sh -c 'echo "== $1"; cat "$1"' _ '{}' ';'
++ ls -la iso/casper
++ for f in iso/casper/*initrd*
++ echo '== iso/casper/initrd'
++ lsinitramfs iso/casper/initrd
++ grep -E plymouth
++ head -40
++ cp 'iso/casper/*.manifest*' ref/
++ true
++ ls 'iso/casper/*.squashfs'
++ bsdtar -tf kubuntu-26.04-desktop-amd64.iso
++ grep squashfs
+++ bsdtar -tf kubuntu-26.04-desktop-amd64.iso
+++ grep -E 'casper/.*\.squashfs$'
+++ grep -vE 'live|installer'
+++ head -1
++ SQ=casper/filesystem.squashfs
++ [[ -z casper/filesystem.squashfs ]]
++ echo 'main layer: casper/filesystem.squashfs'
++ chmod -R u+w iso
++ bsdtar -xf kubuntu-26.04-desktop-amd64.iso -C iso casper/filesystem.squashfs
++ sudo unsquashfs -d root -f iso/casper/filesystem.squashfs etc/os-release usr/lib/os-release etc/lsb-release etc/sddm.conf etc/sddm.conf.d etc/plymouth etc/xdg/kdeglobals etc/xdg/plasmashellrc usr/share/plasma/look-and-feel usr/share/plasma/layout-templates usr/share/plasma/shells/org.kde.plasma.desktop/contents/layout.js usr/share/kubuntu-default-settings etc/calamares usr/share/calamares usr/lib/calamares/modules usr/share/plymouth/themes usr/share/sddm/themes usr/share/wallpapers usr/share/color-schemes etc/xdg/autostart usr/share/applications usr/share/desktop-directories etc/skel usr/share/kservices6 usr/lib/x86_64-linux-gnu/qt6/plugins/plasma/kcms
++ sudo chown -R runner root
++ find root -type f '(' -name '*.png' -o -name '*.jpg' -o -name '*.webp' -o -name '*.so' -o -name '*.svgz' -o -name '*.ttf' ')' -size +64k -delete
++ cp -r root ref/root
++ find root -name '*.desktop' -path '*applications*'
++ sed 's|root/||'
++ ls ref/root/usr/share/plasma/look-and-feel ref/root/usr/share/sddm/themes ref/root/usr/share/plymouth/themes
++ sudo unsquashfs -l iso/casper/filesystem.squashfs
++ grep -E 'calamares|ubiquity|subiquity|desktop-bootstrap|ubuntu-desktop-installer'
++ head -50
+grep: write error: Broken pipe
++ du -sh ref
+17M	ref
