@@ -197,12 +197,36 @@ for f in /usr/share/icons/Zorin*/index.theme; do
     divert "$f"
     sed -E 's/^Name=Zorin ?/Name=Classic /; s/^Name=Classic $/Name=Classic/; s/^Comment=.*Zorin.*/Comment=Classic icon set/' "$f.zorin" > "$f"
 done
-# Installer: the census is removed, so its explanation goes too
-UI=/usr/share/ubiquity/gtk/stepPrepare.ui
-if [[ -f $UI ]] && grep -q 'Zorin OS developers' "$UI"; then
+# Installer: the census is removed, so its checkbox and text go too (hidden, never shown)
+for UI in /usr/share/ubiquity/gtk/*.ui; do
+    [[ -f $UI && ! $UI == *.zorin ]] || continue
+    src="$UI"; dpkg-divert --list "$UI" | grep -q . && src="$UI.zorin"
+    grep -qiE 'census|Zorin' "$src" || continue
     divert "$UI"
-    sed 's/The census lets the Zorin OS developers count the number of users anonymously\./HardPoint OS does not send any usage data./' "$UI.zorin" > "$UI"
-fi
+    python3 - "$UI.zorin" "$UI" <<'PY'
+import re, sys
+import xml.etree.ElementTree as ET
+src, dst = sys.argv[1], sys.argv[2]
+tree = ET.parse(src)
+root = tree.getroot()
+def set_prop(obj, name, value):
+    for p in obj.findall("property"):
+        if p.get("name") == name:
+            p.text = value
+            return
+    e = ET.SubElement(obj, "property", {"name": name}); e.text = value
+for obj in root.iter("object"):
+    oid = obj.get("id", "")
+    texts = " ".join((p.text or "") for p in obj.findall("property") if p.get("name") in ("label", "tooltip_text", "tooltip_markup"))
+    if re.search("census", oid + " " + texts, re.I):
+        set_prop(obj, "visible", "False")
+        set_prop(obj, "no_show_all", "True")
+for p in root.iter("property"):
+    if p.text and "Zorin" in p.text:
+        p.text = re.sub(r"Zorin OS", "HardPoint OS", p.text).replace("Zorin", "HardPoint")
+tree.write(dst, encoding="utf-8", xml_declaration=True)
+PY
+done
 
 # ------------------------------------------------------------ logos
 log "Finding upstream logos to replace"
