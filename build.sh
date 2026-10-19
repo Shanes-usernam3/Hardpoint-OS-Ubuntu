@@ -168,5 +168,13 @@ xorriso -as mkisofs -o "$OUT/$ISO_NAME" -V "HardPoint OS ${HP_BASE_VERSION}" "${
 
 (cd "$OUT" && sha256sum "$ISO_NAME" > SHA256SUMS)
 cp "$WORK/stage/build-report.txt" "$OUT/build-report.txt" 2>/dev/null || true
+# How the ISO boots from a USB stick (Rufus DD mode / dd / Etcher): hybrid MBR + GPT + EFI partition
+{
+    echo "== ISO boot layout (for USB sticks)"
+    xorriso -indev "$OUT/$ISO_NAME" -report_system_area plain 2>/dev/null
+    echo "== Partition table"
+    fdisk -l "$OUT/$ISO_NAME" 2>/dev/null
+    echo "== Boot options used"; printf '%s\n' "${BOOTOPTS[@]}"
+} >> "$OUT/build-report.txt"
 umount "$WORK/mnt" 2>/dev/null || true
 log "Done: $OUT/$ISO_NAME ($(du -h "$OUT/$ISO_NAME" | cut -f1))"

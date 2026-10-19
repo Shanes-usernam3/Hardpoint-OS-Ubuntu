@@ -142,6 +142,43 @@ def serial_has(path, text):
 
 
 # ================= Phase 1: live session =================
+# ================= Phase 0: boot the ISO like a USB stick written with Rufus DD / dd / Etcher =================
+def mean_brightness(png):
+    try:
+        im = Image.open(png).convert("L").resize((64, 40))
+        return sum(im.getdata()) / (64 * 40)
+    except Exception:  # noqa: BLE001
+        return 0
+
+
+for mode in ("uefi", "bios"):
+    usb = WORK / f"usb-{mode}.img"
+    shutil.copyfile(ISO, usb)
+    monu = WORK / f"monu-{mode}.sock"
+    args = ["qemu-system-x86_64", "-machine", "q35", "-m", "4096", "-smp", "2",
+            "-drive", f"if=none,id=stick,format=raw,file={usb}",
+            "-device", "qemu-xhci", "-device", "usb-storage,drive=stick,bootindex=0",
+            "-vga", "virtio", "-display", "none", "-monitor", f"unix:{monu},server,nowait", "-no-reboot"]
+    if mode == "uefi":
+        shutil.copyfile(VARS_SRC, WORK / "usb-vars.fd")
+        args += ["-drive", f"if=pflash,format=raw,readonly=on,file={CODE}",
+                 "-drive", f"if=pflash,format=raw,file={WORK / 'usb-vars.fd'}"]
+    if KVM:
+        args[1:1] = ["-enable-kvm", "-cpu", "host"]
+    vmu = subprocess.Popen(args)
+    mu = Monitor(monu)
+    time.sleep(12)
+    shot(mu, f"00-usb-{mode}-menu")
+    time.sleep(140)
+    ok = shot(mu, f"00-usb-{mode}-desktop") and mean_brightness(OUT / f"00-usb-{mode}-desktop.png") > 20
+    note(ok, f"USB stick boot ({mode.upper()}) reached the live desktop")
+    mu.cmd("quit")
+    try:
+        vmu.wait(timeout=60)
+    except subprocess.TimeoutExpired:
+        vmu.kill()
+    usb.unlink(missing_ok=True)
+
 s1, mon1 = OUT / "serial-live.log", WORK / "mon1.sock"
 vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
            "-append", "boot=casper fsck.mode=skip quiet splash console=tty0 console=ttyS0,115200 ---"], s1, mon1)
