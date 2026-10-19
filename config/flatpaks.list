@@ -14,7 +14,6 @@ work|web:outlook|Outlook|0|Outlook mail and calendar as its own app window (Edge
 work|com.bitwarden.desktop|Bitwarden|0|Password manager that syncs with your phone
 # Everyday tools
 tools|org.gnome.DejaDup|Backups (Déjà Dup)|0|Scheduled backups of your home folder to an external drive, network folder or cloud
-tools|apt:gpaste-2,gnome-shell-extension-gpaste|Clipboard history|0|Super+V shows everything you've copied (needs a sign-out after install)
 tools|org.flameshot.Flameshot|Flameshot|0|Screenshots with arrows, boxes, blur and text
 tools|org.keepassxc.KeePassXC|KeePassXC|0|Offline password vault (good for client credentials)
 # Gaming & emulators

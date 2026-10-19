@@ -80,6 +80,7 @@ unsquashfs -q -f -d "$WORK/root" "$WORK/mnt/casper/filesystem.squashfs"
 
 INSTALLER=unknown
 [[ -d $WORK/root/usr/lib/ubiquity ]] && INSTALLER=ubiquity
+[[ -f $WORK/root/etc/calamares/settings.conf ]] && INSTALLER=calamares
 compgen -G "$WORK/root/usr/share/applications/*install*.desktop" >/dev/null && \
     log "Installer launchers: $(cd "$WORK/root/usr/share/applications" && ls ./*install*.desktop | tr '\n' ' ')"
 log "Installer detected: $INSTALLER"
@@ -110,13 +111,14 @@ if compgen -G "$HERE/extra-pkgs/*.deb" >/dev/null; then cp "$HERE"/extra-pkgs/*.
 cat > "$WORK/stage/build.env" <<EOF
 HP_NAME="$HP_NAME"
 HP_EDITION="$HP_EDITION"
+HP_BASE_VERSION="$HP_BASE_VERSION"
 HP_VERSION="$VERSION"
 HP_HOME_URL="$HP_HOME_URL"
 INSTALLER="$INSTALLER"
 EOF
 
 cp -L /etc/resolv.conf "$R/etc/resolv.conf.hp" 2>/dev/null || true
-mv "$R/etc/resolv.conf" "$R/etc/resolv.conf.zorin" 2>/dev/null || true
+mv "$R/etc/resolv.conf" "$R/etc/resolv.conf.base" 2>/dev/null || true
 cp -L /etc/resolv.conf "$R/etc/resolv.conf"
 printf '#!/bin/sh\nexit 101\n' > "$R/usr/sbin/policy-rc.d"; chmod +x "$R/usr/sbin/policy-rc.d"
 
@@ -125,7 +127,7 @@ chroot "$R" /usr/bin/env -i HOME=/root PATH=/usr/sbin:/usr/bin:/sbin:/bin LANG=C
     bash /tmp/hp/customize.sh
 
 rm -f "$R/usr/sbin/policy-rc.d" "$R/etc/resolv.conf"
-if [[ -e $R/etc/resolv.conf.zorin || -L $R/etc/resolv.conf.zorin ]]; then mv "$R/etc/resolv.conf.zorin" "$R/etc/resolv.conf"; fi
+if [[ -e $R/etc/resolv.conf.base || -L $R/etc/resolv.conf.base ]]; then mv "$R/etc/resolv.conf.base" "$R/etc/resolv.conf"; fi
 rm -f "$R/etc/resolv.conf.hp"
 cleanup
 rm -rf "$R/tmp/hp" "$R/tmp/"* "$R/var/tmp/"* "$R/root/.cache"
@@ -133,9 +135,18 @@ rm -rf "$R/tmp/hp" "$R/tmp/"* "$R/var/tmp/"* "$R/root/.cache"
 # ---------------------------------------------------------------- 5. live boot files
 log "Updating live boot files"
 C="$WORK/iso/casper"
-kern="$(ls -1 "$R"/boot/vmlinuz-* 2>/dev/null | sort -V | tail -1)"
-initrd="$(ls -1 "$R"/boot/initrd.img-* 2>/dev/null | sort -V | tail -1)"
-[[ -f $kern && -f $initrd ]] || die "No kernel/initrd found in the customised system."
+KVER="$(ls "$R/lib/modules" | sort -V | tail -1)"
+kern="$R/boot/vmlinuz-$KVER"
+initrd="$R/boot/initrd.img-$KVER"
+[[ -f $initrd ]] || die "No initrd for kernel $KVER in the customised system."
+if [[ ! -f $kern ]]; then
+    # Ubuntu images leave the kernel out of the system image (the installer copies the live one);
+    # keep the ISO's kernel, which must match the modules in the image
+    kern=""
+    live="$(file -b "$C/vmlinuz" 2>/dev/null | grep -oE 'version [^ ]+' | cut -d' ' -f2)"
+    [[ -z $live || $live == "$KVER" ]] || die "Live kernel $live does not match the image's modules ($KVER)."
+    log "Kernel $KVER: keeping the ISO's kernel"
+fi
 # Replace every kernel and initrd the boot menus point at (names differ between base images,
 # e.g. casper/vmlinuz + casper/initrd, or hwe-* variants). The initrd carries the boot splash,
 # so a missed one shows the upstream logo when booting from a USB stick.
@@ -149,7 +160,7 @@ for ref in "${BOOTREFS[@]}"; do
     f="$WORK/iso$ref"
     [[ -f $f ]] || continue
     case "$(basename "$f")" in
-        *vmlinuz*) cp "$kern" "$f"; replaced=$((replaced + 1)); log "Kernel  -> $ref" ;;
+        *vmlinuz*) if [[ -n $kern ]]; then cp "$kern" "$f"; log "Kernel  -> $ref"; fi; replaced=$((replaced + 1)) ;;
         *initrd*)  cp "$initrd" "$f"; replaced=$((replaced + 1)); log "Initrd  -> $ref (HardPoint boot splash)" ;;
     esac
 done
@@ -161,7 +172,7 @@ du -sx --block-size=1 "$R" | cut -f1 > "$C/filesystem.size"
 
 # Boot menu + disk info
 find "$WORK/iso/boot" "$WORK/iso/isolinux" -maxdepth 3 -name '*.cfg' 2>/dev/null | while read -r cfg; do
-    sed -i -e "s/Zorin OS [0-9.]* *\(Core\)\?/$HP_NAME/g" -e "s/Zorin OS/$HP_NAME/g" -e "s/Zorin/HardPoint/g" "$cfg"
+    sed -i -e "s/Kubuntu [0-9.]*\( LTS\)\?/$HP_NAME/g" -e "s/Kubuntu/$HP_NAME/g" "$cfg"
 done
 echo "$HP_NAME $VERSION amd64 - Release" > "$WORK/iso/.disk/info"
 if [[ -d $WORK/iso/boot/grub ]]; then

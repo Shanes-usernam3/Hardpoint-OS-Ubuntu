@@ -6,8 +6,11 @@ python3-gi
 gir1.2-webkit2-4.1
 gir1.2-notify-0.7
 libnotify-bin
-policykit-1
+pkexec
+polkitd
 zenity
+kdialog
+libkf6config-bin
 
 # --- Laptop hardware (ThinkBook 15 G4 IAP and other Intel 12th-gen laptops) ---
 linux-firmware
@@ -19,7 +22,6 @@ power-profiles-daemon
 fprintd
 libpam-fprintd
 iio-sensor-proxy
-xserver-xorg-input-libinput
 bolt
 
 # --- Security ---
@@ -52,6 +54,7 @@ pipx
 nodejs
 npm
 openjdk-21-jdk
+openjdk-25-jdk
 android-sdk-platform-tools
 code
 docker.io
@@ -86,10 +89,10 @@ openssh-client
 remmina
 remmina-plugin-rdp
 remmina-plugin-vnc
-freerdp3-x11
+freerdp3-wayland
 wireguard-tools
 openvpn
-network-manager-openvpn-gnome
+network-manager-openvpn
 smartmontools
 nvme-cli
 gparted
@@ -123,4 +126,4 @@ intune-portal
 
 # --- Flatpak (apps picked in HardPoint Setup) ---
 flatpak
-gnome-software-plugin-flatpak
+plasma-discover-backend-flatpak

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Link
+Name=Recycle Bin
+Icon=user-trash
+EmptyIcon=user-trash
+URL[$e]=trash:/

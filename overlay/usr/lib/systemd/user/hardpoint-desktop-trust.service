@@ -1,6 +1,0 @@
-[Unit]
-Description=Trust app shortcuts on the desktop
-
-[Service]
-Type=oneshot
-ExecStart=/usr/lib/hardpoint/hp-desktop-trust

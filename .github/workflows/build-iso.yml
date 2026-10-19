@@ -11,7 +11,7 @@ on:
         default: ''
 
   push:
-    branches: [main]          # every push to main builds a fresh ISO
+    branches: [main, hardpoint-2]
     tags: ['v*']
 
 permissions:
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  HIMMELBLAU_TAG: '4.0.5'     # Microsoft Entra ID sign-in (pinned upstream release)
+  HIMMELBLAU_TAG: '4.0.6'     # Microsoft Entra ID sign-in (pinned upstream release)
 
 jobs:
   package:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Version
         id: ver
-        run: echo "version=18.$(date -u +%Y%m%d).${{ github.run_number }}" >> "$GITHUB_OUTPUT"
+        run: source config/base.env && echo "version=$HP_BASE_VERSION.$(date -u +%Y%m%d).${{ github.run_number }}" >> "$GITHUB_OUTPUT"
       - name: Build package
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq python3-pil python3-numpy fonts-inter librsvg2-bin >/dev/null
@@ -80,7 +80,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: extra-pkgs
-          key: himmelblau-ubuntu24.04-${{ env.HIMMELBLAU_TAG }}-${{ hashFiles('tools/build-himmelblau.sh') }}
+          key: himmelblau-ubuntu26.04-${{ env.HIMMELBLAU_TAG }}-${{ hashFiles('tools/build-himmelblau.sh') }}
 
       - name: Build Himmelblau
         if: steps.cache.outputs.cache-hit != 'true'
@@ -136,11 +136,11 @@ jobs:
         if: always()
         run: |
           mkdir -p report && cp out/build-report.txt report/ 2>/dev/null || echo "no report" > report/build-report.txt
-          cd report && git init -q -b build-report
+          cd report && git init -q -b build-report${{ github.ref_name != 'main' && format('-{0}', github.ref_name) || '' }}
           git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
           echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} (commit ${{ github.sha }})" >> build-report.txt
           git add -A && git commit -qm "Build report for ${{ github.sha }}"
-          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" build-report
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" build-report${{ github.ref_name != 'main' && format('-{0}', github.ref_name) || '' }}
 
       - name: Free the work area
         if: always()
@@ -170,7 +170,7 @@ jobs:
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
           sudo apt-get update -qq
-          sudo apt-get install -y -qq qemu-system-x86 qemu-utils ovmf libarchive-tools python3-pil
+          sudo apt-get install -y -qq qemu-system-x86 qemu-utils ovmf libarchive-tools python3-pil gdisk dosfstools squashfs-tools parted
 
       - uses: actions/download-artifact@v4
         with:
@@ -184,11 +184,11 @@ jobs:
         if: always()
         run: |
           cd results
-          git init -q -b test-results
+          git init -q -b test-results${{ github.ref_name != 'main' && format('-{0}', github.ref_name) || '' }}
           git config user.name "HardPoint CI"; git config user.email "ci@hardpoint.invalid"
           echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} (commit ${{ github.sha }})" >> summary.md
           git add -A && git commit -qm "VM test results for ${{ github.sha }}"
-          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" test-results
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" test-results${{ github.ref_name != 'main' && format('-{0}', github.ref_name) || '' }}
 
   release:
     name: Publish the release (version tags only)

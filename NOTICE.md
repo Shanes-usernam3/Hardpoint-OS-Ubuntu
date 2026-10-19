@@ -5,14 +5,16 @@ its own licence; this file is the one place the upstream projects are credited.
 
 | Component | Use in HardPoint OS | Licence |
 |---|---|---|
-| Ubuntu 24.04 LTS | Base system and packages | Various free licences (mostly GPL) |
-| Zorin OS 18 Core | Base desktop image the ISO is built from; desktop extensions and themes (recoloured into the HardPoint themes) | GPL-2.0 / GPL-3.0 |
-| GNOME | Desktop shell and apps | GPL / LGPL |
+| Ubuntu 26.04 LTS | Base system and packages | Various free licences (mostly GPL) |
+| Kubuntu 26.04 | Desktop image the ISO is built from, Calamares installer settings | GPL-2.0+ |
+| KDE Plasma 6 / KDE Gear | Desktop, apps, Breeze theme | GPL / LGPL |
+| Calamares | Installer | GPL-3.0 |
+| Zorin OS 18 Core | Base of HardPoint OS 1 (previous version) | GPL-2.0 / GPL-3.0 |
 | Papirus icon theme | Icons | GPL-3.0 |
 | Himmelblau | Microsoft Entra ID sign-in | GPL-3.0 |
 | Inter | Font used in HardPoint artwork and apps | SIL OFL 1.1 |
 
 HardPoint OS is an independent project. It is not affiliated with or endorsed by Canonical,
-Zorin OS Technologies or the GNOME Foundation, and it does not use their names or logos for
+Kubuntu, KDE e.V. or Zorin OS Technologies, and it does not use their names or logos for
 its own branding. Source for the GPL components is available from the upstream projects'
 package repositories, which HardPoint OS installs from.

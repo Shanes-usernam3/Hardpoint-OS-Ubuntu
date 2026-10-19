@@ -260,7 +260,6 @@ post_install() {  # extra setup some apps need
                 done
                 say "Sunshine: streaming ports opened for home/private networks only."
             fi ;;
-        apt:gpaste-2,*) say "Clipboard history: sign out and back in, then press Super+V." ;;
     esac
 }
 

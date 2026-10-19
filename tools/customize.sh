@@ -12,6 +12,10 @@ log() { printf '\e[1;36m  ->\e[0m %s\n' "$*"; }
 warn() { printf '\e[1;33m  WARN:\e[0m %s\n' "$*" >&2; }
 
 # ------------------------------------------------------------ apt sources
+# The installer's own CD-ROM source can't be used inside the build; set it aside until the end
+for f in /etc/apt/sources.list.d/cdrom.sources /etc/apt/sources.list.d/cdrom.list; do
+    [[ -f $f ]] && mv "$f" "$f.hp-build"
+done
 log "Enabling Ubuntu universe/multiverse and 32-bit packages (Steam)"
 dpkg --add-architecture i386
 python3 - <<'PY'
@@ -58,8 +62,8 @@ Architectures: amd64
 Signed-By: /usr/share/keyrings/microsoft.gpg
 
 Types: deb
-URIs: https://packages.microsoft.com/ubuntu/24.04/prod
-Suites: noble
+URIs: https://packages.microsoft.com/ubuntu/26.04/prod
+Suites: resolute
 Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/microsoft.gpg
@@ -138,15 +142,22 @@ dpkg -s hardpoint-os >/dev/null 2>&1 || { warn "hardpoint-os did not install"; e
 # Flathub for the apps HardPoint Setup offers
 flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || warn "Flathub remote not added"
 
-# The base system's anonymous install census pings upstream servers; not wanted here
-for p in zorin-os-census zorin-census; do
-    if dpkg -s "$p" >/dev/null 2>&1; then apt-get purge -y -q "$p" >/dev/null && log "Removed $p"; fi
-done
+# (Base-system welcome app and update notifier are hidden by the hardpoint-os package, not removed:
+#  removing them could pull out the desktop metapackage.)
 
 # Where can upstream branding still be seen? (goes into the build report)
 bash /usr/lib/hardpoint/setup/audit-branding.sh >> "$S/build-report.txt" 2>&1 || true
 
+# ------------------------------------------------------------ boot image
+# The live boot uses the initrd built here (it carries the HardPoint boot splash)
+KVER="$(ls /lib/modules | sort -V | tail -1)"
+if [[ ! -f /boot/initrd.img-$KVER ]]; then
+    log "Creating the boot image for $KVER"
+    update-initramfs -c -k "$KVER" >/dev/null
+fi
+
 # ------------------------------------------------------------ clean up
+for f in /etc/apt/sources.list.d/*.hp-build; do [[ -f $f ]] && mv "$f" "${f%.hp-build}"; done
 apt-get autoremove -y -q >/dev/null || true
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/hb-sim.txt
