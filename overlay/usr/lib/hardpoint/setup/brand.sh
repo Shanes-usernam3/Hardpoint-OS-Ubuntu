@@ -281,8 +281,15 @@ for f in /usr/share/applications/org.kde.plasma-welcome.desktop /usr/share/appli
     hide "$f" NoDisplay
 done
 # Base-system web links (its website and how-to pages) on new desktops and in the menu
+# (moved out of /etc/skel entirely, so new accounts don't get a copy)
+mkdir -p /usr/share/hardpoint/diverted
 for f in /etc/skel/Desktop/org.kubuntu.web.home.desktop /etc/skel/Desktop/org.kfocus.web.howtos.desktop; do
-    [[ -e $f || -e $f.upstream ]] && divert "$f"
+    to=/usr/share/hardpoint/diverted/$(basename "$f")
+    if [[ $(dpkg-divert --list "$f") == *"$f.upstream"* ]]; then
+        dpkg-divert --quiet --local --rename --remove "$f"   # older HardPoint builds left it in /etc/skel
+    fi
+    [[ -n $(dpkg-divert --list "$f") ]] || dpkg-divert --quiet --local --rename --divert "$to" --add "$f"
+    rm -f "$f.upstream"
 done
 for f in /usr/share/applications/org.kubuntu.web.home.desktop /usr/share/applications/org.kfocus.web.howtos.desktop \
          /usr/share/applications/org.kubuntu.restore-desktop-links.desktop; do

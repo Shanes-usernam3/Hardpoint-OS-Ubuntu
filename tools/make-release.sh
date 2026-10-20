@@ -39,9 +39,9 @@ chmod 755 "$OUT/get-hardpoint-iso.sh"
 
 VER="${TAG#v}"
 cat > "$OUT/notes.md" <<EOF
-**HardPoint OS $VER** (based on Ubuntu 24.04 LTS). Built by HardPoint Networks.
+**HardPoint OS $VER** (based on Ubuntu 26.04 LTS with KDE Plasma 6). Built by HardPoint Networks.
 
-Byte-style HardPoint Dark theme, HardPoint apps (Setup, Updates, Accounts, Security, System), Microsoft Entra ID sign-in + Intune Company Portal, dev / IT / gaming tools, Steam, automatic snapshot before every update, and updates delivered without reinstalling.
+Works like Windows 11: centred Start and taskbar, quick settings, Windows shortcuts, in the Byte colours. HardPoint apps (Setup, Updates, Accounts, Security, System), Microsoft Entra ID sign-in + Intune Company Portal, dev / IT / gaming tools, Steam, automatic snapshot before every update, and updates delivered without reinstalling.
 
 ## Download
 
@@ -78,11 +78,11 @@ SHA-256 of the ISO: \`$SUM\`
 | Network | VirtIO |
 | Display | VirtIO-GPU (or SPICE for clipboard sharing) |
 
-Boot the VM, choose **Try or Install HardPoint OS**, then **Install HardPoint OS** on the desktop. The guest agent is preinstalled, so Proxmox shows the VM's IP and can shut it down cleanly.
+Boot the VM, choose **Try or Install HardPoint OS**, then double-click **Install HardPoint OS** on the desktop. The guest agent is preinstalled, so Proxmox shows the VM's IP and can shut it down cleanly.
 
 ## Real PCs
 
-Write the ISO with Rufus (GPT, UEFI) or balenaEtcher. Secure Boot can stay on.
+Write the ISO with **Rufus in DD mode** (the system image is over 4 GB, which Rufus's ISO mode can't copy to a FAT32 stick) or balenaEtcher, and boot the PC in **UEFI** mode. Secure Boot can stay on. Legacy BIOS booting from a USB stick isn't supported yet.
 
 ## Already running HardPoint OS?
 
