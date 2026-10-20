@@ -17,4 +17,9 @@ if command -v ufw >/dev/null; then
 fi
 # Lockdown Mode starts OFF; USBGuard only runs while it is on
 systemctl disable --now usbguard.service >/dev/null 2>&1 || true
+# Leftovers from the live USB / base system on the installed PC's desktops
+for d in /etc/skel/Desktop /home/*/Desktop; do
+    [[ -d $d ]] || continue
+    rm -f "$d"/install-hardpoint-os.desktop "$d"/*calamares*.desktop "$d"/org.kubuntu.web.home.desktop* "$d"/org.kfocus.web.howtos.desktop*
+done
 date '+%F %T' > /var/lib/hardpoint/firstboot-done

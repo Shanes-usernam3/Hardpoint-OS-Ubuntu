@@ -205,6 +205,11 @@ def system_info():
     }
 
 
+def is_live():
+    """Running from the USB stick / DVD (live session)?"""
+    return "boot=casper" in Path("/proc/cmdline").read_text() or os.path.ismount("/cdrom")
+
+
 def color_scheme():
     """'prefer-dark' or 'default', from the Plasma colour scheme."""
     name = sh("kreadconfig6", "--file", "kdeglobals", "--group", "General", "--key", "ColorScheme")[1]
@@ -280,7 +285,7 @@ def state():
     return {
         "user": user, "realName": real, "host": os.uname().nodename,
         "os": osr.get("PRETTY_NAME", "HardPoint OS"),
-        "live": "boot=casper" in Path("/proc/cmdline").read_text(),
+        "live": is_live(),
         "setupDone": SETUP_DONE.exists(),
         "catalog": catalog,
         "installedApps": installed_apps(catalog),
@@ -438,7 +443,7 @@ def main():
     view = args[0] if args and args[0] in VIEWS else "setup"
     first = "--first-run" in args
     if first:
-        if SETUP_DONE.exists() or "boot=casper" in Path("/proc/cmdline").read_text():
+        if SETUP_DONE.exists() or is_live():
             return
     App(view, first).show_all()
     Gtk.main()

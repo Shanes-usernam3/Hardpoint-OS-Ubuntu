@@ -29,7 +29,7 @@ command -v timeshift >/dev/null || exit 0
 # Never inside the ISO build (chroot), the live USB, or a container
 systemd-detect-virt --quiet --chroot && exit 0
 systemd-detect-virt --quiet --container && exit 0
-grep -qw 'boot=casper' /proc/cmdline && exit 0
+{ grep -qw 'boot=casper' /proc/cmdline || mountpoint -q /cdrom; } && exit 0
 [[ -d /run/systemd/system ]] || exit 0
 
 configure() {

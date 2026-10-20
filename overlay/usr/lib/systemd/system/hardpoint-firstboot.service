@@ -2,6 +2,8 @@
 Description=HardPoint OS first-boot setup
 ConditionPathExists=!/var/lib/hardpoint/firstboot-done
 ConditionKernelCommandLine=!boot=casper
+# Live USB: the medium is mounted at /cdrom (the boot menu no longer says boot=casper)
+ConditionPathIsMountPoint=!/cdrom
 After=local-fs.target network.target
 Before=display-manager.service
 
