@@ -189,7 +189,8 @@ fi
 
 # ---------------------------------------------------------------- 6. pack
 log "Compressing the system image (xz — slowest step)"
-mksquashfs "$R" "$C/filesystem.squashfs" -noappend -comp xz -b 1M -Xdict-size 100% -no-progress -quiet
+# Standard 128 KB blocks (like Ubuntu): 1 MB blocks made reads from slow USB sticks time out
+mksquashfs "$R" "$C/filesystem.squashfs" -noappend -comp xz -no-progress -quiet
 log "System image: $(du -h "$C/filesystem.squashfs" | cut -f1)"
 
 (cd "$WORK/iso" && find . -type f ! -name md5sum.txt ! -path './boot.catalog' ! -path './boot/grub/i386-pc/eltorito.img' \

@@ -95,7 +95,8 @@ class Monitor:
 
 
 KEYS = {" ": "spc", "-": "minus", ";": "semicolon", "/": "slash", ".": "dot", "=": "equal",
-        "_": "shift-minus", "|": "shift-backslash", ",": "comma", "\n": "ret", "@": "shift-2"}
+        "_": "shift-minus", "|": "shift-backslash", ",": "comma", "\n": "ret", "@": "shift-2",
+        "'": "apostrophe", "[": "bracket_left", "]": "bracket_right"}
 
 
 def type_text(mon, text):
@@ -155,7 +156,7 @@ for mode in ("uefi", "bios"):
     usb = WORK / f"usb-{mode}.img"
     shutil.copyfile(ISO, usb)
     monu = WORK / f"monu-{mode}.sock"
-    args = ["qemu-system-x86_64", "-machine", "q35", "-m", "4096", "-smp", "2",
+    args = ["qemu-system-x86_64", "-machine", "q35", "-m", "6144", "-smp", "4",
             "-drive", f"if=none,id=stick,format=raw,file={usb}",
             "-device", "qemu-xhci", "-device", "usb-storage,drive=stick,bootindex=0",
             "-vga", "virtio", "-display", "none", "-monitor", f"unix:{monu},server,nowait", "-no-reboot"]
@@ -169,9 +170,22 @@ for mode in ("uefi", "bios"):
     mu = Monitor(monu)
     time.sleep(12)
     shot(mu, f"00-usb-{mode}-menu")
-    time.sleep(140)
-    ok = shot(mu, f"00-usb-{mode}-desktop") and mean_brightness(OUT / f"00-usb-{mode}-desktop.png") > 20
-    note(ok, f"USB stick boot ({mode.upper()}) reached the live desktop")
+    ok, waited = False, 12
+    while not ok and waited < 420:          # USB sticks are slow: allow up to 7 minutes
+        time.sleep(60)
+        waited += 60
+        ok = shot(mu, f"00-usb-{mode}-desktop") and mean_brightness(OUT / f"00-usb-{mode}-desktop.png") > 20
+    note(ok, f"USB stick boot ({mode.upper()}) reached the live desktop ({waited // 60} min)")
+    if not ok:
+        # Text console: log in as the live user and show the kernel's errors
+        mu.cmd("sendkey ctrl-alt-f3")
+        time.sleep(5)
+        for user in ("hardpoint", "ubuntu", "kubuntu"):
+            type_text(mu, user + "\n")
+            time.sleep(4)
+        type_text(mu, "clear; dmesg | grep -iE 'error|fail|squash|reset|usb|sd[a-z]|I/O|casper' | tail -45\n")
+        time.sleep(6)
+        shot(mu, f"00-usb-{mode}-dmesg")
     mu.cmd("quit")
     try:
         vmu.wait(timeout=60)
