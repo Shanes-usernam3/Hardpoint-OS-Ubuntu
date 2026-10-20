@@ -50,7 +50,11 @@ jobs:
   publish:
     name: Publish the update (HardPoint Updates on installed PCs)
     needs: package
-    if: github.ref == 'refs/heads/main'
+    # main = HardPoint OS 1 ("stable" channel); hardpoint-2 = HardPoint OS 2 ("hp2" channel)
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/hardpoint-2'
+    concurrency:
+      group: publish-gh-pages      # one publish at a time: both channels share the gh-pages branch
+      cancel-in-progress: false
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
