@@ -1,0 +1,5482 @@
+==> Using cached kubuntu-26.04-desktop-amd64.iso
+==> Base ISO verified (sha256 95ce9cf68f13015b9a88bd1ef86fcf7eda77c99979fda48c69e28aa0a84f88ac)
+==> Live image layers: casper/filesystem.squashfs
+==> Copying ISO boot files
+==> Unpacking the live system (takes a few minutes)
+
+[-                                                         ]   1626/449800   0%
+[-                                                         ]   6034/449800   1%
+[=\                                                        ]   9220/449800   2%
+[=-                                                        ]  14223/449800   3%
+[==/                                                       ]  22745/449800   5%
+[===\                                                      ]  28046/449800   6%
+[====|                                                     ]  31748/449800   7%
+[=====|                                                    ]  40166/449800   8%
+[=====/                                                    ]  42837/449800   9%
+[======-                                                   ]  53688/449800  11%
+[=======\                                                  ]  57674/449800  12%
+[=======|                                                  ]  61877/449800  13%
+[========/                                                 ]  64895/449800  14%
+[========-                                                 ]  70839/449800  15%
+[=========\                                                ]  76145/449800  16%
+[=========|                                                ]  77398/449800  17%
+[==========-                                               ]  82564/449800  18%
+[==========/                                               ]  85539/449800  19%
+[===========-                                              ]  90313/449800  20%
+[============/                                             ]  94747/449800  21%
+[============-                                             ]  99141/449800  22%
+[=============/                                            ] 104577/449800  23%
+[=============\                                            ] 108070/449800  24%
+[==============-                                           ] 112858/449800  25%
+[===============-                                          ] 124926/449800  27%
+[================\                                         ] 130456/449800  29%
+[=================/                                        ] 136380/449800  30%
+[=================-                                        ] 139981/449800  31%
+[==================\                                       ] 147714/449800  32%
+[===================|                                      ] 156151/449800  34%
+[===================/                                      ] 157782/449800  35%
+[====================\                                     ] 163553/449800  36%
+[=====================|                                    ] 167075/449800  37%
+[======================\                                   ] 180010/449800  40%
+[========================|                                 ] 190284/449800  42%
+[=========================/                                ] 200279/449800  44%
+[==========================-                               ] 209357/449800  46%
+[===========================\                              ] 216991/449800  48%
+[============================|                             ] 228348/449800  50%
+[=============================/                            ] 233766/449800  51%
+[=============================-                            ] 235884/449800  52%
+[==============================-                           ] 239854/449800  53%
+[===============================|                          ] 245791/449800  54%
+[================================/                         ] 253428/449800  56%
+[=================================-                        ] 260820/449800  57%
+[==================================\                       ] 268456/449800  59%
+[==================================|                       ] 275346/449800  61%
+[====================================/                     ] 284599/449800  63%
+[=====================================-                    ] 292341/449800  64%
+[=====================================\                    ] 299645/449800  66%
+[======================================|                   ] 307124/449800  68%
+[========================================/                 ] 320001/449800  71%
+[=========================================-                ] 331135/449800  73%
+[==========================================\               ] 336494/449800  74%
+[===========================================|              ] 339476/449800  75%
+[===========================================-              ] 343932/449800  76%
+[============================================\             ] 347863/449800  77%
+[============================================|             ] 351831/449800  78%
+[=============================================-            ] 358081/449800  79%
+[===============================================\          ] 372601/449800  82%
+[================================================|         ] 383502/449800  85%
+[=================================================/        ] 389147/449800  86%
+[==================================================-       ] 396069/449800  88%
+[===================================================\      ] 402828/449800  89%
+[===================================================|      ] 405325/449800  90%
+[=====================================================\    ] 420204/449800  93%
+[=====================================================|    ] 424649/449800  94%
+[======================================================/   ] 427340/449800  95%
+[======================================================/   ] 431842/449800  96%
+[=======================================================\  ] 437820/449800  97%
+[========================================================| ] 443358/449800  98%
+[=========================================================/] 449800/449800 100%
+==> Installer detected: calamares
+==> Package: hardpoint-os_2.20261020.64_all.deb
+==> Customising the system (packages, apps, security, branding)
+  -> Enabling Ubuntu universe/multiverse and 32-bit packages (Steam)
+  -> Adding Microsoft repositories (Edge, VS Code, Intune)
+Fetched 40.7 MB in 5s (7984 kB/s)
+Reading package lists...
+  -> Installing HardPoint packages
+  WARN: Not available, skipped: dnsutils p7zip-full
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3-gi is already the newest version (3.56.2-1).
+python3-gi set to manually installed.
+gir1.2-notify-0.7 is already the newest version (0.8.8-1).
+gir1.2-notify-0.7 set to manually installed.
+libnotify-bin is already the newest version (0.8.8-1).
+libnotify-bin set to manually installed.
+kdialog is already the newest version (4:25.12.3-0ubuntu1).
+kdialog set to manually installed.
+libkf6config-bin is already the newest version (6.24.0-0ubuntu1).
+libkf6config-bin set to manually installed.
+linux-firmware is already the newest version (20260319.git217ca6e4.1ubuntu).
+linux-firmware set to manually installed.
+firmware-sof-signed is already the newest version (2025.12.2-1).
+firmware-sof-signed set to manually installed.
+power-profiles-daemon is already the newest version (0.30-2).
+power-profiles-daemon set to manually installed.
+fprintd is already the newest version (1.94.5-4).
+fprintd set to manually installed.
+libpam-fprintd is already the newest version (1.94.5-4).
+libpam-fprintd set to manually installed.
+iio-sensor-proxy is already the newest version (3.8-1).
+iio-sensor-proxy set to manually installed.
+bolt is already the newest version (0.9.10-1).
+bolt set to manually installed.
+ufw is already the newest version (0.36.2-9build1).
+ufw set to manually installed.
+cryptsetup is already the newest version (2:2.8.4-1ubuntu4).
+cryptsetup set to manually installed.
+os-prober is already the newest version (1.84ubuntu1).
+os-prober set to manually installed.
+sbsigntool is already the newest version (0.9.4-3.1ubuntu9).
+sbsigntool set to manually installed.
+mokutil is already the newest version (0.7.2-2).
+mokutil set to manually installed.
+htop is already the newest version (3.4.1-5build2).
+htop set to manually installed.
+tcpdump is already the newest version (4.99.6-1).
+tcpdump set to manually installed.
+mtr-tiny is already the newest version (0.95-1.1ubuntu2).
+mtr-tiny set to manually installed.
+ethtool is already the newest version (1:6.19-1).
+ethtool set to manually installed.
+network-manager-openvpn is already the newest version (1.12.5-1).
+network-manager-openvpn set to manually installed.
+smartmontools is already the newest version (7.5-2).
+smartmontools set to manually installed.
+lshw is already the newest version (02.19.git.2021.06.19.996aaad9c7-2.1ubuntu3).
+lshw set to manually installed.
+vulkan-tools is already the newest version (1.4.341.0+dfsg1-1).
+vulkan-tools set to manually installed.
+Solving dependencies...
+The following additional packages will be installed:
+  android-sdk-platform-tools-common android-udev-rules apparmor binutils
+  binutils-common binutils-x86-64-linux-gnu bsdextrautils ca-certificates-java
+  cmake-data conmon containerd dmtracedump dpkg-dev eject eslint etc1tool
+  f2fs-tools fdisk freerdp-wayland g++ g++-15 g++-15-x86-64-linux-gnu
+  g++-x86-64-linux-gnu gamemode-daemon gcc gcc-15 gcc-15-x86-64-linux-gnu
+  gcc-16-base:i386 gcc-x86-64-linux-gnu gcr gcr4 gir1.2-girepository-3.0
+  gir1.2-glib-2.0 gir1.2-gtk-vnc-2.0 gir1.2-gtksource-4
+  gir1.2-javascriptcoregtk-4.1 gir1.2-libosinfo-1.0 gir1.2-libvirt-glib-1.0
+  gir1.2-soup-3.0 gir1.2-vte-2.91 git-man gnome-keyring gnutls-bin
+  golang-github-containers-common golang-github-containers-image
+  gparted-common gyp handlebars hprof-conv igt-gpu-tools ipxe-qemu java-common
+  kde-config-updates libada-url0-3 libadwaita-1-0 libapparmor1 libasan8
+  libatkmm-1.6-1v5 libatomic1:i386 libbcg729-0 libbinutils libblkid1
+  libblkid1:i386 libbsd0:i386 libc-dev-bin libc-gconv-modules-extra
+  libc-gconv-modules-extra:i386 libc6 libc6:i386 libc6-dbg libc6-dev
+  libcacard0 libcairomm-1.0-1v5 libcares2 libcc1-0 libcomposefs1 libcrypt-dev
+  libcrypt1:i386 libctf-nobfd0 libctf0 libcurl3t64-gnutls libcurl4t64
+  libdaxctl1 libdisplay-info3:i386 libdrm-amdgpu1:i386 libdrm-intel1:i386
+  libdrm-nouveau2 libdrm2:i386 libedit2:i386 libegl-mesa0 libelf1t64:i386
+  libenchant-2-2 libevent-2.1-7t64 libevent-core-2.1-7t64 libexpat1
+  libexpat1:i386 libfalcosecurity0t64 libfdisk1 libfdt1 libffi8:i386
+  libflatpak0 libfreerdp-client3-3 libfreerdp3-3 libfwupd3 libgamemode0
+  libgamemodeauto0 libgbm1 libgbm1:i386 libgcc-15-dev libgcc-s1:i386
+  libgck-1-0 libgck-2-2 libgcr-4-4 libgcr-base-3-1 libgcr-ui-3-1 libgee-0.8-2
+  libgfapi0 libgfrpc0 libgfxdr0 libgirepository-2.0-0 libgl1:i386
+  libgl1-mesa-dri libglib2.0-0t64 libglib2.0-0t64:i386 libglib2.0-bin
+  libglib2.0-data libglibmm-2.4-1t64 libglusterfs0 libglvnd0:i386 libglx-mesa0
+  libglx-mesa0:i386 libglx0:i386 libgmp10:i386 libgnomekbd-common libgnomekbd8
+  libgnutls-dane0t64 libgnutls30t64 libgnutls30t64:i386 libgpg-error0:i386
+  libgprofng0 libgrpc++1.51t64 libgrpc29t64 libgtk-vnc-2.0-0 libgtkmm-3.0-1t64
+  libgtksourceview-4-0 libgtksourceview-4-common libgvnc-1.0-0 libhd21t64
+  libhogweed6t64:i386 libhwasan0 libidn2-0:i386 libiperf0 libitm1
+  libjavascriptcoregtk-4.1-0 libjq1 libjs-events libjs-inherits libjs-prettify
+  libjs-regenerate libjs-source-map libjs-sprintf-js libjs-util libjsoncpp26
+  libjudydebian1 liblastlog2-2 liblinear4 libllhttp9.3 libllvm21:i386 liblsan0
+  libmalcontent-0-0 libmalcontent-common libmd0:i386 libminizip1t64 libmount1
+  libmount1:i386 libmpathcmd0 libmpathpersist0 libmultipath0 libnbd0 libndctl6
+  libnettle8t64:i386 libnghttp3-9 libnm0 libnm0:i386 libnode-dev libnode127
+  libnss-systemd libntfs-3g89t64 libopencore-amrnb0 liboping0 libosinfo-1.0-0
+  libosinfo-l10n libostree-1-1 libp11-kit0:i386 libpam-pwquality
+  libpam-systemd libpangomm-1.4-1v5 libparted-fs-resize0t64 libpciaccess0
+  libpciaccess0:i386 libpcre2-8-0:i386 libpkgconf7 libpmem1 libpmemobj1
+  libpng16-16t64 libpng16-16t64:i386 libpolkit-agent-1-0 libpolkit-gobject-1-0
+  libprotoc32t64 libpython3.14 libpython3.14-minimal libpython3.14-stdlib
+  libqb100 libquadmath0 librados2 librbd1 librdmacm1t64 libre2-11 librhash1
+  libsctp1 libselinux1:i386 libsensors5:i386 libsimdjson29 libslirp0
+  libsmartcols1 libsmi2t64 libsoup-3.0-0 libsoup-3.0-common libspandsp2t64
+  libsqlite3-0 libssl-dev libssl3t64 libstdc++-15-dev libstdc++6:i386
+  libsubid5 libsystemd-shared libsystemd0 libtasn1-6:i386 libtinfo6:i386
+  libtsan2 libubsan1 libudev1 libudev1:i386 libumockdev0 libunistring5:i386
+  libusbguard1 libusbredirparser1t64 libuuid1 libuv1-dev libva-x11-2:i386
+  libva2:i386 libvirt-clients libvirt-common libvirt-daemon
+  libvirt-daemon-common libvirt-daemon-config-network
+  libvirt-daemon-config-nwfilter libvirt-daemon-driver-network
+  libvirt-daemon-driver-nodedev libvirt-daemon-driver-nwfilter
+  libvirt-daemon-driver-qemu libvirt-daemon-driver-secret
+  libvirt-daemon-driver-storage libvirt-daemon-log libvirt-glib-1.0-0 libvirt0
+  libvulkan1:i386 libwayland-client0:i386 libwebkit2gtk-4.1-0 libwinpr3-3
+  libwireshark-data libwireshark19 libwiretap16 libwsutil17 libx11-6
+  libx11-6:i386 libx11-xcb1 libx11-xcb1:i386 libx86emu3 libxapp1 libxau6:i386
+  libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386
+  libxcb-shm0:i386 libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386
+  libxdmcp6:i386 libxext6:i386 libxfixes3:i386 libxi6:i386 libxinerama1:i386
+  libxklavier16 libxml2-16 libxml2-16:i386 libxshmfence1:i386 libxxf86vm1:i386
+  libzstd1:i386 locales lto-disabled-list make mdevctl mesa-libgallium
+  mesa-libgallium:i386 microsoft-identity-broker mount netavark
+  network-manager network-manager-l10n nmap-common node-abbrev node-acorn
+  node-agent-base node-ajv node-ajv-keywords node-ampproject-remapping
+  node-ansi-escapes node-ansi-regex node-ansi-styles node-anymatch node-aproba
+  node-archy node-are-we-there-yet node-argparse node-arrify node-assert
+  node-async node-async-each node-babel-helper-define-polyfill-provider
+  node-babel-plugin-add-module-exports node-babel-plugin-lodash
+  node-babel-plugin-polyfill-corejs2 node-babel-plugin-polyfill-corejs3
+  node-babel-plugin-polyfill-regenerator node-babel7 node-babel7-runtime
+  node-balanced-match node-base64-js node-binary-extensions
+  node-brace-expansion node-braces node-browserslist node-builtins
+  node-cacache node-camelcase node-caniuse-lite node-chalk node-chokidar
+  node-chownr node-chrome-trace-event node-ci-info node-cjs-module-lexer
+  node-cli-table node-cliui node-clone node-clone-deep node-color-convert
+  node-color-name node-colors node-columnify node-commander node-commondir
+  node-concat-stream node-console-control-strings node-convert-source-map
+  node-copy-concurrently node-core-js node-core-js-compat node-core-js-pure
+  node-core-util-is node-corepack node-css-loader node-css-selector-tokenizer
+  node-data-uri-to-buffer node-debbundle-es-to-primitive node-debug
+  node-decamelize node-decompress-response node-deep-equal node-deep-is
+  node-defaults node-define-properties node-define-property node-defined
+  node-del node-delegates node-depd node-diff node-doctrine
+  node-electron-to-chromium node-encoding node-enhanced-resolve node-envinfo
+  node-err-code node-errno node-error-ex node-es-abstract node-es-module-lexer
+  node-es6-error node-escape-string-regexp node-escodegen node-eslint-scope
+  node-eslint-utils node-eslint-visitor-keys node-espree node-esprima
+  node-esquery node-esrecurse node-estraverse node-esutils node-events
+  node-execa node-fancy-log node-fast-deep-equal node-fast-levenshtein
+  node-fetch node-file-entry-cache node-fill-range node-find-cache-dir
+  node-find-up node-flat-cache node-flatted node-for-in node-for-own
+  node-foreground-child node-fs-readdir-recursive node-fs-write-stream-atomic
+  node-function-bind node-functional-red-black-tree node-gauge
+  node-get-caller-file node-get-stream node-glob node-glob-parent node-globals
+  node-globby node-got node-graceful-fs node-gyp node-has-flag
+  node-has-unicode node-hosted-git-info node-http-proxy-agent
+  node-https-proxy-agent node-iconv-lite node-icss-utils node-ieee754
+  node-iferr node-ignore node-imurmurhash node-indent-string node-inherits
+  node-ini node-interpret node-ip node-ip-regex node-is-arrayish
+  node-is-binary-path node-is-buffer node-is-descriptor node-is-extendable
+  node-is-extglob node-is-glob node-is-number node-is-path-cwd
+  node-is-path-inside node-is-plain-obj node-is-plain-object node-is-stream
+  node-is-windows node-isarray node-isexe node-isobject node-istanbul
+  node-jest-debbundle node-jest-worker node-js-tokens node-js-yaml node-jsesc
+  node-json-buffer node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify node-json5 node-jsonify
+  node-jsonparse node-kind-of node-levn node-llhttp node-loader-runner
+  node-locate-path node-lodash node-lodash-packages node-long
+  node-lowercase-keys node-lru-cache node-make-dir node-memfs node-memory-fs
+  node-merge-stream node-micromatch node-mime node-mime-types node-mimic-fn
+  node-mimic-response node-minimatch node-minimist node-minipass node-mkdirp
+  node-move-concurrently node-ms node-mute-stream node-n3 node-negotiator
+  node-neo-async node-nopt node-normalize-package-data node-normalize-path
+  node-npm-bundled node-npm-package-arg node-npm-run-path node-npmlog
+  node-object-assign node-object-inspect node-once node-optimist
+  node-optionator node-osenv node-p-cancelable node-p-limit node-p-locate
+  node-p-map node-parse-json node-path-dirname node-path-exists
+  node-path-is-absolute node-path-is-inside node-path-scurry node-path-type
+  node-picocolors node-pify node-pkg-dir node-postcss
+  node-postcss-modules-extract-imports node-postcss-modules-values
+  node-postcss-value-parser node-prelude-ls node-process-nextick-args
+  node-progress node-promise-inflight node-promise-retry node-promzard
+  node-prr node-quick-lru node-randombytes node-read node-read-package-json
+  node-read-pkg node-readable-stream node-readdirp node-rechoir
+  node-regenerate node-regenerate-unicode-properties node-regenerator-runtime
+  node-regenerator-transform node-regexpp node-regexpu-core node-regjsgen
+  node-regjsparser node-repeat-string node-require-directory node-resolve
+  node-resolve-cwd node-resolve-from node-resumer node-retry node-rimraf
+  node-run-queue node-safe-buffer node-schema-utils node-semver
+  node-serialize-javascript node-set-blocking node-set-immediate-shim
+  node-shebang-command node-shebang-regex node-signal-exit node-slash
+  node-slice-ansi node-source-list-map node-source-map node-source-map-support
+  node-spdx-correct node-spdx-exceptions node-spdx-expression-parse
+  node-spdx-license-ids node-sprintf-js node-ssri node-string-decoder
+  node-string-width node-strip-ansi node-strip-bom node-strip-eof
+  node-strip-json-comments node-supports-color node-tapable node-tape node-tar
+  node-terser node-text-table node-through node-time-stamp
+  node-to-fast-properties node-to-regex-range node-tslib node-type-check
+  node-typedarray node-undici node-unicode-canonical-property-names-ecmascript
+  node-unicode-match-property-ecmascript
+  node-unicode-match-property-value-ecmascript
+  node-unicode-property-aliases-ecmascript node-unique-filename node-util
+  node-util-deprecate node-uuid node-v8-compile-cache node-v8flags
+  node-validate-npm-package-license node-validate-npm-package-name
+  node-watchpack node-wcwidth.js node-webassemblyjs node-webpack-sources
+  node-which node-wide-align node-wordwrap node-wrap-ansi node-wrappy
+  node-write node-write-file-atomic node-xtend node-y18n node-yallist
+  node-yargs node-yargs-parser openjdk-21-jdk-headless openjdk-21-jre
+  openjdk-21-jre-headless openjdk-25-jdk-headless openjdk-25-jre
+  openjdk-25-jre-headless osinfo-db p11-kit p11-kit-modules pinentry-gnome3
+  pkgconf pkgconf-bin plasma-discover plasma-discover-backend-fwupd
+  plasma-discover-backend-snap plasma-discover-common plasma-discover-notifier
+  python3-apparmor python3-argcomplete python3-gi-cairo python3-libapparmor
+  python3-libvirt python3-libxml2 python3-packaging python3-pip-whl
+  python3-platformdirs python3-setuptools-whl python3-userpath python3-wheel
+  python3.14 python3.14-gdbm python3.14-minimal python3.14-venv
+  qemu-system-common qemu-system-data remmina-common remmina-plugin-secret
+  rfkill runc seabios steam-libs steam-libs:i386 steam-libs-i386:i386 systemd
+  systemd-container systemd-coredump systemd-cryptsetup systemd-resolved
+  systemd-sysv terser ubuntu-helper-virt-hwe ubuntu-virt udev util-linux
+  util-linux-extra uuid-runtime virt-install webpack wireshark-common
+  xapp-symbolic-icons xapps-common xdg-dbus-proxy zenity-common zlib1g
+  zlib1g:i386
+Suggested packages:
+  vim-addon-manager binutils-doc gprofng-gui binutils-gold cmake-doc
+  cmake-format elpa-cmake-mode aufs-tools cgroupfs-mount | cgroup-lite
+  debootstrap docker-doc rinse rootlesskit zfs-fuse | zfsutils debian-keyring
+  debian-tag2upload-keyring node-babel-eslint node-esprima-fb node-inquirer
+  fio-examples gnuplot malcontent-gui g++-multilib g++-15-multilib gcc-15-doc
+  gnome-shell-extension-gamemode gcc-multilib autoconf automake libtool flex
+  bison gcc-doc gcc-15-multilib gcc-15-locales gdb-x86-64-linux-gnu
+  ddrescueview dmraid gpart kpartx mtools reiser4progs reiserfsprogs udftools
+  yelp libxml-dumper-perl default-jre glibc-doc:i386 locales:i386
+  libnss-nis:i386 libnss-nisplus:i386 libenchant-2-voikko
+  low-memory-monitor:i386 libjs-angularjs liblinear-tools liblinear-dev
+  libparted-dev lksctp-tools lm-sensors:i386 snmp-mibs-downloader libssl-doc
+  libstdc++-15-doc libuv1-doc libvirt-clients-qemu libvirt-login-shell
+  libvirt-daemon-driver-lxc libvirt-daemon-driver-storage-gluster
+  libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd
+  libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-vbox
+  libvirt-daemon-driver-xen libvirt-daemon-plugin-sanlock auditd systemtap
+  numad passt nfs-common gstreamer1.0-libav gstreamer1.0-plugins-bad
+  gstreamer1.0-alsa geoipupdate geoip-database geoip-database-extra
+  libjs-leaflet libjs-leaflet.markercluster wireshark-doc make-doc goverlay
+  ncat ndiff zenmap node-babel-plugin-polyfill-es-shims node-babel7-debug
+  livescript chai node-jest-diff node-opener openjdk-21-demo openjdk-21-source
+  visualvm fonts-dejavu-extra fonts-ipafont-gothic fonts-ipafont-mincho
+  fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic openjdk-25-demo
+  openjdk-25-source pinentry-doc containernetworking-plugins samba vde2
+  sqlite3-doc libudev0 nvidia-driver-libs nvidia-vulkan-icd
+  gtk2-engines-pixbuf:i386 libgtk2.0-0t64:i386 | libgtk2.0-0:i386
+  libudev0:i386 nvidia-driver-libs:i386 nvidia-vulkan-icd:i386 pipewire:i386
+  virt-viewer python3-guestfs
+Recommended packages:
+  adb fastboot pigz ubuntu-fan fakeroot libalgorithm-merge-perl
+  libgamemode0:i386 libgamemodeauto0:i386 gnome-keyring-pkcs11
+  libpam-gnome-keyring tree enchant-2 libvirt-daemon-driver-interface
+  libvirt-daemon-driver-storage-disk libvirt-daemon-driver-storage-iscsi
+  libvirt-daemon-driver-storage-logical libvirt-daemon-driver-storage-mpath
+  libvirt-daemon-driver-storage-scsi libvirt-daemon-lock
+  libvirt-daemon-plugin-lockd swtpm swtpm-tools libvirt-glib-1.0-data
+  libvirt-l10n libxapp-gtk3-module xapp-sn-watcher mangohud:i386 mangohudctl
+  mangoplot aardvark-dns node-re2 node-require-from-string wabt nodejs-doc
+  node-tap libxt-dev libatk-wrapper-java-jni fonts-dejavu-extra mkdocs buildah
+  catatonit | tini | dumb-init containers-storage criu libcriu2 passt
+  slirp4netns uidmap python3-dev libjs-sphinxdoc
+  ipxe-qemu-256k-compat-efi-roms ovmf qemu-system-gui
+  qemu-system-modules-spice qemu-system-modules-opengl qemu-block-extra
+  cpu-checker libasound2-plugins libva-glx2 libxcb-dri2-0
+  libasound2-plugins:i386 libegl1:i386 libfontconfig1:i386 libsdl2-2.0-0:i386
+  libusb-1.0-0:i386 libva-drm2:i386 libva-glx2:i386 libxcb-dri2-0:i386
+  libxdamage1:i386 libxkbcommon-x11-0:i386 libxkbcommon0:i386 libxss1:i386
+  xterm:i386 | x-terminal-emulator:i386 libnss-mymachines
+  gir1.2-ayatanaappindicator3-0.1 | gir1.2-appindicator3-0.1
+  gir1.2-spiceclientglib-2.0 gir1.2-spiceclientgtk-3.0
+The following packages will be REMOVED:
+  intel-media-va-driver
+The following NEW packages will be installed:
+  android-sdk-platform-tools android-sdk-platform-tools-common
+  android-udev-rules apparmor-profiles apparmor-utils binutils binutils-common
+  binutils-x86-64-linux-gnu btop build-essential ca-certificates-java cmake
+  cmake-data code conmon containerd dmtracedump docker-buildx
+  docker-compose-v2 docker.io dpkg-dev eslint etc1tool f2fs-tools fio flatpak
+  freerdp-wayland freerdp3-wayland g++ g++-15 g++-15-x86-64-linux-gnu
+  g++-x86-64-linux-gnu gamemode gamemode-daemon gcc gcc-15
+  gcc-15-x86-64-linux-gnu gcc-16-base:i386 gcc-x86-64-linux-gnu gcr gcr4
+  gddrescue gir1.2-gtk-vnc-2.0 gir1.2-gtksource-4 gir1.2-javascriptcoregtk-4.1
+  gir1.2-libosinfo-1.0 gir1.2-libvirt-glib-1.0 gir1.2-soup-3.0 gir1.2-vte-2.91
+  gir1.2-webkit2-4.1 git-lfs gnome-keyring golang-github-containers-common
+  golang-github-containers-image gparted gparted-common gufw gyp handlebars
+  hprof-conv hwinfo igt-gpu-tools intel-gpu-tools
+  intel-media-va-driver-non-free intune-portal inxi iperf3 ipxe-qemu
+  java-common libada-url0-3 libadwaita-1-0 libasan8 libatkmm-1.6-1v5
+  libatomic1:i386 libbcg729-0 libbinutils libblkid1:i386 libbsd0:i386
+  libc-gconv-modules-extra:i386 libc6:i386 libcacard0 libcairomm-1.0-1v5
+  libcares2 libcc1-0 libcomposefs1 libcrypt-dev libcrypt1:i386 libctf-nobfd0
+  libctf0 libdaxctl1 libdisplay-info3:i386 libdrm-amdgpu1:i386
+  libdrm-intel1:i386 libdrm-nouveau2 libdrm2:i386 libedit2:i386
+  libelf1t64:i386 libenchant-2-2 libevent-core-2.1-7t64 libexpat1:i386
+  libfalcosecurity0t64 libfdt1 libffi8:i386 libflatpak0 libgamemode0
+  libgamemodeauto0 libgbm1:i386 libgcc-15-dev libgcc-s1:i386 libgck-1-0
+  libgck-2-2 libgcr-4-4 libgcr-base-3-1 libgcr-ui-3-1 libgee-0.8-2 libgfapi0
+  libgfrpc0 libgfxdr0 libgl1:i386 libgl1-mesa-dri:i386 libglib2.0-0t64:i386
+  libglibmm-2.4-1t64 libglusterfs0 libglvnd0:i386 libglx-mesa0:i386
+  libglx0:i386 libgmp10:i386 libgnomekbd-common libgnomekbd8
+  libgnutls30t64:i386 libgpg-error0:i386 libgprofng0 libgrpc++1.51t64
+  libgrpc29t64 libgtk-vnc-2.0-0 libgtkmm-3.0-1t64 libgtksourceview-4-0
+  libgtksourceview-4-common libgvnc-1.0-0 libhd21t64 libhogweed6t64:i386
+  libhwasan0 libidn2-0:i386 libiperf0 libitm1 libjavascriptcoregtk-4.1-0
+  libjs-events libjs-inherits libjs-prettify libjs-regenerate libjs-source-map
+  libjs-sprintf-js libjs-util libjsoncpp26 libjudydebian1 liblinear4
+  libllhttp9.3 libllvm21:i386 liblsan0 libmalcontent-0-0 libmalcontent-common
+  libmd0:i386 libmount1:i386 libmpathcmd0 libmpathpersist0 libmultipath0
+  libnbd0 libndctl6 libnettle8t64:i386 libnghttp3-9 libnm0:i386 libnode-dev
+  libnode127 libopencore-amrnb0 liboping0 libosinfo-1.0-0 libosinfo-l10n
+  libostree-1-1 libp11-kit0:i386 libpam-pwquality libpangomm-1.4-1v5
+  libparted-fs-resize0t64 libpciaccess0:i386 libpcre2-8-0:i386 libpkgconf7
+  libpmem1 libpmemobj1 libpng16-16t64:i386 libprotoc32t64 libqb100
+  libquadmath0 librados2 librbd1 librdmacm1t64 libre2-11 librhash1 libsctp1
+  libselinux1:i386 libsensors5:i386 libsimdjson29 libslirp0 libsmi2t64
+  libspandsp2t64 libssl-dev libstdc++-15-dev libstdc++6:i386 libsubid5
+  libtasn1-6:i386 libtinfo6:i386 libtsan2 libubsan1 libudev1:i386 libumockdev0
+  libunistring5:i386 libusbguard1 libusbredirparser1t64 libuv1-dev
+  libva-x11-2:i386 libva2:i386 libvirt-clients libvirt-common libvirt-daemon
+  libvirt-daemon-common libvirt-daemon-config-network
+  libvirt-daemon-config-nwfilter libvirt-daemon-driver-network
+  libvirt-daemon-driver-nodedev libvirt-daemon-driver-nwfilter
+  libvirt-daemon-driver-qemu libvirt-daemon-driver-secret
+  libvirt-daemon-driver-storage libvirt-daemon-log libvirt-daemon-system
+  libvirt-glib-1.0-0 libvirt0 libvulkan1:i386 libwayland-client0:i386
+  libwebkit2gtk-4.1-0 libwireshark-data libwireshark19 libwiretap16
+  libwsutil17 libx11-6:i386 libx11-xcb1:i386 libx86emu3 libxapp1 libxau6:i386
+  libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386
+  libxcb-shm0:i386 libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386
+  libxdmcp6:i386 libxext6:i386 libxfixes3:i386 libxi6:i386 libxinerama1:i386
+  libxklavier16 libxml2-16:i386 libxshmfence1:i386 libxxf86vm1:i386
+  libzstd1:i386 lto-disabled-list make mangohud mdevctl memtester
+  mesa-libgallium:i386 mesa-vulkan-drivers:i386 microsoft-edge-stable
+  microsoft-identity-broker net-tools netavark ninja-build nmap nmap-common
+  node-abbrev node-acorn node-agent-base node-ajv node-ajv-keywords
+  node-ampproject-remapping node-ansi-escapes node-ansi-regex node-ansi-styles
+  node-anymatch node-aproba node-archy node-are-we-there-yet node-argparse
+  node-arrify node-assert node-async node-async-each
+  node-babel-helper-define-polyfill-provider
+  node-babel-plugin-add-module-exports node-babel-plugin-lodash
+  node-babel-plugin-polyfill-corejs2 node-babel-plugin-polyfill-corejs3
+  node-babel-plugin-polyfill-regenerator node-babel7 node-babel7-runtime
+  node-balanced-match node-base64-js node-binary-extensions
+  node-brace-expansion node-braces node-browserslist node-builtins
+  node-cacache node-camelcase node-caniuse-lite node-chalk node-chokidar
+  node-chownr node-chrome-trace-event node-ci-info node-cjs-module-lexer
+  node-cli-table node-cliui node-clone node-clone-deep node-color-convert
+  node-color-name node-colors node-columnify node-commander node-commondir
+  node-concat-stream node-console-control-strings node-convert-source-map
+  node-copy-concurrently node-core-js node-core-js-compat node-core-js-pure
+  node-core-util-is node-corepack node-css-loader node-css-selector-tokenizer
+  node-data-uri-to-buffer node-debbundle-es-to-primitive node-debug
+  node-decamelize node-decompress-response node-deep-equal node-deep-is
+  node-defaults node-define-properties node-define-property node-defined
+  node-del node-delegates node-depd node-diff node-doctrine
+  node-electron-to-chromium node-encoding node-enhanced-resolve node-envinfo
+  node-err-code node-errno node-error-ex node-es-abstract node-es-module-lexer
+  node-es6-error node-escape-string-regexp node-escodegen node-eslint-scope
+  node-eslint-utils node-eslint-visitor-keys node-espree node-esprima
+  node-esquery node-esrecurse node-estraverse node-esutils node-events
+  node-execa node-fancy-log node-fast-deep-equal node-fast-levenshtein
+  node-fetch node-file-entry-cache node-fill-range node-find-cache-dir
+  node-find-up node-flat-cache node-flatted node-for-in node-for-own
+  node-foreground-child node-fs-readdir-recursive node-fs-write-stream-atomic
+  node-function-bind node-functional-red-black-tree node-gauge
+  node-get-caller-file node-get-stream node-glob node-glob-parent node-globals
+  node-globby node-got node-graceful-fs node-gyp node-has-flag
+  node-has-unicode node-hosted-git-info node-http-proxy-agent
+  node-https-proxy-agent node-iconv-lite node-icss-utils node-ieee754
+  node-iferr node-ignore node-imurmurhash node-indent-string node-inherits
+  node-ini node-interpret node-ip node-ip-regex node-is-arrayish
+  node-is-binary-path node-is-buffer node-is-descriptor node-is-extendable
+  node-is-extglob node-is-glob node-is-number node-is-path-cwd
+  node-is-path-inside node-is-plain-obj node-is-plain-object node-is-stream
+  node-is-windows node-isarray node-isexe node-isobject node-istanbul
+  node-jest-debbundle node-jest-worker node-js-tokens node-js-yaml node-jsesc
+  node-json-buffer node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify node-json5 node-jsonify
+  node-jsonparse node-kind-of node-levn node-llhttp node-loader-runner
+  node-locate-path node-lodash node-lodash-packages node-long
+  node-lowercase-keys node-lru-cache node-make-dir node-memfs node-memory-fs
+  node-merge-stream node-micromatch node-mime node-mime-types node-mimic-fn
+  node-mimic-response node-minimatch node-minimist node-minipass node-mkdirp
+  node-move-concurrently node-ms node-mute-stream node-n3 node-negotiator
+  node-neo-async node-nopt node-normalize-package-data node-normalize-path
+  node-npm-bundled node-npm-package-arg node-npm-run-path node-npmlog
+  node-object-assign node-object-inspect node-once node-optimist
+  node-optionator node-osenv node-p-cancelable node-p-limit node-p-locate
+  node-p-map node-parse-json node-path-dirname node-path-exists
+  node-path-is-absolute node-path-is-inside node-path-scurry node-path-type
+  node-picocolors node-pify node-pkg-dir node-postcss
+  node-postcss-modules-extract-imports node-postcss-modules-values
+  node-postcss-value-parser node-prelude-ls node-process-nextick-args
+  node-progress node-promise-inflight node-promise-retry node-promzard
+  node-prr node-quick-lru node-randombytes node-read node-read-package-json
+  node-read-pkg node-readable-stream node-readdirp node-rechoir
+  node-regenerate node-regenerate-unicode-properties node-regenerator-runtime
+  node-regenerator-transform node-regexpp node-regexpu-core node-regjsgen
+  node-regjsparser node-repeat-string node-require-directory node-resolve
+  node-resolve-cwd node-resolve-from node-resumer node-retry node-rimraf
+  node-run-queue node-safe-buffer node-schema-utils node-semver
+  node-serialize-javascript node-set-blocking node-set-immediate-shim
+  node-shebang-command node-shebang-regex node-signal-exit node-slash
+  node-slice-ansi node-source-list-map node-source-map node-source-map-support
+  node-spdx-correct node-spdx-exceptions node-spdx-expression-parse
+  node-spdx-license-ids node-sprintf-js node-ssri node-string-decoder
+  node-string-width node-strip-ansi node-strip-bom node-strip-eof
+  node-strip-json-comments node-supports-color node-tapable node-tape node-tar
+  node-terser node-text-table node-through node-time-stamp
+  node-to-fast-properties node-to-regex-range node-tslib node-type-check
+  node-typedarray node-undici node-unicode-canonical-property-names-ecmascript
+  node-unicode-match-property-ecmascript
+  node-unicode-match-property-value-ecmascript
+  node-unicode-property-aliases-ecmascript node-unique-filename node-util
+  node-util-deprecate node-uuid node-v8-compile-cache node-v8flags
+  node-validate-npm-package-license node-validate-npm-package-name
+  node-watchpack node-wcwidth.js node-webassemblyjs node-webpack-sources
+  node-which node-wide-align node-wordwrap node-wrap-ansi node-wrappy
+  node-write node-write-file-atomic node-xtend node-y18n node-yallist
+  node-yargs node-yargs-parser nodejs npm nvme-cli openjdk-21-jdk
+  openjdk-21-jdk-headless openjdk-21-jre openjdk-21-jre-headless
+  openjdk-25-jdk openjdk-25-jdk-headless openjdk-25-jre
+  openjdk-25-jre-headless osinfo-db p11-kit p11-kit-modules papirus-icon-theme
+  pinentry-gnome3 pipx pkg-config pkgconf pkgconf-bin
+  plasma-discover-backend-flatpak podman python3-apparmor python3-argcomplete
+  python3-gi-cairo python3-libapparmor python3-libvirt python3-libxml2
+  python3-packaging python3-pip python3-pip-whl python3-platformdirs
+  python3-setuptools-whl python3-userpath python3-venv python3-wheel
+  python3.14-venv qemu-guest-agent qemu-system-common qemu-system-data
+  qemu-system-x86 qemu-utils runc seabios shellcheck sqlite3 steam-devices
+  steam-installer steam-libs steam-libs:i386 steam-libs-i386:i386 stress-ng
+  systemd-container systemd-zram-generator terser testdisk timeshift tmux
+  traceroute tshark ubuntu-helper-virt-hwe ubuntu-virt unrar usbguard
+  virt-install virt-manager webpack whois wireguard-tools wireshark
+  wireshark-common xapp-symbolic-icons xapps-common xdg-dbus-proxy zenity
+  zenity-common zlib1g:i386
+The following packages will be upgraded:
+  apparmor bsdextrautils curl dmidecode eject fdisk fwupd
+  gir1.2-girepository-3.0 gir1.2-glib-2.0 git git-man gnutls-bin jq
+  kde-config-updates libapparmor1 libblkid1 libc-dev-bin
+  libc-gconv-modules-extra libc6 libc6-dbg libc6-dev libcurl3t64-gnutls
+  libcurl4t64 libegl-mesa0 libevent-2.1-7t64 libexpat1 libfdisk1
+  libfreerdp-client3-3 libfreerdp3-3 libfwupd3 libgbm1 libgirepository-2.0-0
+  libgl1-mesa-dri libglib2.0-0t64 libglib2.0-bin libglib2.0-data libglx-mesa0
+  libgnutls-dane0t64 libgnutls30t64 libjq1 liblastlog2-2 libminizip1t64
+  libmount1 libnm0 libnss-systemd libntfs-3g89t64 libpam-systemd libpciaccess0
+  libpng16-16t64 libpolkit-agent-1-0 libpolkit-gobject-1-0 libpython3.14
+  libpython3.14-minimal libpython3.14-stdlib libsmartcols1 libsoup-3.0-0
+  libsoup-3.0-common libsqlite3-0 libssl3t64 libsystemd-shared libsystemd0
+  libudev1 libuuid1 libwinpr3-3 libx11-6 libx11-xcb1 libxml2-16 locales
+  mesa-libgallium mesa-vulkan-drivers mount network-manager
+  network-manager-l10n ntfs-3g openssh-client openvpn pkexec plasma-discover
+  plasma-discover-backend-fwupd plasma-discover-backend-snap
+  plasma-discover-common plasma-discover-notifier polkitd python3.14
+  python3.14-gdbm python3.14-minimal remmina remmina-common remmina-plugin-rdp
+  remmina-plugin-secret remmina-plugin-vnc rfkill spice-vdagent systemd
+  systemd-coredump systemd-cryptsetup systemd-resolved systemd-sysv thermald
+  udev util-linux util-linux-extra uuid-runtime wget zlib1g
+105 upgraded, 693 newly installed, 1 to remove and 413 not upgraded.
+Need to get 1339 MB of archives.
+After this operation, 4663 MB of additional disk space will be used.
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Preconfiguring packages ...
+Fetched 1339 MB in 34s (39.5 MB/s)
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221449 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221697 files and directories currently installed.)
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221730 files and directories currently installed.)
+
+
+
+
+
+
+
+
+No diversion 'diversion of /sbin/ctrlaltdel to /sbin/ctrlaltdel.usr-is-merged by util-linux-extra', none removed.
+
+No diversion 'diversion of /sbin/fsck.cramfs to /sbin/fsck.cramfs.usr-is-merged by util-linux-extra', none removed.
+
+No diversion 'diversion of /sbin/fsck.minix to /sbin/fsck.minix.usr-is-merged by util-linux-extra', none removed.
+
+No diversion 'diversion of /sbin/mkfs.bfs to /sbin/mkfs.bfs.usr-is-merged by util-linux-extra', none removed.
+
+No diversion 'diversion of /sbin/mkfs.cramfs to /sbin/mkfs.cramfs.usr-is-merged by util-linux-extra', none removed.
+
+No diversion 'diversion of /sbin/mkfs.minix to /sbin/mkfs.minix.usr-is-merged by util-linux-extra', none removed.
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221730 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221730 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221736 files and directories currently installed.)
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221738 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221738 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221740 files and directories currently installed.)
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221742 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221742 files and directories currently installed.)
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221742 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221742 files and directories currently installed.)
+
+
+
+dpkg: intel-media-va-driver:amd64: dependency problems, but removing anyway as you requested:
+
+ va-driver-all:amd64 depends on intel-media-va-driver | intel-media-va-driver-non-free; however:
+
+  Package intel-media-va-driver:amd64 is to be removed.
+
+  Package intel-media-va-driver-non-free is not installed.
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221740 files and directories currently installed.)
+
+Removing intel-media-va-driver:amd64 (26.1.2+dfsg1-1) ...
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221738 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 221744 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adding 'diversion of /lib/x86_64-linux-gnu/libntfs-3g.so.89 to /lib/x86_64-linux-gnu/libntfs-3g.so.89.usr-is-merged by libntfs-3g89t64'
+
+Adding 'diversion of /lib/x86_64-linux-gnu/libntfs-3g.so.89.0.0 to /lib/x86_64-linux-gnu/libntfs-3g.so.89.0.0.usr-is-merged by libntfs-3g89t64'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adding 'diversion of /lib/systemd/system/libvirt-guests.service to /lib/systemd/system/libvirt-guests.service.usr-is-merged by libvirt-daemon-common'
+
+Adding 'diversion of /lib/systemd/system/virt-guest-shutdown.target to /lib/systemd/system/virt-guest-shutdown.target.usr-is-merged by libvirt-daemon-common'
+
+
+
+
+Adding 'diversion of /lib/systemd/system/virtlogd-admin.socket to /lib/systemd/system/virtlogd-admin.socket.usr-is-merged by libvirt-daemon-log'
+
+Adding 'diversion of /lib/systemd/system/virtlogd.service to /lib/systemd/system/virtlogd.service.usr-is-merged by libvirt-daemon-log'
+
+Adding 'diversion of /lib/systemd/system/virtlogd.socket to /lib/systemd/system/virtlogd.socket.usr-is-merged by libvirt-daemon-log'
+
+
+
+
+Adding 'diversion of /lib/systemd/system/libvirtd-admin.socket to /lib/systemd/system/libvirtd-admin.socket.usr-is-merged by libvirt-daemon'
+
+Adding 'diversion of /lib/systemd/system/libvirtd-ro.socket to /lib/systemd/system/libvirtd-ro.socket.usr-is-merged by libvirt-daemon'
+
+Adding 'diversion of /lib/systemd/system/libvirtd-tcp.socket to /lib/systemd/system/libvirtd-tcp.socket.usr-is-merged by libvirt-daemon'
+
+Adding 'diversion of /lib/systemd/system/libvirtd-tls.socket to /lib/systemd/system/libvirtd-tls.socket.usr-is-merged by libvirt-daemon'
+
+Adding 'diversion of /lib/systemd/system/libvirtd.service to /lib/systemd/system/libvirtd.service.usr-is-merged by libvirt-daemon'
+
+Adding 'diversion of /lib/systemd/system/libvirtd.socket to /lib/systemd/system/libvirtd.socket.usr-is-merged by libvirt-daemon'
+
+
+
+
+
+
+
+Adding 'diversion of /etc/dnsmasq.d-available/libvirt-daemon to /etc/dnsmasq.d-available/libvirt-daemon.dpkg-upgrade by libvirt-daemon-config-network'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/bin/traceroute.db to provide /usr/bin/traceroute (traceroute) in auto mode
+
+update-alternatives: using /usr/bin/traceroute6.db to provide /usr/bin/traceroute6 (traceroute6) in auto mode
+
+update-alternatives: using /usr/bin/lft.db to provide /usr/bin/lft (lft) in auto mode
+
+update-alternatives: using /usr/bin/traceproto.db to provide /usr/bin/traceproto (traceproto) in auto mode
+
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+
+
+
+
+
+
+
+
+Removing 'diversion of /lib/x86_64-linux-gnu/libntfs-3g.so.89 to /lib/x86_64-linux-gnu/libntfs-3g.so.89.usr-is-merged by libntfs-3g89t64'
+
+Removing 'diversion of /lib/x86_64-linux-gnu/libntfs-3g.so.89.0.0 to /lib/x86_64-linux-gnu/libntfs-3g.so.89.0.0.usr-is-merged by libntfs-3g89t64'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Running in chroot, ignoring request.
+
+Running in chroot, ignoring request.
+
+Running in chroot, ignoring request.
+
+Running in chroot, ignoring request.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/bin/unrar-nonfree to provide /usr/bin/unrar (unrar) in auto mode
+
+
+
+
+
+
+
+
+Generating locales (this might take a while)...
+
+  en_AG.UTF-8... done
+
+  en_AU.UTF-8... done
+
+  en_BW.UTF-8... done
+
+  en_CA.UTF-8... done
+
+  en_DK.UTF-8... done
+
+  en_GB.UTF-8... done
+
+  en_HK.UTF-8... done
+
+  en_IE.UTF-8... done
+
+  en_IL.UTF-8... done
+
+  en_IN.UTF-8... done
+
+  en_NG.UTF-8... done
+
+  en_NZ.UTF-8... done
+
+  en_PH.UTF-8... done
+
+  en_SG.UTF-8... done
+
+  en_US.UTF-8... done
+
+  en_ZA.UTF-8... done
+
+  en_ZM.UTF-8... done
+
+  en_ZW.UTF-8... done
+
+Generation complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Installing new version of config file /etc/apparmor.d/Xorg ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/audio ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/authentication ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/base ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/dovecot-common ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/fonts ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/nameservice ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/nameservice-strict ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/postfix-common ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/transmission-common ...
+
+Installing new version of config file /etc/apparmor.d/abstractions/wutmp ...
+
+Installing new version of config file /etc/apparmor.d/alsamixer ...
+
+Installing new version of config file /etc/apparmor.d/brave ...
+
+Installing new version of config file /etc/apparmor.d/dig ...
+
+Installing new version of config file /etc/apparmor.d/fusermount3 ...
+
+Installing new version of config file /etc/apparmor.d/irssi ...
+
+Installing new version of config file /etc/apparmor.d/linux-boot-prober ...
+
+Installing new version of config file /etc/apparmor.d/lsblk ...
+
+Installing new version of config file /etc/apparmor.d/lsusb ...
+
+Installing new version of config file /etc/apparmor.d/os-prober ...
+
+Installing new version of config file /etc/apparmor.d/plasmashell ...
+
+Installing new version of config file /etc/apparmor.d/proftpd ...
+
+Installing new version of config file /etc/apparmor.d/systemd-detect-virt ...
+
+Installing new version of config file /etc/apparmor.d/tnftp ...
+
+Installing new version of config file /etc/apparmor.d/transmission ...
+
+Installing new version of config file /etc/apparmor.d/tunables/coreutils ...
+
+Installing new version of config file /etc/apparmor.d/who ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Created symlink '/etc/systemd/system/default.target.wants/netavark-dhcp-proxy.service' → '/usr/lib/systemd/system/netavark-dhcp-proxy.service'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/netavark-dhcp-proxy.socket' → '/usr/lib/systemd/system/netavark-dhcp-proxy.socket'.
+
+Created symlink '/etc/systemd/system/firewalld.service.wants/netavark-firewalld-reload.service' → '/usr/lib/systemd/system/netavark-firewalld-reload.service'.
+
+Unit /usr/lib/systemd/system/netavark-firewalld-reload.service is added as a dependency to a non-existent unit firewalld.service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+No JRE found. Skipping Java certificates setup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/containerd.service' → '/usr/lib/systemd/system/containerd.service'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+
+
+
+
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of start.
+
+Running in chroot, ignoring request.
+
+
+
+
+
+
+
+
+
+
+
+Initializing machine ID from random generator.
+
+
+Error: Could not create NMClient object: Could not connect: No such file or directory
+
+WARNING: NetworkManager could not reload connections ...
+
+
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '/usr/lib/systemd/system/docker.service'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/docker.socket' → '/usr/lib/systemd/system/docker.socket'.
+
+invoke-rc.d: unknown initscript, /etc/init.d/docker not found.
+
+invoke-rc.d: could not determine current runlevel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of restart.
+
+
+
+
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of start.
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of start.
+
+Created symlink '/etc/systemd/system/dbus-org.usbguard.service' → '/usr/lib/systemd/system/usbguard-dbus.service'.
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/usbguard-dbus.service' → '/usr/lib/systemd/system/usbguard-dbus.service'.
+
+Created symlink '/etc/systemd/system/basic.target.wants/usbguard.service' → '/usr/lib/systemd/system/usbguard.service'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/machines.target' → '/usr/lib/systemd/system/machines.target'.
+
+
+
+
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of restart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Installing new version of config file /etc/systemd/resolved.conf ...
+
+
+
+
+
+
+Cache read/write disabled: interface file missing. (Kernel needs AppArmor 2.4 compatibility patch.)
+
+Warning: unable to find a suitable fs in /proc/mounts, is it mounted?
+
+Use --subdomainfs to override.
+
+update-alternatives: using /usr/bin/microsoft-edge-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+
+update-alternatives: using /usr/bin/microsoft-edge-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+
+update-alternatives: using /usr/bin/microsoft-edge-stable to provide /usr/bin/microsoft-edge (microsoft-edge) in auto mode
+
+
+
+
+
+
+
+Removing 'diversion of /lib/systemd/system/virtlogd-admin.socket to /lib/systemd/system/virtlogd-admin.socket.usr-is-merged by libvirt-daemon-log'
+
+Removing 'diversion of /lib/systemd/system/virtlogd.service to /lib/systemd/system/virtlogd.service.usr-is-merged by libvirt-daemon-log'
+
+Removing 'diversion of /lib/systemd/system/virtlogd.socket to /lib/systemd/system/virtlogd.socket.usr-is-merged by libvirt-daemon-log'
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of start.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/virtlogd-admin.socket' → '/usr/lib/systemd/system/virtlogd-admin.socket'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/virtlogd.socket' → '/usr/lib/systemd/system/virtlogd.socket'.
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/virtlogd.service' → '/usr/lib/systemd/system/virtlogd.service'.
+
+
+
+
+
+
+Created symlink '/etc/systemd/system/default.target.wants/nvmefc-boot-connections.service' → '/usr/lib/systemd/system/nvmefc-boot-connections.service'.
+
+Created symlink '/etc/systemd/system/default.target.wants/nvmf-autoconnect.service' → '/usr/lib/systemd/system/nvmf-autoconnect.service'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stopping existing broker services...
+
+Running in chroot, ignoring command 'stop'
+
+Running in chroot, ignoring command 'stop'
+
+Running in chroot, ignoring command 'daemon-reload'
+
+Reloading systemd and DBus configuration...
+
+Running in chroot, ignoring command 'daemon-reload'
+
+Running in chroot, ignoring command 'reload'
+
+Configuration file /usr/lib/systemd/system/microsoft-identity-device-broker.service is marked executable. Please remove executable permission bits. Proceeding anyway.
+
+Microsoft Identity Broker installation completed.
+
+
+
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/qemu-kvm.service' → '/usr/lib/systemd/system/qemu-kvm.service'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Creating group 'swtpm' with GID 976.
+
+Creating group 'libvirt-qemu' with GID 64055.
+
+Creating user 'swtpm' (virtual TPM software stack) with UID 976 and GID 976.
+
+Creating user 'libvirt-qemu' (libvirt QEMU user) with UID 64055 and GID 64055.
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+
+
+
+
+
+
+
+
+
+
+
+
+Created symlink '/etc/systemd/user/graphical-session-pre.target.wants/gnome-keyring-daemon.service' → '/usr/lib/systemd/user/gnome-keyring-daemon.service'.
+
+Created symlink '/etc/systemd/user/sockets.target.wants/gnome-keyring-daemon.socket' → '/usr/lib/systemd/user/gnome-keyring-daemon.socket'.
+
+
+Created symlink '/etc/systemd/user/graphical-session-pre.target.wants/gcr-ssh-agent.service' → '/usr/lib/systemd/user/gcr-ssh-agent.service'.
+
+Created symlink '/etc/systemd/user/sockets.target.wants/gcr-ssh-agent.socket' → '/usr/lib/systemd/user/gcr-ssh-agent.socket'.
+
+
+
+
+
+
+
+Created symlink '/etc/systemd/user/graphical-session.target.wants/intune-agent.timer' → '/usr/lib/systemd/user/intune-agent.timer'.
+
+/usr/sbin/policy-rc.d returned 101, not running 'start intune-agent.timer'
+
+Created symlink '/etc/systemd/system/sockets.target.wants/intune-daemon.socket' → '/usr/lib/systemd/system/intune-daemon.socket'.
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/bin/babeljs-7 to provide /usr/bin/babeljs (babeljs) in auto mode
+
+update-alternatives: using /usr/bin/babeljs-7-external-helpers to provide /usr/bin/babeljs-external-helpers (babeljs-external-helpers) in auto mode
+
+update-alternatives: using /usr/bin/babeljs-7-node to provide /usr/bin/babeljs-node (babeljs-node) in auto mode
+
+update-alternatives: using /usr/bin/babeljs-7-parser to provide /usr/bin/babeljs-parser (babeljs-parser) in auto mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-initramfs: Generating /boot/initrd.img-7.0.0-14-generic
+
+cryptsetup: WARNING: Couldn't determine root device
+
+
+
+
+Removing 'diversion of /lib/systemd/system/libvirt-guests.service to /lib/systemd/system/libvirt-guests.service.usr-is-merged by libvirt-daemon-common'
+
+Removing 'diversion of /lib/systemd/system/virt-guest-shutdown.target to /lib/systemd/system/virt-guest-shutdown.target.usr-is-merged by libvirt-daemon-common'
+
+Creating group 'libvirt' with GID 975.
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/libvirt-guests.service' → '/usr/lib/systemd/system/libvirt-guests.service'.
+
+
+
+Removing 'diversion of /lib/systemd/system/libvirtd-admin.socket to /lib/systemd/system/libvirtd-admin.socket.usr-is-merged by libvirt-daemon'
+
+Removing 'diversion of /lib/systemd/system/libvirtd-ro.socket to /lib/systemd/system/libvirtd-ro.socket.usr-is-merged by libvirt-daemon'
+
+Removing 'diversion of /lib/systemd/system/libvirtd-tcp.socket to /lib/systemd/system/libvirtd-tcp.socket.usr-is-merged by libvirt-daemon'
+
+Removing 'diversion of /lib/systemd/system/libvirtd-tls.socket to /lib/systemd/system/libvirtd-tls.socket.usr-is-merged by libvirt-daemon'
+
+Removing 'diversion of /lib/systemd/system/libvirtd.service to /lib/systemd/system/libvirtd.service.usr-is-merged by libvirt-daemon'
+
+Removing 'diversion of /lib/systemd/system/libvirtd.socket to /lib/systemd/system/libvirtd.socket.usr-is-merged by libvirt-daemon'
+
+invoke-rc.d: could not determine current runlevel
+
+invoke-rc.d: policy-rc.d denied execution of start.
+
+Created symlink '/etc/systemd/system/multi-user.target.wants/libvirtd.service' → '/usr/lib/systemd/system/libvirtd.service'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/libvirtd.socket' → '/usr/lib/systemd/system/libvirtd.socket'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/libvirtd-ro.socket' → '/usr/lib/systemd/system/libvirtd-ro.socket'.
+
+Created symlink '/etc/systemd/system/sockets.target.wants/libvirtd-admin.socket' → '/usr/lib/systemd/system/libvirtd-admin.socket'.
+
+
+
+
+
+
+
+
+
+
+
+
+Removing 'diversion of /etc/dnsmasq.d-available/libvirt-daemon to /etc/dnsmasq.d-available/libvirt-daemon.dpkg-upgrade by libvirt-daemon-config-network'
+
+Enabling libvirt default network
+
+
+
+
+Adding debian:ACCVRAIZ1.pem
+
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+
+Adding debian:ANF_Secure_Server_Root_CA.pem
+
+Adding debian:Actalis_Authentication_Root_CA.pem
+
+Adding debian:AffirmTrust_Commercial.pem
+
+Adding debian:AffirmTrust_Networking.pem
+
+Adding debian:AffirmTrust_Premium.pem
+
+Adding debian:AffirmTrust_Premium_ECC.pem
+
+Adding debian:Amazon_Root_CA_1.pem
+
+Adding debian:Amazon_Root_CA_2.pem
+
+Adding debian:Amazon_Root_CA_3.pem
+
+Adding debian:Amazon_Root_CA_4.pem
+
+Adding debian:Atos_TrustedRoot_2011.pem
+
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+
+Adding debian:BJCA_Global_Root_CA1.pem
+
+Adding debian:BJCA_Global_Root_CA2.pem
+
+Adding debian:Buypass_Class_2_Root_CA.pem
+
+Adding debian:Buypass_Class_3_Root_CA.pem
+
+Adding debian:CA_Disig_Root_R2.pem
+
+Adding debian:CFCA_EV_ROOT.pem
+
+Adding debian:COMODO_Certification_Authority.pem
+
+Adding debian:COMODO_ECC_Certification_Authority.pem
+
+Adding debian:COMODO_RSA_Certification_Authority.pem
+
+Adding debian:Certainly_Root_E1.pem
+
+Adding debian:Certainly_Root_R1.pem
+
+Adding debian:Certigna.pem
+
+Adding debian:Certigna_Root_CA.pem
+
+Adding debian:Certum_EC-384_CA.pem
+
+Adding debian:Certum_Trusted_Network_CA.pem
+
+Adding debian:Certum_Trusted_Network_CA_2.pem
+
+Adding debian:Certum_Trusted_Root_CA.pem
+
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+
+Adding debian:D-TRUST_BR_Root_CA_2_2023.pem
+
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+
+Adding debian:D-TRUST_EV_Root_CA_2_2023.pem
+
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+
+Adding debian:DigiCert_Global_Root_CA.pem
+
+Adding debian:DigiCert_Global_Root_G2.pem
+
+Adding debian:DigiCert_Global_Root_G3.pem
+
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+
+Adding debian:DigiCert_Trusted_Root_G4.pem
+
+Adding debian:Entrust_Root_Certification_Authority.pem
+
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+
+Adding debian:FIRMAPROFESIONAL_CA_ROOT-A_WEB.pem
+
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+
+Adding debian:GLOBALTRUST_2020.pem
+
+Adding debian:GTS_Root_R1.pem
+
+Adding debian:GTS_Root_R2.pem
+
+Adding debian:GTS_Root_R3.pem
+
+Adding debian:GTS_Root_R4.pem
+
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+
+Adding debian:GlobalSign_Root_E46.pem
+
+Adding debian:GlobalSign_Root_R46.pem
+
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+
+Adding debian:HiPKI_Root_CA_-_G1.pem
+
+Adding debian:Hongkong_Post_Root_CA_3.pem
+
+Adding debian:ISRG_Root_X1.pem
+
+Adding debian:ISRG_Root_X2.pem
+
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+
+Adding debian:Izenpe.com.pem
+
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+
+Adding debian:OISTE_Server_Root_ECC_G1.pem
+
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+
+Adding debian:QuoVadis_Root_CA_2.pem
+
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+
+Adding debian:QuoVadis_Root_CA_3.pem
+
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+
+Adding debian:SZAFIR_ROOT_CA2.pem
+
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+
+Adding debian:SecureSign_Root_CA12.pem
+
+Adding debian:SecureSign_Root_CA14.pem
+
+Adding debian:SecureSign_Root_CA15.pem
+
+Adding debian:SecureTrust_CA.pem
+
+Adding debian:Secure_Global_CA.pem
+
+Adding debian:Security_Communication_ECC_RootCA1.pem
+
+Adding debian:Security_Communication_RootCA2.pem
+
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+
+Adding debian:SwissSign_RSA_TLS_Root_CA_2022_-_1.pem
+
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+
+Adding debian:TWCA_CYBER_Root_CA.pem
+
+Adding debian:TWCA_Global_Root_CA.pem
+
+Adding debian:TWCA_Root_Certification_Authority.pem
+
+Adding debian:Telekom_Security_TLS_ECC_Root_2020.pem
+
+Adding debian:Telekom_Security_TLS_RSA_Root_2023.pem
+
+Adding debian:TeliaSonera_Root_CA_v1.pem
+
+Adding debian:Telia_Root_CA_v2.pem
+
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+
+Adding debian:TrustAsia_TLS_ECC_Root_CA.pem
+
+Adding debian:TrustAsia_TLS_RSA_Root_CA.pem
+
+Adding debian:Trustwave_Global_Certification_Authority.pem
+
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+
+Adding debian:TunTrust_Root_CA.pem
+
+Adding debian:UCA_Extended_Validation_Root.pem
+
+Adding debian:UCA_Global_G2_Root.pem
+
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+
+Adding debian:_OISTE_Server_Root_RSA_G1.pem
+
+Adding debian:certSIGN_ROOT_CA.pem
+
+Adding debian:certSIGN_Root_CA_G2.pem
+
+Adding debian:e-Szigno_Root_CA_2017.pem
+
+Adding debian:ePKI_Root_Certification_Authority.pem
+
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+
+Adding debian:emSign_Root_CA_-_C1.pem
+
+Adding debian:emSign_Root_CA_-_G1.pem
+
+Adding debian:vTrus_ECC_Root_CA.pem
+
+Adding debian:vTrus_Root_CA.pem
+
+done.
+
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jnativescan to provide /usr/bin/jnativescan (jnativescan) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jwebserver to provide /usr/bin/jwebserver (jwebserver) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+
+
+
+
+
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+
+
+update-alternatives: using /usr/lib/jvm/java-25-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+
+
+
+  -> Bundling Microsoft Entra ID sign-in (Himmelblau)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version (2.43-2ubuntu2.4).
+libc6 set to manually installed.
+libdbus-1-3 is already the newest version (1.16.2-2ubuntu4).
+libdbus-1-3 set to manually installed.
+libnss-systemd is already the newest version (259.9-0ubuntu0.1).
+libnss-systemd set to manually installed.
+libsqlite3-0 is already the newest version (3.46.1-9ubuntu0.3).
+libsqlite3-0 set to manually installed.
+libssl3t64 is already the newest version (3.5.5-1ubuntu3.7).
+libssl3t64 set to manually installed.
+libtss2-esys-3.0.2-0t64 is already the newest version (4.1.3-6).
+libtss2-esys-3.0.2-0t64 set to manually installed.
+libtss2-mu-4.0.1-0t64 is already the newest version (4.1.3-6).
+libtss2-mu-4.0.1-0t64 set to manually installed.
+libtss2-tctildr0t64 is already the newest version (4.1.3-6).
+libtss2-tctildr0t64 set to manually installed.
+libudev1 is already the newest version (259.9-0ubuntu0.1).
+libudev1 set to manually installed.
+Solving dependencies...
+The following additional packages will be installed:
+  accountsservice aptdaemon aptdaemon-data geocode-glib-common
+  gir1.2-accountsservice-1.0 gir1.2-adw-1 gir1.2-gck-2 gir1.2-gcr-4
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm-1.0 gir1.2-geoclue-2.0
+  gir1.2-gnomebg-4.0 gir1.2-gnomebluetooth-3.0 gir1.2-gnomedesktop-4.0
+  gir1.2-gnomeqr-4.0 gir1.2-graphene-1.0 gir1.2-gtk-4.0 gir1.2-gweather-4.0
+  gir1.2-ibus-1.0 gir1.2-mutter-18 gir1.2-nm-1.0 gir1.2-nma4-1.0
+  gir1.2-polkit-1.0 gir1.2-rsvg-2.0 gir1.2-upowerglib-1.0 gjs
+  gnome-bluetooth-3-common gnome-control-center gnome-control-center-data
+  gnome-desktop3-data gnome-online-accounts gnome-settings-daemon
+  gnome-settings-daemon-common gnome-shell-common heif-gdk-pixbuf
+  heif-thumbnailer language-selector-gnome libaccountsservice0
+  libcolord-gtk4-1t64 libecal-2.0-3 libgdm1 libgeocode-glib-2-0 libgjs0
+  libgnome-autoar-0-0 libgnome-bg-4-2t64 libgnome-bluetooth-3.0-13
+  libgnome-bluetooth-ui-3.0-13 libgnome-desktop-4-2t64 libgnome-qr-4-0
+  libgoa-1.0-0b libgoa-1.0-common libgoa-backend-1.0-2 libgsound0t64
+  libgtk-4-1 libgtk-4-common libgtop-2.0-11 libgtop2-common libgweather-4-0t64
+  libgweather-4-common libheif-plugin-aomdec libheif-plugin-aomenc
+  libheif-plugin-j2kdec libheif-plugin-libde265 libheif-plugin-x265 libheif1
+  libical3t64 libinsights0 libjxl-gdk-pixbuf libjxl0.11 libmozjs-140-0
+  libmutter-18-0 libnma-common libnma-gtk4-0 libpam-modules libpam-modules-bin
+  libpam-runtime librest-1.0-0 librsvg2-2 librsvg2-common
+  libwhoopsie-preferences0 mutter-common mutter-common-bin python3-aptdaemon
+  python3-aptdaemon.gtk3widgets python3-defer tecla ubuntu-wallpapers
+  ubuntu-wallpapers-resolute webp-pixbuf-loader whoopsie-preferences
+Suggested packages:
+  gnome-software | gnome-packagekit gnome-user-share malcontent-gui realmd
+  gir1.2-malcontent-0 gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2
+  gnome-browser-connector gnome-shell-extension-prefs ubuntu-wallpapers-karmic
+  ubuntu-wallpapers-lucid ubuntu-wallpapers-maverick ubuntu-wallpapers-natty
+  ubuntu-wallpapers-oneiric ubuntu-wallpapers-precise
+  ubuntu-wallpapers-quantal ubuntu-wallpapers-raring ubuntu-wallpapers-saucy
+  ubuntu-wallpapers-trusty ubuntu-wallpapers-utopic ubuntu-wallpapers-vivid
+  ubuntu-wallpapers-wily ubuntu-wallpapers-xenial ubuntu-wallpapers-yakkety
+  ubuntu-wallpapers-zesty ubuntu-wallpapers-artful ubuntu-wallpapers-bionic
+  ubuntu-wallpapers-cosmic ubuntu-wallpapers-disco ubuntu-wallpapers-eoan
+  ubuntu-wallpapers-focal ubuntu-wallpapers-groovy ubuntu-wallpapers-hirsute
+  ubuntu-wallpapers-impish ubuntu-wallpapers-jammy ubuntu-wallpapers-kinetic
+  ubuntu-wallpapers-lunar ubuntu-wallpapers-mantic ubuntu-wallpapers-noble
+  ubuntu-wallpapers-oracular ubuntu-wallpapers-plucky
+Recommended packages:
+  gnome-bluetooth-sendto gnome-control-center-faces gnome-remote-desktop
+  gnome-user-docs ibus nm-connection-editor | network-manager-gnome rygel
+  | rygel-tracker systemd-oomd evolution-data-server gdm3 gnome-menus
+  ubuntu-session | gnome-session yaru-theme-gnome-shell yelp
+The following NEW packages will be installed:
+  aptdaemon aptdaemon-data geocode-glib-common gir1.2-accountsservice-1.0
+  gir1.2-adw-1 gir1.2-gck-2 gir1.2-gcr-4 gir1.2-gdesktopenums-3.0
+  gir1.2-gdm-1.0 gir1.2-geoclue-2.0 gir1.2-gnomebg-4.0
+  gir1.2-gnomebluetooth-3.0 gir1.2-gnomedesktop-4.0 gir1.2-gnomeqr-4.0
+  gir1.2-graphene-1.0 gir1.2-gtk-4.0 gir1.2-gweather-4.0 gir1.2-ibus-1.0
+  gir1.2-mutter-18 gir1.2-nm-1.0 gir1.2-nma4-1.0 gir1.2-polkit-1.0
+  gir1.2-rsvg-2.0 gir1.2-upowerglib-1.0 gjs gnome-bluetooth-3-common
+  gnome-control-center gnome-control-center-data gnome-desktop3-data
+  gnome-online-accounts gnome-settings-daemon gnome-settings-daemon-common
+  gnome-shell gnome-shell-common heif-gdk-pixbuf heif-thumbnailer
+  language-selector-gnome libcolord-gtk4-1t64 libecal-2.0-3 libgdm1
+  libgeocode-glib-2-0 libgjs0 libgnome-autoar-0-0 libgnome-bg-4-2t64
+  libgnome-bluetooth-3.0-13 libgnome-bluetooth-ui-3.0-13
+  libgnome-desktop-4-2t64 libgnome-qr-4-0 libgoa-1.0-0b libgoa-1.0-common
+  libgoa-backend-1.0-2 libgsound0t64 libgtop-2.0-11 libgtop2-common
+  libgweather-4-0t64 libgweather-4-common libical3t64 libinsights0
+  libjxl-gdk-pixbuf libmozjs-140-0 libmutter-18-0 libnma-common libnma-gtk4-0
+  librest-1.0-0 libwhoopsie-preferences0 mutter-common mutter-common-bin
+  python3-aptdaemon python3-aptdaemon.gtk3widgets python3-defer tecla
+  ubuntu-wallpapers ubuntu-wallpapers-resolute webp-pixbuf-loader
+  whoopsie-preferences
+The following packages will be upgraded:
+  accountsservice libaccountsservice0 libgtk-4-1 libgtk-4-common
+  libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-j2kdec
+  libheif-plugin-libde265 libheif-plugin-x265 libheif1 libjxl0.11
+  libpam-modules libpam-modules-bin libpam-runtime libpam0g librsvg2-2
+  librsvg2-common
+17 upgraded, 75 newly installed, 0 to remove and 396 not upgraded.
+Need to get 98.2 MB of archives.
+After this operation, 161 MB of additional disk space will be used.
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Preconfiguring packages ...
+Fetched 98.2 MB in 5s (20.0 MB/s)
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 377774 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 377774 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 377774 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 377774 files and directories currently installed.)
+
+
+
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 377774 files and directories currently installed.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+update-alternatives: using /usr/share/gnome-shell/gnome-shell-theme.gresource to provide /usr/share/gnome-shell/gdm-theme.gresource (gdm-theme.gresource) in auto mode
+
+update-alternatives: using /usr/share/gnome-shell/gnome-shell-icons.gresource to provide /usr/share/gnome-shell/gdm-icons.gresource (gdm-icons.gresource) in auto mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -> Checking Himmelblau installs cleanly next to the Intune app
+  -> Himmelblau: OK (9 packages would be installed)
+  -> Installing the hardpoint-os package
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  hardpoint-os
+0 upgraded, 1 newly installed, 0 to remove and 396 not upgraded.
+Need to get 0 B/4191 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+N: Ignoring file 'cdrom.sources.hp-build' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 378913 files and directories currently installed.)
+
+
+
+
+  -> OS identity
+
+dpkg-divert: warning: diverting file '/usr/lib/os-release' from an Essential package with rename is dangerous, use --no-rename
+
+dpkg-divert: warning: diverting file '/etc/lsb-release' from an Essential package with rename is dangerous, use --no-rename
+
+dpkg-divert: warning: diverting file '/etc/issue' from an Essential package with rename is dangerous, use --no-rename
+
+dpkg-divert: warning: diverting file '/etc/issue.net' from an Essential package with rename is dangerous, use --no-rename
+
+  -> Renaming base-system launchers
+
+  -> Desktop defaults (HardPoint look, Windows 11 layout)
+
+  -> Login screen
+
+  -> Installer branding
+
+  -> Live session
+
+  -> Hiding the base system's welcome app and update notifier (HardPoint Setup / Updates replace them)
+
+  -> HardPoint branding applied
+
+  -> Applying security defaults
+
+  -> Configuring HardPoint Updates
+
+update-alternatives: using /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth to provide /usr/share/plymouth/themes/default.plymouth (default.plymouth) in auto mode
+
+  -> Boot splash: /usr/share/plymouth/themes/hardpoint/hardpoint.plymouth
+
+  -> Rebuilding the boot image
+
+  -> initrd.img-7.0.0-14-generic: plymouth/themes/default.plymouth plymouth/themes/details plymouth/themes/hardpoint plymouth/themes/kubuntu-text plymouth/themes/text plymouth/themes/text.plymouth 
+
+  -> HardPoint settings applied
+
+
+
+  -> Creating the live boot image
+cryptsetup: WARNING: Couldn't determine root device
+  -> Customisation complete
+==> Updating live boot files
+==> Live boot image: /mnt/hp/work/stage/live-initrd
+==> Initrd  -> /casper/initrd (HardPoint boot splash)
+==> Kernel  -> /casper/vmlinuz
+WARN: No casper uuid in the new initrd; leaving .disk/casper-uuid-* as is
+==> Compressing the system image (xz — slowest step)
+Unrecognised xattr prefix system.posix_acl_default
+Unrecognised xattr prefix system.posix_acl_access
+Unrecognised xattr prefix system.posix_acl_default
+==> System image: 5.5G
+==> Building the ISO with the same boot setup as the base image
+xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:/home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data, 81.8g free
+xorriso : WARNING : -volid text problematic as automatic mount point name
+xorriso : WARNING : -volid text does not comply to ISO 9660 / ECMA 119 rules
+Added to ISO image: directory '/'='/mnt/hp/work/iso'
+xorriso : UPDATE :     759 files added in 1 seconds
+xorriso : UPDATE :     759 files added in 1 seconds
+xorriso : NOTE : Copying to System Area: 32768 bytes from file '--interval:local_fs:0s-15s:zero_mbrpt,zero_gpt:/mnt/hp/cache/kubuntu-26.04-desktop-amd64.iso'
+xorriso : UPDATE :  2.40% done
+xorriso : UPDATE :  15.03% done
+xorriso : UPDATE :  28.00% done
+xorriso : UPDATE :  33.84% done, estimate finish Tue Oct 20 02:42:05 2026
+xorriso : UPDATE :  36.50% done, estimate finish Tue Oct 20 02:42:08 2026
+xorriso : UPDATE :  39.66% done, estimate finish Tue Oct 20 02:42:09 2026
+xorriso : UPDATE :  43.42% done, estimate finish Tue Oct 20 02:42:11 2026
+xorriso : UPDATE :  45.86% done, estimate finish Tue Oct 20 02:42:12 2026
+xorriso : UPDATE :  49.98% done, estimate finish Tue Oct 20 02:42:13 2026
+xorriso : UPDATE :  52.24% done, estimate finish Tue Oct 20 02:42:14 2026
+xorriso : UPDATE :  56.43% done, estimate finish Tue Oct 20 02:42:15 2026
+xorriso : UPDATE :  58.82% done, estimate finish Tue Oct 20 02:42:16 2026
+xorriso : UPDATE :  62.47% done, estimate finish Tue Oct 20 02:42:16 2026
+xorriso : UPDATE :  67.58% done, estimate finish Tue Oct 20 02:42:20 2026
+xorriso : UPDATE :  81.71% done, estimate finish Tue Oct 20 02:42:15 2026
+xorriso : UPDATE :  90.48% done, estimate finish Tue Oct 20 02:42:14 2026
+xorriso : UPDATE :  98.91% done
+ISO image produced: 3189765 sectors
+Written to medium : 3189765 sectors at LBA 0
+Writing to 'stdio:/home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso' completed successfully.
+
+==> Done: /home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso (6.1G)

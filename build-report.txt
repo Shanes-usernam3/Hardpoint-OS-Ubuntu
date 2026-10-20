@@ -1,0 +1,191 @@
+== Packages skipped (not available)
+dnsutils
+p7zip-full
+== Branding
+PRETTY_NAME="HardPoint OS 2"
+Calamares branding: branding: hardpoint
+Default look: LookAndFeelPackage=com.hardpointnetworks.desktop 
+  -> initrd.img-7.0.0-14-generic: plymouth/themes/default.plymouth plymouth/themes/details plymouth/themes/hardpoint plymouth/themes/kubuntu-text plymouth/themes/text plymouth/themes/text.plymouth 
+===== BRANDING AUDIT (2026-10-20) =====
+== 1. Visible app launchers with upstream names (menu)
+== 2. Active autostart entries from the base system
+kup-daemon.desktop | kup-daemon
+org.kde.kunifiedpush-distributor.desktop | kunifiedpush-distributor
+== 3. Upstream branding packages installed
+calamares-settings-kubuntu	Kubuntu Calamares Settings and Branding
+kubuntu-desktop	Kubuntu Plasma Desktop/Netbook system
+kubuntu-installer-prompt	Live ISO prompt for trying or installing Kubuntu
+kubuntu-notification-helper	Kubuntu system notification helper
+kubuntu-settings-desktop	Settings and artwork for the Kubuntu (Desktop)
+kubuntu-wallpapers	A collection of Kubuntu wallpapers for Resolute Raccoon.
+libkubuntu1	library for Kubuntu platform integration
+plymouth-theme-kubuntu-logo	graphical boot animation and logger - kubuntu-logo theme
+plymouth-theme-kubuntu-text	graphical boot animation and logger - kubuntu-text theme
+== 4. Plasma / installer / login defaults
+      look and feel: LookAndFeelPackage=com.hardpointnetworks.desktop 
+      splash: Theme=com.hardpointnetworks.desktop 
+      installer branding: branding: hardpoint
+      login theme: Current=kubuntu Current=breeze 
+== 5. Text files with visible upstream names
+-- /usr/share/plasma/plasma-welcome/extra-pages/01-Kubuntu.qml
+      17:    heading: i18nc("@info:window", "Welcome to Kubuntu | Friendly Computing")
+      32:    <p>Kubuntu is free software developed by members of the global Ubuntu®
+      34:    proceeds fund the Kubuntu Developer Team!</p>
+-- /usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/kicker-kickoff-icon.js
+      30:    // If using the builtin hardcoded default, switch to the kubuntu icon
+      32:        widget.writeConfig("icon", "start-here-kubuntu")
+-- /usr/share/plasma/layout-templates/org.kubuntu.desktop.defaultPanel/metadata.json
+      7:                "Name": "Kubuntu Focus Design"
+      11:                "Name": "Kubuntu Developers"
+      22:        "Name": "Kubuntu Default Panel",
+-- /usr/share/plasma/layout-templates/org.kubuntu.desktop.defaultPanel/contents/layout.js
+      79:  kickoff_obj.writeConfig(     'icon','start-here-kubuntu' );
+      246:  // Disabled for Kubuntu
+-- /usr/share/plasma/desktoptheme/kubuntu-light/plasmarc
+      3:defaultWallpaperTheme=Kubuntu
+-- /usr/share/plasma/desktoptheme/kubuntu-light/metadata.json
+      6:                "Name": "Kubuntu Focus Design"
+      10:                "Name": "Kubuntu Developers"
+      64:        "Description": "Kubuntu Light by KDE VDG, Kubuntu Focus Design",
+-- /usr/share/plasma/desktoptheme/kubuntu-dark/plasmarc
+      3:defaultWallpaperTheme=Kubuntu
+-- /usr/share/plasma/desktoptheme/kubuntu-dark/metadata.json
+      6:                "Name": "Kubuntu Focus Design"
+      10:                "Name": "Kubuntu Developers"
+      64:        "Description": "Kubuntu Dark by KDE VDG, Kubuntu Focus Design",
+-- /usr/share/plasma/desktoptheme/kubuntu/plasmarc
+      3:defaultWallpaperTheme=Kubuntu
+-- /usr/share/plasma/desktoptheme/kubuntu/metadata.json
+      6:                "Name": "Kubuntu Focus Design"
+      10:                "Name": "Kubuntu Developers"
+      64:        "Description": "Kubuntu by KDE VDG, Kubuntu Focus Design",
+-- /usr/share/plasma/look-and-feel/org.kubuntu.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+      5:// Also enable dynamic day-night Kubuntu Wallpaper theme.
+-- /usr/share/plasma/look-and-feel/org.kubuntulight.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+      5:// Also enable dynamic day-night Kubuntu Wallpaper theme.
+      11:    desktop_obj.writeConfig( 'Image', 'file:///usr/share/wallpapers/Kubuntu' );
+-- /usr/share/plasma/look-and-feel/org.kubuntudark.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+      5:// Also enable dynamic day-night Kubuntu Wallpaper theme.
+      11:    desktop_obj.writeConfig( 'Image', 'file:///usr/share/wallpapers/Kubuntu' );
+-- /etc/calamares/modules/automirror.conf
+      3:distribution: Kubuntu
+-- /etc/calamares/modules/packages.conf
+      7:      - calamares-settings-kubuntu
+-- /etc/calamares/branding/kubuntu/branding.desc
+      2:componentName: kubuntu
+      7:    productName:         Kubuntu
+      8:    shortProductName:    Kubuntu
+-- /usr/share/sddm/themes/kubuntu-light/metadata.desktop
+      2:Name=Kubuntu Light
+      3:Description=Kubuntu Light Breeze SDDM
+      4:Author=KDE VDG, Kubuntu Focus Design
+-- /usr/share/sddm/themes/kubuntu/metadata.desktop
+      2:Name=Kubuntu
+      3:Description=Kubuntu Breeze SDDM
+      4:Author=KDE VDG, Kubuntu Focus Design
+-- /usr/share/plymouth/themes/kubuntu-text/kubuntu-text.plymouth
+      2:Name=Kubuntu Text
+      7:title=Kubuntu 26.04
+-- /usr/share/plymouth/themes/kubuntu-logo/kubuntu-logo.plymouth
+      2:Name=Kubuntu Logo
+      3:Description=Jimmac's spinner theme using the ACPI BGRT graphics as background and Kubuntu's glowing logo as throbber
+== 6. System identity
+      PRETTY_NAME="HardPoint OS 2"
+      NAME="HardPoint OS"
+      ID=hardpoint
+      lsb: DISTRIB_DESCRIPTION="HardPoint OS 2"
+      issue: HardPoint OS 2 \n \l
+      plymouth: Theme=hardpoint
+===== END BRANDING AUDIT =====
+== Result check
+PRETTY_NAME="HardPoint OS 2"
+hardpoint-os: 2.20261020.64 install ok installed
+diversions: 27
+LookAndFeelPackage=com.hardpointnetworks.desktop
+LookAndFeelPackage=com.hardpointnetworks.desktop
+branding: hardpoint
+Theme=hardpoint
+== ISO boot layout (for USB sticks)
+System area options: 0x00004201
+System area summary: MBR protective-msdos-label grub2-mbr cyl-align-off GPT
+ISO image size/512 : 12759060
+Partition offset   : 16
+MBR heads per cyl  : 0
+MBR secs per head  : 0
+MBR partition table:   N Status  Type        Start       Blocks
+MBR partition      :   1   0x00  0xee            1     12759059
+MBR partition      :   2   0x80  0x00            0            1
+GPT                :   N  Info
+GPT disk GUID      :      d0c01a562fb3bf45b58cb63315b115c4
+GPT entry array    :      2  248  separated
+GPT lba range      :      64  12758996  12759059
+GPT partition name :   1  490053004f003900360036003000
+GPT partname local :   1  ISO9660
+GPT partition GUID :   1  d0c01a562fb3bf45b58db63315b115c4
+GPT type GUID      :   1  a2a0d0ebe5b9334487c068b6b72699c7
+GPT partition flags:   1  0x1000000000000001
+GPT start and size :   1  64  12748036
+GPT partition name :   2  41007000700065006e006400650064003200
+GPT partname local :   2  Appended2
+GPT partition GUID :   2  d0c01a562fb3bf45b58eb63315b115c4
+GPT type GUID      :   2  28732ac11ff8d211ba4b00a0c93ec93b
+GPT partition flags:   2  0x0000000000000000
+GPT start and size :   2  12748100  10296
+GPT partition name :   3  4700610070003100
+GPT partname local :   3  Gap1
+GPT partition GUID :   3  d0c01a562fb3bf45b58fb63315b115c4
+GPT type GUID      :   3  a2a0d0ebe5b9334487c068b6b72699c7
+GPT partition flags:   3  0x1000000000000001
+GPT start and size :   3  12758396  600
+== Partition table
+Disk /home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso: 6.08 GiB, 6532638720 bytes, 12759060 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 561AC0D0-B32F-45BF-B58C-B63315B115C4
+
+Device                                                                                               Start      End  Sectors  Size Type
+/home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso1       64 12748099 12748036  6.1G Microsoft basic data
+/home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso2 12748100 12758395    10296    5M EFI System
+/home/runner/work/Hardpoint-OS-Ubuntu/Hardpoint-OS-Ubuntu/out/hardpoint-os-2.0.0-beta1-amd64.iso3 12758396 12758995      600  300K Microsoft basic data
+== Boot options used
+--modification-date=2026042301043800
+--grub2-mbr
+--interval:local_fs:0s-15s:zero_mbrpt,zero_gpt:/mnt/hp/cache/kubuntu-26.04-desktop-amd64.iso
+--protective-msdos-label
+-partition_cyl_align
+off
+-partition_offset
+16
+--mbr-force-bootable
+-append_partition
+2
+28732ac11ff8d211ba4b00a0c93ec93b
+--interval:local_fs:9889132d-9899427d::/mnt/hp/cache/kubuntu-26.04-desktop-amd64.iso
+-appended_part_as_gpt
+-iso_mbr_part_type
+a2a0d0ebe5b9334487c068b6b72699c7
+-c
+/boot.catalog
+-b
+/boot/grub/i386-pc/eltorito.img
+-no-emul-boot
+-boot-load-size
+4
+-boot-info-table
+--grub2-boot-info
+-eltorito-alt-boot
+-e
+--interval:appended_partition_2_start_2472283s_size_10296d:all::
+-no-emul-boot
+-boot-load-size
+10296
+== Live kernel/initrd replaced
+/casper/initrd
+/casper/vmlinuz
+== Live medium id
+casper-uuid-generic: a4c61c89-2657-4ad0-8f0b-cadffe3a9505 (initrd: none)
+== Boot splash inside each live initrd
+initrd: etc/plymouth/plymouthd.conf plymouth/themes/details/details.plymouth plymouth/themes/hardpoint/hardpoint.plymouth plymouth/themes/kubuntu-text/kubuntu-text.plymouth plymouth/themes/text/text.plymouth | usb drivers: isofs.ko.zst uas.ko.zst usb-storage.ko.zst  
+Run: https://github.com/Shanes-usernam3/Hardpoint-OS-Ubuntu/actions/runs/39358077272 (commit 3a713e85b879d58cdf5968cb40ef8ac1265178cc)
