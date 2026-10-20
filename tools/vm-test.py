@@ -101,7 +101,9 @@ class Monitor:
 
 KEYS = {" ": "spc", "-": "minus", ";": "semicolon", "/": "slash", ".": "dot", "=": "equal",
         "_": "shift-minus", "|": "shift-backslash", ",": "comma", "\n": "ret", "@": "shift-2",
-        "'": "apostrophe", "[": "bracket_left", "]": "bracket_right"}
+        "'": "apostrophe", "[": "bracket_left", "]": "bracket_right", ":": "shift-semicolon",
+        "&": "shift-7", "$": "shift-4", ">": "shift-dot", "<": "shift-comma", "!": "shift-1",
+        "(": "shift-9", ")": "shift-0", '"': "shift-apostrophe", "*": "shift-8", "\\": "backslash"}
 
 
 def type_text(mon, text):
@@ -248,7 +250,75 @@ vm.wait(timeout=60)
 
 # ================= Phase 2: install =================
 httpd = None
+def calamares_install():
+    """Drive the real HardPoint installer (Calamares) with the keyboard, like a person would."""
+    s2, mon2 = OUT / "serial-install.log", WORK / "mon2.sock"
+    vm = qemu(["-cdrom", str(ISO), "-kernel", str(KERNEL), "-initrd", str(INITRD),
+               "-append", "boot=casper fsck.mode=skip quiet splash console=tty0 console=ttyS0,115200 ---"], s2, mon2)
+    m = Monitor(mon2)
+    time.sleep(150)
+    # Test only: preselect "Erase disk" so the run needs no mouse clicks
+    run_cmd(m, "konsole")
+    time.sleep(10)
+    type_text(m, "sudo sed -i '/^initialPartitioningChoice/d' /etc/calamares/modules/partition.conf; "
+                 "echo 'initialPartitioningChoice: erase' | sudo tee -a /etc/calamares/modules/partition.conf; "
+                 "sudo sh -c 'm=0; while sleep 10; do if grep -q calamares-root /proc/mounts; then m=1; "
+                 "elif [ $m = 1 ]; then echo HP-INSTALL-DONE > /dev/ttyS0; break; fi; done' & "
+                 "sudo -E calamares\n")
+    time.sleep(30)
+    shot(m, "07a-installer-start")
+    for i in range(4):                       # Welcome, Location, Keyboard, Customize
+        m.cmd("sendkey alt-n")
+        time.sleep(6)
+    shot(m, "07b-installer-partitions")
+    m.cmd("sendkey alt-n")                   # Partitions (erase disk)
+    time.sleep(6)
+    shot(m, "07c-installer-users")
+    type_text(m, "HardPoint Test")           # full name (focused)
+    m.cmd("sendkey tab")
+    m.cmd("sendkey ctrl-a")
+    type_text(m, USER)                       # login name
+    m.cmd("sendkey tab")                     # computer name: keep
+    m.cmd("sendkey tab")
+    type_text(m, PASS)
+    m.cmd("sendkey tab")
+    type_text(m, PASS)
+    time.sleep(2)
+    shot(m, "07d-installer-users-filled")
+    m.cmd("sendkey alt-n")                   # Users
+    time.sleep(6)
+    shot(m, "07e-installer-summary")
+    m.cmd("sendkey alt-i")                   # Install
+    time.sleep(4)
+    shot(m, "07f-installer-confirm")
+    m.cmd("sendkey ret")                     # "Install now"
+    t0 = time.time()
+    done = False
+    while time.time() - t0 < 50 * 60:
+        time.sleep(120)
+        mins = int((time.time() - t0) / 60)
+        shot(m, "07g-installer-progress")
+        if serial_has(s2, "HP-INSTALL-DONE"):
+            done = True
+            break
+        if mins % 10 < 2:
+            shot(m, f"07g-installer-{mins}min")
+    shot(m, "07h-installer-end")
+    m.cmd("quit")
+    try:
+        vm.wait(timeout=60)
+    except subprocess.TimeoutExpired:
+        vm.kill()
+    return done, (time.time() - t0) / 60
+
+
 if CALAMARES:
+    gui_ok, mins = calamares_install()
+    note(gui_ok, f"HardPoint installer (Calamares) installed onto the test disk ({mins:.0f} min of copying)")
+    if gui_ok:
+        installed = True
+if CALAMARES and not installed:
+    log("Falling back to the scripted install so the installed system can still be checked")
     t0 = time.time()
     r = subprocess.run(["sudo", str(Path(__file__).resolve().parent / "host-install.sh"), str(ISO), str(DISK), USER, PASS],
                        capture_output=True, text=True)
@@ -257,7 +327,7 @@ if CALAMARES:
     note("HardPoint OS" in r.stdout, "Installed system identifies as HardPoint OS"
          + ("" if "HardPoint OS" in r.stdout else " (it does not: branding missing)"))
     note(installed, f"Install onto the test disk {'finished' if installed else 'failed (see host-install.log)'} ({(time.time() - t0) / 60:.0f} min)")
-else:
+elif not CALAMARES:
     SEED = textwrap.dedent(f"""
     d-i debian-installer/locale string en_US.UTF-8
     d-i keyboard-configuration/layoutcode string us
