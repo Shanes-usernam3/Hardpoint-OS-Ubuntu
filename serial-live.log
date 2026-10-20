@@ -1,0 +1,292 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01Hhostname: Name or service not known
+make-ssl-cert: Could not get FQDN, using '(none)'.
+make-ssl-cert: You may want to fix your /etc/hosts and/or DNS setup and run
+make-ssl-cert: 'make-ssl-cert generate-default-snakeoil --force-overwrite'
+make-ssl-cert: again.
+Failed to create stream fd: No such file or directory
+Failed to create stream fd: No such file or directory
+Failed to create stream fd: No such file or directory
+gio: Setting attribute metadata::trusted not supported
+Ign:1 file:/cdrom resolute InRelease
+Get:2 file:/cdrom resolute Release [664 B]
+Ign:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+Ign:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Ign:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 file:/cdrom resolute Release [664 B]
+Get:6 file:/cdrom resolute Release.gpg [228 B]
+Get:6 file:/cdrom resolute Release.gpg [228 B]
+Get:7 file:/cdrom resolute/restricted amd64 Packages [8940 B]
+Get:8 file:/cdrom resolute/main amd64 Packages [10.7 kB]
+Ign:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Ign:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Ign:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+Ign:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+Ign:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Ign:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Err:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:5 http://security.ubuntu.com/ubuntu resolute-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+P+q6E616D65\[6n[32766;32766H[6n[!p]104\[0m[?7h[1G[0J]3008;start=349dabbe757e47399a588a63da3b3fb5;user=root;hostname=hardpoint;machineid=9f9ea18757884ada81ec22fd5d5e462a;bootid=02d0a361175d46e8b2fac58ab6a32c61;pid=1;pidfdid=1;comm=systemd;type=boot\-.mount
+rofs.mount
+cdrom.mount
+blk-availability.service
+dev-hugepages.mount
+dev-mqueue.mount
+sys-kernel-debug.mount
+sys-kernel-tracing.mount
+sys-kernel-config.mount
+sys-fs-fuse-connections.mount
+kmod-static-nodes.service
+systemd-remount-fs.service
+systemd-udev-load-credentials.service
+systemd-random-seed.service
+systemd-journald.service
+systemd-tmpfiles-setup-dev-early.service
+systemd-journal-flush.service
+systemd-sysusers.service
+keyboard-setup.service
+lvm2-monitor.service
+systemd-tmpfiles-setup-dev.service
+systemd-modules-load.service
+systemd-udev-trigger.service
+systemd-sysctl.service
+systemd-udevd.service
+systemd-resolved.service
+plymouth-start.service
+systemd-zram-setup@zram0.service
+dev-disk-by\x2ddiskseq-13.swap
+dev-zram0.swap
+snap-bare-5.mount
+snap-core24-1587.mount
+snap-firefox-8107.mount
+snap-gtk\x2dtheme\x2dbreeze-8.mount
+snap-gnome\x2d46\x2d2404-153.mount
+snap-gtk\x2dcommon\x2dthemes-1535.mount
+tmp.mount
+snap-snapd-26865.mount
+snap-icon\x2dtheme\x2dbreeze-5.mount
+snap-mesa\x2d2404-1165.mount
+snap-thunderbird-1057.mount
+console-setup.service
+finalrd.service
+plymouth-read-write.service
+[[0;32m  OK  [0m] Finished [0;1;39mnetplan-configure.service[0m - Netplan Backend Configuration.
+netplan-configure.service
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-rfkill.socket[0m…ll Switch Status /dev/rfkill Watch.
+         Mounting [0;1;39mproc-sys-fs-binfmt_misc.m…[0mcutable File Formats File System...
+proc-sys-fs-binfmt_misc.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mproc-sys-fs-binfmt_misc.mo…[0mxecutable File Formats File System.
+systemd-binfmt.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-binfmt.service[0m - Set Up Additional Binary Formats.
+qemu-kvm.service
+[[0;32m  OK  [0m] Finished [0;1;39mqemu-kvm.service[0m - QEMU K…eparation - module, ksm, hugepages.
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-tmpfiles-setup.se…[0mreate System Files and Directories.
+systemd-tmpfiles-setup.service
+         Starting [0;1;39mldconfig.service[0m - Rebuild Dynamic Linker Cache...
+         Starting [0;1;39msystemd-journal-catalog-u…ervice[0m - Rebuild Journal Catalog...
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-journal-catalog-u….service[0m - Rebuild Journal Catalog.
+systemd-journal-catalog-update.service
+ufw.service
+[[0;32m  OK  [0m] Finished [0;1;39mufw.service[0m - Uncomplicated firewall.
+[[0;32m  OK  [0m] Reached target [0;1;39mnetwork-pre.target[0m - Preparation for Network.
+[[0;32m  OK  [0m] Finished [0;1;39msnapd.apparmor.service[0m - …ofiles managed internally by snapd.
+snapd.apparmor.service
+[[0m[0;31m*     [0m] Job ldconfig.service/start running (6s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (6s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (7s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (7s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (8s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (8s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (9s / no limit)
+M[K[     [0;31m*[0m] Job ldconfig.service/start running (9s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (10s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (10s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (11s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (11s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (12s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (12s / no limit)
+M[K[[0m[0;31m*     [0m] Job ldconfig.service/start running (13s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (13s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (14s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (14s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (15s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (15s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (16s / no limit)
+M[K[     [0;31m*[0m] Job ldconfig.service/start running (16s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (17s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (17s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (18s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (18s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (19s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (19s / no limit)
+M[K[[0m[0;31m*     [0m] Job ldconfig.service/start running (20s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (20s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (21s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (21s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (22s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (22s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (23s / no limit)
+M[K[     [0;31m*[0m] Job ldconfig.service/start running (23s / no limit)
+M[K[    [0;31m*[0;1;31m*[0m] Job ldconfig.service/start running (24s / no limit)
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] Job ldconfig.service/start running (24s / no limit)
+M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] Job ldconfig.service/start running (25s / no limit)
+M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] Job ldconfig.service/start running (25s / no limit)
+M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] Job ldconfig.service/start running (26s / no limit)
+M[K[[0;1;31m*[0m[0;31m*    [0m] Job ldconfig.service/start running (26s / no limit)
+M[K[[0m[0;31m*     [0m] Job ldconfig.service/start running (27s / no limit)
+M[K[[0;32m  OK  [0m] Finished [0;1;39mldconfig.service[0m - Rebuild Dynamic Linker Cache.
+[K         Starting [0;1;39msystemd-update-done.service[0m - Update is Completed...
+ldconfig.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-update-done.service[0m - Update is Completed.
+[[0;32m  OK  [0m] Reached target [0;1;39msysinit.target[0m - System Initialization.
+[[0;32m  OK  [0m] Started [0;1;39mcups.path[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Started [0;1;39mwhoopsie.path[0m - Start whoo…cation of the /var/crash directory.
+[[0;32m  OK  [0m] Started [0;1;39manacron.timer[0m - Trigger anacron every hour.
+[[0;32m  OK  [0m] Started [0;1;39mapt-daily.timer[0m - Daily apt download activities.
+[[0;32m  OK  [0m] Started [0;1;39mapt-daily-upgrade.timer[0m - …y apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started [0;1;39mdpkg-db-backup.timer[0m - Daily dpkg database backup timer.
+[[0;32m  OK  [0m] Started [0;1;39me2scrub_all.timer[0m - Period…Metadata Check for All Filesystems.
+[[0;32m  OK  [0m] Started [0;1;39mfstrim.timer[0m - Discard unused filesystem blocks once a week.
+[[0;32m  OK  [0m] Started [0;1;39mfwupd-refresh.timer[0m - Refresh fwupd metadata regularly.
+[[0;32m  OK  [0m] Started [0;1;39mlogrotate.timer[0m - Daily rotation of log files.
+[[0;32m  OK  [0m] Started [0;1;39mman-db.timer[0m - Daily man-db regeneration.
+[[0;32m  OK  [0m] Started [0;1;39mmotd-news.timer[0m - Message of the Day.
+[[0;32m  OK  [0m] Started [0;1;39mplocate-updatedb.timer[0m - Update the plocate database daily.
+[[0;32m  OK  [0m] Started [0;1;39msysstat-collect.timer[0m - Ru…y accounting tool every 10 minutes.
+[[0;32m  OK  [0m] Started [0;1;39msysstat-rotate.timer[0m - Rot…tem activity data file at midnight.
+[[0;32m  OK  [0m] Started [0;1;39msysstat-summary.timer[0m - Ge… of yesterday's process accounting.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-tmpfiles-clean.tim…[0my Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Started [0;1;39mxfs_scrub_all.timer[0m - Peri…Metadata Check for All Filesystems.
+[[0;32m  OK  [0m] Reached target [0;1;39mboot-complete.target[0m - Boot Completion Check.
+[[0;32m  OK  [0m] Reached target [0;1;39mpaths.target[0m - Path Units.
+[[0;32m  OK  [0m] Listening on [0;1;39mavahi-daemon.socket[0m -…DNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mcups.socket[0m - CUPS Scheduler.
+[[0;32m  OK  [0m] Listening on [0;1;39mdbus.socket[0m - D-Bus System Message Bus Socket.
+         Starting [0;1;39mdocker.socket[0m - Docker Socket for the API...
+[[0;32m  OK  [0m] Listening on [0;1;39mintune-daemon.socket[0m - Intune daemon control socket.
+systemd-update-done.service
+         Starting [0;1;39mlibvirtd.socket[0m - libvirt legacy monolithic daemon socket...
+[[0;32m  OK  [0m] Listening on [0;1;39mnetavark-dhcp-proxy.socket[0m - Netavark DHCP proxy socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mpolkit-agent-helper.s…[0mAuthorization Manager Agent Helper.
+         Starting [0;1;39msnapd.socket[0m - Socket activation for snappy daemon...
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-hostnamed.socket[0m - Hostname Service Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-logind-varlin…[0mer Login Management Varlink Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-machined.sock…[0mtainer Registration Service Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39muuidd.socket[0m - UUID daemon activation socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlogd.socket[0m - libvirt logging daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mvirtlogd-admin.socket[0m…ibvirt logging daemon admin socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mdocker.socket[0m - Docker Socket for the API.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd.socket[0m - lib…rt legacy monolithic daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39msnapd.socket[0m - Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd-admin.socket[0m…acy monolithic daemon admin socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mlibvirtd-ro.socket[0m - …monolithic daemon read-only socket.
+[[0;32m  OK  [0m] Reached target [0;1;39msockets.target[0m - Socket Units.
+[[0;32m  OK  [0m] Reached target [0;1;39mbasic.target[0m - Basic System.
+         Starting [0;1;39maccounts-daemon.service[0m - Accounts Service...
+[[0;32m  OK  [0m] Started [0;1;39manacron.service[0m - Run anacron jobs.
+         Starting [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack...
+         Starting [0;1;39mchrony.service[0m - chrony, an NTP client/server...
+[[0;32m  OK  [0m] Started [0;1;39mcron.service[0m - Regular background program processing daemon.
+         Starting [0;1;39mdbus.service[0m - D-Bus System Message Bus...
+[[0;32m  OK  [0m] Started [0;1;39mdmesg.service[0m - Save initial kernel messages after boot.
+         Starting [0;1;39me2scrub_reap.service[0m - Re…ne ext4 Metadata Check Snapshots...
+         Starting [0;1;39mgpu-manager.service[0m - Det…and deal with any system changes...
+         Starting [0;1;39mhardpoint-boot.service[0m - …ttery charge limit, system info)...
+         Starting [0;1;39mhardpoint-touchpad.servic…[0mS touchpad check (I2C touchpads)...
+         Starting [0;1;39mlm-sensors.service[0m - Init…lize hardware monitoring sensors...
+         Starting [0;1;39mnetavark-dhcp-proxy.service[0m - Netavark DHCP proxy service...
+         Starting [0;1;39mnetworkd-dispatcher.servi…[0mcher daemon for systemd-networkd...
+         Starting [0;1;39mpolkit.service[0m - Authorization Manager...
+         Starting [0;1;39mrsyslog.service[0m - System Logging Service...
+[[0;32m  OK  [0m] Reached target [0;1;39mgetty-pre.target[0m - Preparation for Logins.
+         Starting [0;1;39msnapd.seeded.service[0m - Wait until snapd is fully seeded...
+         Starting [0;1;39msnapd.service[0m - Snap Daemon...
+         Starting [0;1;39mswitcheroo-control.servic…[0mSwitcheroo Control Proxy service...
+         Starting [0;1;39msysstat.service[0m - Resets System Activity Logs...
+         Starting [0;1;39msystemd-logind.service[0m - User Login Management...
+anacron.service
+         Starting [0;1;39msystemd-machined.service[0m …d Container Registration Service...
+         Starting [0;1;39mudisks2.service[0m - Disk Manager...
+         Starting [0;1;39musbguard-dbus.service[0m - USBGuard D-Bus Service...
+         Starting [0;1;39musbguard.service[0m - USBGuard daemon...
+         Starting [0;1;39mvirtlogd.service[0m - libvirt logging daemon...
+cron.service
+dmesg.service
+netavark-dhcp-proxy.service
+[[0;32m  OK  [0m] Started [0;1;39mnetavark-dhcp-proxy.service[0m - Netavark DHCP proxy service.
+[[0;32m  OK  [0m] Finished [0;1;39me2scrub_reap.service[0m - Re…line ext4 Metadata Check Snapshots.
+[[0;32m  OK  [0m] Finished [0;1;39mhardpoint-boot.service[0m - …battery charge limit, system info).
+[[0;32m  OK  [0m] Finished [0;1;39msysstat.service[0m - Resets System Activity Logs.
+sysstat.service
+[[0;32m  OK  [0m] Started [0;1;39msystemd-logind.service[0m - User Login Management.
+systemd-logind.service
+[[0;32m  OK  [0m] Finished [0;1;39mlm-sensors.service[0m - Initialize hardware monitoring sensors.
+lm-sensors.service
+virtlogd.service
+[[0;32m  OK  [0m] Started [0;1;39mvirtlogd.service[0m - libvirt logging daemon.
+[[0;32m  OK  [0m] Started [0;1;39musbguard.service[0m - USBGuard daemon.
+usbguard.service
+chrony.service
+[[0;32m  OK  [0m] Started [0;1;39mchrony.service[0m - chrony, an NTP client/server.
+[[0;32m  OK  [0m] Finished [0;1;39mgpu-manager.service[0m - Det…s and deal with any system changes.
+[[0;32m  OK  [0m] Finished [0;1;39mhardpoint-touchpad.servic…[0m OS touchpad check (I2C touchpads).
+[[0;32m  OK  [0m] Started [0;1;39mrsyslog.service[0m - System Logging Service.
+rsyslog.service
+dbus.service
+[[0;32m  OK  [0m] Started [0;1;39mdbus.service[0m - D-Bus System Message Bus.
+         Starting [0;1;39mNetworkManager.service[0m - Network Manager...
+         Starting [0;1;39mwpa_supplicant.service[0m - WPA supplicant...
+[[0;32m  OK  [0m] Started [0;1;39mswitcheroo-control.service[0m - Switcheroo Control Proxy service.
+[[0;32m  OK  [0m] Started [0;1;39mavahi-daemon.service[0m - Avahi mDNS/DNS-SD Stack.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-machined.service[0m -…and Container Registration Service.
+[[0;32m  OK  [0m] Started [0;1;39musbguard-dbus.service[0m - USBGuard D-Bus Service.
+switcheroo-control.service
+avahi-daemon.service
+systemd-machined.service
+usbguard-dbus.service
+[[0;32m  OK  [0m] Started [0;1;39mwpa_supplicant.service[0m - WPA supplicant.
+wpa_supplicant.service
+         Starting [0;1;39msystemd-hostnamed.service[0m - Hostname Service...
+polkit.service
+[[0;32m  OK  [0m] Started [0;1;39mpolkit.service[0m - Authorization Manager.
+         Starting [0;1;39mModemManager.service[0m - Modem Manager...
+[[0;32m  OK  [0m] Started [0;1;39maccounts-daemon.service[0m - Accounts Service.
+accounts-daemon.service
+[[0;32m  OK  [0m] Started [0;1;39mudisks2.service[0m - Disk Manager.
+udisks2.service
+systemd-hostnamed.service
+[[0;32m  OK  [0m] Started [0;1;39msystemd-hostnamed.service[0m - Hostname Service.
+         Starting [0;1;39mNetworkManager-dispatcher…[0manager Script Dispatcher Service...
+NetworkManager-dispatcher.service
+[[0;32m  OK  [0m] Started [0;1;39mNetworkManager-dispatcher.…[0m Manager Script Dispatcher Service.
+[[0;32m  OK  [0m] Started [0;1;39mNetworkManager.service[0m - Network Manager.
+[[0;32m  OK  [0m] Reached target [0;1;39mnetwork.target[0m - Network.
+NetworkManager.service
+         Starting [0;1;39mNetworkManager-wait-onlin…ce[0m - Network Manager Wait Online...
+         Starting [0;1;39mcontainerd.service[0m - containerd container runtime...
+         Starting [0;1;39mcups.service[0m - CUPS Scheduler...
+         Starting [0;1;39mlibvirt-guests.service[0m - …rt guests suspend/resume service...
+         Starting [0;1;39mlibvirtd.service[0m - libvirt legacy monolithic daemon...
+         Starting [0;1;39mopenvpn.service[0m - OpenVPN service...
+         Starting [0;1;39msystemd-user-sessions.service[0m - Permit User Sessions...
+[[0;32m  OK  [0m] Started [0;1;39munattended-upgrades.service[0m - Unattended Upgrades Shutdown.
+[[0;32m  OK  [0m] Started [0;1;39mlibvirt-guests.service[0m - l…virt guests suspend/resume service.
+unattended-upgrades.service
+[[0;32m  OK  [0m] Finished [0;1;39mopenvpn.service[0m - OpenVPN service.
+libvirt-guests.service
+openvpn.service
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-user-sessions.service[0m - Permit User Sessions.
+         Starting [0;1;39mplymouth-quit.service[0m - Terminate Plymouth Boot Screen...
+[[0;32m  OK  [0m] Started [0;1;39mserial-getty@ttyS0.service[0m - Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Reached target [0;1;39mgetty.target[0m - Login Prompts.
+systemd-user-sessions.service
+serial-getty@ttyS0.service
+         Starting [0;1;39msetvtrgb.service[0m - Set console scheme...
+[[0;32m  OK  [0m] Finished [0;1;39mplymouth-quit.service[0m - Terminate Plymouth Boot Screen.
+[!p]104\[0m[?7h[1G[0J[6n[32766;32766H[6n[!p]104\[0m[?7h[1G[0J[6n[32766;32766H[6n]3008;start=f48ce222795b409a9011b2c43c65f80d;user=root;hostname=hardpoint;machineid=9f9ea18757884ada81ec22fd5d5e462a;bootid=02d0a361175d46e8b2fac58ab6a32c61;pid=1316;pidfdid=8568;comm=(agetty);servicename=serial-getty@ttyS0.service;invocationid=84c491c23e3b4d9fad25ceb2bbd6a401;type=service\P+q6E616D65\
+HardPoint OS 2 hardpoint ttyS0
+
+hardpoint login: 
