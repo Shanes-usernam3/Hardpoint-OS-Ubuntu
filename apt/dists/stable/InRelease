@@ -1,0 +1,42 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64 all
+Codename: stable
+Components: main
+Date: Tue, 20 Oct 2026 00:56:23 +0000
+Description: HardPoint OS updates
+Label: HardPoint OS
+Origin: HardPoint
+Suite: stable
+MD5Sum:
+ 0c676e634542063fc6814d2dd792ee3b              183 Release
+ bcfa0bbd52f9cabf36b16c131023f4d3            12085 main/binary-all/Packages
+ d256996f55f70f6d8638c30a316e85dd             2268 main/binary-all/Packages.gz
+ bcfa0bbd52f9cabf36b16c131023f4d3            12085 main/binary-amd64/Packages
+ d256996f55f70f6d8638c30a316e85dd             2268 main/binary-amd64/Packages.gz
+SHA1:
+ f326dd3e8881cafd3ec8597f560671c6e0aea4a4              183 Release
+ 16d56fdb15394a3f7566ecb279ba8ad9cdc7f046            12085 main/binary-all/Packages
+ 0ec1fc23e281651980b49568bc3db98eef468f31             2268 main/binary-all/Packages.gz
+ 16d56fdb15394a3f7566ecb279ba8ad9cdc7f046            12085 main/binary-amd64/Packages
+ 0ec1fc23e281651980b49568bc3db98eef468f31             2268 main/binary-amd64/Packages.gz
+SHA256:
+ 2d02d8a540a8d3e58c569728e3330cd3a34b1ba613e7a73670bc68c842e09123              183 Release
+ 305596a3c4d1aecc206ab964fa86f024911e16fa19c47197087565c2f152a54b            12085 main/binary-all/Packages
+ 3d7a69a7fe295d21214e430757cc02c7e1ffc7c7a8c17c5d53f6877de47852da             2268 main/binary-all/Packages.gz
+ 305596a3c4d1aecc206ab964fa86f024911e16fa19c47197087565c2f152a54b            12085 main/binary-amd64/Packages
+ 3d7a69a7fe295d21214e430757cc02c7e1ffc7c7a8c17c5d53f6877de47852da             2268 main/binary-amd64/Packages.gz
+SHA512:
+ 977525f4d36a954d3d4558cc489d9169e8d8a6334e48a8b1a9d025d167eff14fd59df6ced774922299719f9595c20f3e7d679b7567f3e3df3173d0f8fcbdeb7b              183 Release
+ 34331b7a09f39a3e1117df0a916a842250e0b23a9ab0fbb5f8f18e07110b39472f4da426a223dd9a1c43c0de48f7156df38f728d7f761e2935e3682ef15c110a            12085 main/binary-all/Packages
+ c9027278d6adf6277cf113dcfa5f4c3c4e3db2a25006bdfe9388c13b43c17431f871ea4664e43854bdd13bef9fa5099fc023777c21e404bb5a53b6083234d15d             2268 main/binary-all/Packages.gz
+ 34331b7a09f39a3e1117df0a916a842250e0b23a9ab0fbb5f8f18e07110b39472f4da426a223dd9a1c43c0de48f7156df38f728d7f761e2935e3682ef15c110a            12085 main/binary-amd64/Packages
+ c9027278d6adf6277cf113dcfa5f4c3c4e3db2a25006bdfe9388c13b43c17431f871ea4664e43854bdd13bef9fa5099fc023777c21e404bb5a53b6083234d15d             2268 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQRb9aqIke5nDqcjOopvZanc1fINeAUCata8NwAKCRBvZanc1fIN
+eBxaAPwISUHhZYY4EF6HZj+TVYQ8RVEcADCCnOwji44zeXVqwgD9G82u+zBiy4S1
+ofjI1bwDprUpXv2nJ/82ypWtcIwTbwo=
+=avRn
+-----END PGP SIGNATURE-----

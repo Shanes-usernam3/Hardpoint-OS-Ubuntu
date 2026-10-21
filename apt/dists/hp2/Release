@@ -1,0 +1,32 @@
+Architectures: amd64 all
+Codename: hp2
+Components: main
+Date: Wed, 21 Oct 2026 01:21:23 +0000
+Description: HardPoint OS updates
+Label: HardPoint OS
+Origin: HardPoint
+Suite: hp2
+MD5Sum:
+ e1d0aa295429b7bc4a8dba42763fd10a              177 Release
+ c3ff1f1b71027ab92eb00295be249274             7364 main/binary-all/Packages
+ cdd1c46c6f73739c6592d61d2be3e533             1889 main/binary-all/Packages.gz
+ c3ff1f1b71027ab92eb00295be249274             7364 main/binary-amd64/Packages
+ cdd1c46c6f73739c6592d61d2be3e533             1889 main/binary-amd64/Packages.gz
+SHA1:
+ 5650d7d19be48eb5c904d1afaf51ecedc3054355              177 Release
+ 2d7c6c4367b446ebc82c33b65971162f0acfa7e5             7364 main/binary-all/Packages
+ 5ad56d07c428882bf56ca0bee79bf307ddb8f1f9             1889 main/binary-all/Packages.gz
+ 2d7c6c4367b446ebc82c33b65971162f0acfa7e5             7364 main/binary-amd64/Packages
+ 5ad56d07c428882bf56ca0bee79bf307ddb8f1f9             1889 main/binary-amd64/Packages.gz
+SHA256:
+ 2aea31ab6595c999ad4e6964343306af724fd26566acac5dde5eef8089ebf2fd              177 Release
+ 9d1b1377255934087823d5514560a743d431aec887131ccc19824f5fa9690f95             7364 main/binary-all/Packages
+ e00a24b14196846005fd5c1ac8a46d0a6cee147860fe2ab7808f459eee85ef34             1889 main/binary-all/Packages.gz
+ 9d1b1377255934087823d5514560a743d431aec887131ccc19824f5fa9690f95             7364 main/binary-amd64/Packages
+ e00a24b14196846005fd5c1ac8a46d0a6cee147860fe2ab7808f459eee85ef34             1889 main/binary-amd64/Packages.gz
+SHA512:
+ 5a0c87b681a16d2421b08184cae7f295e622c0851ad044c1ce03ea41c59e036f4a554cd87b9a8c429f87dafad098a6f2e397932d35e0b0475ac377951f9059c7              177 Release
+ 20bb09fcaf56108394afa08ff52519fdd417a7e50a02db326c26d9581f633fb4a4f10a91252794896e57acaaca18054974caa8b6a8e9303968981a7c65275569             7364 main/binary-all/Packages
+ 6c2a9a9ae90cde0b9adc0467cd02ae4cd5305abe26b6a0ef0b71f903601ed0e7ee35773982d57830cc0e3577dbe47b0b9a8f6ff69c2282644c1603f8cfb40993             1889 main/binary-all/Packages.gz
+ 20bb09fcaf56108394afa08ff52519fdd417a7e50a02db326c26d9581f633fb4a4f10a91252794896e57acaaca18054974caa8b6a8e9303968981a7c65275569             7364 main/binary-amd64/Packages
+ 6c2a9a9ae90cde0b9adc0467cd02ae4cd5305abe26b6a0ef0b71f903601ed0e7ee35773982d57830cc0e3577dbe47b0b9a8f6ff69c2282644c1603f8cfb40993             1889 main/binary-amd64/Packages.gz
