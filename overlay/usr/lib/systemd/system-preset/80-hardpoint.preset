@@ -1,0 +1,4 @@
+# HardPoint OS: USBGuard only runs while Lockdown Mode is on (HardPoint Security turns it on).
+# Without this, systemd's first-boot "presets" switch it on, and its empty rule list blocks
+# every USB device inside the laptop too (camera, Bluetooth, fingerprint reader).
+disable usbguard.service

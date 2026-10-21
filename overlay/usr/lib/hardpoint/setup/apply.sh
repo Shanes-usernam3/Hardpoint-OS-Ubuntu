@@ -35,6 +35,21 @@ for u in ufw.service apparmor.service fwupd-refresh.timer hardpoint-firstboot.se
     systemctl enable "$u" >/dev/null 2>&1 || warn "Could not enable $u"
 done
 systemctl disable usbguard.service 2>/dev/null || true   # only on in Lockdown Mode
+# Fix for HardPoint OS 2 beta 1: USBGuard was switched on at first boot and blocked the built-in
+# camera and Bluetooth. Turn it off (unless Lockdown Mode is on) and let the devices back in, once.
+if [[ -z ${HP_STAGE:-} && ! -f /etc/hardpoint/lockdown ]]; then
+    systemctl disable --now usbguard.service >/dev/null 2>&1 || true
+    for a in /sys/bus/usb/devices/*/authorized; do
+        [[ $(cat "$a" 2>/dev/null) == 0 ]] && { echo 1 > "$a"; } 2>/dev/null
+    done
+    if [[ ! -f /var/lib/hardpoint/fix-usb-devices ]]; then
+        rfkill unblock bluetooth 2>/dev/null || true
+        modprobe uvcvideo 2>/dev/null || true
+        modprobe btusb 2>/dev/null || true
+        date '+%F %T' > /var/lib/hardpoint/fix-usb-devices
+    fi
+    systemctl enable --now bluetooth.service >/dev/null 2>&1 || true
+fi
 # Battery limit + system info now (not while building the ISO)
 [[ -z ${HP_STAGE:-} ]] && { /usr/lib/hardpoint/hp-boot || true; }
 [[ -f /etc/usbguard/usbguard-daemon.conf ]] && sed -i 's/^IPCAllowedGroups=.*/IPCAllowedGroups=sudo/' /etc/usbguard/usbguard-daemon.conf
