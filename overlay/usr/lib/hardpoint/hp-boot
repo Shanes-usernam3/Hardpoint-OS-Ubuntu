@@ -5,4 +5,14 @@ set -uo pipefail
 # Serial number for HardPoint System (the kernel only lets root read it)
 mkdir -p /var/lib/hardpoint
 cat /sys/class/dmi/id/product_serial > /var/lib/hardpoint/serial 2>/dev/null && chmod 644 /var/lib/hardpoint/serial
+# USBGuard belongs to Lockdown Mode only. If something switched it on anyway, turn it off and
+# let the built-in devices (camera, Bluetooth, fingerprint reader) back in.
+if [[ ! -f /etc/hardpoint/lockdown ]] && systemctl is-enabled --quiet usbguard.service 2>/dev/null; then
+    systemctl disable --now usbguard.service >/dev/null 2>&1 || true
+fi
+if [[ ! -f /etc/hardpoint/lockdown ]]; then
+    for a in /sys/bus/usb/devices/*/authorized; do
+        [[ $(cat "$a" 2>/dev/null) == 0 ]] && echo 1 > "$a" 2>/dev/null
+    done
+fi
 exit 0

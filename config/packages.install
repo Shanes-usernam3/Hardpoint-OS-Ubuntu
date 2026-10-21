@@ -98,6 +98,8 @@ nvme-cli
 gparted
 ntfs-3g
 papirus-icon-theme
+# Camera app (the webcam has no app otherwise)
+kamoso
 testdisk
 gddrescue
 stress-ng

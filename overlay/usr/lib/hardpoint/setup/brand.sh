@@ -249,6 +249,12 @@ chmod +x "$HOME/Desktop/install-hardpoint-os.desktop"
 exec startplasma-wayland
 EOF
     chmod 755 "$LIVE"
+    # The live session copies the base installer's own launcher onto the desktop too; ours is enough
+    KC=/usr/share/applications/kubuntu-calamares.desktop
+    if [[ -e $KC && -z $(dpkg-divert --list "$KC") ]]; then
+        mkdir -p /usr/share/hardpoint/diverted
+        dpkg-divert --quiet --local --rename --divert /usr/share/hardpoint/diverted/kubuntu-calamares.desktop --add "$KC"
+    fi
     S_LIVE=/usr/share/wayland-sessions/kubuntu-live-environment.desktop
     if [[ -f $S_LIVE ]]; then
         divert "$S_LIVE"
