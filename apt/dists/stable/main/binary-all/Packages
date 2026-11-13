@@ -1,0 +1,100 @@
+Package: hardpoint-os
+Architecture: all
+Version: 18.20261019.51
+Priority: optional
+Section: misc
+Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Recommends: python3-gi, gir1.2-webkit2-4.1, gir1.2-notify-0.7, libnotify-bin, policykit-1, zenity, linux-firmware, firmware-sof-signed, intel-media-va-driver-non-free, intel-gpu-tools, thermald, power-profiles-daemon, fprintd, libpam-fprintd, iio-sensor-proxy, xserver-xorg-input-libinput, bolt, ufw, gufw, apparmor-utils, apparmor-profiles, usbguard, fwupd, cryptsetup, os-prober, sbsigntool, mokutil, systemd-zram-generator, timeshift, git, git-lfs, build-essential, cmake, ninja-build, pkg-config, curl, wget, jq, python3-pip, python3-venv, pipx, nodejs, npm, openjdk-21-jdk, android-sdk-platform-tools, code, docker.io, docker-compose-v2, docker-buildx, podman, qemu-system-x86, qemu-utils, qemu-guest-agent, spice-vdagent, virt-manager, libvirt-daemon-system, shellcheck, sqlite3, tmux, htop, btop, nmap, wireshark, tshark, tcpdump, iperf3, mtr-tiny, dnsutils, whois, traceroute, net-tools, ethtool, openssh-client, remmina, remmina-plugin-rdp, remmina-plugin-vnc, freerdp3-x11, wireguard-tools, openvpn, network-manager-openvpn-gnome, smartmontools, nvme-cli, gparted, ntfs-3g, papirus-icon-theme, testdisk, gddrescue, stress-ng, memtester, fio, hwinfo, lshw, inxi, dmidecode, p7zip-full, unrar, steam-installer, steam-devices, gamemode, mangohud, vulkan-tools, mesa-vulkan-drivers, microsoft-edge-stable, intune-portal, flatpak, gnome-software-plugin-flatpak
+Filename: pool/main/hardpoint-os_18.20261019.51_all.deb
+Size: 4097388
+MD5sum: 36bff14cd1a742c02e056739612c1319
+SHA1: 39be882c8d607f0cfaa0bbf7f35cdd2b9ec81142
+SHA256: c40f9b8ae961982744ca79f2585c59a37cf939c6405026352d8192fa7e8c648f
+SHA512: b93d98431d87f7a171b24c406bca122a1ca6a329830647d547ce46334ed2aad70fa6afc12ba036e7b2a83117493317b5458a35e4a823eb4c44013ce7ee7bea0f
+Description: HardPoint OS — apps, branding, security and laptop settings
+ HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
+ splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ I2C touchpad fix and the HardPoint update source. Updating this package
+ updates HardPoint OS without reinstalling.
+
+Package: hardpoint-os
+Architecture: all
+Version: 18.20261019.59
+Priority: optional
+Section: misc
+Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Recommends: python3-gi, gir1.2-webkit2-4.1, gir1.2-notify-0.7, libnotify-bin, policykit-1, zenity, linux-firmware, firmware-sof-signed, intel-media-va-driver-non-free, intel-gpu-tools, thermald, power-profiles-daemon, fprintd, libpam-fprintd, iio-sensor-proxy, xserver-xorg-input-libinput, bolt, ufw, gufw, apparmor-utils, apparmor-profiles, usbguard, fwupd, cryptsetup, os-prober, sbsigntool, mokutil, systemd-zram-generator, timeshift, git, git-lfs, build-essential, cmake, ninja-build, pkg-config, curl, wget, jq, python3-pip, python3-venv, pipx, nodejs, npm, openjdk-21-jdk, android-sdk-platform-tools, code, docker.io, docker-compose-v2, docker-buildx, podman, qemu-system-x86, qemu-utils, qemu-guest-agent, spice-vdagent, virt-manager, libvirt-daemon-system, shellcheck, sqlite3, tmux, htop, btop, nmap, wireshark, tshark, tcpdump, iperf3, mtr-tiny, dnsutils, whois, traceroute, net-tools, ethtool, openssh-client, remmina, remmina-plugin-rdp, remmina-plugin-vnc, freerdp3-x11, wireguard-tools, openvpn, network-manager-openvpn-gnome, smartmontools, nvme-cli, gparted, ntfs-3g, papirus-icon-theme, testdisk, gddrescue, stress-ng, memtester, fio, hwinfo, lshw, inxi, dmidecode, p7zip-full, unrar, steam-installer, steam-devices, gamemode, mangohud, vulkan-tools, mesa-vulkan-drivers, microsoft-edge-stable, intune-portal, flatpak, gnome-software-plugin-flatpak
+Filename: pool/main/hardpoint-os_18.20261019.59_all.deb
+Size: 4097420
+MD5sum: 191ff5236262dfc84c1b4f696d667cff
+SHA1: aa8a78bef5f79b3a25b0841bed689ba33124f22a
+SHA256: a79de6a374a69b442594fd85e75428dccf9e493155bbde12d86afbbaaa1382d5
+SHA512: 7d6a979d67f3988bb84f0c96a6cea8600dfa505d9ff54150d845e81815cff3b7afe6afaeca66b5d530219438a509447342dac1f43d9561183607d1e5c1eef990
+Description: HardPoint OS — apps, branding, security and laptop settings
+ HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
+ splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ I2C touchpad fix and the HardPoint update source. Updating this package
+ updates HardPoint OS without reinstalling.
+
+Package: hardpoint-os
+Architecture: all
+Version: 18.20261020.61
+Priority: optional
+Section: misc
+Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Recommends: python3-gi, gir1.2-webkit2-4.1, gir1.2-notify-0.7, libnotify-bin, policykit-1, zenity, linux-firmware, firmware-sof-signed, intel-media-va-driver-non-free, intel-gpu-tools, thermald, power-profiles-daemon, fprintd, libpam-fprintd, iio-sensor-proxy, xserver-xorg-input-libinput, bolt, ufw, gufw, apparmor-utils, apparmor-profiles, usbguard, fwupd, cryptsetup, os-prober, sbsigntool, mokutil, systemd-zram-generator, timeshift, git, git-lfs, build-essential, cmake, ninja-build, pkg-config, curl, wget, jq, python3-pip, python3-venv, pipx, nodejs, npm, openjdk-21-jdk, android-sdk-platform-tools, code, docker.io, docker-compose-v2, docker-buildx, podman, qemu-system-x86, qemu-utils, qemu-guest-agent, spice-vdagent, virt-manager, libvirt-daemon-system, shellcheck, sqlite3, tmux, htop, btop, nmap, wireshark, tshark, tcpdump, iperf3, mtr-tiny, dnsutils, whois, traceroute, net-tools, ethtool, openssh-client, remmina, remmina-plugin-rdp, remmina-plugin-vnc, freerdp3-x11, wireguard-tools, openvpn, network-manager-openvpn-gnome, smartmontools, nvme-cli, gparted, ntfs-3g, papirus-icon-theme, testdisk, gddrescue, stress-ng, memtester, fio, hwinfo, lshw, inxi, dmidecode, p7zip-full, unrar, steam-installer, steam-devices, gamemode, mangohud, vulkan-tools, mesa-vulkan-drivers, microsoft-edge-stable, intune-portal, flatpak, gnome-software-plugin-flatpak
+Filename: pool/main/hardpoint-os_18.20261020.61_all.deb
+Size: 4097368
+MD5sum: 1bc776f1ee8c63e213def4a2c51ac60a
+SHA1: f28c55b649dc7fea62c6194addfee414b7a2e157
+SHA256: d3f422ec932dcafb9baeaf577ae9be4d651f890c9e848df886a6f62d14094b36
+SHA512: 869fba796496f2ab745fbbf12d89a5c1052ed1195dac80875033191329da2c4c4639915ced9bcfba0a4d1686f87458c1e7d4441d6e1013527e8f9a152563b90f
+Description: HardPoint OS — apps, branding, security and laptop settings
+ HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
+ splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ I2C touchpad fix and the HardPoint update source. Updating this package
+ updates HardPoint OS without reinstalling.
+
+Package: hardpoint-os
+Architecture: all
+Version: 18.20261113.66
+Priority: optional
+Section: misc
+Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Recommends: python3-gi, gir1.2-webkit2-4.1, gir1.2-notify-0.7, libnotify-bin, policykit-1, zenity, linux-firmware, firmware-sof-signed, intel-media-va-driver-non-free, intel-gpu-tools, thermald, power-profiles-daemon, fprintd, libpam-fprintd, iio-sensor-proxy, xserver-xorg-input-libinput, bolt, ufw, gufw, apparmor-utils, apparmor-profiles, usbguard, fwupd, cryptsetup, os-prober, sbsigntool, mokutil, systemd-zram-generator, timeshift, git, git-lfs, build-essential, cmake, ninja-build, pkg-config, curl, wget, jq, python3-pip, python3-venv, pipx, nodejs, npm, openjdk-21-jdk, android-sdk-platform-tools, code, docker.io, docker-compose-v2, docker-buildx, podman, qemu-system-x86, qemu-utils, qemu-guest-agent, spice-vdagent, virt-manager, libvirt-daemon-system, shellcheck, sqlite3, tmux, htop, btop, nmap, wireshark, tshark, tcpdump, iperf3, mtr-tiny, dnsutils, whois, traceroute, net-tools, ethtool, openssh-client, remmina, remmina-plugin-rdp, remmina-plugin-vnc, freerdp3-x11, wireguard-tools, openvpn, network-manager-openvpn-gnome, smartmontools, nvme-cli, gparted, ntfs-3g, papirus-icon-theme, testdisk, gddrescue, stress-ng, memtester, fio, hwinfo, lshw, inxi, dmidecode, p7zip-full, unrar, steam-installer, steam-devices, gamemode, mangohud, vulkan-tools, mesa-vulkan-drivers, microsoft-edge-stable, intune-portal, flatpak, gnome-software-plugin-flatpak
+Filename: pool/main/hardpoint-os_18.20261113.66_all.deb
+Size: 4097368
+MD5sum: dadb61714bb753e3a1755f898595a3ba
+SHA1: 02340e8a6d1275350b42f319aff5ef498662ea24
+SHA256: c7dd991c44def0c669603ceecc455a00f6707ed0ecdc9e2d8b9b8ab0188e1078
+SHA512: 272c177c489205a446e760e3fc5b9854956c903f86f9eee875cc9b48d98e35cb86f885298b5aa8c0ce6ef1f11058a06700f694d4f55925bdd5de278f970ecbe4
+Description: HardPoint OS — apps, branding, security and laptop settings
+ HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
+ splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ I2C touchpad fix and the HardPoint update source. Updating this package
+ updates HardPoint OS without reinstalling.
+
+Package: hardpoint-os
+Architecture: all
+Version: 18.20261113.68
+Priority: optional
+Section: misc
+Maintainer: HardPoint Networks <noreply@hardpoint.invalid>
+Depends: python3, python3-gi, gir1.2-webkit2-4.1, python3-pil, libglib2.0-bin, libglib2.0-dev-bin, dconf-cli, plymouth, initramfs-tools, libnotify-bin, timeshift, pkexec | policykit-1
+Recommends: python3-gi, gir1.2-webkit2-4.1, gir1.2-notify-0.7, libnotify-bin, policykit-1, zenity, linux-firmware, firmware-sof-signed, intel-media-va-driver-non-free, intel-gpu-tools, thermald, power-profiles-daemon, fprintd, libpam-fprintd, iio-sensor-proxy, xserver-xorg-input-libinput, bolt, ufw, gufw, apparmor-utils, apparmor-profiles, usbguard, fwupd, cryptsetup, os-prober, sbsigntool, mokutil, systemd-zram-generator, timeshift, git, git-lfs, build-essential, cmake, ninja-build, pkg-config, curl, wget, jq, python3-pip, python3-venv, pipx, nodejs, npm, openjdk-21-jdk, android-sdk-platform-tools, code, docker.io, docker-compose-v2, docker-buildx, podman, qemu-system-x86, qemu-utils, qemu-guest-agent, spice-vdagent, virt-manager, libvirt-daemon-system, shellcheck, sqlite3, tmux, htop, btop, nmap, wireshark, tshark, tcpdump, iperf3, mtr-tiny, dnsutils, whois, traceroute, net-tools, ethtool, openssh-client, remmina, remmina-plugin-rdp, remmina-plugin-vnc, freerdp3-x11, wireguard-tools, openvpn, network-manager-openvpn-gnome, smartmontools, nvme-cli, gparted, ntfs-3g, papirus-icon-theme, testdisk, gddrescue, stress-ng, memtester, fio, hwinfo, lshw, inxi, dmidecode, p7zip-full, unrar, steam-installer, steam-devices, gamemode, mangohud, vulkan-tools, mesa-vulkan-drivers, microsoft-edge-stable, intune-portal, flatpak, gnome-software-plugin-flatpak
+Filename: pool/main/hardpoint-os_18.20261113.68_all.deb
+Size: 4097416
+MD5sum: f69bb7d44d65e8b1a8e4c85c58f4bdf6
+SHA1: 0729de4e8ce6082dba593345f27f7f83ae9e8bb0
+SHA256: 56b950a6b8ee8b9605a2e4de105113ef6d7bd6f05c1a418ceafd908c87bba784
+SHA512: 6900277b026314856625737671c96f3085bcd2f32d35ea849bf6aa1156b989b3faf152de6c1edb12de4ef7cf4f55689c9f9e68119ec086b20356ec812b45869b
+Description: HardPoint OS — apps, branding, security and laptop settings
+ HardPoint Setup, Updates, Accounts and Security apps, the Byte-style boot
+ splash, login screen and wallpapers, kernel hardening, Lockdown Mode, the
+ I2C touchpad fix and the HardPoint update source. Updating this package
+ updates HardPoint OS without reinstalling.
+
