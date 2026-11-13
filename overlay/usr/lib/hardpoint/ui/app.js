@@ -25,7 +25,7 @@ const HP = {
 // Preview data when the page is opened in a normal browser (design work, screenshots).
 const Mock = {
   state: {
-    user: "shane", realName: "Shane", host: "hardpoint-desktop", os: "HardPoint OS 18", live: false,
+    user: "alex", realName: "Alex", host: "hardpoint-desktop", os: "HardPoint OS 18", live: false,
     setupDone: false, updateTimer: true, colorScheme: "prefer-dark", installedApps: ["com.github.tchx84.Flatseal"],
     entra: { available: true, enabled: false, domain: "", active: false, companyPortal: true },
     security: { lockdown: false, firewall: true, apparmor: true, secureBoot: "off", kernelLockdown: "none", encrypted: true, usbguard: false },
